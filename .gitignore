@@ -1,1 +1,6 @@
 req.txt
+code/pseudo/*
+apis&limits
+model.json
+code/__pycache__
+__init__.py
