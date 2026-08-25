@@ -9,7 +9,7 @@ This implementation writes updates back to the same JSON file.
 """
 from datetime import datetime, timezone, timedelta
 import json
-from typing import List, Optional, Tuple
+from typing import List, Optional
 import os
 
 # Import Model from model.py, work whether package import or direct script
@@ -82,63 +82,14 @@ class KeyManager:
             m.last_use = datetime.now(timezone.utc)
         self._write_models()
 
-    def test_models(self, timeout: int = 10) -> List[Tuple[Model, bool]]:
-        """Test all models currently loaded in self.keys.
-
-        Calls each Model.test_connection(timeout) and returns a list of tuples
-        (Model, success_bool). Model.test_connection already prints detailed
-        provider/model-prefixed messages; this method also prints a concise
-        summary line per model.
-        """
-        results: List[Tuple[Model, bool]] = []
-        for m in self.keys:
-            try:
-                ok = m.test_connection(timeout=timeout)
-            except Exception as e:
-                # Guard against unexpected Model.test_connection errors
-                try:
-                    from urllib.parse import urlparse
-                    provider = urlparse(m.url or "").netloc or m.url
-                except Exception:
-                    provider = m.url
-                print(f"[provider={provider} model={m.model_name}] Test raised exception: {e}")
-                ok = False
-            results.append((m, ok))
-            status = "SUCCESS" if ok else "FAIL"
-            try:
-                from urllib.parse import urlparse
-                provider = urlparse(m.url or "").netloc or m.url
-            except Exception:
-                provider = m.url
-            print(f"[provider={provider} model={m.model_name}] Test result: {status}")
-        return results
-
-    def test_individual_model(self, index: int, timeout: int = 10) -> bool:
-        """Test a single model by index. Prints model and provider, then displays reply."""
-        if index < 0 or index >= len(self.keys):
-            raise IndexError("key index out of range")
-        m = self.keys[index]
-        try:
-            from urllib.parse import urlparse
-            provider = urlparse(m.url or "").netloc or m.url
-        except Exception:
-            provider = m.url
-        print(f"Testing model '{m.model_name}' on provider '{provider}'")
-        try:
-            ok, reply = m.test_connection_with_reply(timeout=timeout)
-        except Exception as e:
-            print(f"[provider={provider} model={m.model_name}] Test raised exception: {e}")
-            return False
-        if reply is not None:
-            print("Reply:\n" + str(reply))
-        status = "SUCCESS" if ok else "FAIL"
-        print(f"[provider={provider} model={m.model_name}] Test result: {status}")
-        return ok
-
-
 if __name__ == "__main__":
     # simple interactive runner when executed directly
     mgr = KeyManager(models_path="code/model.json")
+    try:
+        from .key_manager_test import KeyManagerTest
+    except Exception:
+        from key_manager_test import KeyManagerTest
+    tester = KeyManagerTest(mgr)
     total = len(mgr.keys)
     print(f"Loaded {total} model(s). Enter an index to test, or -1 to exit.")
 
@@ -168,7 +119,7 @@ if __name__ == "__main__":
 
         # call the tester
         try:
-            mgr.test_individual_model(idx)
+            tester.test_individual_model(idx)
         except Exception as e:
             print(f"Error while testing model at index {idx}: {e}")
             continue

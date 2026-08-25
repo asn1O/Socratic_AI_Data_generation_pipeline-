@@ -69,19 +69,19 @@ class Model:
             False -> request failed or returned no usable text
         """
 
-        success, _ = self.test_connection_with_reply(timeout)
+        success, _, _ = self.test_connection_with_reply(timeout)
         return success
 
     def test_connection_with_reply(self, timeout: int = 10):
         """
         Test the model and return:
 
-            (success, reply)
+            (success, reply, total_tokens)
 
         Example:
 
             True, "yes"
-            False, None
+            False, None, None
         """
 
         # Get provider hostname
@@ -111,7 +111,7 @@ class Model:
                 "OpenAI SDK is not available. "
                 "Install it with 'pip install openai'."
             )
-            return False, None
+            return False, None, 0
 
         try:
             # Create client
@@ -143,6 +143,7 @@ class Model:
             #                 └── content
             #
             reply = response.choices[0].message.content
+            total_tokens = response.usage.total_tokens if response.usage else None
 
             # Model was reachable but didn't return text
             if not reply:
@@ -150,7 +151,7 @@ class Model:
                     f"[provider={provider} model={self.model_name}] "
                     "Model was reachable but returned no text."
                 )
-                return False, None
+                return False, None, total_tokens
 
             # Success
             print(
@@ -158,7 +159,7 @@ class Model:
                 "Success: received response — model appears reachable."
             )
 
-            return True, reply
+            return True, reply, total_tokens
 
         # -------------------------
         # Rate limit
@@ -170,7 +171,7 @@ class Model:
                 "Rate limited (429). "
                 "Please check your quota and try again later."
             )
-            return False, None
+            return False, None, None
 
         # -------------------------
         # Authentication
@@ -182,7 +183,7 @@ class Model:
                 "Authentication error (401). "
                 "Check API key and permissions."
             )
-            return False, None
+            return False, None, None
 
         # -------------------------
         # HTTP status errors
@@ -196,7 +197,7 @@ class Model:
                     f"Not found (404): model '{self.model_name}' "
                     "was not found. Check the model name."
                 )
-                return False, None
+                return False, None, None
 
             print(
                 f"[provider={provider} model={self.model_name}] "
@@ -204,7 +205,7 @@ class Model:
                 f"Response: {str(e)[:500]}"
             )
 
-            return False, None
+            return False, None, None
 
         # -------------------------
         # Connection errors
@@ -215,7 +216,7 @@ class Model:
                 f"[provider={provider} model={self.model_name}] "
                 f"Connection error when contacting {self.url}: {e}"
             )
-            return False, None
+            return False, None, None
 
         # -------------------------
         # Other OpenAI API errors
@@ -226,7 +227,7 @@ class Model:
                 f"[provider={provider} model={self.model_name}] "
                 f"API error: {e}"
             )
-            return False, None
+            return False, None, None
 
         # -------------------------
         # Anything unexpected
@@ -237,4 +238,4 @@ class Model:
                 f"[provider={provider} model={self.model_name}] "
                 f"Unexpected error when attempting request: {e}"
             )
-            return False, None
+            return False, None, None
