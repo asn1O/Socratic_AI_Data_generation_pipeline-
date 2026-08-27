@@ -14,12 +14,12 @@ class KeyManagerTest:
     def __init__(self, manager: KeyManager):
         self.manager = manager
 
-    def test_models(self, timeout: int = 10) -> List[Tuple[Model, bool]]:
+    def test_models(self) -> List[Tuple[Model, bool]]:
         """Test all models currently loaded in the manager."""
         results: List[Tuple[Model, bool]] = []
         for model in self.manager.keys:
             try:
-                ok, reply, total_tokens = model.test_connection_with_reply(timeout=timeout)
+                ok, reply, total_tokens = model.test_connection_with_reply()
             except Exception as error:
                 try:
                     provider = urlparse(model.url or "").netloc or model.url
@@ -41,7 +41,7 @@ class KeyManagerTest:
             print(f"[provider={provider} model={model.model_name}] Test result: {status}")
         return results
 
-    def test_individual_model(self, index: int, timeout: int = 10) -> bool:
+    def test_individual_model(self, index: int) -> bool:
         """Test a single model by index."""
         if index < 0 or index >= len(self.manager.keys):
             raise IndexError("key index out of range")
@@ -52,7 +52,8 @@ class KeyManagerTest:
             provider = model.url
         print(f"Testing model '{model.model_name}' on provider '{provider}'")
         try:
-            ok, reply, total_tokens = model.test_connection_with_reply(timeout=timeout)
+            # ok, reply, total_tokens = model.test_connection_with_reply()
+            ok, reply, total_tokens = model.test_socratic()
         except Exception as error:
             print(f"[provider={provider} model={model.model_name}] Test raised exception: {error}")
             return False

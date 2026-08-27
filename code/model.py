@@ -5,6 +5,7 @@ from typing import Optional
 
 @dataclass
 class Model:
+    provider: str
     api_key: str
     model_name: str
     url: str
@@ -15,6 +16,7 @@ class Model:
     last_use: Optional[datetime]
     path_to_response_msg: str
     path_to_response_usage: str
+    tier: int
 
     @property
     def ok_to_use(self) -> bool:
@@ -48,6 +50,7 @@ class Model:
             tpd_left = int(raw_tpd_left)
 
         return Model(
+            provider=d["provider"],
             api_key=d["api_key"],
             model_name=d["model_name"],
             url=d["url"],
@@ -58,9 +61,23 @@ class Model:
             last_use=last_use,
             path_to_response_msg=d.get("path_to_response_msg", ""),
             path_to_response_usage=d.get("path_to_response_usage", ""),
+            tier=int(d["tier"])
         )
 
-    def test_connection(self, timeout: int = 10) -> bool:
+    def display_details(self):
+        print(f"Provider: {self.provider}")
+        print(f"Model: {self.model_name}")
+        print(f"URL: {self.url}")
+        print(f"RPD: {self.rpd}")
+        print(f"RPD Left: {self.rpd_left}")
+        print(f"TPD: {self.tpd}")
+        print(f"TPD Left: {self.tpd_left}")
+        print(f"Last Use: {self.last_use}")
+        print(f"Path to Response Msg: {self.path_to_response_msg}")
+        print(f"Path to Response Usage: {self.path_to_response_usage}")
+        print(f"Tier: {self.tier}")
+
+    def test_connection(self) -> bool:
         """
         Test whether the model is reachable and returns usable text.
 
@@ -69,10 +86,10 @@ class Model:
             False -> request failed or returned no usable text
         """
 
-        success, _, _ = self.test_connection_with_reply(timeout)
+        success, _, _ = self.test_connection_with_reply()
         return success
 
-    def test_connection_with_reply(self, timeout: int = 10):
+    def test_connection_with_reply(self):
         """
         Test the model and return:
 
@@ -82,6 +99,25 @@ class Model:
 
             True, "yes"
             False, None, None
+        """
+
+        return self.call_model("Say only 'yes' or 'no'.")
+
+    def test_socratic(self):
+        """Generate a Socratic dataset prompt and send it to the model."""
+        try:
+            from .prompt_generator import DatasetPromptGenerator
+        except ImportError:
+            from prompt_generator import DatasetPromptGenerator
+
+        prompt = DatasetPromptGenerator().generate_prompt()
+        return self.call_model(prompt)
+
+    def call_model(self, prompt: str):
+        """
+        Send a prompt to the model and return:
+
+            (success, reply, total_tokens)
         """
 
         # Get provider hostname
@@ -118,16 +154,15 @@ class Model:
             client = OpenAI(
                 api_key=self.api_key,
                 base_url=self.url if self.url else None,
-                timeout=timeout,
             )
 
-            # Make test request
+            # Make request
             response = client.chat.completions.create(
                 model=self.model_name,
                 messages=[
                     {
                         "role": "user",
-                        "content": "Say only 'yes' or 'no'.",
+                        "content": prompt,
                     }
                 ],
                 # max_tokens=20,

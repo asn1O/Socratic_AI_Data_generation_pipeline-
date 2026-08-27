@@ -10,7 +10,8 @@
     "tpd_left": 100000,
     "last_use": null,
     "path_to_response_msg": "",
-    "path_to_response_usage": ""
+    "path_to_response_usage": "",
+    "tier": 2
   },
   {
     "provider": "GROQ",
@@ -23,7 +24,8 @@
     "tpd_left": 200000,
     "last_use": null,
     "path_to_response_msg": "",
-    "path_to_response_usage": ""
+    "path_to_response_usage": "",
+    "tier": 3
   },
   {
     "provider": "OpenRouter",
@@ -36,7 +38,8 @@
     "tpd_left": null,
     "last_use": null,
     "path_to_response_msg": "",
-    "path_to_response_usage": ""
+    "path_to_response_usage": "",
+    "tier": 3
   },
   {
     "provider": "OpenRouter",
@@ -49,7 +52,8 @@
     "tpd_left": null,
     "last_use": null,
     "path_to_response_msg": "",
-    "path_to_response_usage": ""
+    "path_to_response_usage": "",
+    "tier": 1
   },
   {
     "provider": "Google",
@@ -62,7 +66,8 @@
     "tpd_left": null,
     "last_use": null,
     "path_to_response_msg": "",
-    "path_to_response_usage": ""
+    "path_to_response_usage": "",
+    "tier": 1
   },
   {
     "provider": "Google",
@@ -75,7 +80,8 @@
     "tpd_left": null,
     "last_use": null,
     "path_to_response_msg": "",
-    "path_to_response_usage": ""
+    "path_to_response_usage": "",
+    "tier": 1
   },
   {
     "provider": "Google",
@@ -88,7 +94,8 @@
     "tpd_left": null,
     "last_use": null,
     "path_to_response_msg": "",
-    "path_to_response_usage": ""
+    "path_to_response_usage": "",
+    "tier": 2
   },
   {
     "provider": "Google",
@@ -101,7 +108,8 @@
     "tpd_left": null,
     "last_use": null,
     "path_to_response_msg": "",
-    "path_to_response_usage": ""
+    "path_to_response_usage": "",
+    "tier": 3
   },
   {
     "provider": "Google",
@@ -114,7 +122,8 @@
     "tpd_left": null,
     "last_use": null,
     "path_to_response_msg": "",
-    "path_to_response_usage": ""
+    "path_to_response_usage": "",
+    "tier": 3
   },
   {
     "provider": "Google",
@@ -127,7 +136,8 @@
     "tpd_left": null,
     "last_use": null,
     "path_to_response_msg": "",
-    "path_to_response_usage": ""
+    "path_to_response_usage": "",
+    "tier": 4
   },
   {
     "provider": "Google",
@@ -140,7 +150,8 @@
     "tpd_left": null,
     "last_use": null,
     "path_to_response_msg": "",
-    "path_to_response_usage": ""
+    "path_to_response_usage": "",
+    "tier": 2
   },
   {
     "provider": "Google",
@@ -153,7 +164,8 @@
     "tpd_left": null,
     "last_use": null,
     "path_to_response_msg": "",
-    "path_to_response_usage": ""
+    "path_to_response_usage": "",
+    "tier": 3
   },
   {
     "provider": "Google",
@@ -166,7 +178,8 @@
     "tpd_left": null,
     "last_use": null,
     "path_to_response_msg": "",
-    "path_to_response_usage": ""
+    "path_to_response_usage": "",
+    "tier": 4
   },
   {
     "provider": "Google",
@@ -179,6 +192,7 @@
     "tpd_left": null,
     "last_use": null,
     "path_to_response_msg": "",
-    "path_to_response_usage": ""
+    "path_to_response_usage": "",
+    "tier": 5
   }
 ]

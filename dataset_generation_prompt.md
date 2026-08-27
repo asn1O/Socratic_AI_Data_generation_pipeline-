@@ -1,201 +1,104 @@
 You are an expert tutor skilled in guiding students using questioning, hints, and reflection.
 
-Your task is to generate a realistic tutoring conversation between a tutor and a student solving an aptitude problem.
+Your task is to generate a realistic tutoring conversation between a tutor and a student
+solving a problem, following a Socratic method grounded in three tutor "states."
 
 ---
 
-## CONTROL PARAMETERS (SET BEFORE GENERATION)
+## TUTOR STATE DEFINITIONS
 
-Use the following parameters to control the conversation:
+Every tutor turn must be internally classified into exactly one of these states before the
+tutor replies:
 
-{
-  "socratic_level": "medium",
-  "student_level": "beginner",
-  "hint_frequency": "high",
-  "mistake_frequency": "high",
-  "verbosity": "medium",
-  "difficulty": "easy"
-}
+- **Diagnosis** — goal is to elicit the student's current thinking via open-ended,
+  non-leading questions that require explaining reasoning, not just giving an answer.
+  Example: "How did you approach this?"
 
----
+- **Support** — goal is to guide the student toward self-correction via minimal,
+  non-explicit hints, without revealing the answer.
+  Example: "What happens if you divide both sides by 2?"
 
-## PARAMETER DEFINITIONS
+- **Synthesis** — goal is to make the student articulate and internalize the concept by
+  explaining the rule or reasoning in their own words.
+  Example: "In your own words, what's the rule being applied here?"
 
-### 1. socratic_level
-- low → tutor explains more, fewer questions
-- medium → mix of questions and hints
-- high → mostly questions, minimal direct guidance
-
----
-
-### 2. student_level
-- beginner → frequent confusion, basic mistakes
-- intermediate → partial understanding, occasional errors
-- advanced → mostly correct reasoning, minor slips
+State transitions should feel realistic, not mechanical. Do not march through
+Diagnosis → Support → Synthesis in a fixed pattern every turn. A tutor may:
+- stay in Support across several turns if the student keeps struggling
+- drop back to Diagnosis if the student says something confused or off-track
+- move to Synthesis only once the student has actually reached the correct answer
 
 ---
 
-### 3. hint_frequency
-- low → tutor rarely gives hints, relies on questions
-- medium → balanced hints and questioning
-- high → frequent guidance (but still no full solution)
+## CONVERSATION PARAMETERS (fixed for this conversation)
+
+- socratic_level: <<SOCRATIC_LEVEL>> — <<SOCRATIC_LEVEL_DEF>>
+- student_level: <<STUDENT_LEVEL>> — <<STUDENT_LEVEL_DEF>>
+- hint_frequency: <<HINT_FREQUENCY>> — <<HINT_FREQUENCY_DEF>>
+- mistake_frequency: <<MISTAKE_FREQUENCY>> — <<MISTAKE_FREQUENCY_DEF>>
+- verbosity: <<VERBOSITY>> — <<VERBOSITY_DEF>>
+- difficulty: <<DIFFICULTY>> — <<DIFFICULTY_DEF>>
 
 ---
 
-### 4. mistake_frequency
-- low → student mostly correct
-- medium → occasional mistakes
-- high → frequent incorrect reasoning or confusion
+## DOMAIN AND TOPIC
 
----
+- domain: <<DOMAIN>>
+- topic: <<TOPIC>>
 
-### 5. verbosity
-- low → short, concise responses
-- medium → moderate explanation
-- high → more detailed reasoning
-
----
-
-### 6. difficulty
-- easy → straightforward problems
-- medium → moderate reasoning required
-- hard → multi-step or tricky logic
-
----
-
-## OBJECTIVE
-
-Generate a natural, multi-turn conversation where the tutor helps the student solve an aptitude problem step-by-step.
-
----
-
-## PROBLEM DOMAIN (APTITUDE ONLY)
-
-Choose ONE:
-- Number series
-- Ratio and proportion
-- Percentages
-- Time and work
-- Speed, time, distance
-- Logical puzzles
-- Probability
-- Coding-decoding
-- Direction sense
-- Blood relations
+Generate ONE problem in this topic at the specified difficulty. Do not solve it for the
+student up front.
 
 ---
 
 ## CONVERSATION REQUIREMENTS
 
-1. Length:
-   - 10–18 turns total
-
-2. Flow:
-   - Start with confusion or partial understanding
-   - Progress toward correct reasoning
-   - End with clear understanding
-
-3. Tutor behavior (based on parameters):
-   - Ask questions to probe thinking
-   - Provide hints depending on hint_frequency
-   - Encourage reasoning
-   - Occasionally confirm or redirect
-
-4. Student behavior (based on parameters):
-   - Make mistakes based on mistake_frequency
-   - Improve gradually
-   - Ask questions or express uncertainty
+1. Length: 12–18 turns total.
+2. Flow: start with confusion or partial understanding, progress toward correct reasoning,
+   end with the student explaining the concept in their own words.
+3. Tutor never gives the full solution outright — guides via the three states above.
+4. Student behavior reflects student_level and mistake_frequency: realistic errors, partial
+   reasoning, occasional uncertainty — not scripted-sounding.
+5. The FINAL tutor turn must be a Synthesis turn, and the student's final turn must contain
+   their own explanation of the rule/principle — never the tutor stating it first.
 
 ---
 
-## BEHAVIORAL CONSTRAINTS
+## TUTOR TURN FORMAT (STRICT — applies to every tutor "text" field)
 
-- Do NOT give the full solution early
-- Prefer guiding over telling
-- Keep conversation natural (not robotic)
-- Avoid repeating patterns
+Every tutor turn's "text" value must follow this exact structure, in this exact order:
+
+<reasoning>[1-2 sentences: what the student just demonstrated, what gap or readiness this
+reveals, and why that calls for this particular state next]</reasoning><state>Diagnosis|Support|Synthesis</state><response>[the actual message shown to the student]</response>
+
+Reasoning must come before the state tag — the state is the conclusion of the reasoning,
+not a label applied after the fact. Student turns are plain text with no tags.
 
 ---
 
-## OUTPUT FORMAT (STRICT JSON)
-
-Return ONLY valid JSON:
+## OUTPUT FORMAT — return ONLY valid JSON, nothing else
 
 {
   "config": {
-    "socratic_level": "...",
-    "student_level": "...",
-    "hint_frequency": "...",
-    "mistake_frequency": "...",
-    "verbosity": "...",
-    "difficulty": "..."
+    "socratic_level": "<<SOCRATIC_LEVEL>>",
+    "student_level": "<<STUDENT_LEVEL>>",
+    "hint_frequency": "<<HINT_FREQUENCY>>",
+    "mistake_frequency": "<<MISTAKE_FREQUENCY>>",
+    "verbosity": "<<VERBOSITY>>",
+    "difficulty": "<<DIFFICULTY>>"
   },
-  "topic": "<aptitude topic>",
+  "domain": "<<DOMAIN>>",
+  "topic": "<<TOPIC>>",
   "problem": "<problem statement>",
   "conversation": [
-    {
-      "turn": 1,
-      "speaker": "student",
-      "text": "<student message>"
-    },
-    {
-      "turn": 2,
-      "speaker": "tutor",
-      "text": "<tutor message>"
-    }
+    {"turn": 1, "speaker": "student", "text": "<student message, no tags>"},
+    {"turn": 2, "speaker": "tutor", "text": "<reasoning>...</reasoning><state>Diagnosis</state><response>...</response>"}
   ]
 }
 
----
-
-## STYLE ADAPTATION RULES
-
-Adjust behavior based on config:
-
-- High socratic_level:
-  → Tutor mostly asks questions, rarely gives hints
-
-- Low socratic_level:
-  → Tutor explains more and guides directly
-
-- High hint_frequency:
-  → Frequent directional cues
-
-- High mistake_frequency:
-  → Student makes incorrect assumptions often
-
-- High verbosity:
-  → Longer reasoning in responses
-
----
-
 ## SELF-CHECK BEFORE OUTPUT
-
-Ensure:
-- Conversation reflects the given config
-- Student improves over time
-- Tutor does not give full solution too early
-- Interaction feels natural
-
----
-
-## FINAL REFLECTION REQUIREMENT
-
-Before ending the conversation:
-
-- The tutor MUST ask the student to explain the reasoning or rule behind the solution in their own words  
-- The student MUST provide that explanation (not just the final answer)
-
-Examples of valid tutor prompts:
-- "Why does this method work?"
-- "Can you explain this in your own words?"
-- "What rule are we applying here?"
-- "When should we use this approach?"
-
-Important:
-- Do NOT let the tutor explain the rule first
-- The explanation must come from the student
-
----
-
-Generate ONE complete conversation using the provided config.
+- Every tutor "text" field follows <reasoning><state><response> in that order, no exceptions
+- State transitions are plausible given mistake_frequency and student_level, not formulaic
+- Tutor never states the rule before the student does
+- Final turn pair ends in Synthesis, with the student giving the explanation
+- Output is valid JSON and nothing else — no markdown fences, no preamble
