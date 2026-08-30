@@ -23,6 +23,7 @@ class KeyManager:
     def __init__(self, models_path: str = "code/model.json"):
         self.models_path = models_path
         self.keys: List[Model] = []
+        self.last_used_index = 0
         self._load_models()
 
     def _load_models(self) -> None:
@@ -42,27 +43,58 @@ class KeyManager:
             return False
         now = datetime.now(timezone.utc)
         if now - model.last_use >= timedelta(days=1):
-            model.rpd_left = model.rpd
-            model.tpd_left = model.tpd
-            model.last_use = None
+            model.reset_quota()
             return True
         return False
 
-    def get_key(self, min_tpd_needed: int = 1) -> Optional[Tuple[Model, int]]:
-        """Return first available (model, index) that can satisfy min_tpd_needed.
+    def _mark_expired_if_needed(self, model: Model) -> bool:
+        """Return True when a model should not be selected until its reset window expires."""
+        if not model.last_use and model.expired:
+            return True
 
-        If a key is not currently ok but can be reset (24h passed), reset and use it.
-        Returns None if no key is available.
-        """
-        for idx, m in enumerate(self.keys):
-            # If not okay, attempt reset based on last_use
-            if not m.ok_to_use:
-                if self._maybe_reset(m):
-                    # persist reset immediately
-                    self._write_models()
-            # re-check availability
-            if m.rpd_left > 0 and m.tpd_left >= min_tpd_needed:
-                return m, idx
+        if model.expired:
+            if self._maybe_reset(model):
+                self._write_models()
+                return False
+            return True
+
+        if model.rpd_left <= 1:
+            model.expired = True
+            model.last_use = datetime.now(timezone.utc)
+            return True
+
+        if model.tpd_left is not None and model.tpd_left <= 10000:
+            model.expired = True
+            model.last_use = datetime.now(timezone.utc)
+            return True
+
+        return False
+
+    def get_key(self, min_tpd_needed: int = 1) -> Optional[Tuple[Model, int]]:
+        """Return the next usable key in round-robin order, skipping expired keys."""
+        if not self.keys:
+            return None
+
+        start = (self.last_used_index + 1) % len(self.keys)
+        for offset in range(len(self.keys)):
+            idx = (start + offset) % len(self.keys)
+            m = self.keys[idx]
+
+            if self._maybe_reset(m):
+                self._write_models()
+
+            if self._mark_expired_if_needed(m):
+                continue
+
+            if m.tpd_left is not None and m.tpd_left < min_tpd_needed:
+                continue
+
+            if m.rpd_left <= 0:
+                continue
+
+            self.last_used_index = idx
+            return m, idx
+
         return None
 
     def reduce_key_usage(self, index: int, tpd_used: int) -> None:
@@ -70,16 +102,26 @@ class KeyManager:
 
         - rpd_left reduced by 1
         - tpd_left reduced by tpd_used
-        - if limits reached, set last_use to now
+        - if limits are near exhaustion, mark the model as expired
         - write back to file
         """
         if index < 0 or index >= len(self.keys):
             raise IndexError("key index out of range")
+
         m = self.keys[index]
-        m.rpd_left = max(0, m.rpd_left - 1)
-        m.tpd_left = max(0, m.tpd_left - tpd_used)
-        if m.rpd_left == 0 or m.tpd_left == 0:
+        if m.rpd_left > 0:
+            m.rpd_left = max(0, m.rpd_left - 1)
+
+        if m.tpd_left is not None:
+            m.tpd_left = max(0, m.tpd_left - max(0, tpd_used))
+
+        if m.rpd_left <= 1 or (m.tpd_left is not None and m.tpd_left <= 10000):
+            m.expired = True
             m.last_use = datetime.now(timezone.utc)
+        else:
+            m.expired = False
+            m.last_use = datetime.now(timezone.utc)
+
         self._write_models()
 
 if __name__ == "__main__":

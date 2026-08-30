@@ -14,16 +14,35 @@ class Model:
     tpd: Optional[int]
     tpd_left: Optional[int]
     last_use: Optional[datetime]
-    path_to_response_msg: str
-    path_to_response_usage: str
-    tier: int
+    expired: bool = False
+    path_to_response_msg: str = ""
+    path_to_response_usage: str = ""
+    tier: int = 0
 
     @property
     def ok_to_use(self) -> bool:
         """Check whether the model still has usable quota."""
 
+        if self.expired:
+            return False
+
         tpd_ok = (self.tpd_left is None) or (self.tpd_left > 0)
         return (self.rpd_left > 0) and tpd_ok
+
+    def mark_expired(self, now: Optional[datetime] = None) -> None:
+        """Mark the model as temporarily unusable until its reset window expires."""
+        self.expired = True
+        if now is None:
+            now = datetime.now()
+        self.last_use = now
+
+    def reset_quota(self) -> None:
+        """Reset rate-limit counters after the refresh window has elapsed."""
+        self.rpd_left = self.rpd
+        if self.tpd is not None:
+            self.tpd_left = self.tpd
+        self.expired = False
+        self.last_use = None
 
     def to_dict(self) -> dict:
         """Serialize Model to a JSON-serializable dictionary."""
@@ -49,6 +68,8 @@ class Model:
         else:
             tpd_left = int(raw_tpd_left)
 
+        expired = bool(d.get("expired", False))
+
         return Model(
             provider=d["provider"],
             api_key=d["api_key"],
@@ -59,9 +80,10 @@ class Model:
             tpd=tpd,
             tpd_left=tpd_left,
             last_use=last_use,
+            expired=expired,
             path_to_response_msg=d.get("path_to_response_msg", ""),
             path_to_response_usage=d.get("path_to_response_usage", ""),
-            tier=int(d["tier"])
+            tier=int(d.get("tier", 0))
         )
 
     def display_details(self):
@@ -157,6 +179,7 @@ class Model:
             )
 
             # Make request
+            self.last_use = datetime.now()
             response = client.chat.completions.create(
                 model=self.model_name,
                 messages=[
@@ -201,6 +224,8 @@ class Model:
         # -------------------------
 
         except RateLimitError:
+            self.expired = True
+            self.last_use = datetime.now()
             print(
                 f"[provider={provider} model={self.model_name}] "
                 "Rate limited (429). "
@@ -247,9 +272,20 @@ class Model:
         # -------------------------
 
         except APIConnectionError as e:
+            self.expired = True
+            self.last_use = datetime.now()
             print(
                 f"[provider={provider} model={self.model_name}] "
                 f"Connection error when contacting {self.url}: {e}"
+            )
+            return False, None, None
+
+        except TimeoutError:
+            self.expired = True
+            self.last_use = datetime.now()
+            print(
+                f"[provider={provider} model={self.model_name}] "
+                "Request timed out; marking model as expired."
             )
             return False, None, None
 
