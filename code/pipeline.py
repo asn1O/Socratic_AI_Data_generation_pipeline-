@@ -1,6 +1,7 @@
 """Generate Socratic conversation data by retrying model selection and validating model output."""
 
 import argparse
+from collections import Counter, defaultdict
 import json
 import logging
 import re
@@ -26,6 +27,16 @@ RETRY_WAIT_SECONDS = 5
 MIN_TURNS = 12
 MAX_TURNS = 18
 VALID_STATES = {"Diagnosis", "Support", "Synthesis"}
+FAILURE_CATEGORIES = (
+    "dead_model_404", "empty_response", "invalid_json_syntax",
+    "turn_count_out_of_range", "speaker_alternation_broken",
+    "malformed_tutor_tags", "missing_problem_field", "final_turn_not_synthesis",
+    "unexpected_exception", "other",
+)
+CONFIG_PARAMETERS = (
+    "socratic_level", "student_level", "hint_frequency", "mistake_frequency",
+    "verbosity", "difficulty",
+)
 
 logger = logging.getLogger("pipeline")
 logger.setLevel(logging.INFO)
@@ -207,9 +218,121 @@ def _parse_valid_json(reply: str) -> Dict[str, Any]:
     payload = _extract_first_json_object(cleaned)
 
     if not _is_valid_conversation_payload(payload):
-        raise ValueError("conversation payload failed structural validation")
+        raise ValueError(_structural_failure_reason(payload))
 
     return payload
+
+
+def _structural_failure_reason(payload: Any) -> str:
+    """Describe a failed structural check for stable failure reporting."""
+    if not isinstance(payload, dict):
+        return "conversation payload is not a JSON object"
+    conversation = payload.get("conversation")
+    if not isinstance(conversation, list) or not conversation:
+        return "conversation payload missing or empty conversation"
+    problem = payload.get("problem")
+    if not isinstance(problem, str) or not problem.strip():
+        return "missing problem field"
+    turn_count = len(conversation)
+    if not (MIN_TURNS <= turn_count <= MAX_TURNS):
+        return f"turn count {turn_count} outside [{MIN_TURNS}, {MAX_TURNS}]"
+
+    expected_speaker = "student"
+    for turn_number, item in enumerate(conversation, start=1):
+        if not isinstance(item, dict):
+            return f"turn {turn_number} is not an object"
+        if item.get("speaker") != expected_speaker:
+            return f"speaker alternation broken at turn {turn_number}"
+        if item.get("speaker") == "tutor":
+            text = item.get("text")
+            if not isinstance(text, str) or not _TUTOR_TAG_PATTERN.match(text.strip()):
+                return f"malformed tutor tags at turn {turn_number}"
+        expected_speaker = "tutor" if expected_speaker == "student" else "student"
+
+    if conversation[-1].get("speaker") != "student":
+        return "final turn is not the student"
+    final_tutor = conversation[-2]
+    final_match = _TUTOR_TAG_PATTERN.match(final_tutor.get("text", "").strip())
+    if not final_match or final_match.group(1) != "Synthesis":
+        return "final tutor turn is not Synthesis"
+    return "conversation payload failed structural validation"
+
+
+def _classify_failure_reason(reason: str) -> str:
+    """Map variable failure text to a stable summary category."""
+    normalized = reason.lower()
+    if "404" in normalized or "not found" in normalized:
+        return "dead_model_404"
+    if "empty response" in normalized or "no response" in normalized or "no text" in normalized:
+        return "empty_response"
+    if "invalid json" in normalized or "jsondecodeerror" in normalized or "expecting " in normalized:
+        return "invalid_json_syntax"
+    if "turn count" in normalized:
+        return "turn_count_out_of_range"
+    if "speaker alternation" in normalized:
+        return "speaker_alternation_broken"
+    if ("malformed" in normalized and "tag" in normalized) or "missing/malformed" in normalized:
+        return "malformed_tutor_tags"
+    if "missing" in normalized and "problem" in normalized:
+        return "missing_problem_field"
+    if "synthesis" in normalized and "final" in normalized:
+        return "final_turn_not_synthesis"
+    if "unexpected exception" in normalized:
+        return "unexpected_exception"
+    return "other"
+
+
+def _format_run_summary(stats: Dict[str, Any], duration_seconds: float) -> str:
+    """Build the plain-text end-of-run report."""
+    attempts = stats["attempts"]
+    saved = stats["saved"]
+    accept_rate = saved / attempts * 100 if attempts else 0.0
+    lines = [
+        "\n=== Run Statistics Summary ===",
+        "Overall totals",
+        f"  Attempts: {attempts}",
+        f"  Saved: {saved}",
+        f"  Failed: {stats['failed']}",
+        f"  Accept rate: {accept_rate:.2f}%",
+        f"  Duration (seconds): {duration_seconds:.2f}",
+        "",
+        "Per-model results",
+        "  Provider / Model                         Attempts  Saved  Accept %  Avg tokens  Turns",
+        "  ----------------------------------------  --------  -----  --------  -----------  -----",
+    ]
+    for model_key, model_stats in stats["models"].items():
+        model_attempts = model_stats["attempts"]
+        model_saved = model_stats["saved"]
+        model_accept_rate = model_saved / model_attempts * 100 if model_attempts else 0.0
+        token_values = model_stats["tokens"]
+        average_tokens = sum(token_values) / len(token_values) if token_values else 0.0
+        turns = model_stats["turns"]
+        turn_range = f"{min(turns)}-{max(turns)}" if turns else "-"
+        lines.append(
+            f"  {model_key:<40} {model_attempts:>8}  {model_saved:>5}  "
+            f"{model_accept_rate:>7.2f}%  {average_tokens:>11.2f}  {turn_range:>5}"
+        )
+
+    lines.extend(["", "Failure reasons", "  Category                         Count", "  ------------------------------  -----"])
+    for category in FAILURE_CATEGORIES:
+        lines.append(f"  {category:<30}  {stats['failures'][category]:>5}")
+
+    turns = stats["turn_counts"]
+    turn_summary = (
+        f"min={min(turns)}, max={max(turns)}, avg={sum(turns) / len(turns):.2f}"
+        if turns else "no saved conversations"
+    )
+    lines.extend(["", "Turn-count distribution", f"  {turn_summary}", "", "Domain coverage"])
+    for domain, count in sorted(stats["domains"].items()):
+        lines.append(f"  {domain:<30} {count:>5}")
+
+    lines.extend(["", "Config parameter balance"])
+    for parameter in CONFIG_PARAMETERS:
+        lines.append(f"  {parameter}")
+        for value, count in sorted(stats["config"][parameter].items()):
+            lines.append(f"    {value:<26} {count:>5}")
+
+    return "\n".join(lines)
 
 
 # --------------------------------------------------------------------------
@@ -232,6 +355,26 @@ def run_pipeline(
     output_dir = Path(data_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
     saved_count = 0
+    stats: Dict[str, Any] = {
+        "attempts": 0,
+        "saved": 0,
+        "failed": 0,
+        "failures": Counter(),
+        "models": defaultdict(lambda: {"attempts": 0, "saved": 0, "tokens": [], "turns": []}),
+        "turn_counts": [],
+        "domains": Counter(),
+        "config": defaultdict(Counter),
+    }
+    started_at = time.monotonic()
+
+    def record_failure(model: Any, reason: str) -> None:
+        stats["failed"] += 1
+        stats["failures"][_classify_failure_reason(reason)] += 1
+
+    def print_summary() -> None:
+        summary = _format_run_summary(stats, time.monotonic() - started_at)
+        print(summary)
+        logger.info(summary)
 
     try:
         for iteration in range(1, iterations + 1):
@@ -241,6 +384,9 @@ def run_pipeline(
                 break
 
             model, model_index = selected
+            model_key = f"{model.provider} / {model.model_name}"
+            stats["attempts"] += 1
+            stats["models"][model_key]["attempts"] += 1
             logger.info(
                 "SELECTED provider=%s model=%s",
                 model.provider,
@@ -251,6 +397,7 @@ def run_pipeline(
                 prompt, generated_record_json = DatasetPromptGenerator().generate_prompt()
                 success, reply, total_tokens = model.call_model(prompt)
             except Exception as exc:
+                record_failure(model, f"unexpected exception: {exc}")
                 logger.error(
                     "MODEL_FAILURE provider=%s model=%s reason=%s",
                     model.provider,
@@ -260,6 +407,7 @@ def run_pipeline(
                 continue
 
             if not success or reply is None:
+                record_failure(model, "model call failed or returned no response")
                 logger.error(
                     "MODEL_FAILURE provider=%s model=%s reason=%s",
                     model.provider,
@@ -274,6 +422,7 @@ def run_pipeline(
                 generated_record["problem"] = payload["problem"]
                 generated_record["conversation"] = payload["conversation"]
             except (ValueError, TypeError, KeyError) as exc:
+                record_failure(model, str(exc))
                 logger.error(
                     "JSON_INVALID provider=%s model=%s reason=%s",
                     model.provider,
@@ -285,6 +434,7 @@ def run_pipeline(
             try:
                 dataset_path = model.write_response(generated_record)
             except (OSError, TypeError, ValueError, json.JSONDecodeError) as exc:
+                record_failure(model, f"unable to write payload: {exc}")
                 logger.error(
                     "SAVE_FAILURE provider=%s model=%s reason=%s",
                     model.provider,
@@ -295,6 +445,17 @@ def run_pipeline(
              
             print(f"Valid payload for provider={model.provider} model={model.model_name}: {payload}")
             saved_count += 1
+            stats["saved"] += 1
+            model_stats = stats["models"][model_key]
+            model_stats["saved"] += 1
+            model_stats["tokens"].append(int(total_tokens or 0))
+            turn_count = len(payload.get("conversation", []))
+            model_stats["turns"].append(turn_count)
+            stats["turn_counts"].append(turn_count)
+            stats["domains"][generated_record.get("domain", "unknown")] += 1
+            for parameter in CONFIG_PARAMETERS:
+                value = generated_record.get("config", {}).get(parameter, "unknown")
+                stats["config"][parameter][value] += 1
             logger.info(
                 "SUCCESS provider=%s model=%s total_tokens=%s turns=%s path=%s",
                 model.provider,
@@ -323,8 +484,10 @@ def run_pipeline(
             "Interrupted by user after %s successful write(s). Exiting cleanly.",
             saved_count,
         )
+        print_summary()
         return saved_count
 
+    print_summary()
     return saved_count
 
 
