@@ -135,6 +135,11 @@ def _is_valid_conversation_payload(payload: Any) -> bool:
         logger.debug("Rejected payload: missing or empty 'conversation' array")
         return False
 
+    problem = payload.get("problem")
+    if not isinstance(problem, str) or not problem.strip():
+        logger.debug("Rejected payload: missing or empty 'problem' string")
+        return False
+
     turn_count = len(conversation)
     if not (MIN_TURNS <= turn_count <= MAX_TURNS):
         logger.debug(
@@ -208,30 +213,6 @@ def _parse_valid_json(reply: str) -> Dict[str, Any]:
 
 
 # --------------------------------------------------------------------------
-# Persistence
-# --------------------------------------------------------------------------
-
-def _save_payload(
-    output_dir: Path,
-    model: Any,
-    total_tokens: int,
-    payload: Dict[str, Any],
-) -> Path:
-    """Append a validated conversation, with generation metadata, to the dataset file."""
-    dataset_path = output_dir / "dataset.jsonl"
-    record = {
-        "provider": model.provider,
-        "model": model.model_name,
-        "total_tokens": total_tokens,
-        "generated_at": datetime.now(timezone.utc).isoformat(),
-        **payload,
-    }
-    with dataset_path.open("a", encoding="utf-8") as f:
-        f.write(json.dumps(record, ensure_ascii=False) + "\n")
-    return dataset_path
-
-
-# --------------------------------------------------------------------------
 # Pipeline
 # --------------------------------------------------------------------------
 
@@ -267,7 +248,7 @@ def run_pipeline(
             )
 
             try:
-                prompt = DatasetPromptGenerator().generate_prompt()
+                prompt, generated_record_json = DatasetPromptGenerator().generate_prompt()
                 success, reply, total_tokens = model.call_model(prompt)
             except Exception as exc:
                 logger.error(
@@ -289,7 +270,10 @@ def run_pipeline(
 
             try:
                 payload = _parse_valid_json(reply)
-            except ValueError as exc:
+                generated_record = json.loads(generated_record_json)
+                generated_record["problem"] = payload["problem"]
+                generated_record["conversation"] = payload["conversation"]
+            except (ValueError, TypeError, KeyError) as exc:
                 logger.error(
                     "JSON_INVALID provider=%s model=%s reason=%s",
                     model.provider,
@@ -299,7 +283,7 @@ def run_pipeline(
                 continue
 
             try:
-                dataset_path = model.write_response(payload)
+                dataset_path = model.write_response(generated_record)
             except (OSError, TypeError, ValueError, json.JSONDecodeError) as exc:
                 logger.error(
                     "SAVE_FAILURE provider=%s model=%s reason=%s",

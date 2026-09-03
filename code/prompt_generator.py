@@ -1,6 +1,7 @@
 from pathlib import Path
+import json
 import random
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 
 
 class DatasetPromptGenerator:
@@ -192,24 +193,35 @@ class DatasetPromptGenerator:
             else Path(__file__).resolve().parent.parent / "dataset_generation_prompt.md"
         )
 
-    def generate_prompt(self) -> str:
-        """Return the template populated with a random configuration and topic."""
+    def generate_prompt(self) -> Tuple[str, str]:
+        """Return the populated prompt and its matching empty dataset record."""
         template = self.template_path.read_text(encoding="utf-8")
         replacements: Dict[str, str] = {}
+        config: Dict[str, str] = {}
 
         for name, options in self.PARAMETERS.items():
             selected = random.choice(options)
             replacements[name.upper()] = selected["value"]
             replacements[f"{name.upper()}_DEF"] = selected["definition"]
+            config[name] = selected["value"]
 
         domain = random.choice(list(self.DOMAINS))
         replacements["DOMAIN"] = domain
-        replacements["TOPIC"] = random.choice(self.DOMAINS[domain])
+        topic = random.choice(self.DOMAINS[domain])
+        replacements["TOPIC"] = topic
 
         for placeholder, value in replacements.items():
             template = template.replace(f"<<{placeholder}>>", value)
 
-        return template
+        dataset_record = {
+            "config": config,
+            "domain": domain,
+            "topic": topic,
+            "problem": "",
+            "conversation": [],
+        }
+
+        return template, json.dumps(dataset_record, indent=2)
 
 
 def main() -> None:

@@ -24,6 +24,7 @@ tutor replies:
 
 State transitions should feel realistic, not mechanical. Do not march through
 Diagnosis → Support → Synthesis in a fixed pattern every turn. A tutor may:
+
 - stay in Support across several turns if the student keeps struggling
 - drop back to Diagnosis if the student says something confused or off-track
 - move to Synthesis only once the student has actually reached the correct answer
@@ -101,22 +102,15 @@ not a label applied after the fact. Student turns are plain text with no tags.
 
 ## OUTPUT FORMAT — return ONLY valid JSON, nothing else
 
+Do not repeat the config, domain, or topic back — the caller already has those. Return only
+what you actually generated: the problem and the conversation.
+
 {
-  "config": {
-    "socratic_level": "<<SOCRATIC_LEVEL>>",
-    "student_level": "<<STUDENT_LEVEL>>",
-    "hint_frequency": "<<HINT_FREQUENCY>>",
-    "mistake_frequency": "<<MISTAKE_FREQUENCY>>",
-    "verbosity": "<<VERBOSITY>>",
-    "difficulty": "<<DIFFICULTY>>"
-  },
-  "domain": "<<DOMAIN>>",
-  "topic": "<<TOPIC>>",
-  "problem": "<problem statement>",
-  "conversation": [
-    {"turn": 1, "speaker": "student", "text": "<student message, no tags>"},
-    {"turn": 2, "speaker": "tutor", "text": "<reasoning>...</reasoning><state>Diagnosis</state><response>...</response>"}
-  ]
+"problem": "<problem statement>",
+"conversation": [
+{"turn": 1, "speaker": "student", "text": "<student message, no tags>"},
+{"turn": 2, "speaker": "tutor", "text": "<reasoning>...</reasoning><state>Diagnosis</state><response>...</response>"}
+]
 }
 
 Do not include any planning, reasoning, or commentary outside this JSON object. Do not wrap
@@ -124,6 +118,7 @@ the output in markdown code fences (no ```json). Your response must start with {
 with } — nothing before, nothing after.
 
 ## SELF-CHECK BEFORE OUTPUT — verify every item, fix and re-check if any fail
+
 - Conversation array has between 12 and 18 turns (count them)
 - Every tutor "text" field follows <reasoning><state><response> in that order, no exceptions
 - State transitions are plausible given mistake_frequency and student_level, not formulaic
