@@ -11,21 +11,10 @@
     "last_use": null,
     "path_to_response_msg": "",
     "path_to_response_usage": "",
-    "tier": 2
-  },
-  {
-    "provider": "GROQ",
-    "api_key": "",
-    "model_name": "qwen/qwen3.6-27b",
-    "url": "https://api.groq.com/openai/v1",
-    "rpd": 1000,
-    "rpd_left": 1000,
-    "tpd": 200000,
-    "tpd_left": 200000,
-    "last_use": null,
-    "path_to_response_msg": "",
-    "path_to_response_usage": "",
-    "tier": 3
+    "tier": 2,
+    "dest_write_path": "",
+    "no_of_replies": 0,
+    "avg_tokens_used": 0.0
   },
   {
     "provider": "OpenRouter",
@@ -39,7 +28,10 @@
     "last_use": null,
     "path_to_response_msg": "",
     "path_to_response_usage": "",
-    "tier": 3
+    "tier": 3,
+    "dest_write_path": "",
+    "no_of_replies": 0,
+    "avg_tokens_used": 0.0
   },
   {
     "provider": "OpenRouter",
@@ -53,7 +45,10 @@
     "last_use": null,
     "path_to_response_msg": "",
     "path_to_response_usage": "",
-    "tier": 1
+    "tier": 1,
+    "dest_write_path": "",
+    "no_of_replies": 0,
+    "avg_tokens_used": 0.0
   },
   {
     "provider": "Google",
@@ -67,7 +62,10 @@
     "last_use": null,
     "path_to_response_msg": "",
     "path_to_response_usage": "",
-    "tier": 1
+    "tier": 1,
+    "dest_write_path": "",
+    "no_of_replies": 0,
+    "avg_tokens_used": 0.0
   },
   {
     "provider": "Google",
@@ -81,7 +79,10 @@
     "last_use": null,
     "path_to_response_msg": "",
     "path_to_response_usage": "",
-    "tier": 1
+    "tier": 1,
+    "dest_write_path": "",
+    "no_of_replies": 0,
+    "avg_tokens_used": 0.0
   },
   {
     "provider": "Google",
@@ -95,7 +96,10 @@
     "last_use": null,
     "path_to_response_msg": "",
     "path_to_response_usage": "",
-    "tier": 2
+    "tier": 2,
+    "dest_write_path": "",
+    "no_of_replies": 0,
+    "avg_tokens_used": 0.0
   },
   {
     "provider": "Google",
@@ -109,7 +113,10 @@
     "last_use": null,
     "path_to_response_msg": "",
     "path_to_response_usage": "",
-    "tier": 3
+    "tier": 3,
+    "dest_write_path": "",
+    "no_of_replies": 0,
+    "avg_tokens_used": 0.0
   },
   {
     "provider": "Google",
@@ -123,7 +130,10 @@
     "last_use": null,
     "path_to_response_msg": "",
     "path_to_response_usage": "",
-    "tier": 3
+    "tier": 3,
+    "dest_write_path": "",
+    "no_of_replies": 0,
+    "avg_tokens_used": 0.0
   },
   {
     "provider": "Google",
@@ -137,7 +147,10 @@
     "last_use": null,
     "path_to_response_msg": "",
     "path_to_response_usage": "",
-    "tier": 4
+    "tier": 4,
+    "dest_write_path": "",
+    "no_of_replies": 0,
+    "avg_tokens_used": 0.0
   },
   {
     "provider": "Google",
@@ -151,21 +164,10 @@
     "last_use": null,
     "path_to_response_msg": "",
     "path_to_response_usage": "",
-    "tier": 2
-  },
-  {
-    "provider": "Google",
-    "api_key": "",
-    "model_name": "gemma-4-26b-a4b-it",
-    "url": "https://generativelanguage.googleapis.com/v1beta/openai/",
-    "rpd": 14400,
-    "rpd_left": 14400,
-    "tpd": null,
-    "tpd_left": null,
-    "last_use": null,
-    "path_to_response_msg": "",
-    "path_to_response_usage": "",
-    "tier": 3
+    "tier": 2,
+    "dest_write_path": "",
+    "no_of_replies": 0,
+    "avg_tokens_used": 0.0
   },
   {
     "provider": "Google",
@@ -179,7 +181,10 @@
     "last_use": null,
     "path_to_response_msg": "",
     "path_to_response_usage": "",
-    "tier": 4
+    "tier": 4,
+    "dest_write_path": "",
+    "no_of_replies": 0,
+    "avg_tokens_used": 0.0
   },
   {
     "provider": "Google",
@@ -193,6 +198,9 @@
     "last_use": null,
     "path_to_response_msg": "",
     "path_to_response_usage": "",
-    "tier": 5
+    "tier": 5,
+    "dest_write_path": "",
+    "no_of_replies": 0,
+    "avg_tokens_used": 0.0
   }
 ]

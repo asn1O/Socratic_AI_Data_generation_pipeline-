@@ -9,7 +9,7 @@ This implementation writes updates back to the same JSON file.
 """
 from datetime import datetime, timezone, timedelta
 import json
-from typing import List, Optional
+from typing import List, Optional, Tuple
 import os
 
 # Import Model from model.py, work whether package import or direct script
@@ -23,7 +23,7 @@ class KeyManager:
     def __init__(self, models_path: str = "code/model.json"):
         self.models_path = models_path
         self.keys: List[Model] = []
-        self.last_used_index = 0
+        self.last_used_index = -1
         self._load_models()
 
     def _load_models(self) -> None:

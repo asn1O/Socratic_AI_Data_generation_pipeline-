@@ -8,10 +8,17 @@ from code.key_manager import KeyManager
 
 
 class KeyManagerRoundRobinTests(unittest.TestCase):
+    def _remove_empty_model_dir(self, path):
+        if path.is_dir() and not any(path.iterdir()):
+            path.rmdir()
+
     def _write_models(self, models):
         tmp = tempfile.NamedTemporaryFile("w", delete=False, suffix=".json")
         json.dump(models, tmp)
         tmp.close()
+        for model in models:
+            model_dir = Path("data") / model["model_name"].replace("/", "_")
+            self.addCleanup(self._remove_empty_model_dir, model_dir)
         return tmp.name
 
     def test_get_key_round_robin_skips_expired_and_starts_after_last_used(self):
@@ -135,6 +142,20 @@ class KeyManagerRoundRobinTests(unittest.TestCase):
         self.assertTrue(manager.keys[0].expired)
         self.assertEqual(manager.keys[0].tpd_left, 0)
         self.assertIsNotNone(manager.keys[0].last_use)
+
+    def test_model_tracks_dest_path_and_avg_tokens(self):
+        model = KeyManager("code/model.json").keys[0]
+        self.addCleanup(self._remove_empty_model_dir, Path(model.dest_write_path))
+
+        self.assertEqual(model.dest_write_path, "Data_generation_pipeline/data/openai/gpt-oss-120b")
+        self.assertEqual(model.no_of_replies, 0)
+        self.assertEqual(model.avg_tokens_used, 0)
+
+        model.record_response(100)
+        model.record_response(200)
+
+        self.assertEqual(model.no_of_replies, 2)
+        self.assertEqual(model.avg_tokens_used, 150)
 
 
 if __name__ == "__main__":

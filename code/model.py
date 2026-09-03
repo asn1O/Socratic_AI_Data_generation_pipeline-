@@ -1,5 +1,7 @@
 from dataclasses import dataclass, asdict
-from datetime import datetime
+from datetime import datetime, timezone
+import json
+from pathlib import Path
 from typing import Optional
 
 
@@ -18,6 +20,16 @@ class Model:
     path_to_response_msg: str = ""
     path_to_response_usage: str = ""
     tier: int = 0
+    dest_write_path: str = ""
+    no_of_replies: int = 0
+    avg_tokens_used: float = 0.0
+
+    def __post_init__(self) -> None:
+        folder_name = self.model_name.replace("/", "_")
+        if not self.dest_write_path:
+            self.dest_write_path = str(Path("data") / folder_name)
+
+        Path(self.dest_write_path).mkdir(parents=True, exist_ok=True)
 
     @property
     def ok_to_use(self) -> bool:
@@ -33,7 +45,7 @@ class Model:
         """Mark the model as temporarily unusable until its reset window expires."""
         self.expired = True
         if now is None:
-            now = datetime.now()
+            now = datetime.now(timezone.utc)
         self.last_use = now
 
     def reset_quota(self) -> None:
@@ -57,6 +69,8 @@ class Model:
 
         last = d.get("last_use")
         last_use = datetime.fromisoformat(last) if last else None
+        if last_use is not None and last_use.tzinfo is None:
+            last_use = last_use.replace(tzinfo=timezone.utc)
 
         raw_tpd = d.get("tpd")
         tpd = int(raw_tpd) if raw_tpd is not None else None
@@ -69,7 +83,6 @@ class Model:
             tpd_left = int(raw_tpd_left)
 
         expired = bool(d.get("expired", False))
-
         return Model(
             provider=d["provider"],
             api_key=d["api_key"],
@@ -83,8 +96,56 @@ class Model:
             expired=expired,
             path_to_response_msg=d.get("path_to_response_msg", ""),
             path_to_response_usage=d.get("path_to_response_usage", ""),
-            tier=int(d.get("tier", 0))
+            tier=int(d.get("tier", 0)),
+            dest_write_path=d.get("dest_write_path", ""),
+            no_of_replies=int(d.get("no_of_replies", 0)),
+            avg_tokens_used=float(d.get("avg_tokens_used", 0.0) or 0.0),
         )
+
+    def record_response(self, total_tokens: Optional[int] = None) -> None:
+        """Update response counters and running average token usage."""
+        if total_tokens is None:
+            total_tokens = 0
+
+        previous_replies = self.no_of_replies
+        self.no_of_replies = previous_replies + 1
+        self.avg_tokens_used = (
+            ((self.avg_tokens_used * previous_replies) + int(total_tokens))
+            / self.no_of_replies
+            if self.no_of_replies > 0
+            else 0.0
+        )
+
+    def write_response(self, response: dict) -> Path:
+        """Append a response to the model's JSON set containing at most 15 items."""
+        set_index = max(self.no_of_replies - 1, 0) // 15
+        response_path = Path(self.dest_write_path) / f"set[{set_index}].json"
+
+        if response_path.exists():
+            with response_path.open("r", encoding="utf-8") as file:
+                responses = json.load(file)
+            if not isinstance(responses, list):
+                raise ValueError(f"Expected a JSON array in {response_path}")
+        else:
+            responses = []
+
+        if len(responses) >= 15:
+            set_index += 1
+            response_path = Path(self.dest_write_path) / f"set[{set_index}].json"
+            if response_path.exists():
+                with response_path.open("r", encoding="utf-8") as file:
+                    responses = json.load(file)
+                if not isinstance(responses, list):
+                    raise ValueError(f"Expected a JSON array in {response_path}")
+            else:
+                responses = []
+
+        responses.append(response)
+        with response_path.open("w", encoding="utf-8") as file:
+            json.dump(responses, file, indent=2, ensure_ascii=False)
+            file.write("\n")
+
+        return response_path
 
     def display_details(self):
         print(f"Provider: {self.provider}")
@@ -98,6 +159,9 @@ class Model:
         print(f"Path to Response Msg: {self.path_to_response_msg}")
         print(f"Path to Response Usage: {self.path_to_response_usage}")
         print(f"Tier: {self.tier}")
+        print(f"Destination Write Path: {self.dest_write_path}")
+        print(f"No. of Replies: {self.no_of_replies}")
+        print(f"Average Tokens Used: {self.avg_tokens_used}")
 
     def test_connection(self) -> bool:
         """
@@ -158,6 +222,7 @@ class Model:
                 OpenAI,
                 APIError,
                 APIConnectionError,
+                APITimeoutError,
                 RateLimitError,
                 AuthenticationError,
                 APIStatusError,
@@ -179,7 +244,7 @@ class Model:
             )
 
             # Make request
-            self.last_use = datetime.now()
+            self.last_use = datetime.now(timezone.utc)
             response = client.chat.completions.create(
                 model=self.model_name,
                 messages=[
@@ -212,6 +277,7 @@ class Model:
                 return False, None, total_tokens
 
             # Success
+            self.record_response(total_tokens)
             print(
                 f"[provider={provider} model={self.model_name}] "
                 "Success: received response — model appears reachable."
@@ -225,13 +291,13 @@ class Model:
 
         except RateLimitError:
             self.expired = True
-            self.last_use = datetime.now()
+            self.last_use = datetime.now(timezone.utc)
             print(
                 f"[provider={provider} model={self.model_name}] "
                 "Rate limited (429). "
                 "Please check your quota and try again later."
             )
-            return False, None, None
+            return False, None, 0
 
         # -------------------------
         # Authentication
@@ -243,7 +309,7 @@ class Model:
                 "Authentication error (401). "
                 "Check API key and permissions."
             )
-            return False, None, None
+            return False, None, 0
 
         # -------------------------
         # HTTP status errors
@@ -257,7 +323,7 @@ class Model:
                     f"Not found (404): model '{self.model_name}' "
                     "was not found. Check the model name."
                 )
-                return False, None, None
+                return False, None, 0
 
             print(
                 f"[provider={provider} model={self.model_name}] "
@@ -265,7 +331,7 @@ class Model:
                 f"Response: {str(e)[:500]}"
             )
 
-            return False, None, None
+            return False, None, 0
 
         # -------------------------
         # Connection errors
@@ -273,21 +339,21 @@ class Model:
 
         except APIConnectionError as e:
             self.expired = True
-            self.last_use = datetime.now()
+            self.last_use = datetime.now(timezone.utc)
             print(
                 f"[provider={provider} model={self.model_name}] "
                 f"Connection error when contacting {self.url}: {e}"
             )
-            return False, None, None
+            return False, None, 0
 
-        except TimeoutError:
+        except (TimeoutError, APITimeoutError):
             self.expired = True
-            self.last_use = datetime.now()
+            self.last_use = datetime.now(timezone.utc)
             print(
                 f"[provider={provider} model={self.model_name}] "
                 "Request timed out; marking model as expired."
             )
-            return False, None, None
+            return False, None, 0
 
         # -------------------------
         # Other OpenAI API errors
@@ -298,7 +364,7 @@ class Model:
                 f"[provider={provider} model={self.model_name}] "
                 f"API error: {e}"
             )
-            return False, None, None
+            return False, None, 0
 
         # -------------------------
         # Anything unexpected
@@ -309,4 +375,4 @@ class Model:
                 f"[provider={provider} model={self.model_name}] "
                 f"Unexpected error when attempting request: {e}"
             )
-            return False, None, None
+            return False, None, 0

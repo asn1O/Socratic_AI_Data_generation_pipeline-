@@ -39,6 +39,20 @@ Diagnosis → Support → Synthesis in a fixed pattern every turn. A tutor may:
 - verbosity: <<VERBOSITY>> — <<VERBOSITY_DEF>>
 - difficulty: <<DIFFICULTY>> — <<DIFFICULTY_DEF>>
 
+These parameters must visibly shape the conversation, not just sit in the config block.
+Concretely:
+
+- If socratic_level is **low**: at least half of the tutor's turns must contain a direct
+  explanatory statement (not phrased as a question) before or instead of a question.
+- If socratic_level is **high**: nearly every tutor turn must be phrased as a question —
+  avoid direct explanation even when the student struggles.
+- If mistake_frequency is **medium** or **high**: the student must explicitly assert at
+  least one factually or procedurally incorrect claim (not merely hedge or express
+  uncertainty) before reaching the correct answer. "I'm not sure if..." does not count as
+  a mistake — the student must actually state something wrong.
+- If mistake_frequency is **low**: the student may express uncertainty but should not
+  assert wrong claims.
+
 ---
 
 ## DOMAIN AND TOPIC
@@ -53,14 +67,23 @@ student up front.
 
 ## CONVERSATION REQUIREMENTS
 
-1. Length: 12–18 turns total.
+1. Length: 12–18 turns total. Before finalizing your output, count the turns in your
+   "conversation" array. If it has fewer than 12, continue the dialogue until it does.
 2. Flow: start with confusion or partial understanding, progress toward correct reasoning,
    end with the student explaining the concept in their own words.
-3. Tutor never gives the full solution outright — guides via the three states above.
-4. Student behavior reflects student_level and mistake_frequency: realistic errors, partial
+3. The student's FIRST turn must show only partial or incomplete reasoning — it must never
+   already contain the correct final answer or a fully worked solution. The struggle has to
+   be real, not just a formality before the student immediately gets it right.
+4. Tutor never gives the full solution outright — guides via the three states above.
+5. Student behavior reflects student_level and mistake_frequency: realistic errors, partial
    reasoning, occasional uncertainty — not scripted-sounding.
-5. The FINAL tutor turn must be a Synthesis turn, and the student's final turn must contain
-   their own explanation of the rule/principle — never the tutor stating it first.
+6. The FINAL tutor turn must be a Synthesis turn, and the student's final turn must contain
+   their own explanation of the rule/principle — never the tutor stating it first. The
+   conversation must end immediately after that student turn. Do not add any further tutor
+   turn (e.g. praise, wrap-up, confirmation) after the student's closing explanation.
+7. Write turns as natural, short spoken exchanges — the way a real tutor and student talk
+   out loud — not as polished paragraphs or essay-style writing. Match turn length to the
+   verbosity parameter, but even at high verbosity, turns should read like speech, not prose.
 
 ---
 
@@ -96,9 +119,20 @@ not a label applied after the fact. Student turns are plain text with no tags.
   ]
 }
 
-## SELF-CHECK BEFORE OUTPUT
+Do not include any planning, reasoning, or commentary outside this JSON object. Do not wrap
+the output in markdown code fences (no ```json). Your response must start with { and end
+with } — nothing before, nothing after.
+
+## SELF-CHECK BEFORE OUTPUT — verify every item, fix and re-check if any fail
+- Conversation array has between 12 and 18 turns (count them)
 - Every tutor "text" field follows <reasoning><state><response> in that order, no exceptions
 - State transitions are plausible given mistake_frequency and student_level, not formulaic
+- socratic_level requirement is met (see quantified rule above), not just the config label
+- If mistake_frequency is medium/high, the student has asserted at least one concretely
+  wrong claim, not just hedged
+- The student's first turn does not already contain the correct answer
 - Tutor never states the rule before the student does
-- Final turn pair ends in Synthesis, with the student giving the explanation
-- Output is valid JSON and nothing else — no markdown fences, no preamble
+- Final turn pair ends in Synthesis, with the student giving the explanation, and no tutor
+  turn follows it
+- Output is valid JSON and nothing else — no markdown fences, no preamble, no text after
+  the closing brace
