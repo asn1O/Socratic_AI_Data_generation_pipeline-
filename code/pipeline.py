@@ -423,6 +423,21 @@ def run_pipeline(
                 generated_record["conversation"] = payload["conversation"]
             except (ValueError, TypeError, KeyError) as exc:
                 record_failure(model, str(exc))
+                try:
+                    rejected_path = model.write_rejected_response(reply)
+                    logger.info(
+                        "REJECTED_RESPONSE_SAVED provider=%s model=%s path=%s",
+                        model.provider,
+                        model.model_name,
+                        rejected_path,
+                    )
+                except OSError as write_exc:
+                    logger.error(
+                        "REJECTED_RESPONSE_SAVE_FAILURE provider=%s model=%s reason=%s",
+                        model.provider,
+                        model.model_name,
+                        f"unable to write rejected response: {write_exc}",
+                    )
                 logger.error(
                     "JSON_INVALID provider=%s model=%s reason=%s",
                     model.provider,

@@ -147,6 +147,21 @@ class Model:
 
         return response_path
 
+    def write_rejected_response(self, response: str) -> Path:
+        """Append a rejected raw response to this model's text file."""
+        file_name_by_model = self.model_name.replace("/", "_")
+        rejected_dir = Path("data") / "rejected_responses"
+        rejected_dir.mkdir(parents=True, exist_ok=True)
+        response_path = rejected_dir / f"{file_name_by_model}.txt"
+
+        with response_path.open("a", encoding="utf-8") as file:
+            if response_path.stat().st_size > 0:
+                file.write("\n\n")
+            file.write(response)
+            file.write("\n")
+
+        return response_path
+
     def display_details(self):
         print(f"Provider: {self.provider}")
         print(f"Model: {self.model_name}")
