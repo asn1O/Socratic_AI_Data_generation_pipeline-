@@ -11,19 +11,7 @@ from datetime import datetime, timezone, timedelta
 import json
 from typing import List, Optional, Tuple
 import os
-
-
-def load_dotenv() -> None:
-    env_path = os.path.join(os.getcwd(), ".env")
-    if not os.path.exists(env_path):
-        return
-    with open(env_path, "r", encoding="utf-8") as env_file:
-        for line in env_file:
-            line = line.strip()
-            if not line or line.startswith("#") or "=" not in line:
-                continue
-            name, value = line.split("=", 1)
-            os.environ.setdefault(name.strip(), value.strip().strip("\"'"))
+from dotenv import load_dotenv
 
 # Import Model from model.py, work whether package import or direct script
 try:
