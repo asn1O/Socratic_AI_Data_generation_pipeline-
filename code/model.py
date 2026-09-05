@@ -25,9 +25,9 @@ class Model:
     avg_tokens_used: float = 0.0
 
     def __post_init__(self) -> None:
-        folder_name = self.model_name.replace("/", "_")
-        if not self.dest_write_path:
-            self.dest_write_path = str(Path("data") / folder_name)
+        folder_name = f"{self.provider}_{self.model_name}".replace("/", "_")
+        configured_path = Path(self.dest_write_path) if self.dest_write_path else Path("data")
+        self.dest_write_path = str(configured_path.parent / folder_name)
 
         Path(self.dest_write_path).mkdir(parents=True, exist_ok=True)
 
@@ -116,10 +116,17 @@ class Model:
             else 0.0
         )
 
+    @property
+    def _response_file_stem(self) -> str:
+        return f"{self.provider}_{self.model_name}".replace("/", "_")
+
     def write_response(self, response: dict) -> Path:
         """Append a response to the model's JSON set containing at most 15 items."""
         set_index = max(self.no_of_replies - 1, 0) // 15
-        response_path = Path(self.dest_write_path) / f"set[{set_index}].json"
+        response_path = (
+            Path(self.dest_write_path)
+            / f"{self._response_file_stem}_set[{set_index}].json"
+        )
 
         if response_path.exists():
             with response_path.open("r", encoding="utf-8") as file:
@@ -131,7 +138,10 @@ class Model:
 
         if len(responses) >= 15:
             set_index += 1
-            response_path = Path(self.dest_write_path) / f"set[{set_index}].json"
+            response_path = (
+                Path(self.dest_write_path)
+                / f"{self._response_file_stem}_set[{set_index}].json"
+            )
             if response_path.exists():
                 with response_path.open("r", encoding="utf-8") as file:
                     responses = json.load(file)
@@ -149,10 +159,9 @@ class Model:
 
     def write_rejected_response(self, response: object) -> Path:
         """Append a rejected raw response to this model's text file."""
-        file_name_by_model = self.model_name.replace("/", "_")
         rejected_dir = Path("data") / "rejected_responses"
         rejected_dir.mkdir(parents=True, exist_ok=True)
-        response_path = rejected_dir / f"{file_name_by_model}.txt"
+        response_path = rejected_dir / f"{self._response_file_stem}.txt"
         response_text = (
             response
             if isinstance(response, str)
