@@ -48,24 +48,21 @@ class KeyManager:
         return False
 
     def _mark_expired_if_needed(self, model: Model) -> bool:
-        """Return True when a model should not be selected until its reset window expires."""
-        if not model.last_use and model.expired:
-            return True
+        """Return True when a model is unavailable due to cooldown or expiration."""
+        now = datetime.now(timezone.utc)
+
+        if model.cooldown_until is not None:
+            if now < model.cooldown_until:
+                return True
+
+            model.cooldown_until = None
+            model.expired = False
+            self._write_models()
 
         if model.expired:
             if self._maybe_reset(model):
                 self._write_models()
                 return False
-            return True
-
-        if model.rpd_left <= 1:
-            model.expired = True
-            model.last_use = datetime.now(timezone.utc)
-            return True
-
-        if model.tpd_left is not None and model.tpd_left <= 10000:
-            model.expired = True
-            model.last_use = datetime.now(timezone.utc)
             return True
 
         return False
@@ -98,13 +95,7 @@ class KeyManager:
         return None
 
     def reduce_key_usage(self, index: int, tpd_used: int) -> None:
-        """Reduce usage counters after a successful API call.
-
-        - rpd_left reduced by 1
-        - tpd_left reduced by tpd_used
-        - if limits are near exhaustion, mark the model as expired
-        - write back to file
-        """
+        """Reduce usage counters after a successful API call and persist them."""
         if index < 0 or index >= len(self.keys):
             raise IndexError("key index out of range")
 
@@ -115,12 +106,7 @@ class KeyManager:
         if m.tpd_left is not None:
             m.tpd_left = max(0, m.tpd_left - max(0, tpd_used))
 
-        if m.rpd_left <= 1 or (m.tpd_left is not None and m.tpd_left <= 10000):
-            m.expired = True
-            m.last_use = datetime.now(timezone.utc)
-        else:
-            m.expired = False
-            m.last_use = datetime.now(timezone.utc)
+        m.last_use = datetime.now(timezone.utc)
 
         self._write_models()
 

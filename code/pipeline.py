@@ -417,6 +417,16 @@ def run_pipeline(
                 continue
 
             try:
+                key_manager.reduce_key_usage(model_index, int(total_tokens or 0))
+            except Exception as exc:
+                logger.error(
+                    "USAGE_UPDATE_FAILURE provider=%s model=%s reason=%s",
+                    model.provider,
+                    model.model_name,
+                    f"unable to reduce usage: {exc}",
+                )
+
+            try:
                 payload = _parse_valid_json(reply)
                 generated_record = json.loads(generated_record_json)
                 generated_record["problem"] = payload["problem"]
@@ -479,20 +489,6 @@ def run_pipeline(
                 len(payload.get("conversation", [])),
                 dataset_path,
             )
-
-            try:
-                if total_tokens > 0:
-                    key_manager.reduce_key_usage(model_index, int(total_tokens))
-            except Exception as exc:
-                # Data is already saved — this only affects usage bookkeeping,
-                # so log and move on rather than treating it as a fatal error
-                # for this iteration.
-                logger.error(
-                    "USAGE_UPDATE_FAILURE provider=%s model=%s reason=%s",
-                    model.provider,
-                    model.model_name,
-                    f"unable to reduce usage: {exc}",
-                )
 
     except KeyboardInterrupt:
         logger.warning(

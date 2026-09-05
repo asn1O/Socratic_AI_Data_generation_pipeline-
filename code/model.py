@@ -1,5 +1,6 @@
 from dataclasses import dataclass, asdict
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
+from email.utils import parsedate_to_datetime
 import json
 from pathlib import Path
 from typing import Optional
@@ -17,6 +18,7 @@ class Model:
     tpd_left: Optional[int]
     last_use: Optional[datetime]
     expired: bool = False
+    cooldown_until: Optional[datetime] = None
     tier: int = 0
     no_of_replies: int = 0
     avg_tokens_used: float = 0.0
@@ -54,6 +56,9 @@ class Model:
 
         d = asdict(self)
         d["last_use"] = self.last_use.isoformat() if self.last_use else None
+        d["cooldown_until"] = (
+            self.cooldown_until.isoformat() if self.cooldown_until else None
+        )
         return d
 
     @staticmethod
@@ -64,6 +69,11 @@ class Model:
         last_use = datetime.fromisoformat(last) if last else None
         if last_use is not None and last_use.tzinfo is None:
             last_use = last_use.replace(tzinfo=timezone.utc)
+
+        cooldown = d.get("cooldown_until")
+        cooldown_until = datetime.fromisoformat(cooldown) if cooldown else None
+        if cooldown_until is not None and cooldown_until.tzinfo is None:
+            cooldown_until = cooldown_until.replace(tzinfo=timezone.utc)
 
         raw_tpd = d.get("tpd")
         tpd = int(raw_tpd) if raw_tpd is not None else None
@@ -87,6 +97,7 @@ class Model:
             tpd_left=tpd_left,
             last_use=last_use,
             expired=expired,
+            cooldown_until=cooldown_until,
             tier=int(d.get("tier", 0)),
             no_of_replies=int(d.get("no_of_replies", 0)),
             avg_tokens_used=float(d.get("avg_tokens_used", 0.0) or 0.0),
@@ -220,6 +231,32 @@ class Model:
         prompt = DatasetPromptGenerator().generate_prompt()
         return self.call_model(prompt)
 
+    def _set_rate_limit_cooldown(self, error: Exception) -> None:
+        """Set a cooldown from Retry-After, falling back to 24 hours."""
+        now = datetime.now(timezone.utc)
+        retry_after = None
+        response = getattr(error, "response", None)
+        headers = getattr(response, "headers", None)
+
+        if headers is not None:
+            retry_after = headers.get("retry-after")
+            if retry_after is None:
+                retry_after = headers.get("Retry-After")
+
+        cooldown_until = None
+        if retry_after is not None:
+            try:
+                cooldown_until = now + timedelta(seconds=max(float(retry_after), 0))
+            except (TypeError, ValueError):
+                try:
+                    cooldown_until = parsedate_to_datetime(str(retry_after))
+                    if cooldown_until.tzinfo is None:
+                        cooldown_until = cooldown_until.replace(tzinfo=timezone.utc)
+                except (TypeError, ValueError, OverflowError):
+                    cooldown_until = None
+
+        self.cooldown_until = cooldown_until or (now + timedelta(hours=24))
+
     def call_model(self, prompt: str):
         """
         Send a prompt to the model and return:
@@ -310,7 +347,8 @@ class Model:
         # Rate limit
         # -------------------------
 
-        except RateLimitError:
+        except RateLimitError as error:
+            self._set_rate_limit_cooldown(error)
             self.expired = True
             self.last_use = datetime.now(timezone.utc)
             print(

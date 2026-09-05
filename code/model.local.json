@@ -9,6 +9,7 @@
     "tpd": 100000,
     "tpd_left": 100000,
     "last_use": null,
+    "cooldown_until": null,
     "tier": 2,
     "no_of_replies": 0,
     "avg_tokens_used": 0.0
@@ -23,6 +24,7 @@
     "tpd": null,
     "tpd_left": null,
     "last_use": null,
+    "cooldown_until": null,
     "tier": 3,
     "no_of_replies": 0,
     "avg_tokens_used": 0.0
@@ -37,6 +39,7 @@
     "tpd": null,
     "tpd_left": null,
     "last_use": null,
+    "cooldown_until": null,
     "tier": 1,
     "no_of_replies": 0,
     "avg_tokens_used": 0.0
@@ -51,6 +54,7 @@
     "tpd": null,
     "tpd_left": null,
     "last_use": null,
+    "cooldown_until": null,
     "tier": 1,
     "no_of_replies": 0,
     "avg_tokens_used": 0.0
@@ -65,6 +69,7 @@
     "tpd": null,
     "tpd_left": null,
     "last_use": null,
+    "cooldown_until": null,
     "tier": 1,
     "no_of_replies": 0,
     "avg_tokens_used": 0.0
@@ -79,6 +84,7 @@
     "tpd": null,
     "tpd_left": null,
     "last_use": null,
+    "cooldown_until": null,
     "tier": 2,
     "no_of_replies": 0,
     "avg_tokens_used": 0.0
@@ -93,6 +99,7 @@
     "tpd": null,
     "tpd_left": null,
     "last_use": null,
+    "cooldown_until": null,
     "tier": 3,
     "no_of_replies": 0,
     "avg_tokens_used": 0.0
@@ -107,6 +114,7 @@
     "tpd": null,
     "tpd_left": null,
     "last_use": null,
+    "cooldown_until": null,
     "tier": 3,
     "no_of_replies": 0,
     "avg_tokens_used": 0.0
@@ -121,6 +129,7 @@
     "tpd": null,
     "tpd_left": null,
     "last_use": null,
+    "cooldown_until": null,
     "tier": 4,
     "no_of_replies": 0,
     "avg_tokens_used": 0.0
@@ -135,6 +144,7 @@
     "tpd": null,
     "tpd_left": null,
     "last_use": null,
+    "cooldown_until": null,
     "tier": 2,
     "no_of_replies": 0,
     "avg_tokens_used": 0.0
@@ -149,6 +159,7 @@
     "tpd": null,
     "tpd_left": null,
     "last_use": null,
+    "cooldown_until": null,
     "tier": 4,
     "no_of_replies": 0,
     "avg_tokens_used": 0.0
@@ -163,6 +174,7 @@
     "tpd": null,
     "tpd_left": null,
     "last_use": null,
+    "cooldown_until": null,
     "tier": 5,
     "no_of_replies": 0,
     "avg_tokens_used": 0.0
