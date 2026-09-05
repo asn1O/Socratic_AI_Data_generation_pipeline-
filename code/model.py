@@ -17,18 +17,11 @@ class Model:
     tpd_left: Optional[int]
     last_use: Optional[datetime]
     expired: bool = False
-    path_to_response_msg: str = ""
-    path_to_response_usage: str = ""
     tier: int = 0
-    dest_write_path: str = ""
     no_of_replies: int = 0
     avg_tokens_used: float = 0.0
 
     def __post_init__(self) -> None:
-        folder_name = f"{self.provider}_{self.model_name}".replace("/", "_")
-        configured_path = Path(self.dest_write_path) if self.dest_write_path else Path("data")
-        self.dest_write_path = str(configured_path.parent / folder_name)
-
         Path(self.dest_write_path).mkdir(parents=True, exist_ok=True)
 
     @property
@@ -94,10 +87,7 @@ class Model:
             tpd_left=tpd_left,
             last_use=last_use,
             expired=expired,
-            path_to_response_msg=d.get("path_to_response_msg", ""),
-            path_to_response_usage=d.get("path_to_response_usage", ""),
             tier=int(d.get("tier", 0)),
-            dest_write_path=d.get("dest_write_path", ""),
             no_of_replies=int(d.get("no_of_replies", 0)),
             avg_tokens_used=float(d.get("avg_tokens_used", 0.0) or 0.0),
         )
@@ -120,12 +110,16 @@ class Model:
     def _response_file_stem(self) -> str:
         return f"{self.provider}_{self.model_name}".replace("/", "_")
 
+    @property
+    def dest_write_path(self) -> str:
+        return str(Path("data") / self._response_file_stem)
+
     def write_response(self, response: dict) -> Path:
         """Append a response to the model's JSON set containing at most 15 items."""
         set_index = max(self.no_of_replies - 1, 0) // 15
         response_path = (
             Path(self.dest_write_path)
-            / f"{self._response_file_stem}_set[{set_index}].json"
+            / f"set[{set_index}].json"
         )
 
         if response_path.exists():
@@ -140,7 +134,7 @@ class Model:
             set_index += 1
             response_path = (
                 Path(self.dest_write_path)
-                / f"{self._response_file_stem}_set[{set_index}].json"
+                / f"set[{set_index}].json"
             )
             if response_path.exists():
                 with response_path.open("r", encoding="utf-8") as file:
@@ -185,8 +179,6 @@ class Model:
         print(f"TPD: {self.tpd}")
         print(f"TPD Left: {self.tpd_left}")
         print(f"Last Use: {self.last_use}")
-        print(f"Path to Response Msg: {self.path_to_response_msg}")
-        print(f"Path to Response Usage: {self.path_to_response_usage}")
         print(f"Tier: {self.tier}")
         print(f"Destination Write Path: {self.dest_write_path}")
         print(f"No. of Replies: {self.no_of_replies}")

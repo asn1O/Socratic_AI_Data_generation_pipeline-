@@ -34,8 +34,6 @@ class KeyManagerRoundRobinTests(unittest.TestCase):
                 "tpd_left": 50000,
                 "last_use": None,
                 "expired": False,
-                "path_to_response_msg": "",
-                "path_to_response_usage": "",
                 "tier": 1,
             },
             {
@@ -49,8 +47,6 @@ class KeyManagerRoundRobinTests(unittest.TestCase):
                 "tpd_left": 50000,
                 "last_use": None,
                 "expired": False,
-                "path_to_response_msg": "",
-                "path_to_response_usage": "",
                 "tier": 1,
             },
             {
@@ -64,8 +60,6 @@ class KeyManagerRoundRobinTests(unittest.TestCase):
                 "tpd_left": 50000,
                 "last_use": None,
                 "expired": True,
-                "path_to_response_msg": "",
-                "path_to_response_usage": "",
                 "tier": 1,
             },
         ]
@@ -96,8 +90,6 @@ class KeyManagerRoundRobinTests(unittest.TestCase):
                 "tpd_left": 3000,
                 "last_use": stale_time.isoformat(),
                 "expired": True,
-                "path_to_response_msg": "",
-                "path_to_response_usage": "",
                 "tier": 1,
             }
         ]
@@ -127,8 +119,6 @@ class KeyManagerRoundRobinTests(unittest.TestCase):
                 "tpd_left": 12000,
                 "last_use": None,
                 "expired": False,
-                "path_to_response_msg": "",
-                "path_to_response_usage": "",
                 "tier": 1,
             }
         ]
