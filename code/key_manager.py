@@ -12,6 +12,19 @@ import json
 from typing import List, Optional, Tuple
 import os
 
+
+def load_dotenv() -> None:
+    env_path = os.path.join(os.getcwd(), ".env")
+    if not os.path.exists(env_path):
+        return
+    with open(env_path, "r", encoding="utf-8") as env_file:
+        for line in env_file:
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            name, value = line.split("=", 1)
+            os.environ.setdefault(name.strip(), value.strip().strip("\"'"))
+
 # Import Model from model.py, work whether package import or direct script
 try:
     from .model import Model  # when used as package (code.key)
@@ -29,6 +42,7 @@ class KeyManager:
     def _load_models(self) -> None:
         if not os.path.exists(self.models_path):
             raise FileNotFoundError(f"models file not found: {self.models_path}")
+        load_dotenv()
         with open(self.models_path, "r", encoding="utf-8") as fh:
             data = json.load(fh)
         self.keys = [Model.from_dict(d) for d in data]

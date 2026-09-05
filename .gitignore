@@ -1,6 +1,6 @@
 req.txt
 code/pseudo/*
 apis&limits
-model.json
+.env
 code/__pycache__
 __init__.py

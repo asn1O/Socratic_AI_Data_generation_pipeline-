@@ -2,6 +2,7 @@ from dataclasses import dataclass, asdict
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 import json
+import os
 from pathlib import Path
 from typing import Optional
 
@@ -86,9 +87,10 @@ class Model:
             tpd_left = int(raw_tpd_left)
 
         expired = bool(d.get("expired", False))
+        api_key = os.getenv(d["api_key"], "")
         return Model(
             provider=d["provider"],
-            api_key=d["api_key"],
+            api_key=api_key,
             model_name=d["model_name"],
             url=d["url"],
             rpd=int(d["rpd"]),

@@ -1,14 +1,34 @@
 import json
+import os
 import tempfile
 import unittest
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from unittest.mock import patch
 
 from code.key_manager import KeyManager
 from code.model import Model
 
 
 class KeyManagerRoundRobinTests(unittest.TestCase):
+    def test_model_resolves_api_key_environment_variable(self):
+        model_data = {
+            "provider": "P1",
+            "api_key": "TEST_API_KEY",
+            "model_name": "m1",
+            "url": "https://example.com/v1",
+            "rpd": 1,
+            "rpd_left": 1,
+            "tpd": None,
+            "tpd_left": None,
+            "last_use": None,
+        }
+
+        with patch.dict(os.environ, {"TEST_API_KEY": "resolved-secret"}):
+            model = Model.from_dict(model_data)
+
+        self.assertEqual(model.api_key, "resolved-secret")
+
     def _remove_empty_model_dir(self, path):
         if path.is_dir() and not any(path.iterdir()):
             path.rmdir()
