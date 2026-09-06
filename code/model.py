@@ -230,7 +230,7 @@ class Model:
         except ImportError:
             from prompt_generator import DatasetPromptGenerator
 
-        prompt = DatasetPromptGenerator().generate_prompt()
+        prompt , metadata = DatasetPromptGenerator().generate_prompt()
         return self.call_model(prompt)
 
     def _set_rate_limit_cooldown(self, error: Exception) -> None:

@@ -22,6 +22,7 @@ except ImportError:  # pragma: no cover
 
 DEFAULT_ITERATIONS = 50
 RETRY_WAIT_SECONDS = 5
+MAX_MODEL_SELECTION_ATTEMPTS = 12
 
 # Conversation shape requirements, matching the generation prompt's spec.
 MIN_TURNS = 12
@@ -60,11 +61,18 @@ if not logger.handlers:
 # --------------------------------------------------------------------------
 
 def _get_model_with_retry(key_manager: KeyManager) -> Optional[Tuple[Any, int]]:
-    """Retry model selection until a usable model is available."""
-    while True:
+    """Retry model selection up to the configured limit."""
+    for attempt in range(MAX_MODEL_SELECTION_ATTEMPTS):
         selected = key_manager.get_key()
         if selected is not None:
             return selected
+
+        if attempt == MAX_MODEL_SELECTION_ATTEMPTS - 1:
+            logger.error(
+                "No available model after %s attempts.",
+                MAX_MODEL_SELECTION_ATTEMPTS,
+            )
+            return None
 
         logger.warning(
             "No available model. Retrying in %s seconds.",

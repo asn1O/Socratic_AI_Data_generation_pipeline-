@@ -1,8 +1,9 @@
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
-from code.pipeline import run_pipeline
+from code.pipeline import MAX_MODEL_SELECTION_ATTEMPTS, _get_model_with_retry, run_pipeline
 
 
 class FakeModel:
@@ -30,6 +31,23 @@ class FakeManager:
 
 
 class PipelineQuotaAccountingTests(unittest.TestCase):
+    def test_model_selection_stops_after_twelve_attempts(self):
+        class UnavailableManager:
+            def __init__(self):
+                self.selection_attempts = 0
+
+            def get_key(self):
+                self.selection_attempts += 1
+                return None
+
+        manager = UnavailableManager()
+        with patch("code.pipeline.time.sleep") as sleep:
+            selected = _get_model_with_retry(manager)
+
+        self.assertIsNone(selected)
+        self.assertEqual(manager.selection_attempts, MAX_MODEL_SELECTION_ATTEMPTS)
+        self.assertEqual(sleep.call_count, MAX_MODEL_SELECTION_ATTEMPTS - 1)
+
     def test_invalid_response_still_reduces_quota(self):
         manager = FakeManager()
         with tempfile.TemporaryDirectory() as directory:

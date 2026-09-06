@@ -1,5 +1,37 @@
 [
   {
+  "provider": "NVIDIA",
+  "api_key": "NVIDEA_API_KEY",
+  "model_name": "nvidia/nemotron-3-super-120b-a12b",
+  "url": "https://integrate.api.nvidia.com/v1",
+  "rpd": 100000,
+  "rpd_left": 100000,
+  "tpd": 1000000000,
+  "tpd_left": 1000000000,
+  "last_use": null,
+  "cooldown_until": null,
+  "expired": false,
+  "tier": 0,
+  "no_of_replies": 0,
+  "avg_tokens_used": 0.0
+  },
+  {
+  "provider": "NVIDIA",
+  "api_key": "NVIDEA_API_KEY",
+  "model_name": "nvidia/nemotron-3-ultra-550b-a55b",
+  "url": "https://integrate.api.nvidia.com/v1",
+  "rpd": 100000,
+  "rpd_left": 100000,
+  "tpd": 1000000000,
+  "tpd_left": 1000000000,
+  "last_use": null,
+  "cooldown_until": null,
+  "expired": false,
+  "tier": 0,
+  "no_of_replies": 0,
+  "avg_tokens_used": 0.0
+  },
+  {
     "provider": "GROQ",
     "api_key": "GROQ_API_KEY",
     "model_name": "openai/gpt-oss-120b",
