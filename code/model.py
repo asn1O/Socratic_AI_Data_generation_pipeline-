@@ -23,6 +23,7 @@ class Model:
     tier: int = 0
     no_of_replies: int = 0
     avg_tokens_used: float = 0.0
+    api_key_env: Optional[str] = None
 
     def __post_init__(self) -> None:
         Path(self.dest_write_path).mkdir(parents=True, exist_ok=True)
@@ -56,6 +57,8 @@ class Model:
         """Serialize Model to a JSON-serializable dictionary."""
 
         d = asdict(self)
+        d["api_key"] = self.api_key_env or d["api_key"]
+        d.pop("api_key_env", None)
         d["last_use"] = self.last_use.isoformat() if self.last_use else None
         d["cooldown_until"] = (
             self.cooldown_until.isoformat() if self.cooldown_until else None
@@ -103,6 +106,7 @@ class Model:
             tier=int(d.get("tier", 0)),
             no_of_replies=int(d.get("no_of_replies", 0)),
             avg_tokens_used=float(d.get("avg_tokens_used", 0.0) or 0.0),
+            api_key_env=d["api_key"],
         )
 
     def record_response(self, total_tokens: Optional[int] = None) -> None:
