@@ -32,22 +32,6 @@
   "avg_tokens_used": 0.0
   },
   {
-    "provider": "GROQ",
-    "api_key": "GROQ_API_KEY",
-    "model_name": "openai/gpt-oss-120b",
-    "url": "https://api.groq.com/openai/v1",
-    "rpd": 1000,
-    "rpd_left": 996,
-    "tpd": 100000,
-    "tpd_left": 83508,
-    "last_use": "2026-09-03T06:44:23.090190+00:00",
-    "cooldown_until": null,
-    "expired": false,
-    "tier": 2,
-    "no_of_replies": 5,
-    "avg_tokens_used": 4337.6
-  },
-  {
     "provider": "OpenRouter",
     "api_key": "OPENROUTER_API_KEY",
     "model_name": "nvidia/nemotron-3-super-120b-a12b:free",
@@ -174,22 +158,6 @@
     "tier": 2,
     "no_of_replies": 4,
     "avg_tokens_used": 5340.0
-  },
-  {
-    "provider": "Google",
-    "api_key": "GOOGLE_API_KEY",
-    "model_name": "gemini-2.5-flash",
-    "url": "https://generativelanguage.googleapis.com/v1beta/openai/",
-    "rpd": 20,
-    "rpd_left": 20,
-    "tpd": null,
-    "tpd_left": null,
-    "last_use": "2026-09-03T06:44:17.049350+00:00",
-    "cooldown_until": null,
-    "expired": false,
-    "tier": 4,
-    "no_of_replies": 0,
-    "avg_tokens_used": 0.0
   },
   {
     "provider": "Google",
