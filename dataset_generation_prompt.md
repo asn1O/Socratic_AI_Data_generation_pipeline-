@@ -1,7 +1,7 @@
 You are an expert tutor skilled in guiding students using questioning, hints, and reflection.
 
 Your task is to generate a realistic tutoring conversation between a tutor and a student
-solving a problem, following a Socratic method grounded in three tutor "states."
+solving a problem, following a Socratic method grounded in four tutor "states."
 
 ---
 
@@ -22,12 +22,20 @@ tutor replies:
   explaining the rule or reasoning in their own words.
   Example: "In your own words, what's the rule being applied here?"
 
-State transitions should feel realistic, not mechanical. Do not march through
-Diagnosis → Support → Synthesis in a fixed pattern every turn. A tutor may:
+- **Closing** — reserved exclusively for the final turn of the conversation. Not a
+  pedagogical strategy — a short, warm wrap-up after the student has explained the concept
+  (e.g. "Nice, that's exactly it! Want to try another one?"). Introduces no new teaching
+  content and asks no new question about the problem.
+
+State transitions among Diagnosis / Support / Synthesis should feel realistic, not
+mechanical. Do not march through them in a fixed pattern every turn. A tutor may:
 
 - stay in Support across several turns if the student keeps struggling
 - drop back to Diagnosis if the student says something confused or off-track
 - move to Synthesis only once the student has actually reached the correct answer
+
+`Closing` only ever appears once, on the last turn, immediately after a Synthesis exchange
+where the student has already explained the concept.
 
 ---
 
@@ -54,6 +62,9 @@ Concretely:
 - If mistake_frequency is **low**: the student may express uncertainty but should not
   assert wrong claims.
 
+The `Closing` turn is exempt from all of the above — it is not scored against
+socratic_level, hint_frequency, or mistake_frequency.
+
 ---
 
 ## DOMAIN AND TOPIC
@@ -68,35 +79,45 @@ student up front.
 
 ## CONVERSATION REQUIREMENTS
 
-1. Length: 12–18 turns total. Before finalizing your output, count the turns in your
-   "conversation" array. If it has fewer than 12, continue the dialogue until it does.
+1. Length: 12–18 turns total, always an even number. The conversation always starts with a
+   student turn and always ends with the tutor's Closing turn. Before finalizing your
+   output, count the turns in your "conversation" array. If it has fewer than 12, or is an
+   odd number, continue or adjust the dialogue until it's valid.
 2. Flow: start with confusion or partial understanding, progress toward correct reasoning,
-   end with the student explaining the concept in their own words.
+   have the student explain the concept in their own words, then close warmly.
 3. The student's FIRST turn must show only partial or incomplete reasoning — it must never
    already contain the correct final answer or a fully worked solution. The struggle has to
    be real, not just a formality before the student immediately gets it right.
-4. Tutor never gives the full solution outright — guides via the three states above.
+4. Tutor never gives the full solution outright — guides via Diagnosis/Support/Synthesis.
 5. Student behavior reflects student_level and mistake_frequency: realistic errors, partial
    reasoning, occasional uncertainty — not scripted-sounding.
-6. The FINAL tutor turn must be a Synthesis turn, and the student's final turn must contain
-   their own explanation of the rule/principle — never the tutor stating it first. The
-   conversation must end immediately after that student turn. Do not add any further tutor
-   turn (e.g. praise, wrap-up, confirmation) after the student's closing explanation.
+6. The second-to-last turn must be the student explaining the rule/principle in their own
+   words — never the tutor stating it first. Immediately after that, the FINAL turn must be
+   the tutor's Closing turn: brief, generic, and warm — praise plus something like an
+   invitation to continue (e.g. "Great, you've got it! Ready for the next one?"). It must
+   not introduce new teaching content or ask a new question about the problem itself. The
+   conversation ends there — do not add any further student turn after it.
 7. Write turns as natural, short spoken exchanges — the way a real tutor and student talk
    out loud — not as polished paragraphs or essay-style writing. Match turn length to the
    verbosity parameter, but even at high verbosity, turns should read like speech, not prose.
 
 ---
 
-## TUTOR TURN FORMAT (STRICT — applies to every tutor "text" field)
+## TUTOR TURN FIELDS (STRICT — applies to every tutor turn, including the Closing turn)
 
-Every tutor turn's "text" value must follow this exact structure, in this exact order:
+Every tutor turn must be a JSON object with three separate string fields — do not combine
+them into one field or embed tags inside a single string:
 
-<reasoning>[1-2 sentences: what the student just demonstrated, what gap or readiness this
-reveals, and why that calls for this particular state next]</reasoning><state>Diagnosis|Support|Synthesis</state><response>[the actual message shown to the student]</response>
+- `"reasoning"` — 1-2 sentences: what the student just demonstrated, what gap or readiness
+  this reveals, and why that calls for this particular state next. For the Closing turn,
+  this is simply why the exchange is wrapping up (e.g. the student has correctly explained
+  the concept).
+- `"state"` — exactly one of: `Diagnosis`, `Support`, `Synthesis`, `Closing`.
+- `"response"` — the actual message shown to the student.
 
-Reasoning must come before the state tag — the state is the conclusion of the reasoning,
-not a label applied after the fact. Student turns are plain text with no tags.
+Reasoning conceptually comes before the state — the state is the conclusion of the
+reasoning, not a label applied after the fact. Student turns are a single `"text"` field,
+plain, with no additional fields.
 
 ---
 
@@ -106,11 +127,34 @@ Do not repeat the config, domain, or topic back — the caller already has those
 what you actually generated: the problem and the conversation.
 
 {
-"problem": "<problem statement>",
-"conversation": [
-{"turn": 1, "speaker": "student", "text": "<student message, no tags>"},
-{"turn": 2, "speaker": "tutor", "text": "<reasoning>...</reasoning><state>Diagnosis</state><response>...</response>"}
-]
+  "problem": "<problem statement>",
+  "conversation": [
+    {
+      "turn": 1, 
+      "speaker": "student", 
+      "text": "<student message, no tags>"
+    },
+    {
+      "turn": 2, 
+      "speaker": "tutor", 
+      "reasoning": "<why this state>", 
+      "state": "Diagnosis", 
+      "response": "<message shown to student>"
+    },
+    ...,
+    {
+      "turn": 11, 
+      "speaker": "student", 
+      "text": "<student's own explanation of the rule>"
+    },
+    {
+      "turn": 12, 
+      "speaker": "tutor", 
+      "reasoning": "<why wrapping up now>", 
+      "state": "Closing", 
+      "response": "<short warm wrap-up>"
+    }
+  ]
 }
 
 Do not include any planning, reasoning, or commentary outside this JSON object. Do not wrap
@@ -119,15 +163,20 @@ with } — nothing before, nothing after.
 
 ## SELF-CHECK BEFORE OUTPUT — verify every item, fix and re-check if any fail
 
-- Conversation array has between 12 and 18 turns (count them)
-- Every tutor "text" field follows <reasoning><state><response> in that order, no exceptions
-- State transitions are plausible given mistake_frequency and student_level, not formulaic
+- Conversation array has between 12 and 18 turns, and the total is an even number
+- Every tutor turn has separate "reasoning", "state", and "response" fields — no tags
+  embedded inside a single string, no exceptions
+- Every student turn has only "turn", "speaker", and "text"
+- State transitions among Diagnosis/Support/Synthesis are plausible given
+  mistake_frequency and student_level, not formulaic
 - socratic_level requirement is met (see quantified rule above), not just the config label
 - If mistake_frequency is medium/high, the student has asserted at least one concretely
   wrong claim, not just hedged
 - The student's first turn does not already contain the correct answer
 - Tutor never states the rule before the student does
-- Final turn pair ends in Synthesis, with the student giving the explanation, and no tutor
-  turn follows it
+- The second-to-last turn is the student's own explanation of the rule
+- The FINAL turn is the tutor's Closing turn: short, warm, no new teaching content, no new
+  question about the problem — and no turn follows it
+- "Closing" is used exactly once, only on the final turn, never elsewhere
 - Output is valid JSON and nothing else — no markdown fences, no preamble, no text after
   the closing brace

@@ -27,11 +27,11 @@ MAX_MODEL_SELECTION_ATTEMPTS = 12
 # Conversation shape requirements, matching the generation prompt's spec.
 MIN_TURNS = 12
 MAX_TURNS = 18
-VALID_STATES = {"Diagnosis", "Support", "Synthesis"}
+VALID_STATES = {"Diagnosis", "Support", "Synthesis", "Closing"}
 FAILURE_CATEGORIES = (
     "dead_model_404", "empty_response", "invalid_json_syntax",
     "turn_count_out_of_range", "speaker_alternation_broken",
-    "malformed_tutor_tags", "missing_problem_field", "final_turn_not_synthesis",
+    "malformed_tutor_tags", "missing_problem_field", "final_turn_not_closing",
     "unexpected_exception", "other",
 )
 CONFIG_PARAMETERS = (
@@ -85,14 +85,6 @@ def _get_model_with_retry(key_manager: KeyManager) -> Optional[Tuple[Any, int]]:
 # JSON extraction
 # --------------------------------------------------------------------------
 
-# Matches a tutor turn's full "text" field: reasoning, then state, then
-# response, in that exact order, with no other content in between.
-_TUTOR_TAG_PATTERN = re.compile(
-    r"^<reasoning>.*?</reasoning><state>(Diagnosis|Support|Synthesis)</state>"
-    r"<response>.*?</response>$",
-    re.DOTALL,
-)
-
 # Some models (e.g. gemma) wrap visible reasoning in different tag names.
 # Strip any of these blocks before hunting for the real JSON payload, so a
 # JSON-like snippet inside the model's scratch-work doesn't get mistaken
@@ -143,8 +135,7 @@ def _strip_wrappers(raw_reply: str) -> str:
 def _is_valid_conversation_payload(payload: Any) -> bool:
     """Check that the parsed JSON is a conversation matching the generation spec:
     correct turn count, strict student/tutor alternation, tutor turns carrying
-    well-formed <reasoning><state><response> tags, and a Synthesis-then-student
-    ending."""
+    reasoning/state/response fields, and a Synthesis-then-student ending."""
     if not isinstance(payload, dict):
         logger.debug("Rejected payload: not a JSON object")
         return False
@@ -166,17 +157,17 @@ def _is_valid_conversation_payload(payload: Any) -> bool:
             turn_count, MIN_TURNS, MAX_TURNS,
         )
         return False
+    if turn_count % 2 != 0:
+        logger.debug("Rejected payload: turn count %s is not even", turn_count)
+        return False
 
     expected_speaker = "student"
     for i, item in enumerate(conversation, start=1):
         if not isinstance(item, dict):
             logger.debug("Rejected payload: turn %s is not an object", i)
             return False
-        if not {"turn", "speaker", "text"}.issubset(item):
+        if not {"turn", "speaker"}.issubset(item):
             logger.debug("Rejected payload: turn %s missing required keys", i)
-            return False
-        if not isinstance(item["text"], str) or not item["text"].strip():
-            logger.debug("Rejected payload: turn %s has empty/non-string text", i)
             return False
 
         speaker = item.get("speaker")
@@ -188,30 +179,41 @@ def _is_valid_conversation_payload(payload: Any) -> bool:
             )
             return False
 
-        if speaker == "tutor":
-            match = _TUTOR_TAG_PATTERN.match(item["text"].strip())
-            if not match:
-                logger.debug(
-                    "Rejected payload: tutor turn %s missing/malformed "
-                    "<reasoning><state><response> tags", i,
-                )
+        if speaker == "student":
+            if not isinstance(item.get("text"), str) or not item.get("text", "").strip():
+                logger.debug("Rejected payload: turn %s has empty/non-string text", i)
+                return False
+        elif speaker == "tutor":
+            # Tutor turns require reasoning, state, and response fields
+            reasoning = item.get("reasoning")
+            state = item.get("state")
+            response = item.get("response")
+            
+            if not isinstance(reasoning, str) or not reasoning.strip():
+                logger.debug("Rejected payload: tutor turn %s missing/empty reasoning", i)
+                return False
+            if state not in VALID_STATES:
+                logger.debug("Rejected payload: tutor turn %s has invalid state", i)
+                return False
+            if not isinstance(response, str) or not response.strip():
+                logger.debug("Rejected payload: tutor turn %s missing/empty response", i)
                 return False
 
         expected_speaker = "tutor" if expected_speaker == "student" else "student"
 
-    # Conversation must end on a tutor Synthesis turn followed by the
-    # student's own explanation — never the tutor speaking last.
-    last_tutor, last_student = conversation[-2], conversation[-1]
-    if last_student.get("speaker") != "student":
-        logger.debug("Rejected payload: final turn is not the student")
+    # Conversation must end with: student explaining the rule (second-to-last),
+    # then tutor's Closing turn (final).
+    student_explanation = conversation[-2]
+    final_tutor = conversation[-1]
+    
+    if student_explanation.get("speaker") != "student":
+        logger.debug("Rejected payload: second-to-last turn is not the student")
         return False
-    if last_tutor.get("speaker") != "tutor":
-        logger.debug("Rejected payload: second-to-last turn is not the tutor")
+    if final_tutor.get("speaker") != "tutor":
+        logger.debug("Rejected payload: final turn is not the tutor")
         return False
-
-    final_match = _TUTOR_TAG_PATTERN.match(last_tutor["text"].strip())
-    if not final_match or final_match.group(1) != "Synthesis":
-        logger.debug("Rejected payload: final tutor turn is not Synthesis")
+    if final_tutor.get("state") != "Closing":
+        logger.debug("Rejected payload: final tutor turn is not Closing")
         return False
 
     return True
@@ -244,6 +246,8 @@ def _structural_failure_reason(payload: Any) -> str:
     turn_count = len(conversation)
     if not (MIN_TURNS <= turn_count <= MAX_TURNS):
         return f"turn count {turn_count} outside [{MIN_TURNS}, {MAX_TURNS}]"
+    if turn_count % 2 != 0:
+        return f"turn count {turn_count} is not even"
 
     expected_speaker = "student"
     for turn_number, item in enumerate(conversation, start=1):
@@ -251,18 +255,33 @@ def _structural_failure_reason(payload: Any) -> str:
             return f"turn {turn_number} is not an object"
         if item.get("speaker") != expected_speaker:
             return f"speaker alternation broken at turn {turn_number}"
-        if item.get("speaker") == "tutor":
-            text = item.get("text")
-            if not isinstance(text, str) or not _TUTOR_TAG_PATTERN.match(text.strip()):
-                return f"malformed tutor tags at turn {turn_number}"
+        
+        speaker = item.get("speaker")
+        if speaker == "student":
+            if not isinstance(item.get("text"), str) or not item.get("text", "").strip():
+                return f"student turn {turn_number} missing/empty text"
+        elif speaker == "tutor":
+            reasoning = item.get("reasoning")
+            state = item.get("state")
+            response = item.get("response")
+            
+            if not isinstance(reasoning, str) or not reasoning.strip():
+                return f"tutor turn {turn_number} missing/empty reasoning"
+            if state not in VALID_STATES:
+                return f"tutor turn {turn_number} has invalid state"
+            if not isinstance(response, str) or not response.strip():
+                return f"tutor turn {turn_number} missing/empty response"
+        
         expected_speaker = "tutor" if expected_speaker == "student" else "student"
 
-    if conversation[-1].get("speaker") != "student":
-        return "final turn is not the student"
-    final_tutor = conversation[-2]
-    final_match = _TUTOR_TAG_PATTERN.match(final_tutor.get("text", "").strip())
-    if not final_match or final_match.group(1) != "Synthesis":
-        return "final tutor turn is not Synthesis"
+    student_explanation = conversation[-2]
+    final_tutor = conversation[-1]
+    if student_explanation.get("speaker") != "student":
+        return "second-to-last turn is not the student"
+    if final_tutor.get("speaker") != "tutor":
+        return "final turn is not the tutor"
+    if final_tutor.get("state") != "Closing":
+        return "final tutor turn is not Closing"
     return "conversation payload failed structural validation"
 
 
@@ -279,12 +298,14 @@ def _classify_failure_reason(reason: str) -> str:
         return "turn_count_out_of_range"
     if "speaker alternation" in normalized:
         return "speaker_alternation_broken"
-    if ("malformed" in normalized and "tag" in normalized) or "missing/malformed" in normalized:
+    if ("malformed" in normalized and "tag" in normalized) or ("tutor" in normalized and ("reasoning" in normalized or "response" in normalized or "state" in normalized)):
         return "malformed_tutor_tags"
     if "missing" in normalized and "problem" in normalized:
         return "missing_problem_field"
-    if "synthesis" in normalized and "final" in normalized:
-        return "final_turn_not_synthesis"
+    if "closing" in normalized and "final" in normalized:
+        return "final_turn_not_closing"
+    if "even" in normalized and "turn" in normalized:
+        return "turn_count_out_of_range"
     if "unexpected exception" in normalized:
         return "unexpected_exception"
     return "other"
