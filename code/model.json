@@ -1,35 +1,37 @@
 [
   {
-  "provider": "NVIDIA",
-  "api_key": "NVIDIA_API_KEY",
-  "model_name": "nvidia/nemotron-3-super-120b-a12b",
-  "url": "https://integrate.api.nvidia.com/v1",
-  "rpd": 100000,
-  "rpd_left": 100000,
-  "tpd": 1000000000,
-  "tpd_left": 1000000000,
-  "last_use": null,
-  "cooldown_until": null,
-  "expired": false,
-  "tier": 0,
-  "no_of_replies": 0,
-  "avg_tokens_used": 0.0
+    "provider": "NVIDIA",
+    "api_key": "NVIDIA_API_KEY",
+    "model_name": "nvidia/nemotron-3-super-120b-a12b",
+    "url": "https://integrate.api.nvidia.com/v1",
+    "rpd": 100000,
+    "rpd_left": 100000,
+    "tpd": 1000000000,
+    "tpd_left": 1000000000,
+    "last_use": null,
+    "cooldown_until": null,
+    "expired": false,
+    "tier": 0,
+    "no_of_replies": 0,
+    "avg_tokens_used": 0.0,
+    "consecutive_failures": 0
   },
   {
-  "provider": "NVIDIA",
-  "api_key": "NVIDIA_API_KEY",
-  "model_name": "nvidia/nemotron-3-ultra-550b-a55b",
-  "url": "https://integrate.api.nvidia.com/v1",
-  "rpd": 100000,
-  "rpd_left": 100000,
-  "tpd": 1000000000,
-  "tpd_left": 1000000000,
-  "last_use": null,
-  "cooldown_until": null,
-  "expired": false,
-  "tier": 0,
-  "no_of_replies": 0,
-  "avg_tokens_used": 0.0
+    "provider": "NVIDIA",
+    "api_key": "NVIDIA_API_KEY",
+    "model_name": "nvidia/nemotron-3-ultra-550b-a55b",
+    "url": "https://integrate.api.nvidia.com/v1",
+    "rpd": 100000,
+    "rpd_left": 100000,
+    "tpd": 1000000000,
+    "tpd_left": 1000000000,
+    "last_use": null,
+    "cooldown_until": null,
+    "expired": false,
+    "tier": 0,
+    "no_of_replies": 0,
+    "avg_tokens_used": 0.0,
+    "consecutive_failures": 0
   },
   {
     "provider": "NVIDIA",
@@ -45,7 +47,8 @@
     "cooldown_until": null,
     "tier": 0,
     "no_of_replies": 0,
-    "avg_tokens_used": 0.0
+    "avg_tokens_used": 0.0,
+    "consecutive_failures": 0
   },
   {
     "provider": "NVIDIA",
@@ -61,7 +64,8 @@
     "cooldown_until": null,
     "tier": 0,
     "no_of_replies": 0,
-    "avg_tokens_used": 0.0
+    "avg_tokens_used": 0.0,
+    "consecutive_failures": 0
   },
   {
     "provider": "NVIDIA",
@@ -77,7 +81,8 @@
     "cooldown_until": null,
     "tier": 0,
     "no_of_replies": 0,
-    "avg_tokens_used": 0.0
+    "avg_tokens_used": 0.0,
+    "consecutive_failures": 0
   },
   {
     "provider": "OpenRouter",
@@ -93,7 +98,8 @@
     "expired": false,
     "tier": 3,
     "no_of_replies": 5,
-    "avg_tokens_used": 9408.6
+    "avg_tokens_used": 9408.6,
+    "consecutive_failures": 0
   },
   {
     "provider": "OpenRouter",
@@ -109,7 +115,8 @@
     "expired": false,
     "tier": 1,
     "no_of_replies": 5,
-    "avg_tokens_used": 6307.8
+    "avg_tokens_used": 6307.8,
+    "consecutive_failures": 0
   },
   {
     "provider": "Google",
@@ -125,7 +132,8 @@
     "expired": true,
     "tier": 1,
     "no_of_replies": 0,
-    "avg_tokens_used": 0.0
+    "avg_tokens_used": 0.0,
+    "consecutive_failures": 0
   },
   {
     "provider": "Google",
@@ -141,7 +149,8 @@
     "expired": false,
     "tier": 2,
     "no_of_replies": 3,
-    "avg_tokens_used": 5073.0
+    "avg_tokens_used": 5073.0,
+    "consecutive_failures": 0
   },
   {
     "provider": "Google",
@@ -157,7 +166,8 @@
     "expired": false,
     "tier": 3,
     "no_of_replies": 5,
-    "avg_tokens_used": 8365.6
+    "avg_tokens_used": 8365.6,
+    "consecutive_failures": 0
   },
   {
     "provider": "Google",
@@ -173,7 +183,8 @@
     "expired": false,
     "tier": 3,
     "no_of_replies": 4,
-    "avg_tokens_used": 2720.0
+    "avg_tokens_used": 2720.0,
+    "consecutive_failures": 0
   },
   {
     "provider": "Google",
@@ -189,7 +200,8 @@
     "expired": false,
     "tier": 4,
     "no_of_replies": 4,
-    "avg_tokens_used": 2487.25
+    "avg_tokens_used": 2487.25,
+    "consecutive_failures": 0
   },
   {
     "provider": "Google",
@@ -205,7 +217,8 @@
     "expired": false,
     "tier": 2,
     "no_of_replies": 4,
-    "avg_tokens_used": 5340.0
+    "avg_tokens_used": 5340.0,
+    "consecutive_failures": 0
   },
   {
     "provider": "Google",
@@ -221,6 +234,7 @@
     "expired": false,
     "tier": 5,
     "no_of_replies": 4,
-    "avg_tokens_used": 2962.5
+    "avg_tokens_used": 2962.5,
+    "consecutive_failures": 0
   }
 ]

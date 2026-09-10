@@ -406,6 +406,9 @@ def run_pipeline(
         logger.info(summary)
 
     try:
+        # Reset consecutive failure counters for all models at the start of iterations
+        key_manager.reset_all_failure_counters()
+
         for iteration in range(1, iterations + 1):
             selected = _get_model_with_retry(key_manager)
             if selected is None:
@@ -433,6 +436,7 @@ def run_pipeline(
                     model.model_name,
                     f"unexpected exception: {exc}",
                 )
+                key_manager.increment_model_failure(model_index)
                 continue
 
             if not success or reply is None:
@@ -443,6 +447,7 @@ def run_pipeline(
                     model.model_name,
                     "model call failed or returned no response",
                 )
+                key_manager.increment_model_failure(model_index)
                 continue
 
             try:
@@ -497,6 +502,9 @@ def run_pipeline(
                 )
                 continue
              
+            # Reset consecutive failure counter on successful completion
+            key_manager.reset_model_failure_counter(model_index)
+            
             print(f"Valid payload for provider={model.provider} model={model.model_name}: {payload}")
             saved_count += 1
             stats["saved"] += 1

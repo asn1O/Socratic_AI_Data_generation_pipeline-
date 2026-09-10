@@ -24,6 +24,7 @@ class Model:
     no_of_replies: int = 0
     avg_tokens_used: float = 0.0
     api_key_env: Optional[str] = None
+    consecutive_failures: int = 0
 
     def __post_init__(self) -> None:
         Path(self.dest_write_path).mkdir(parents=True, exist_ok=True)
@@ -52,6 +53,14 @@ class Model:
             self.tpd_left = self.tpd
         self.expired = False
         self.last_use = None
+
+    def increment_consecutive_failures(self) -> None:
+        """Increment consecutive failure counter."""
+        self.consecutive_failures += 1
+
+    def reset_consecutive_failures(self) -> None:
+        """Reset consecutive failure counter to 0."""
+        self.consecutive_failures = 0
 
     def to_dict(self) -> dict:
         """Serialize Model to a JSON-serializable dictionary."""
@@ -107,6 +116,7 @@ class Model:
             no_of_replies=int(d.get("no_of_replies", 0)),
             avg_tokens_used=float(d.get("avg_tokens_used", 0.0) or 0.0),
             api_key_env=d["api_key"],
+            consecutive_failures=int(d.get("consecutive_failures", 0)),
         )
 
     def record_response(self, total_tokens: Optional[int] = None) -> None:

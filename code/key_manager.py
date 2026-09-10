@@ -85,6 +85,9 @@ class KeyManager:
             if self._mark_expired_if_needed(m):
                 continue
 
+            if m.consecutive_failures >= 3:
+                continue
+
             if m.tpd_left is not None and m.tpd_left < min_tpd_needed:
                 continue
 
@@ -110,6 +113,30 @@ class KeyManager:
 
         m.last_use = datetime.now(timezone.utc)
 
+        self._write_models()
+
+    def increment_model_failure(self, index: int) -> None:
+        """Increment consecutive failure counter for a model and persist."""
+        if index < 0 or index >= len(self.keys):
+            raise IndexError("key index out of range")
+
+        m = self.keys[index]
+        m.increment_consecutive_failures()
+        self._write_models()
+
+    def reset_model_failure_counter(self, index: int) -> None:
+        """Reset consecutive failure counter for a model after successful use and persist."""
+        if index < 0 or index >= len(self.keys):
+            raise IndexError("key index out of range")
+
+        m = self.keys[index]
+        m.reset_consecutive_failures()
+        self._write_models()
+
+    def reset_all_failure_counters(self) -> None:
+        """Reset consecutive failure counters for all models at the start of iterations."""
+        for m in self.keys:
+            m.reset_consecutive_failures()
         self._write_models()
 
 if __name__ == "__main__":
