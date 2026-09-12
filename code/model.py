@@ -3,6 +3,7 @@ from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 import json
 import os
+import re
 from pathlib import Path
 from typing import Optional
 
@@ -145,18 +146,22 @@ class Model:
 
     def write_response(self, response: dict) -> Path:
         """Append a response to the model's JSON set containing at most 15 items."""
-        set_index = max(self.no_of_replies - 1, 0) // 15
-        response_path = (
-            Path(self.dest_write_path)
-            / f"set[{set_index}].json"
-        )
+        response_dir = Path(self.dest_write_path)
+        set_files = []
+        for path in response_dir.glob("set[[]*.json"):
+            match = re.fullmatch(r"set\[(\d+)\]\.json", path.name)
+            if match:
+                set_files.append((int(match.group(1)), path))
 
-        if response_path.exists():
+        if set_files:
+            set_index, response_path = max(set_files, key=lambda item: item[0])
             with response_path.open("r", encoding="utf-8") as file:
                 responses = json.load(file)
             if not isinstance(responses, list):
                 raise ValueError(f"Expected a JSON array in {response_path}")
         else:
+            set_index = 0
+            response_path = response_dir / f"set[{set_index}].json"
             responses = []
 
         if len(responses) >= 15:
