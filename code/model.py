@@ -147,9 +147,18 @@ class Model:
     def write_response(self, response: dict) -> Path:
         """Append a response to the model's JSON set containing at most 15 items."""
         response_dir = Path(self.dest_write_path)
+        contributor_id = os.getenv("DATASET_GENERATOR_ID", "").strip()
+        if not contributor_id or not re.fullmatch(r"[A-Za-z0-9_-]+", contributor_id):
+            raise ValueError(
+                "DATASET_GENERATOR_ID must contain only letters, numbers, '-' or '_'."
+            )
+
         set_files = []
-        for path in response_dir.glob("set[[]*.json"):
-            match = re.fullmatch(r"set\[(\d+)\]\.json", path.name)
+        for path in response_dir.glob(f"{contributor_id}-set[[]*.json"):
+            match = re.fullmatch(
+                rf"{re.escape(contributor_id)}-set\[(\d+)\]\.json",
+                path.name,
+            )
             if match:
                 set_files.append((int(match.group(1)), path))
 
@@ -161,15 +170,12 @@ class Model:
                 raise ValueError(f"Expected a JSON array in {response_path}")
         else:
             set_index = 0
-            response_path = response_dir / f"set[{set_index}].json"
+            response_path = response_dir / f"{contributor_id}-set[{set_index}].json"
             responses = []
 
         if len(responses) >= 15:
             set_index += 1
-            response_path = (
-                Path(self.dest_write_path)
-                / f"set[{set_index}].json"
-            )
+            response_path = response_dir / f"{contributor_id}-set[{set_index}].json"
             if response_path.exists():
                 with response_path.open("r", encoding="utf-8") as file:
                     responses = json.load(file)
