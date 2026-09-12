@@ -195,7 +195,13 @@ class Model:
         """Append a rejected raw response to this model's text file."""
         rejected_dir = Path("data") / "rejected_responses"
         rejected_dir.mkdir(parents=True, exist_ok=True)
-        response_path = rejected_dir / f"{self._response_file_stem}.txt"
+        contributor_id = os.getenv("DATASET_GENERATOR_ID", "").strip()
+        if not contributor_id or not re.fullmatch(r"[A-Za-z0-9_-]+", contributor_id):
+            raise ValueError(
+                "DATASET_GENERATOR_ID must contain only letters, numbers, '-' or '_'."
+            )
+
+        response_path = rejected_dir / f"{contributor_id}-{self._response_file_stem}.txt"
         response_text = (
             response
             if isinstance(response, str)

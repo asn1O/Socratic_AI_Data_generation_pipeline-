@@ -29,6 +29,40 @@ class KeyManagerRoundRobinTests(unittest.TestCase):
 
         self.assertEqual(model.api_key, "resolved-secret")
 
+    def test_rejected_response_filename_includes_dataset_generator_id(self):
+        model_data = {
+            "provider": "P1",
+            "api_key": "TEST_API_KEY",
+            "model_name": "m1",
+            "url": "https://example.com/v1",
+            "rpd": 1,
+            "rpd_left": 1,
+            "tpd": None,
+            "tpd_left": None,
+            "last_use": None,
+        }
+
+        with tempfile.TemporaryDirectory() as directory:
+            original_directory = os.getcwd()
+            os.chdir(directory)
+            try:
+                with patch.dict(
+                    os.environ,
+                    {
+                        "TEST_API_KEY": "resolved-secret",
+                        "DATASET_GENERATOR_ID": "worker_01",
+                    },
+                ):
+                    model = Model.from_dict(model_data)
+                    response_path = model.write_rejected_response("rejected")
+            finally:
+                os.chdir(original_directory)
+
+        self.assertEqual(
+            response_path.name,
+            "worker_01-P1_m1.txt",
+        )
+
     def _remove_empty_model_dir(self, path):
         if path.is_dir() and not any(path.iterdir()):
             path.rmdir()

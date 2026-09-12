@@ -127,7 +127,7 @@ data/
 ├── NVIDIA_nvidia_nemotron-3-super-120b-a12b/
 │   └── worker_01-set[0].json
 └── rejected_responses/
-		└── NVIDIA_nvidia_nemotron-3-super-120b-a12b.txt
+    └── worker_01-NVIDIA_nvidia_nemotron-3-super-120b-a12b.txt
 ```
 
 The command prints a run summary containing attempts, accepted records,
