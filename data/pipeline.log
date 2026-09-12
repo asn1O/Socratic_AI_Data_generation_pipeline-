@@ -1,0 +1,55 @@
+2026-09-12 20:52:59,710 INFO SELECTED provider=test model=model
+2026-09-12 20:52:59,710 INFO REJECTED_RESPONSE_SAVED provider=test model=model path=rejected.txt
+2026-09-12 20:52:59,711 ERROR JSON_INVALID provider=test model=model reason=no JSON object found in response
+2026-09-12 20:52:59,711 INFO 
+=== Run Statistics Summary ===
+Overall totals
+  Attempts: 1
+  Saved: 0
+  Failed: 1
+  Accept rate: 0.00%
+  Duration (seconds): 0.00
+
+Per-model results
+  Provider / Model                         Attempts  Saved  Accept %  Avg tokens  Turns  Total convos
+  ----------------------------------------  --------  -----  --------  -----------  -----  Total convos
+  test / model                                    1      0     0.00%         0.00      -              0
+
+Failure reasons
+  Category                         Count
+  ------------------------------  -----
+  dead_model_404                      0
+  empty_response                      0
+  invalid_json_syntax                 0
+  turn_count_out_of_range             0
+  speaker_alternation_broken          0
+  malformed_tutor_tags                0
+  missing_problem_field               0
+  final_turn_not_closing              0
+  unexpected_exception                0
+  other                               1
+
+Turn-count distribution
+  no saved conversations
+
+Domain coverage
+
+Config parameter balance
+  socratic_level
+  student_level
+  hint_frequency
+  mistake_frequency
+  verbosity
+  difficulty
+2026-09-12 20:52:59,712 WARNING No available model. Retrying in 5 seconds.
+2026-09-12 20:52:59,712 WARNING No available model. Retrying in 5 seconds.
+2026-09-12 20:52:59,712 WARNING No available model. Retrying in 5 seconds.
+2026-09-12 20:52:59,712 WARNING No available model. Retrying in 5 seconds.
+2026-09-12 20:52:59,712 WARNING No available model. Retrying in 5 seconds.
+2026-09-12 20:52:59,712 WARNING No available model. Retrying in 5 seconds.
+2026-09-12 20:52:59,712 WARNING No available model. Retrying in 5 seconds.
+2026-09-12 20:52:59,712 WARNING No available model. Retrying in 5 seconds.
+2026-09-12 20:52:59,712 WARNING No available model. Retrying in 5 seconds.
+2026-09-12 20:52:59,712 WARNING No available model. Retrying in 5 seconds.
+2026-09-12 20:52:59,712 WARNING No available model. Retrying in 5 seconds.
+2026-09-12 20:52:59,712 ERROR No available model after 12 attempts.
