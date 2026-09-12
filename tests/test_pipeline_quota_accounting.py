@@ -1,9 +1,15 @@
+import json
 import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from code.pipeline import MAX_MODEL_SELECTION_ATTEMPTS, _get_model_with_retry, run_pipeline
+from code.pipeline import (
+    MAX_MODEL_SELECTION_ATTEMPTS,
+    _count_model_conversations,
+    _get_model_with_retry,
+    run_pipeline,
+)
 
 
 class FakeModel:
@@ -29,8 +35,27 @@ class FakeManager:
     def reduce_key_usage(self, index, tokens):
         self.reduced_usage.append((index, tokens))
 
+    def reset_all_failure_counters(self):
+        pass
+
 
 class PipelineQuotaAccountingTests(unittest.TestCase):
+    def test_count_model_conversations_across_set_files(self):
+        with tempfile.TemporaryDirectory() as directory:
+            model_directory = Path(directory) / "model"
+            model_directory.mkdir()
+            (model_directory / "worker-set[0].json").write_text(
+                json.dumps([{"id": 1}, {"id": 2}]), encoding="utf-8"
+            )
+            (model_directory / "worker-set[1].json").write_text(
+                json.dumps([{"id": 3}]), encoding="utf-8"
+            )
+
+            class ModelWithOutputPath:
+                dest_write_path = str(model_directory)
+
+            self.assertEqual(_count_model_conversations(ModelWithOutputPath()), 3)
+
     def test_model_selection_stops_after_twelve_attempts(self):
         class UnavailableManager:
             def __init__(self):

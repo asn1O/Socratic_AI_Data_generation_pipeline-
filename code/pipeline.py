@@ -318,6 +318,27 @@ def _classify_failure_reason(reason: str) -> str:
     return "other"
 
 
+def _count_model_conversations(model: Any) -> int:
+    """Count conversation records stored in a model's JSON set files."""
+    model_path = getattr(model, "dest_write_path", None)
+    if not model_path:
+        return 0
+
+    conversation_count = 0
+    for response_path in Path(model_path).glob("*-set[[]*.json"):
+        try:
+            with response_path.open("r", encoding="utf-8") as file:
+                responses = json.load(file)
+        except (OSError, json.JSONDecodeError) as exc:
+            logger.warning("Unable to count conversations in %s: %s", response_path, exc)
+            continue
+
+        if isinstance(responses, list):
+            conversation_count += len(responses)
+
+    return conversation_count
+
+
 def _format_run_summary(stats: Dict[str, Any], duration_seconds: float) -> str:
     """Build the plain-text end-of-run report."""
     attempts = stats["attempts"]
@@ -333,8 +354,8 @@ def _format_run_summary(stats: Dict[str, Any], duration_seconds: float) -> str:
         f"  Duration (seconds): {duration_seconds:.2f}",
         "",
         "Per-model results",
-        "  Provider / Model                         Attempts  Saved  Accept %  Avg tokens  Turns",
-        "  ----------------------------------------  --------  -----  --------  -----------  -----",
+        "  Provider / Model                         Attempts  Saved  Accept %  Avg tokens  Turns  Total convos",
+        "  ----------------------------------------  --------  -----  --------  -----------  -----  Total convos",
     ]
     for model_key, model_stats in stats["models"].items():
         model_attempts = model_stats["attempts"]
@@ -346,7 +367,8 @@ def _format_run_summary(stats: Dict[str, Any], duration_seconds: float) -> str:
         turn_range = f"{min(turns)}-{max(turns)}" if turns else "-"
         lines.append(
             f"  {model_key:<40} {model_attempts:>8}  {model_saved:>5}  "
-            f"{model_accept_rate:>7.2f}%  {average_tokens:>11.2f}  {turn_range:>5}"
+            f"{model_accept_rate:>7.2f}%  {average_tokens:>11.2f}  {turn_range:>5}  "
+            f"{model_stats['total_conversations']:>13}"
         )
 
     lines.extend(["", "Failure reasons", "  Category                         Count", "  ------------------------------  -----"])
@@ -396,11 +418,21 @@ def run_pipeline(
         "saved": 0,
         "failed": 0,
         "failures": Counter(),
-        "models": defaultdict(lambda: {"attempts": 0, "saved": 0, "tokens": [], "turns": []}),
+        "models": defaultdict(lambda: {
+            "attempts": 0,
+            "saved": 0,
+            "tokens": [],
+            "turns": [],
+            "total_conversations": 0,
+            "model": None,
+        }),
         "turn_counts": [],
         "domains": Counter(),
         "config": defaultdict(Counter),
     }
+    for model in key_manager.keys:
+        model_key = f"{model.provider} / {model.model_name}"
+        stats["models"][model_key]["model"] = model
     started_at = time.monotonic()
 
     def record_failure(model: Any, reason: str) -> None:
@@ -408,6 +440,8 @@ def run_pipeline(
         stats["failures"][_classify_failure_reason(reason)] += 1
 
     def print_summary() -> None:
+        for model_stats in stats["models"].values():
+            model_stats["total_conversations"] = _count_model_conversations(model_stats["model"])
         summary = _format_run_summary(stats, time.monotonic() - started_at)
         print(summary)
         logger.info(summary)
