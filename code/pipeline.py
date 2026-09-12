@@ -188,6 +188,10 @@ def _is_valid_conversation_payload(payload: Any) -> bool:
             reasoning = item.get("reasoning")
             state = item.get("state")
             response = item.get("response")
+
+            if state == "Closing" and i != turn_count:
+                logger.debug("Rejected payload: Closing state appears before final turn")
+                return False
             
             if not isinstance(reasoning, str) or not reasoning.strip():
                 logger.debug("Rejected payload: tutor turn %s missing/empty reasoning", i)
@@ -264,6 +268,9 @@ def _structural_failure_reason(payload: Any) -> str:
             reasoning = item.get("reasoning")
             state = item.get("state")
             response = item.get("response")
+
+            if state == "Closing" and turn_number != turn_count:
+                return "Closing state appears before final turn"
             
             if not isinstance(reasoning, str) or not reasoning.strip():
                 return f"tutor turn {turn_number} missing/empty reasoning"

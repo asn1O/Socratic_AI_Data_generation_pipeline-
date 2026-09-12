@@ -6,6 +6,8 @@ import os
 from pathlib import Path
 from typing import Optional
 
+REQUEST_TIMEOUT_SECONDS = 20 * 60
+
 
 @dataclass
 class Model:
@@ -315,6 +317,7 @@ class Model:
             client = OpenAI(
                 api_key=self.api_key,
                 base_url=self.url if self.url else None,
+                timeout=REQUEST_TIMEOUT_SECONDS,
             )
 
             # Make request
