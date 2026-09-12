@@ -7,6 +7,7 @@ from unittest.mock import patch
 from code.pipeline import (
     MAX_MODEL_SELECTION_ATTEMPTS,
     _count_model_conversations,
+    _format_duration,
     _get_model_with_retry,
     run_pipeline,
 )
@@ -40,6 +41,9 @@ class FakeManager:
 
 
 class PipelineQuotaAccountingTests(unittest.TestCase):
+    def test_format_duration_as_hours_minutes_and_seconds(self):
+        self.assertEqual(_format_duration(3661.9), "01:01:01")
+
     def test_count_model_conversations_across_set_files(self):
         with tempfile.TemporaryDirectory() as directory:
             model_directory = Path(directory) / "model"

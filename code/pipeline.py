@@ -339,6 +339,14 @@ def _count_model_conversations(model: Any) -> int:
     return conversation_count
 
 
+def _format_duration(duration_seconds: float) -> str:
+    """Format elapsed time as zero-padded hours, minutes, and seconds."""
+    total_seconds = max(0, int(duration_seconds))
+    hours, remaining_seconds = divmod(total_seconds, 3600)
+    minutes, seconds = divmod(remaining_seconds, 60)
+    return f"{hours:02d}:{minutes:02d}:{seconds:02d}"
+
+
 def _format_run_summary(stats: Dict[str, Any], duration_seconds: float) -> str:
     """Build the plain-text end-of-run report."""
     attempts = stats["attempts"]
@@ -351,7 +359,7 @@ def _format_run_summary(stats: Dict[str, Any], duration_seconds: float) -> str:
         f"  Saved: {saved}",
         f"  Failed: {stats['failed']}",
         f"  Accept rate: {accept_rate:.2f}%",
-        f"  Duration (seconds): {duration_seconds:.2f}",
+        f"  Duration (h:m:s): {_format_duration(duration_seconds)}",
         "",
         "Per-model results",
         "  Provider / Model                         Attempts  Saved  Accept %  Avg tokens  Turns  Total convos",
