@@ -236,5 +236,39 @@
     "no_of_replies": 4,
     "avg_tokens_used": 2962.5,
     "consecutive_failures": 0
+  },
+  {
+    "provider": "Google",
+    "api_key": "GOOGLE_API_KEY",
+    "model_name": "gemini-3.8-flash",
+    "url": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "rpd": 20,
+    "rpd_left": 20,
+    "tpd": null,
+    "tpd_left": null,
+    "last_use": "2026-09-03T06:44:17.446941+00:00",
+    "cooldown_until": null,
+    "expired": false,
+    "tier": 5,
+    "no_of_replies": 0,
+    "avg_tokens_used": 0.0,
+    "consecutive_failures": 0
+  },
+  {
+    "provider": "Google",
+    "api_key": "GOOGLE_API_KEY",
+    "model_name": "gemini-3.7-flash",
+    "url": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "rpd": 20,
+    "rpd_left": 20,
+    "tpd": null,
+    "tpd_left": null,
+    "last_use": "2026-09-03T06:44:17.446941+00:00",
+    "cooldown_until": null,
+    "expired": false,
+    "tier": 5,
+    "no_of_replies": 0,
+    "avg_tokens_used": 0.0,
+    "consecutive_failures": 0
   }
 ]
