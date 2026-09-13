@@ -10,10 +10,16 @@ model response, and saves accepted records as JSON.
 ```text
 Data_generation_pipeline/
 ├── code/
-│   ├── model.json          # Model endpoints, quota state, and API-key variable names
-│   └── pipeline.py         # Pipeline entry point
+│   ├── model.json          # Combined model list and mutable quota state
+│   ├── nvidia.json         # NVIDIA model configuration
+│   ├── google.json         # Google model configuration
+│   ├── openRouter.json     # OpenRouter model configuration
+│   ├── pipeline.py         # Pipeline entry point
+│   └── prompt_generator.py # Prompt sampling and template population
+├── dataset_generation_prompt.md # Conversation-generation prompt template
 ├── data/                   # Generated conversations and logs
 ├── tests/                  # Unit tests
+├── .env.example            # Environment-variable template
 └── .env                    # Local API keys; do not commit this file
 ```
 
@@ -75,6 +81,27 @@ Never replace the `api_key` values in `code/model.json` with secret strings.
 They are environment-variable names, such as `NVIDIA_API_KEY`, and the
 program resolves them from `.env` at runtime. Keep `.env` private.
 
+## Model configuration files
+
+The pipeline accepts any JSON file containing a list of model entries with the
+same shape as the supplied configuration files. Use the file that matches the
+provider you want to run:
+
+| File                   | Provider                 | Environment variable       |
+| ---------------------- | ------------------------ | -------------------------- |
+| `code/nvidia.json`     | NVIDIA                   | `NVIDIA_API_KEY`           |
+| `code/google.json`     | Google                   | `GOOGLE_API_KEY`           |
+| `code/openRouter.json` | OpenRouter               | `OPENROUTER_API_KEY`       |
+| `code/model.json`      | All configured providers | Provider-specific variable |
+
+Each model entry includes quota counters and runtime fields such as
+`rpd_left`, `tpd_left`, `last_use`, `expired`, and `consecutive_failures`.
+Successful calls and model failures update the selected configuration file, so
+these files are runtime state as well as configuration. Do not run two
+processes against the same configuration file at the same time. To restore a
+configuration's original quotas, reset its runtime fields from a clean copy
+instead of editing credentials into the file.
+
 ## Run the pipeline
 
 The working directory matters. Start the command from
@@ -119,7 +146,7 @@ created:
 
 ```text
 data/
-├── pipeline.log
+├── pipeline.nvidia.log
 ├── NVIDIA_nvidia_nemotron-3-super-120b-a12b/
 │   └── worker_01-set[0].json
 └── rejected_responses/
@@ -130,6 +157,21 @@ The command prints a run summary containing attempts, accepted records,
 failure categories, token counts, turn counts, domain coverage, and model
 usage. The pipeline also updates quota and usage counters in
 `code/model.json`, so review that file before resetting or copying it.
+
+## Dataset format
+
+The prompt generator randomly selects a domain, topic, and conversation
+parameters for each attempt from `dataset_generation_prompt.md`. A valid record
+contains:
+
+- `config`: the selected Socratic, student, hint, mistake, verbosity, and
+  difficulty settings
+- `domain`, `topic`, and `problem`
+- `conversation`: 12-18 alternating student and tutor turns
+
+Tutor turns contain separate `reasoning`, `state`, and `response` fields. The
+final tutor state is always `Closing`; malformed or structurally invalid model
+responses are rejected and saved under `data/rejected_responses/`.
 
 ## Run tests
 
