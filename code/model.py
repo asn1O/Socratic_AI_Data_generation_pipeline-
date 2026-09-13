@@ -239,19 +239,19 @@ class Model:
             False -> request failed or returned no usable text
         """
 
-        success, _, _ = self.test_connection_with_reply()
+        success, _, _, _ = self.test_connection_with_reply()
         return success
 
     def test_connection_with_reply(self):
         """
         Test the model and return:
 
-            (success, reply, total_tokens)
+            (success, reply, total_tokens, error_code)
 
         Example:
 
-            True, "yes"
-            False, None, None
+            True, "yes", 12, None
+            False, None, 0, "HTTP_404"
         """
 
         return self.call_model("Say only 'yes' or 'no'.")
@@ -296,7 +296,7 @@ class Model:
         """
         Send a prompt to the model and return:
 
-            (success, reply, total_tokens)
+            (success, reply, total_tokens, error_code)
         """
 
         # Get provider hostname
@@ -327,7 +327,7 @@ class Model:
                 "OpenAI SDK is not available. "
                 "Install it with 'pip install openai'."
             )
-            return False, None, 0
+            return False, None, 0, "SDK_UNAVAILABLE"
 
         try:
             # Create client
@@ -368,7 +368,7 @@ class Model:
                     f"[provider={provider} model={self.model_name}] "
                     "Model was reachable but returned no text."
                 )
-                return False, None, total_tokens
+                return False, None, total_tokens, "NO_RESPONSE"
 
             # Success
             self.record_response(total_tokens)
@@ -377,7 +377,7 @@ class Model:
                 "Success: received response — model appears reachable."
             )
 
-            return True, reply, total_tokens
+            return True, reply, total_tokens, None
 
         # -------------------------
         # Rate limit
@@ -392,7 +392,7 @@ class Model:
                 "Rate limited (429). "
                 "Please check your quota and try again later."
             )
-            return False, None, 0
+            return False, None, 0, "HTTP_429"
 
         # -------------------------
         # Authentication
@@ -404,7 +404,7 @@ class Model:
                 "Authentication error (401). "
                 "Check API key and permissions."
             )
-            return False, None, 0
+            return False, None, 0, "HTTP_401"
 
         # -------------------------
         # HTTP status errors
@@ -418,7 +418,7 @@ class Model:
                     f"Not found (404): model '{self.model_name}' "
                     "was not found. Check the model name."
                 )
-                return False, None, 0
+                return False, None, 0, "HTTP_404"
 
             print(
                 f"[provider={provider} model={self.model_name}] "
@@ -426,7 +426,7 @@ class Model:
                 f"Response: {str(e)[:500]}"
             )
 
-            return False, None, 0
+            return False, None, 0, f"HTTP_{e.status_code}"
 
         # -------------------------
         # Connection errors
@@ -439,7 +439,7 @@ class Model:
                 f"[provider={provider} model={self.model_name}] "
                 f"Connection error when contacting {self.url}: {e}"
             )
-            return False, None, 0
+            return False, None, 0, "API_CONNECTION_ERROR"
 
         except (TimeoutError, APITimeoutError):
             self.expired = True
@@ -448,7 +448,7 @@ class Model:
                 f"[provider={provider} model={self.model_name}] "
                 "Request timed out; marking model as expired."
             )
-            return False, None, 0
+            return False, None, 0, "TIMEOUT"
 
         # -------------------------
         # Other OpenAI API errors
@@ -459,7 +459,7 @@ class Model:
                 f"[provider={provider} model={self.model_name}] "
                 f"API error: {e}"
             )
-            return False, None, 0
+            return False, None, 0, "API_ERROR"
 
         # -------------------------
         # Anything unexpected
@@ -470,4 +470,4 @@ class Model:
                 f"[provider={provider} model={self.model_name}] "
                 f"Unexpected error when attempting request: {e}"
             )
-            return False, None, 0
+            return False, None, 0, "UNEXPECTED_ERROR"

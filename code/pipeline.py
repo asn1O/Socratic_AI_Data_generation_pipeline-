@@ -88,10 +88,9 @@ def _generator_id() -> str:
 
 def _configure_logging(models_path: Optional[str], data_dir: str) -> None:
     """Configure the run summary log with the generator identifier."""
-    config_stem = Path(models_path).stem if models_path else "pipeline"
-    log_dir = Path(data_dir)
+    log_dir = Path(data_dir) / "logs"
     log_dir.mkdir(parents=True, exist_ok=True)
-    log_path = log_dir / f"pipeline.{_generator_id()}.{config_stem}.log"
+    log_path = log_dir / f"{_generator_id()}.log"
     formatter = logging.Formatter("%(asctime)s %(levelname)s %(message)s")
 
     if not any(
@@ -119,10 +118,10 @@ def _configure_model_logging(model: Model, data_dir: str) -> logging.Logger:
     model_logger.setLevel(logging.INFO)
     model_logger.propagate = False
 
-    log_dir = Path(data_dir)
+    log_dir = Path(data_dir) / "logs"
     log_dir.mkdir(parents=True, exist_ok=True)
     model_stem = f"{model.provider}_{model.model_name}".replace("/", "_")
-    log_path = log_dir / f"pipeline.{_generator_id()}.{model_stem}.log"
+    log_path = log_dir / f"{_generator_id()}.{model_stem}.log"
     if not any(
         isinstance(handler, logging.FileHandler)
         and Path(handler.baseFilename) == log_path.resolve()
@@ -501,6 +500,37 @@ def _merge_stats(combined: Dict[str, Any], worker_stats: Dict[str, Any]) -> None
         model_stats["model"] = worker_model_stats["model"]
 
 
+def _format_model_summary(model: Model, stats: Dict[str, Any]) -> str:
+    """Build the completion summary written to an individual model log."""
+    model_key = f"{model.provider} / {model.model_name}"
+    model_stats = stats["models"][model_key]
+    attempts = model_stats["attempts"]
+    saved = model_stats["saved"]
+    accept_rate = saved / attempts * 100 if attempts else 0.0
+    tokens = model_stats["tokens"]
+    turns = model_stats["turns"]
+    turn_range = f"{min(turns)}-{max(turns)}" if turns else "-"
+    failure_lines = [
+        f"  {category}: {stats['failures'][category]}"
+        for category in FAILURE_CATEGORIES
+        if stats["failures"][category]
+    ]
+    failures = "\n".join(failure_lines) if failure_lines else "  none"
+    return "\n".join([
+        "MODEL_SUMMARY",
+        f"  provider_model: {model_key}",
+        f"  attempts: {attempts}",
+        f"  saved: {saved}",
+        f"  failed: {stats['failed']}",
+        f"  accept_rate: {accept_rate:.2f}%",
+        f"  average_tokens: {sum(tokens) / len(tokens) if tokens else 0.0:.2f}",
+        f"  turn_range: {turn_range}",
+        f"  expired: {model.expired}",
+        "  failure_categories:",
+        failures,
+    ])
+
+
 def _run_model_worker(
     model: Model,
     iterations: int,
@@ -535,14 +565,15 @@ def _run_model_worker(
             continue
 
         try:
-            success, reply, total_tokens = model.call_model(prompt)
+            success, reply, total_tokens, error_code = model.call_model(prompt)
         except Exception as exc:
             stats["failed"] += 1
             stats["failures"][_classify_failure_reason(f"unexpected exception: {exc}")] += 1
             model_logger.error(
-                "MODEL_FAILURE provider=%s model=%s reason=%s",
+                "MODEL_FAILURE provider=%s model=%s error_code=%s reason=%s",
                 model.provider,
                 model.model_name,
+                "UNEXPECTED_ERROR",
                 f"unexpected exception: {exc}",
             )
             model.consecutive_failures += 1
@@ -561,9 +592,10 @@ def _run_model_worker(
             stats["failures"][_classify_failure_reason("model call failed or returned no response")] += 1
             model.consecutive_failures += 1
             model_logger.error(
-                "MODEL_FAILURE provider=%s model=%s reason=%s",
+                "MODEL_FAILURE provider=%s model=%s error_code=%s reason=%s",
                 model.provider,
                 model.model_name,
+                error_code or "UNKNOWN_ERROR",
                 "model call failed or returned no response",
             )
             if model.consecutive_failures >= 3:
@@ -618,7 +650,7 @@ def _run_model_worker(
             )
             continue
 
-        print(f"Valid payload for provider={model.provider} model={model.model_name}: {payload}")
+        print(f"Valid payload for provider={model.provider} model={model.model_name} saved to {dataset_path}")
         turn_count = len(payload.get("conversation", []))
         stats["saved"] += 1
         model_stats = stats["models"][model_key]
@@ -639,6 +671,7 @@ def _run_model_worker(
             dataset_path,
         )
 
+    model_logger.info(_format_model_summary(model, stats))
     return stats
 
 

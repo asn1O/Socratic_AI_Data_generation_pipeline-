@@ -23,7 +23,7 @@ class FakeModel:
     expired = False
 
     def call_model(self, prompt):
-        return True, "not valid conversation JSON", 123
+        return True, "not valid conversation JSON", 123, None
 
     def write_rejected_response(self, response):
         return Path("rejected.txt")
@@ -36,7 +36,7 @@ class PipelineQuotaAccountingTests(unittest.TestCase):
             with patch.dict(os.environ, {"DATASET_GENERATOR_ID": "worker_01"}):
                 model_logger = _configure_model_logging(model, directory)
 
-            log_path = Path(directory) / "pipeline.worker_01.test_model.log"
+            log_path = Path(directory) / "logs" / "worker_01.test_model.log"
             self.assertTrue(log_path.exists())
             self.assertEqual(len(model_logger.handlers), 1)
             for handler in model_logger.handlers:
@@ -113,28 +113,44 @@ class PipelineQuotaAccountingTests(unittest.TestCase):
 
     def test_worker_runs_requested_attempts_without_model_selection(self):
         model = FakeModel()
-        with patch("code.pipeline.time.sleep") as sleep:
-            worker_stats = _run_model_worker(model, 3)
+        with tempfile.TemporaryDirectory() as directory:
+            with patch.dict(os.environ, {"DATASET_GENERATOR_ID": "worker_01"}), \
+                    patch("code.pipeline.time.sleep") as sleep:
+                model_logger = _configure_model_logging(model, directory)
+                worker_stats = _run_model_worker(model, 3, model_logger)
+            log_text = (
+                Path(directory) / "logs" / "worker_01.test_model.log"
+            ).read_text(encoding="utf-8")
 
         self.assertEqual(worker_stats["saved"], 0)
         self.assertEqual(worker_stats["attempts"], 3)
         self.assertEqual(worker_stats["failed"], 3)
         self.assertEqual(sleep.call_count, 3)
         sleep.assert_called_with(60)
+        self.assertIn("MODEL_SUMMARY", log_text)
+        self.assertIn("attempts: 3", log_text)
+        self.assertIn("failed: 3", log_text)
 
     def test_worker_expires_model_after_three_api_failures(self):
         class FailingModel(FakeModel):
             def call_model(self, prompt):
-                return False, None, 0
+                return False, None, 0, "HTTP_500"
 
         model = FailingModel()
-        with patch("code.pipeline.time.sleep"):
-            worker_stats = _run_model_worker(model, 10)
+        with tempfile.TemporaryDirectory() as directory:
+            with patch.dict(os.environ, {"DATASET_GENERATOR_ID": "worker_01"}), \
+                    patch("code.pipeline.time.sleep"):
+                model_logger = _configure_model_logging(model, directory)
+                worker_stats = _run_model_worker(model, 10, model_logger)
+            log_text = (
+                Path(directory) / "logs" / "worker_01.test_model.log"
+            ).read_text(encoding="utf-8")
 
         self.assertEqual(worker_stats["attempts"], 3)
         self.assertEqual(worker_stats["failed"], 3)
         self.assertTrue(model.expired)
         self.assertEqual(model.consecutive_failures, 3)
+        self.assertEqual(log_text.count("error_code=HTTP_500"), 3)
 
 
 if __name__ == "__main__":

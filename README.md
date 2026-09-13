@@ -122,8 +122,17 @@ One thread runs per model. After each API request completes, that model waits
 stops after three consecutive API-call failures that return no response. The
 configured limits are treated as model-specific.
 
-Logs include both the generator ID and model name, for example
-`data/pipeline.worker_01.NVIDIA_nvidia_nemotron-3-super-120b-a12b.log`.
+Logs are written beneath `data/logs/`. The overall log is named after the
+generator ID, for example `data/logs/worker_01.log`. Individual model logs
+include both the generator ID and model name, for example
+`data/logs/worker_01.NVIDIA_nvidia_nemotron-3-super-120b-a12b.log`. Each model
+log ends with a `MODEL_SUMMARY` containing that model's attempts, saved and
+failed counts, acceptance rate, average tokens, turn range, expiry state, and
+failure categories.
+
+Failed API calls also include a stable `error_code` in the model log, such as
+`HTTP_404`, `HTTP_429`, `HTTP_500`, `TIMEOUT`,
+`API_CONNECTION_ERROR`, or `NO_RESPONSE`. Successful calls use no error code.
 Separate provider configuration files can still be run in parallel, but use a
 different `DATASET_GENERATOR_ID` for each worker so generated files and logs do
 not conflict during dataset merging.
@@ -153,8 +162,9 @@ created:
 
 ```text
 data/
-├── pipeline.worker_01.nvidia.log
-├── pipeline.worker_01.NVIDIA_nvidia_nemotron-3-super-120b-a12b.log
+├── logs/
+│   ├── worker_01.log
+│   └── worker_01.NVIDIA_nvidia_nemotron-3-super-120b-a12b.log
 ├── NVIDIA_nvidia_nemotron-3-super-120b-a12b/
 │   └── worker_01-set[0].json
 └── rejected_responses/
