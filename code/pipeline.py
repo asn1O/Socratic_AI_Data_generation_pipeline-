@@ -2,18 +2,22 @@
 
 import argparse
 from collections import Counter, defaultdict
+from concurrent.futures import ThreadPoolExecutor
 import json
 import logging
+import os
 import re
 import time
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
+from dotenv import load_dotenv
+
 try:
-    from .key_manager import KeyManager
+    from .model import Model
 except ImportError:  # pragma: no cover
-    from key_manager import KeyManager
+    from model import Model
 
 try:
     from .prompt_generator import DatasetPromptGenerator
@@ -21,8 +25,7 @@ except ImportError:  # pragma: no cover
     from prompt_generator import DatasetPromptGenerator
 
 DEFAULT_ITERATIONS = 50
-RETRY_WAIT_SECONDS = 5
-MAX_MODEL_SELECTION_ATTEMPTS = 12
+MODEL_WAIT_SECONDS = 60
 
 # Conversation shape requirements, matching the generation prompt's spec.
 MIN_TURNS = 12
@@ -43,12 +46,52 @@ logger = logging.getLogger("pipeline")
 logger.setLevel(logging.INFO)
 logger.propagate = False
 
+
+def load_models(models_path: str) -> List[Model]:
+    """Load the configured models directly into an array."""
+    path = Path(models_path)
+    if not path.is_file():
+        raise FileNotFoundError(f"models file not found: {models_path}")
+
+    load_dotenv()
+    with path.open("r", encoding="utf-8") as file:
+        model_data = json.load(file)
+
+    if not isinstance(model_data, list):
+        raise ValueError("models file must contain a JSON array")
+
+    return [Model.from_dict(entry) for entry in model_data]
+
+
+def save_models(models_path: str, models: List[Model]) -> None:
+    """Persist model runtime state after all model workers have finished."""
+    path = Path(models_path)
+    with path.open("w", encoding="utf-8") as file:
+        json.dump([model.to_dict() for model in models], file, indent=2)
+        file.write("\n")
+
+
+def normalize_iterations(iterations: int, model_count: int) -> Tuple[int, int]:
+    """Round total iterations up to an even split and return its per-model share."""
+    if iterations < 0:
+        raise ValueError("iterations must be non-negative")
+    if model_count <= 0:
+        raise ValueError("model_count must be greater than zero")
+
+    per_model = (iterations + model_count - 1) // model_count
+    return per_model * model_count, per_model
+
+def _generator_id() -> str:
+    """Return the worker identifier used to distinguish generated files."""
+    return os.getenv("DATASET_GENERATOR_ID", "unknown").strip() or "unknown"
+
+
 def _configure_logging(models_path: Optional[str], data_dir: str) -> None:
-    """Configure a log file unique to the selected model configuration."""
+    """Configure the run summary log with the generator identifier."""
     config_stem = Path(models_path).stem if models_path else "pipeline"
     log_dir = Path(data_dir)
     log_dir.mkdir(parents=True, exist_ok=True)
-    log_path = log_dir / f"pipeline.{config_stem}.log"
+    log_path = log_dir / f"pipeline.{_generator_id()}.{config_stem}.log"
     formatter = logging.Formatter("%(asctime)s %(levelname)s %(message)s")
 
     if not any(
@@ -68,29 +111,28 @@ def _configure_logging(models_path: Optional[str], data_dir: str) -> None:
         logger.addHandler(stream_handler)
 
 
-# --------------------------------------------------------------------------
-# Model selection
-# --------------------------------------------------------------------------
+def _configure_model_logging(model: Model, data_dir: str) -> logging.Logger:
+    """Configure a file logger dedicated to one model and generator."""
+    model_logger = logging.getLogger(
+        f"pipeline.model.{_generator_id()}.{model.provider}.{model.model_name}"
+    )
+    model_logger.setLevel(logging.INFO)
+    model_logger.propagate = False
 
-def _get_model_with_retry(key_manager: KeyManager) -> Optional[Tuple[Any, int]]:
-    """Retry model selection up to the configured limit."""
-    for attempt in range(MAX_MODEL_SELECTION_ATTEMPTS):
-        selected = key_manager.get_key()
-        if selected is not None:
-            return selected
+    log_dir = Path(data_dir)
+    log_dir.mkdir(parents=True, exist_ok=True)
+    model_stem = f"{model.provider}_{model.model_name}".replace("/", "_")
+    log_path = log_dir / f"pipeline.{_generator_id()}.{model_stem}.log"
+    if not any(
+        isinstance(handler, logging.FileHandler)
+        and Path(handler.baseFilename) == log_path.resolve()
+        for handler in model_logger.handlers
+    ):
+        file_handler = logging.FileHandler(log_path, mode="a", encoding="utf-8")
+        file_handler.setFormatter(logging.Formatter("%(asctime)s %(levelname)s %(message)s"))
+        model_logger.addHandler(file_handler)
 
-        if attempt == MAX_MODEL_SELECTION_ATTEMPTS - 1:
-            logger.error(
-                "No available model after %s attempts.",
-                MAX_MODEL_SELECTION_ATTEMPTS,
-            )
-            return None
-
-        logger.warning(
-            "No available model. Retrying in %s seconds.",
-            RETRY_WAIT_SECONDS,
-        )
-        time.sleep(RETRY_WAIT_SECONDS)
+    return model_logger
 
 
 # --------------------------------------------------------------------------
@@ -417,26 +459,9 @@ def _format_run_summary(stats: Dict[str, Any], duration_seconds: float) -> str:
 # Pipeline
 # --------------------------------------------------------------------------
 
-def run_pipeline(
-    iterations: int = DEFAULT_ITERATIONS,
-    models_path: Optional[str] = None,
-    data_dir: str = "data",
-    manager: Optional[KeyManager] = None,
-) -> int:
-    """Run the pipeline for up to ``iterations`` attempts and return successful writes."""
-    _configure_logging(models_path, data_dir)
-    if manager is None and models_path is None:
-        raise ValueError("models_path is required when manager is not provided")
-    key_manager = manager or KeyManager(models_path=models_path)
-
-    if not key_manager.keys:
-        logger.error("No models found in %s.", models_path)
-        return 0
-
-    output_dir = Path(data_dir)
-    output_dir.mkdir(parents=True, exist_ok=True)
-    saved_count = 0
-    stats: Dict[str, Any] = {
+def _new_stats() -> Dict[str, Any]:
+    """Create an empty statistics object for a worker or combined run."""
+    return {
         "attempts": 0,
         "saved": 0,
         "failed": 0,
@@ -453,14 +478,193 @@ def run_pipeline(
         "domains": Counter(),
         "config": defaultdict(Counter),
     }
-    for model in key_manager.keys:
-        model_key = f"{model.provider} / {model.model_name}"
-        stats["models"][model_key]["model"] = model
-    started_at = time.monotonic()
 
-    def record_failure(model: Any, reason: str) -> None:
-        stats["failed"] += 1
-        stats["failures"][_classify_failure_reason(reason)] += 1
+
+def _merge_stats(combined: Dict[str, Any], worker_stats: Dict[str, Any]) -> None:
+    """Merge one worker's local statistics into the main-process totals."""
+    combined["attempts"] += worker_stats["attempts"]
+    combined["saved"] += worker_stats["saved"]
+    combined["failed"] += worker_stats["failed"]
+    combined["failures"].update(worker_stats["failures"])
+    combined["turn_counts"].extend(worker_stats["turn_counts"])
+    combined["domains"].update(worker_stats["domains"])
+    for parameter, values in worker_stats["config"].items():
+        combined["config"][parameter].update(values)
+
+    for model_key, worker_model_stats in worker_stats["models"].items():
+        model_stats = combined["models"][model_key]
+        model_stats["attempts"] += worker_model_stats["attempts"]
+        model_stats["saved"] += worker_model_stats["saved"]
+        model_stats["tokens"].extend(worker_model_stats["tokens"])
+        model_stats["turns"].extend(worker_model_stats["turns"])
+        model_stats["total_conversations"] = worker_model_stats["total_conversations"]
+        model_stats["model"] = worker_model_stats["model"]
+
+
+def _run_model_worker(
+    model: Model,
+    iterations: int,
+    model_logger: Optional[logging.Logger] = None,
+) -> Dict[str, Any]:
+    """Run one model and return statistics owned entirely by this worker."""
+    model_key = f"{model.provider} / {model.model_name}"
+    stats = _new_stats()
+    stats["models"][model_key]["model"] = model
+    model_logger = model_logger or logger
+
+    for _ in range(iterations):
+        stats["attempts"] += 1
+        stats["models"][model_key]["attempts"] += 1
+        model_logger.info(
+            "MODEL_START provider=%s model=%s",
+            model.provider,
+            model.model_name,
+        )
+
+        try:
+            prompt, generated_record_json = DatasetPromptGenerator().generate_prompt()
+        except Exception as exc:
+            stats["failed"] += 1
+            stats["failures"][_classify_failure_reason(f"unexpected exception: {exc}")] += 1
+            model_logger.error(
+                "MODEL_FAILURE provider=%s model=%s reason=%s",
+                model.provider,
+                model.model_name,
+                f"unexpected exception: {exc}",
+            )
+            continue
+
+        try:
+            success, reply, total_tokens = model.call_model(prompt)
+        except Exception as exc:
+            stats["failed"] += 1
+            stats["failures"][_classify_failure_reason(f"unexpected exception: {exc}")] += 1
+            model_logger.error(
+                "MODEL_FAILURE provider=%s model=%s reason=%s",
+                model.provider,
+                model.model_name,
+                f"unexpected exception: {exc}",
+            )
+            model.consecutive_failures += 1
+            if model.consecutive_failures >= 3:
+                model.expired = True
+                model_logger.error("MODEL_EXPIRED provider=%s model=%s reason=three consecutive API failures", model.provider, model.model_name)
+            time.sleep(MODEL_WAIT_SECONDS)
+            if model.expired:
+                break
+            continue
+
+        time.sleep(MODEL_WAIT_SECONDS)
+
+        if not success or reply is None:
+            stats["failed"] += 1
+            stats["failures"][_classify_failure_reason("model call failed or returned no response")] += 1
+            model.consecutive_failures += 1
+            model_logger.error(
+                "MODEL_FAILURE provider=%s model=%s reason=%s",
+                model.provider,
+                model.model_name,
+                "model call failed or returned no response",
+            )
+            if model.consecutive_failures >= 3:
+                model.expired = True
+                model_logger.error("MODEL_EXPIRED provider=%s model=%s reason=three consecutive API failures", model.provider, model.model_name)
+                break
+            continue
+
+        model.consecutive_failures = 0
+
+        try:
+            payload = _parse_valid_json(reply)
+            generated_record = json.loads(generated_record_json)
+            generated_record["problem"] = payload["problem"]
+            generated_record["conversation"] = payload["conversation"]
+        except (ValueError, TypeError, KeyError) as exc:
+            stats["failed"] += 1
+            stats["failures"][_classify_failure_reason(str(exc))] += 1
+            try:
+                rejected_path = model.write_rejected_response(reply)
+                model_logger.info(
+                    "REJECTED_RESPONSE_SAVED provider=%s model=%s path=%s",
+                    model.provider,
+                    model.model_name,
+                    rejected_path,
+                )
+            except OSError as write_exc:
+                model_logger.error(
+                    "REJECTED_RESPONSE_SAVE_FAILURE provider=%s model=%s reason=%s",
+                    model.provider,
+                    model.model_name,
+                    f"unable to write rejected response: {write_exc}",
+                )
+            model_logger.error(
+                "JSON_INVALID provider=%s model=%s reason=%s",
+                model.provider,
+                model.model_name,
+                str(exc),
+            )
+            continue
+
+        try:
+            dataset_path = model.write_response(generated_record)
+        except (OSError, TypeError, ValueError, json.JSONDecodeError) as exc:
+            stats["failed"] += 1
+            stats["failures"][_classify_failure_reason(f"unable to write payload: {exc}")] += 1
+            model_logger.error(
+                "SAVE_FAILURE provider=%s model=%s reason=%s",
+                model.provider,
+                model.model_name,
+                f"unable to write payload: {exc}",
+            )
+            continue
+
+        print(f"Valid payload for provider={model.provider} model={model.model_name}: {payload}")
+        turn_count = len(payload.get("conversation", []))
+        stats["saved"] += 1
+        model_stats = stats["models"][model_key]
+        model_stats["saved"] += 1
+        model_stats["tokens"].append(int(total_tokens or 0))
+        model_stats["turns"].append(turn_count)
+        stats["turn_counts"].append(turn_count)
+        stats["domains"][generated_record.get("domain", "unknown")] += 1
+        for parameter in CONFIG_PARAMETERS:
+            value = generated_record.get("config", {}).get(parameter, "unknown")
+            stats["config"][parameter][value] += 1
+        model_logger.info(
+            "SUCCESS provider=%s model=%s total_tokens=%s turns=%s path=%s",
+            model.provider,
+            model.model_name,
+            total_tokens,
+            turn_count,
+            dataset_path,
+        )
+
+    return stats
+
+
+def run_pipeline(
+    iterations: int = DEFAULT_ITERATIONS,
+    models_path: Optional[str] = None,
+    data_dir: str = "data",
+) -> int:
+    """Run an evenly divided total number of attempts across the configured models."""
+    _configure_logging(models_path, data_dir)
+    if models_path is None:
+        raise ValueError("models_path is required")
+    models = load_models(models_path)
+    run_iterations, iterations_per_model = normalize_iterations(
+        iterations, len(models)
+    ) if models else (0, 0)
+
+    if not models:
+        logger.error("No models found in %s.", models_path)
+        return 0
+
+    output_dir = Path(data_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+    saved_count = 0
+    stats = _new_stats()
+    started_at = time.monotonic()
 
     def print_summary() -> None:
         for model_stats in stats["models"].values():
@@ -470,126 +674,22 @@ def run_pipeline(
         logger.info(summary)
 
     try:
-        # Reset consecutive failure counters for all models at the start of iterations
-        key_manager.reset_all_failure_counters()
-
-        for iteration in range(1, iterations + 1):
-            selected = _get_model_with_retry(key_manager)
-            if selected is None:
-                logger.error("Could not select a model during iteration %s.", iteration)
-                break
-
-            model, model_index = selected
-            model_key = f"{model.provider} / {model.model_name}"
-            stats["attempts"] += 1
-            stats["models"][model_key]["attempts"] += 1
-            logger.info(
-                "SELECTED provider=%s model=%s",
-                model.provider,
-                model.model_name,
-            )
-
-            try:
-                prompt, generated_record_json = DatasetPromptGenerator().generate_prompt()
-                success, reply, total_tokens = model.call_model(prompt)
-            except Exception as exc:
-                record_failure(model, f"unexpected exception: {exc}")
-                logger.error(
-                    "MODEL_FAILURE provider=%s model=%s reason=%s",
-                    model.provider,
-                    model.model_name,
-                    f"unexpected exception: {exc}",
+        with ThreadPoolExecutor(max_workers=len(models)) as executor:
+            futures = [
+                executor.submit(
+                    _run_model_worker,
+                    model,
+                    iterations_per_model,
+                    _configure_model_logging(model, data_dir),
                 )
-                key_manager.increment_model_failure(model_index)
-                continue
+                for model in models
+            ]
+            worker_stats = [future.result() for future in futures]
 
-            if not success or reply is None:
-                record_failure(model, "model call failed or returned no response")
-                logger.error(
-                    "MODEL_FAILURE provider=%s model=%s reason=%s",
-                    model.provider,
-                    model.model_name,
-                    "model call failed or returned no response",
-                )
-                key_manager.increment_model_failure(model_index)
-                continue
-
-            try:
-                key_manager.reduce_key_usage(model_index, int(total_tokens or 0))
-            except Exception as exc:
-                logger.error(
-                    "USAGE_UPDATE_FAILURE provider=%s model=%s reason=%s",
-                    model.provider,
-                    model.model_name,
-                    f"unable to reduce usage: {exc}",
-                )
-
-            try:
-                payload = _parse_valid_json(reply)
-                generated_record = json.loads(generated_record_json)
-                generated_record["problem"] = payload["problem"]
-                generated_record["conversation"] = payload["conversation"]
-            except (ValueError, TypeError, KeyError) as exc:
-                record_failure(model, str(exc))
-                try:
-                    rejected_path = model.write_rejected_response(reply)
-                    logger.info(
-                        "REJECTED_RESPONSE_SAVED provider=%s model=%s path=%s",
-                        model.provider,
-                        model.model_name,
-                        rejected_path,
-                    )
-                except OSError as write_exc:
-                    logger.error(
-                        "REJECTED_RESPONSE_SAVE_FAILURE provider=%s model=%s reason=%s",
-                        model.provider,
-                        model.model_name,
-                        f"unable to write rejected response: {write_exc}",
-                    )
-                logger.error(
-                    "JSON_INVALID provider=%s model=%s reason=%s",
-                    model.provider,
-                    model.model_name,
-                    str(exc),
-                )
-                continue
-
-            try:
-                dataset_path = model.write_response(generated_record)
-            except (OSError, TypeError, ValueError, json.JSONDecodeError) as exc:
-                record_failure(model, f"unable to write payload: {exc}")
-                logger.error(
-                    "SAVE_FAILURE provider=%s model=%s reason=%s",
-                    model.provider,
-                    model.model_name,
-                    f"unable to write payload: {exc}",
-                )
-                continue
-             
-            # Reset consecutive failure counter on successful completion
-            key_manager.reset_model_failure_counter(model_index)
-            
-            print(f"Valid payload for provider={model.provider} model={model.model_name}: {payload}")
-            saved_count += 1
-            stats["saved"] += 1
-            model_stats = stats["models"][model_key]
-            model_stats["saved"] += 1
-            model_stats["tokens"].append(int(total_tokens or 0))
-            turn_count = len(payload.get("conversation", []))
-            model_stats["turns"].append(turn_count)
-            stats["turn_counts"].append(turn_count)
-            stats["domains"][generated_record.get("domain", "unknown")] += 1
-            for parameter in CONFIG_PARAMETERS:
-                value = generated_record.get("config", {}).get(parameter, "unknown")
-                stats["config"][parameter][value] += 1
-            logger.info(
-                "SUCCESS provider=%s model=%s total_tokens=%s turns=%s path=%s",
-                model.provider,
-                model.model_name,
-                total_tokens,
-                len(payload.get("conversation", [])),
-                dataset_path,
-            )
+        for model_stats in worker_stats:
+            _merge_stats(stats, model_stats)
+        save_models(models_path, models)
+        saved_count = stats["saved"]
 
     except KeyboardInterrupt:
         logger.warning(

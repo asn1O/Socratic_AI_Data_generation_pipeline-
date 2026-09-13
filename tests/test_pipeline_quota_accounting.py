@@ -1,21 +1,26 @@
 import json
+import os
 import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
 
 from code.pipeline import (
-    MAX_MODEL_SELECTION_ATTEMPTS,
     _count_model_conversations,
+    _configure_model_logging,
     _format_duration,
-    _get_model_with_retry,
-    run_pipeline,
+    _run_model_worker,
+    load_models,
+    normalize_iterations,
+    save_models,
 )
 
 
 class FakeModel:
     provider = "test"
     model_name = "model"
+    consecutive_failures = 0
+    expired = False
 
     def call_model(self, prompt):
         return True, "not valid conversation JSON", 123
@@ -24,23 +29,69 @@ class FakeModel:
         return Path("rejected.txt")
 
 
-class FakeManager:
-    def __init__(self):
-        self.model = FakeModel()
-        self.keys = [self.model]
-        self.reduced_usage = []
-
-    def get_key(self):
-        return self.model, 0
-
-    def reduce_key_usage(self, index, tokens):
-        self.reduced_usage.append((index, tokens))
-
-    def reset_all_failure_counters(self):
-        pass
-
-
 class PipelineQuotaAccountingTests(unittest.TestCase):
+    def test_model_log_filename_contains_generator_and_model(self):
+        model = FakeModel()
+        with tempfile.TemporaryDirectory() as directory:
+            with patch.dict(os.environ, {"DATASET_GENERATOR_ID": "worker_01"}):
+                model_logger = _configure_model_logging(model, directory)
+
+            log_path = Path(directory) / "pipeline.worker_01.test_model.log"
+            self.assertTrue(log_path.exists())
+            self.assertEqual(len(model_logger.handlers), 1)
+            for handler in model_logger.handlers:
+                model_logger.removeHandler(handler)
+                handler.close()
+
+    def test_normalize_iterations_rounds_total_up_to_model_count(self):
+        self.assertEqual(normalize_iterations(50, 3), (51, 17))
+        self.assertEqual(normalize_iterations(6, 3), (6, 2))
+
+    def test_load_models_returns_models_from_json_array(self):
+        model_data = [{
+            "provider": "P1",
+            "api_key": "TEST_API_KEY",
+            "model_name": "m1",
+            "url": "https://example.com/v1",
+            "rpd": 1,
+            "rpd_left": 1,
+            "tpd": None,
+            "tpd_left": None,
+            "last_use": None,
+        }]
+        with tempfile.NamedTemporaryFile("w", suffix=".json") as file:
+            json.dump(model_data, file)
+            file.flush()
+            with patch.dict(os.environ, {"TEST_API_KEY": "resolved-secret"}):
+                models = load_models(file.name)
+
+        self.assertEqual(len(models), 1)
+        self.assertEqual(models[0].model_name, "m1")
+        self.assertEqual(models[0].api_key, "resolved-secret")
+
+    def test_save_models_persists_worker_state(self):
+        model_data = [{
+            "provider": "P1",
+            "api_key": "TEST_API_KEY",
+            "model_name": "m1",
+            "url": "https://example.com/v1",
+            "rpd": 1,
+            "rpd_left": 1,
+            "tpd": None,
+            "tpd_left": None,
+            "last_use": None,
+        }]
+        with tempfile.NamedTemporaryFile("w", suffix=".json") as file:
+            json.dump(model_data, file)
+            file.flush()
+            with patch.dict(os.environ, {"TEST_API_KEY": "resolved-secret"}):
+                models = load_models(file.name)
+            models[0].expired = True
+            save_models(file.name, models)
+            persisted = json.loads(Path(file.name).read_text(encoding="utf-8"))
+
+        self.assertTrue(persisted[0]["expired"])
+
     def test_format_duration_as_hours_minutes_and_seconds(self):
         self.assertEqual(_format_duration(3661.9), "01:01:01")
 
@@ -60,30 +111,30 @@ class PipelineQuotaAccountingTests(unittest.TestCase):
 
             self.assertEqual(_count_model_conversations(ModelWithOutputPath()), 3)
 
-    def test_model_selection_stops_after_twelve_attempts(self):
-        class UnavailableManager:
-            def __init__(self):
-                self.selection_attempts = 0
-
-            def get_key(self):
-                self.selection_attempts += 1
-                return None
-
-        manager = UnavailableManager()
+    def test_worker_runs_requested_attempts_without_model_selection(self):
+        model = FakeModel()
         with patch("code.pipeline.time.sleep") as sleep:
-            selected = _get_model_with_retry(manager)
+            worker_stats = _run_model_worker(model, 3)
 
-        self.assertIsNone(selected)
-        self.assertEqual(manager.selection_attempts, MAX_MODEL_SELECTION_ATTEMPTS)
-        self.assertEqual(sleep.call_count, MAX_MODEL_SELECTION_ATTEMPTS - 1)
+        self.assertEqual(worker_stats["saved"], 0)
+        self.assertEqual(worker_stats["attempts"], 3)
+        self.assertEqual(worker_stats["failed"], 3)
+        self.assertEqual(sleep.call_count, 3)
+        sleep.assert_called_with(60)
 
-    def test_invalid_response_still_reduces_quota(self):
-        manager = FakeManager()
-        with tempfile.TemporaryDirectory() as directory:
-            result = run_pipeline(iterations=1, manager=manager, data_dir=directory)
+    def test_worker_expires_model_after_three_api_failures(self):
+        class FailingModel(FakeModel):
+            def call_model(self, prompt):
+                return False, None, 0
 
-        self.assertEqual(result, 0)
-        self.assertEqual(manager.reduced_usage, [(0, 123)])
+        model = FailingModel()
+        with patch("code.pipeline.time.sleep"):
+            worker_stats = _run_model_worker(model, 10)
+
+        self.assertEqual(worker_stats["attempts"], 3)
+        self.assertEqual(worker_stats["failed"], 3)
+        self.assertTrue(model.expired)
+        self.assertEqual(model.consecutive_failures, 3)
 
 
 if __name__ == "__main__":
