@@ -79,39 +79,35 @@ program resolves them from `.env` at runtime. Keep `.env` private.
 
 The working directory matters. Start the command from
 `Data_generation_pipeline/`, not from `Data_generation_pipeline/code/`.
-The default relative paths are:
-
-- models: `code/model.json`
-- generated data and logs: `data/`
-
-With the virtual environment activated, run:
+Generated data and logs use the `data/` directory by default. Pass the model
+configuration path and desired number of attempts explicitly:
 
 ```bash
-python -m code.pipeline --iterations 50
+python -m code.pipeline code/nvidia.json 50
 ```
+
+The log filename is based on the configuration filename, for example
+`data/pipeline.nvidia.log`. Separate provider configurations can run in
+parallel to reduce total runtime. To keep provider quota handling consistent,
+put all models from the same provider in one configuration file, and do not
+split one provider's models across multiple files. Also do not run two
+processes against the same configuration file because quota updates are
+written back to that file.
 
 For a short connectivity or setup check, use one attempt:
 
 ```bash
-python -m code.pipeline --iterations 1
-```
-
-Available options:
-
-```text
---iterations N       Number of model attempts; default: 50
---models-path PATH   Model configuration JSON; default: code/model.json
---data-dir PATH      Output and log directory; default: data
+python -m code.pipeline code/nvidia.json 1
 ```
 
 For example, to write a small test run to a separate directory:
 
 ```bash
-python -m code.pipeline --iterations 5 --data-dir data/test_run
+python -m code.pipeline code/nvidia.json 5 --data-dir data/test_run
 ```
 
 Do not run `cd code` before starting the pipeline. Doing so changes the
-meaning of `code/model.json`, `data/`, and the prompt-template path, and can
+meaning of the config path, `data/`, and the prompt-template path, and can
 cause files to be created in the wrong location or the models file not to be
 found.
 

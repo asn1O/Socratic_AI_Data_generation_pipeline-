@@ -21,7 +21,7 @@ except Exception:
 
 
 class KeyManager:
-    def __init__(self, models_path: str = "code/model.json"):
+    def __init__(self, models_path: str):
         self.models_path = models_path
         self.keys: List[Model] = []
         self.last_used_index = -1
@@ -141,7 +141,12 @@ class KeyManager:
 
 if __name__ == "__main__":
     # simple interactive runner when executed directly
-    mgr = KeyManager(models_path="code/model.json")
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Inspect models from a model configuration file.")
+    parser.add_argument("models_path", help="Path to the JSON file that lists the models.")
+    args = parser.parse_args()
+    mgr = KeyManager(models_path=args.models_path)
     try:
         from .key_manager_test import KeyManagerTest
     except Exception:

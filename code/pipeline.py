@@ -43,17 +43,29 @@ logger = logging.getLogger("pipeline")
 logger.setLevel(logging.INFO)
 logger.propagate = False
 
-log_dir = Path("data")
-log_dir.mkdir(parents=True, exist_ok=True)
+def _configure_logging(models_path: Optional[str], data_dir: str) -> None:
+    """Configure a log file unique to the selected model configuration."""
+    config_stem = Path(models_path).stem if models_path else "pipeline"
+    log_dir = Path(data_dir)
+    log_dir.mkdir(parents=True, exist_ok=True)
+    log_path = log_dir / f"pipeline.{config_stem}.log"
+    formatter = logging.Formatter("%(asctime)s %(levelname)s %(message)s")
 
-if not logger.handlers:
-    file_handler = logging.FileHandler(log_dir / "pipeline.log", mode="a", encoding="utf-8")
-    file_handler.setFormatter(logging.Formatter("%(asctime)s %(levelname)s %(message)s"))
-    logger.addHandler(file_handler)
+    if not any(
+        isinstance(handler, logging.FileHandler)
+        and Path(handler.baseFilename) == log_path.resolve()
+        for handler in logger.handlers
+    ):
+        file_handler = logging.FileHandler(log_path, mode="a", encoding="utf-8")
+        file_handler.setFormatter(formatter)
+        logger.addHandler(file_handler)
 
-    stream_handler = logging.StreamHandler()
-    stream_handler.setFormatter(logging.Formatter("%(asctime)s %(levelname)s %(message)s"))
-    logger.addHandler(stream_handler)
+    if not any(
+        type(handler) is logging.StreamHandler for handler in logger.handlers
+    ):
+        stream_handler = logging.StreamHandler()
+        stream_handler.setFormatter(formatter)
+        logger.addHandler(stream_handler)
 
 
 # --------------------------------------------------------------------------
@@ -407,11 +419,14 @@ def _format_run_summary(stats: Dict[str, Any], duration_seconds: float) -> str:
 
 def run_pipeline(
     iterations: int = DEFAULT_ITERATIONS,
-    models_path: str = "code/model.json",
+    models_path: Optional[str] = None,
     data_dir: str = "data",
     manager: Optional[KeyManager] = None,
 ) -> int:
     """Run the pipeline for up to ``iterations`` attempts and return successful writes."""
+    _configure_logging(models_path, data_dir)
+    if manager is None and models_path is None:
+        raise ValueError("models_path is required when manager is not provided")
     key_manager = manager or KeyManager(models_path=models_path)
 
     if not key_manager.keys:
@@ -591,16 +606,14 @@ def run_pipeline(
 def _parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Generate Socratic conversation data from available models.")
     parser.add_argument(
-        "--iterations",
-        type=int,
-        default=DEFAULT_ITERATIONS,
-        help="Number of model attempts to run. Default is 50.",
+        "models_path",
+        type=str,
+        help="Path to the JSON file that lists the models.",
     )
     parser.add_argument(
-        "--models-path",
-        type=str,
-        default="code/model.json",
-        help="Path to the JSON file that lists all models.",
+        "iterations",
+        type=int,
+        help="Number of model attempts to run.",
     )
     parser.add_argument(
         "--data-dir",
