@@ -1,0 +1,38 @@
+2026-09-14 15:51:55,828 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-14 15:54:58,195 INFO SUCCESS provider=NVIDIA model=moonshotai/kimi-k3 total_tokens=3518 turns=14 path=data/NVIDIA_moonshotai_kimi-k3/edw-set[0].json
+2026-09-14 15:55:58,198 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-14 15:58:22,917 INFO SUCCESS provider=NVIDIA model=moonshotai/kimi-k3 total_tokens=3843 turns=14 path=data/NVIDIA_moonshotai_kimi-k3/edw-set[0].json
+2026-09-14 15:59:22,916 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-14 16:02:20,072 INFO SUCCESS provider=NVIDIA model=moonshotai/kimi-k3 total_tokens=3520 turns=12 path=data/NVIDIA_moonshotai_kimi-k3/edw-set[0].json
+2026-09-14 16:03:20,070 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-14 16:06:40,923 INFO SUCCESS provider=NVIDIA model=moonshotai/kimi-k3 total_tokens=4361 turns=14 path=data/NVIDIA_moonshotai_kimi-k3/edw-set[0].json
+2026-09-14 16:07:40,925 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-14 16:11:50,747 INFO SUCCESS provider=NVIDIA model=moonshotai/kimi-k3 total_tokens=3867 turns=14 path=data/NVIDIA_moonshotai_kimi-k3/edw-set[0].json
+2026-09-14 16:12:50,750 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-14 16:15:30,909 INFO SUCCESS provider=NVIDIA model=moonshotai/kimi-k3 total_tokens=3928 turns=14 path=data/NVIDIA_moonshotai_kimi-k3/edw-set[0].json
+2026-09-14 16:16:30,910 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-14 16:19:29,468 INFO SUCCESS provider=NVIDIA model=moonshotai/kimi-k3 total_tokens=3274 turns=12 path=data/NVIDIA_moonshotai_kimi-k3/edw-set[0].json
+2026-09-14 16:20:29,476 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-14 16:23:27,801 INFO SUCCESS provider=NVIDIA model=moonshotai/kimi-k3 total_tokens=3581 turns=18 path=data/NVIDIA_moonshotai_kimi-k3/edw-set[0].json
+2026-09-14 16:24:27,809 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-14 16:28:18,351 INFO SUCCESS provider=NVIDIA model=moonshotai/kimi-k3 total_tokens=4337 turns=14 path=data/NVIDIA_moonshotai_kimi-k3/edw-set[0].json
+2026-09-14 16:29:18,363 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-14 16:33:08,887 INFO SUCCESS provider=NVIDIA model=moonshotai/kimi-k3 total_tokens=4125 turns=14 path=data/NVIDIA_moonshotai_kimi-k3/edw-set[0].json
+2026-09-14 16:34:08,896 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-14 16:34:10,529 ERROR MODEL_FAILURE provider=NVIDIA model=moonshotai/kimi-k3 error_code=HTTP_429 reason=model call failed or returned no response
+2026-09-14 16:35:10,534 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-14 16:35:12,151 ERROR MODEL_FAILURE provider=NVIDIA model=moonshotai/kimi-k3 error_code=HTTP_429 reason=model call failed or returned no response
+2026-09-14 16:36:12,153 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-14 16:36:13,766 ERROR MODEL_FAILURE provider=NVIDIA model=moonshotai/kimi-k3 error_code=HTTP_429 reason=model call failed or returned no response
+2026-09-14 16:36:13,766 ERROR MODEL_EXPIRED provider=NVIDIA model=moonshotai/kimi-k3 reason=three consecutive API failures
+2026-09-14 16:37:13,774 INFO MODEL_SUMMARY
+  provider_model: NVIDIA / moonshotai/kimi-k3
+  attempts: 13
+  saved: 10
+  failed: 3
+  accept_rate: 76.92%
+  average_tokens: 3835.40
+  turn_range: 12-18
+  expired: True
+  failure_categories:
+  empty_response: 3

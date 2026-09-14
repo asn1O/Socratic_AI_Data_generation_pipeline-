@@ -1,0 +1,85 @@
+2026-09-14 18:10:39,676 INFO 
+=== Run Statistics Summary ===
+Overall totals
+  Attempts: 182
+  Saved: 146
+  Failed: 36
+  Accept rate: 80.22%
+  Duration (h:m:s): 02:18:44
+
+Per-model results
+  Provider / Model                         Attempts  Saved  Accept %  Avg tokens  Turns  Total convos
+  ----------------------------------------  --------  -----  --------  -----------  -----  Total convos
+  NVIDIA / nvidia/nemotron-3-super-120b-a12b       15     15   100.00%     11601.20  12-16             15
+  NVIDIA / nvidia/nemotron-3-ultra-550b-a55b       15      8    53.33%      7210.62  12-14              8
+  NVIDIA / moonshotai/kimi-k3                    13     10    76.92%      3835.40  12-18             10
+  NVIDIA / deepseek-ai/deepseek-v4-pro-0813        3      0     0.00%         0.00      -              0
+  NVIDIA / deepseek-ai/deepseek-v4-flash-0731        3      0     0.00%         0.00      -              0
+  OpenRouter / nvidia/nemotron-3-super-120b-a12b:free       15     14    93.33%     14566.50  12-16             14
+  OpenRouter / nvidia/nemotron-3-ultra-550b-a55b:free       15     13    86.67%      8073.23  12-14             13
+  Google / gemini-3.6-flash                      15     15   100.00%      7893.87  12-16             15
+  Google / gemini-3.5-flash                      15     15   100.00%      8158.33  12-16             15
+  Google / gemini-3-flash-preview                15     14    93.33%     10199.21  12-14             14
+  Google / gemini-3.5-flash-lite                 15     12    80.00%      3589.75  12-12             12
+  Google / gemini-3.1-flash-lite                 15     15   100.00%      3421.67  12-12             15
+  Google / gemma-4-31b-it                        15     13    86.67%      6413.62  12-18             13
+  Google / gemini-2.5-flash-lite                  3      0     0.00%         0.00      -              0
+  Google / gemini-3.8-flash                       7      2    28.57%      5913.50  12-14              2
+  Google / gemini-3.7-flash                       3      0     0.00%         0.00      -              0
+
+Failure reasons
+  Category                         Count
+  ------------------------------  -----
+  dead_model_404                      0
+  empty_response                     31
+  invalid_json_syntax                 1
+  turn_count_out_of_range             3
+  speaker_alternation_broken          1
+  malformed_tutor_tags                0
+  missing_problem_field               0
+  final_turn_not_closing              0
+  unexpected_exception                0
+  other                               0
+
+Turn-count distribution
+  min=12, max=18, avg=13.07
+
+Domain coverage
+  biology                           15
+  chemistry                         13
+  computer_science_light             9
+  economics_and_finance             14
+  ethics_and_critical_thinking       7
+  everyday_reasoning                 5
+  history_and_social_studies        17
+  language_and_grammar              11
+  logic_and_puzzles                 15
+  physics                            9
+  quantitative_aptitude             11
+  statistics_and_data               20
+
+Config parameter balance
+  socratic_level
+    high                          52
+    low                           41
+    medium                        53
+  student_level
+    advanced                      46
+    beginner                      57
+    intermediate                  43
+  hint_frequency
+    high                          47
+    low                           47
+    medium                        52
+  mistake_frequency
+    high                          48
+    low                           52
+    medium                        46
+  verbosity
+    high                          47
+    low                           41
+    medium                        58
+  difficulty
+    easy                          55
+    hard                          43
+    medium                        48

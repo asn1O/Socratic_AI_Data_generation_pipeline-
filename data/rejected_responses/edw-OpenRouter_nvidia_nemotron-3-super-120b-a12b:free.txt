@@ -1,0 +1,90 @@
+{
+  "problem": "A recipe for 4 servings requires 3 cups of flour, 1.5 cups of sugar, and 2 eggs. How much of each ingredient is needed to make 10 servings?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I know you have to increase the ingredients for more servings, but I'm not sure how to calculate how much more."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "Student expressed uncertainty about the scaling method; need to elicit their current thinking about the relationship between servings and ingredients.",
+      "state": "Diagnosis",
+      "response": "The ingredients scale proportionally with servings. What do you think the relationship is?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "I think if you double the servings, you double the ingredients."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "Student identified the proportional idea; we need to guide them to compute the scaling factor for 10 servings.",
+      "state": "Support",
+      "response": "To find the factor, divide the desired servings by the original servings."
+    },
+    {
+      "turn": 5,
+      "student": {
+        "text": "So 10 divided by 4 equals 2.5."
+      }
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "Student has the factor 2.5; we need to guide them to apply it to the first ingredient.",
+      "state": "Support",
+      "response": "Let's calculate the flour amount first. What is 3 cups times 2.5?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "3 times 2.5 is 7.5 cups of flour."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "Student computed flour; we need to continue with the sugar ingredient.",
+      "state": "Support",
+      "response": "Now the sugar. What is 1.5 cups times 2.5?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "1.5 times 2.5 is 3.75 cups of sugar."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "Student computed sugar; we need to finish with the eggs ingredient.",
+      "state": "Support",
+      "response": "Finally the eggs. What is 2 eggs times 2.5?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "2 times 2.5 is 5 eggs."
+    },
+    {
+      "turn": 12,
+      "speaker": "tutor",
+      "reasoning": "Student has computed all ingredient amounts; now we need them to articulate the rule in their own words.",
+      "state": "Synthesis",
+      "response": "In your own words, describe how you scaled the recipe."
+    },
+    {
+      "turn": 13,
+      "speaker": "student",
+      "text": "You multiply each ingredient amount by the same factor, which is the desired servings divided by the original servings."
+    },
+    {
+      "turn": 14,
+      "speaker": "tutor",
+      "reasoning": "Student has correctly explained the scaling rule; the conversation is wrapping up.",
+      "state": "Closing",
+      "response": "Nice, you've got it! Want to try another one?"
+    }
+  ]
+}

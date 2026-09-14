@@ -1,0 +1,188 @@
+[
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Cost-benefit reasoning",
+    "problem": "A health board with a $12M budget must choose between allocating everything to Project Alpha (saves 120 lives) or combining Project Beta with Project Gamma. Beta costs $4M and directly saves 50 lives, but creates a bottleneck causing 10 surgery delays annually over two years (each delay carries a 50% mortality risk). The remaining $8M would fund Gamma, which saves 9 lives per $1M. Which allocation maximizes net lives saved?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Alpha saves 120 lives total. For the other option, Gamma adds 72 lives, but I'm evaluating Beta's net impact."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly calculated Gamma's yield but needs to unpack Beta's secondary effects. A diagnostic question will reveal their thinking.",
+        "state": "Diagnosis",
+        "response": "How are you factoring in the surgery delays from Beta?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Ten delayed surgeries with a 50% mortality risk means Beta causes 5 deaths total, leaving 45 net lives."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student committed an edge-case slip by ignoring the two-year timeframe. Medium Socratic level allows pairing an observation with a guiding question.",
+        "state": "Support",
+        "response": "Notice the bottleneck lasts two years. How does that duration affect the total expected mortality?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Right, that's 20 total surgeries over two years. At 50% risk, that's 10 deaths, making Beta net 40."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student corrected the duration slip and found Beta's net yield. Now I need them to compare the portfolios.",
+        "state": "Diagnosis",
+        "response": "What does the combined Beta and Gamma portfolio yield overall?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Beta is 10 lives per million and Alpha is 10 lives per million, so both options break even."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student mistakenly equated the average ratios without summing the total portfolio yield. A guiding prompt will direct them back to absolute net outcomes.",
+        "state": "Support",
+        "response": "Look at the absolute totals. What happens when you sum the lives from Beta and Gamma together?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "My mistake. Beta gives 40 and Gamma gives 72, which sums to 112 total lives saved."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student corrected their aggregation mistake. Now prompt for the final comparative choice.",
+        "state": "Diagnosis",
+        "response": "Comparing that total to Alpha's 120 lives, which allocation should the board choose?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "They should choose Alpha, because 120 net lives exceeds the combined portfolio's 112 net lives."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student reached the correct decision. Moving to Synthesis so the student articulates the underlying cost-benefit principle.",
+        "state": "Synthesis",
+        "response": "Spot on. In your own words, what core principle guided this cost-benefit analysis?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "You must aggregate full portfolio impacts across all years, including negative externalities, rather than comparing isolated ratios."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully synthesized the core takeaway. It is time to wrap up the session.",
+        "state": "Closing",
+        "response": "Excellent summary! That captures the principle perfectly. Ready for the next problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Syllogisms",
+    "problem": "Premise 1: All roses are flowers. Premise 2: Some flowers fade quickly. Conclusion: Does it strictly follow that some roses fade quickly?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Since all roses are flowers and some flowers fade, the overlap must include roses, so it definitely follows."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student conflates superset properties with subset membership. I need to elicit their mental model of category relations.",
+        "state": "Diagnosis",
+        "response": "A subset doesn't automatically inherit existential claims about its superset. How are you visualizing the categories?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "The 'fading flowers' set is unconstrained, so deductive rules force an intersection with the rose subset."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student made a second explicit error regarding deductive constraints. I will offer a direct hint about disjoint possibilities.",
+        "state": "Support",
+        "response": "Possible intersection isn't necessary intersection. Consider whether the fading flowers could be entirely disjoint from roses."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Right, but assuming non-empty domains, the minimal countermodel still forces an overlap between them."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student resurfaced a related misconception about minimal models forcing overlap. I will state directly why the countermodel works.",
+        "state": "Support",
+        "response": "No, a model where non-rose flowers fade satisfies both premises without touching roses at all."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, of course. Fading flowers could be daisies, keeping roses completely separate."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully constructed a valid counterexample. I will reinforce this realization.",
+        "state": "Support",
+        "response": "Exactly. The premises don't force any connection between roses and fading."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "So the conclusion doesn't follow; the syllogism is formally invalid."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student arrived at the correct conclusion. Now they should synthesize the formal logical principle.",
+        "state": "Synthesis",
+        "response": "That is correct. In your own words, what is the underlying rule here?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "A valid link requires the middle term to be distributed across all members in at least one premise."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student articulated the undistributed middle rule accurately. Wrapping up the session.",
+        "state": "Closing",
+        "response": "Spot on, perfect explanation! Ready to tackle the next one?"
+      }
+    ]
+  }
+]
