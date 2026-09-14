@@ -585,8 +585,6 @@ def _run_model_worker(
                 break
             continue
 
-        time.sleep(MODEL_WAIT_SECONDS)
-
         if not success or reply is None:
             stats["failed"] += 1
             stats["failures"][_classify_failure_reason("model call failed or returned no response")] += 1
@@ -601,7 +599,9 @@ def _run_model_worker(
             if model.consecutive_failures >= 3:
                 model.expired = True
                 model_logger.error("MODEL_EXPIRED provider=%s model=%s reason=three consecutive API failures", model.provider, model.model_name)
+                time.sleep(MODEL_WAIT_SECONDS)
                 break
+            time.sleep(MODEL_WAIT_SECONDS)
             continue
 
         model.consecutive_failures = 0
@@ -635,6 +635,7 @@ def _run_model_worker(
                 model.model_name,
                 str(exc),
             )
+            time.sleep(MODEL_WAIT_SECONDS)
             continue
 
         try:
@@ -648,6 +649,7 @@ def _run_model_worker(
                 model.model_name,
                 f"unable to write payload: {exc}",
             )
+            time.sleep(MODEL_WAIT_SECONDS)
             continue
 
         print(f"Valid payload for provider={model.provider} model={model.model_name} saved to {dataset_path}")
@@ -670,6 +672,7 @@ def _run_model_worker(
             turn_count,
             dataset_path,
         )
+        time.sleep(MODEL_WAIT_SECONDS)
 
     model_logger.info(_format_model_summary(model, stats))
     return stats
@@ -681,6 +684,7 @@ def run_pipeline(
     data_dir: str = "data",
 ) -> int:
     """Run an evenly divided total number of attempts across the configured models."""
+    load_dotenv()
     _configure_logging(models_path, data_dir)
     if models_path is None:
         raise ValueError("models_path is required")
