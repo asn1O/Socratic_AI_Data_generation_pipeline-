@@ -1,0 +1,41 @@
+2026-09-14 13:03:28,615 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-14 13:11:14,858 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=23296 turns=14 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/asn-set[0].json
+2026-09-14 13:11:14,858 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-14 13:15:14,405 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=16463 turns=14 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/asn-set[0].json
+2026-09-14 13:15:14,406 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-14 13:18:07,851 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=8109 turns=12 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/asn-set[0].json
+2026-09-14 13:18:07,851 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-14 13:22:27,631 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=13515 turns=14 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/asn-set[0].json
+2026-09-14 13:22:27,631 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-14 13:32:14,168 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=30319 turns=14 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/asn-set[0].json
+2026-09-14 13:32:14,169 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-14 13:34:56,027 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=7443 turns=12 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/asn-set[0].json
+2026-09-14 13:34:56,027 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-14 13:39:33,245 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=12444 turns=12 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/asn-set[0].json
+2026-09-14 13:39:33,246 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-14 13:41:37,873 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=6460 turns=12 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/asn-set[0].json
+2026-09-14 13:41:37,873 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-14 13:43:49,739 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=6762 turns=12 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/asn-set[0].json
+2026-09-14 13:43:49,739 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-14 13:47:19,806 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=13310 turns=14 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/asn-set[0].json
+2026-09-14 13:47:19,806 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-14 13:51:24,107 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=10308 turns=12 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/asn-set[0].json
+2026-09-14 13:51:24,107 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-14 13:53:42,869 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=10190 turns=12 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/asn-set[0].json
+2026-09-14 13:53:42,869 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-14 13:54:44,093 ERROR MODEL_FAILURE provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free error_code=UNEXPECTED_ERROR reason=model call failed or returned no response
+2026-09-14 13:54:44,094 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-14 14:01:41,595 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=10526 turns=12 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/asn-set[0].json
+2026-09-14 14:01:41,595 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-14 14:03:56,540 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=8250 turns=12 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/asn-set[0].json
+2026-09-14 14:03:56,540 INFO MODEL_SUMMARY
+  provider_model: OpenRouter / nvidia/nemotron-3-super-120b-a12b:free
+  attempts: 15
+  saved: 14
+  failed: 1
+  accept_rate: 93.33%
+  average_tokens: 12671.07
+  turn_range: 12-14
+  expired: False
+  failure_categories:
+  empty_response: 1

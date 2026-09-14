@@ -1,0 +1,26 @@
+2026-09-14 13:03:28,618 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-14 13:05:00,677 ERROR MODEL_FAILURE provider=Google model=gemini-3-flash-preview error_code=HTTP_503 reason=model call failed or returned no response
+2026-09-14 13:05:00,678 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-14 13:06:57,667 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=9986 turns=12 path=data/Google_gemini-3-flash-preview/asn-set[0].json
+2026-09-14 13:06:57,668 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-14 13:09:24,351 ERROR MODEL_FAILURE provider=Google model=gemini-3-flash-preview error_code=HTTP_503 reason=model call failed or returned no response
+2026-09-14 13:09:24,352 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-14 13:11:05,692 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=8164 turns=12 path=data/Google_gemini-3-flash-preview/asn-set[0].json
+2026-09-14 13:11:05,692 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-14 13:12:09,734 ERROR MODEL_FAILURE provider=Google model=gemini-3-flash-preview error_code=HTTP_503 reason=model call failed or returned no response
+2026-09-14 13:12:09,734 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-14 13:14:36,647 ERROR MODEL_FAILURE provider=Google model=gemini-3-flash-preview error_code=HTTP_503 reason=model call failed or returned no response
+2026-09-14 13:14:36,653 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-14 13:16:08,297 ERROR MODEL_FAILURE provider=Google model=gemini-3-flash-preview error_code=HTTP_503 reason=model call failed or returned no response
+2026-09-14 13:16:08,298 ERROR MODEL_EXPIRED provider=Google model=gemini-3-flash-preview reason=three consecutive API failures
+2026-09-14 13:16:08,298 INFO MODEL_SUMMARY
+  provider_model: Google / gemini-3-flash-preview
+  attempts: 7
+  saved: 2
+  failed: 5
+  accept_rate: 28.57%
+  average_tokens: 9075.00
+  turn_range: 12-12
+  expired: True
+  failure_categories:
+  empty_response: 5

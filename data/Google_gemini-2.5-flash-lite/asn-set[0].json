@@ -1,0 +1,461 @@
+[
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "chemistry",
+    "topic": "Acids and bases",
+    "problem": "A solution of acetic acid (CH₃COOH) has a pH of 3.50. If the acid dissociation constant (Ka) for acetic acid is 1.8 x 10⁻⁵, what is the initial concentration of the acetic acid solution?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Okay, so pH is 3.50. That means the [H+] concentration is 10⁻³·⁵⁰ M. I need to find the initial concentration of CH₃COOH."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student correctly calculated the hydronium ion concentration from the pH. Now I need to understand how they plan to connect this to the initial concentration and the Ka.",
+        "state": "Diagnosis",
+        "response": "That's a great first step. How does the [H+] concentration relate to the initial concentration of the acetic acid?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Acetic acid is a weak acid, so it partially dissociates. It sets up an equilibrium. CH₃COOH ⇌ H⁺ + CH₃COO⁻."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified the equilibrium and the species involved. They are on the right track to use the Ka expression.",
+        "state": "Diagnosis",
+        "response": "Exactly. And what expression can we use to relate the concentrations of these species at equilibrium?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "The Ka expression. Ka = [H⁺][CH₃COO⁻] / [CH₃COOH]. So, 1.8 x 10⁻⁵ = (10⁻³·⁵⁰)² / [CH₃COOH]."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has made a mistake here by assuming [CH₃COO⁻] equals [H⁺] in the Ka expression and by placing that squared term in the numerator. I need to guide them to consider the stoichiometry of the dissociation.",
+        "state": "Support",
+        "response": "You've got the Ka expression right. Take another look at the equilibrium CH₃COOH ⇌ H⁺ + CH₃COO⁻. What can you say about the concentrations of H⁺ and CH₃COO⁻ formed from the dissociation of CH₃COOH?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, right! For every H⁺ produced, one CH₃COO⁻ is also produced. So [H⁺] = [CH₃COO⁻]. That means Ka = [H⁺]² / [CH₃COOH]."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student corrected their previous error and is now using the relationship [H⁺] = [CH₃COO⁻]. However, they are still placing the [H⁺]² term in the numerator, which is incorrect because [CH₃COOH] in the denominator should represent the *equilibrium* concentration, not the initial one.",
+        "state": "Support",
+        "response": "You're right that [H⁺] = [CH₃COO⁻]. Now, in the denominator of the Ka expression, what concentration of CH₃COOH should we use? Is it the initial concentration or the concentration *at equilibrium*?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "It should be the equilibrium concentration. So, the equation is Ka = [H⁺]² / ([CH₃COOH]_initial - [H⁺])."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified that the denominator should be the equilibrium concentration of CH₃COOH. They've now set up the Ka expression correctly, relating the known values to the unknown initial concentration.",
+        "state": "Diagnosis",
+        "response": "That's the correct setup. Now, how would you solve for the initial concentration of acetic acid?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I have 1.8 x 10⁻⁵ = (10⁻³·⁵⁰)² / ([CH₃COOH]_initial - 10⁻³·⁵⁰). I can rearrange this to solve for [CH₃COOH]_initial."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully set up and can solve the equation. They have demonstrated understanding of the equilibrium, the Ka expression, and how it relates to initial and equilibrium concentrations. This is a good point to ask them to synthesize their understanding.",
+        "state": "Synthesis",
+        "response": "Great. In your own words, can you explain the key steps you took to solve this problem, starting from the pH?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "First, I found the [H+] from the pH. Then I wrote the equilibrium expression for the weak acid dissociation. Since [H+] equals [CH₃COO-], I used [H+] squared in the numerator of the Ka expression. The denominator was the initial concentration minus the [H+] that dissociated."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has articulated the process clearly and correctly in their own words. The conversation can now wrap up.",
+        "state": "Closing",
+        "response": "Excellent job connecting the pH to the equilibrium and using the Ka correctly! Ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Logical sequences",
+    "problem": "A sequence of numbers starts with 3. Each subsequent number is 2 more than the previous number, plus the position of that number in the sequence (starting position 1). What is the 4th number in the sequence?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Okay, the first number is 3. The second number should be 2 more than 3, plus its position, so 2+3+2 = 7. The third number is 2 more than 7, plus its position, so 2+7+3 = 12. The fourth number is 2 more than 12, plus its position, so 2+12+4 = 18. Is that right?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has attempted to solve the problem, showing their step-by-step calculation. This indicates they are ready to explain their approach, but I need to confirm their understanding of the rule application. This calls for a Diagnosis state.",
+        "state": "Diagnosis",
+        "response": "You've started calculating, which is great! Can you walk me through how you decided to add the position number in each step?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, the problem says 'plus the position of that number in the sequence'. So for the second number, its position is 2. For the third, it's 3, and for the fourth, it's 4."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified that the position number needs to be added at each step. They are articulating the rule's application. The next step is to guide them to check if they are adding it to the correct value (the previous number). This requires a Support state.",
+        "state": "Support",
+        "response": "That's a good observation. Let's look at the second number again. The rule says '2 more than the previous number, plus the position'. You have the previous number (3) and the position (2). What does '2 more than the previous number' mean you should do first?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, I see! '2 more than the previous number' means I should add 2 to it first. So for the second number, it's (3+2) and *then* add the position, 2. So (3+2)+2 = 7. That's what I got."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is still a bit stuck on the order of operations. They are applying the 'add 2' and 'add position' parts but not clearly separating them. I need to guide them to isolate the '2 more than the previous number' part first. This calls for a Support state.",
+        "state": "Support",
+        "response": "You're right that 3+2 is 5. Now, what does the problem say to do with that 5, considering its position?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "It says 'plus the position'. So if the previous number was 3, and I add 2 to it to get 5, then I add the position number, which is 2. So 5 + 2 = 7. Okay, that still matches my first number. For the third number: previous is 7. 2 more than 7 is 9. Then add the position, 3. So 9 + 3 = 12. That also matches."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has now correctly applied the rule for the second and third numbers, and their previous calculations were coincidentally correct. They are showing readiness to articulate the overall process. I will move to Diagnosis to confirm their understanding of the entire sequence generation rule.",
+        "state": "Diagnosis",
+        "response": "You're getting closer. So for each new number, what are the two main things you're doing with the number that came before it?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I take the previous number, add 2 to it, and then add the number of where it is in the list. Like, for the 4th number, I take the 3rd number, add 2, and then add 4."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified the two operations: adding 2 and adding the position. They've also specified the order: adding 2 to the previous number *first*, and then adding the position. This indicates they've grasped the rule. I'll prompt them to explain it in their own words to solidify their understanding.",
+        "state": "Synthesis",
+        "response": "Exactly! So, in your own words, can you describe the rule for finding any number in this sequence, given the one before it?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "To get the next number, you take the number you just had, add 2 to it, and then add the position of the new number you're trying to find."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the rule in their own words, demonstrating a complete understanding of the concept and the problem's requirements. The conversation can now conclude.",
+        "state": "Closing",
+        "response": "Great, you've got it! That's a clear explanation. Ready for another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "computer_science_light",
+    "topic": "Boolean logic",
+    "problem": "You have a light switch that controls a light bulb. The switch has two states: ON and OFF. The light bulb also has two states: ON and OFF. The rule is: the light bulb is ON only if the switch is ON. Otherwise, the light bulb is OFF. If the switch is ON, what is the state of the light bulb?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Okay, so if the switch is ON, the light bulb is ON. That seems straightforward. Is that all there is to it?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly answered the specific question asked, but hasn't demonstrated understanding of the underlying rule. I need to probe a bit deeper to understand their reasoning and if they can generalize.",
+        "state": "Diagnosis",
+        "response": "That's right for that specific scenario! Can you tell me how you figured that out? What part of the rule helped you decide the light bulb's state?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, the problem says 'the light bulb is ON only if the switch is ON.' So, if the switch is ON, then the condition for the light bulb being ON is met. It has to be ON."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student explained their reasoning for the specific case. Now I want to check their understanding of the 'otherwise' part of the rule, which is crucial for Boolean logic. I'll use a slightly different scenario to prompt this.",
+        "state": "Diagnosis",
+        "response": "That makes sense. Let's consider another situation. What if the switch is OFF? What would the light bulb be then, based on the rule you just mentioned?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "If the switch is OFF, then the rule says 'Otherwise, the light bulb is OFF.' So, it would be OFF."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully applied the 'otherwise' clause and correctly inferred the light bulb's state when the switch is OFF. They seem to be grasping the conditional nature of the relationship. I can now introduce the concept of implication to help them articulate this more formally.",
+        "state": "Support",
+        "response": "Exactly. You've used both parts of the rule: the condition for the light being ON, and what happens when that condition isn't met. This kind of relationship, where one thing being true *implies* another thing is true, is really fundamental in logic. Have you heard of the term 'implication' before?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Implication? I think I've heard it, but I'm not sure I fully get what it means in this context. Does it just mean 'leads to'?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has some familiarity but needs a clearer definition linked to the problem. I need to explain 'implication' directly, connecting it to the switch and bulb scenario, to bridge their prior knowledge with the new term.",
+        "state": "Support",
+        "response": "That's a good way to think about it! In logic, when we say 'If A, then B,' we're talking about an implication. The statement 'A implies B' means that if A is true, B *must* also be true. In our case, the switch being ON implies the light bulb is ON."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Okay, so 'Switch ON' implies 'Light ON'. And if 'Switch OFF', then it's 'Light OFF'. So, the implication only works one way? Like, if the light is ON, it doesn't automatically mean the switch *had* to be ON, because maybe there's another way for the light to turn on? Oh wait, no, the rule says 'only if the switch is ON'. So, yeah, if the light is ON, the switch must have been ON."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student is beginning to grasp the directionality and the 'only if' condition. Their initial thought that the light being ON doesn't imply the switch was ON was a slight misstep, but they corrected themselves by referring back to the 'only if' clause. This shows good engagement with the precise wording of the rule.",
+        "state": "Diagnosis",
+        "response": "You're thinking very carefully about the wording, which is excellent! The phrase 'only if' is really important here. It means that for the light bulb to be ON, the switch *must* be ON. There isn't another way for the light to turn on. So, if you see the light is ON, what can you definitely conclude about the switch's state?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "If the light is ON, the switch must be ON. Because the rule says the light is ON *only if* the switch is ON. It's like a guarantee: if you see the light on, you know for sure the switch is on. And if the switch is on, the light is definitely on. But if the switch is off, the light is definitely off. So, the switch state directly determines the light state."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has now articulated the core concept of implication and the 'only if' condition in their own words. They've explained the relationship accurately, demonstrating they understand the problem. This is a good point to conclude the session.",
+        "state": "Synthesis",
+        "response": "That's a fantastic explanation! You've really nailed the relationship. So, in your own words, could you summarize the main idea about how the switch's state affects the light bulb's state, using the concept of implication?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Okay, so the rule 'the light bulb is ON only if the switch is ON' means that if the switch is ON, the light bulb has to be ON. It's an implication: Switch ON implies Light ON. And since it's 'only if,' the reverse is also true: if the light bulb is ON, the switch must have been ON. If the switch is OFF, the light bulb is guaranteed to be OFF. So, the switch controls the light, and the ON state of the switch is the necessary condition for the ON state of the light."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the concept of implication as it applies to the problem, using their own words and demonstrating a clear understanding of the 'only if' condition. The conversation has reached its natural conclusion.",
+        "state": "Closing",
+        "response": "Excellent! You've got a really solid understanding of that. Great job! Ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Personal budgeting",
+    "problem": "Maria wants to save for a down payment on a house. She earns $5,000 per month after taxes. Her fixed expenses (rent, car payment, insurance) total $2,000 per month. She also spends an average of $1,500 per month on variable expenses (food, entertainment, utilities). What percentage of her income can she allocate to savings each month?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "So, she makes $5,000. Fixed is $2,000 and variable is $1,500. That's $3,500 in expenses. To save, she needs to not spend that. So maybe 3500/5000 * 100 to get the percentage of expenses?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the income and expenses and is trying to calculate a percentage. However, they are calculating the percentage of income that is *spent*, not *saved*. I need to guide them to focus on the amount saved.",
+        "state": "Diagnosis",
+        "response": "That's a good start on calculating with those numbers. What amount are we trying to find the percentage of, in relation to her income?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Uh, the savings? But how do I find that first? Is it just what's left over after expenses?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is asking how to find the savings amount, which is the next logical step. They've correctly identified that it's what's left over. I can prompt them to calculate this amount.",
+        "state": "Support",
+        "response": "Exactly. If her income is $5,000 and her total expenses are $3,500, what does that leave her with?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Okay, $5,000 minus $3,500... that's $1,500 left over. So she can save $1,500. Is that the savings percentage?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has now correctly calculated the savings amount. They are asking if this amount *is* the percentage, which indicates they need a nudge to complete the percentage calculation. I'll ask them to express this savings amount as a percentage of her income.",
+        "state": "Support",
+        "response": "That's the amount she can save. Now, how would you express that $1,500 as a percentage of her total monthly income?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "So, it would be $1,500 out of $5,000. So, like $1500 / $5000 * 100? That would be 30%?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has performed the correct calculation and arrived at the correct answer. They are asking for confirmation. This is a good point to move towards Synthesis, asking them to articulate the steps.",
+        "state": "Diagnosis",
+        "response": "And what does that 30% represent in terms of her budget?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "It's the part of her income she can put towards her savings goal. So, first find total expenses, then subtract from income to get savings, then divide savings by income and multiply by 100."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has now clearly explained the steps and the meaning of the calculated percentage. They have demonstrated understanding of the core concept: calculating the savings rate. This is the right moment for Synthesis.",
+        "state": "Synthesis",
+        "response": "In your own words, what's the key idea behind figuring out how much of their income someone can save?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "You have to know what you're spending to know what's left. Then you compare what's left to your whole paycheck."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully articulated the core concept in their own words. The conversation has reached its objective.",
+        "state": "Closing",
+        "response": "Exactly, you've got it! Great job breaking that down. Ready for another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "biology",
+    "topic": "Photosynthesis",
+    "problem": "A plant cell is placed in a solution. If the solution has a higher concentration of solutes than the cytoplasm, what will happen to the cell, and why?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "The cell will probably shrink because water will leave it. Is that right?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has stated a correct outcome but hasn't explained the underlying mechanism. This calls for a diagnosis to understand their reasoning about water movement.",
+        "state": "Diagnosis",
+        "response": "You've predicted an outcome. Can you tell me more about why water would leave the cell?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Because the solution outside has more stuff dissolved in it, so water wants to go where there's more stuff."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student mentions 'more stuff' and 'water wants to go where there's more stuff,' which indicates they're grasping the concept of concentration but using informal language. Need to refine this understanding.",
+        "state": "Diagnosis",
+        "response": "What is the scientific term for the 'stuff' dissolved in the solution and the cell's cytoplasm?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Solutes? So the solutes are more concentrated outside."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified 'solutes' and their concentration. Now, connect this to the movement of water.",
+        "state": "Support",
+        "response": "And in which direction does water tend to move when there's a difference in solute concentration across a membrane?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Water moves from an area of low solute concentration to high solute concentration. So it moves out of the cell."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly applied the principle of water movement from low to high solute concentration. This is a good point to check if they can articulate the broader concept.",
+        "state": "Synthesis",
+        "response": "In your own words, what is this process called and what are the key factors involved?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "It's osmosis. Water moves across a semi-permeable membrane from where there's less solute to where there's more solute."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has clearly explained the concept of osmosis and its relation to solute concentration. This indicates they've synthesized the information.",
+        "state": "Synthesis",
+        "response": "Excellent! So, when the external solution has a higher solute concentration, what happens to the cell's water potential compared to the solution's water potential?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The cell's water potential is higher because there are fewer solutes inside. So water moves out down its water potential gradient."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has demonstrated a solid understanding of osmosis and water potential. The core concept has been articulated and applied correctly. Time to close.",
+        "state": "Closing",
+        "response": "Great job explaining that! Ready to try another one?"
+      }
+    ]
+  }
+]
