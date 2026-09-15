@@ -1129,5 +1129,179 @@
         "response": "Brilliant explanation! You nailed every step of that simplification. Excellent work today!"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Analogies and vocabulary in context",
+    "problem": "Complete the complex analogy and explain the logical bridge: LION : PRIDE :: ____ : ____. Options to consider: a) FISH : SCHOOL, b) BEE : SWARM, c) WOLF : PACK, d) BIRD : FLOCK. Select the best fit based on both the type of animal social group and any specific hierarchical structure implied.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the answer is WOLF : PACK because wolves and lions are both large predators that live in groups."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student focuses on predator status, missing the specific hierarchical structure of a lion pride. I need to probe their understanding of the relationship between members.",
+        "state": "Diagnosis",
+        "response": "That's a common angle, but let's look closer at how a lion pride is organized. What kind of leadership structure does a pride have?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "A pride usually has one or a few dominant males and a group of related females doing the hunting."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student recognizes the hierarchical nature of a pride. I will guide them to test wolf packs and other options against this specific social hierarchy.",
+        "state": "Support",
+        "response": "Good. Do wolf packs share that exact family and alpha-breeding structure, or is there another option on the list that mirrors a pride's male-female leadership dynamic more closely?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Wait, wolf packs also have an alpha pair and family members, right? But do bees or birds have that?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is questioning bees and birds while comparing wolf packs. I should prompt them to check if wolf packs truly match the specific breeding and leadership hierarchy of a pride.",
+        "state": "Diagnosis",
+        "response": "Bee colonies have a queen, but how does a bee colony compare in mammal-like structure? And what about wolf packs versus prides in terms of dominant leadership?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Actually, wolf packs and prides both have clear alpha leaders and cooperative breeding. Is wolf pack better than bee swarm?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is leaning toward WOLF : PACK based on mammalian social structures. I need to offer a hint about the specific role distribution in a pride versus a pack.",
+        "state": "Support",
+        "response": "Think about who rules a pride versus a pack. A pride is centered around a dominant coalition of males and a permanent core of related females. Does a wolf pack match that exact social composition?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, a wolf pack is usually just one extended family led by an alpha pair, whereas a pride has multiple breeding females and coalition males. Wait, none of these options are exact mammals with that exact structure except maybe... wait, let me re-read the options. Ah, wait, is there another angle?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student is struggling with the nuance between pack and pride. I will prompt them to reconsider the broader category of social mammals with distinct leadership hierarchies.",
+        "state": "Support",
+        "response": "Look closely at wolf packs again—both lions and wolves form complex social hierarchies with cooperative hunting and dominant pairs or coalitions, making WOLF : PACK the closest functional parallel among mammals."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "An analogy works by matching the relationship between two words. For LION : PRIDE, the relationship is a apex mammalian predator and its tightly knit hierarchical social group, which makes WOLF : PACK the best fit because wolves share that same complex social structure and cooperative family dynamic."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has accurately explained the rule and reasoning in their own words. Wrapping up the session.",
+        "state": "Closing",
+        "response": "Spot on! You nailed the reasoning behind the social structures. Ready to tackle another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "chemistry",
+    "topic": "States of matter and phase changes",
+    "problem": "A closed, rigid steel cylinder contains a mixture of liquid water and water vapor in equilibrium at 100°C. If heat is added to the system until the temperature reaches 150°C, describe what happens to the relative amounts of liquid and vapor, and explain why the final pressure is higher than the standard vapor pressure at 150°C.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Since we add heat, all the liquid water will turn into steam at 150°C, and the pressure just depends on the new temperature."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student assumes complete vaporization and misses the closed rigid container constraint. I need to probe their understanding of phase equilibrium in a fixed volume.",
+        "state": "Diagnosis",
+        "response": "What tells you that all the liquid will completely vaporize in a rigid, closed container?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, heating liquid water past its boiling point always turns it fully into gas."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student overgeneralizes open-system boiling to a closed, constant-volume system. I'll gently challenge this by pointing out the container properties.",
+        "state": "Support",
+        "response": "Remember the container is rigid and closed. Does the boiling point stay fixed when pressure changes?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Ah, the volume can't expand, so the pressure builds up, meaning some liquid has to remain."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student recognized liquid remains due to pressure, but now I need them to address the second part of the prompt regarding the final pressure value.",
+        "state": "Diagnosis",
+        "response": "Good. Now, how does that trapped liquid and the rising pressure affect the vapor density compared to an open system?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "The vapor density stays constant because the volume is fixed, so the pressure just follows the ideal gas law for the steam."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student incorrectly treats the high-density vapor near liquid as an ideal gas unaffected by the liquid phase presence. I need to guide them back to phase coexistence.",
+        "state": "Support",
+        "response": "Can steam at high density near its liquid phase really be treated as an ideal gas?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "No, wait. As temperature rises, more liquid evaporates into the fixed volume, increasing the vapor density and pushing the pressure way above the normal vapor curve."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has self-corrected and grasped both phase coexistence and the pressure behavior. I will prompt them to synthesize the full concept.",
+        "state": "Synthesis",
+        "response": "In your own words, summarize why both phases remain and why the pressure exceeds normal expectations."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Because the volume is fixed, liquid can't all boil away; as temperature increases, more vapor is forced into that same space, raising the density and causing the pressure to spike above standard vapor pressure."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student correctly articulated the phase change and pressure relationship. Closing the session warmly.",
+        "state": "Closing",
+        "response": "Spot on! You nailed the interplay between volume, phase equilibrium, and pressure. Great job!"
+      }
+    ]
   }
 ]

@@ -88,3 +88,91 @@ for i from 0 to length(A)-1:\n    for j from i+1 to length(A)-1:\n        if (A[
     }
   ]
 }
+
+
+{
+  "problem": "Identify the primary causes of the American Civil War and explain how they interacted to lead to secession and war.",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I think the war was mainly about states' rights and economic differences, like the North being industrial and the South agricultural, plus tariffs that hurt the South."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student shows a basic grasp of two factors but blends them without clarifying which was dominant or how they connected to secession.",
+      "state": "Diagnosis",
+      "response": "What specific events or policies do you think pushed Southern leaders to decide on secession?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "The main cause was the high tariffs the North imposed on the South, which crippled the Southern economy and made them want to leave the Union."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student asserts tariffs as the primary cause, overlooking other critical factors; a hint toward broader economic and political context is needed.",
+      "state": "Support",
+      "response": "How might the South's reliance on slave labor for its agricultural economy have interacted with those tariff concerns?"
+    },
+    {
+      "turn": 5,
+      "student": {
+        "text": "I guess slavery mattered, but the Missouri Compromise of 1820 really set the stage for war by permanently dividing the country over slavery."
+      }
+    },
+    {
+      "speaker": "tutor",
+      "reasoning": "The student misattributes causal weight to an early compromise and still downplays slavery; guidance toward examining later compromises and decisions is appropriate.",
+      "state": "Support",
+      "response": "What role did later compromises, like the Compromise of 1850 or the Kansas-Nebraska Act, play in escalating tensions?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "The Fugitive Slave Act angered Northerners, but the Dred Scott decision didn't really change anything; it was just a court case that nobody cared about."
+    },
+    {
+      "speaker": "tutor",
+      "reasoning": "The student dismisses the impact of Dred Scott, a key misconception, and needs prompting to consider its political and social repercussions.",
+      "state": "Support",
+      "response": "In what ways did the Dred Scott decision affect Northern public opinion and the debate over slavery's expansion?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "I see now that slavery's expansion was a big issue, but tariffs still played an equal role in making the South feel economically threatened."
+    },
+    {
+      "speaker": "tutor",
+      "reasoning": "The student acknowledges slavery's importance yet revives the tariff equivalence misconception; a focus on the 1860 election can clarify priorities.",
+      "state": "Support",
+      "response": "What specific fears did Southern leaders express about Abraham Lincoln's election regarding slavery's future?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "Southern states seceded because they feared Lincoln would block slavery's expansion into new territories, threatening their economic and social system; the breakdown of compromises and the attack on Fort Sumter then started the war."
+    },
+    {
+      "speaker": "tutor",
+      "reasoning": "The student now correctly identifies slavery's expansion as the core cause and outlines how political failures led to secession and war; they are ready to articulate the rule in their own words.",
+      "state": "Synthesis",
+      "response": "In your own words, what is the main cause-and-effect relationship that led from underlying tensions to the outbreak of war?"
+    },
+    {
+      "turn": 13,
+      "speaker": "student",
+      "text": "The conflict over whether slavery would expand into new territories created deep economic, political, and social divisions; repeated compromises failed, leading Southern states to secede, and the battle at Fort Sumter sparked the actual fighting."
+    },
+    {
+      "turn": 14,
+      "speaker": "tutor",
+      "reasoning": "The student has successfully explained the cause-and-effect mechanism in their own words, indicating mastery of the concept for this problem.",
+      "state": "Closing",
+      "response": "Nice work! Want to try another historical cause-and-effect scenario?"
+    }
+  ]
+}

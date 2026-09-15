@@ -1249,5 +1249,179 @@
         "response": "Nice, you've got it! Want to try another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Logical fallacies",
+    "problem": "Identify the logical fallacy in the following argument: 'If we allow students to use calculators in exams, soon they'll expect to use them in everyday life, and then no one will know how to do basic math without a calculator, leading to a society where everyone is ignorant of arithmetic. Therefore, we should ban calculators in exams.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think something feels off about that argument, like it's jumping to a big conclusion just because we allow calculators in tests. It seems like they're saying that one small change will inevitably cause a huge problem, but I'm not entirely sure if that's a specific fallacy or just a weak argument."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student expresses unease about the argument's leap but hasn't identified the specific pattern of reasoning; this shows they are ready to examine what makes the conclusion unwarranted.",
+        "state": "Diagnosis",
+        "response": "Can you walk me through what exactly seems problematic about the way the conclusion follows from the premises? Please describe each step of the reasoning as you see it, pointing out any assumptions or leaps that strike you as unwarranted, and explain why they bother you."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I notice that the argument starts with allowing calculators in exams and then claims that this will lead to students expecting calculators everywhere, which then supposedly results in nobody knowing basic math, and finally that society becomes arithmetically ignorant. It feels like each step is presented as inevitable without any evidence, but I'm hesitating to label it because I'm not sure if there's a name for that kind of reasoning."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has identified the chain of unsupported inferences but is uncertain about labeling it; they need a hint that focuses on the logical gap between premises and conclusion.",
+        "state": "Support",
+        "response": "One useful angle is to ask whether the premises actually guarantee the conclusion; think about whether each step in the chain is logically necessary or merely speculative. Does the first step truly force the second to happen with certainty, or could there be other outcomes?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I think the problem is that the argument assumes each step will definitely happen, like allowing calculators in exams will definitely make students rely on them all the time, and that reliance will definitely cause everyone to forget basic math. There's no proof that those outcomes are certain; it seems like they're just assuming a causal chain without showing it's likely."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has pinpointed the missing evidence for each link but may benefit from considering typical patterns where such reasoning appears, to solidify the concept.",
+        "state": "Support",
+        "response": "Often this kind of reasoning appears when someone claims that a modest first step will inevitably lead to an extreme outcome without demonstrating the likelihood of each intermediate step. Can you think of why the author might be relying on an unsupported assumption about probability here, and what that says about the argument's strength?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I believe the author is assuming that if we allow calculators in exams, it's almost certain that students will start using them all the time, and that this will inevitably erode basic math skills across the whole population. They aren't showing any data or reasoning to support those predictions; they just treat the chain as guaranteed."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has described a pattern of unsupported escalating consequences but hesitates to name it; a gentle hint about the terminology may help them recall the correct label.",
+        "state": "Support",
+        "response": "Have you encountered a term for arguments that rely on an unsupported chain of escalating consequences, where each step is claimed to lead inevitably to the next, ultimately resulting in a dramatic outcome? If so, what does that term suggest about the overall validity of the reasoning?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I think it's a slippery slope fallacy because the argument presents a chain of events where each step is assumed to happen without evidence, leading to an extreme conclusion."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has now correctly identified the slippery slope fallacy; they are ready to articulate the underlying principle in their own words.",
+        "state": "Synthesis",
+        "response": "Based on our discussion so far, and considering the structure of the argument we examined, can you explain in your own words why a slippery slope is considered a logical fallacy, focusing on the role of unsupported assumptions and the lack of evidence for each step?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "A slippery slope fallacy occurs when someone argues that a relatively minor action will inevitably lead to a severe or undesirable outcome through a series of gradual steps, without providing sufficient evidence that each step is likely to happen. Because the connection between the initial action and the final result is speculative, the conclusion doesn't logically follow from the premises, making the argument invalid."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the slippery slope concept in their own words, demonstrating mastery of the idea, so the conversation can wrap up warmly.",
+        "state": "Closing",
+        "response": "Excellent work! You've clearly identified the slippery slope fallacy, explained why it's misleading, and applied it to the example. Your reasoning shows solid understanding of how unsupported chains of reasoning undermine arguments. Feel free to try another one whenever you're ready to practice more today."
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "biology",
+    "topic": "Food chains and ecosystems",
+    "problem": "In a forest ecosystem, there are oak trees, caterpillars, blue jays, and hawks. Draw a food chain showing who eats whom, and explain what would happen to the population of blue jays if the number of caterpillars suddenly decreased.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think oak trees are at the bottom because they make their own food from sunlight, and caterpillars eat the leaves. I'm not sure about the birds and hawks."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student identified producer and primary consumer but omitted higher levels; we need to see their understanding of consumer levels.",
+        "state": "Diagnosis",
+        "response": "You've got the oak trees and caterpillars right. Can you tell me what might eat the caterpillars in this forest?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think blue jays eat caterpillars, and maybe hawks eat blue jays. But I'm not totally sure if hawks also eat caterpillars directly."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified blue jays as secondary consumer and hawks as tertiary consumer, but expressed uncertainty about hawks eating caterpillars; we can hint about typical feeding relationships.",
+        "state": "Support",
+        "response": "In a simple food chain, each organism usually eats the one directly below it. So if hawks eat blue jays, they don't typically go down to eat caterpillars. Does that help clarify the chain?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Okay, so the chain is oak → caterpillar → blue jay → hawk. I think that's right."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student has the correct chain; we want to hint at the impact of fewer caterpillars on blue jays' food source.",
+        "state": "Support",
+        "response": "When caterpillars become scarce, their predators have less food available. So if the number of caterpillars drops, what does that mean for the blue jays' food source?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Blue jays would have less to eat, so their numbers might go down."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student answered effect on blue jays; we can ask about possible indirect effects on hawks to deepen understanding.",
+        "state": "Diagnosis",
+        "response": "You said blue jay numbers might drop. What could happen to the hawk population if there are fewer blue jays?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "If there are fewer blue jays, hawks would have less prey, so their numbers might also decrease."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained chain and ripple effects; now we want them to articulate the principle in their own words.",
+        "state": "Synthesis",
+        "response": "In your own words, explain how a change at one level of a food chain can affect other levels."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "When the number of organisms at one level changes, it changes the amount of food available for the level that eats them, so populations up and down the chain can go up or down depending on whether there's more or less food."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept; conversation can wrap up.",
+        "state": "Closing",
+        "response": "Nice work! You've got the idea of food chains and ripple effects. Want to try another problem?"
+      }
+    ]
   }
 ]

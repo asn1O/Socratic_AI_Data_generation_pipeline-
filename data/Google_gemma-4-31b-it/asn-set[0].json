@@ -1213,5 +1213,227 @@
         "response": "That is a perfect explanation of the process! You handled the vocabulary challenge and the logic flawlessly. Great job today—want to try another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Logical sequences",
+    "problem": "What is the next number in the sequence: 2, 4, 6, 8, ...?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "The numbers are getting bigger. Maybe 9?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student identifies the trend but guesses incorrectly. I need to understand their logic first.",
+        "state": "Diagnosis",
+        "response": "What makes you think it's 9?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "It's just the next number after 8."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is using simple counting instead of sequence logic. I'll guide them to look at the intervals.",
+        "state": "Support",
+        "response": "Look at the gap between 2 and 4. Is it the same as 8 and 9?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I don't really get what that means."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student is confused by the term 'gap'. I will define it simply and ask a guided question.",
+        "state": "Support",
+        "response": "The gap is the difference. 4 minus 2 is 2. What's 9 minus 8?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "It's 1. So maybe it's 11?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student is guessing numbers now. I'll provide a more direct hint to apply the discovered gap of 2.",
+        "state": "Support",
+        "response": "11 is 3 more than 8. Try adding 2 to 8 instead."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, so I just count by ones? Like 9?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student is reverting to the 'count by ones' mistake. I need to reinforce the gap of 2.",
+        "state": "Support",
+        "response": "Not ones. We saw the gap was 2. What's 8 plus 2?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "That would be 10."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has reached the correct answer. Now I need them to articulate the general rule.",
+        "state": "Synthesis",
+        "response": "Correct! In your own words, how did you find that?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "You just add 2 to the last number every time."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the sequence rule. Wrapping up the session.",
+        "state": "Closing",
+        "response": "Perfectly put! You've got it. Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "history_and_social_studies",
+    "topic": "Cause-and-effect in historical events",
+    "problem": "Analyze the causal relationship between the economic crisis, Enlightenment ideas, and the Storming of the Bastille in the lead-up to the French Revolution.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the French Revolution happened because people were poor?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student identifies a general factor but lacks specific reasoning. I need to diagnose the depth of their understanding.",
+        "state": "Diagnosis",
+        "response": "What specifically about being poor led to a revolution?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "They just wanted more money from the king?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student is oversimplifying the economic issue. I'll provide a hint about systemic inequality to guide them.",
+        "state": "Support",
+        "response": "Was it just about money, or how the taxes were split?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I'm not sure what you mean by split."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student is confused by the term. I will use a simple scenario to help them realize the unfairness.",
+        "state": "Support",
+        "response": "If three groups exist and only one pays, how does that feel?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "So the poor paid everything while the rich didn't?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Economic cause is clear now. I need to diagnose if they see other interacting factors like ideology.",
+        "state": "Diagnosis",
+        "response": "Beyond taxes, what ideas were people talking about at the time?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "They wanted to bring back the old kings?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has a conceptual error regarding the goal of the Revolution. I'll hint at Enlightenment thinkers.",
+        "state": "Support",
+        "response": "Would thinkers like Rousseau want more power for the king?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Oh, they wanted equality and reason instead."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has identified two causes. Now I'll test if they can distinguish between long-term causes and immediate triggers.",
+        "state": "Support",
+        "response": "Did the Bastille being stormed cause the anger, or vice versa?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The Bastille happened first and made people angry."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student fell for the causal trap. I will question the logic of the event's timing.",
+        "state": "Support",
+        "response": "Why would people storm a prison if they weren't already angry?"
+      },
+      {
+        "turn": 15,
+        "speaker": "student",
+        "text": "Wait, the hunger and unfair taxes caused the anger, then they stormed it."
+      },
+      {
+        "turn": 16,
+        "speaker": "tutor",
+        "reasoning": "The causal chain is correct. Now I want the student to generalize how multi-step causation works.",
+        "state": "Synthesis",
+        "response": "So how do multiple different causes work together to trigger one event?"
+      },
+      {
+        "turn": 17,
+        "speaker": "student",
+        "text": "It's like a pile-up; economic pain plus new ideas create a breaking point."
+      },
+      {
+        "turn": 18,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully synthesized the concept of interacting historical causes.",
+        "state": "Closing",
+        "response": "Spot on! Ready to try another one?"
+      }
+    ]
   }
 ]

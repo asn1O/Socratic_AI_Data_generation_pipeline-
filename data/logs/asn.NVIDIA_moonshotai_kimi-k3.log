@@ -38,3 +38,31 @@
   failure_categories:
   empty_response: 3
   turn_count_out_of_range: 1
+2026-09-15 13:00:53,552 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-15 13:16:03,516 ERROR MODEL_FAILURE provider=NVIDIA model=moonshotai/kimi-k3 error_code=HTTP_504 reason=model call failed or returned no response
+2026-09-15 13:17:03,516 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-15 13:21:57,526 INFO SUCCESS provider=NVIDIA model=moonshotai/kimi-k3 total_tokens=4245 turns=14 path=data/NVIDIA_moonshotai_kimi-k3/asn-set[0].json
+2026-09-15 13:22:57,526 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-15 13:27:52,133 INFO SUCCESS provider=NVIDIA model=moonshotai/kimi-k3 total_tokens=4081 turns=14 path=data/NVIDIA_moonshotai_kimi-k3/asn-set[0].json
+2026-09-15 13:28:52,133 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-15 13:33:29,548 INFO SUCCESS provider=NVIDIA model=moonshotai/kimi-k3 total_tokens=3272 turns=14 path=data/NVIDIA_moonshotai_kimi-k3/asn-set[0].json
+2026-09-15 13:34:29,549 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-15 13:49:24,202 INFO SUCCESS provider=NVIDIA model=moonshotai/kimi-k3 total_tokens=3379 turns=14 path=data/NVIDIA_moonshotai_kimi-k3/asn-set[0].json
+2026-09-15 13:50:24,202 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-15 13:55:28,163 ERROR MODEL_FAILURE provider=NVIDIA model=moonshotai/kimi-k3 error_code=HTTP_429 reason=model call failed or returned no response
+2026-09-15 13:56:28,164 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-15 13:56:30,790 ERROR MODEL_FAILURE provider=NVIDIA model=moonshotai/kimi-k3 error_code=HTTP_429 reason=model call failed or returned no response
+2026-09-15 13:57:30,790 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-15 13:57:32,726 ERROR MODEL_FAILURE provider=NVIDIA model=moonshotai/kimi-k3 error_code=HTTP_429 reason=model call failed or returned no response
+2026-09-15 13:57:32,726 ERROR MODEL_EXPIRED provider=NVIDIA model=moonshotai/kimi-k3 reason=three consecutive API failures
+2026-09-15 13:58:32,726 INFO MODEL_SUMMARY
+  provider_model: NVIDIA / moonshotai/kimi-k3
+  attempts: 8
+  saved: 4
+  failed: 4
+  accept_rate: 50.00%
+  average_tokens: 3744.25
+  turn_range: 14-14
+  expired: True
+  failure_categories:
+  empty_response: 4

@@ -1,0 +1,89 @@
+[
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Comparing loan/interest offers",
+    "problem": "You're looking to buy a new laptop and have two financing offers: Offer A gives you a $1000 laptop for 12 monthly payments of $90. Offer B gives you the same $1000 laptop for 18 monthly payments of $65. Which offer is cheaper overall, and by how much?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Okay, so I need to figure out which laptop deal is better. For Offer A, it's $90 a month for 12 months. For Offer B, it's $65 a month for 18 months. I guess I just add up the payments for each one?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has a basic idea of needing to calculate the total cost for each offer but isn't explicitly stating how they'll do it. Asking them to elaborate on their approach will reveal their current understanding and identify any gaps.",
+        "state": "Diagnosis",
+        "response": "That's a good starting point! Can you walk me through how you'd calculate the total cost for Offer A using those numbers?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "For Offer A, I'd do $90 multiplied by 12. That gives me $1080. For Offer B, I'd do $65 multiplied by 18. That's $1170. So Offer A is cheaper."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly calculated the total cost for both offers by multiplying the monthly payment by the number of months. They've also correctly identified which offer is cheaper. The next step is to ask them to articulate the difference and reflect on what these calculations represent in terms of the loan.",
+        "state": "Diagnosis",
+        "response": "You've correctly calculated the total amount paid for each offer. That's excellent! How much cheaper is Offer A than Offer B, based on your calculations?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Offer A is $1080 and Offer B is $1170. So, Offer A is $90 cheaper ($1170 - $1080 = $90)."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified the total costs and the difference between them. Now, it's time to prompt them to explain the underlying concept of what this difference represents, moving towards a deeper understanding of interest. This is a good point to probe their comprehension of the 'why' behind the difference.",
+        "state": "Diagnosis",
+        "response": "Great! So, Offer A ends up costing $90 less in total. Why do you think there's a difference in the total amount paid, even though the initial price of the laptop is the same for both offers?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Um, I'm not sure. They both start at $1000 for the laptop. Is it because one has more payments? Or the payments are smaller?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is struggling to articulate the concept of interest. They're correctly observing differences in payment structure (number and amount) but haven't connected it to the additional cost. A hint focusing on what that extra money represents is needed to guide them.",
+        "state": "Support",
+        "response": "That's a good observation. Think about the extra money you paid over the original $1000 price. What is that extra money usually called when you borrow something, like money for a purchase?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, is it interest? Like, you pay back the original amount plus some extra for the privilege of borrowing it?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has now correctly identified and explained the concept of interest in their own words. They've connected the extra cost to the idea of borrowing money. This indicates readiness for synthesis.",
+        "state": "Synthesis",
+        "response": "Exactly! That extra amount is the interest. So, in your own words, what does comparing the total cost of these offers tell you about which financing plan is more cost-effective overall?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "It means you have to look at the total amount you pay back, not just the monthly payment or how long you pay for. The offer with the lower total amount paid, which includes the principal and the interest, is the cheaper one in the end because you're paying less interest overall."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the core concept of comparing total cost, including interest, to determine the more cost-effective financing offer. The learning objective has been met.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! You've got a great handle on comparing these offers. Want to try another one?"
+      }
+    ]
+  }
+]

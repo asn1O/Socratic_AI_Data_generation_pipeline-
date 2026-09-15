@@ -39,3 +39,44 @@
   expired: False
   failure_categories:
   empty_response: 4
+2026-09-15 13:00:53,555 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-15 13:01:53,316 ERROR MODEL_FAILURE provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free error_code=UNEXPECTED_ERROR reason=model call failed or returned no response
+2026-09-15 13:02:53,316 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-15 13:05:59,901 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=7126 turns=14 path=data/OpenRouter_nvidia_nemotron-3-ultra-550b-a55b:free/asn-set[0].json
+2026-09-15 13:06:59,901 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-15 13:10:08,392 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=8951 turns=14 path=data/OpenRouter_nvidia_nemotron-3-ultra-550b-a55b:free/asn-set[0].json
+2026-09-15 13:11:08,392 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-15 13:13:45,587 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=5850 turns=12 path=data/OpenRouter_nvidia_nemotron-3-ultra-550b-a55b:free/asn-set[0].json
+2026-09-15 13:14:45,587 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-15 13:15:12,038 ERROR MODEL_FAILURE provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free error_code=UNEXPECTED_ERROR reason=model call failed or returned no response
+2026-09-15 13:16:12,038 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-15 13:16:40,995 ERROR MODEL_FAILURE provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free error_code=UNEXPECTED_ERROR reason=model call failed or returned no response
+2026-09-15 13:17:40,996 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-15 13:20:19,010 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=9099 turns=14 path=data/OpenRouter_nvidia_nemotron-3-ultra-550b-a55b:free/asn-set[0].json
+2026-09-15 13:21:19,010 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-15 13:32:59,625 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=18619 turns=12 path=data/OpenRouter_nvidia_nemotron-3-ultra-550b-a55b:free/asn-set[1].json
+2026-09-15 13:33:59,626 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-15 13:37:59,377 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=12004 turns=14 path=data/OpenRouter_nvidia_nemotron-3-ultra-550b-a55b:free/asn-set[1].json
+2026-09-15 13:38:59,377 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-15 13:43:39,438 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=11420 turns=14 path=data/OpenRouter_nvidia_nemotron-3-ultra-550b-a55b:free/asn-set[1].json
+2026-09-15 13:44:39,439 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-15 13:52:51,348 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=17734 turns=14 path=data/OpenRouter_nvidia_nemotron-3-ultra-550b-a55b:free/asn-set[1].json
+2026-09-15 13:53:51,349 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-15 13:58:03,719 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=8029 turns=14 path=data/OpenRouter_nvidia_nemotron-3-ultra-550b-a55b:free/asn-set[1].json
+2026-09-15 13:59:03,719 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-15 14:03:29,048 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=7496 turns=14 path=data/OpenRouter_nvidia_nemotron-3-ultra-550b-a55b:free/asn-set[1].json
+2026-09-15 14:04:29,048 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-15 14:07:36,142 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=6945 turns=14 path=data/OpenRouter_nvidia_nemotron-3-ultra-550b-a55b:free/asn-set[1].json
+2026-09-15 14:08:36,142 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-15 14:12:07,668 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=6062 turns=14 path=data/OpenRouter_nvidia_nemotron-3-ultra-550b-a55b:free/asn-set[1].json
+2026-09-15 14:13:07,668 INFO MODEL_SUMMARY
+  provider_model: OpenRouter / nvidia/nemotron-3-ultra-550b-a55b:free
+  attempts: 15
+  saved: 12
+  failed: 3
+  accept_rate: 80.00%
+  average_tokens: 9944.58
+  turn_range: 12-14
+  expired: False
+  failure_categories:
+  empty_response: 3

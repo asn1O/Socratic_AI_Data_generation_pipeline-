@@ -913,5 +913,401 @@
         "response": "Nicely done — you worked through the tricky part yourself and even verified your answer. Want to try another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "chemistry",
+    "topic": "States of matter and phase changes",
+    "problem": "A 50.0 g sample of ice at -10.0 °C is heated at a constant rate until it becomes steam at 120.0 °C. A student sketches a heating curve (temperature vs. heat added) and claims that during the melting at 0 °C, the temperature rises slowly because the ice is 'warming up into water.' Explain why the temperature actually stays constant during melting, and identify on which segment(s) of the curve the water's temperature rises fastest per unit of heat added. (Use: c_ice ≈ 2.09 J/g·°C, c_water ≈ 4.18 J/g·°C, c_steam ≈ 2.01 J/g·°C, ΔH_fus ≈ 334 J/g, ΔH_vap ≈ 2260 J/g.)",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "So I drew the heating curve with the five segments. I get that it's flat during melting and boiling, but I'm not sure how to explain why. My guess is the temperature stays at zero because the heat is being used to melt the ice instead — but I can't really say what that means at the particle level. Also I think the steepest warming segment is for liquid water, since it's in the middle of the curve."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has partial understanding of the plateau but a vague mechanism, and has asserted a wrong claim (water warms fastest). I should first diagnose their reasoning about where heat energy goes during a phase change before addressing the steepness claim.",
+        "state": "Diagnosis",
+        "response": "Okay, good start — you've got the shape of the curve and you sense the plateau has something to do with heat going into melting. Let's push on that first. During that flat segment at 0 °C, heat is clearly still flowing into the sample. So tell me: if the temperature isn't changing, what is that incoming energy actually doing to the water molecules?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Hmm. So temperature is about average kinetic energy of the particles, right? If that's not going up, then the energy must be going somewhere else — I'd say into pulling the molecules apart from their fixed positions in the ice lattice. Like, breaking the hydrogen bonds holding them rigidly in place."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified that energy goes into disrupting intermolecular attractions rather than kinetic energy. I want them to sharpen this — why does overcoming attractions not raise temperature — before moving to the slope question.",
+        "state": "Support",
+        "response": "Exactly — the energy goes into loosening the hydrogen-bond network into potential energy, not into making molecules move faster. So until enough of those attractions are broken and all the ice is liquid, there's no spare energy showing up as kinetic energy. Now — you also said liquid water's segment is the steepest. What quantity actually controls how fast the temperature rises as you add a fixed amount of heat?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "That would be specific heat capacity. Lower specific heat means less heat needed per degree, so the temperature climbs faster for the same heat input. So the steepness of each rising segment is basically 1 over c, for the same mass and heating rate."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has articulated the right relationship. Now I want them to apply it to the actual numbers to test their earlier claim that water warms fastest — this should trigger self-correction, fitting a Support turn with minimal steering.",
+        "state": "Support",
+        "response": "Right — slope on a temperature-versus-heat plot is proportional to 1/c for a fixed mass. So go ahead and compare the three specific heats you were given: ice, liquid water, and steam. Which segment should actually be steepest, and does that match what you said at the start?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Steam is 2.01, ice is 2.09, liquid water is 4.18. So steam is the smallest — meaning steam's segment is steepest, and liquid water is actually the shallowest warming segment. So I had that backwards earlier: water's high specific heat makes it heat up the slowest, not the fastest. Also, steam would be slightly steeper than ice since 2.01 is a bit less than 2.09."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has corrected the first mistake cleanly. Now I diagnose their understanding of the plateau lengths, which is the other quantitative part of the problem and a common place for an edge-case error.",
+        "state": "Diagnosis",
+        "response": "Nicely self-corrected — that inversion is the key insight. Now let's look at the two flat segments. One of them is dramatically longer than the other on this curve. Which one, and how do the numbers tell you that?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Melting needs ΔH_fus, which is 334 J/g, and boiling needs ΔH_vap, 2260 J/g. So the boiling plateau is way longer — roughly seven times longer. Oh wait, actually — I'd say they're both about equally long because both involve completely separating molecules, breaking all the hydrogen bonds in each case. Hmm, no — that's not consistent with the enthalpy values. Vaporization fully separates molecules into a gas, while melting only loosens the lattice. That's why ΔH_vap is so much bigger."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student briefly asserted both plateaus should be equally long, then self-corrected immediately using the enthalpy values. I'll confirm the correction with a short synthesis-style prompt so they consolidate why the claim fails.",
+        "state": "Support",
+        "response": "You caught yourself there — and your correction is the right one. If melting broke all the hydrogen bonds completely, ΔH_fus would be comparable to ΔH_vap, and it clearly isn't — about a factor of 7 smaller. So what's the actual physical difference in what happens to the hydrogen bonds during melting versus vaporizing?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "During melting, the molecules break out of their fixed lattice positions and can slide past each other, but they're still close together and still held by hydrogen bonds — liquid water keeps a lot of its bonding. During vaporization, every molecule fully escapes into the gas phase, so essentially all the hydrogen bonds have to be overcome. That's why vaporization swallows so much more energy per gram."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student now understands both plateaus mechanistically. Everything is in place for synthesis — I want them to state the full principle of heating curves in their own words, tying plateaus, slopes, and energy bookkeeping together, before I close.",
+        "state": "Synthesis",
+        "response": "That's the complete picture of the plateaus. Now put it all together for me: if you had to explain to a classmate why a heating curve has the shape it does — the flat parts and the sloped parts — what's the general rule, in your own words?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The rule is that added heat can do two different things: it either raises the kinetic energy of the particles, which we see as a temperature increase, or it goes into potential energy by overcoming intermolecular attractions during a phase change, which keeps the temperature constant. That's why the curve is flat at melting and boiling. For the sloped parts, the steepness is set by the specific heat capacity — lower c means the temperature climbs faster per joule added, so steam's segment is steepest and liquid water's is shallowest. And the length of each plateau is set by the enthalpy of that phase change, so boiling is far longer because full separation of molecules costs much more energy than just loosening the lattice."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has fully explained the principle in their own words — plateaus as potential-energy absorption, slopes as 1/c, lengths as enthalpies of transition. The concept has been internalized and both errors corrected, so it's time to wrap up warmly.",
+        "state": "Closing",
+        "response": "That's exactly it — you nailed the kinetic-versus-potential energy distinction and tied every feature of the curve back to it. Really nice work talking yourself through those corrections. Want to try another heating-curve problem, maybe one where you calculate the total heat from scratch?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "physics",
+    "topic": "Buoyancy and density",
+    "problem": "A block of wood has a mass of 0.6 kg and a volume of 0.001 cubic meters. (a) What is the density of the wood? (b) If the block is placed in water (density 1000 kg/m³), will it float or sink? (c) If it floats, what fraction of its volume is underwater?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Okay so... I think density is mass times volume? So the wood's density would be 0.6 times 0.001, which is 0.0006. And then I don't really know what to do with the water part."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has stated an incorrect formula for density (mass times volume instead of mass divided by volume). I need to diagnose how they're thinking about density rather than just correcting it outright, to see if it's a slip or a real misconception.",
+        "state": "Diagnosis",
+        "response": "Let's slow down on that first step. You said density is mass times volume — I want to understand how you're thinking about it. If you had two blocks of the same material, one big and one small, what would you expect about their densities? Walk me through your reasoning there."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Hmm, I guess they'd be the same density? Because it's the same stuff. So the big one has more mass but also more volume and it sort of cancels out. I'm not sure how that connects to the formula though."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has the right intuition that density is a ratio that stays constant for the same material, but hasn't connected it to the formula. I'll state the correct relationship directly since they're stuck on the definition itself.",
+        "state": "Support",
+        "response": "That instinct is exactly right — same material means same density, because density is a ratio. Here's the key correction: density is mass divided by volume, not times. Density tells you how much mass is packed into each unit of volume. So for this block, what's the density when you divide 0.6 kg by 0.001 cubic meters?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "0.6 divided by 0.001... that's 600 kg per cubic meter. Okay, that's a lot bigger than what I had. So now for the floating part — I think it sinks? Because 600 sounds heavy, like it's a lot of kilograms."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student now has the right density but asserts it sinks because 600 'sounds heavy' — a misconception about comparing a raw number rather than comparing densities. I'll guide them toward the right comparison without giving it away yet.",
+        "state": "Support",
+        "response": "Careful — 600 kg/m³ isn't a weight, it's a density, and density only tells you something when you compare it to something else. The question is whether this wood is more or less tightly packed than the stuff around it. What's the density of the water, and how does 600 compare to it?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "The water is 1000, and 600 is less than 1000. So the wood is less dense than water... which I think means it floats? But honestly I always thought floating just depended on how heavy the object is, like a heavy block sinks no matter what it's made of."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is reasoning correctly about the density comparison but holds a residual misconception that total weight determines floating. This is a real confusion worth addressing directly with a counterexample before moving on.",
+        "state": "Support",
+        "response": "Good — you've got the floating conclusion right, and here's the correction to the old idea: it's the comparison of densities that decides, not the total weight. A giant steel ship weighs thousands of tons but floats because its average density, counting all the air inside, is less than water's. So yes, this block floats. Now for part (c) — how much of it sits underwater?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Umm, I'm not really sure how to set that up. Is it just... half? Or does it have to do with buoyancy? I remember something about buoyant force equals the weight of the object, so the buoyant force would be 0.6 times 9.8, like 5.88 newtons. Does that help?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has actually recalled the correct equilibrium condition — buoyant force equals the object's weight for a floater — but doesn't see how it yields the fraction. I'll affirm this explicitly and point them toward what the buoyant force depends on.",
+        "state": "Support",
+        "response": "That statement you just made is exactly the right tool, and it's true for anything floating: buoyant force equals the object's weight. Here's the other half of it — the buoyant force equals the weight of the water that the submerged part of the block pushes aside. So if only part of the block is underwater, only that part is displacing water. Can you set those two things equal and see what falls out?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Okay, let me try. Buoyant force is weight of displaced water, so that's 1000 times the submerged volume times 9.8. And that equals the block's weight, 0.6 times 9.8. The 9.8 cancels... so submerged volume is 0.6 divided by 1000, which is 0.0006 cubic meters. And the block's total volume was 0.001, so the fraction underwater is 0.0006 over 0.001 — that's 0.6, so 60% underwater."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly solved all three parts with sound reasoning. Now I want them to articulate the underlying principles in their own words to consolidate the concept before closing.",
+        "state": "Synthesis",
+        "response": "That's a clean, correct solution — 60% underwater, nicely done. Notice something neat: 600 divided by 1000 is also 0.6, so the fraction submerged equals the ratio of densities. Before we finish, I want to hear it from you: in your own words, what's the rule for deciding whether something floats, and how do you figure out how much of it sits underwater?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "So basically, you compare the object's density to the fluid's density — if the object is less dense, it floats, and if it's more dense, it sinks. It doesn't matter how heavy it actually is. And when something floats, the buoyant force from the displaced water has to balance the object's weight, and the fraction that's underwater ends up being the object's density divided by the water's density. Earlier I kept thinking weight was what mattered, but it's really about density."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly articulated both principles in their own words: density comparison determines floating, and the submerged fraction equals the density ratio. The concept is consolidated, so it's time for a warm wrap-up.",
+        "state": "Closing",
+        "response": "That's exactly it — you went from mixing up the formula to explaining the whole principle yourself, which is great progress. Want to try another one, maybe with something that sinks this time?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "computer_science_light",
+    "topic": "Binary number conversion",
+    "problem": "Convert the decimal number 29 into binary, and then verify your answer by converting it back to decimal.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know binary is like ones and zeros based on powers of two, but I'm not sure how to actually start converting 29."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student has the vague idea of powers of two but no procedure. Start by diagnosing what they know about place values.",
+        "state": "Diagnosis",
+        "response": "What powers of two do you know, and which of them seem relevant for 29?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Um, 1, 2, 4, 8, 16, 32... I guess 32 is too big, so I'd only need up to 16?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Good reasoning — they correctly identified the largest fitting power. Push them to use it without dictating next steps.",
+        "state": "Support",
+        "response": "If 16 is the biggest one that fits, what does that tell you about your first binary digit?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "The leftmost digit would be a 1, at the 16 place? And then 29 minus 16 leaves 13."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Correct start. They need to continue the same logic down the remaining powers. Ask an open question rather than confirming each step.",
+        "state": "Support",
+        "response": "So how do you decide about the next places — the 8, the 4, and so on?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Check if each power fits into what's left? So 8 fits into 13, that's a 1, leaving 5. 4 fits, another 1, leaving 1."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student is executing the procedure well. The 2-place is a subtler step — see how they handle a power that doesn't fit.",
+        "state": "Support",
+        "response": "And the 2 place — what happens there?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "2 doesn't fit into 1, so... that digit is 0? And then 1 fits, so the last digit is 1. That gives 11101."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "They've reached the answer 11101. Before synthesis, check the verification part of the problem so they confirm it themselves.",
+        "state": "Diagnosis",
+        "response": "How could you check that 11101 really equals 29?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Add up the place values where there's a 1: 16 plus 8 plus 4 plus 1... that's 29. So it checks out."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Answer verified by the student. Now move to synthesis — have them state the general rule in their own words.",
+        "state": "Synthesis",
+        "response": "In your own words, what's the general method for converting a decimal number to binary?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Find the biggest power of two that fits, write a 1, subtract it, then keep checking each smaller power — 1 if it fits, 0 if not — until you reach the last place."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has articulated the rule correctly and verified the answer, so the conversation wraps up warmly.",
+        "state": "Closing",
+        "response": "That's exactly right — nicely done! Want to try a slightly bigger number next?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Correlation vs causation",
+    "problem": "A city study finds that neighborhoods with more firefighters per capita have significantly higher rates of house fires (r = 0.71, p < 0.001). A columnist concludes: 'Hiring more firefighters causes more fires — we should cut fire department budgets.' Meanwhile, a second dataset shows that after a new fire station opens in a district, fire rates there drop 15% over three years. The columnist replies: 'That just means those districts were already improving — the stations opened where fires were already declining.' Identify all the flaws in the columnist's reasoning and determine what, if anything, each dataset can actually establish.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "The r = 0.71 is strong and significant, so I get why he'd link them — but cutting budgets seems off. I think he's confusing correlation with causation."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student names the concept but hasn't unpacked why the correlation exists. Need to probe the mechanism behind the association.",
+        "state": "Diagnosis",
+        "response": "Okay — but what might actually explain why firefighter counts and fire rates move together?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Hmm, bigger, denser neighborhoods have more fires... so the city assigns more firefighters there. So fires cause firefighters, sort of — reverse direction."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student identified reverse causation, but I want them to see the third variable too — size/density drives both.",
+        "state": "Support",
+        "response": "Reverse direction, good. Is there also something that drives both at once?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh — population density. More people means more fires and more firefighters hired. It's a confound, not just reverse causation."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student has both explanations for dataset one. Now pivot to dataset two and the columnist's dismissal.",
+        "state": "Diagnosis",
+        "response": "So the first study can't show causation. What about the second dataset — stations opening, then fires dropping 15%?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "That's before-and-after, so it looks like the stations caused the drop... but the columnist has a point — if districts were already improving, it's selection bias, not the station's effect."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student recognizes the self-selection issue. Push on what would be needed to rule it out.",
+        "state": "Support",
+        "response": "Right — so what would you need to see to separate the station's effect from a pre-existing trend?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Compare to similar districts that didn't get a station... or check the trend before opening. If fires were already falling before, the station gets less credit. Random assignment would be ideal but unrealistic."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student proposes controls and pre-trends. Now check whether they can state what each dataset actually establishes.",
+        "state": "Diagnosis",
+        "response": "Nice. So after all this — what can each dataset actually establish, and what can't they?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "First dataset: just an association, explained by density confounding and reverse causation — says nothing about cutting budgets. Second: suggestive evidence, but without controls or pre-trend data you can't pin the 15% drop on the stations."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly bounded both claims. Time to have them articulate the general principle in their own words.",
+        "state": "Synthesis",
+        "response": "So in your own words — what's the general rule about drawing causal conclusions from data like this?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "However strong a correlation is, it can't prove causation — you have to rule out confounders, reverse causation, and selection effects, which usually needs a comparison group or random assignment, not just a coefficient."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has cleanly stated the principle in their own words, so the exchange is complete and ready to close warmly.",
+        "state": "Closing",
+        "response": "Exactly — that's a really solid way to put it. Want to try another one?"
+      }
+    ]
   }
 ]

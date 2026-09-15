@@ -1,0 +1,188 @@
+[
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Common grammar errors",
+    "problem": "Choose the correct pronoun to complete the sentence: 'Between you and (I/me), the secret is safe.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at the sentence 'Between you and (I/me), the secret is safe.' I think it's 'between you and I' because it sounds more polite, but I'm not totally sure if that's the rule."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is relying on their 'ear' and choosing a common hypercorrection. I need to diagnose if they understand the difference between subject and object pronouns before moving forward.",
+        "state": "Diagnosis",
+        "response": "You've identified the two main pronoun cases we use. In grammar, pronouns change form based on whether they are doing an action or receiving it. How are you deciding which role 'I/me' plays in this specific sentence?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, since we are the ones who are keeping the secret, that makes us the subjects of the sentence. Because we are subjects, I figured we have to use 'I' instead of 'me'."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student misidentified the subject, which is a key hurdle. I will explain that 'secret' is the subject and introduce the concept of 'between' as a preposition to guide them toward the object case.",
+        "state": "Support",
+        "response": "That's a common mistake, but 'I' isn't actually performing the action here; the 'secret' is the subject doing the work. 'Between' is a preposition, similar to 'with' or 'for'. Does that change how you view the pronoun?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, I see. So 'between' is the verb and we are the objects receiving the action? If we are objects, then maybe 'me' would actually make more sense than 'I' in that spot, right?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly pivoted to the object case but mislabeled 'between' as a verb. I need to correct the part of speech while reinforcing their logic about using an object pronoun.",
+        "state": "Support",
+        "response": "Actually, 'between' shows a relationship rather than an action, which makes it a preposition. You were on the right track with objects, though. To test it, would you say a gift is 'from I' or 'from me'?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "That's a good point, I'd definitely say 'from me'. But I'm still struggling because 'between you and I' is what I always hear in formal speeches. It just feels more correct and professional for this sentence."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is experiencing the common distractor of hypercorrection. I'll explain why it sounds formal but is incorrect and suggest a practical strategy to isolate the pronoun and find the right answer.",
+        "state": "Support",
+        "response": "People often use 'I' to sound formal, but that is actually a grammatical error called hypercorrection. If you remove 'you' and just look at the pronoun following 'between', which one sounds more natural to your ear now?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "If I say 'Between me', that sounds right, but 'Between I' sounds really weird. So even with 'you' in there, it should still be 'Between you and me' because 'me' is the object pronoun."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully arrived at the correct answer using the isolation method. I will now move to synthesis to have them articulate the general rule for future application.",
+        "state": "Synthesis",
+        "response": "You've got it! Removing the extra person is a great trick to see the grammar clearly. How would you describe the general rule for picking the right pronoun after words like 'between', 'with', or 'for'?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The rule is that when you have a preposition like 'between', you always use the object case for the pronoun. Even if there's another person like 'you' included, the grammar stays the same as 'me' rather than 'I'."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has clearly explained the rule and demonstrated understanding. The conversation is complete.",
+        "state": "Closing",
+        "response": "Perfectly explained! You've really mastered that distinction and won't be fooled by hypercorrection anymore. Ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Speed, time and distance",
+    "problem": "A delivery truck travels from Point A to Point B at 40 km/h and returns to Point A at 60 km/h. The truck stops for a total of 30 minutes for loading. If the entire journey from start to finish takes 3 hours, what is the distance between Point A and Point B?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'll just average 40 and 60 to get 50 km/h, then multiply by 3 hours for 150 km."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is using the arithmetic mean for speeds and ignoring the stop time. I need to probe their time assumption.",
+        "state": "Diagnosis",
+        "response": "How did you decide that a constant 50 km/h average applies to the whole 3-hour duration?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, 40 and 60 averaged is 50, and 3 hours is the total time given."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is still ignoring the stop time mentioned in the problem. I need to point them toward it.",
+        "state": "Diagnosis",
+        "response": "What does the problem mention about the truck being stationary during that 3-hour window?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "It stopped for 30 minutes, so it was actually traveling for 3.5 hours?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student added the stop time instead of subtracting it. I need to clarify the relationship between total and driving time.",
+        "state": "Diagnosis",
+        "response": "How does a 30-minute stop within a 3-hour total window affect the actual time spent driving?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Shorter! So driving for 2.5 hours. That means the distance is 50 times 2.5, or 125 km."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student corrected the time but resurfaced the speed-averaging mistake. I must challenge the assumption of equal time at each speed.",
+        "state": "Diagnosis",
+        "response": "Does the truck spend exactly the same amount of time traveling at 40 km/h as it does at 60?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "No, the slower part takes longer. So I can't just average the speeds like that?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student realizes simple averaging is wrong. I will provide a hint to help them set up a time equation.",
+        "state": "Support",
+        "response": "How could we express the time spent on each leg in terms of the unknown distance?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Time is d/40 and d/60. So d/40 + d/60 = 2.5. Using 120 as a denominator, d is 60?"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student successfully calculated the distance. Now I need them to explain the underlying logic to ensure internalization.",
+        "state": "Synthesis",
+        "response": "In your own words, why is it necessary to solve for time rather than just averaging the speeds?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "We use driving time since stops have no speed, and fractions account for different times at each speed."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the core concepts of the problem, so I am wrapping up the session.",
+        "state": "Closing",
+        "response": "Exactly right! You handled that tricky stop time perfectly. Ready for another challenge?"
+      }
+    ]
+  }
+]

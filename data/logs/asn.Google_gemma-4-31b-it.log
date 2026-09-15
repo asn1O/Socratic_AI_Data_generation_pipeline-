@@ -39,3 +39,44 @@
   expired: False
   failure_categories:
   empty_response: 2
+2026-09-15 13:00:53,558 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-15 13:02:53,823 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=5761 turns=14 path=data/Google_gemma-4-31b-it/asn-set[0].json
+2026-09-15 13:03:53,823 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-15 13:05:39,893 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=5423 turns=18 path=data/Google_gemma-4-31b-it/asn-set[0].json
+2026-09-15 13:06:39,894 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-15 13:08:46,332 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=5581 turns=14 path=data/Google_gemma-4-31b-it/asn-set[1].json
+2026-09-15 13:09:46,332 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-15 13:12:10,679 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=5971 turns=12 path=data/Google_gemma-4-31b-it/asn-set[1].json
+2026-09-15 13:13:10,680 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-15 13:15:06,582 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=5794 turns=14 path=data/Google_gemma-4-31b-it/asn-set[1].json
+2026-09-15 13:16:06,583 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-15 13:18:57,157 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=5399 turns=14 path=data/Google_gemma-4-31b-it/asn-set[1].json
+2026-09-15 13:19:57,157 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-15 13:22:41,571 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=6835 turns=12 path=data/Google_gemma-4-31b-it/asn-set[1].json
+2026-09-15 13:23:41,572 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-15 13:25:32,664 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=5537 turns=12 path=data/Google_gemma-4-31b-it/asn-set[1].json
+2026-09-15 13:26:32,664 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-15 13:30:11,298 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=8979 turns=16 path=data/Google_gemma-4-31b-it/asn-set[1].json
+2026-09-15 13:31:11,298 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-15 13:33:56,636 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=7254 turns=14 path=data/Google_gemma-4-31b-it/asn-set[1].json
+2026-09-15 13:34:56,636 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-15 13:37:20,568 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=5798 turns=14 path=data/Google_gemma-4-31b-it/asn-set[1].json
+2026-09-15 13:38:20,568 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-15 13:41:52,647 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=7091 turns=14 path=data/Google_gemma-4-31b-it/asn-set[1].json
+2026-09-15 13:42:52,648 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-15 13:45:52,267 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=8103 turns=12 path=data/Google_gemma-4-31b-it/asn-set[1].json
+2026-09-15 13:46:52,268 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-15 13:49:36,118 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=5853 turns=12 path=data/Google_gemma-4-31b-it/asn-set[1].json
+2026-09-15 13:50:36,119 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-15 13:54:34,290 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=9545 turns=12 path=data/Google_gemma-4-31b-it/asn-set[1].json
+2026-09-15 13:55:34,290 INFO MODEL_SUMMARY
+  provider_model: Google / gemma-4-31b-it
+  attempts: 15
+  saved: 15
+  failed: 0
+  accept_rate: 100.00%
+  average_tokens: 6594.93
+  turn_range: 12-18
+  expired: False
+  failure_categories:
+  none

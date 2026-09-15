@@ -1051,5 +1051,389 @@
         "response": "Perfect. You've nailed the intuition. Ready for more?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "biology",
+    "topic": "Food chains and ecosystems",
+    "problem": "In a food chain where grass is eaten by a rabbit, which is then eaten by a fox, explain how energy is transferred between trophic levels and why the amount of energy changes.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the grass makes its own food, and the rabbit eats the grass, so the rabbit gets all the energy from the grass."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student shows partial understanding but assumes complete energy transfer; need to diagnose their mental model.",
+        "state": "Diagnosis",
+        "response": "Can you explain what happens to the energy when the rabbit eats the grass?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "The rabbit gets 100% of the energy from the grass because it eats it all."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student explicitly claims 100% transfer; offer a hint about energy use to prompt reconsideration.",
+        "state": "Support",
+        "response": "What do you think happens to some of that energy when the rabbit uses it for moving or staying warm?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Actually, the rabbit stores all the energy in its body, so nothing is lost."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student still asserts no loss; guide them to consider where energy goes during activity.",
+        "state": "Support",
+        "response": "If the rabbit uses energy to hop around, where does that energy go?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "The fox gets all the energy the rabbit had, so the fox has the same amount as the grass originally."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student extends the 100% transfer idea to the next level; ask for typical transfer percentage to surface misconception.",
+        "state": "Diagnosis",
+        "response": "What percentage of energy do you think is typically transferred from one trophic level to the next?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I think it's 90% because most energy is passed on."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student guesses a high transfer rate; prompt them to consider why actual transfer is much lower.",
+        "state": "Support",
+        "response": "What do you think is a typical percentage for energy transfer between trophic levels? Why might it be much lower than your guess?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Because the rabbit uses energy for living, and some is lost as heat, so only a little goes to the fox."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student now correctly identifies energy loss mechanisms; ask for a summary to consolidate understanding.",
+        "state": "Synthesis",
+        "response": "Can you summarize in your own words how energy moves through a food chain?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Energy starts with producers like grass, then primary consumers like rabbits eat them, but only about 10% of the energy is passed on because the rest is used for life processes and lost as heat. Then secondary consumers like foxes get that small amount, and so on."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has accurately explained the concept of energy flow and the 10% rule; conversation can close.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Sentence structure and clauses",
+    "problem": "Identify the independent and dependent clauses in the sentence: 'Because it was raining, we stayed inside.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I see two parts separated by a comma. Maybe both are clauses? But I'm not sure which one is independent."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student identifies two parts but unsure about clause types. Need to diagnose understanding of clause components.",
+        "state": "Diagnosis",
+        "response": "A clause needs a subject and a verb. Let's find the subject and verb in each part. What do you see in 'Because it was raining'?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "The first part 'Because it was raining' has a subject 'it' and a verb 'was raining', so I think it's an independent clause."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly labels dependent clause as independent. Need to support by explaining subordinating conjunction role.",
+        "state": "Support",
+        "response": "Actually, 'Because' is a subordinating conjunction. It makes the clause dependent, meaning it can't stand alone as a sentence. An independent clause expresses a complete thought."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "The second part 'we stayed inside' also has a subject and a verb, so I guess both are independent clauses."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student thinks both clauses independent. Need to clarify that only one is independent.",
+        "state": "Support",
+        "response": "Right, 'we stayed inside' is independent. But the first clause depends on the second to complete the meaning. Dependent clauses often start with words like because, although, if."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I think because works like and, so it's a coordinating conjunction that joins two independent clauses together in a sentence."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student misidentifies 'because' as coordinating. Need to diagnose understanding of conjunction types.",
+        "state": "Diagnosis",
+        "response": "Coordinating conjunctions are words like and, but, or. 'Because' is subordinating, not coordinating. Can you list some subordinating conjunctions you know?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, so 'Because it was raining' can't be a sentence on its own? But it has a subject and a verb, so why not?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student still thinks subject+verb makes a sentence. Need to support with explanation of complete thought.",
+        "state": "Support",
+        "response": "Having a subject and verb isn't enough; the clause must express a complete thought. 'Because it was raining' leaves the reader waiting for the result."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I think I'm starting to see it. The dependent clause adds extra info but needs the main clause to make sense."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student shows readiness to articulate rule. Move to synthesis to have them explain in own words.",
+        "state": "Synthesis",
+        "response": "Great progress. In your own words, exactly what is the difference today between an independent clause and a dependent clause?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "An independent clause can stand alone as a complete sentence because it expresses a full thought. A dependent clause starts with a subordinating conjunction and cannot stand alone; it needs an independent clause to finish the idea."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student correctly explained the rule. Conversation can close.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Venn diagram reasoning",
+    "problem": "A survey of 100 people asked about three hobbies: reading (R), gaming (G), cooking (C). 60 like reading, 45 like gaming, 40 like cooking. 25 like reading and gaming, 20 like gaming and cooking, 15 like reading and cooking. 10 like all three. How many people like exactly two hobbies?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'll subtract the pairwise overlaps from each total: 60-25, 45-20, 40-15."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student proposes subtracting pairwise overlaps directly, revealing they may not distinguish between pairwise intersections and exactly-two regions. Need to diagnose their mental model.",
+        "state": "Diagnosis",
+        "response": "What do those pairwise numbers actually represent?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "They're people who like both hobbies. So subtracting gives only-one-hobby counts."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student thinks pairwise overlaps equal exactly-two groups, missing that triple is nested inside. A targeted question can surface this.",
+        "state": "Support",
+        "response": "Does 'reading and gaming' include people who also like cooking?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh right, the 25 includes the 10 who like all three. So I'm double-subtracting."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student recognized the triple-overlap issue but hasn't computed the exactly-two values yet. A minimal prompt to calculate one region.",
+        "state": "Support",
+        "response": "What's the count for exactly reading and gaming, not cooking?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "25 minus 10 is 15. Similarly 20-10=10, 15-10=5. Exactly two total: 30."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student computed exactly-two total correctly. Need to verify they can articulate the step before moving to synthesis.",
+        "state": "Diagnosis",
+        "response": "How did you get from the pairwise numbers to exactly two?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Subtract the all-three group from each pairwise overlap, then add those three results."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student walked through the calculation. Ready to synthesize the general principle in their own words.",
+        "state": "Synthesis",
+        "response": "In your own words, what's the key step when finding exactly-two regions?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Pairwise overlaps contain the triple intersection, so remove it first to isolate exactly two."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student explained the core rule clearly. Conversation complete.",
+        "state": "Closing",
+        "response": "Exactly. You've got the core idea. Want to try another?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Supply and demand",
+    "problem": "If the market price of a good increases, what happens to the quantity demanded and the quantity supplied?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "If price goes up, I think people will buy more because it's more valuable? Actually, maybe they buy less. But quantity demanded increases with price, right?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student confuses the direction of quantity demanded and expresses uncertainty, so I need to elicit their current reasoning.",
+        "state": "Diagnosis",
+        "response": "Can you explain what you think happens to the amount buyers want to purchase when the price rises?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, if price rises, the demand curve shifts left because people can't afford as much. So demand decreases."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student conflates a shift of the demand curve with a movement along it; a hint about the law of demand may help separate the two.",
+        "state": "Support",
+        "response": "What does the law of demand say about the relationship between price and quantity demanded, holding other factors constant?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I think it says when price goes up, quantity demanded goes up? Wait, that seems backwards. I'm lost on this part."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student is still confused; a concrete example can ground the abstract law.",
+        "state": "Support",
+        "response": "Imagine you usually buy apples at $2 a pound. If the price jumps to $3, do you buy more or fewer apples?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Fewer. So quantity demanded falls when price rises. For supply, if price rises, producers want to sell less because it's more expensive to make?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified quantity demanded but has a misconception about producer behavior; need to probe that reasoning.",
+        "state": "Diagnosis",
+        "response": "Good on quantity demanded. Why do you think producers would want to sell less when the price they receive is higher?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Because higher price means higher costs? Or maybe the supply curve shifts right? I'm mixing things up."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student confuses cost shifts with movement along the supply curve; a hint about profitability can clarify.",
+        "state": "Support",
+        "response": "When the market price rises, does that make each unit more or less profitable for the producer?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "More profitable. So they'll want to produce and sell more. That means quantity supplied rises."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student now has both sides correct; asking for a summary will consolidate the concept.",
+        "state": "Synthesis",
+        "response": "In your own words, what happens to quantity demanded and quantity supplied when the price rises?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "When price rises, quantity demanded falls and quantity supplied rises. Both are movements along the curves, not shifts."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student correctly articulated the law of demand and supply as movements along curves; the exchange is complete.",
+        "state": "Closing",
+        "response": "Exactly! You've got it. Ready to try another problem?"
+      }
+    ]
   }
 ]

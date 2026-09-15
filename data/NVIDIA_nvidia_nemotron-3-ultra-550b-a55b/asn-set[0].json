@@ -1261,5 +1261,203 @@
         "response": "Great, you've got it! Ready for another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "computer_science_light",
+    "topic": "Big-O intuition via analogies",
+    "problem": "Describe, using a real-world analogy, the time complexity (Big-O) of an algorithm that iterates through a list of n items and performs a constant-time operation on each item.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think it's O(1) because each step is constant time."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student gave an answer O(1) without justification, need to diagnose their reasoning.",
+        "state": "Diagnosis",
+        "response": "Can you walk me through how you arrived at O(1)?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I'm not sure what Big-O even measures. Is it about the number of operations?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student unclear on Big-O definition, guide toward growth concept with a hint.",
+        "state": "Support",
+        "response": "Big-O describes how runtime grows as input size increases. What happens to total work if the list doubles?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "If the list doubles, you do twice as many operations, so maybe O(n^2)?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly thinks doubling leads to quadratic, probe the misconception.",
+        "state": "Diagnosis",
+        "response": "Why do you think doubling the list leads to O(n^2)?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I think it's O(log n) because you can skip some pages? I'm lost."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student guessing, provide a concrete analogy to ground understanding.",
+        "state": "Support",
+        "response": "Imagine you have to sign each page of a book. If the book has 100 pages, how many signatures?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "You'd sign 100 times. So it's linear? O(n)?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student tentatively correct, now ask for synthesis in their own words.",
+        "state": "Synthesis",
+        "response": "Can you explain in your own words why that's O(n)?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Because the algorithm does a constant amount of work per element, so total work is proportional to n, making it O(n). But I'm still confused why I thought O(n^2) earlier—maybe if there were nested loops?"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student mentions nested loops misconception, redirect to the analogy to reinforce.",
+        "state": "Support",
+        "response": "The nested loops would be a different algorithm. For this one, it's just one loop. How does the book analogy show that?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The book has n pages, you sign each once, so total signatures = n. That's linear growth, so O(n)."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student correctly explained the concept, ready to close.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Correlation vs causation",
+    "problem": "A researcher finds a strong positive correlation between the number of hours students spend on social media and their anxiety levels. The researcher concludes that using social media causes increased anxiety. What is the flaw in this reasoning?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the researcher is right because if two things are correlated, one must cause the other. But I'm not totally sure what correlation really means, it's confusing. Like, doesn't a high correlation basically prove that one thing leads to the other? I'm just guessing though, and I feel like I'm missing something important here."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student expressed belief that correlation implies causation and uncertainty about definitions, so need to diagnose their current understanding.",
+        "state": "Diagnosis",
+        "response": "Can you tell me more about what you think correlation means, and how you see it differing from causation? I'm curious to hear your thoughts on whether a relationship between two variables always means one causes the other, or if there might be another way to look at it."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I'm not really sure what correlation means exactly. I know it's about things moving together, but I don't see how that's different from causation. It feels like the same thing to me, you know? Like if they go up together, doesn't that mean one makes the other happen?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student conflates correlation and causation; offer a concrete example to hint at third-variable problem.",
+        "state": "Support",
+        "response": "What if I told you that ice cream sales and drowning incidents both go up in summer? They're correlated, but does buying ice cream cause drowning? How might a third factor, like hot weather, explain both increases without one causing the other? Can you see how that third factor might be the real driver?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, so maybe it's not that one causes the other, but something else like hot weather causes both? That makes sense, but I'm still not sure how to tell the difference in the social media study. I mean, how do we know if it's really social media causing anxiety or something else?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student grasps third-variable concept but unsure how to apply; guide them to consider confounders in the social media study.",
+        "state": "Support",
+        "response": "In the social media study, what other factors could influence both social media use and anxiety? Could things like academic pressure or lack of sleep play a role? How would that change the conclusion that social media is the cause? What do you think about the possibility that stressed students might use social media more and also feel more anxious?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "But if the correlation is really strong, like 0.9, doesn't that basically prove causation? A high correlation coefficient means there's almost no room for other explanations, right? I feel like a number that high must mean something causal is going on. It seems like the strength of the relationship should tell us about cause and effect."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student asserts high correlation proves causation; need to diagnose this misconception about what the coefficient measures.",
+        "state": "Diagnosis",
+        "response": "Why do you think a correlation coefficient close to 1 would rule out other explanations? What does the coefficient actually measure, and what does it leave out? Could a perfect correlation still be driven by a third variable? Think about what the number captures versus what it ignores."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I guess the coefficient just measures how closely two variables move together, not why. So even a perfect correlation could be due to a third variable. That means the researcher can't claim causation just from correlation, no matter how strong it is. It's about the relationship, not the mechanism."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student now understands correlation doesn't imply causation; prompt them to consider what evidence would be needed for causation.",
+        "state": "Support",
+        "response": "Exactly. So what would the researcher need to do to actually test whether social media causes anxiety, beyond just observing a correlation? What kind of study design would help isolate the effect of social media from all those other factors? Can you think of a method that would let us see the direct impact?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "They'd need an experiment where they randomly assign some people to use social media more and others less, then compare anxiety levels. That way they can isolate the effect of social media from other factors like stress or sleep. Random assignment helps ensure the groups are similar in every way except social media use."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has explained the needed method; now ask them to articulate the core principle in their own words.",
+        "state": "Synthesis",
+        "response": "In your own words, what's the key rule about correlation and causation that we've been discussing? How would you explain it to someone else so they understand why correlation alone isn't enough to prove cause and effect? Try to put it in a simple sentence that captures the main idea."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Correlation just means two things tend to vary together, but it doesn't tell you if one causes the other. There could be a third factor causing both, or it could be coincidence. To prove causation, you need a controlled experiment that isolates the variable. Without that, you're just guessing about the direction of the relationship."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept; conversation can wrap up warmly.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for the next one?"
+      }
+    ]
   }
 ]
