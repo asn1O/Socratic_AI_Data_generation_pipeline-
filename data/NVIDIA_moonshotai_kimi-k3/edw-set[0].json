@@ -988,5 +988,476 @@
         "response": "Beautifully put — 'paralysis versus instability' is a genuinely sharp way to frame it. You've clearly got this concept down. Want to try another comparison next, maybe federal versus unitary systems?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Parts of speech",
+    "problem": "Label the part of speech of every word in this sentence: 'The quick fox jumped over that fence, and it barked loudly.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Okay, so 'the' is an article, 'quick' is an adjective describing fox, 'fox' is a noun, 'jumped' is a verb... then 'over' — that's an adverb, I think, since it modifies jumped."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has a solid start but has asserted an edge-case error: calling 'over' an adverb. Before correcting, I want to elicit their reasoning about what 'over' is doing in the sentence.",
+        "state": "Diagnosis",
+        "response": "Good momentum so far. Before we continue — what makes you say 'over' is an adverb? What is it actually doing in that sentence?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Hmm, it's telling where the fox jumped, like 'jumped over.' Adverbs tell where, right? Like 'he ran outside.'"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is reasoning from a real test but misapplying it. A hint is warranted: ask what comes after 'over' versus after 'outside' — without naming the category.",
+        "state": "Support",
+        "response": "Fair test. But what's right after 'over' in your sentence? What comes after it in 'he ran outside'?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "After 'over' there's 'that fence' — a noun phrase. Outside doesn't have anything after it. Oh! So 'over' is taking an object... it's a preposition, and 'over that fence' is a prepositional phrase modifying 'jumped.'"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student self-corrected with minimal prompting. Now I should move them forward to the next tricky word, 'that,' with an open question rather than confirming everything myself.",
+        "state": "Diagnosis",
+        "response": "Exactly. Now keep going — what about that word 'that' in front of 'fence'?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "'That' is a conjunction — it connects clauses, like 'I said that he left.' Here it's connecting 'over' to 'fence.'"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Second wrong claim: asserting 'that' is always a conjunction by overgeneralizing from another context. An open question about what 'that' points to here should let the student catch it.",
+        "state": "Support",
+        "response": "In 'I said that he left,' does 'that' point at anything? Now in your sentence — 'that fence' — what is 'that' doing to 'fence'?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "It's pointing out which fence — it's acting like a modifier, so it's a determiner here, like 'this fence.' So the same word can be different parts of speech depending on the job it does."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student nailed the key insight and even articulated a general principle. Now push them to finish the rest of the sentence to check the remaining words.",
+        "state": "Diagnosis",
+        "response": "Interesting claim — hold onto it. Finish the sentence for me: 'and it barked loudly.' What are those?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "'And' is a conjunction joining two clauses, 'it' is a pronoun, 'barked' is a verb, and 'loudly' is an adjective because it describes the barking."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Third error: confusing adjectives and adverbs because 'loudly' 'describes' something — an edge-case confusion between describing a noun and modifying a verb. Ask what 'loudly' attaches to.",
+        "state": "Support",
+        "response": "Almost out — but compare: in 'a loud dog,' what is 'loud' attached to? In 'barked loudly,' what is 'loudly' attached to?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "'Loud' attaches to 'dog,' a noun — adjective. 'Loudly' attaches to 'barked,' a verb — so it's an adverb. Oh, and that connects back to 'over': I keep assigning the label from the word's meaning instead of its job. So the rule is: you label a word by the function it performs in that specific sentence — adjectives modify nouns, adverbs modify verbs, prepositions take objects — and the same word can switch categories depending on context."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has explained the core principle in their own words — function determines part of speech, not the word itself — and connected their own errors to it. Time to wrap up warmly.",
+        "state": "Closing",
+        "response": "Beautifully said — that's exactly the big idea. Nice work catching your own pattern there. Want to try another tricky sentence?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "biology",
+    "topic": "Photosynthesis",
+    "problem": "A plant is placed in a sealed container with plenty of light and water, but all the carbon dioxide is removed. Will the plant be able to make glucose through photosynthesis? Why or why not?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Hmm, I think it still can? It has light and water, and I thought those are what plants need."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student has partial understanding — knows light and water matter but is missing CO2 as a reactant. Diagnose what they think the ingredients are.",
+        "state": "Diagnosis",
+        "response": "Okay, so what do you think a plant needs to make glucose? Can you list the ingredients?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Sunlight, water... and I guess carbon dioxide? I always forget about that one."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student spontaneously recalled CO2 — good partial progress. Now check if they understand CO2's role before answering the original question.",
+        "state": "Diagnosis",
+        "response": "Right, all three. So what do you think the carbon dioxide is actually used for?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Umm, it's where the carbon comes from? Like, for building the glucose?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student has the key idea — CO2 supplies the carbon atoms for glucose. Time to connect this back to the sealed-container scenario.",
+        "state": "Support",
+        "response": "Exactly. So with that in mind, what happens in our sealed container with no CO2?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Then there's no carbon to build the glucose from. So... it can't make it?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student reached the correct conclusion but sounded tentative. Confirm briefly and probe whether light and water alone could substitute, to solidify the reasoning.",
+        "state": "Support",
+        "response": "Right. But could light and water somehow make up for the missing carbon?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "No — light gives energy and water gives hydrogen, but neither one has carbon in it."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student reasoned correctly about why the other inputs can't substitute. They've essentially solved it — move to Synthesis to have them state the principle.",
+        "state": "Synthesis",
+        "response": "Nicely reasoned. So in your own words, why does photosynthesis shut down without CO2?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Because glucose is made of carbon, hydrogen, and oxygen, and the carbon can only come from CO2. No CO2 means no carbon source, so no glucose — even with light and water."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student explained the concept fully in their own words — carbon source, role of each input. Time to wrap up warmly.",
+        "state": "Closing",
+        "response": "That's exactly it — nicely done! Ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "history_and_social_studies",
+    "topic": "Comparing political systems",
+    "problem": "Compare presidential systems (like the United States) with parliamentary systems (like the United Kingdom). A friend claims: 'Presidential systems are always more stable because the president has a fixed term and can't be easily removed.' Evaluate this claim by comparing how each system handles (a) executive-legislative conflict, and (b) removal of a failed executive. Which system would you argue is more prone to prolonged political crises, and why?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "So I'd say the friend's claim sounds right? Like, in a presidential system the executive has a fixed term, so you don't get governments collapsing all the time like you hear about in Italy or wherever. Fixed term equals stability, seems straightforward. I guess I'm not totally sure what happens when the president and the legislature disagree, though — is that a stability problem too?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has latched onto the intuitive appeal of fixed terms but hasn't examined the other side of the trade-off. They're asking exactly the right question about executive-legislative conflict, so I should first get them to articulate what they think happens in a presidential system when branches deadlock.",
+        "state": "Diagnosis",
+        "response": "Good instinct to question it, because the fixed term is only half the story. Here's the thing to notice: 'stability' can mean two different things — stability of the officeholder, or stability of the government's ability to actually function. Before we go further, walk me through what happens in the US when the president's party doesn't control Congress and they simply refuse to pass his budget. What does that look like?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh — that's gridlock. Like the government shutdowns we've had. The president can't force Congress to do anything, and Congress can't force the president out either because of the fixed term. So you can just... sit there stuck. Actually wait, that's a real weakness — neither side has a mechanism to break the deadlock. Is that what they call the 'dual legitimacy' problem? Both branches can claim the voters chose them?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has essentially named dual legitimacy — the classic Linz argument — on their own. They're ready to compare against the parliamentary mechanism, so a partial hint pointing them to the no-confidence tool will let them complete the contrast themselves.",
+        "state": "Support",
+        "response": "Exactly — that's Juan Linz's famous 'dual legitimacy' argument, and you've basically reconstructed it yourself. Both president and legislature independently claim to speak for the people, and there's no umpire. Now here's your hint for the other side: in a parliamentary system, what mechanism exists specifically to resolve that kind of conflict between the executive and the legislature? Think about what a 'vote of no confidence' actually does."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Right — in a parliamentary system, if the executive loses the support of the legislature, there's a no-confidence vote and the government falls. Either a new government forms or new elections get called. So the conflict can't just fester indefinitely — it gets resolved, one way or another. The executive and legislature are fused, so they can't be legitimately deadlocked the same way. That's the key structural difference."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has nailed the deadlock contrast. Now I want to push them toward part (b) of the problem — removing a failed executive — and raise the apparent counterexample that supports their friend, so they can address it rather than ignore it.",
+        "state": "Support",
+        "response": "Beautifully put. Now let's stress-test your side. Part (b): removing a failed executive. Your friend's strongest evidence is real — Italy has had dozens of governments since 1945, while US presidents mostly serve out their terms. Doesn't that prove parliamentary systems churn through leaders in a destabilizing way? How would you answer that, keeping the distinction I mentioned earlier in mind?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Hmm, I'd say that churn is actually the system working — it's replacing a failed executive quickly and legally, without a constitutional crisis. The 'stability' of a fixed term can mean being stuck with a failed or even dangerous executive for years. Impeachment exists in the US, sure, but it's extremely hard — it's only ever been attempted a handful of times and never actually removed a president. Whereas no-confidence is routine. So frequent government changes aren't instability of the system — Finland or Italy keep functioning as democracies the whole time. It's instability of officeholders, but stability of the regime."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student made the regime-vs-officeholder distinction cleanly, which was the core move. Now I need them to address the harder counterargument — is there any dimension where fixed terms genuinely do help? — so their final answer isn't one-sided. This pulls them toward a nuanced evaluation rather than a simple reversal.",
+        "state": "Support",
+        "response": "That's exactly the distinction that wins this argument. Now, to be fair to your friend before you bury their claim: is there anything genuinely protective about fixed terms? Think about it from the opposite angle for a second — what risk does a too-easy removal mechanism create, and does a fixed term guard against that?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I guess... a fixed term protects against opportunistic removal — the legislature can't just dump the executive whenever polls dip, which gives the executive room to make unpopular-but-necessary decisions. So the fixed term does buy policy independence and continuity. But I'd argue that benefit comes packaged with the deadlock problem and the stuck-with-a-failed-leader problem. It's not that the friend is totally wrong, it's that they've identified one real benefit and claimed it settles the whole question of stability, when stability is multi-dimensional."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has arrived at a genuinely balanced evaluation — granting the friend's partial point while identifying its flaw. This is the moment to push them to articulate the general principle themselves, in their own words, rather than me summarizing it.",
+        "state": "Synthesis",
+        "response": "That's a mature evaluation — concede the kernel of truth, then show why it doesn't carry the conclusion. So now pull it all together for me: in your own words, what's the general principle here for judging a claim like 'presidential systems are more stable'? What should someone actually compare when evaluating that kind of statement?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The principle is: when you compare political systems, you can't evaluate 'stability' as a single thing — you have to break it into stability of the officeholder, stability of government functioning, and stability of the underlying regime or constitution. Presidential systems maximize officeholder stability through fixed terms, but that same rigidity creates dual-legitimacy deadlocks with no built-in resolution mechanism and makes removing a failed executive nearly impossible. Parliamentary systems trade officeholder stability for flexibility — no-confidence votes resolve conflicts and replace failed executives quickly — which arguably protects regime stability better. So the friend's claim mistakes one dimension of stability for the whole concept."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has fully articulated the principle — dimensionalizing 'stability,' the dual-legitimacy and no-confidence mechanisms, and the reasoning behind evaluating the claim. Nothing left to teach; time to wrap up warmly.",
+        "state": "Closing",
+        "response": "That's exactly it — a really sophisticated take. Ready for another one? We could try comparing federal and unitary systems next."
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Logical sequences",
+    "problem": "Find the next term in the sequence: 8, 13, 21, 32, 46, ? — Be careful: the most obvious pattern is not the right one.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "So I thought it was Fibonacci-style, since 8 plus 13 is 21. But then 13 plus 21 should be 34, and the sequence says 32. So now I'm not sure what's going on."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student fell into the intended trap (the first three terms mimic Fibonacci) but already noticed it breaks. Diagnose how far they tested the hypothesis before pivoting.",
+        "state": "Diagnosis",
+        "response": "Good catch that it breaks — how far did you test the Fibonacci idea before you were sure it fails, and does it fail in one place or more?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "It works for 8 plus 13 equals 21, but then 13 plus 21 gives 34 instead of 32. So it fails right after. And 21 plus 32 is 53, not 46, so it fails twice. I just don't know what pattern to try instead."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student has confirmed the failure twice but has no new direction. Support: nudge toward looking at differences rather than sums of pairs.",
+        "state": "Support",
+        "response": "If adding neighboring terms isn't the rule, what do you get if you look at what happens between one term and the next?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Okay, the gaps: 13 minus 8 is 5, then 8, then 11, then 14. So 5, 8, 11, 14. Hmm, I feel like those should mean something but I'm not sure what."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student computed the gaps but is stuck at the next step. Support: point them at how the gaps themselves change.",
+        "state": "Support",
+        "response": "You have a little sequence inside the sequence now — how do those gaps, 5, 8, 11, 14, relate to each other?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh! Each gap is 3 more than the one before. 5 to 8 is +3, 8 to 11 is +3, 11 to 14 is +3. So the differences have their own pattern."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student found the second difference is constant at 3. Support: have them apply it forward to get the next term rather than confirming for them.",
+        "state": "Support",
+        "response": "If the gaps grow by 3 each time, what should the next gap be — and what would that make the next term?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Next gap would be 14 plus 3, so 17. Then 46 plus 17 is 63. So the answer is 63."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student reached 63 correctly. Before synthesis, have them sanity-check it against the full sequence to make sure it's not just another partial coincidence like Fibonacci was.",
+        "state": "Diagnosis",
+        "response": "Earlier a pattern fooled you by fitting only partway — how could you check that 63 is consistent with the whole sequence, not just a piece of it?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I'd chain it back: start at 8, add 5 to get 13, add 8 to get 21, add 11 to get 32, add 14 to get 46, add 17 to get 63. Every given term matches, and all the gaps go up by 3. So it holds everywhere, unlike the Fibonacci thing."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student verified the full sequence and contrasted it with the failed hypothesis — they're ready to articulate the general principle in their own words.",
+        "state": "Synthesis",
+        "response": "So in your own words, what's the real rule of this sequence, and why did the Fibonacci look-alike almost trick you?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The rule is that the gaps between terms increase by exactly 3 each time — the differences themselves form an arithmetic sequence, so you add a bigger number each step: 5, 8, 11, 14, 17. The Fibonacci idea only matched two steps by coincidence, so checking a pattern against every term, not just the first few, is what matters."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has clearly explained the rule (second differences constant at 3) and the meta-lesson about verifying against all terms. Time to wrap up warmly.",
+        "state": "Closing",
+        "response": "Exactly right — you spotted the trap, tested the real pattern all the way through, and explained it beautifully. Ready to try the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "computer_science_light",
+    "topic": "Boolean logic",
+    "problem": "Let A = true and B = false. Evaluate the Boolean expression: NOT (A OR B) AND (A OR NOT B). Show your reasoning step by step.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think NOT (A OR B) means NOT A OR NOT B, so that's false OR true = true... then the whole thing is true?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student jumped to a wrong distribution of NOT. I need them to articulate their reasoning before correcting.",
+        "state": "Diagnosis",
+        "response": "Not quite. Walk me through how you handled that NOT in front of the parentheses."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, the NOT applies to each thing inside, right? So NOT A OR NOT B."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Explicit wrong claim: NOT distributes over OR unchanged. Instead of correcting, hint at evaluating the inside first.",
+        "state": "Support",
+        "response": "Let's slow down. The parentheses group first — what is A OR B, before any NOT?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "A OR B is true OR false, so... true. But I'm lost on what the NOT does to that."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student has the inner value but is confused about scope of NOT. Give small nudge: NOT applies to the whole result.",
+        "state": "Support",
+        "response": "The NOT applies to that whole result you just found. So what's NOT true?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "False. Wait — but isn't NOT (A OR B) the same as NOT A OR NOT B? I thought that's how it works."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Misconception resurfaces. Have student test both versions numerically rather than asserting the rule.",
+        "state": "Support",
+        "response": "Test it: compute NOT A OR NOT B with these values. Does it match the false you just got?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "NOT A OR NOT B = false OR true = true. But the other way gave false... so they're actually different?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student discovered the inequality themselves. Now guide them to finish evaluating the expression.",
+        "state": "Support",
+        "response": "Exactly — so NOT doesn't just pass through unchanged. Now finish it: what's A OR NOT B?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "NOT B is true, so A OR true is true. Whole thing: false AND true = false. So NOT (A AND B) would be NOT A AND NOT B then, right?"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Correct final answer, but the misconception resurfaced in AND form. Quick counterexample check before synthesis.",
+        "state": "Support",
+        "response": "Good answer! But check that last claim — plug A=true, B=false into both sides. Do they match?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "NOT (A AND B) = NOT false = true. NOT A AND NOT B = false AND true = false. Different! So NOT applies to the whole parentheses, and if you push it inside, AND and OR flip."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student reached the right answer and stated De Morgan's rule in their own words. Time to close warmly.",
+        "state": "Closing",
+        "response": "Nicely done — that's exactly it! Want to try another one?"
+      }
+    ]
   }
 ]

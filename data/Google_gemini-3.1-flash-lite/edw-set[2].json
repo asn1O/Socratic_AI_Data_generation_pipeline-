@@ -1,0 +1,89 @@
+[
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "computer_science_light",
+    "topic": "Boolean logic",
+    "problem": "Evaluate the following expression: (True OR False) AND (False OR False). What is the final result, and why?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this (True OR False) AND (False OR False) problem. I'm guessing the answer is True, because there's a True in the first part, so that makes the whole thing true, right?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has incorrectly applied the distributive property to the whole expression. I need to diagnose their understanding of how parentheses and Boolean operators interact.",
+        "state": "Diagnosis",
+        "response": "That's an interesting approach. What makes you think that having a 'True' in the first set of parentheses forces the entire expression to be true, regardless of what follows the 'AND'?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, usually in math, if you have one True, it's just True. Like, it's positive. If you add True to False, you just get True because the True is there."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is conflating Boolean logic with simple arithmetic, where 'True' acts like a positive value. I need to guide them toward evaluating the parentheses individually first.",
+        "state": "Support",
+        "response": "I see why you'd look at it that way, but Boolean logic acts a bit differently than standard addition. If you look at just the first part, (True OR False), what value does that resolve to on its own?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "That part would be True, because at least one of them is True."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly evaluated the first part. Now I need to see if they can apply that same logic to the second parenthetical group.",
+        "state": "Diagnosis",
+        "response": "Exactly. Now, keeping in mind that we have to evaluate what's inside the parentheses first, what do you get when you look at the second part, (False OR False)?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "That one is just False. So I have True AND False."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly isolated the two sides. Now they face the 'AND' operator, which is the final step. I need to see if they know how 'AND' behaves.",
+        "state": "Support",
+        "response": "You've got it narrowed down to 'True AND False'. If you think about how an 'AND' gate works—where you need both inputs to be present for the output to be true—what happens to that result?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, so if I have True AND False, it becomes True again because True is stronger than False?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student is still clinging to the idea of 'strength' or 'positivity'. I need to guide them to realize that 'AND' has a strict requirement for both sides.",
+        "state": "Support",
+        "response": "That's a common thought, but consider this: if an 'AND' statement requires *both* parts to be true for the result to be true, what happens if one of them is False?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I guess it means the whole thing has to be False because they aren't both True. So, for 'AND', you need two Trues to get a True, otherwise it's False."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified the logic for the 'AND' operator and the overall expression. The task is complete.",
+        "state": "Closing",
+        "response": "Spot on! That's exactly how it works. You've got a great handle on it now. Ready to try another one?"
+      }
+    ]
+  }
+]

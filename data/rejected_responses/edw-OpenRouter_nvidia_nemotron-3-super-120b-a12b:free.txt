@@ -88,3 +88,154 @@
     }
   ]
 }
+
+
+{
+  "problem": "Compare the mechanisms for resolving legislative-executive deadlock in France's semi-presidential system and the United States' presidential system. Explain how each system's constitutional provisions affect the likelihood of government shutdowns or early elections, and discuss one advantage and one drawback of each approach.",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I know that both France and the US have presidents, but I'm not sure how their powers differ when Congress and the president disagree."
+    },
+    {
+      "reasoning": "Student shows basic awareness of both systems but lacks specifics about conflict-resolution mechanisms; need to clarify their current understanding.",
+      "state": "Diagnosis",
+      "response": "One way to start is to think about the constitutional tools each system gives the president—like veto power and the ability to dissolve the legislature. Can you describe what you think happens in each country when the president and the legislature cannot agree on a bill?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "In the US, if the president vetoes a bill, Congress can override with a two-thirds vote. In France, the president can dissolve the National Assembly and call for new elections, though there are some limits on when that can be done."
+    },
+    {
+      "reasoning": "Student correctly identified veto and dissolution but omitted constraints; need to hint at limits.",
+      "state": "Support",
+      "response": "It's true that both systems have veto powers, but the French president's ability to dissolve the legislature isn't unlimited—there are rules about when it can be used, such as not dissolving within a year of a previous dissolution and usually consulting the Prime Minister."
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "I see, so the French president can't just dissolve anytime; there are rules like not dissolving within a year of a previous dissolution, and usually they need to consult the Prime Minister."
+    },
+    {
+      "reasoning": "Student described mechanisms but hasn't yet linked them to outcomes like stability or frequency of elections; need to prompt them to consider implications.",
+      "state": "Diagnosis",
+      "response": "To see the bigger picture, let's consider what these mechanisms mean for government stability. Consider how the threat of new elections might encourage compromise, whereas fixed terms may force parties to endure disagreement. What do you think are the implications of being able to call new elections versus having fixed terms for dealing with legislative deadlock?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "If the president can call new elections, that can break a deadlock quickly, but might lead to frequent elections if disagreements are common. In the US, fixed terms mean you have to wait until the next election, which could cause longer stalemates."
+    },
+    {
+      "reasoning": "Student identified trade-offs but hasn't articulated the underlying principle about executive-legislative conflict resolution; need to hint at the balance of accountability versus stability.",
+      "state": "Support",
+      "response": "Also consider how each system balances accountability versus stability. Think about whether frequent elections make leaders more responsive to voters or more prone to short‑term populism, and whether fixed terms protect against abrupt shifts but can entrench gridlock."
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "So the principle is that systems giving the executive power to dissolve the legislature favor responsiveness but risk political instability, while those with fixed terms favor stability but can suffer from gridlock."
+    },
+    {
+      "reasoning": "Student gave a general principle but needs to ground it in concrete examples to deepen understanding; provide a hint with recent events.",
+      "state": "Support",
+      "response": "Consider the 2018‑2019 US government shutdown over border wall funding; what did the lack of dissolution mean for resolving that? In contrast, recall President Macron's 2022 dissolution of the National Assembly after losing legislative majority—what outcome did that aim for?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "In the US shutdown, because the president can't dissolve Congress, the stalemate persisted until a compromise was reached after weeks, showing how fixed terms can lead to prolonged deadlock. In France, Macron's dissolution called new elections, hoping to regain a supportive majority, which resulted in a hung parliament but at least allowed a fresh mandate."
+    },
+    {
+      "reasoning": "Student has given concrete examples; now we need them to articulate the underlying principle in their own words.",
+      "state": "Synthesis",
+      "response": "Based on the examples of the US shutdown and Macron's dissolution, in your own words, what is the main lesson about how the ability to dissolve the legislature influences a government's handling of deadlock?"
+    },
+    {
+      "turn": 13,
+      "speaker": "student",
+      "text": "The main lesson is that giving the executive power to dissolve the legislature allows quick resolution of deadlock through new elections, but it can undermine stability if used too often; whereas fixed terms prevent early elections, which promotes stability but can lead to gridlock when the executive and legislature are opposed."
+    },
+    {
+      "reasoning": "Student has correctly articulated the principle about executive dissolution powers and their trade‑offs, showing they understand the comparative concept.",
+      "state": "Closing",
+      "response": "Nice work! You've grasped the key trade‑off between responsiveness and stability in these systems. Want to try another one?"
+    }
+  ]
+}
+
+
+{
+  "problem": "You are given a box plot of the number of minutes students spent on homework each night over a week. The box plot shows the following five-number summary: minimum = 10 minutes, Q1 = 20 minutes, median = 35 minutes, Q3 = 50 minutes, maximum = 90 minutes.\n\n(a) Calculate the interquartile range (IQR).\n(b) Using the 1.5*IQR rule, determine whether a value of 80 minutes would be considered an outlier.\n(c) Briefly describe what the box plot suggests about the distribution of homework times.",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I think the IQR is Q3 minus Q1, so 50 minus 20 equals 30. For outliers, I'm not totally sure, but I think any value above the top of the box, so above Q3, is an outlier, which would make 80 an outlier."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "Student correctly computed IQR as 30 but applied an incorrect outlier rule (any value above Q3); need to uncover their reasoning while confirming the IQR.",
+      "state": "Diagnosis",
+      "response": "You correctly found the IQR as 30. Can you walk me through how you decided that 80 is an outlier?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "I'm not entirely sure how to apply the rule; I just guessed that anything above the box seems unusual, but I don't know the exact threshold."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "Student expressed uncertainty about the outlier rule; we give a minimal hint via a question to prompt recall of the multiplier.",
+      "state": "Support",
+      "response": "Do you recall a typical multiplier of the IQR that’s used to set the boundaries for outliers?"
+    },
+    {
+      "turn": 5,
+      "speaker": "tutor",
+      "reasoning": "Student correctly applied the 1.5*IQR rule and concluded 80 is not an outlier; now we guide them to interpret the distribution shape using the box plot features.",
+      "state": "Support",
+      "response": "Notice that the median (35) is closer to Q1 (20) than to Q3 (50), and the maximum (90) is far above Q3. What does that suggest about the shape of the distribution?"
+    },
+    {
+      "turn": 6,
+      "speaker": "student",
+      "text": "The median being nearer to Q1 and the long upper whisker indicate that the data are skewed to the right, with a few high values stretching the distribution."
+    },
+    {
+      "turn": 7,
+      "speaker": "tutor",
+      "reasoning": "Student described right skew; we prompt them to think about the relationship between mean and median in a skewed distribution.",
+      "state": "Support",
+      "response": "Given that right skew, would you expect the mean to be higher or lower than the median? Why?"
+    },
+    {
+      "turn": 8,
+      "speaker": "student",
+      "text": "In a right-skewed distribution, the mean is usually pulled toward the tail, so it would be higher than the median."
+    },
+    {
+      "turn": 9,
+      "speaker": "tutor",
+      "reasoning": "Student has linked skew to mean-median relationship; now we ask them to articulate the outlier rule in their own words to consolidate understanding.",
+      "state": "Synthesis",
+      "response": "We've used the IQR and a multiplier to find bounds. In your own words, can you summarize how the 1.5*IQR rule works to spot outliers?"
+    },
+    {
+      "turn": 10,
+      "speaker": "student",
+      "text": "You calculate the IQR by subtracting Q1 from Q3, multiply that by 1.5, then add the result to Q3 to get the upper cutoff and subtract it from Q1 for the lower cutoff; any data point outside those cutoffs is considered an outlier."
+    },
+    {
+      "turn": 11,
+      "speaker": "tutor",
+      "reasoning": "Student has correctly explained the 1.5*IQR rule in their own words, demonstrating mastery of the concept.",
+      "state": "Closing",
+      "response": "Nice, you've got it! Want to try another one?"
+    }
+  ]
+}

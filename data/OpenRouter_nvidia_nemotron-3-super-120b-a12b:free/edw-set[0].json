@@ -1324,5 +1324,116 @@
         "response": "Nice work! You've nailed the idea of sampling bias. Want to try another example?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "computer_science_light",
+    "topic": "Boolean logic",
+    "problem": "Simplify the Boolean expression: (P AND Q) OR (P AND NOT Q).",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I factored out P, but I'm not sure what to do with Q and NOT Q."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student shows partial factoring but is unsure about the next step, so I ask to see their work.",
+        "state": "Diagnosis",
+        "response": "I'd like to see your factoring step. Can you show me how you factored P out?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I factored P: P AND (Q OR NOT Q)."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student factored correctly; they need a hint about the complement law to proceed.",
+        "state": "Support",
+        "response": "Remember that Q OR NOT Q is always true. What does that simplify to?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Right, it's always true, but I'm not sure how that simplifies the expression."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student knows complement but is uncertain about the AND‑true step, so I hint at that identity.",
+        "state": "Support",
+        "response": "Anything AND true equals itself. How does that apply here?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "So P AND true is just P? I think that's right."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student expresses uncertainty about the result; I check their reasoning to confirm understanding.",
+        "state": "Diagnosis",
+        "response": "Let's check your reasoning. Does that seem correct to you? Why?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I think it's correct because AND with true doesn't change the value."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has explained the steps; I prompt them to articulate the underlying rule in their own words.",
+        "state": "Synthesis",
+        "response": "Now, try to explain the rule you used. In your own words, what rule allowed you to simplify the expression?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The expression simplifies because Q OR NOT Q is always true."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student gave a partial explanation missing the AND‑true part; I hint to include it.",
+        "state": "Support",
+        "response": "Also think about what happens when you AND something with true. How does that finish the simplification?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "And P AND true equals P, so the whole thing becomes P."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student now has the full explanation; I ask them to combine both ideas to ensure complete articulation.",
+        "state": "Synthesis",
+        "response": "Please put it all together. Can you now explain the full simplification using both ideas?"
+      },
+      {
+        "turn": 15,
+        "speaker": "student",
+        "text": "Q OR NOT Q equals true, so P AND true equals P, thus the expression simplifies to P."
+      },
+      {
+        "turn": 16,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the simplification rule, so the session wraps up.",
+        "state": "Closing",
+        "response": "Nice, you've got it! Want to try another one?"
+      }
+    ]
   }
 ]

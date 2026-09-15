@@ -1252,5 +1252,92 @@
         "response": "That is a perfect summary of the concept! You really have a solid handle on how to evaluate historical evidence now. Great job working through those tricky examples!"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Basic probability distributions",
+    "problem": "You are looking at a single flip of a fair coin where getting 'Heads' is considered a success and 'Tails' is a failure. What is the name of the specific probability distribution that describes this single trial with only two possible outcomes?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this coin flip problem. It's just one flip, and it's either heads or tails. I think it's a distribution, but I don't know what it's actually called."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student recognizes the scenario involves a distribution but lacks the terminology. I will use a diagnostic question to see if they can recall any names related to binary outcomes.",
+        "state": "Diagnosis",
+        "response": "When you have a single event like that with only two possible outcomes, does any specific name for a distribution come to mind from your introductory reading?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I'm not really sure. I've heard of the Normal distribution, but that's for things like heights or test scores, right? This coin thing seems way simpler than that."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identifies that it isn't a Normal distribution. I'll provide a hint about the number of trials to guide them toward the correct category.",
+        "state": "Support",
+        "response": "If we focus on the fact that this is just one single trial, what kind of distribution describes a simple 'yes/no' or 'success/failure' outcome in a single experiment?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Is it a Binomial distribution? I remember that one has successes and failures too, and I think we used it for flipping coins in class before."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made a common mistake by confusing Binomial (multiple trials) with Bernoulli (one trial). I will provide a hint to help them differentiate the two.",
+        "state": "Support",
+        "response": "While Binomial is very close, doesn't that usually involve multiple trials? If we have just one flip, do you remember a specific name starting with 'B' that refers to single trials?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, right! Is it the Bernoulli distribution? I think I've seen that name in the chapters about basic probability and single coin flips."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student found the correct term. Now I need to ensure they understand the reasoning behind the classification before moving to synthesis.",
+        "state": "Diagnosis",
+        "response": "Looking at the setup of our problem, can you tell me what specific characteristics of this coin flip make it a Bernoulli trial rather than another type of distribution?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I guess because it's only one flip and there are only two choices. If I flipped it ten times, it wouldn't be a Bernoulli trial anymore, right?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has identified the core components: one trial and two outcomes. I'll now ask them to synthesize this into a formal rule.",
+        "state": "Synthesis",
+        "response": "Since you've noticed the important difference between one trial and many, how would you summarize the rule for identifying a Bernoulli distribution in your own words?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "A Bernoulli distribution is basically when you have one single experiment or trial that can only end in two ways, which we usually call a success or a failure."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the concept in their own words, completing the learning objective.",
+        "state": "Closing",
+        "response": "That is a perfect summary of the concept! You've got it down. Would you like to try another example to see if it fits this pattern?"
+      }
+    ]
   }
 ]

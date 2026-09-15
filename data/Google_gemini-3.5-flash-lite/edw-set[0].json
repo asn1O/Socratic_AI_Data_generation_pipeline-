@@ -1042,5 +1042,266 @@
         "response": "Nice, that's a fantastic summary and you nailed every single piece of it! Want to try another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "history_and_social_studies",
+    "topic": "Primary vs secondary sources",
+    "problem": "Evaluate a 19th-century diary entry written by a soldier about a major battle versus a textbook chapter written fifty years later describing the same event. Which one is a primary source and which is secondary, and why might a historian need to look at both?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the diary is primary because it's old, but I'm not sure if the textbook counts as secondary since the author read diaries to write it."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identifies the diary as primary based on age, but shows uncertainty about the textbook's classification. I need to probe their understanding of proximity to the event.",
+        "state": "Diagnosis",
+        "response": "What makes you connect the age of the diary to it being a primary source?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, it was written right then by someone who was actually there, so it hasn't been filtered by anyone else yet."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has a solid grasp of what makes a primary source. Now I need to gently shift their focus back to the textbook to resolve their earlier hesitation.",
+        "state": "Support",
+        "response": "That unfiltered perspective is key. How does the textbook's creation time differ from the diary's?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "The textbook was written fifty years later by someone who wasn't there."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student recognizes the temporal gap and lack of direct participation. I should verify how they classify that based on their earlier definition.",
+        "state": "Diagnosis",
+        "response": "Given that distance in time, how would you label the textbook compared to the diary?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I guess that makes it a secondary source because it analyzes things after the fact."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully classified both sources. Now I need to guide them toward the second part of the problem regarding why a historian uses both.",
+        "state": "Support",
+        "response": "Spot on. If the diary gives that direct view, why might a historian still need the textbook?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The diary only shows one soldier's personal view, but the textbook gives the bigger picture of the whole battle."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student grasps the complementary nature of the sources. I'll prompt them to articulate the core principle and distinction before wrapping up.",
+        "state": "Synthesis",
+        "response": "How would you summarize the main difference between these two types of sources and why both matter?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "A primary source comes directly from someone at the event for firsthand evidence, while a secondary source interprets those events later to give context and a broader view."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has accurately explained the concept and its application. Ready to close.",
+        "state": "Closing",
+        "response": "Spot on! You nailed the distinction and why historians need both perspectives. Great work today!"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "computer_science_light",
+    "topic": "Tracing a simple algorithm by hand",
+    "problem": "Consider the following Python function:\n\ndef mystery(arr):\n    x = arr[0]\n    for i in range(1, len(arr)):\n        if arr[i] > x:\n            x = arr[i]\n    return x\n\nTrace this function with the list arr = [3, 7, 2, 9, 5]. What is the final returned value, and what happens at each iteration when a new maximum is encountered?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I started tracing it. So x starts at 3. Then the loop looks at 7, which is bigger, so x becomes 7. But wait, then it looks at 2, which is smaller, so x goes back down to 3 since it's the previous element."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student correctly tracked the initialization and the first update, but made a classic assignment error by assuming x reverts to a previous value when a smaller element is encountered. Since socratic_level is low, I will directly correct the variable persistence concept and then ask them to re-evaluate the loop.",
+        "state": "Diagnosis",
+        "response": "Remember that assignment statements like x = arr[i] permanently overwrite the old value in x until another assignment happens. Knowing that x stays at 7 when it hits the 2, what should x be after checking 2?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Ah right, x doesn't go down, it holds onto 7. So when it checks 2, 2 is smaller than 7, so x stays 7. Then for the next element, 9 is bigger than 7, so x becomes 9. Then for 5, 5 is smaller than 9, so x stays 5."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student successfully corrected the variable persistence error, but made a new slip on the final iteration, claiming x becomes 5 when comparing 5 to 9. Since socratic_level is low, I will point out this specific comparison logic directly.",
+        "state": "Support",
+        "response": "Careful with that last step—the condition is arr[i] > x, and x is currently 9. If we compare 5 to 9, does the condition hold true?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh! 5 is not greater than 9, so the if statement doesn't run. That means x stays 9. So the final returned value is 9."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has now successfully navigated the trace and arrived at the correct final value. I will now prompt them to reflect on the overall purpose of the algorithm.",
+        "state": "Diagnosis",
+        "response": "That's right, x stays 9 and that's what gets returned. Looking at how x behaved throughout the entire list, what pattern or task is this function actually performing on any given list of numbers?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "It seems like it's sorting the list from lowest to highest, returning the middle element as it goes."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student's claim about sorting is incorrect; x only tracks a single scalar value, not a sorted structure. Since socratic_level is low, I will clarify that x is just a single variable, then ask them to reconsider what type of value it isolates.",
+        "state": "Diagnosis",
+        "response": "A sort would rearrange all the elements, but x is just a single integer variable holding one number at a time. If x ends up as 9 from our list, what special property does 9 have relative to all the other numbers in [3, 7, 2, 9, 5]?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, right. 9 is the largest number in the list. So x is just keeping track of the biggest number it has seen so far."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified the purpose of the algorithm. Now I need them to articulate the general rule in their own words before closing.",
+        "state": "Synthesis",
+        "response": "Exactly. In your own words, how does this loop structure systematically guarantee we find that maximum value by the end?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "It keeps a running champion in x, and every time it finds a number bigger than the current champion, it updates x to that new number. By the time it checks every item, x has to be the absolute maximum."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has accurately explained the concept and completed the exercise successfully. I am now closing the conversation warmly.",
+        "state": "Closing",
+        "response": "Spot on! You nailed the trace and the underlying logic. Great work today, and feel free to reach out whenever you're ready for another problem!"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "physics",
+    "topic": "Levers and pulleys",
+    "problem": "A single fixed pulley is used to lift a 200 N load by pulling the free end of the rope downward. Assuming an ideal system with no friction, what input force is required to lift the load, and what is the mechanical advantage of this system?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Since we're lifting a 200 N load with a single fixed pulley, I think the mechanical advantage must be 2 because it's a machine, so we'd only need an input force of 100 N to pull it up."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has incorrectly assumed that any simple machine doubles the force output, conflating fixed pulleys with movable ones. Since they made an explicit wrong claim, I need to use Diagnosis to probe how they picture the tension in the rope surrounding the fixed wheel.",
+        "state": "Diagnosis",
+        "response": "What makes you picture that the force gets cut in half when you trace the single rope as it passes directly over that fixed pivot point?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, usually simple machines like inclined planes or pulleys multiply your effort so you don't have to lift the whole weight yourself, which is why I figured it halves the required force."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is holding onto a general overgeneralization about simple machines always multiplying force. I will provide a Support hint comparing the rope's tension on both sides of a fixed axle to guide them without giving the answer away.",
+        "state": "Support",
+        "response": "While many machines do multiply force, what happens to the tension in a continuous rope when it's just redirected around a stationary axle that doesn't move with the load?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh right, if the axle is fixed to the ceiling, it's not supporting any of the load weight itself—the ceiling holds the axle, so the rope just transmits the exact same pull from my hand straight to the box."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly recognized that the rope transmits force equally, but they haven't explicitly connected this back to the required input force and mechanical advantage values yet. I will use Support to prompt them to tie this realization to the numbers in the problem.",
+        "state": "Support",
+        "response": "That's a really clear way to look at how the rope transmits the pull. So if the rope simply passes through without changing the magnitude of that force, what does that imply about the input force needed for that 200 N load?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Wait, if it doesn't change the magnitude, then to lift a 200 N load, I guess my input force would actually have to be 200 N as well, right?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly deduced the input force, but we still need to address the second part of the original question regarding mechanical advantage. I'll use Support to guide them toward evaluating the ratio of output force to input force.",
+        "state": "Support",
+        "response": "Spot on with the input force. Now, thinking about what mechanical advantage actually measures—the ratio of the output force you get to the input force you put in—what would that ratio be for this setup?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Since the output force is 200 N and my input force is also 200 N, the ratio is 200 divided by 200, which means the mechanical advantage is just 1."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully arrived at both correct answers and identified the core principle. I need to move to Synthesis so they can articulate the underlying rule in their own words before we wrap up.",
+        "state": "Synthesis",
+        "response": "You've got the exact numbers now. In your own words, why does a single fixed pulley give you a mechanical advantage of 1 even though it feels easier or different to pull downward?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "A single fixed pulley doesn't multiply your force because the rope just changes the direction of your pull, not how hard you pull. So you still supply the full 200 N, meaning the mechanical advantage is 1, and its real benefit is just letting you pull down instead of lifting up."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has accurately explained the concept and reasoning in their own words. The conversation is complete, so I will provide a warm, brief closing without introducing new questions or content.",
+        "state": "Closing",
+        "response": "Nice, that's spot on! You nailed both the force and the purpose of the fixed pulley. Want to try another one?"
+      }
+    ]
   }
 ]

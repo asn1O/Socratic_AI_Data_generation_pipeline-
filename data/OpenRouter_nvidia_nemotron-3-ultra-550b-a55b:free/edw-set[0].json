@@ -1249,5 +1249,191 @@
         "response": "Great, you've got it! Ready for another?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "computer_science_light",
+    "topic": "Binary number conversion",
+    "problem": "Convert the decimal number 27 to binary.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I need to convert 27 to binary but I'm stuck."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student expresses uncertainty about starting the conversion; need to diagnose their current approach.",
+        "state": "Diagnosis",
+        "response": "How would you start converting decimal to binary?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think you multiply by 2 repeatedly."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student thinks multiplication is the method; provide correct method (division and remainder order).",
+        "state": "Support",
+        "response": "Standard method: divide by 2, record remainders, read last to first."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "27/2=13 r1, 13/2=6 r1, 6/2=3 r0, 3/2=1 r1, 1/2=0 r1. Binary 10111?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student wrote remainders in forward order; remind them to read from last to first.",
+        "state": "Support",
+        "response": "Remember, read remainders from last to first."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Ah, answer is 11011."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student now has correct binary; confirm to reinforce.",
+        "state": "Support",
+        "response": "Exactly, 27 in binary is 11011."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "So divide by 2 until zero, remainders in order are binary."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student resurfaced order misconception; prompt them to articulate correct rule.",
+        "state": "Synthesis",
+        "response": "Can you explain the correct order for remainders?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Divide by 2, collect remainders, read backwards for binary."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student correctly explained the conversion rule; conversation can close.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "biology",
+    "topic": "Human circulatory system",
+    "problem": "Describe the path of blood through the human heart, naming the chambers and major vessels involved.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know the heart pumps blood, but not which side does what."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student shows partial knowledge; need to diagnose understanding of heart chambers and blood oxygenation.",
+        "state": "Diagnosis",
+        "response": "Heart has four chambers: two atria, two ventricles. Right side = deoxygenated, left = oxygenated. Which chamber pumps to body?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "The left ventricle sends blood to the lungs."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly assigns left ventricle to pulmonary circulation; provide correct mapping to guide self-correction.",
+        "state": "Support",
+        "response": "Actually, left ventricle pumps oxygenated blood into the aorta to the body. Right ventricle pumps to lungs."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "So the aorta carries deoxygenated blood then?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student thinks aorta carries deoxygenated blood; clarify vessel oxygenation to correct misconception.",
+        "state": "Support",
+        "response": "No, aorta carries oxygenated blood from left ventricle to body. Pulmonary artery carries deoxygenated blood to lungs."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I thought the right atrium receives oxygenated blood from lungs."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student misstates right atrium receives oxygenated blood; explain correct venous return to address error.",
+        "state": "Support",
+        "response": "Right atrium gets deoxygenated blood from body via vena cava. Left atrium gets oxygenated blood from lungs via pulmonary veins."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I'm still mixed up about which vessel goes where."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student still confused about vessel pathways; give full blood trace as hint to integrate knowledge.",
+        "state": "Support",
+        "response": "Trace blood: body → right heart → lungs → left heart → aorta → body."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "So deoxygenated goes right side, oxygenated left side, aorta from left ventricle."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student correctly summarizes flow; now ask for own wording of left ventricle role to synthesize.",
+        "state": "Synthesis",
+        "response": "Exactly. In your own words, what's the left ventricle's main job?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The left ventricle pumps oxygen-rich blood through the aorta to the body."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has articulated left ventricle function correctly; conversation ready to close.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for the next one?"
+      }
+    ]
   }
 ]
