@@ -1,0 +1,23 @@
+2026-09-14 21:03:56,809 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-14 21:07:40,029 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-14 21:22:50,348 ERROR MODEL_FAILURE provider=NVIDIA model=moonshotai/kimi-k3 error_code=HTTP_504 reason=model call failed or returned no response
+2026-09-14 21:23:50,349 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-14 21:28:38,136 INFO SUCCESS provider=NVIDIA model=moonshotai/kimi-k3 total_tokens=3238 turns=14 path=data\NVIDIA_moonshotai_kimi-k3\son-set[0].json
+2026-09-14 21:29:38,137 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-14 21:44:45,862 ERROR MODEL_FAILURE provider=NVIDIA model=moonshotai/kimi-k3 error_code=HTTP_504 reason=model call failed or returned no response
+2026-09-14 21:45:45,863 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-14 21:55:51,451 ERROR MODEL_FAILURE provider=NVIDIA model=moonshotai/kimi-k3 error_code=HTTP_429 reason=model call failed or returned no response
+2026-09-14 21:56:51,452 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-14 21:56:52,979 ERROR MODEL_FAILURE provider=NVIDIA model=moonshotai/kimi-k3 error_code=HTTP_429 reason=model call failed or returned no response
+2026-09-14 21:56:52,980 ERROR MODEL_EXPIRED provider=NVIDIA model=moonshotai/kimi-k3 reason=three consecutive API failures
+2026-09-14 21:57:52,981 INFO MODEL_SUMMARY
+  provider_model: NVIDIA / moonshotai/kimi-k3
+  attempts: 5
+  saved: 1
+  failed: 4
+  accept_rate: 20.00%
+  average_tokens: 3238.00
+  turn_range: 14-14
+  expired: True
+  failure_categories:
+  empty_response: 4

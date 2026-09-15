@@ -1,0 +1,269 @@
+[
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Ethical dilemmas (trolley-problem style)",
+    "problem": "Imagine you are driving an autonomous delivery van and its brakes suddenly fail. Ahead in the main lane, there is a group of five pedestrians. You can swerve into a side alley where there is one lone pedestrian. Do you swerve into the alley, and what ethical principle justifies your choice?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think you should definitely swerve into the alley because saving five lives is obviously better than saving just one, using a pure utilitarian calculation."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified the utilitarian angle, but I need to check how they view the moral distinction between active intervention and letting happen.",
+        "state": "Diagnosis",
+        "response": "You've got the basic numbers right for utilitarianism. But how do you weigh the fact that by swerving, you are actively dragging an innocent person into a crash who wasn't originally part of the emergency?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "That's true, the person in the alley is just minding their own business. Actually, since the lone pedestrian has absolute rights to safety that we shouldn't violate, we shouldn't swerve at all, making the driver completely blameless."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has swung too far into a deontological view and made a rigid claim about blamelessness that ignores the total outcome. I need to challenge this first mistake.",
+        "state": "Diagnosis",
+        "response": "Wait, if you refuse to swerve entirely and let the van hit the five people, can a driver really claim zero responsibility when they had the physical capacity to alter the outcome?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Well, inaction means you aren't playing God with people's lives, so letting the five get hit is morally neutral compared to actively choosing to kill the one."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is asserting that inaction is always morally neutral. This is a common intuition, but worth probing with a hint about causation.",
+        "state": "Support",
+        "response": "Is an omission truly neutral when you are already behind the wheel of a speeding vehicle? Consider whether steering is the only way to interact with the unfolding event."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Hmm, I guess steering into the alley is just redirecting an existing threat rather than creating a brand new one from scratch, since the van is already out of control."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is refining their view on redirected harm versus active killing. Let's push them to connect this back to how different ethical frameworks treat numbers versus rights.",
+        "state": "Support",
+        "response": "That's a key distinction. How does that idea of redirecting an existing threat help us balance the rights of the single pedestrian against the five in the main path?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "It means we are minimizing overall harm while acknowledging the emergency, but we have to weigh whether trading one life for five respects individual moral agency."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student is nearly there, synthesizing the tension. I'll prompt them to summarize the core rule or principle at play.",
+        "state": "Synthesis",
+        "response": "You're pulling the core threads together nicely. In your own words, what is the underlying principle that lets us justify pulling that steering wheel?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The principle is that when an unavoidable catastrophe happens, minimizing aggregate harm by redirecting the threat can be justified, even when it involves a tragic collision with a lesser number of people."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly articulated the ethical principle in their own words. The session is complete.",
+        "state": "Closing",
+        "response": "Spot on! You've captured the exact nuance of the dilemma. Great work today—let me know if you want to tackle another scenario!"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Cost-benefit reasoning",
+    "problem": "Imagine a local community is trying to decide whether to approve the construction of a large chemical plant on open land near a residential neighborhood. The plant would create about two hundred new full-time jobs and increase local tax revenues significantly, but it would also noticeably increase neighborhood noise levels, truck traffic, and local air pollution. How should the town council use cost-benefit reasoning to evaluate whether this project is ethical and worthwhile for the community?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm really lost on this part. I know cost-benefit means looking at money, but I don't really get how you're supposed to weigh things like air pollution or jobs against each other when they aren't even the same kind of thing."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student expresses general confusion about comparing dissimilar things like money and pollution, which is a great starting point for diagnosis. I need to understand how they currently view the relationship between different types of impacts.",
+        "state": "Diagnosis",
+        "response": "It can definitely feel tricky when we try to compare things that don't have an obvious price tag, like health or quiet neighborhoods, against things like money and jobs. When you think about making a big choice in your own life that has both good and bad parts, how do you usually try to figure out if it's worth it in the end?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, usually I just list the pros and cons on a piece of paper. But for this town, I'm not sure if the money from the taxes automatically beats out the pollution, or how you even measure something like air quality."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has grasped the basic listing idea of pros and cons but is still uncertain about how to weigh qualitative impacts like air quality against quantitative ones. Since they are a beginner and slightly stuck, I'll ask a guiding question to help them think about what factors matter to different people.",
+        "state": "Support",
+        "response": "Listing pros and cons is a fantastic place to start because it helps us get everything out in the open. When you look at those pros and cons for the chemical plant—like the new jobs versus the extra truck traffic and air pollution—who do you think experiences those different impacts in the community?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I guess the people who live right next to the open land would deal with all the noise and pollution every day, but maybe the whole town benefits from the tax money and jobs. It feels like different people are getting different ends of the deal."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is making a great observation about the distribution of costs and benefits among different groups. I need to check their reasoning further to see how they think a decision should be made when those groups are affected differently.",
+        "state": "Diagnosis",
+        "response": "That is a really insightful distinction you just made about who bears the costs versus who gets the benefits. If different groups in the town are experiencing those impacts unevenly, how do you think a town council should factor that distribution into their overall decision?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Hmm, I'm not entirely sure. They might just add up how many people get jobs versus how many live near the site, but that doesn't seem completely fair if the people living nearby have to deal with bad air all the time."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student recognizes that simply counting heads might be unfair, showing they are grappling with the depth of ethical cost-benefit analysis. I will offer a gentle prompt to help them think about how to weigh the severity of those impacts alongside just counting them.",
+        "state": "Support",
+        "response": "You are noticing that raw numbers might not tell the whole story when some impacts are much heavier to bear than others. Beyond just counting how many people are on each side, what else might we need to consider about the actual weight or severity of those consequences?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I suppose we have to look at how serious the harm is, like whether the pollution is just a mild annoyance or a real health danger, and compare that against how badly the town actually needs those jobs and tax dollars right now."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully connected the severity of the harms and benefits to the overall evaluation. Now I need them to synthesize this entire reasoning process into their own words to ensure complete understanding.",
+        "state": "Synthesis",
+        "response": "You've really pieced together the core of how this works. Could you put that all together in your own words now? What does doing a thorough cost-benefit analysis actually mean when we are looking at a complex community decision like this one?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "To me, cost-benefit reasoning means you don't just look at money or simple pros and cons. You have to figure out all the positive and negative effects on everyone involved, look at how serious those impacts are, and see if the overall good truly outweighs the real harms to the community."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has accurately explained the concept of cost-benefit reasoning in their own words, so the conversation is successfully complete.",
+        "state": "Closing",
+        "response": "Spot on! That is a wonderful summary of how to balance competing interests thoughtfully. Great job working through that, and let me know if you want to tackle another one!"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "physics",
+    "topic": "Series vs parallel circuits",
+    "problem": "Two identical resistors are connected to a 12V battery. If one resistor burns out and the circuit stops working entirely, were they connected in series or parallel?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "They must be in parallel because the battery splits the voltage evenly."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student made a false claim about parallel circuits and voltage splitting, so I need to check their underlying reasoning.",
+        "state": "Diagnosis",
+        "res_type": "Diagnosis",
+        "response": "How does current flow through a parallel circuit compared to a single path?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Current flows down multiple branches, so if one branch breaks, the others stay on."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified parallel branch behavior, contradicting their initial premise. I will state the implication directly to guide them.",
+        "state": "Support",
+        "res_type": "Support",
+        "response": "Right, parallel branches stay on if one breaks. Since our circuit stopped entirely, it must be series."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Wait, but in a series circuit, the total resistance decreases when you add more resistors."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student asserted another incorrect claim about series resistance. I need to address this misconception directly.",
+        "state": "Support",
+        "res_type": "Support",
+        "response": "Actually, total resistance increases in series because the current only has one path to struggle through."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh right, because they share the same single path, adding more adds more obstruction."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student corrected their resistance view. Let's verify how they connect this back to the original failure condition.",
+        "state": "Diagnosis",
+        "res_type": "Diagnosis",
+        "response": "What happens to that single path if one resistor burns out?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The path is broken, so no current can flow to the other one either."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has grasped the mechanism. Now I ask them to synthesize the rule in their own words.",
+        "state": "Synthesis",
+        "res_type": "Synthesis",
+        "response": "In your own words, why does a break in a series circuit stop everything?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "A series circuit has only one continuous loop, so if any part fails, the whole loop is broken."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student successfully explained the core concept, so I am wrapping up.",
+        "state": "Closing",
+        "res_type": "Closing",
+        "response": "Spot on! Great work figuring that out. Want to try another one?"
+      }
+    ]
+  }
+]

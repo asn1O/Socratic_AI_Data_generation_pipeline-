@@ -1,0 +1,44 @@
+2026-09-14 21:03:56,813 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-14 21:04:21,923 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=7389 turns=12 path=data\Google_gemini-3-flash-preview\son-set[0].json
+2026-09-14 21:05:21,923 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-14 21:06:15,306 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=13744 turns=14 path=data\Google_gemini-3-flash-preview\son-set[0].json
+2026-09-14 21:07:40,040 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-14 21:07:50,953 ERROR MODEL_FAILURE provider=Google model=gemini-3-flash-preview error_code=HTTP_503 reason=model call failed or returned no response
+2026-09-14 21:08:50,953 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-14 21:09:18,401 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=8313 turns=12 path=data\Google_gemini-3-flash-preview\son-set[0].json
+2026-09-14 21:10:18,401 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-14 21:10:22,617 ERROR MODEL_FAILURE provider=Google model=gemini-3-flash-preview error_code=HTTP_503 reason=model call failed or returned no response
+2026-09-14 21:11:22,617 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-14 21:11:28,386 ERROR MODEL_FAILURE provider=Google model=gemini-3-flash-preview error_code=HTTP_503 reason=model call failed or returned no response
+2026-09-14 21:12:28,386 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-14 21:13:11,522 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=7100 turns=12 path=data\Google_gemini-3-flash-preview\son-set[0].json
+2026-09-14 21:14:11,521 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-14 21:14:47,097 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=12103 turns=14 path=data\Google_gemini-3-flash-preview\son-set[0].json
+2026-09-14 21:15:47,097 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-14 21:17:36,010 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=11109 turns=12 path=data\Google_gemini-3-flash-preview\son-set[0].json
+2026-09-14 21:18:36,011 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-14 21:18:59,805 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=7621 turns=12 path=data\Google_gemini-3-flash-preview\son-set[0].json
+2026-09-14 21:19:59,805 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-14 21:20:27,560 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=8291 turns=16 path=data\Google_gemini-3-flash-preview\son-set[0].json
+2026-09-14 21:21:27,560 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-14 21:22:04,163 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=10100 turns=12 path=data\Google_gemini-3-flash-preview\son-set[0].json
+2026-09-14 21:23:04,164 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-14 21:23:55,505 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=13479 turns=12 path=data\Google_gemini-3-flash-preview\son-set[0].json
+2026-09-14 21:24:55,506 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-14 21:25:19,739 ERROR MODEL_FAILURE provider=Google model=gemini-3-flash-preview error_code=HTTP_429 reason=model call failed or returned no response
+2026-09-14 21:26:19,739 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-14 21:26:22,347 ERROR MODEL_FAILURE provider=Google model=gemini-3-flash-preview error_code=HTTP_429 reason=model call failed or returned no response
+2026-09-14 21:27:22,347 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-14 21:27:24,972 ERROR MODEL_FAILURE provider=Google model=gemini-3-flash-preview error_code=HTTP_429 reason=model call failed or returned no response
+2026-09-14 21:27:24,972 ERROR MODEL_EXPIRED provider=Google model=gemini-3-flash-preview reason=three consecutive API failures
+2026-09-14 21:28:24,972 INFO MODEL_SUMMARY
+  provider_model: Google / gemini-3-flash-preview
+  attempts: 14
+  saved: 8
+  failed: 6
+  accept_rate: 57.14%
+  average_tokens: 9764.50
+  turn_range: 12-16
+  expired: True
+  failure_categories:
+  empty_response: 6

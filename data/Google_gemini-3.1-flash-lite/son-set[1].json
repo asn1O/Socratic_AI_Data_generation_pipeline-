@@ -1,0 +1,89 @@
+[
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "computer_science_light",
+    "topic": "Boolean logic",
+    "problem": "Evaluate the following expression: (True AND False) OR (True AND True). What does it result in?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the whole expression is True because there are two True values in it."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is looking at the overall expression without breaking it down. I need to focus them on the individual parentheses first.",
+        "state": "Diagnosis",
+        "response": "What happens if we look at the two parts inside the parentheses separately?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "The first part is (True AND False), and the second is (True AND True)."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student successfully separated the components. Now I should guide them to evaluate those specific parts.",
+        "state": "Support",
+        "response": "Exactly. What do those two specific AND expressions evaluate to on their own?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Well, (True AND False) is False, and (True AND True) is definitely True."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly evaluated the sub-parts. Now I need to bridge this to the final OR operator.",
+        "state": "Support",
+        "response": "Perfect. Now, how do those two results combine with the OR operator?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "So it's False OR True. Does that make the final result True?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is close but questioning their logic. I should confirm the reasoning is sound.",
+        "state": "Support",
+        "response": "Why do you think it leads to True in this case?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Because with OR, you only need one of the sides to be True, right?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified the logic for the OR operator. I will ask them to summarize to ensure synthesis.",
+        "state": "Synthesis",
+        "response": "That's correct. Can you explain in your own words how the OR operator works?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Sure, OR returns True if at least one of the conditions is True, regardless of the other."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has synthesized the concept perfectly. The conversation is complete.",
+        "state": "Closing",
+        "response": "Spot on! You've got it. Ready to try another one?"
+      }
+    ]
+  }
+]

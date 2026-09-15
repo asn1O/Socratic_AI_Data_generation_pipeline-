@@ -1,0 +1,43 @@
+2026-09-14 21:03:56,815 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-14 21:06:34,053 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=6360 turns=12 path=data\Google_gemma-4-31b-it\son-set[0].json
+2026-09-14 21:07:40,043 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-14 21:09:29,048 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=5091 turns=12 path=data\Google_gemma-4-31b-it\son-set[0].json
+2026-09-14 21:10:29,048 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-14 21:13:15,366 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=7394 turns=12 path=data\Google_gemma-4-31b-it\son-set[0].json
+2026-09-14 21:14:15,366 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-14 21:16:12,428 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=5731 turns=12 path=data\Google_gemma-4-31b-it\son-set[0].json
+2026-09-14 21:17:12,428 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-14 21:22:18,895 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=11959 turns=18 path=data\Google_gemma-4-31b-it\son-set[0].json
+2026-09-14 21:23:18,895 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-14 21:25:29,883 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=5786 turns=14 path=data\Google_gemma-4-31b-it\son-set[0].json
+2026-09-14 21:26:29,883 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-14 21:26:34,591 ERROR MODEL_FAILURE provider=Google model=gemma-4-31b-it error_code=HTTP_500 reason=model call failed or returned no response
+2026-09-14 21:27:34,592 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-14 21:30:13,365 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=6614 turns=14 path=data\Google_gemma-4-31b-it\son-set[0].json
+2026-09-14 21:31:13,365 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-14 21:33:36,358 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=6344 turns=14 path=data\Google_gemma-4-31b-it\son-set[0].json
+2026-09-14 21:34:36,358 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-14 21:36:12,410 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=4924 turns=16 path=data\Google_gemma-4-31b-it\son-set[0].json
+2026-09-14 21:37:12,411 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-14 21:39:19,504 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=5039 turns=12 path=data\Google_gemma-4-31b-it\son-set[0].json
+2026-09-14 21:40:19,505 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-14 21:42:33,397 ERROR MODEL_FAILURE provider=Google model=gemma-4-31b-it error_code=HTTP_500 reason=model call failed or returned no response
+2026-09-14 21:43:33,397 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-14 21:43:37,896 ERROR MODEL_FAILURE provider=Google model=gemma-4-31b-it error_code=HTTP_500 reason=model call failed or returned no response
+2026-09-14 21:44:37,897 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-14 21:47:24,092 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=7389 turns=14 path=data\Google_gemma-4-31b-it\son-set[0].json
+2026-09-14 21:48:24,093 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-14 21:51:30,298 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=6944 turns=12 path=data\Google_gemma-4-31b-it\son-set[0].json
+2026-09-14 21:52:30,298 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-14 21:54:29,427 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=5508 turns=16 path=data\Google_gemma-4-31b-it\son-set[0].json
+2026-09-14 21:55:29,427 INFO MODEL_SUMMARY
+  provider_model: Google / gemma-4-31b-it
+  attempts: 15
+  saved: 12
+  failed: 3
+  accept_rate: 80.00%
+  average_tokens: 6560.25
+  turn_range: 12-18
+  expired: False
+  failure_categories:
+  empty_response: 3

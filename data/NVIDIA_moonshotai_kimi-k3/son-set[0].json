@@ -1,0 +1,101 @@
+[
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "history_and_social_studies",
+    "topic": "Cause-and-effect in historical events",
+    "problem": "Historians often argue that Britain's response to the Boston Tea Party (1773) — the Coercive Acts of 1774 — backfired, pushing the colonies toward revolution rather than submission. Trace the cause-and-effect chain: why did the Coercive Acts, intended to punish and isolate Massachusetts, instead strengthen intercolonial unity?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "The Coercive Acts closed Boston's port, so colonists got angry and united against Britain. That's basically it."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student has the bare outcome but skips the mechanism — why port closure produced unity beyond Boston. Need to probe their causal reasoning.",
+        "state": "Diagnosis",
+        "response": "Okay — but why would colonists in Virginia or South Carolina care about Boston's port?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Because they also traded through Boston? Or... they sympathized with Massachusetts?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student guesses at sympathy but hasn't identified the structural threat. Compound a diagnosis of what else the Acts did.",
+        "state": "Diagnosis",
+        "response": "Sympathy, maybe — but was the port closure the only thing in those Acts?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "No — Britain also restricted town meetings and let royal officials be tried in England."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student recalls the measures. Now push them to see why these threatened other colonies, not just Massachusetts.",
+        "state": "Support",
+        "response": "Right — so if Parliament could do that to Massachusetts, what did that signal to the other twelve?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "That it could happen to them too. The Acts weren't just punishment, they were a precedent."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student grasps the precedent effect. One gap remains: how colonies actually responded collectively. Guide toward the Continental Congress.",
+        "state": "Support",
+        "response": "Exactly. And how did that shared fear turn into something concrete and organized?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The First Continental Congress met in 1774 to coordinate a response — boycotts, declarations of rights."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has the full chain: Acts → perceived precedent → Congress → unity. Check whether they can contrast intended vs. actual effect to complete the 'backfire' logic.",
+        "state": "Support",
+        "response": "So what was Britain's intended effect — and where did the calculation go wrong?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Britain assumed isolating Massachusetts would scare the rest into obedience. Instead, collective punishment created shared grievance — divide-and-conquer failed because the threat applied to everyone."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has articulated the full causal chain. Move to synthesis — have them state the general principle of how repression backfires.",
+        "state": "Synthesis",
+        "response": "Well said. Can you state the general cause-and-effect principle here in your own words?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Repression backfires when it targets a group but threatens everyone: the punishment reveals a common vulnerability, which converts isolated grievances into organized, collective resistance."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the underlying principle in their own words. Wrap up warmly.",
+        "state": "Closing",
+        "response": "That's exactly it — beautifully put! Want to try another cause-and-effect chain?"
+      }
+    ]
+  }
+]

@@ -1,0 +1,857 @@
+[
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "physics",
+    "topic": "Levers and pulleys",
+    "problem": "A uniform beam 3 m long is used as a lever to lift a 150 N weight. The fulcrum is 0.75 m from the weight. A single movable pulley is attached to the weight, and the rope passes over a fixed pulley to the effort applied downward. Ignoring friction and the weight of the beam and pulleys, what effort force is required to lift the weight?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think you just divide the weight by the total length of the beam."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student used total length instead of lever arms; need to uncover their reasoning.",
+        "state": "Diagnosis",
+        "response": "Remember torque equals force times distance. How did you decide to divide weight by length?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I put the fulcrum in the middle, so each side is 1.5 m, then I divided weight by 2."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student misunderstands fulcrum location and thinks halving weight works; need to hint at correct fulcrum.",
+        "state": "Support",
+        "response": "The lever balances when effort times its distance equals load times its distance. Think about where the fulcrum actually is."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "So I multiply weight by the distance to fulcrum?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student suggests multiplying weight by distance, indicating confusion about torque equation; need to guide them to correct sides.",
+        "state": "Diagnosis",
+        "response": "Recall effort times its distance equals load times its distance. Which distances belong to effort and load?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Effort distance is from fulcrum to where I pull, load distance is from fulcrum to weight."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified distances; now need to set up equation with numbers.",
+        "state": "Diagnosis",
+        "response": "The load is 150 N at 0.75 m from fulcrum; effort acts at 2.25 m. Write the torque equation."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Effort * 2.25 = 150 * 0.75."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has correct equation; need them to solve and articulate rule.",
+        "state": "Synthesis",
+        "response": "Solve for effort. In your own words, what rule are you using?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The effort needed at the lever end is 50 N."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student solved lever part; now need to address the movable pulley effect.",
+        "state": "Support",
+        "response": "A movable pulley halves the force needed to lift the load. What force do you now need to apply?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Lever MA 3 gives 50 N; pulley MA 2 gives 25 N."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the combined lever and pulley rule.",
+        "state": "Closing",
+        "response": "Nice work! Want to try another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Sampling bias",
+    "problem": "A city council wants to know the average number of times residents use public transportation per week. They decide to distribute an online survey via the city’s official Facebook page, inviting followers to participate. They receive 500 responses, with an average of 4.2 trips per week. Identify at least two distinct sources of bias in this sampling method and discuss how each could distort the estimate.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the online survey is okay because lots of people use Facebook, so it should represent the city."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student expressed confidence that Facebook users represent city residents; need to probe the basis of this belief.",
+        "state": "Diagnosis",
+        "response": "What makes you think Facebook users represent all city residents?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I guess older people might not use Facebook, but the sample size is big enough to fix that."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student asserted that a large sample size can fix bias; need to hint at the difference between precision and bias.",
+        "state": "Support",
+        "response": "How might a large sample size affect bias if the sample is not random?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Increasing the sample size will eliminate any bias because the law of large numbers ensures representativeness."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student misstated the law of large numbers; need to elicit the correct definition to uncover the misunderstanding.",
+        "state": "Diagnosis",
+        "response": "What does the law of large numbers actually guarantee?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Since we invited all Facebook followers, it's basically a random sample of the city."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student believes the sample is random; need to hint that invitation-based selection introduces systematic exclusion.",
+        "state": "Support",
+        "response": "If the sampling method systematically excludes certain groups, what happens to the estimate as sample size grows?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I see now that even with 500 responses, the estimate could still be off because the sample only includes Facebook users."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student recognized that bias persists; need to hint that increasing the sampled Facebook users won't remove the bias.",
+        "state": "Support",
+        "response": "What would happen to the bias if we doubled the number of Facebook users surveyed?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "If we survey more Facebook users, the bias will get smaller because we'll have more data."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student again claimed that increasing sample size reduces bias; need to prompt them to articulate why sample size does not eliminate bias from a non-random sampling method.",
+        "state": "Synthesis",
+        "response": "In your own words, why does increasing the sample size not eliminate bias from a non-random sampling method?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Because bias comes from who is left out, not from how many we ask; asking more of the same group just gives a more precise estimate of the wrong group, so the estimate stays off."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept of sampling bias and the role of sample size; conversation can conclude.",
+        "state": "Closing",
+        "response": "Nice, you've got it! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "computer_science_light",
+    "topic": "Big-O intuition via analogies",
+    "problem": "Suppose you have an unsorted list of n names and you want to determine whether a particular name is present in the list. What is the Big‑O time complexity of this operation in the worst case?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think checking if a name is in an unsorted list takes constant time, O(1), because you can just glance at the whole list and instantly know whether the name is present without having to examine each element one by one."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student asserts constant time, showing a misunderstanding of linear search; I need to elicit their reasoning and correct the misconception.",
+        "state": "Diagnosis",
+        "response": "When you search an unsorted list, you actually have to compare the target with each element until you find a match or reach the end, because there's no order that lets you skip any elements. In the worst case you might need to look at every single item, so the time grows linearly with the number of elements. Does that help clarify why constant time isn't right?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Okay, I see now that you have to go through each element one by one, comparing the target name with each entry, and if the name isn't there or is at the very end, you'll have examined every single element, so the total number of steps grows proportionally to n, which we denote as O(n)."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified linear time; I reinforce this and prepare to discuss the sorted vs unsorted distinction.",
+        "state": "Support",
+        "response": "Exactly, linear search scans each element sequentially, and because you might need to check all of them in the worst case, the runtime grows linearly with n, which we write as O(n). Does that match what you were thinking?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Actually, I think you could still use binary search on an unsorted list by repeatedly dividing the list in half and comparing the middle element to the target, because each step cuts the problem size in half, so you'd finish in logarithmic time, O(log n), even without sorting first."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student claims binary search works on unsorted data, which is incorrect; I need to explain why sorting is essential for binary search.",
+        "state": "Support",
+        "response": "Binary search depends on the list being sorted because the algorithm decides which half to keep by comparing the target to the middle element and assuming that everything on one side is either all smaller or all larger; if the list isn't sorted, that assumption fails and you might discard the half that actually contains the target, so you can't guarantee correctness."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "So if the list isn't sorted, binary search isn't reliable, and we fall back to linear search which is O(n), right? It's like trying to find a name in a shuffled phone book; you can't trust the middle to tell you which half to look in, so you have to check each name sequentially."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly notes the fallback to linear search; I reinforce the idea that without order you must examine each element.",
+        "state": "Support",
+        "response": "Exactly, without any order information you cannot eliminate more than one element per comparison, so you must examine each element in the worst case, giving linear time. It's similar to calling roll in a classroom where you have to say each student's name until you hear the one you're looking for; you might have to call every name."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "So the main idea is that when you have an unsorted collection and you need to find a specific item, you can't rely on any ordering to skip ahead; you must look at each element one by one, and in the worst case you'll have to look at all of them, which means the running time grows linearly with the number of items, or O(n)."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has articulated the linear‑search concept; I encourage them to connect it to a familiar analogy without giving the analogy myself.",
+        "state": "Support",
+        "response": "When you're trying to convey what an algorithm does, linking it to a familiar everyday routine often makes the idea stick; think of an activity where you go through items one by one and notice how the effort grows with the number of items. This helps you see why the running time scales linearly rather than staying constant or jumping to a higher order."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "It's like walking down a line of people and asking each person their name to find a specific individual; in the worst case you have to ask everyone, so the time required grows directly with how many people are in the line, which we describe as O(n)."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the linear‑search analogy and the O(n) concept, showing mastery of the idea.",
+        "state": "Closing",
+        "response": "Excellent! You've clearly captured why scanning an unsorted list takes linear time and how the analogy of checking each name in a line shows O(n) growth. If you'd like to try another example or explore a different concept, just let me know."
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "history_and_social_studies",
+    "topic": "Cause-and-effect in historical events",
+    "problem": "Explain how the invention of the printing press in the mid-15th century influenced the spread of the Protestant Reformation in Europe, considering both immediate and longer-term effects, and discuss any potential unintended consequences.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "The printing press let Luther's 95 Theses spread fast, so the Reformation happened because of the press."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student attributes the Reformation solely to the press, showing a monocausal view; need to elicit their reasoning.",
+        "state": "Diagnosis",
+        "response": "What do you think were the earliest effects of the printing press on religious ideas?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Before the press, few could read religious texts; after, anyone could read the Bible, causing people to leave the Church."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student overstates literacy growth and claims direct causation; hint at nuance and Church's response.",
+        "state": "Support",
+        "response": "Literacy grew gradually, and the Church also used pamphlets; how might that change the effect?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "The press also led to the immediate collapse of the Holy Roman Empire because princes used pamphlets to revolt."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student asserts an immediate empire collapse, a temporal error; need to probe their timeline understanding.",
+        "state": "Diagnosis",
+        "response": "What actually happened to the Holy Roman Empire in the decades after the press arrived?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "An unintended consequence was that the press spread scientific ideas, which caused the Enlightenment directly, skipping the Reformation."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student conflates the press’s role in scientific spread with immediate Enlightenment; hint at intermediate steps.",
+        "state": "Support",
+        "response": "The press helped scientific works spread later; what intermediate steps link it to religious change?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The press raised literacy, undermined Church control, spread religious ideas, and strengthened states, together driving the Reformation."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student now gives a multi‑factor explanation; ready to articulate the underlying principle.",
+        "state": "Synthesis",
+        "response": "In your own words, how would you summarize the cause‑and‑effect relationship between the printing press and the Reformation?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The press lowered barriers to spread reform ideas, boosted state power and literacy, amplifying existing tensions."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the causal mechanism in their own words.",
+        "state": "Closing",
+        "response": "Nice work! Want to try another cause‑and‑effect question?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "computer_science_light",
+    "topic": "Big-O intuition via analogies",
+    "problem": "Consider an algorithm that first sorts a list of n elements using merge sort, then iterates through the sorted list performing a constant‑time operation on each element. What is the overall Big‑O complexity of this algorithm?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think it's O(n) because you just go through the list once."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student claimed O(n) based only on the loop, ignoring the sort; need to elicit their reasoning to see what they missed.",
+        "state": "Diagnosis",
+        "response": "Can you walk me through how you got O(n)?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I thought merge sort is O(n) because it splits the list in half and merges quickly."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly said merge sort is O(n); a hint to recall its true complexity will help them self‑correct.",
+        "state": "Support",
+        "response": "What do you know about the complexity of merge sort?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Merge sort is O(n log n)."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student identified merge sort as O(n log n) correctly; now we need to see how they combine it with the O(n) loop.",
+        "state": "Diagnosis",
+        "response": "When you have two steps, you take the dominant term; what do you think dominates here?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Since you have O(n log n) for sorting and O(n) for the loop, the O(n) term dominates, so it's O(n)."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student thought the O(n) term dominates; guiding them to compare growth rates will steer them toward the correct dominant term.",
+        "state": "Support",
+        "response": "Remember, Big-O focuses on the fastest-growing term as n gets large; which term grows faster, n or n log n?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "As n grows, n log n grows faster than n, so the overall complexity is O(n log n)."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student arrived at the correct O(n log n) answer; asking them to explain the rule in their own words consolidates understanding.",
+        "state": "Synthesis",
+        "response": "In your own words, why is the overall complexity O(n log n)?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "You take the step with the highest growth rate; here n log n grows faster than n, so the sorting step determines the Big‑O."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student correctly explained the rule; the conversation can end with a warm wrap-up.",
+        "state": "Closing",
+        "response": "Nice, you've got it! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Ratio and proportion",
+    "problem": "A mixture contains alcohol and water in the ratio 5:3. If 8 liters of water is added, the ratio becomes 5:4. Find the original quantity of alcohol.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Let alcohol be 5x and water be 3x."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student defined variables but hasn't shown how the added water affects the ratio.",
+        "state": "Diagnosis",
+        "response": "How would you use the added water to set up the new ratio?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think the ratio stays 5/3, so 5x over 3x+8 equals 5/3."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly kept the original ratio after adding water; need to hint at the meaning of the new ratio.",
+        "state": "Support",
+        "response": "What does the new ratio 5:4 represent?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "It means alcohol to water is 5:4, so 5x/(3x+8)=5/4."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student now has the correct proportion; need to prompt solving for x.",
+        "state": "Support",
+        "response": "How would you solve for x from that equation?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Cross-multiplying gives 20x equals 15x plus 8."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student made an arithmetic error in distributing 5 over 8; need a hint to check that multiplication.",
+        "state": "Support",
+        "response": "What is 5 times 8?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Sorry, 5 times 8 is 40, so 20x equals 15x plus 40."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student corrected the equation; now need to get the value of x.",
+        "state": "Support",
+        "response": "What does that give you for x?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Subtract 15x: 5x equals 40, so x equals 8."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student solved for x; now ask them to explain the reasoning in their own words to internalize the concept.",
+        "state": "Synthesis",
+        "response": "In your own words, how did you use the ratio change to find the original alcohol?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "I used 5x and 3x, added 8 to water, made 5x/(3x+8)=5/4, solved x=8, then alcohol is 5*8=40."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the rule and solution; conversation can wrap up warmly.",
+        "state": "Closing",
+        "response": "Great job! Ready for another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Direction sense",
+    "problem": "You start at a point facing north. You turn left and walk 10 meters, then turn right and walk 5 meters, then turn left and walk 3 meters. Which direction are you facing after completing the walk?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think after the first left turn I'm facing west, but then I get confused about the right turn. I'm not sure if I should turn toward north or east."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student shows uncertainty about the effect of the right turn after facing west; need to explore their reasoning to diagnose the gap.",
+        "state": "Diagnosis",
+        "response": "It sounds like you're unsure about how the turns affect your facing direction. Can you walk me through each step and tell me what direction you think you're facing after each turn?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Okay, start facing north. Left turn makes me face west, I walk 10 m. Then a right turn... if I'm facing west and turn right, I think I might go north? Actually I'm not sure."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student attempted the second step but remains uncertain about the right turn from west; a hint about orientation will help them correct the mistake.",
+        "state": "Support",
+        "response": "Remember, turning left from north points you to west, and turning right from north points you to east. When you're facing west, a right turn points you to north. What direction do you think you face after the second turn?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "After the right turn from west I would be facing north, then I walk 5 m. Then the next left turn from north would point me west again, and I walk 3 m."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student now correctly identified each step's direction but may need confirmation to solidify understanding before moving to a general rule.",
+        "state": "Support",
+        "response": "When you're facing west and turn right, you face north. So after the second turn you are indeed facing north. After the left turn from north you face west again. Does that match what you just said?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Yes, that's what I got: north after the second turn, then west after the left turn. So I end up facing west."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student has arrived at the correct answer but could benefit from reflecting on the pattern of turns before articulating the underlying rule.",
+        "state": "Support",
+        "response": "You've correctly tracked each turn: north → west → north → west. What pattern do you see in how each turn affected your facing direction?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I notice that each left turn seems to point me to the left of where I was facing, and each right turn points me to the right."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has observed a directional pattern but needs to articulate the underlying rule in their own words to internalize the concept.",
+        "state": "Synthesis",
+        "response": "The important idea is how left and right turns change your facing direction. In your own words, describe what a left turn and a right turn do."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "A left turn turns you to the left, which is counter‑clockwise, and a right turn turns you to the right, which is clockwise."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student gave a correct but brief description; a hint linking the turns to angle measures will help them refine their explanation.",
+        "state": "Support",
+        "response": "Think of it as rotating your orientation: left turn adds –90°, right turn adds +90° to your current angle measured clockwise from north. Does that help you refine your explanation?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "So if I start facing north (0°), a left turn subtracts 90° making me face west (270°), a right turn adds 90° making me face north (0° or 360°), and applying that to the sequence left, right, left brings me back to west. That’s why I end up facing west."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the rule and confirmed the final answer, showing mastery of the concept.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "computer_science_light",
+    "topic": "Big-O intuition via analogies",
+    "problem": "Consider an algorithm that, for each integer i from 1 to n, performs a constant-time operation and then checks all multiples of i up to n (i.e., i, 2i, 3i, ...) doing constant work per check. What is the overall time complexity? Use an analogy of filling buckets where each bucket size corresponds to i.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Outer loop n times; inner loop hits multiples of i up to n. I'm unsure how to count total work."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student shows uncertainty about counting total work; need to elicit their approach.",
+        "state": "Diagnosis",
+        "response": "How would you count the inner-loop iterations for a given i?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think it goes i, 2i, 3i,... up to n, so about n/i steps."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student identified approx n/i per i; need hint to sum over i.",
+        "state": "Support",
+        "response": "If each i contributes roughly n/i steps, the total looks like the sum of n/i for i=1..n."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "So it's n times the sum of 1/i. I'm not sure what that equals."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student expressed the sum as harmonic series; need hint about its growth.",
+        "state": "Support",
+        "response": "That sum is the harmonic series, which grows like ln n plus a constant."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "So the total is roughly n * ln n? I'm still not confident about dropping constants."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student close but needs hint on growth rate without giving answer.",
+        "state": "Support",
+        "response": "Imagine adding smaller fractions each step; the sum rises slowly, never hitting linear or quadratic speed."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I think the answer is O(n log n), but I want to check it's not O(n) or O(n^2)."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student proposed O(n log n) but needs to articulate reasoning.",
+        "state": "Synthesis",
+        "response": "Explain why the harmonic series yields a log factor and why other bounds don't fit."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Each i adds about n/i steps; summing gives n times the harmonic series, which grows like log n."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student gave partial explanation; need hint to justify bounds.",
+        "state": "Support",
+        "response": "Note that most terms are much smaller than n, keeping the sum far below n*n."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Total work ≈ n × Σ(1/i) ≈ n log n. It's > linear and < quadratic."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the O(n log n) intuition via harmonic series.",
+        "state": "Closing",
+        "response": "Nice work! You've got the O(n log n) intuition. Want another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "physics",
+    "topic": "Series vs parallel circuits",
+    "problem": "Two resistors of 4 Ω and 6 Ω are connected either in series or in parallel. What is the equivalent resistance in each case?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "In series, you add them: 4+6=10 Ω. In parallel, you also add them: 4+6=10 Ω."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student gave correct series resistance but incorrectly added resistances for parallel, showing confusion about parallel combination.",
+        "state": "Diagnosis",
+        "response": "How did you decide the resistance for the parallel case?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Because the voltage is the same across each resistor in parallel, you just add the resistances."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly believes resistances add in parallel; need to hint at conductance concept.",
+        "state": "Support",
+        "response": "What is the rule for combining conductances in parallel?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "You take the average of the two resistances: (4+6)/2 = 5 Ω."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student still guessing (average); provide hint linking conductance to resistance to guide correct calculation.",
+        "state": "Support",
+        "response": "Conductance adds in parallel. What is the total conductance if you have 1/4 S and 1/6 S?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "The total conductance is 1/4 + 1/6 = 5/12 S, so the resistance is 12/5 = 2.4 Ω."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student has correct parallel answer; need to check understanding of series combination.",
+        "state": "Support",
+        "response": "How do you combine resistances in series?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "In series, you also add the reciprocals: 1/4 + 1/6 = 5/12, then invert to get 12/5 Ω."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student mistakenly applied parallel rule to series; hint about current equality to redirect thinking.",
+        "state": "Support",
+        "response": "In series, the current is the same through each resistor. How does that affect the total voltage across the combination?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Because the current is same, the voltages add, so the resistances add: Rtotal = 4 + 6 = 10 Ω."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student now has correct numeric answers for both configurations; ask them to articulate the underlying rule in their own words.",
+        "state": "Synthesis",
+        "response": "You found the correct values; explain the rule for series and parallel in your own words."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Series: resistances add because current is same. Parallel: conductances add because voltage is same."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student correctly explained the rule for series and parallel; conversation can wrap up.",
+        "state": "Closing",
+        "response": "Nice job! Ready for another problem?"
+      }
+    ]
+  }
+]

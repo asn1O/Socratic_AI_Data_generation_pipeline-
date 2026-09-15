@@ -1,0 +1,188 @@
+[
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Argument structure: premises and conclusions",
+    "problem": "Identify the main conclusion of the following argument: 'Since public libraries promote literacy, they deserve city funding. Furthermore, literacy reduces crime, so we must increase library budgets.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "The main conclusion is 'public libraries promote literacy' because 'Since' introduces the primary claim."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student misidentified the indicator word 'since'. I need to directly correct this misunderstanding and ask them to re-evaluate what 'since' introduces.",
+        "state": "Diagnosis",
+        "response": "The word 'since' actually introduces a premise, not a conclusion. What claim is 'since' supporting here?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Got it. Then 'they deserve city funding' is the main conclusion since it's the main point of sentence one."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student picked an intermediate claim by focusing only on the first sentence. I should point out that this sentence isn't the final takeaway.",
+        "state": "Support",
+        "response": "That sentence is actually an intermediate step. Notice how 'so' in the final sentence introduces the ultimate recommendation."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Wait, so 'literacy reduces crime' is a premise, which means 'they deserve city funding' remains the main conclusion."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student resurfaced their previous wrong claim about 'they deserve city funding' being the final conclusion. I will explicitly state what 'so' indicates.",
+        "state": "Support",
+        "response": "Indicator words like 'so' point directly to a conclusion. Here, 'we must increase library budgets' is the final takeaway."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Ah, so 'they deserve city funding' just acts as an intermediate premise for increasing the budget?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student now understands the structural relationship. I will confirm this directly and ask them to state the overall main conclusion.",
+        "state": "Support",
+        "response": "Exactly, it supports the final claim. So which statement is the overarching main conclusion?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The main conclusion is 'we must increase library budgets' because everything else supports it."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student arrived at the correct answer. Now I want them to synthesize the rule in their own words.",
+        "state": "Synthesis",
+        "response": "Spot on! In your own words, how do you distinguish premises from the main conclusion in arguments like this?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Premises provide evidence or support, often marked by 'since', while the main conclusion is the ultimate claim supported by everything else."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student clearly explained the core concept in their own words. Time to close the conversation warmly.",
+        "state": "Closing",
+        "response": "That's a perfect summary! Great job working through that. Ready to try another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "computer_science_light",
+    "topic": "Big-O intuition via analogies",
+    "problem": "Compare searching for a specific paper in an unsorted pile of N papers versus grabbing the top paper off the pile. What are the Big-O time complexities for each operation?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Finding a paper in $N$ unsorted papers takes $O(1)$ time, right?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly claims searching an unsorted list is O(1). I need to diagnose their thinking about how input size affects search time.",
+        "state": "Diagnosis",
+        "response": "If you double the pile to $2N$ papers, how does your search time change?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "It stays the same because you can just look really fast."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student still asserts constant time despite doubling size. I should provide support showing that checking items scales with input size.",
+        "state": "Support",
+        "response": "Checking each paper takes time. Twice as many papers means twice as many checks. How does time scale?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, I see. Does that mean searching takes $O(N^2)$ time?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student overcorrected to O(N^2). I need to give a targeted hint contrasting single pass vs pairwise work.",
+        "state": "Support",
+        "response": "You check each paper once, not every pair. What complexity means work grows proportionally with $N$?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Got it, so searching through the unsorted pile takes $O(N)$ time."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified O(N) for searching. Now I need to diagnose their understanding of grabbing the top paper.",
+        "state": "Diagnosis",
+        "response": "Exactly. Now, what about grabbing just the top paper from that stack of $N$ papers?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Grabbing the top paper is also $O(N)$ because the pile has $N$ papers."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student mistakenly assumed pile size forces O(N) time even for top access. I will offer support emphasizing fixed effort.",
+        "state": "Support",
+        "response": "Grabbing the top paper takes one action regardless of pile size. What complexity is that constant effort?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "That's $O(1)$ because the work doesn't depend on how big $N$ is!"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has arrived at both correct complexities. I will now prompt them to synthesize the general concept in their own words.",
+        "state": "Synthesis",
+        "response": "Spot on. In your own words, how do you distinguish between $O(1)$ and $O(N)$?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "It's $O(1)$ when work stays constant, and $O(N)$ when work grows directly with input size."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the concept in their own words. Time to close the conversation warmly.",
+        "state": "Closing",
+        "response": "That's a perfect explanation! You did great with this. Ready for another one?"
+      }
+    ]
+  }
+]
