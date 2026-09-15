@@ -1,0 +1,386 @@
+[
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "biology",
+    "topic": "Photosynthesis",
+    "problem": "A C3 plant fixes 8 μmol of CO2 per minute. Assuming the Calvin cycle consumes 3 ATP and 2 NADPH per CO2 fixed, calculate the rate of ATP consumption (in μmol per minute) for this plant.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the ATP consumption is 8 μmol per minute because each CO2 only needs one ATP."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student gave an answer based on an assumed 1:1 ATP:CO2 ratio, showing a specific stoichiometric assumption; need to uncover their reasoning.",
+        "state": "Diagnosis",
+        "response": "How did you decide that each CO2 requires only one ATP?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, I just guessed, and also I think NADPH usage is the same, 8 μmol per minute, because I thought they're used equally."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student expressed equal usage of ATP and NADPH, indicating a misconception about stoichiometry; need to probe the basis for this belief.",
+        "state": "Diagnosis",
+        "response": "What makes you think ATP and NADPH are used in equal amounts?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Actually, I'm not sure about the ATP number; maybe it's 2 ATP per CO2, so that would be 16 μmol ATP per minute."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student suggests 2 ATP per CO2, still below the correct value; need to hint at the given ratio without revealing the answer.",
+        "state": "Support",
+        "response": "The problem statement says each CO2 fixed consumes 3 ATP. How does that number compare to what you're thinking?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I'm still confused; maybe it's 2 ATP per CO2? So 16 μmol ATP per minute?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student still suggests 2 ATP per CO2, indicating they haven't internalized the given ratio; need to prompt them to re-examine the provided information via a pure question.",
+        "state": "Support",
+        "response": "Could you look at the given ATP requirement again and see if that changes your estimate?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, right, it's 3 ATP per CO2. So I multiply 8 by 3, which gives 24 μmol ATP per minute."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student computed the correct answer but we need to ensure they understand why multiplication is appropriate; prompt them to explain the operation.",
+        "state": "Support",
+        "response": "You multiplied the CO2 rate by 3 to get 24 μmol ATP per minute—can you explain why that operation gives the ATP consumption?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Because each CO2 needs 3 ATP, so for each μmol of CO2 fixed you need 3 μmol of ATP; scaling up gives total ATP. I also think NADPH would be the same amount, 3 μmol per μmol CO2, but actually it's 2."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student explained the operation correctly and resurfaced the equal NADPH/ATP idea; now we want them to articulate the general rule in their own words.",
+        "state": "Synthesis",
+        "response": "In your own words, state the rule that relates CO2 fixation rate to ATP consumption in the Calvin cycle."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The rule is: multiply the rate of CO2 fixation by the number of ATP required per CO2 (which is 3) to get the ATP consumption rate."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained and applied the rule; conversation is ready to wrap up.",
+        "state": "Closing",
+        "response": "Nice work! You've got the concept down. Want to try another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "computer_science_light",
+    "topic": "Binary number conversion",
+    "problem": "Determine the 8-bit two's complement binary representation of the decimal number -45.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know 45 in binary is 101101, but I’m not sure how to get the two's complement."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student shows partial knowledge of conversion but missing two's complement steps; need to elicit their approach.",
+        "state": "Diagnosis",
+        "response": "Can you walk me through what you'd do after getting the binary for 45?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think I flip bits and add one, but I’m unsure about using 8 bits."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student uncertain about bit length; need hint to pad first.",
+        "state": "Support",
+        "response": "Consider representing +45 in 8-bit binary first; what happens if you then flip the bits?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I’d write 45 as 00101101, flip to 11010010, then add 1 to get 11010011."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student gave correct procedure; need to confirm understanding of flipping step.",
+        "state": "Support",
+        "response": "What do you get when you flip the bits of 00101101?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Flipping 00101101 gives 11010010, as expected."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student has flip; need to guide to addition verification.",
+        "state": "Support",
+        "response": "Let's check: what do you get when you add this to +45 in 8-bit binary?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Adding 00101101 and 11010010 gives 1 00000000; dropping the carry leaves 0."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student verified correctness; now prompt them to state general procedure.",
+        "state": "Support",
+        "response": "Can you state the general procedure for finding the 8-bit two's complement of any negative number?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Take the absolute value, write it in 8-bit binary, invert all bits, then add 1."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student stated procedure; now ask them to explain why it works in own words.",
+        "state": "Synthesis",
+        "response": "Think about the meaning of one's and two's complement; could you explain why this works in your own words?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Inverting gives the one's complement; adding one yields the two's complement, which represents the negative value in fixed-width binary."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept; conversation wraps up.",
+        "state": "Closing",
+        "response": "Nice, you've got it! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "chemistry",
+    "topic": "States of matter and phase changes",
+    "problem": "A sample of ice at 0°C is heated slowly at constant pressure. Describe what happens to its temperature as it melts and after it has completely turned into water.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know ice melts at 0°C, but I'm not really sure what happens to the temperature while it's melting—does it go up, stay the same, or something else?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student expressed uncertainty about temperature change during melting, indicating a need to elicit their initial ideas.",
+        "state": "Diagnosis",
+        "response": "When you keep adding heat to ice at 0°C, what do you think happens to its temperature? Does it climb steadily, stay flat, or perhaps drop? I'm interested in hearing your reasoning about how you picture the temperature changing as you supply heat. Take a moment to think about what you've observed in everyday life, like watching ice cubes melt in a drink."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I guess the temperature goes up because you're adding heat, so it should get warmer as you keep heating."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly guessed temperature rises; we hint at the role of heat in breaking bonds versus increasing kinetic energy to redirect thinking.",
+        "state": "Support",
+        "response": "Think about what the heat energy is doing to the water molecules when ice is melting—does it make them move faster, or does it do something else, like breaking the bonds that hold them in the solid lattice? What would you expect to see if the energy went into motion versus breaking bonds?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Maybe the heat breaks the bonds between molecules instead of making them move faster."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified heat breaking bonds; we prompt them to infer the effect on temperature to solidify the connection.",
+        "state": "Support",
+        "response": "If the heat is primarily breaking the intermolecular bonds rather than increasing molecular speed, what would you expect to observe about the temperature while the ice is melting? Would it rise, stay the same, or fall, and why? Remember that temperature reflects average kinetic energy, so if energy goes into bond breaking, the kinetic energy might not change."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I think the temperature would stay the same."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student noted temperature stays constant but hasn't explained why; we ask them to articulate the underlying reason to draw out their reasoning.",
+        "state": "Support",
+        "response": "You mentioned that the temperature would stay the same while ice melts. Can you explain why you think that happens? Think about where the heat energy goes—does it increase the motion of the molecules, or does it serve another purpose during the phase change? Consider what you know about latent heat and how it relates to breaking intermolecular forces."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Because the heat energy is used to overcome the forces holding the molecules in the solid shape, so it doesn't increase their motion."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student described energy use during melting; we check understanding of post‑melting temperature to ensure they can extend the concept.",
+        "state": "Support",
+        "response": "After all the ice has turned to water, what happens to the temperature if you continue to add heat? Does it start to rise, stay constant, or perhaps behave differently? Think about where the energy goes now that there are no more bonds to break in the solid."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Then the temperature will start to rise because now the heat can increase the kinetic energy of the liquid water."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has demonstrated correct grasp of latent heat concept; we ask them to summarize the rule to internalize and verbalize it.",
+        "state": "Synthesis",
+        "response": "Can you explain in your own words the rule that describes what happens to temperature during a phase change like melting? Please describe why the temperature remains constant and what the heat energy is used for instead of raising kinetic energy. Use the concept of latent heat and intermolecular forces in your explanation."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "During a phase change, the temperature stays constant because the heat energy goes into changing the substance's state rather than raising its kinetic energy."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the principle of constant temperature during phase change, indicating mastery; we close with praise and an invitation to continue.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Ethical dilemmas (trolley-problem style)",
+    "problem": "A runaway trolley is heading down the main track toward five workers who cannot escape. You can flip a switch to divert the trolley onto a side track where there is one worker. However, the side track rejoins the main track after a short downhill stretch; if diverted, the trolley will gain speed and, upon merging, will derail into a nearby factory where three additional workers are present, killing them as well. If you do nothing, the trolley will kill the five on the main track. What should you do, considering both the consequences and the principle of not using a person merely as a means to an end?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think I shouldn't flip the switch because pulling it would directly cause the death of the worker on the side track, and it also leads to the factory crash, so it seems worse than just letting the trolley hit the five."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student expressed a reluctance to flip the switch based on the sense of directly causing harm and extra deaths, indicating they are focusing on moral intuitions without yet quantifying outcomes.",
+        "state": "Diagnosis",
+        "response": "Could you tell me what would happen to the total number of lives lost in each scenario if we just count them, and how that compares to your initial intuition?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I'm not sure about the numbers, but I feel like choosing to hit the side-track worker means I'm using them as a means to stop the trolley, even if it also causes more deaths later. If I don't flip, I'm not acting, letting events happen."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student acknowledged uncertainty about the numbers but emphasized intention; we need to guide them to compute concrete totals to see comparative harm.",
+        "state": "Support",
+        "response": "It looks like you're unsure about the numbers. If we just count the lives lost in each scenario, what numbers do you get for not flipping versus flipping?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "If I don't flip, five people die. If I flip, the side-track worker dies and then the trolley derails into the factory, killing three more, so that's four deaths total."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly calculated the death totals for each option but still seemed unsure about the moral relevance of intention versus foresight.",
+        "state": "Support",
+        "response": "How does the distinction between intending a harm and merely foreseeing it affect your judgment about whether to flip the switch?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "If I flip, I intend to send the trolley onto the side track, meaning I intend for the worker there to be hit, although I also foresee the factory crash. If I don't flip, I don't intend anyone's death; I foresee the five dying."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student linked intention to moral wrongness but didn't explain why intention matters; we need to examine their reasoning about the moral significance of intending harm versus merely foreseeing it.",
+        "state": "Diagnosis",
+        "response": "Can you explain why you believe intending harm makes an action worse than merely foreseeing it, and how that relates to the way we judge moral responsibility?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Because intending harm means you're using that person as a tool to achieve your goal, which treats them merely as a means. Merely foreseeing harm doesn't involve aiming to hurt anyone, so it's less wrong."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student articulated that intending harm involves using a person as a mere means, showing grasp of the deontological concern; now we need them to synthesize both consequentialist and deontological considerations into a decision rule in their own words.",
+        "state": "Synthesis",
+        "response": "You've talked about intention and outcomes. In your own words, what principle or set of considerations should we apply to decide whether to flip the switch?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "We should weigh the total harms and avoid using anyone merely as a means. If flipping causes fewer deaths and we only foresee the side-track worker's death, not intend it, then flipping is better; otherwise we should not flip."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the combined principle of weighing outcomes and avoiding using persons as mere means, indicating they have internalized the concept; we can wrap up.",
+        "state": "Closing",
+        "response": "Nice work, you've clearly explained the reasoning—great job! Would you like to try another similar problem to practice, or maybe discuss a different ethical dilemma?"
+      }
+    ]
+  }
+]

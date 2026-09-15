@@ -38,3 +38,29 @@
   expired: True
   failure_categories:
   empty_response: 5
+2026-09-15 19:51:03,070 INFO MODEL_START provider=Google model=gemini-3.5-flash
+2026-09-15 19:51:28,958 INFO SUCCESS provider=Google model=gemini-3.5-flash total_tokens=7684 turns=14 path=data\Google_gemini-3.5-flash\son-set[0].json
+2026-09-15 19:52:28,957 INFO MODEL_START provider=Google model=gemini-3.5-flash
+2026-09-15 19:52:51,403 INFO SUCCESS provider=Google model=gemini-3.5-flash total_tokens=7721 turns=16 path=data\Google_gemini-3.5-flash\son-set[0].json
+2026-09-15 19:53:51,401 INFO MODEL_START provider=Google model=gemini-3.5-flash
+2026-09-15 19:54:18,487 INFO SUCCESS provider=Google model=gemini-3.5-flash total_tokens=5758 turns=12 path=data\Google_gemini-3.5-flash\son-set[0].json
+2026-09-15 19:55:18,484 INFO MODEL_START provider=Google model=gemini-3.5-flash
+2026-09-15 19:57:28,755 INFO SUCCESS provider=Google model=gemini-3.5-flash total_tokens=9532 turns=14 path=data\Google_gemini-3.5-flash\son-set[0].json
+2026-09-15 19:58:28,751 INFO MODEL_START provider=Google model=gemini-3.5-flash
+2026-09-15 19:58:36,284 ERROR MODEL_FAILURE provider=Google model=gemini-3.5-flash error_code=HTTP_503 reason=model call failed or returned no response
+2026-09-15 19:59:36,281 INFO MODEL_START provider=Google model=gemini-3.5-flash
+2026-09-15 20:00:04,459 ERROR MODEL_FAILURE provider=Google model=gemini-3.5-flash error_code=HTTP_503 reason=model call failed or returned no response
+2026-09-15 20:01:04,457 INFO MODEL_START provider=Google model=gemini-3.5-flash
+2026-09-15 20:01:10,142 ERROR MODEL_FAILURE provider=Google model=gemini-3.5-flash error_code=HTTP_503 reason=model call failed or returned no response
+2026-09-15 20:01:10,142 ERROR MODEL_EXPIRED provider=Google model=gemini-3.5-flash reason=three consecutive API failures
+2026-09-15 20:02:10,139 INFO MODEL_SUMMARY
+  provider_model: Google / gemini-3.5-flash
+  attempts: 7
+  saved: 4
+  failed: 3
+  accept_rate: 57.14%
+  average_tokens: 7673.75
+  turn_range: 12-16
+  expired: True
+  failure_categories:
+  empty_response: 3

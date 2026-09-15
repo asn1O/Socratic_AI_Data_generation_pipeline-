@@ -40,3 +40,46 @@
   expired: False
   failure_categories:
   empty_response: 2
+2026-09-15 19:51:03,063 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b
+2026-09-15 19:53:31,584 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b total_tokens=5639 turns=14 path=data\NVIDIA_nvidia_nemotron-3-ultra-550b-a55b\son-set[0].json
+2026-09-15 19:54:31,581 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b
+2026-09-15 19:56:58,478 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b total_tokens=4952 turns=12 path=data\NVIDIA_nvidia_nemotron-3-ultra-550b-a55b\son-set[0].json
+2026-09-15 19:57:58,475 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b
+2026-09-15 20:00:19,009 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b total_tokens=5165 turns=14 path=data\NVIDIA_nvidia_nemotron-3-ultra-550b-a55b\son-set[1].json
+2026-09-15 20:01:19,006 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b
+2026-09-15 20:04:31,226 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b total_tokens=10274 turns=12 path=data\NVIDIA_nvidia_nemotron-3-ultra-550b-a55b\son-set[1].json
+2026-09-15 20:05:31,223 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b
+2026-09-15 20:10:02,558 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b total_tokens=9657 turns=14 path=data\NVIDIA_nvidia_nemotron-3-ultra-550b-a55b\son-set[1].json
+2026-09-15 20:11:02,559 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b
+2026-09-15 20:15:53,780 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b total_tokens=13220 turns=14 path=data\NVIDIA_nvidia_nemotron-3-ultra-550b-a55b\son-set[1].json
+2026-09-15 20:16:53,780 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b
+2026-09-15 20:19:54,488 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b total_tokens=8452 turns=14 path=data\NVIDIA_nvidia_nemotron-3-ultra-550b-a55b\son-set[1].json
+2026-09-15 20:20:54,489 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b
+2026-09-15 20:34:44,720 ERROR MODEL_FAILURE provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b error_code=HTTP_503 reason=model call failed or returned no response
+2026-09-15 20:35:44,719 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b
+2026-09-15 20:48:12,387 ERROR MODEL_FAILURE provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b error_code=HTTP_504 reason=model call failed or returned no response
+2026-09-15 20:49:12,387 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b
+2026-09-15 20:51:18,393 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b total_tokens=6197 turns=14 path=data\NVIDIA_nvidia_nemotron-3-ultra-550b-a55b\son-set[1].json
+2026-09-15 20:52:18,393 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b
+2026-09-15 21:01:54,785 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b total_tokens=7924 turns=14 path=data\NVIDIA_nvidia_nemotron-3-ultra-550b-a55b\son-set[1].json
+2026-09-15 21:02:54,784 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b
+2026-09-15 21:05:52,770 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b total_tokens=6329 turns=14 path=data\NVIDIA_nvidia_nemotron-3-ultra-550b-a55b\son-set[1].json
+2026-09-15 21:06:52,769 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b
+2026-09-15 21:10:31,844 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b total_tokens=8702 turns=14 path=data\NVIDIA_nvidia_nemotron-3-ultra-550b-a55b\son-set[1].json
+2026-09-15 21:11:31,844 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b
+2026-09-15 21:13:22,739 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b total_tokens=5342 turns=12 path=data\NVIDIA_nvidia_nemotron-3-ultra-550b-a55b\son-set[1].json
+2026-09-15 21:14:22,738 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b
+2026-09-15 21:24:04,290 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b total_tokens=5045 turns=12 path=data\NVIDIA_nvidia_nemotron-3-ultra-550b-a55b\son-set[1].json
+2026-09-15 21:25:04,290 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b
+2026-09-15 21:28:08,047 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b total_tokens=8985 turns=14 path=data\NVIDIA_nvidia_nemotron-3-ultra-550b-a55b\son-set[1].json
+2026-09-15 21:29:08,047 INFO MODEL_SUMMARY
+  provider_model: NVIDIA / nvidia/nemotron-3-ultra-550b-a55b
+  attempts: 16
+  saved: 14
+  failed: 2
+  accept_rate: 87.50%
+  average_tokens: 7563.07
+  turn_range: 12-14
+  expired: False
+  failure_categories:
+  empty_response: 2

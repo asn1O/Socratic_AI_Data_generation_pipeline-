@@ -47,3 +47,46 @@
   failure_categories:
   empty_response: 1
   final_turn_not_closing: 1
+2026-09-15 19:51:03,075 INFO MODEL_START provider=Google model=gemini-3.1-flash-lite
+2026-09-15 19:51:34,041 INFO SUCCESS provider=Google model=gemini-3.1-flash-lite total_tokens=3772 turns=12 path=data\Google_gemini-3.1-flash-lite\son-set[1].json
+2026-09-15 19:52:34,037 INFO MODEL_START provider=Google model=gemini-3.1-flash-lite
+2026-09-15 19:52:50,417 INFO SUCCESS provider=Google model=gemini-3.1-flash-lite total_tokens=3578 turns=12 path=data\Google_gemini-3.1-flash-lite\son-set[1].json
+2026-09-15 19:53:50,414 INFO MODEL_START provider=Google model=gemini-3.1-flash-lite
+2026-09-15 19:54:40,105 INFO SUCCESS provider=Google model=gemini-3.1-flash-lite total_tokens=3619 turns=12 path=data\Google_gemini-3.1-flash-lite\son-set[1].json
+2026-09-15 19:55:40,102 INFO MODEL_START provider=Google model=gemini-3.1-flash-lite
+2026-09-15 19:55:45,980 INFO SUCCESS provider=Google model=gemini-3.1-flash-lite total_tokens=3609 turns=12 path=data\Google_gemini-3.1-flash-lite\son-set[1].json
+2026-09-15 19:56:45,977 INFO MODEL_START provider=Google model=gemini-3.1-flash-lite
+2026-09-15 19:57:12,519 INFO SUCCESS provider=Google model=gemini-3.1-flash-lite total_tokens=3242 turns=12 path=data\Google_gemini-3.1-flash-lite\son-set[1].json
+2026-09-15 19:58:12,515 INFO MODEL_START provider=Google model=gemini-3.1-flash-lite
+2026-09-15 19:58:19,444 INFO SUCCESS provider=Google model=gemini-3.1-flash-lite total_tokens=3652 turns=12 path=data\Google_gemini-3.1-flash-lite\son-set[1].json
+2026-09-15 19:59:19,441 INFO MODEL_START provider=Google model=gemini-3.1-flash-lite
+2026-09-15 19:59:27,200 INFO SUCCESS provider=Google model=gemini-3.1-flash-lite total_tokens=3547 turns=12 path=data\Google_gemini-3.1-flash-lite\son-set[1].json
+2026-09-15 20:00:27,197 INFO MODEL_START provider=Google model=gemini-3.1-flash-lite
+2026-09-15 20:00:34,953 INFO SUCCESS provider=Google model=gemini-3.1-flash-lite total_tokens=3198 turns=12 path=data\Google_gemini-3.1-flash-lite\son-set[1].json
+2026-09-15 20:01:34,952 INFO MODEL_START provider=Google model=gemini-3.1-flash-lite
+2026-09-15 20:01:49,445 INFO SUCCESS provider=Google model=gemini-3.1-flash-lite total_tokens=3655 turns=12 path=data\Google_gemini-3.1-flash-lite\son-set[1].json
+2026-09-15 20:02:49,443 INFO MODEL_START provider=Google model=gemini-3.1-flash-lite
+2026-09-15 20:02:59,072 INFO SUCCESS provider=Google model=gemini-3.1-flash-lite total_tokens=3459 turns=12 path=data\Google_gemini-3.1-flash-lite\son-set[1].json
+2026-09-15 20:03:59,069 INFO MODEL_START provider=Google model=gemini-3.1-flash-lite
+2026-09-15 20:04:17,808 INFO SUCCESS provider=Google model=gemini-3.1-flash-lite total_tokens=3469 turns=12 path=data\Google_gemini-3.1-flash-lite\son-set[1].json
+2026-09-15 20:05:17,805 INFO MODEL_START provider=Google model=gemini-3.1-flash-lite
+2026-09-15 20:06:43,257 INFO SUCCESS provider=Google model=gemini-3.1-flash-lite total_tokens=3240 turns=12 path=data\Google_gemini-3.1-flash-lite\son-set[1].json
+2026-09-15 20:07:43,254 INFO MODEL_START provider=Google model=gemini-3.1-flash-lite
+2026-09-15 20:07:48,278 ERROR MODEL_FAILURE provider=Google model=gemini-3.1-flash-lite error_code=HTTP_503 reason=model call failed or returned no response
+2026-09-15 20:08:48,275 INFO MODEL_START provider=Google model=gemini-3.1-flash-lite
+2026-09-15 20:09:08,183 INFO SUCCESS provider=Google model=gemini-3.1-flash-lite total_tokens=3255 turns=12 path=data\Google_gemini-3.1-flash-lite\son-set[1].json
+2026-09-15 20:10:08,180 INFO MODEL_START provider=Google model=gemini-3.1-flash-lite
+2026-09-15 20:10:17,180 INFO SUCCESS provider=Google model=gemini-3.1-flash-lite total_tokens=3483 turns=12 path=data\Google_gemini-3.1-flash-lite\son-set[1].json
+2026-09-15 20:11:17,178 INFO MODEL_START provider=Google model=gemini-3.1-flash-lite
+2026-09-15 20:11:25,108 ERROR MODEL_FAILURE provider=Google model=gemini-3.1-flash-lite error_code=HTTP_503 reason=model call failed or returned no response
+2026-09-15 20:12:25,106 INFO MODEL_SUMMARY
+  provider_model: Google / gemini-3.1-flash-lite
+  attempts: 16
+  saved: 14
+  failed: 2
+  accept_rate: 87.50%
+  average_tokens: 3484.14
+  turn_range: 12-12
+  expired: False
+  failure_categories:
+  empty_response: 2

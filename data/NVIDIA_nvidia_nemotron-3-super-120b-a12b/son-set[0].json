@@ -1237,5 +1237,191 @@
         "response": "Nice, you've got it! Want to try another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "physics",
+    "topic": "Buoyancy and density",
+    "problem": "A uniform rectangular block of height 12 cm and base area 10 cm² floats in a container containing oil (density 0.8 g/cm³) floating on water (density 1.0 g/cm³). The block is oriented with its vertical sides parallel to the fluid layers. It is observed that 3 cm of the block's height is above the oil surface (in air), 4 cm is submerged in the oil layer, and the remaining portion is submerged in water. Assuming the block is in static equilibrium, what is the density of the block material?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know the block's weight must equal the total buoyant force, but I'm not sure how to split the buoyant force between the oil and water parts."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student shows they know weight-buoyancy equality but are unsure how to account for two fluids; we need to probe their understanding of buoyant force contributions.",
+        "state": "Diagnosis",
+        "response": "Let's start by thinking about what determines the buoyant force on an object that's touching more than one fluid, and how we might break it down."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think the buoyant force depends on the weight of the fluid displaced, so I'd need to find the volume of fluid displaced in each layer."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified that displaced volume matters but hasn't linked it to the block's dimensions; we prompt them to calculate those volumes.",
+        "state": "Support",
+        "response": "You mentioned displaced volume; to move forward, could you explain how you would calculate that volume for each fluid using the block's dimensions?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I'd multiply the base area by the height submerged in each fluid. So for oil it's area times 4 cm, and for water it's area times 5 cm."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student has the method for displaced volumes; we check whether they understand that the part above the oil doesn't contribute to buoyancy.",
+        "state": "Support",
+        "response": "And what about the part of the block that's above the oil layer? Does it contribute to the buoyant force, or should we ignore it when calculating total buoyancy?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "No, only the submerged parts displace fluid, so the section in air doesn't add any buoyant force."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student knows which volumes count and how to get them; we now ask them to write the equilibrium equation linking weight and buoyant forces.",
+        "state": "Synthesis",
+        "response": "Can you now write an equation that sets the block's weight equal to the combined buoyant force from the oil and water, expressing everything in terms of the block's density?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Weight = ρ_block * g * V_total. Buoyant = ρ_oil * g * V_oil + ρ_water * g * V_water. Setting them equal and canceling g and the base area gives ρ_block = (ρ_oil * h_oil + ρ_water * h_water) / H_total."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has written the correct equation and described the algebra; we ask them to state the rule in their own words to confirm synthesis.",
+        "state": "Synthesis",
+        "response": "In your own words, could you describe the principle that lets you determine the block's density from how much of it is submerged in each fluid?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The density of the block equals the weighted average of the fluid densities, weighted by the fraction of the block's volume that's submerged in each fluid."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the principle behind the solution; we wrap up the conversation.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! Would you like to try another similar problem to practice, or shall we move on to a different topic?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Coding-decoding",
+    "problem": "In a certain code, 'CAT' is written as 'DBU', 'DOG' as 'EPH', and 'FISH' as 'GJTI'. What is the code for the word 'JAZZ'?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I don't get how they changed the letters."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student shows lack of understanding; ask what they notice to start diagnosis.",
+        "state": "Diagnosis",
+        "response": "What do you notice about how C becomes D?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Maybe each letter is shifted by 2 places?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student overestimated shift; provide a concise hint correcting the magnitude.",
+        "state": "Support",
+        "response": "C to D is actually just one step forward."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, maybe it's just one step?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student seems unsure; direct them to check other letter pairs for confirmation.",
+        "state": "Support",
+        "response": "Look at A to B and T to U in the examples."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "A to B is one, T to U is one, so yes."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student has grasped the shift concept; prompt them to apply it to JAZZ.",
+        "state": "Support",
+        "response": "Now try to apply that same shift to the word JAZZ."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "J->K, A->B, Z->B, Z->B => K B B B."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student missed wrap‑around after Z; remind them of alphabet cyclic nature.",
+        "state": "Support",
+        "response": "Remember, after Z the alphabet starts again at A."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Yes, after Z it goes back to A."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student knows the rule; ask them to write out the code for JAZZ to solidify.",
+        "state": "Support",
+        "response": "Write out the code for JAZZ using that rule."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Each letter goes to the next letter; after Z it wraps to A. JAZZ becomes K B A A."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly articulated the concept; wrap up the interaction.",
+        "state": "Closing",
+        "response": "Nice, you've got it! Want to try another one?"
+      }
+    ]
   }
 ]

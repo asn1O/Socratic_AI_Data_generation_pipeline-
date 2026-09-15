@@ -829,5 +829,401 @@
         "response": "That is an absolutely brilliant explanation! You captured the definition perfectly and used the example to make it crystal clear. You did a fantastic job working through those tricky spots today. Would you like to try another problem to keep this momentum going?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "computer_science_light",
+    "topic": "Tracing a simple algorithm by hand",
+    "problem": "Trace the following code by hand and determine the final values of variables a and b after the loop finishes:\n\na = 2\nb = 10\nwhile a < b:\n    if a % 3 == 0:\n        b = b - 1\n    else:\n        a = a + 2",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this code, but I don't really know where to start. It has a while loop and some if things inside, and it looks pretty confusing."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is overwhelmed by the algorithm structure. I need to guide them to identify the initial state first to break the problem down into manageable steps.",
+        "state": "Diagnosis",
+        "response": "It's completely normal to feel overwhelmed at first! Before we look at the loop itself, what are the initial values of the variables a and b when the program starts?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Okay, at the very beginning, it says a = 2 and b = 10. I get that part, but how do we know if we should go inside the while loop?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the starting values but is unsure how loop conditions work. I will ask a guiding question to help them evaluate the condition.",
+        "state": "Support",
+        "response": "Since we have a and b, how does their relationship compare to the condition written next to the while keyword?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Yeah, 2 is definitely less than 10, so that's true. But then there is an if a % 3 == 0 statement. I don't know what the percent sign does here."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student evaluated the loop condition correctly but is blocked by a lack of knowledge about the modulo operator. I'll explain it briefly and ask them to apply it.",
+        "state": "Support",
+        "response": "Great job on the condition! The percent sign is the modulo operator, which finds the remainder after dividing. For example, 5 % 2 is 1. If a is 2, what is the remainder when we divide 2 by 3?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, so we divide 2 by 3. Since 3 doesn't go into 2, is the remainder just 0?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student made their single allowed mistake on the modulo concept. I need to correct this politely and prompt them to rethink the remainder.",
+        "state": "Support",
+        "response": "Close guess! When we divide 2 by 3, 3 goes into 2 zero times, leaving the entire 2 leftover as the remainder. Since 2 % 3 is actually 2, does it equal 0?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Ah, I see! So 2 doesn't equal 0. That means the if part is false, so we go to the else block instead, which makes a = a + 2. So a becomes 4, right?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student successfully traced the first loop iteration. I need to ask a guiding question to prompt them to perform the next iteration.",
+        "state": "Diagnosis",
+        "response": "What is the next step now that we have updated a to 4 and b is still 10?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Yes, 4 is less than 10. For the modulo part, 4 divided by 3 has a remainder of 1, which isn't 0. So we do the else again and a becomes 6. Now a is 6 and b is 10. If we check again, 6 is less than 10. But this time, 6 is divisible by 3, so 6 % 3 is 0. So we go to the if part and b becomes 9. Then we do it again, b becomes 8, then 7, then 6... and then it stops because 6 is not less than 6! Is that right?"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student successfully completed the entire trace and reached the correct final answer. I will transition to synthesis so they can summarize their learning.",
+        "state": "Synthesis",
+        "response": "That is absolutely correct! You successfully traced the entire algorithm to its end. In your own words, how would you explain the process of tracing a loop to someone else who is just starting?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "I would tell them to write down the variables first, then check the loop condition. Inside the loop, you follow the paths step-by-step, update the variables, and keep repeating the check until the condition becomes false."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully synthesized the concept in their own words. I will now close the conversation warmly.",
+        "state": "Closing",
+        "response": "That's a perfect summary! Keeping track of the variables step-by-step is the key to mastering code tracing. Fantastic work today! Ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Personal budgeting",
+    "problem": "Sarah wants to save $300 a month for a vacation. Her monthly take-home pay is $3,000. Her fixed expenses (rent, utilities, insurance) are $1,800. Her variable expenses (groceries, dining out, entertainment) currently average $1,100. How much does she need to reduce her variable expenses by to meet her savings goal, and what percentage of her total budget will her new variable expenses represent?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I see Sarah wants to save $300, but right now she only has $100 left over. I'm not sure how to figure out how much to cut from her variable expenses."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student identified the leftover savings, showing some initial understanding. I need to diagnose if they understand how they calculated this value before guiding them to the next step.",
+        "state": "Diagnosis",
+        "response": "You noticed she has $100 left over. How did you calculate that amount from the numbers in the problem?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, her income is $3,000. Her fixed expenses are $1,800 and variable are $1,100, which equals $2,900. So $3,000 minus $2,900 is $100."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly explained how they calculated the current savings. Now, I want to transition them to finding the gap to the savings goal.",
+        "state": "Support",
+        "response": "Exactly! If she is currently saving $100 but wants to save $300, how much more does she need to find in her budget?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Since her goal is $300, doesn't she need to cut her variable expenses by the full $300 to reach it?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made their first mistake, asserting she needs to cut $300. I need to support them with a counter-question hint to help them realize they already have $100 saved.",
+        "state": "Support",
+        "response": "If she already has $100 saved without changing anything, and she cuts another $300, how much total savings would she end up with?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, right! She'd end up with $400. So she only needs to cut $200 from her variable expenses to hit the $300 goal."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student successfully corrected their mistake and identified the $200 reduction. Now, I want to guide them to calculate the new variable expenses.",
+        "state": "Support",
+        "response": "That is correct! Now, after cutting that $200 from her budget, what will her new monthly variable expenses be?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I'm a bit confused here. Do I subtract the $200 from her total income or just her variable expenses?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student is showing beginner-level confusion about where to apply the cut. I will offer a hint to focus their attention on the definition of variable expenses.",
+        "state": "Support",
+        "response": "Since we want to reduce her variable expenses specifically, what would happen if we subtract that $200 directly from her original variable amount of $1,100?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Okay, so her new variable expenses are $900. To find the percentage, is it $900 divided by the $1,200 she has left after fixed expenses, which is 75%?"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student made their second mistake by calculating the percentage based on leftover income instead of total income. I need to redirect them to the 'total budget' constraint.",
+        "state": "Support",
+        "response": "You got the $900 right! But remember, the question asks for the percentage of her total budget. What was her total starting monthly income?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Ah, her total income is $3,000. So $900 divided by $3,000 is 30%. Her new variable expenses are 30% of her total budget!"
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student successfully calculated the final answer of 30%. I will now transition to the synthesis state to have them explain the underlying budgeting concept in their own words.",
+        "state": "Synthesis",
+        "response": "Spot on! In your own words, how do we use the difference between fixed and variable expenses to adjust a personal budget when we have a new savings goal?"
+      },
+      {
+        "turn": 15,
+        "speaker": "student",
+        "text": "To reach a new savings goal, we keep fixed expenses the same since they can't easily change, find our current savings shortfall, and then subtract that shortfall from our variable expenses to see how much we can spend."
+      },
+      {
+        "turn": 16,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully synthesized the concept of adjusting variable expenses. I will now close the conversation warmly.",
+        "state": "Closing",
+        "response": "Wonderful job! You've really mastered how to adjust variable expenses to meet a savings goal. Ready to try another budgeting problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Parts of speech",
+    "problem": "Identify the part of speech of the word 'sweetly' in the sentence: 'The blue bird sang sweetly.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I need to find the part of speech for 'sweetly' in 'The blue bird sang sweetly', but I'm stuck."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is stuck at the very beginning. I will start by helping them identify the core action word in the sentence.",
+        "state": "Diagnosis",
+        "response": "That's a great sentence. Let's start by finding the main action word. What is the action here?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "The action is 'sang'."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the verb. Now I need to see if they can connect the target word to its referent without giving it away.",
+        "state": "Diagnosis",
+        "response": "Which word in the sentence does 'sweetly' give us more information about?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I think 'sweetly' describes the bird."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made a common beginner mistake of linking the modifier to the noun. I will use a supportive hint to point out the distinction.",
+        "state": "Support",
+        "response": "If it described the bird, we'd say 'sweet bird'. Here, 'sweetly' tells us how the bird did what?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, it tells us how it sang!"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student successfully redirected their focus to the verb. Now I will ask them to identify the part of speech that modifies a verb.",
+        "state": "Support",
+        "response": "What do we call a word that describes a verb?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Is it an adverb?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student correctly guessed 'adverb'. Now I need them to synthesize this knowledge by articulating the definition in their own words.",
+        "state": "Synthesis",
+        "response": "Spot on! In your own words, how do we know 'sweetly' is an adverb here?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Because it describes the verb 'sang' by telling us how the action was done."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully synthesized the rule. I will now close the session warmly.",
+        "state": "Closing",
+        "response": "Exactly, you nailed it! Ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Parts of speech",
+    "problem": "Identify the part of speech of the word 'bright' in this sentence: 'The bright sun warmed the chilly morning.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think 'bright' is a verb because the sun is shining and that's an action, but I'm not really sure."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has made a conceptual mistake by classifying 'bright' as a verb. I need to diagnose their understanding of verbs to help them see the error.",
+        "state": "Diagnosis",
+        "response": "Interesting start. Usually, verbs are action words. What action do you think the word 'bright' is performing in this sentence?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, the sun is shining brightly in the sky, so 'bright' is the action of the sun shining on the morning."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is still confusing the description of the sun with the actual verb of the sentence. I will ask a pure question to guide them to find the true action.",
+        "state": "Support",
+        "response": "What is the physical action happening in the sentence: 'The bright sun warmed the chilly morning'?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I don't really get what the action is here. It just sounds like a description of a morning to me."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student expresses genuine non-understanding. This requires a minimal supportive hint to direct their attention to what the sun did.",
+        "state": "Support",
+        "response": "That's completely okay! Let's try this: what is the main thing that actually happened to the chilly morning in our sentence?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, it warmed it! So 'warmed' is the verb. That means 'bright' must be a noun because it's a thing."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the verb but made a new mistake, asserting 'bright' is a noun. I need to diagnose their definition of a noun.",
+        "state": "Diagnosis",
+        "response": "Is 'bright' an actual physical person, place, or thing on its own?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Yes, I think 'bright' is a noun because a bright light is a physical thing that you can see in the sky."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student's noun misconception has resurfaced. I need to offer a supportive hint to help them distinguish the noun 'sun' from the descriptor 'bright'.",
+        "state": "Support",
+        "response": "If 'sun' is the actual noun we are talking about here, what is the word 'bright' doing to that word 'sun'?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "It's telling us what the sun looks like. It describes the sun! So that means 'bright' is actually an adjective."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has arrived at the correct answer. Now I want them to synthesize this by explaining the rule in their own words.",
+        "state": "Synthesis",
+        "response": "In your own words, how would you explain what an adjective does and how we can identify it?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "An adjective is a describing word. It describes a noun, like telling us what kind of sun it is, so we can spot it by seeing if it describes a thing."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the rule. The session is complete, so I will close warmly.",
+        "state": "Closing",
+        "response": "Exactly, you've got it! That was a fantastic explanation. Ready to try another parts of speech problem?"
+      }
+    ]
   }
 ]

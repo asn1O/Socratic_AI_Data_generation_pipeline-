@@ -1237,5 +1237,191 @@
         "response": "Great, you've got it! Ready for another example?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Supply and demand",
+    "problem": "Suppose the market for coffee experiences a simultaneous increase in both supply and demand. The demand increase is due to a health study praising coffee, while the supply increase results from a new harvesting technology. How will the equilibrium price and quantity change? Explain the conditions under which price rises, falls, or stays the same.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think when demand goes up, price goes up, but I'm not sure what happens when supply also goes up at the same time."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student shows partial understanding of demand shift but unsure about combined shifts; need to diagnose their mental model.",
+        "state": "Diagnosis",
+        "response": "What do you think happens to the equilibrium quantity when both curves shift right?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "If both supply and demand increase, the price definitely goes up because more people want it and there's more of it."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly asserts price direction; need to guide them to consider relative magnitudes.",
+        "state": "Support",
+        "response": "Could the size of each shift affect whether price rises or falls?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "If supply increases a lot, the equilibrium quantity might actually decrease."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student thinks quantity could fall; need to hint that both shifts increase quantity.",
+        "state": "Support",
+        "response": "When both curves shift right, what does each shift alone do to quantity?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I don't really get how to compare the magnitudes of the shifts."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student confused about magnitude comparison; need to elicit their understanding of shift magnitudes.",
+        "state": "Diagnosis",
+        "response": "How would you describe what determines the magnitude of a demand shift versus a supply shift?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The demand shift is bigger because the health study affects everyone, so price will fall."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student misapplies magnitude; hint about relative shift direction.",
+        "state": "Support",
+        "response": "If demand shifts right more than supply, what happens to price?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Oh, if demand shifts more, price rises; if supply shifts more, price falls. Quantity always rises."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correct reasoning; now ask them to articulate the rule.",
+        "state": "Synthesis",
+        "response": "In your own words, what's the rule for price and quantity when both supply and demand increase?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "When both supply and demand increase, quantity always increases. Price rises if demand increases more than supply, falls if supply increases more, and stays same if they increase equally."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student correctly explained the concept; wrap up.",
+        "state": "Closing",
+        "response": "Great job! You've got it. Ready for another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Number series",
+    "problem": "Find the next term in the series: 1, 2, 6, 21, 88, ?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I see the numbers growing fast. Differences are 1, 4, 15, 67... not clear."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student computed differences but didn't see a pattern; need to explore other relationships.",
+        "state": "Diagnosis",
+        "response": "You looked at differences. What about ratios or multiplicative steps?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Ratios: 2, 3, 3.5, 4.19... not constant either."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Ratios not constant; hint toward multiplicative pattern with increasing factor.",
+        "state": "Support",
+        "response": "Notice each term roughly multiplies by increasing integers. Check: 1*1+1=2, 2*2+2=6."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "So multiply by 1,2,3,4? Then 88*5=440? But earlier terms added something."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student identified multiplication but missed the added index; provide explicit rule.",
+        "state": "Support",
+        "response": "You're missing the added index. The pattern is term * n + n, where n starts at 1."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Ah, so 1*1+1=2, 2*2+2=6, 6*3+3=21, 21*4+4=88, then 88*5+5=445."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student computed correctly; confirm the next term.",
+        "state": "Support",
+        "response": "Correct. The next term is 445."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Got it. The rule is multiply by position and add position."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student articulated the rule; now ask for synthesis in own words.",
+        "state": "Synthesis",
+        "response": "In your own words, what's the general rule for this series?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Each term equals previous term times its step number plus that step number."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has explained the concept correctly; time to close.",
+        "state": "Closing",
+        "response": "Nice work! Ready for another series?"
+      }
+    ]
   }
 ]

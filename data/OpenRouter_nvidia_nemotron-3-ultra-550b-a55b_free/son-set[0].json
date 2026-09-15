@@ -1051,5 +1051,413 @@
         "response": "Great job! Ready for another?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "physics",
+    "topic": "Series vs parallel circuits",
+    "problem": "A circuit consists of a 12 V battery connected to the following resistor network: R1 = 4 Ω and R2 = 6 Ω are in series. This series combination is in parallel with R3 = 12 Ω. The resulting parallel combination is then in series with R4 = 3 Ω. Calculate the total current supplied by the battery.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know I need total resistance first. The 4 Ω and 6 Ω are in series, so 10 Ω. That 10 Ω is in parallel with 12 Ω. I think for parallel you average them: (10+12)/2 = 11 Ω. Then the 3 Ω is in series, so total 14 Ω. Current = 12/14 ≈ 0.86 A. But I'm not sure about the parallel part."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified series combination but used an incorrect parallel formula. Need to elicit their understanding of parallel resistor combination.",
+        "state": "Diagnosis",
+        "response": "You're right about the series part. How did you decide to combine the 10 Ω and 12 Ω in parallel? What's the rule for resistors in parallel?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I thought for two resistors in parallel you just average them. So (10+12)/2 = 11 Ω. That's what I remember from somewhere."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student explicitly stated the wrong parallel rule. Provide a minimal hint to recall the correct formula without giving it directly.",
+        "state": "Support",
+        "response": "The parallel formula isn't an average. What's the expression for the equivalent resistance of two resistors in parallel? Think about conductances."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh right, it's 1/R_eq = 1/R1 + 1/R2. So 1/10 + 1/12 = 11/60, so R_eq = 60/11 ≈ 5.45 Ω."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student correctly computed the parallel equivalent. Now check if they remember the series 3 Ω resistor.",
+        "state": "Diagnosis",
+        "response": "Good, the parallel part is 5.45 Ω. What about the 3 Ω resistor? How does it fit into the total resistance?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I think the 3 Ω is in series with the battery, not with the parallel combo, so the total resistance is just the parallel equivalent 5.45 Ω."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student explicitly omitted the series 3 Ω. Hint to reconsider what 'in series with' means for resistances.",
+        "state": "Support",
+        "response": "The problem states the parallel combination is in series with R4=3 Ω. What does 'in series with' mean for resistances?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Right, series means you add them. So total resistance = 5.45 Ω + 3 Ω = 8.45 Ω. Then current = 12 V / 8.45 Ω ≈ 1.42 A."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student now has correct total resistance and current. Verify they can articulate the full sequence of steps.",
+        "state": "Diagnosis",
+        "response": "You've got the numbers right. Can you walk me through the full sequence of steps you used to combine these resistors?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "First, add series resistors: 4+6=10 Ω. Then combine that 10 Ω in parallel with 12 Ω using 1/R = 1/10+1/12, giving 60/11 Ω. Then add the 3 Ω in series: 60/11 + 3 = 93/11 ≈ 8.45 Ω. Finally, use Ohm's law: I = V/R = 12 / (93/11) = 132/93 ≈ 1.42 A."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student demonstrated correct procedure. Now ask them to state the general rule for series and parallel combinations.",
+        "state": "Synthesis",
+        "response": "In your own words, what's the rule for combining resistors in series versus in parallel?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "For series, resistances just add up directly because the same current flows through each. For parallel, the voltage across each is the same, so you add the conductances (1/R) and then take the reciprocal to get the equivalent resistance."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student correctly explained the concepts in their own words. The exchange is complete.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "computer_science_light",
+    "topic": "Binary number conversion",
+    "problem": "Convert the decimal number 13 to binary using the division-by-2 method.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm trying to convert 13 to binary by repeatedly dividing by two and noting the remainders, but I'm not confident about the order I should write them in or whether I'm doing the divisions correctly. I think I should keep dividing until the quotient reaches zero, then somehow read the remainders, but the exact steps feel fuzzy."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student demonstrates awareness of division method but is unsure about remainder order and correctness, indicating need to diagnose their current procedure.",
+        "state": "Diagnosis",
+        "response": "Could you please walk me through each division step you performed starting from 13, tell me the quotient and remainder at each stage, and also explain how you decided which remainder should appear first in the binary result? I want to see the full list of quotients and remainders so we can check where the binary digits come from and whether the ordering matches the method."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I divided 13 by 2 and got quotient 6 remainder 1, then 6 divided by 2 gives quotient 3 remainder 0, then 3 divided by 2 gives quotient 1 remainder 1, then 1 divided by 2 gives quotient 0 remainder 1. I wrote the remainders in the order I got them: 1, 0, 1, 1, so the binary number is 1011."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student produced remainders but wrote them top-to-bottom, yielding 1011 instead of 1101, showing a misunderstanding of remainder order; need to guide toward correct reading direction.",
+        "state": "Support",
+        "response": "What do you notice about the sequence of remainders you recorded, and what might happen if you read them from the last one obtained back to the first one instead of the order you wrote them? Could you try writing them in reverse order and see if the resulting binary string matches what you expect for thirteen?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "When I reverse the remainders I get 1, 1, 0, 1 which is 1101, and that looks right for thirteen. But I'm still not sure why the last remainder becomes the most significant bit; it feels like the first remainder should be the most important because it comes from the largest division."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student correctly reversed remainders to get 1101 but still thinks first remainder is most significant, indicating need to clarify significance of remainder positions.",
+        "state": "Support",
+        "response": "Why do you think the remainder from the very first division might represent the highest power of two, and what does the final quotient of zero tell you about which remainder corresponds to the highest place value? Can you relate each division step to a specific power of two and see which step actually produces the most significant bit?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I see now that the last division where the quotient becomes zero gives a remainder of one, and that remainder sits at the highest power of two, so the most significant bit comes from the final step, not the first. The first remainder is actually the least significant bit because it comes from dividing the original number by two."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student now correctly identifies that the final remainder is most significant, but we should verify they can articulate the general rule.",
+        "state": "Diagnosis",
+        "response": "Can you summarize the complete rule for converting any decimal number to binary using repeated division by two, including what to do with the remainders and why the order matters? Please explain it in your own words as if you were teaching someone else who has never seen this method before."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The rule is you divide the number by two repeatedly, collect all remainders, and then read them from top to bottom because the first remainder corresponds to the highest power of two."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student reverted to top-to-bottom reading, showing lingering confusion about remainder order; need to prompt correction.",
+        "state": "Support",
+        "response": "What would happen if you applied that top-to-bottom reading to the example we just worked through, and does the resulting binary match the correct value for thirteen? Try writing the remainders in the order you originally recorded them and see if the binary number equals thirteen or something else."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "If I read them top to bottom I get 1011 which is eleven, not thirteen, so that can't be right. The correct way is to read the remainders from bottom to top, giving 1101 for thirteen."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has demonstrated correct conversion and identified the proper remainder order; now ask them to articulate the rule in their own words.",
+        "state": "Synthesis",
+        "response": "In your own words, what is the step-by-step rule for converting a decimal integer to binary using division by two, and why must the remainders be read from the last one obtained to the first? Please include what you do with the quotients and when you stop dividing."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "You repeatedly divide the decimal number by two, recording each remainder, until the quotient becomes zero. Then you write the remainders in reverse order, starting with the last remainder you got, because that last remainder represents the highest power of two, and the first remainder is the least significant bit."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the conversion rule, demonstrating mastery; conversation can close warmly.",
+        "state": "Closing",
+        "response": "Great job, you've got it! Ready to try another conversion or move on to a new topic?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Inflation basics",
+    "problem": "An economy's nominal GDP grows at 7% per year for three years. The GDP deflator inflation rates are 2% in year 1, 4% in year 2, and 3% in year 3. Calculate the average annual real GDP growth rate over the three-year period using the exact Fisher relationship.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'll average inflation: (2+4+3)/3 = 3%. Real growth ≈ 7% - 3% = 4% per year."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student used approximation and arithmetic average of inflation, revealing a need to elicit understanding of the exact Fisher method.",
+        "state": "Diagnosis",
+        "response": "What does the exact Fisher equation say about nominal, real, and inflation?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Exact: (1+real) = (1+nominal)/(1+inflation). So compute real each year then average them."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student knows exact formula but is vague on how to average yearly real rates; a hint about combination method is appropriate.",
+        "state": "Support",
+        "response": "If you compute a real rate for each year, how should you combine them to get an average annual rate?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I'll take the arithmetic mean of the three yearly real rates."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly chose arithmetic mean; need to guide toward geometric mean via cumulative growth concept.",
+        "state": "Support",
+        "response": "What does the average annual growth rate represent in terms of cumulative growth?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "It's the constant rate giving same cumulative growth over three years. So multiply yearly real growth factors and take cube root."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student now understands geometric mean; next step is to compute cumulative nominal growth factor.",
+        "state": "Diagnosis",
+        "response": "Good. Now, what is the cumulative nominal growth factor over three years?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "(1.07)^3 = 1.225043."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student computed nominal factor correctly; need cumulative inflation factor next.",
+        "state": "Support",
+        "response": "And the cumulative inflation factor?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Multiply (1.02)*(1.04)*(1.03) = 1.092624."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has both cumulative factors; now ask for cumulative real factor.",
+        "state": "Support",
+        "response": "Then the cumulative real factor is?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Divide nominal by inflation: 1.225043 / 1.092624 = 1.1212. Annual real = (1.1212)^(1/3)-1 ≈ 3.88%."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student arrived at correct answer; now ask for synthesis of the method.",
+        "state": "Synthesis",
+        "response": "Can you summarize the correct method in your own words?"
+      },
+      {
+        "turn": 15,
+        "speaker": "student",
+        "text": "Compute cumulative nominal and inflation factors, divide to get cumulative real factor, then take the geometric mean (nth root) for average annual real growth."
+      },
+      {
+        "turn": 16,
+        "speaker": "tutor",
+        "reasoning": "Student correctly explained the concept; conversation can close warmly.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "biology",
+    "topic": "Human circulatory system",
+    "problem": "A patient experiences a sudden hemorrhage, losing about 1 liter of blood. Describe the sequence of physiological responses that act to restore blood pressure, including neural, hormonal, and local mechanisms, and explain how each component contributes to the overall compensation.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know that when you lose a lot of blood, your heart starts beating faster to compensate, but I'm really not sure how the body actually senses that the pressure has dropped or which hormones get released. I vaguely remember something about the kidneys releasing renin, but the whole pathway is fuzzy and I don't see how it all fits together."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student identifies heart rate increase and mentions renin but lacks clarity on pressure sensors and hormonal cascade, indicating a need to assess their current mental model before guiding.",
+        "state": "Diagnosis",
+        "response": "That's a good start. The body uses specialized pressure sensors called baroreceptors, located in the carotid sinus and aortic arch, to detect changes in arterial pressure. When pressure falls, these receptors send fewer signals to the brainstem, which then activates the sympathetic nervous system and inhibits parasympathetic output. The kidneys do release renin, but that's part of a slower hormonal response. Can you tell me what you think happens to heart rate and blood vessel tone when the sympathetic system is activated?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think the baroreceptors are actually in the kidneys and they detect low oxygen levels, so when blood volume drops they signal the heart to slow down to conserve energy."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly places baroreceptors in kidneys and claims they respond to oxygen, also reverses the heart rate response. Need to correct location and function while guiding toward correct sympathetic effect.",
+        "state": "Support",
+        "response": "Actually, baroreceptors are stretch-sensitive nerve endings in the carotid sinus and aortic arch, not in the kidneys, and they respond to changes in arterial pressure, not oxygen. When pressure drops, they reduce firing, which leads to increased sympathetic activity — this speeds up the heart and causes vasoconstriction, not slowing. A helpful way to remember: low pressure → more sympathetic → higher heart rate and tighter vessels. What do you think the sympathetic nerves release at the heart and vessels?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Okay, so the baroreceptors are in the big arteries and they tell the brain when pressure is low. Then the brain sends sympathetic signals that release norepinephrine at the heart to increase rate and at vessels to cause constriction. But I'm still confused about how the kidneys fit in — does renin act directly on the heart?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student correctly describes baroreceptor location and sympathetic effects, but is uncertain about renal hormonal pathway. Provide clarification on renin-angiotensin-aldosterone system (RAAS) and hint about angiotensin II effects.",
+        "state": "Support",
+        "response": "Great, you've got the neural part right. The kidneys release renin in response to low perfusion pressure and sympathetic stimulation. Renin converts angiotensinogen to angiotensin I, which becomes angiotensin II in the lungs. Angiotensin II is a potent vasoconstrictor and also stimulates aldosterone release, which increases sodium and water reabsorption to restore volume. So renin doesn't act directly on the heart; it works through angiotensin II. How would you summarize the overall effect of angiotensin II on blood pressure?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I think angiotensin II makes blood vessels constrict, which raises pressure, and aldosterone makes the kidneys keep more salt and water, so volume goes up. But I'm not sure if there's any other hormone that works quickly, like ADH, or if that's only for osmolarity."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identifies angiotensin II vasoconstriction and aldosterone volume retention, but is uncertain about ADH role in hemorrhage. Need to probe understanding of ADH release triggers.",
+        "state": "Diagnosis",
+        "response": "You're on track. Angiotensin II does cause vasoconstriction and aldosterone promotes volume retention. ADH, or vasopressin, is also released during hemorrhage — not just by osmolarity changes but also by baroreceptor input when pressure drops sharply. ADH increases water reabsorption in the collecting ducts and can cause vasoconstriction at high concentrations. Can you explain how the combined actions of sympathetic nerves, angiotensin II, and ADH would affect cardiac output and total peripheral resistance?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "So the sympathetic system and angiotensin II both cause vasodilation to lower resistance, while ADH causes vasoconstriction, so they kind of cancel each other out and cardiac output stays the same."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly states sympathetic and angiotensin II cause vasodilation, and thinks effects cancel. Need to correct direction of vascular effects and emphasize synergistic increase in resistance.",
+        "state": "Support",
+        "response": "Actually, both sympathetic activation and angiotensin II cause vasoconstriction, which raises total peripheral resistance, while ADH also promotes vasoconstriction and water retention. These mechanisms work together to increase blood pressure, not cancel out. The heart rate and contractility increase from sympathetic stimulation boost cardiac output. So you have higher cardiac output and higher resistance, both pushing pressure up. Think about what would happen if only one of these pathways were blocked."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Right, so they all push in the same direction: sympathetic nerves increase heart rate and contractility, angiotensin II and ADH constrict vessels, and aldosterone plus ADH keep fluid in. That means cardiac output goes up because of the heart, and resistance goes up because of the vessels, so blood pressure is restored. I think I've got the big picture now."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has integrated neural, hormonal, and volume mechanisms correctly and can articulate the combined effect on cardiac output and resistance. Ready to ask for a concise self-explanation to solidify learning.",
+        "state": "Synthesis",
+        "response": "Excellent. In your own words, walk me through the sequence from the moment blood volume drops to the restoration of pressure, naming the key sensors, neural pathways, hormones, and their target effects."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "When hemorrhage happens, baroreceptors in the carotid sinus and aortic arch sense the pressure drop and send fewer signals to the medulla. The medulla then ramps up sympathetic outflow, releasing norepinephrine that speeds the heart and tightens vessels. At the same time, the kidneys release renin, starting the renin-angiotensin-aldosterone cascade: angiotensin II constricts vessels and triggers aldosterone, which makes the kidneys retain sodium and water. ADH also rises from baroreceptor input, adding more water retention and vasoconstriction. Together, these raise heart rate, stroke volume, and vascular resistance, bringing pressure back up."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the entire compensatory cascade in their own words, demonstrating mastery of the concept. Conversation can now close warmly.",
+        "state": "Closing",
+        "response": "Nice work! You've put the whole picture together clearly. Ready to tackle another scenario?"
+      }
+    ]
   }
 ]

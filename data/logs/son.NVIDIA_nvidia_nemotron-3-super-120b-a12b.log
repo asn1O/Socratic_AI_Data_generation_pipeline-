@@ -44,3 +44,48 @@
   failure_categories:
   empty_response: 1
   invalid_json_syntax: 2
+2026-09-15 19:51:03,062 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-15 19:54:13,695 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=10844 turns=12 path=data\NVIDIA_nvidia_nemotron-3-super-120b-a12b\son-set[0].json
+2026-09-15 19:55:13,691 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-15 19:57:55,703 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=12702 turns=14 path=data\NVIDIA_nvidia_nemotron-3-super-120b-a12b\son-set[0].json
+2026-09-15 19:58:55,700 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-15 20:08:07,057 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=18578 turns=14 path=data\NVIDIA_nvidia_nemotron-3-super-120b-a12b\son-set[1].json
+2026-09-15 20:09:07,054 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-15 20:10:54,443 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=8939 turns=12 path=data\NVIDIA_nvidia_nemotron-3-super-120b-a12b\son-set[1].json
+2026-09-15 20:11:54,441 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-15 20:13:21,899 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=9913 turns=14 path=data\NVIDIA_nvidia_nemotron-3-super-120b-a12b\son-set[1].json
+2026-09-15 20:14:21,897 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-15 20:18:43,614 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=24867 turns=14 path=data\NVIDIA_nvidia_nemotron-3-super-120b-a12b\son-set[1].json
+2026-09-15 20:19:43,613 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-15 20:27:22,793 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=12172 turns=12 path=data\NVIDIA_nvidia_nemotron-3-super-120b-a12b\son-set[1].json
+2026-09-15 20:28:22,791 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-15 20:29:19,672 INFO REJECTED_RESPONSE_SAVED provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b path=data\rejected_responses\son-NVIDIA_nvidia_nemotron-3-super-120b-a12b.txt
+2026-09-15 20:29:19,672 ERROR JSON_INVALID provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b reason=speaker alternation broken at turn 11
+2026-09-15 20:30:19,671 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-15 20:32:33,075 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=13053 turns=12 path=data\NVIDIA_nvidia_nemotron-3-super-120b-a12b\son-set[1].json
+2026-09-15 20:33:33,074 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-15 20:38:37,208 ERROR MODEL_FAILURE provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b error_code=HTTP_503 reason=model call failed or returned no response
+2026-09-15 20:39:37,206 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-15 20:40:24,019 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=7356 turns=14 path=data\NVIDIA_nvidia_nemotron-3-super-120b-a12b\son-set[1].json
+2026-09-15 20:41:24,018 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-15 20:42:41,627 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=8974 turns=14 path=data\NVIDIA_nvidia_nemotron-3-super-120b-a12b\son-set[1].json
+2026-09-15 20:43:41,626 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-15 20:45:22,794 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=12359 turns=16 path=data\NVIDIA_nvidia_nemotron-3-super-120b-a12b\son-set[1].json
+2026-09-15 20:46:22,793 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-15 20:47:13,505 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=6427 turns=12 path=data\NVIDIA_nvidia_nemotron-3-super-120b-a12b\son-set[1].json
+2026-09-15 20:48:13,504 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-15 20:53:07,322 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=19201 turns=16 path=data\NVIDIA_nvidia_nemotron-3-super-120b-a12b\son-set[1].json
+2026-09-15 20:54:07,322 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-15 20:56:48,362 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=15428 turns=12 path=data\NVIDIA_nvidia_nemotron-3-super-120b-a12b\son-set[1].json
+2026-09-15 20:57:48,361 INFO MODEL_SUMMARY
+  provider_model: NVIDIA / nvidia/nemotron-3-super-120b-a12b
+  attempts: 16
+  saved: 14
+  failed: 2
+  accept_rate: 87.50%
+  average_tokens: 12915.21
+  turn_range: 12-16
+  expired: False
+  failure_categories:
+  empty_response: 1
+  speaker_alternation_broken: 1

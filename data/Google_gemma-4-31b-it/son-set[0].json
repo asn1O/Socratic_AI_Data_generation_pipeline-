@@ -1261,5 +1261,179 @@
         "response": "Spot on! Ready for another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Permutations and combinations",
+    "problem": "How many 3-digit numbers can be formed using the digits {0, 1, 2, 3, 4} if repetition is not allowed?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "It's 5 * 4 * 3 = 60."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student forgot that a 3-digit number cannot start with zero.",
+        "state": "Diagnosis",
+        "response": "What's the restriction on the first digit of a 3-digit number?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "It can't be 0. So 4 * 5 * 4 = 80."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the restriction but incorrectly calculated the remaining choices.",
+        "state": "Support",
+        "response": "If you use one digit first, how many choices remain for the second spot?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Ah, 4 * 4 * 3 = 48."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student solved the primary problem; now I'll test the concept with a variation.",
+        "state": "Diagnosis",
+        "response": "How would the count change if repetition were allowed?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Then it's 5 * 5 * 5 = 125."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has repeated the same mistake of ignoring the leading zero restriction.",
+        "state": "Support",
+        "response": "Remember the first digit. Does the same restriction apply here?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Yes, so 4 * 5 * 5 = 100."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has arrived at the correct answer and corrected the edge-case error.",
+        "state": "Synthesis",
+        "response": "In your own words, how do you handle zeros in these types of problems?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The first digit has one fewer choice because zero can't start the number."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has clearly articulated the rule, and the problem is solved.",
+        "state": "Closing",
+        "response": "Perfectly put! Ready for another challenge?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Common grammar errors",
+    "problem": "Identify and correct the grammatical error in the following sentence: 'Between you and I, the project is probably going to fail.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this sentence: 'Between you and I, the project is probably going to fail.' It sounds right to me, but my teacher marked it as wrong. I'm not sure why."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is confused and hasn't attempted an analysis yet. I need to elicit their current thinking to see where the gap is.",
+        "state": "Diagnosis",
+        "response": "It definitely sounds natural to many people! To start, can you tell me which part of the sentence you think the teacher is concerned about and why?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think it's 'Between you and I.' But it's probably correct because 'I' is the subject, and since it's at the start of the sentence, it should be in the subject form."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student made an incorrect claim about the role of 'I'. I will provide a hint about the function of the word 'Between'.",
+        "state": "Support",
+        "response": "Actually, let's look closer at the word 'Between.' In grammar, words like 'between' or 'with' are prepositions. Do you remember what happens to pronouns that follow a preposition?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, prepositions... I think they usually take the object form, like 'me' or 'him,' but I'm not totally sure if that applies when there are two people involved."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is hedging. I'll provide a simplification hint to help them realize the pronoun case should remain objective regardless of the number of people.",
+        "state": "Support",
+        "response": "That's a great intuition. To test it, try removing 'you and' from that phrase. Would you say 'Between I' or 'Between me'?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I'd definitely say 'Between me.' Wait, but maybe 'Between' acts like a conjunction here, which is why 'I' is used to connect the two subjects?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student made a second incorrect claim by misidentifying the part of speech. I need to correct the terminology and guide them back to the object rule.",
+        "state": "Support",
+        "response": "Actually, 'between' always functions as a preposition, even with multiple people. If the rule for prepositions requires an object, how should we change 'you and I' to fit?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I see now. It should be 'Between you and me' because both 'you' and 'me' are acting as the objects of the preposition 'between'."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has reached the correct answer. Now I want them to articulate the general rule to ensure they've internalized the concept.",
+        "state": "Synthesis",
+        "response": "Spot on! Now, to make sure this sticks, could you explain in your own words how to decide whether to use 'I' or 'me' after a word like 'between'?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Whenever a pronoun follows a preposition like 'between,' it has to be in the objective case. So even if another person is mentioned, I use 'me' instead of 'I' because it's an object, not the subject."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly and clearly explained the grammar rule, so the session can conclude.",
+        "state": "Closing",
+        "response": "Perfectly explained! You've got a great handle on this now. Ready for the next one?"
+      }
+    ]
   }
 ]

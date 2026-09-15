@@ -42,3 +42,46 @@
   expired: True
   failure_categories:
   empty_response: 6
+2026-09-15 19:51:03,071 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-15 19:52:38,052 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=10160 turns=14 path=data\Google_gemini-3-flash-preview\son-set[0].json
+2026-09-15 19:53:38,049 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-15 19:54:42,581 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=15668 turns=12 path=data\Google_gemini-3-flash-preview\son-set[0].json
+2026-09-15 19:55:42,578 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-15 19:57:07,101 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=6311 turns=12 path=data\Google_gemini-3-flash-preview\son-set[0].json
+2026-09-15 19:58:07,098 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-15 19:58:14,285 ERROR MODEL_FAILURE provider=Google model=gemini-3-flash-preview error_code=HTTP_503 reason=model call failed or returned no response
+2026-09-15 19:59:14,282 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-15 20:00:08,049 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=7035 turns=12 path=data\Google_gemini-3-flash-preview\son-set[0].json
+2026-09-15 20:01:08,046 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-15 20:01:55,982 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=10559 turns=12 path=data\Google_gemini-3-flash-preview\son-set[0].json
+2026-09-15 20:02:55,979 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-15 20:03:25,339 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=8296 turns=12 path=data\Google_gemini-3-flash-preview\son-set[1].json
+2026-09-15 20:04:25,336 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-15 20:04:54,096 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=7054 turns=12 path=data\Google_gemini-3-flash-preview\son-set[1].json
+2026-09-15 20:05:54,094 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-15 20:06:38,844 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=11160 turns=12 path=data\Google_gemini-3-flash-preview\son-set[1].json
+2026-09-15 20:07:38,841 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-15 20:08:18,377 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=10152 turns=12 path=data\Google_gemini-3-flash-preview\son-set[1].json
+2026-09-15 20:09:18,375 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-15 20:10:15,911 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=9702 turns=14 path=data\Google_gemini-3-flash-preview\son-set[1].json
+2026-09-15 20:11:15,909 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-15 20:11:53,914 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=8638 turns=12 path=data\Google_gemini-3-flash-preview\son-set[1].json
+2026-09-15 20:12:53,912 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-15 20:13:23,937 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=7321 turns=12 path=data\Google_gemini-3-flash-preview\son-set[1].json
+2026-09-15 20:14:23,939 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-15 20:16:40,376 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=13640 turns=12 path=data\Google_gemini-3-flash-preview\son-set[1].json
+2026-09-15 20:17:40,373 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-15 20:17:43,480 ERROR MODEL_FAILURE provider=Google model=gemini-3-flash-preview error_code=HTTP_429 reason=model call failed or returned no response
+2026-09-15 20:18:43,478 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-15 20:18:46,080 ERROR MODEL_FAILURE provider=Google model=gemini-3-flash-preview error_code=HTTP_429 reason=model call failed or returned no response
+2026-09-15 20:19:46,078 INFO MODEL_SUMMARY
+  provider_model: Google / gemini-3-flash-preview
+  attempts: 16
+  saved: 13
+  failed: 3
+  accept_rate: 81.25%
+  average_tokens: 9668.92
+  turn_range: 12-14
+  expired: True
+  failure_categories:
+  empty_response: 3
