@@ -167,3 +167,75 @@ Config parameter balance
     easy                          52
     hard                          44
     medium                        48
+2026-09-16 19:42:07,131 INFO 
+=== Run Statistics Summary ===
+Overall totals
+  Attempts: 39
+  Saved: 25
+  Failed: 14
+  Accept rate: 64.10%
+  Duration (h:m:s): 01:26:32
+
+Per-model results
+  Provider / Model                         Attempts  Saved  Accept %  Avg tokens  Turns  Total convos
+  ----------------------------------------  --------  -----  --------  -----------  -----  Total convos
+  NVIDIA / nvidia/nemotron-3-super-120b-a12b       15     14    93.33%     12068.29  12-18             54
+  NVIDIA / nvidia/nemotron-3-ultra-550b-a55b       15     11    73.33%      6394.00  12-14             46
+  NVIDIA / moonshotai/kimi-k3                     3      0     0.00%         0.00      -             13
+  NVIDIA / deepseek-ai/deepseek-v4-pro-0813        3      0     0.00%         0.00      -              1
+  NVIDIA / deepseek-ai/deepseek-v4-flash-0731        3      0     0.00%         0.00      -              0
+
+Failure reasons
+  Category                         Count
+  ------------------------------  -----
+  dead_model_404                      0
+  empty_response                     13
+  invalid_json_syntax                 1
+  turn_count_out_of_range             0
+  speaker_alternation_broken          0
+  malformed_tutor_tags                0
+  missing_problem_field               0
+  final_turn_not_closing              0
+  unexpected_exception                0
+  other                               0
+
+Turn-count distribution
+  min=12, max=18, avg=13.36
+
+Domain coverage
+  biology                            1
+  chemistry                          1
+  computer_science_light             5
+  economics_and_finance              1
+  ethics_and_critical_thinking       3
+  history_and_social_studies         2
+  language_and_grammar               2
+  logic_and_puzzles                  2
+  quantitative_aptitude              4
+  statistics_and_data                4
+
+Config parameter balance
+  socratic_level
+    high                           8
+    low                            9
+    medium                         8
+  student_level
+    advanced                       8
+    beginner                      10
+    intermediate                   7
+  hint_frequency
+    high                           8
+    low                            6
+    medium                        11
+  mistake_frequency
+    high                          13
+    low                            8
+    medium                         4
+  verbosity
+    high                           3
+    low                           11
+    medium                        11
+  difficulty
+    easy                          15
+    hard                           3
+    medium                         7

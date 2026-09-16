@@ -1,0 +1,101 @@
+[
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "computer_science_light",
+    "topic": "Big-O intuition via analogies",
+    "problem": "Explain the differences between O(1), O(n), and O(n^2) using everyday analogies.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know Big-O describes how runtime scales, but I'm fuzzy on how to map O(1), O(n), and O(n^2) to real-world examples."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student knows the definition but lacks concrete analogies; need to elicit their current mental models.",
+        "state": "Diagnosis",
+        "response": "What's your current understanding of what O(1) represents in practical terms?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think O(1) means constant time, like grabbing a book from a shelf when you know its exact spot. But I'm not confident."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student gave a decent analogy for O(1); now guide toward O(n) with a hint.",
+        "state": "Support",
+        "response": "That's a good start. Can you think of a task where the effort grows directly with the number of items, like checking each one?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Maybe looking for a specific card in a shuffled deck by flipping through one by one? The more cards, the longer it takes."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student identified linear search analogy; now prompt for quadratic analogy.",
+        "state": "Support",
+        "response": "Exactly. Now imagine you had to compare every card with every other card to find duplicates. How would the work change as the deck size increases?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "That would be way more work. If there are n cards, you'd do n comparisons for each card, so roughly n squared total comparisons."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student articulated quadratic growth; check if they grasp why it's squared.",
+        "state": "Diagnosis",
+        "response": "Why does comparing each pair lead to n squared rather than, say, 2n?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Because for each of the n cards, you compare against n cards, giving n times n. It's not just adding a constant per card."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student understands mechanism; now reinforce by asking to contrast all three.",
+        "state": "Support",
+        "response": "Good. How would you summarize the key difference in growth between constant, linear, and quadratic time?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Constant stays the same, linear grows proportionally, quadratic grows much faster because it's multiplied by itself."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correct comparative understanding; now ask them to articulate the core concept in their own words for internalization.",
+        "state": "Synthesis",
+        "response": "In your own words, what does Big-O notation really tell us about an algorithm's behavior as the input gets large?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Big-O describes the upper bound on how the runtime or steps increase relative to input size, ignoring constants, so we can compare algorithms by their dominant growth trend."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept; conversation can wrap up warmly.",
+        "state": "Closing",
+        "response": "Nice work! You've got the intuition down. Ready to try another analogy?"
+      }
+    ]
+  }
+]

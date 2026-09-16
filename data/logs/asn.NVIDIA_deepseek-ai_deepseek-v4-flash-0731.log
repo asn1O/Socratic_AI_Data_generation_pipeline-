@@ -52,3 +52,21 @@
   expired: True
   failure_categories:
   empty_response: 3
+2026-09-16 18:15:34,510 INFO MODEL_START provider=NVIDIA model=deepseek-ai/deepseek-v4-flash-0731
+2026-09-16 18:30:44,413 ERROR MODEL_FAILURE provider=NVIDIA model=deepseek-ai/deepseek-v4-flash-0731 error_code=HTTP_504 reason=model call failed or returned no response
+2026-09-16 18:31:44,413 INFO MODEL_START provider=NVIDIA model=deepseek-ai/deepseek-v4-flash-0731
+2026-09-16 18:46:53,054 ERROR MODEL_FAILURE provider=NVIDIA model=deepseek-ai/deepseek-v4-flash-0731 error_code=HTTP_504 reason=model call failed or returned no response
+2026-09-16 18:47:53,055 INFO MODEL_START provider=NVIDIA model=deepseek-ai/deepseek-v4-flash-0731
+2026-09-16 18:57:59,052 ERROR MODEL_FAILURE provider=NVIDIA model=deepseek-ai/deepseek-v4-flash-0731 error_code=HTTP_504 reason=model call failed or returned no response
+2026-09-16 18:57:59,052 ERROR MODEL_EXPIRED provider=NVIDIA model=deepseek-ai/deepseek-v4-flash-0731 reason=three consecutive API failures
+2026-09-16 18:58:59,053 INFO MODEL_SUMMARY
+  provider_model: NVIDIA / deepseek-ai/deepseek-v4-flash-0731
+  attempts: 3
+  saved: 0
+  failed: 3
+  accept_rate: 0.00%
+  average_tokens: 0.00
+  turn_range: -
+  expired: True
+  failure_categories:
+  empty_response: 3
