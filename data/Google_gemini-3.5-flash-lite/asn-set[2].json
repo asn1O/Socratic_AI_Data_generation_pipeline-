@@ -1,0 +1,785 @@
+[
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "chemistry",
+    "topic": "Balancing chemical equations",
+    "problem": "Balance the chemical equation: H2 + O2 -> H2O",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm totally lost. I don't know where to start with balancing this equation."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student expressed total confusion. I will explain the fundamental rule that atoms must be equal on both sides before asking how many oxygen atoms they see.",
+        "state": "Diagnosis",
+        "response": "Chemical equations need the same number of each atom on both sides. How many oxygen atoms are on the left?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "There are two oxygen atoms on the left because of O2."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified two oxygen atoms on the left. I will state that the right side only has one oxygen in H2O, then ask how to fix that imbalance.",
+        "state": "Diagnosis",
+        "response": "Right, and H2O only has one oxygen atom. So we need a coefficient of 2 in front of H2O."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "So I should just change H2O to H2O2 to make two oxygens."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made a classic mistake by changing the chemical formula instead of using a coefficient. I must correct this misconception directly.",
+        "state": "Support",
+        "response": "You can't change subscripts like that because it changes the substance into hydrogen peroxide. We have to use coefficients in front."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh right, I add a 2 in front of H2O so there are two oxygens now."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student successfully applied the coefficient for oxygen. Now I will state that this changed the hydrogen count, and ask what happens to hydrogen next.",
+        "state": "Support",
+        "response": "Putting a 2 in front of H2O gives us four hydrogens on the right side now."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Wait, putting a 2 in H2O makes four hydrogens? So I need to put a 2 in front of H2 on the left too."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student correctly balanced the hydrogen atoms. Now I prompt them to summarize the overall process in their own words before closing.",
+        "state": "Synthesis",
+        "response": "That balances the hydrogens! In your own words, why do we use coefficients instead of changing subscripts?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Coefficients change the amount of molecules without breaking the chemical identity, keeping the atom counts equal on both sides."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student accurately explained the concept in their own words. The session is complete.",
+        "state": "Closing",
+        "response": "Spot on! You've got it down. Ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Trip budget planning",
+    "problem": "Plan a 5-day group trip budget for 4 friends to Chicago. Total collective budget is $2,400. Lodging costs $180 per night total. Group flights are $110 per person round trip. Food and activities are estimated at $65 per person per day. Calculate the remaining budget per person for miscellaneous expenses, factoring in a hidden 10% booking fee applied only to lodging and flights combined.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I started by taking the $2,400 total and subtracting 5 nights of lodging at $180. That leaves $1,500. Then I multiplied the $110 flights by 4 people, which is $440. Subtracting that gives $1,060 for everything else."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student correctly calculated lodging and flight totals from the base numbers, but hasn't accounted for food, activities, or the booking fee yet. I will use Diagnosis to prompt them about the next category.",
+        "state": "Diagnosis",
+        "response": "You've got a solid start on lodging and flights. How are you factoring in the daily food and activity costs for all 4 people across the 5 days?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "For food and activities, it's $65 per person per day. With 4 people over 5 days, that's 4 times 5, which is 20 person-days, times $65, making $1,300 total."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student made a multiplication error by double-counting people or days, resulting in $1,300 instead of the correct $1,300? Wait, 4 people * 5 days * $65 = 20 * 65 = 1300. Actually that is correct arithmetic, but let's check the running total: $1,060 remaining minus $1,300 would mean they are already over budget. Let's point out that the expenses exceed the remaining budget so they spot the issue.",
+        "state": "Support",
+        "response": "Check your running total. If you subtract that $1,300 from your previous $1,060, what happens to the budget?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Wait, my math for food and activities is $65 times 4 people times 5 days, which is $1,300. But my remaining cash was only $1,060, so I must have subtracted flights incorrectly or miscalculated the initial pool."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student thinks they made an arithmetic error earlier, but their earlier math was fine; the combined expenses just exceed the $2,400 limit before fees. I'll provide a direct statement to clarify the total expense sum before we hit the fee trap.",
+        "state": "Diagnosis",
+        "response": "Your initial lodging and flight subtractions were actually right. Let's add up total fixed costs: $900 for lodging, $440 for flights, and $1,300 for food and activities. What is that sum?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Ah, $900 plus $440 plus $1,300 is $2,640. Wait, the total budget is only $2,400, so we are already over budget by $240 before even adding miscellaneous expenses!"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly realized they are over budget on base costs, but missed the 10% booking fee trap on lodging and flights which makes it worse. I will state the fee condition outright.",
+        "state": "Support",
+        "response": "Right, base costs alone exceed the budget. Don't forget there's also a 10% booking fee applied to lodging and flights combined before we look at the remainder."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Lodging was $900 and flights were $440, so their combined total is $1,340. Ten percent of that fee is $134. Adding that fee to our $2,640 base expenses brings total costs to $2,774."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student correctly factored in the fee and total expenses. Now I need them to synthesize the final per-person miscellaneous budget rule or realization.",
+        "state": "Synthesis",
+        "response": "Since total costs are $2,774 against a $2,400 budget, how would you summarize the final per-person miscellaneous outcome in your own words?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Since our total expenses of $2,774 exceed the $2,400 budget by $374, we don't have any money left for miscellaneous expenses, meaning a negative remainder of about $93.50 per person."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the final calculation and the deficit rule. Ready to close.",
+        "state": "Closing",
+        "response": "Spot on! You tracked all the constraints and caught the deficit perfectly. Great job working through that!"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "chemistry",
+    "topic": "Basic stoichiometry",
+    "problem": "Calculate the mass of water produced when 15.0 grams of butane (C4H10) reacts completely with excess oxygen gas. (Balanced equation: 2C4H10 + 13O2 -> 8CO2 + 10H2O)",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think I need to use the molar mass of butane to find moles, and then multiply by 10 because of the 10 waters in the equation."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified starting with moles of butane, but skipped the mole ratio step entirely by just grabbing the coefficient.",
+        "state": "Diagnosis",
+        "response": "You've got the right start finding moles of butane. But can you walk me through how the coefficients relate different substances in the balanced equation?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "The 10 means 10 moles of water are made for every 1 mole of butane we start with."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student misread the stoichiometric coefficients from the balanced equation, treating the butane coefficient as 1 instead of 2.",
+        "state": "Support",
+        "response": "Check the coefficient directly in front of the C4H10 in the balanced equation again. Is it 1?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh right, it's a 2 in front of the butane, so it's 2 moles of butane for every 10 moles of water."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student now has the correct mole ratio and is ready to set up the calculation, so I will state the molar mass conversion directly to keep the low socratic level pacing.",
+        "state": "Support",
+        "response": "Exactly, 2 moles of butane to 10 moles of water. Now use the molar mass of water, which is 18.02 grams per mole, to finish finding the final mass."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Okay, so I multiply 15 grams by 58.12 grams per mole first to get total moles of butane."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student reverted to a common procedural error of multiplying by molar mass instead of dividing by it to find moles.",
+        "state": "Diagnosis",
+        "response": "Take a close look at the units for molar mass, grams per mole. If you multiply grams by grams per mole, what happens to your units?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Ah, grams squared over moles, that's wrong. I need to divide 15 grams by the molar mass of butane, 58.12."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has corrected the molar mass division and understands the steps; now they need to articulate the full stoichiometric process.",
+        "state": "Synthesis",
+        "response": "That fixes it. Now, in your own words, summarize the overall sequence we used to get from the initial grams of reactant to the final grams of product."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "First I convert grams of a reactant to moles using its molar mass, then I use the balanced equation coefficients as a mole ratio to find the moles of the product, and finally I multiply by the product's molar mass to get the final mass in grams."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student accurately explained the entire stoichiometry workflow, so the session is complete.",
+        "state": "Closing",
+        "response": "Spot on! You nailed the full sequence. Great work today, and feel free to reach out whenever you want to tackle another one."
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "physics",
+    "topic": "Heat transfer",
+    "problem": "Imagine you leave a cold metal spoon and a wooden spoon of the exact same temperature on a kitchen counter overnight in a 70°F room. When you touch them in the morning, the metal spoon feels noticeably colder than the wooden spoon, even though both are at room temperature. Why does this happen in terms of heat transfer?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the metal spoon is just making the air around it colder, so it feels colder when I touch it."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has asserted a common misconception about the spoon generating cold or cooling the air. I need to use Diagnosis to gently check their baseline understanding of thermal equilibrium before correcting.",
+        "state": "Diagnosis",
+        "response": "What does it mean for both spoons to sit overnight in a room that's 70°F—what would their actual temperatures be compared to the room?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, they're probably both 70 degrees too, right? Because they've been sitting there all night."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified thermal equilibrium. Now I should use Support with a hint to prompt them to think about what actually happens when their hand touches each object.",
+        "state": "Support",
+        "response": "Exactly, they are both at 70°F. Since your body temperature is around 98.6°F, where does heat flow when you touch an object that is cooler than you?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Heat goes from my hand into the spoon because my hand is warmer."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identifies the direction of heat flow. I will use Support to guide them toward considering the rate at which different materials transfer that heat away.",
+        "state": "Support",
+        "response": "Spot on. Now, do all materials let heat move through them at the exact same speed?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I guess so, since they're both room temperature, they should take heat away at the same rate."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has now asserted their second misconception: that all room-temperature materials absorb heat at the same rate. I need to use Support with a hint comparing metals and insulators to challenge this.",
+        "state": "Support",
+        "response": "Think about cooking pans—why do they usually have metal bottoms for heating up quickly, but wooden or plastic handles so you don't burn your hand?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh! Because metal lets heat move through it really fast, but wood doesn't let heat move through it easily at all."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully corrected their misunderstanding and grasped the difference in conductivity. I'll use Synthesis to prompt them to tie it all together and explain the rule in their own words.",
+        "state": "Synthesis",
+        "response": "That's it. So bringing it back to the spoons, how does that difference in how quickly they move heat explain why the metal one feels colder to your skin?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The metal spoon sucks heat away from my finger super fast, which makes my skin temperature drop right there, while the wood takes heat away slowly so it doesn't feel as cold."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has clearly and accurately explained the concept of thermal conductivity and subjective feel. The conversation is complete.",
+        "state": "Closing",
+        "response": "Precisely right! You nailed it. Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "biology",
+    "topic": "Punnett squares / genetics",
+    "problem": "In pea plants, tall plant height (T) is dominant over short plant height (t). If you cross a heterozygous tall plant (Tt) with a homozygous short plant (tt), what proportion of the offspring would you expect to be tall, and how would you set up the Punnett square to figure this out?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this Punnett square problem, and honestly I'm pretty lost on how to even start drawing the grid or what letters go on the outside. Is it just random?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is expressing total initial confusion about setting up the grid and parent alleles, so I need to assess their baseline understanding of the parent genotypes provided in the problem.",
+        "state": "Diagnosis",
+        "response": "It is completely normal to feel a bit stuck when looking at a blank grid for the first time! To help us figure out what goes on the outside edges, can you tell me what alleles the two parent plants are carrying based on the problem description?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, one parent is heterozygous tall, so that must be big T and little t, like Tt. And the other parent is homozygous short, so that's probably just two little t's, right? As for putting them on the grid, I guess you just put both letters of a parent in the very first box together."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the parent genotypes (Tt and tt), which is great, but they asserted an incorrect procedure for placing them on the grid by putting both letters in one box. I need to guide them away from this misconception without giving away the rule.",
+        "state": "Support",
+        "response": "You nailed the parent genotypes with Tt and tt—that is exactly right! But regarding how they go on the grid, think about meiosis: when a parent makes gametes or sex cells, do they pass on both of their alleles together, or do those alleles separate so that each gamete gets only one?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh! They separate during meiosis, right? So the T and the t separate. That means for the Tt parent, one side of the square gets a big T at the top of a column, and the little t goes at the top of the next column over. And for the tt parent, since both alleles are lowercase, I guess both side labels are just little t."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully self-corrected regarding allele segregation and placing them along the top and side of the grid. Now I need to prompt them on how to combine those outside labels inside the grid boxes.",
+        "state": "Diagnosis",
+        "response": "That separation logic is spot on! You have successfully separated the alleles for both parents along the top and the side. Now that your outside labels are in place, how do you figure out what letters go inside each of the four inner boxes of the square?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Wait, do I just add all the letters together in every box, like turning Tt and tt into Tttt everywhere?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student made a second conceptual mistake by suggesting combining all alleles into a four-letter combo in every box. I need to support them in recognizing how many alleles each offspring actually inherits from each parent.",
+        "state": "Support",
+        "response": "That would definitely crowd the boxes! Remember that an offspring only gets one allele from the top parent and one allele from the side parent. What happens when you intersect just one column label and one row label for a single box?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Ah, okay, so each box only gets two letters total—one from the column above it and one from the row to its left. So the top-left box would get a big T from the top and a little t from the side, making it Tt."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully corrected their approach to filling the inner boxes and understands the two-allele combination. To move toward synthesis, I need them to look at all the filled boxes together and determine the final phenotypic outcome requested by the problem.",
+        "state": "Diagnosis",
+        "response": "You've got the inner squares filled out now. Looking at those resulting genotypes in all four boxes, and remembering that tall (T) is dominant over short (t), what proportion of those offspring are actually going to look tall?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Since two of the boxes end up as Tt, which are tall, and the other two are tt, which are short, half of the offspring will be tall and half will be short. Basically, a Punnett square lets us split up parent alleles into individual gametes, combine them inside the grid to see all possible offspring genotypes, and then use dominance rules to predict what traits will actually show up physically in the next generation."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has accurately explained the entire Punnett square process and concept in their own words. The session is complete.",
+        "state": "Closing",
+        "response": "Spot on! You explained that process and the reasoning behind it perfectly. Great job working through that, and let me know whenever you're ready for another one!"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "physics",
+    "topic": "Series vs parallel circuits",
+    "problem": "Consider a complex DC circuit with a 12V ideal voltage source connected to a network of four identical 10-ohm resistors. Resistor R1 is in series with the main branch, while resistors R2, R3, and R4 are wired in parallel with each other, forming a sub-branch that sits in series after R1. What is the total equivalent resistance of the entire circuit, and how does the current split among R2, R3, and R4 compared to the current flowing through R1?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm trying to find the equivalent resistance for this mixed circuit. Since there are four 10-ohm resistors, and three of them are in parallel and one is in series... I think maybe I just add them all up because they're in the same loop, but I'm not totally sure how the parallel part changes things."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student recognizes the mix of series and parallel components but is unsure how the parallel section alters the overall resistance calculation. Asking them to look closer at the parallel sub-branch helps them separate the circuit into distinct sections.",
+        "state": "Diagnosis",
+        "response": "How might you isolate just the parallel group of resistors—R2, R3, and R4—to calculate their combined resistance before dealing with R1?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "For the parallel part, since there are three 10-ohm resistors, I know the formula uses reciprocals, so 1/10 + 1/10 + 1/10 which is 3/10, so the resistance there is 10/3 ohms. But then I'm stuck on how to combine that result with R1."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly calculated the parallel equivalent resistance as 10/3 ohms, showing solid partial understanding. I need to guide them on how that whole parallel block relates to R1 in the main branch.",
+        "state": "Support",
+        "response": "You nailed the parallel calculation. Now, if you imagine replacing that entire parallel block with a single equivalent resistor of 10/3 ohms, how do elements connected one after another in a single path combine?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, right! Elements in a single path are in series, so I just add R1 to that 10/3 ohms. That would be 10 plus 10/3, which is 30/3 + 10/3, giving 40/3 ohms total resistance."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student successfully combined the series and parallel portions to find the total equivalent resistance. Now they need to address the second part of the problem regarding current splitting.",
+        "state": "Diagnosis",
+        "response": "That total resistance calculation looks solid. What can you tell me about the total current leaving the 12V source once it reaches the junction where R2, R3, and R4 branch out?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "All the current has to flow through R1 first since it's in the main branch. But once it hits the parallel section, it splits up among R2, R3, and R4. Since they're all identical 10-ohm resistors, I guess it splits equally?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly intuited that the current divides equally among identical parallel resistors. To ensure they fully grasp the mechanism, I will prompt them to connect this to conservation laws or branch voltages.",
+        "state": "Support",
+        "response": "That's a great observation about identical paths. What causes the current to divide that way across each individual branch in a parallel configuration?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Since they're in parallel, each branch experiences the same voltage drop across it, and because their resistances are all equal, Ohm's law means the current through each must also be equal, each taking one-third of the main branch current."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has accurately explained both the resistance combination and the current distribution using Ohm's law and circuit rules. It is time for them to summarize the underlying principle.",
+        "state": "Synthesis",
+        "response": "In your own words, how do series and parallel arrangements fundamentally differ in how they affect total resistance and distribute current through a circuit?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "In a series connection, every part shares the exact same current and resistances add up directly. In a parallel connection, components share the same voltage and offer multiple pathways, which reduces the overall equivalent resistance and causes the total current to divide among the branches."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has provided a clear, accurate summary of the core concepts, successfully completing the problem.",
+        "state": "Closing",
+        "response": "Spot on! You've got the core mechanics of mixed circuits down completely. Excellent work today!"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Sampling bias",
+    "problem": "A researcher wants to study the average daily screen time of high school students. They stand outside a local skate park on a Saturday afternoon and survey the first 50 teenagers who walk by. What potential issue might exist with how this sample was collected?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I guess 50 people might be a bit too small to represent every single high schooler?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student focuses on sample size rather than the method of selection. I need to probe their thinking about *where* and *how* the sample was gathered.",
+        "state": "Diagnosis",
+        "response": "Could sample size be an issue, sure. But what about the specific location and time they chose?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, they went to a skate park on a Saturday. Not all students hang out there."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student recognizes the location is specific, but hasn't connected it yet to who gets included or excluded. I'll prompt them to think about the traits of people at that location.",
+        "state": "Diagnosis",
+        "response": "How might the types of students who visit a skate park on a weekend differ from the wider high school population?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "They probably like skateboarding and being outdoors more than average kids. Maybe they spend less time on screens?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student is getting close to the core issue. I'll ask a question to help them link this specific group back to the target variable of screen time.",
+        "state": "Diagnosis",
+        "response": "If skate park visitors potentially spend less time on screens, what does that mean for the survey's average?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "It would probably make the overall average screen time look lower than it actually is for everyone."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identifies the skewed outcome. I can now guide them to name the systematic flaw in the sampling procedure.",
+        "state": "Support",
+        "response": "What do we call it when a sampling method systematically favors certain outcomes over others?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Is that sampling bias?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student correctly named the concept with some hesitation. Now I need them to articulate it in their own words to cement understanding.",
+        "state": "Synthesis",
+        "response": "Spot on. In your own words, why does choosing a skate park create that specific kind of bias here?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "It creates bias because the group isn't random; it leaves out kids with different habits, making the results unrepresentative."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the concept of sampling bias in their own words. Wrapping up the session.",
+        "state": "Closing",
+        "response": "Nailed it! That's a textbook example of sampling bias. Want to tackle another scenario?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Mean, median, mode",
+    "problem": "Find the median of the following dataset: 14, 7, 22, 19, 3, 11, 25.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm trying to find the median for these numbers, but I'm not totally sure where to start with it."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student is stuck at the very beginning of the problem. Using Diagnosis to understand their initial thought process without giving away steps.",
+        "state": "Diagnosis",
+        "response": "How do you usually begin organizing a set of numbers when you want to find the middle one?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, right, I probably need to put them in order from smallest to largest first, right?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student identified the first step correctly. Using Diagnosis to prompt them to execute it.",
+        "state": "Diagnosis",
+        "response": "Exactly. What does the dataset look like once you arrange them in order?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Let's see... 3, 7, 11, 14, 19, 22, 25."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student ordered the numbers correctly. Using Diagnosis to guide them toward finding the middle value now.",
+        "state": "Diagnosis",
+        "response": "Nice. Now that they're ordered, how do you locate the median value?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I think I just count inward from both ends until I land on the middle number."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student described the correct method. Using Support to have them apply it specifically to this ordered list.",
+        "state": "Support",
+        "response": "What number do you land on if you do that here?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Counting inward... that gives me 14 in the exact middle."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student found the correct answer. Moving to Synthesis to have them articulate the concept.",
+        "state": "Synthesis",
+        "response": "In your own words, how would you explain what the median represents and how you found it?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The median is just the exact middle number of a sorted dataset, and you find it by ordering the numbers and picking the center one."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student successfully explained the concept. Wrapping up with a warm Closing turn.",
+        "state": "Closing",
+        "response": "Spot on! You've got it down. Let me know if you want to tackle another one."
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Seating arrangement",
+    "problem": "Five people—Amy, Ben, Carl, Dan, and Eva—are sitting in a row of five chairs numbered 1 to 5 from left to right. Amy must sit next to Ben. Carl cannot sit in chair 1 or chair 5. Dan sits immediately to the right of Eva. If Carl sits in chair 3, who must be sitting in chair 1?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Since Carl is in chair 3, let's place him there first. Then Dan is right of Eva, so maybe Eva is in 1 and Dan is in 2. That leaves chairs 4 and 5 for Amy and Ben, so Amy is in 4 and Ben is in 5. That seems to work."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student made a solid start by placing Carl, but assumed an arrangement without checking if Amy and Ben are adjacent in that setup. I will use a direct statement and diagnosis to test their adjacency rule.",
+        "state": "Diagnosis",
+        "response": "Let's check your positions against all the rules. The problem states that Amy must sit next to Ben. In your layout, Eva is in 1, Dan is in 2, Carl in 3, Amy in 4, and Ben in 5. Are Amy and Ben sitting next to each other there?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh wait, Amy is in 4 and Ben is in 5, so yes, 4 and 5 are adjacent chairs. So that layout is valid and chair 1 is Eva."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student missed that multiple valid configurations might exist and incorrectly treated their first guess as the only answer. I need to point out there are other possibilities for Dan and Eva.",
+        "state": "Support",
+        "response": "Adjacency between 4 and 5 works, but remember that Dan must sit immediately to the right of Eva. Could Eva and Dan take chairs 4 and 5 instead, leaving chairs 1 and 2 for Amy and Ben?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "If Eva and Dan take 4 and 5, then Amy and Ben have to take 1 and 2. But wait, if Amy and Ben take 1 and 2, then chair 1 is Amy. So chair 1 could be Amy or Eva depending on where the block of two goes."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is narrowing down the possibilities well now, seeing that chair 1 can shift. I will provide a direct prompt to examine the remaining constraint space for chair 1.",
+        "state": "Support",
+        "response": "You're tracking the pairs nicely. Let's test both options for where the Eva-Dan pair can go since Carl is fixed in chair 3. What happens if Eva and Dan take chairs 1 and 2?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "If Eva and Dan are in 1 and 2, then Eva is in 1, Dan is in 2, Carl is in 3. Then Amy and Ben have to be in chairs 3 and 4, which breaks things because Carl is already in chair 3!"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified a conflict with chair 3 being occupied. I will use a direct statement to validate this deduction and push them toward the final verification.",
+        "state": "Diagnosis",
+        "response": "Spot on, Carl blocks chairs 1 and 2 from holding the Eva-Dan pair since Carl is fixed in chair 3. Given that restriction, what does it tell us about where the Eva-Dan pair actually has to go?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "That means Eva and Dan have to be in chairs 4 and 5. Therefore, chairs 1 and 2 must be occupied by Amy and Ben, meaning Amy is in chair 1 and Ben is in chair 2."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully solved the arrangement logic. I will now prompt them to synthesize the rule and reasoning in their own words before we wrap up.",
+        "state": "Synthesis",
+        "response": "That deduction is completely right. In your own words, how did eliminating the conflict with Carl's position force the final arrangement for Amy and Ben?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Since Carl takes chair 3 and Eva-Dan need two open adjacent spots, they can't fit in 1-2 because Dan would overlap Carl. So Eva-Dan must go in 4-5, leaving the remaining spots 1-2 for Amy and Ben, putting Amy in chair 1."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the logic and solved the problem. The session is complete.",
+        "state": "Closing",
+        "response": "Awesome job working through those constraints step by step! You've totally nailed it. Let me know when you're ready for another puzzle."
+      }
+    ]
+  }
+]

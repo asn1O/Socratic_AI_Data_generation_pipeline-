@@ -778,5 +778,674 @@
         "response": "Great, you've got it! Ready for the next one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Parts of speech",
+    "problem": "Identify the part of speech for each word in the sentence: 'The old man the boat.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think 'The' is a determiner, 'old' is an adjective, 'man' is a noun, 'the' is a determiner, and 'boat' is a noun. But that leaves no verb, so maybe I'm missing something."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student identified basic categories but missed a verb, indicating need to examine sentence structure more closely.",
+        "state": "Diagnosis",
+        "response": "How did you go about deciding which word might be the verb in this sentence?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, 'man' comes after 'old', so it feels like a noun. Could 'old' be the verb? No, 'old' describes age. Maybe 'boat' is a verb? Like 'to boat'?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student is guessing verbs incorrectly; need to guide toward subject-verb relationship.",
+        "state": "Support",
+        "response": "What if 'the old' functions as the subject of the sentence? What would that make 'man'?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "If 'the old' is the subject, then 'man' must be the verb. But 'old' is an adjective, not a noun. Can an adjective be a subject?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student recognizes 'man' as verb but stuck on 'old' category; hint about nominalized adjectives.",
+        "state": "Support",
+        "response": "Can adjectives sometimes act as nouns? Think of phrases like 'the poor' or 'the young'."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Right, 'the old' can be a noun phrase meaning old people. So 'man' is a verb. But then 'the' before 'boat' is a determiner, and 'boat' is a noun. Wait, is 'old' an adverb here?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified 'man' as verb but mislabels 'old' as adverb; need to clarify function.",
+        "state": "Diagnosis",
+        "response": "What role does 'old' play inside the phrase 'the old'? Does it modify a verb?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "No, 'old' modifies the implied noun 'people', so it's an adjective acting as a noun. 'The' is a determiner, 'boat' is a noun. So parts: determiner, adjective (nominalized), verb, determiner, noun."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has correct analysis; now guide to articulate general principle.",
+        "state": "Support",
+        "response": "How would you describe the pattern that allows 'old' to function as a noun?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Adjectives can become nouns when preceded by 'the' and referring to a group. And verbs like 'man' can look like nouns but function as verbs depending on structure."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student provided partial generalization; now ask for own words to internalize.",
+        "state": "Synthesis",
+        "response": "In your own words, what rule explains how words can shift parts of speech in a sentence?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Words aren't fixed; their part of speech depends on syntactic role. An adjective can become a noun when nominalized, and a verb can appear where a noun might be expected."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept; wrap up warmly.",
+        "state": "Closing",
+        "response": "Great job! You've got it. Ready for another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "biology",
+    "topic": "Punnett squares / genetics",
+    "problem": "In fruit flies, eye color is determined by an X-linked gene (R = red, dominant; r = white, recessive). Wing shape is determined by an autosomal gene (N = normal, dominant; n = vestigial, recessive). A red-eyed, normal-winged female heterozygous for both traits is crossed with a white-eyed, vestigial-winged male. What proportion of offspring are expected to be red-eyed with vestigial wings?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm not sure how to handle the X-linked trait together with the autosomal one. Do I make one big Punnett square?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student is unsure how to combine sex-linked and autosomal inheritance; need to elicit their current approach to dihybrid crosses.",
+        "state": "Diagnosis",
+        "response": "How would you normally set up a Punnett square for a dihybrid cross?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "For a dihybrid cross I'd do a 4x4 square with both parents' gametes. But here the male has only one X chromosome, so I'm not sure how to do the gametes."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student recognizes male's sex chromosomes differ but is stuck on gamete formation; guide them to start with the female's gametes.",
+        "state": "Support",
+        "response": "What gametes can the female produce, given she's heterozygous for both traits?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Since the traits are on different chromosomes, they assort independently. So she can make four gamete types: X^R N, X^R n, X^r N, X^r n."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified female gametes; now need to determine male gametes for the cross.",
+        "state": "Support",
+        "response": "Exactly. Now what about the male? He's white-eyed and vestigial-winged. What gametes does he produce?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "He has X^r and Y for sex chromosomes, and nn for wings. So his gametes are X^r n and Y n."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student has both gamete sets; prompt them to consider the Punnett square dimensions.",
+        "state": "Support",
+        "response": "With four female gametes and two male gametes, what size Punnett square do you need?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "A 4x2 grid, so 8 offspring total. I'll fill in the genotypes."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student ready to fill square; direct attention to the target phenotype.",
+        "state": "Support",
+        "response": "Perfect. As you fill it, keep track of eye color and wing shape. Which combinations give red eyes with vestigial wings?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Red eyes need at least one R allele. Vestigial wings need nn. Looking at the square, the offspring from female gametes X^R n and X^r n? Wait, X^R n crossed with male gametes gives red-eyed vestigial? Let me check: X^R n x X^r n -> female X^R X^r nn (red, vestigial). X^R n x Y n -> male X^R Y nn (red, vestigial). So two out of eight, or 1/4."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correct answer and reasoning; now ask them to articulate the overarching principle.",
+        "state": "Synthesis",
+        "response": "That's correct. In your own words, what's the key principle for combining sex-linked and autosomal traits in a cross?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "You treat them independently: determine gametes for each parent considering chromosome separation, then combine all gamete combinations. For sex-linked traits, males only pass their X to daughters and Y to sons, while autosomal traits follow Mendelian segregation. The overall proportion is the product of independent probabilities."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has explained the concept correctly; conversation is ready to wrap up.",
+        "state": "Closing",
+        "response": "Nice work! You've got a solid handle on this. Ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Argument structure: premises and conclusions",
+    "problem": "Identify the premise(s) and conclusion in this argument: 'All mammals are warm-blooded. Whales are mammals. Therefore, whales are warm-blooded.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "So the conclusion is 'All mammals are warm-blooded' because it's the first statement, right?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student identifies the first statement as the conclusion based on position, revealing a misunderstanding about how argument structure works. Need to diagnose why they think order determines role.",
+        "state": "Diagnosis",
+        "response": "What makes you think the first statement is the conclusion rather than a premise?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, 'therefore' usually introduces a premise, so the last part must be a premise too. The first sentence states a general fact, so that's the conclusion."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student explicitly claims 'therefore' introduces a premise — a clear factual error about indicator words. A minimal hint redirects attention to the actual function of 'therefore' without giving the answer.",
+        "state": "Support",
+        "response": "What role does 'therefore' actually play in an argument — does it signal a premise or something else?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh wait, 'therefore' signals the conclusion, not a premise. So 'whales are warm-blooded' is the conclusion. But only 'All mammals are warm-blooded' is a premise — 'Whales are mammals' is just background info."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student now correctly identifies the conclusion but incorrectly claims only one premise, treating the second statement as mere background. Need to diagnose their understanding of what premises do.",
+        "state": "Diagnosis",
+        "response": "How do the two statements before 'therefore' work together — do they each do the same job?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "They're both premises, but the first one is more general. Actually, isn't the first one a conclusion in this argument too, since it's a general rule?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student resurfaces confusion by suggesting the first premise is also a conclusion within this argument. Guide them to focus on the role each statement plays in this specific argument.",
+        "state": "Support",
+        "response": "In this specific argument, what job is each statement doing — which ones are offered as reasons, and which is the claim being supported?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Right, in this argument, both 'All mammals are warm-blooded' and 'Whales are mammals' are given as reasons. So they're both premises. The 'therefore' statement is the conclusion."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly identified both premises and the conclusion in this argument. Ready to synthesize the general principle for identifying conclusions.",
+        "state": "Synthesis",
+        "response": "Can you put it in your own words — how do you identify the conclusion in any argument?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The conclusion is the claim the argument is trying to prove — it's what everything else leads to. Premises are the reasons given to support it. Words like 'therefore' or 'so' usually point to the conclusion."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has articulated the rule in their own words, correctly explaining the relationship between premises and conclusion and the role of indicator words. The conversation is complete.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! Ready for the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Unit conversions",
+    "problem": "A rectangular garden bed measures 6 feet by 4 feet by 1.5 feet deep. You want to fill it with soil sold in bags of 50 liters each. How many bags do you need? (1 foot = 0.3048 meters, 1 cubic meter = 1000 liters)",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I started by finding the volume of the bed: 6 times 4 times 1.5 gives 36 cubic feet. But then I got stuck on how to get from cubic feet to liters. I know 1 foot is 0.3048 meters, but I'm not sure if I just multiply 36 by that or if there's something else with the cubic part."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student computed the volume correctly but is unsure how to handle the cubic conversion, revealing a need to diagnose their understanding of dimensional analysis for volume.",
+        "state": "Diagnosis",
+        "response": "Can you walk me through how you think the conversion from feet to meters works when you're dealing with a volume instead of a length?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, I know each foot is 0.3048 meters, so I thought maybe I multiply the 36 cubic feet by 0.3048 to get cubic meters. But that feels off because the units wouldn't match—cubic feet times meters per foot gives something weird. I'm wondering if I need to convert each dimension first, like 6 feet to meters, 4 feet to meters, 1.5 feet to meters, then multiply those three numbers together."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified that converting each dimension separately might be the right approach; a supportive hint can reinforce this strategy without giving the answer.",
+        "state": "Support",
+        "response": "What would happen if you converted each measurement to meters first and then calculated the volume? How would that compare to converting the total cubic feet directly?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "If I convert each side: 6 ft × 0.3048 = 1.8288 m, 4 ft × 0.3048 = 1.2192 m, 1.5 ft × 0.3048 = 0.4572 m. Multiplying those gives about 1.019 cubic meters. Then times 1000 gives 1019 liters. Dividing by 50 gives 20.38, so I'd need 21 bags. But I'm not 100% sure the cubic conversion factor is exactly (0.3048)^3 or if there's a rounding issue."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student has performed the conversion correctly but expresses uncertainty about the cubic factor; a hint to derive the factor will solidify their understanding.",
+        "state": "Support",
+        "response": "How could you verify that (0.3048)^3 is the correct factor for converting one cubic foot to cubic meters? What does that number represent?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Since 1 foot = 0.3048 m, a cube that's 1 foot on each side has volume 1 ft^3 = (0.3048 m)^3 = 0.0283168 m^3. So 36 ft^3 × 0.0283168 = 1.0194 m^3, which matches what I got by converting each dimension. That confirms the factor. Then 1.0194 m^3 × 1000 = 1019.4 L, divided by 50 = 20.388, so 21 bags."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student arrived at a fractional number of bags; a diagnostic question checks whether they understand the practical implication of rounding up.",
+        "state": "Diagnosis",
+        "response": "You got 20.388 bags. What does that mean in practice—can you buy a fraction of a bag, or what do you do with the decimal?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "You can't buy a fraction of a bag, so you have to round up to the next whole bag. That means 21 bags. If you only bought 20, you'd be short about 19 liters."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has demonstrated full procedural competence; moving to synthesis to have them articulate the general rule in their own words.",
+        "state": "Synthesis",
+        "response": "In your own words, what's the step-by-step process for converting a volume given in cubic feet into a number of liters, and then into whole bags of a given size?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "First, find the volume in cubic feet by multiplying the three dimensions. Then convert to cubic meters by multiplying by (0.3048)^3, or convert each dimension to meters first and then multiply. Multiply the cubic meters by 1000 to get liters. Finally, divide by the bag size in liters and round up to the next whole number because you can't purchase partial bags."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the complete conversion process, showing mastery; the conversation can now close warmly.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "biology",
+    "topic": "Food chains and ecosystems",
+    "problem": "In a simple grassland ecosystem, grass is eaten by grasshoppers, which are eaten by frogs, which are eaten by snakes, which are eaten by hawks. If a disease drastically reduces the grasshopper population, describe the likely short-term effects on each trophic level and explain why.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the grass will grow more because there are fewer grasshoppers eating it, but I'm really not sure what happens to the frogs and snakes after that, or how the hawks would be affected, or if the whole chain just collapses."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student shows partial understanding that producers may increase but is uncertain about higher trophic levels, indicating a need to diagnose their mental model of energy flow.",
+        "state": "Diagnosis",
+        "response": "I see you think grass will grow more because fewer grasshoppers are feeding on it. Can you walk me through what you expect to happen to the frog population if grasshoppers become scarce, and why that might matter for the rest of the chain?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I guess frogs will increase because they have more grasshoppers to eat, since the grasshoppers are not being eaten by anything else and might become more abundant, so frogs get more food and their population goes up."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly predicts frog increase, revealing a misunderstanding that predator populations rise when prey declines; need to guide them to consider food availability.",
+        "state": "Support",
+        "response": "If grasshoppers decline, what happens to the frogs' food supply, and how would that affect the frog population in the short term, considering that frogs rely almost entirely on grasshoppers for energy and have no alternative prey?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, so frogs will starve and die off because their food is gone, but snakes will thrive because they eat frogs and now have more frogs to catch, so snake numbers should go up even though frogs are disappearing."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student now thinks snakes benefit from frog decline, showing a persistent top‑down misconception; need to redirect attention to the dependency of snakes on frogs.",
+        "state": "Support",
+        "response": "That makes sense for frogs, but what does that mean for the snakes that rely on them for food if the frog population is crashing and there are fewer frogs available to eat, especially since snakes have no other major prey in this system?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I think hawks will increase because they have more snakes to eat, since snakes are thriving and hawks get more food, so the top predator should do really well even though the lower levels are struggling and the grass is growing more."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student extends the same erroneous logic to the top predator, indicating a need to diagnose their understanding of bottom‑up control across the entire chain.",
+        "state": "Diagnosis",
+        "response": "Let's think about the whole chain: grass → grasshoppers → frogs → snakes → hawks. If each level depends on the one below for energy, what pattern do you see for the hawks when the grasshopper population drops and the effects move upward through each successive level?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "So hawks would also decline because snakes decline, which happens because frogs decline, which happens because grasshoppers decline, creating a cascade all the way up to the top predator, and the grass at the bottom would increase."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student correctly traces the bottom‑up cascade; now reinforce with a brief acknowledgment and ask about the producer response.",
+        "state": "Support",
+        "response": "You've traced the cascade well, showing how a drop at one level ripples upward. Why might the grass increase in the short term when grasshoppers are reduced and there is less herbivory pressure on the producers, allowing more biomass to accumulate?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "With fewer grasshoppers, less grass is eaten, so grass biomass goes up because the primary consumers are not consuming as much primary production, leading to a buildup of producer biomass that can be seen as a short‑term increase in grass cover."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has explained both the upward cascade and the producer response, indicating readiness to articulate the overarching principle.",
+        "state": "Synthesis",
+        "response": "In your own words, what general principle describes how a change at one trophic level affects the others, both above and below it in the food chain, and how would you summarize that pattern for someone learning about ecosystem dynamics?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "It's like a domino effect: a decrease in prey leads to a decrease in predators, and an increase in the prey's food source, moving up and down the chain, so everything is connected and a change at any level ripples through the whole system, which is basically a bottom‑up and top‑down cascade."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly articulated the cascading principle, demonstrating mastery; conversation can close warmly.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "physics",
+    "topic": "Heat transfer",
+    "problem": "A copper rod of length 0.5 m and cross-sectional area 0.01 m² has one end at 100°C and the other at 20°C. The thermal conductivity of copper is 400 W/(m·K). What is the rate of heat transfer through the rod?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the heat transfer rate is just thermal conductivity times area times the temperature difference. So Q = k * A * (T_hot - T_cold). Length shouldn't matter because conductivity already tells you how well the material conducts heat per meter."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student omitted length in the formula, revealing a misunderstanding of Fourier's law. I'll provide the correct formula and explain the role of length.",
+        "state": "Support",
+        "response": "Actually, length does matter. The rate of heat conduction is given by Fourier's law: Q = k * A * (ΔT) / L. The temperature difference drives the heat flow, but the length over which that difference occurs reduces the flow because the material presents more resistance. So for your rod, you need to divide by the length, not ignore it."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, I see. So if length is in the formula, does that mean I multiply by it? Like Q = k * A * ΔT * L? Because a longer rod has more material, so it should conduct more heat, right? That seems intuitive to me."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student inverted the relationship, thinking heat transfer increases with length. I'll correct directly by restating the formula and using an analogy.",
+        "state": "Support",
+        "response": "Not quite. The formula has length in the denominator: Q = k * A * ΔT / L. A longer rod means more thermal resistance, so heat transfer decreases. Think of it like a pipe: a longer pipe restricts flow more. So you divide by length, not multiply."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Okay, dividing by length makes sense. So Q = 400 * 0.01 * (100 - 20) / 0.5. But wait, the temperatures are in Celsius. Do I need to convert them to Kelvin first? Because thermal conductivity uses Kelvin in its units, so maybe the temperature difference must be in Kelvin too?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student introduced a new misconception about temperature units. I'll clarify that ΔT is the same in Celsius and Kelvin.",
+        "state": "Support",
+        "response": "Good catch on the formula, but you don't need to convert to Kelvin for a temperature difference. A change of 1°C is exactly the same as a change of 1 K, so ΔT is 80 whether you use Celsius or Kelvin. Just plug in 80 for ΔT."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Right, ΔT is 80 K. So Q = 400 * 0.01 * 80 / 0.5. That gives 400 * 0.01 = 4, times 80 = 320, divided by 0.5 = 640 W. But earlier I thought length might cancel because conductivity is per meter. Maybe the length unit in conductivity already accounts for it?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student is confusing the per-meter unit of conductivity with the length factor. I'll clarify the units.",
+        "state": "Support",
+        "response": "The 'per meter' in thermal conductivity (W/(m·K)) means conductivity is defined for a unit length. When you have a specific length L, you still need to divide by that length to get the actual resistance. The units work out: k has meters in the denominator, so multiplying by area and ΔT gives W·m, then dividing by L (meters) yields watts. So length doesn't cancel; it's essential."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I see. So the length in the formula is the actual length of the rod, and the conductivity's per-meter part is just how the material property is defined. The calculation gives 640 W. That seems right, and the units check out."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has the correct calculation. I'll summarize the key points to reinforce before asking for articulation.",
+        "state": "Support",
+        "response": "Exactly, 640 W is correct. You've got the formula right: heat transfer rate equals thermal conductivity times area times temperature difference divided by length. The length appears in the denominator because a longer path increases thermal resistance. Also, remember that temperature differences are the same in Celsius and Kelvin. Good work."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Thanks. So if I changed the material to something with lower conductivity, the heat transfer would drop proportionally. And if I increased the cross-sectional area, it would go up linearly. The length is the only one that's inverse."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student is demonstrating understanding of each variable. Now I'll ask them to articulate the core principle in their own words.",
+        "state": "Synthesis",
+        "response": "That's right. Now, can you explain in your own words the fundamental principle behind Fourier's law of conduction? What physically determines the rate of heat transfer through a material?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Fourier's law says heat flows from hot to cold, and the rate is proportional to the temperature difference and the area, but inversely proportional to the length. The constant of proportionality is the thermal conductivity, which tells you how easily heat moves through that specific material. So a high conductivity, large area, big temperature difference, and short length all increase heat transfer."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept in their own words, showing mastery. Time to wrap up.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! You've got a solid grasp of heat conduction. Ready for another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Parts of speech",
+    "problem": "Identify the part of speech for each word in the sentence: 'The running water quickly filled the large tank.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know 'The' is a determiner, 'water' is a noun, 'filled' is a verb, and 'tank' is a noun. But I'm unsure about 'running' and 'quickly'."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student identified basic nouns, verbs, determiners but is uncertain about 'running' and 'quickly', indicating need to diagnose understanding of participles and adverbs.",
+        "state": "Diagnosis",
+        "response": "What do you think 'running' is doing in this sentence? How about 'quickly'?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think 'running' is a verb because it ends in -ing and shows action."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student misidentified 'running' as verb; need to guide to recognize participle adjective.",
+        "state": "Support",
+        "response": "Notice that 'running' describes 'water'—what part of speech typically modifies a noun?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, I see now—'running' is a participle that functions as an adjective modifying 'water'."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student corrected 'running'; now need to address 'quickly'.",
+        "state": "Support",
+        "response": "Good. Now, what about 'quickly'? What word does it modify in the sentence?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I think 'quickly' is an adjective because it describes how the tank filled, so it's modifying the action."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student misclassified 'quickly' as adjective; need to guide to adverb modifying verb.",
+        "state": "Support",
+        "response": "Does 'quickly' describe a noun or an action? Which part of speech typically modifies verbs, like 'filled'?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Right, it modifies the verb 'filled', so it's an adverb describing how the filling happened."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student now has all words; confirm 'large'.",
+        "state": "Support",
+        "response": "Exactly. And what about 'large'—what word does it modify in the sentence?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "'Large' modifies 'tank', so it's an adjective describing the size of the tank."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly identified all parts; ready to synthesize rule for participles vs verbs and adverbs vs adjectives.",
+        "state": "Synthesis",
+        "response": "In your own words, how do you decide whether an -ing word is a verb or adjective, and whether a -ly word is an adverb or adjective?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "An -ing word is a verb when it shows action with a helper, but an adjective when it describes a noun. An -ly word is usually an adverb modifying a verb, not an adjective modifying a noun."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student articulated the distinction clearly; conversation complete.",
+        "state": "Closing",
+        "response": "Nice work! You've got a solid handle on those tricky parts of speech. Ready for another sentence to practice?"
+      }
+    ]
   }
 ]

@@ -176,3 +176,266 @@ for i from 0 to length(A)-1:\n    for j from i+1 to length(A)-1:\n        if (A[
     }
   ]
 }
+
+
+{
+  "problem": "Identify whether each sentence is active or passive, and rewrite any passive sentences in active voice:\n1. The cake was baked by Sarah.\n2. The teacher explained the lesson.",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I think the first sentence is passive because it has 'was baked' and the cake is receiving the action. The second sentence is active because the teacher does the explaining."
+    },
+    {
+      "reasoning": "The student identified the voices but did not show how to rewrite the passive sentence, indicating a gap in applying the concept.",
+      "state": "Diagnosis",
+      "response": "Can you show me how you would rewrite sentence 1 in active voice, explaining which part becomes the subject, which part becomes the verb, where the original subject ends up, and also mention whether any prepositions need to be dropped or added to make the sentence grammatically correct?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "I would rewrite it as 'Sarah baked by the cake'."
+    },
+    {
+      "reasoning": "The student gave an incorrect rewrite, misplacing the agent, showing confusion about the role of the 'by' phrase.",
+      "state": "Support",
+      "response": "What does the phrase 'by Sarah' tell us about who performed the action in the original sentence, and how would that information help you decide where to place Sarah in an active voice sentence, also considering whether any other words in the sentence might need to change when you switch voices?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "It tells us that Sarah received the action."
+    },
+    {
+      "reasoning": "The student still misunderstands where the agent belongs in an active sentence, suggesting they need a hint about word order.",
+      "state": "Support",
+      "response": "If we want to show who did the baking in an active sentence, where would that person usually appear relative to the verb, and what would happen to the original subject of the passive sentence, considering typical English word order and whether any prepositions are needed or dropped?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "I think the baker goes after the verb."
+    },
+    {
+      "reasoning": "The student produced a correct rewrite, so we move to synthesis to have them articulate the underlying rule in their own words.",
+      "state": "Synthesis",
+      "response": "In your own words, what makes a sentence passive, focusing on the relationship between the subject, the verb, and the agent, and consider how the focus shifts from the doer to the receiver, what grammatical markers typically appear, and whether the agent is always expressed or can be omitted?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "A sentence is passive when the subject is receiving the action and the verb uses 'was' or 'were'."
+    },
+    {
+      "reasoning": "The student’s explanation of passive voice included the misconception that only 'was' or 'were' can appear, indicating a need to clarify other possible auxiliaries.",
+      "state": "Support",
+      "response": "Can a passive sentence use a different form of the verb 'to be' besides 'was' or 'were', such as 'is' or 'has been', and what would that indicate about tense, thinking about how the auxiliary verb changes with tense while the past participle stays the same?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "Yes, like 'is baked' or 'has been baked'."
+    },
+    {
+      "reasoning": "After correcting the auxiliary misconception, the student’s understanding of the 'by' phrase is still shaky; we test whether the earlier misconception resurfaces.",
+      "state": "Support",
+      "response": "In a passive sentence, what does the phrase 'by [someone]' indicate, and how does that differ from the role of the subject in the same sentence, thinking about whether it shows the doer of the action or the receiver, and why that matters for distinguishing active from passive voice?"
+    },
+    {
+      "turn": 13,
+      "speaker": "student",
+      "text": "It shows who received the action."
+    },
+    {
+      "reasoning": "The student again misidentified the agent as the receiver, showing the 'by' misconception persisting; we provide a prompt to re‑evaluate who performs the action.",
+      "state": "Support",
+      "response": "Who is actually doing the action in a passive sentence, and where would you expect to find that person if you turned the sentence into active voice, considering the typical subject-verb-object order and any changes to the verb form that might be needed, and whether the auxiliary verb might shift?"
+    },
+    {
+      "turn": 15,
+      "speaker": "student",
+      "text": "It shows who performed the action."
+    },
+    {
+      "reasoning": "The student now correctly explains the role of the 'by' phrase, allowing us to ask for a full synthesis of the active‑passive distinction.",
+      "state": "Synthesis",
+      "response": "Now, using what we've discussed, how would you describe the difference between active and passive voice in your own words, making sure to mention the roles of subject, verb, and agent, how the focus changes, whether the agent is always expressed, and what typical verb forms appear in each voice?"
+    },
+    {
+      "turn": 17,
+      "speaker": "student",
+      "text": "In active voice, the subject performs the action; in passive voice, the subject receives the action, and the doer may appear after 'by' or be omitted."
+    },
+    {
+      "reasoning": "The student has successfully explained the difference between active and passive voice in their own words, so the conversation can close.",
+      "state": "Closing",
+      "response": "Great job! You've got a solid grasp of active vs passive voice. Want to try another example?"
+    }
+  ]
+}
+
+
+{
+  "problem": "Consider the following algorithm:\n\n```\nresult = 1\ncounter = 1\nwhile counter <= n:\n    if counter % 2 == 0:\n        result = result * counter\n    else:\n        result = result + counter\n    counter = counter + 1\n```\n\nIf n = 4, what is the final value of result after the loop finishes?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I’ll start with result = 1 and counter = 1. Since counter is odd, I think I should add counter to result, so result becomes 2. Then I increase counter to 2. I’m not sure what to do next."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "Student showed the first step but expressed uncertainty about the next action; need to elicit their understanding of the pseudocode’s even case.",
+      "state": "Diagnosis",
+      "response": "You’ve set result to 2 after the first iteration; looking at the pseudocode, what does it say to do when the counter is even?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "When counter is even, I add counter to result, so result = 2 + 2 = 4."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "Student incorrectly claimed the operation for even counter is addition; need to guide them to check the actual operation in the code without giving the answer.",
+      "state": "Support",
+      "response": "Look at the line that handles the even case in the pseudocode—what operation does it use there?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Oh, the pseudocode says to multiply when counter is even, so result = 2 * 2 = 4. Then counter becomes 3. Since 3 is odd, I add counter to result: result = 4 + 3 = 7. Counter becomes 4."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "Student has processed up to counter = 3 and is ready for counter = 4 but hasn’t yet applied the loop condition; need to see their grasp of when the loop continues.",
+      "state": "Diagnosis",
+      "response": "You’ve incremented counter to 4; what does the while condition say about continuing when counter equals n?"
+    },
+    {
+      "turn": 7,
+      "student": "text": "Since counter is now equal to n (4), the condition counter <= n is false, so the loop stops and result stays 7."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "Student mistakenly thinks the loop stops when counter equals n; need to hint them to re‑examine the condition without stating the correction.",
+      "state": "Support",
+      "response": "Check the condition again—what happens when counter is exactly equal to n?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "Actually the condition is counter <= n, so when counter is 4 it’s still true, we go into the loop. Since 4 is even, we multiply result by 4: result = 7 * 4 = 28. Then counter becomes 5, condition fails, loop ends. Final result is 28."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "Student has arrived at the correct final answer; we want to confirm their confidence before moving to synthesis.",
+      "state": "Diagnosis",
+      "response": "If you trace each step once more, does the final result still come out as 28?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "Yes, going through the steps again gives result = 28, so I’m confident that’s the right answer."
+    },
+    {
+      "turn": 12,
+      "speaker": "tutor",
+      "reasoning": "Student has correctly traced the algorithm and confirmed the result; now we ask them to articulate the decision rule in their own words.",
+      "state": "Synthesis",
+      "response": "In your own words, how does the algorithm decide whether to add or multiply at each step?"
+    },
+    {
+      "turn": 13,
+      "speaker": "student",
+      "text": "If the current counter value is even, the algorithm multiplies the result by that counter; if it's odd, it adds the counter to the result."
+    },
+    {
+      "turn": 14,
+      "speaker": "tutor",
+      "reasoning": "Student has successfully explained the rule, indicating mastery of the concept; the conversation can wrap up warmly.",
+      "state": "Closing",
+      "response": "Great job tracing that algorithm! Feel free to try another one if you'd like."
+    }
+  ]
+}
+
+
+{
+  "problem": "A ball is thrown from the ground with an initial speed of 12 m/s. It lands on a platform that is 3 m above the ground, 8 m away horizontally. Find the launch angle(s).",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I know the basic equations for projectile motion: x = v0 cosθ * t and y = v0 sinθ * t - ½gt², but I'm not sure how to find the angle when I have both horizontal distance and vertical height."
+    },
+    {
+      "reasoning": "Student knows equations but uncertain about next step; need to elicit their current thinking.",
+      "state": "Diagnosis",
+      "response": "Can you tell me what quantities you know and what you're trying to find?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "I know v0=12 m/s, x=8 m, y=3 m, and I need θ. I have two equations but three unknowns: θ and t."
+    },
+    {
+      "reasoning": "Student identified unknowns; guiding them to eliminate t is a logical next step.",
+      "state": "Support",
+      "response": "You can eliminate t by solving the x-equation for t and substituting into the y-equation."
+    },
+    {
+      "turn": 5,
+      "student": "text": "If t = x/(v0 cosθ), then y = v0 sinθ * (x/(v0 cosθ)) - ½g (x/(v0 cosθ))^2."
+    },
+    {
+      "reasoning": "Student substituted t correctly; now they need to simplify using trig identities.",
+      "state": "Support",
+      "response": "Simplify the expression: y = x tanθ - (g x²)/(2 v0² cos²θ)."
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "I get y = x tanθ - (g x²)/(2 v0² cos²θ). I'm not sure how to handle the cos²θ term."
+    },
+    {
+      "reasoning": "Student stuck with cos²θ term; hinting to use identity helps them proceed.",
+      "state": "Support",
+      "response": "Recall that 1/cos²θ equals 1+tan²θ; try rewriting the equation using tanθ only."
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "So y = x tanθ - (g x²)/(2 v0²) (1+tan²θ). Let u = tanθ, then y = x u - (g x²)/(2 v0²)(1+u²)."
+    },
+    {
+      "reasoning": "Student formed quadratic in u; now need to plug numbers and solve.",
+      "state": "Support",
+      "response": "Plug in the numbers: g=10, v0=12, x=8, y=3, and solve for u."
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "I get 3 = 8u - (10*64)/(2*144)(1+u²) → 3 = 8u - (640/288)(1+u²) → 3 = 8u - 2.222(1+u²). Expanding: 3 = 8u -2.222 -2.222u² → bring all: 0 = -2.222u² +8u -5.222 → multiply -1: 2.222u² -8u +5.222 =0."
+    },
+    {
+      "reasoning": "Student derived quadratic correctly; asking them to explain consolidates understanding.",
+      "state": "Synthesis",
+      "response": "In your own words, describe how you turned the original problem into a quadratic equation and what that tells you about the launch angle."
+    },
+    {
+      "turn": 13,
+      "speaker": "student",
+      "text": "I eliminated time by using the horizontal motion to get t = x/(v0 cosθ), substituted into the vertical equation, then used the identity 1/cos²θ = 1+tan²θ to get an equation only in tanθ. This gave a quadratic in u = tanθ, which I solved to find two possible angles."
+    },
+    {
+      "reasoning": "Student has correctly explained the method; conversation concludes.",
+      "state": "Closing",
+      "response": "Nice work! You've got the method down. Want to try another problem?"
+    }
+  ]
+}

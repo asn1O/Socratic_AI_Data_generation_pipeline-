@@ -1276,5 +1276,104 @@
         "response": "Nice work! Want to try another set?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Supply and demand",
+    "problem": "In the market for wheat, demand is given by Qd = 120 - 4P and supply by Qs = -20 + 5P, where P is the price per bushel. The government imposes a per‑unit tax of $3 on sellers. Find the equilibrium price paid by buyers, the price received by sellers after tax, and the equilibrium quantity.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I solved 120-4P = -20+5P and got P=15.56, Q=57.78."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student solved the no‑tax equilibrium, showing they haven't yet incorporated the tax.",
+        "state": "Diagnosis",
+        "response": "How did you approach setting up the equations for this problem?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I set quantity demanded equal to quantity supplied using the given equations and solved for P and Q."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student correctly described the approach but hasn't applied the tax; they need a hint to shift the supply curve.",
+        "state": "Support",
+        "response": "Remember the tax shifts the supply curve up by the amount of the tax. How would you adjust the supply equation?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I added the tax to the demand side, so I used Qd = 120 - 4(P+3) and kept supply as -20+5P."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student placed the tax on the demand side, indicating confusion about who bears the tax; need to diagnose their understanding.",
+        "state": "Diagnosis",
+        "response": "Who does the tax legally fall on in this scenario?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I realized the tax is on sellers, so I shifted supply up: Qs = -20 + 5(P-3)."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly subtracted the tax from price; need to guide them toward the correct price relationship.",
+        "state": "Support",
+        "response": "You have defined P_s as the price sellers receive. What price do buyers pay?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I set Qd = 120 - 4(P_s+3) equal to Qs = -20 + 5P_s, solved and got P_s = 128/9 ≈14.22, P_b = 155/9 ≈17.22, Q = 460/9 ≈51.11."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student found the correct equilibrium prices and quantity; now we need them to interpret the tax burden.",
+        "state": "Support",
+        "response": "Now that you have the prices, can you tell me how much of the tax burden falls on buyers versus sellers?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Buyers pay about $1.66 more than before, sellers receive $1.33 less, so the burden is split roughly 55% on buyers and 45% on sellers."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student correctly computed burden; now we ask them to articulate the general principle.",
+        "state": "Synthesis",
+        "response": "In your own words, how does a per‑unit tax affect the market equilibrium?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The tax shifts the supply curve up by the tax amount, raising the price buyers pay and lowering the price sellers receive; the exact split depends on relative elasticities, and the equilibrium quantity falls."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has successfully explained the effect of a per‑unit tax, so the conversation can close.",
+        "state": "Closing",
+        "response": "Nice, you've got it! Want to try another one?"
+      }
+    ]
   }
 ]

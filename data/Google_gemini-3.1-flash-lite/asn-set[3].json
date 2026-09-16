@@ -1,0 +1,263 @@
+[
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "chemistry",
+    "topic": "Acids and bases",
+    "problem": "Calculate the pH of a 0.050 M solution of ammonium chloride (NH4Cl) at 25°C, given that the Kb for ammonia (NH3) is 1.8 x 10^-5.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this NH4Cl solution. Since it's a salt, I'll just take the negative log of 0.050 M to find the pH, so pH = -log(0.050), which is about 1.3."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student incorrectly assumes that NH4Cl dissociates into a strong acid. I need to guide them toward recognizing the hydrolysis of the ammonium ion.",
+        "state": "Diagnosis",
+        "response": "That approach works for strong acids, but NH4Cl behaves differently here. Why would the ammonium ion influence the pH of the solution when it dissociates?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, NH4+ is the conjugate acid of NH3. So it must release an H+ ion into the water, making it acidic. Maybe I should use the Kb value to find the Ka first?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the hydrolysis but is unsure of the relationship between Ka and Kb. I'll provide the constant relationship formula directly.",
+        "state": "Support",
+        "response": "Exactly. You can find the Ka for the ammonium ion using the relationship Kw = Ka * Kb, where Kw is 1.0 x 10^-14 at 25°C. Once you have that Ka, how do you set up the expression for [H+]?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Okay, so Ka = 10^-14 / (1.8 x 10^-5), which is about 5.56 x 10^-10. Since it's a weak acid, I'll use [H+] = sqrt(Ka * C). So [H+] = sqrt(5.56 x 10^-10 * 0.050) = 5.27 x 10^-6."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student's math is correct, but they missed the impact of the dissociation on the equilibrium concentration, treating it as if 0.050 M is the final concentration at equilibrium.",
+        "state": "Support",
+        "response": "Your math for [H+] is spot on, but check your assumption about the concentration. Does the initial 0.050 M stay exactly the same at equilibrium after some dissociates into H+ and NH3?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, wait. If some of it dissociates, the concentration of NH4+ should be 0.050 - x. But since Ka is so small, I can ignore the x, right? So the calculation should still be accurate."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is over-relying on the approximation. I need to point out that while the approximation is valid, the pH calculation must follow from the [H+] they found.",
+        "state": "Support",
+        "response": "The approximation is definitely valid here because Ka is so small. Since you have [H+] now, what is the final step to get the pH?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I'll take the negative log of the [H+] I found: -log(5.27 x 10^-6). That comes out to about 5.28."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has reached the correct numerical result. Now I need to prompt them to synthesize the conceptual steps to ensure they understand the 'why' behind the 'how'.",
+        "state": "Synthesis",
+        "response": "That looks correct. Can you walk me through the logic of why we had to find the Ka instead of just taking the log of the initial concentration?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Sure. NH4Cl is a salt that creates a weak acid. I had to convert Kb to Ka because the ion hydrolyzes, then use the weak acid equilibrium [H+] = sqrt(Ka*C) because only a tiny fraction dissociates to release H+ ions."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully synthesized the concept and explained the process correctly. The interaction is complete.",
+        "state": "Closing",
+        "response": "Perfectly stated. You really navigated those equilibrium steps well! Ready to try another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Mean, median, mode",
+    "problem": "A small business reports the following daily profits over 7 days: $100, $150, $100, $800, $150, $100, $200. Which measure (mean, median, or mode) best describes the 'typical' daily profit, and why?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think I just add them all up and divide by the number of days, so the mean is $100?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student incorrectly calculated the mean and failed to consider the other measures. I need to address the calculation error first.",
+        "state": "Diagnosis",
+        "response": "Let's re-check that sum. When you add 100, 150, 100, 800, 150, 100, and 200, what total do you get?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, that's 1600. So 1600 divided by 7 is about 228. That's the mean."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student found the correct mean, but $228 doesn't look like most of the values. I'll guide them to look at the median.",
+        "state": "Support",
+        "response": "That's the mean. If you list all seven profit values in order from smallest to largest, which one sits right in the middle?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Okay, the order is 100, 100, 100, 150, 150, 200, 800. The middle is 150."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the median. Now I'll challenge them to identify the mode to compare the three.",
+        "state": "Support",
+        "response": "Spot on. Now, looking at that same list, which number appears most frequently?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "100 appears three times, so the mode is 100."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has all three measures. Now I need to prompt them to evaluate which one is 'typical' given the outlier ($800).",
+        "state": "Diagnosis",
+        "response": "Great. We have a mean of $228, a median of $150, and a mode of $100. Why might the mean be higher than the other two?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Maybe because 800 is a really big number and it makes the average look better than it is?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the influence of the outlier. I'll ask them to synthesize the idea of 'typical' now.",
+        "state": "Support",
+        "response": "Exactly, that $800 pulls the mean upward. Given that, which of the three measures would you say is the most 'typical' for this business?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The median is best because it's not affected by that high $800 day, so it shows what the profit usually is."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully synthesized the concept and explained why the median is the preferred measure in this context.",
+        "state": "Closing",
+        "response": "That's exactly it! You've got a great handle on this. Ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Reading and interpreting graphs",
+    "problem": "A line graph shows the average daily temperature in a city over 10 days. The line goes from 60 degrees on day 1 to 70 degrees on day 3, then drops to 65 degrees on day 5. If I want to find the total increase in temperature from day 1 to day 5, do I just add 70 and 65 together?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think I should add the temperature from day 3 and day 5 together to find the total increase from the start."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is confused about what 'increase' means, focusing on sum rather than change. I will use Diagnosis to see if they understand the definition of change.",
+        "state": "Diagnosis",
+        "response": "What exactly does the phrase 'increase from day 1 to day 5' mean to you?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I guess it means how much the temperature went up from the very first day to the last one."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has a better definition now. I'll use Support to pivot them away from their initial addition error.",
+        "state": "Support",
+        "response": "That's right. If you started at 60 on day 1 and ended at 65 on day 5, how do you find the difference?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, so 60 plus 65 is 125, so it increased by 125 degrees?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made a procedural error by adding instead of subtracting. I need to guide them toward the correct operation.",
+        "state": "Support",
+        "response": "If the temperature were 60 and became 61, would you say it increased by 121 degrees?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "No, that doesn't make sense. It just went up by 1 degree."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student sees the error. I'll use Support to have them apply the subtraction logic to the actual numbers.",
+        "state": "Support",
+        "response": "Exactly. So if you start at 60 and end at 65, what calculation shows the change?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I should subtract 60 from 65. That gives me 5."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has the right result. I need to move to Synthesis to ensure they grasp the underlying concept.",
+        "state": "Synthesis",
+        "response": "Perfect. In your own words, why is subtraction better than addition for finding an increase between two points?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Because you're finding the gap between the two values, not putting them together into a total sum."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student correctly articulated the logic of finding the difference between two data points. I will now close the session.",
+        "state": "Closing",
+        "response": "Exactly right! You've got it. Ready for the next one?"
+      }
+    ]
+  }
+]

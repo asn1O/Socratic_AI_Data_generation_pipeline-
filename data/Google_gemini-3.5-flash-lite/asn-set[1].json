@@ -868,5 +868,440 @@
         "response": "Spot on! You nailed the whole process from atoms to charge conservation. Great job working through that, and let me know if you want to tackle another one!"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Mixtures and alligation",
+    "problem": "A merchant mixes 40 kg of rice priced at $5 per kg with 60 kg of rice priced at $10 per kg. What is the average price per kg of the resulting mixture?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this mixture problem. I know there are two different prices and quantities, but I'm not entirely sure how to set up the equation to find the average price."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student acknowledges the components but is unsure of the setup, so I need to explore how they usually think about combining quantities and costs.",
+        "state": "Diagnosis",
+        "response": "How might you calculate the total cost of all the rice combined before trying to find the average per kilogram?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, right! I can multiply each quantity by its price. So for the first batch, that's 40 kg times $5, and for the second, 60 kg times $10."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the method for finding individual costs, so I'll prompt them to calculate those values and think about the total amount.",
+        "state": "Support",
+        "response": "What do those two individual costs come out to, and what would you do with them once you have them?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "The first batch costs $200 and the second costs $600, so the total cost is $800. I guess I need to divide that by something, maybe the total weight?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully found the total cost and is questioning the next step, so I will guide them to look at the total weight of the mixture.",
+        "state": "Support",
+        "response": "What would be the total weight of the combined rice batches, and how does that relate to finding the price per kilogram?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "The total weight is 40 kg plus 60 kg, which gives 100 kg total. So I should divide the total cost of $800 by the total weight of 100 kg."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified both total cost and total weight, so I'll ask them to perform the final division and state the result.",
+        "state": "Support",
+        "response": "What do you get when you divide that total cost by the total weight?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "That gives us $800 divided by 100, which equals $8 per kg for the mixture."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has the correct numerical answer, so now I need them to synthesize the underlying concept in their own words.",
+        "state": "Synthesis",
+        "response": "In your own words, how does finding the weighted average of a mixture work when you have different quantities and prices?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "To find the average price of a mixture, you find the total cost of all the parts combined and then divide that by the total quantity or weight of everything put together."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has accurately explained the core concept, so the session is successfully concluding.",
+        "state": "Closing",
+        "response": "Spot on! You've got the concept down completely. Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Correlation vs causation",
+    "problem": "A 10-year study of 5,000 office workers found that those who drank at least two cups of coffee daily had significantly lower rates of depression. The researchers concluded that drinking coffee prevents depression. What potential hidden variables or alternative explanations could undermine this conclusion?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the researchers are right because the data shows people who drink more coffee are happier."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is confusing statistical association with direct cause and effect. I need to probe their thinking without giving away the concept.",
+        "state": "Diagnosis",
+        "response": "What makes you certain that the coffee itself is what directly causes the lower depression rates?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, caffeine boosts mood and energy, so it must be the active ingredient making them feel better."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student asserts a biological mechanism as proof, repeating their first mistake. I'll prompt them to consider other differences between coffee drinkers and non-drinkers.",
+        "state": "Support",
+        "response": "Could there be other daily habits or lifestyle factors that tend to go along with being a regular coffee drinker?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Maybe they take more breaks at work to chat with coworkers, which improves their social life."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student identified a great confounding variable. I need to push them to recognize what this variable is called and how it affects the study.",
+        "state": "Support",
+        "response": "That's a great example. If those social breaks are actually reducing depression, what does that mean about the coffee's role?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "It means the coffee is just a side effect, and the socialization is the real cause."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student grasped the concept of a confound. I will ask them to generalize this idea to other hidden factors.",
+        "state": "Support",
+        "response": "Can you think of another hidden factor, maybe related to income or general health, that might also explain this link?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "People with higher incomes might buy more expensive coffee and also afford better mental healthcare."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully identified multiple confounders. Now I need them to synthesize the core difference between correlation and causation.",
+        "state": "Synthesis",
+        "response": "Based on all this, how would you distinguish between something just being correlated and it actually being the cause?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Correlation just means two things happen together, like coffee and lower depression, but causation means one actually forces the other to happen, while hidden variables could be driving both."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student correctly and clearly explained the distinction between correlation and causation in their own words. The session is complete.",
+        "state": "Closing",
+        "response": "Spot on! You nailed it. Ready to tackle another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Logical fallacies",
+    "problem": "Read this argument and identify what makes it logically problematic: 'We should not fund the new community center because if we start spending money on extra buildings, soon the city will go bankrupt and no one will be able to afford groceries.' Name the specific fallacy occurring here.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I read it, but I'm not really sure what makes it wrong. It sounds like a bad outcome could happen?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student expresses uncertainty and general confusion about the argument's flaw. Need to elicit their initial breakdown of the steps in the argument.",
+        "state": "Diagnosis",
+        "response": "What steps does the argument take to get from funding a community center to city bankruptcy?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "It says we spend money on one building, and then suddenly the city is bankrupt and we can't buy food."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student sees the two extreme points but misses the mechanism connecting them. I will prompt them to look at the chain of events.",
+        "state": "Support",
+        "response": "Does the argument show how one building directly causes total bankruptcy, or does it assume intermediate steps?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I guess it assumes one thing leads to another, but it jumps right to the worst case."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student recognizes the extreme jump. Now check if they can evaluate the likelihood of that chain.",
+        "state": "Diagnosis",
+        "response": "How plausible is it that building a community center automatically triggers all those subsequent disasters?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "It doesn't seem very likely at all. It feels like an exaggeration."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identifies the exaggeration. Time to introduce or elicit the formal term for this kind of chain-reaction argument.",
+        "state": "Support",
+        "response": "When an argument assumes a minor first step will inevitably trigger a catastrophic chain reaction, what is that pattern called?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Is it called a slippery slope?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student named the correct fallacy. Prompt them to synthesize the definition in their own words as required.",
+        "state": "Synthesis",
+        "response": "Spot on. In your own words, why does that pattern create a logical fallacy?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "It's a fallacy because it assumes an extreme chain reaction without any proof that the first step will actually lead to the last one."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has successfully and accurately explained the concept in their own words. Closing conversation.",
+        "state": "Closing",
+        "response": "Spot on! You nailed it. Ready for another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Cost-benefit reasoning",
+    "problem": "Imagine a pharmaceutical company discovers a lifesaving drug. Should they price it extremely high to maximize short-term research recovery, or lower it so everyone can afford it? Map out the conflicting ethical duties and long-term systemic consequences.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I guess they should lower the price so more people live, but I'm really lost on how to balance that with their costs."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student acknowledges the humanitarian goal but is stuck on balancing business costs. I'll use Diagnosis to check how they view the immediate stakeholders.",
+        "state": "Diagnosis",
+        "response": "Whose interests do you think the company needs to weigh first in that decision?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "They have to think about the sick patients needing it right now, but also their shareholders who funded the lab."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identifies patients and shareholders. High hint frequency calls for a Support hint to prompt the systemic long-term consequences.",
+        "state": "Support",
+        "response": "What might happen to future research funds if they don't recoup those initial costs?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I'm not sure... maybe they wouldn't have money to invent the next drug?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student senses the trade-off. Using Support to guide them toward framing this as a direct ethical conflict of duties.",
+        "state": "Support",
+        "response": "How does trading off future lives for current lives shift the ethical dilemma?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "It means helping people today might actually hurt people tomorrow if new drugs stop getting made."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student has grasped the inter-temporal trade-off. Using Support to prompt them to synthesize these competing value sets into a cohesive cost-benefit framework.",
+        "state": "Support",
+        "response": "Can you weigh those two competing moral duties—immediate relief versus long-term innovation?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "You have to calculate the total net utility, meaning the harm of pricing out current patients versus the potential harm of stopping future cures."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student is close to final synthesis. Moving to Synthesis to have them articulate the core principle in their own words.",
+        "state": "Synthesis",
+        "response": "In your own words, how does cost-benefit reasoning help resolve a conflict like this?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Cost-benefit reasoning means weighing both short-term harms and long-term systemic impacts to find the choice that maximizes overall well-being."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has successfully explained the concept. Closing the conversation warmly.",
+        "state": "Closing",
+        "response": "Spot on! You nailed it. Ready to try another ethical dilemma?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Analogies and vocabulary in context",
+    "problem": "Determine the relationship in the analogy 'EPHEMERAL : TRANSIENT :: TENACIOUS : ?' and select the best completing word from the options: A) Fragile, B) Persistent, C) Flexible, D) Sudden. Explain how you chose your answer.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this analogy and honestly I'm pretty lost. I know ephemeral means short-lived, but I don't really get how it connects to transient, and I'm not sure what tenacious has to do with any of the choices."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student understands ephemeral but hasn't connected it to transient yet, and is stuck on tenacious. I need to elicit their current thinking about the first pair without giving away definitions.",
+        "state": "Diagnosis",
+        "response": "That's a totally fine place to start. Since you mentioned ephemeral means short-lived, how would you describe the relationship between ephemeral and transient based on what you know about both words?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, transient means something that lasts a really long time, like a permanent fixture."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has asserted an incorrect definition for transient (confusing it with permanent). I must address this misconception before moving forward with the analogy.",
+        "state": "Diagnosis",
+        "response": "Wait a second, let's look closer at transient. If someone talks about a transient storm that passes through quickly, does that sound like something permanent, or something else?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh! Wait, a transient storm passes quickly, so it doesn't last long either. That means ephemeral and transient are actually synonyms, right? They both mean lasting a short time."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student successfully self-corrected on the first pair and recognized they are synonyms. Now I need to transition them to analyzing the second pair, tenacious, using an open question.",
+        "state": "Diagnosis",
+        "response": "Spot on. Now that we've established that first pair relationship, how might you define tenacious on its own?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Tenacious means someone who holds on really tightly to something, like a bulldog holding onto a bone. They don't give up easily."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has a strong, correct definition of tenacious. Now I need to guide them toward finding a synonym among the options (Fragile, Persistent, Flexible, Sudden) without stating the answer.",
+        "state": "Support",
+        "response": "That's a really great definition. If you're looking for a synonym for tenacious among the choices—Fragile, Persistent, Flexible, and Sudden—which one fits that idea of not giving up?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Persistent has to be it, because being persistent means you keep going and don't quit, which matches being tenacious."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student selected the correct option and linked it to the definition. To cement this learning, I need them to articulate the overarching analogy pattern in their own words.",
+        "state": "Synthesis",
+        "response": "In your own words, how would you explain how finding the answer for this type of vocabulary analogy works overall?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "You first figure out the relationship between the first pair of words, like finding out they're synonyms, and then you apply that exact same synonym relationship to find the matching word for the second term."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the core concept. Wrapping up the session warmly and concisely.",
+        "state": "Closing",
+        "response": "Spot on! You nailed it. Great job working through those definitions step by step. Feel free to reach out whenever you want to tackle another one!"
+      }
+    ]
   }
 ]

@@ -363,3 +363,371 @@
     }
   ]
 }
+
+
+{
+  "problem": "In pea plants, tall plant height (T) is dominant to short plant height (t). If you cross a homozygous tall plant (TT) with a heterozygous tall plant (Tt), what percentage of the offspring would you expect to be homozygous tall (TT)?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I'm really confused about how to set up this Punnett square. I know there's a big T and a little t somewhere, but I'm not sure what letters go on the outside of the grid or how to figure out the percentages."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student expresses general confusion about setting up the grid, so I need to check their baseline understanding of parental genotypes before offering a hint.",
+      "state": "Diagnosis",
+      "response": "That's totally okay, genetics can feel like a foreign language at first! To get us started, how would you write out the genetic letters, or alleles, for the two parent plants mentioned in the problem: one homozygous tall and one heterozygous tall?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Well, the problem says homozygous tall is TT, so that's the first parent. But for heterozygous tall, does hetero mean different, so would it be Tt?"
+    },
+    {
+      "speaker": "tutor",
+      "reasoning": "The student correctly deduced 'Tt' for heterozygous, showing they understand the prefix. I'll use a hint to guide them on placing these genotypes along the grid axes.",
+      "state": "Support",
+      "response": "Spot on with Tt! You've got both parent genotypes figured out: TT and Tt. When we draw out a Punnett square grid, think of the top and the left side as representing what each parent contributes. If you split the first parent's alleles, TT, what individual letters would go across the top of your grid?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "I guess I would put a T and another T across the top? Since the first parent is TT, they both have to be capital T."
+    },
+    {
+      "speaker": "tutor",
+      "reasoning": "The student successfully separated the alleles for the first parent. I will now prompt them to consider the second parent to keep the setup moving forward.",
+      "state": "Diagnosis",
+      "response": "You nailed it—separating them out means each square gets one allele from that parent. Following that exact same logic, if the second parent is heterozygous Tt along the side of the grid, what letters would go down the left side?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Would it be a capital T on one row and a lowercase t on the row right below it?"
+    },
+    {
+      "speaker": "tutor",
+      "reasoning": "The student correctly identified the side labels. I'll provide a hint on how to combine them inside the boxes to keep building momentum.",
+      "state": "Support",
+      "response": "Precisely! You now have T and T across the top, and T and t down the side. As you fill in the four inner boxes by bringing the row and column letters together, what do you notice about the combination in the top-left box?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "For the top-left box, I'm bringing a T from the top and a T from the side, so it makes TT. If I fill in the rest, I get another TT in the top right, and then Tt and Tt in the bottom row."
+    },
+    {
+      "speaker": "tutor",
+      "reasoning": "The student has successfully completed the cross and found the genotypes. I need to guide them back to the original question about percentages without giving the final number.",
+      "state": "Support",
+      "response": "That grid is filled out completely and correctly! Now, looking back at those four boxes you just created, how many of them show homozygous tall, which means having two matching dominant alleles?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "Out of the four total boxes, two of them are TT, which means two out of four, or 50 percent, are homozygous tall."
+    },
+    {
+      "speaker": "tutor",
+      "reasoning": "The student has correctly explained the reasoning and arrived at the right percentage. I will now invite them to articulate the overall rule in their own words before closing.",
+      "state": "Synthesis",
+      "response": "In your own words, how does separating the parent alleles onto the grid and combining them in the boxes help us figure out these probabilities?"
+    },
+    {
+      "turn": 13,
+      "speaker": "student",
+      "text": "It lets you see every possible random way the parents' traits can combine, so you can count up the matching boxes to find out the percentage for any specific genetic combo."
+    },
+    {
+      "speaker": "tutor",
+      "reasoning": "The student has accurately explained the core concept in their own words, so I am wrapping up the conversation warmly.",
+      "state": "Closing",
+      "response": "Spot on, that's exactly how it works! Excellent job working through that step-by-step. Let me know whenever you're ready for another one!"
+    }
+  ]
+}
+
+
+{
+  "problem": "A dataset contains the values: 3, 7, 2, 9, 3, 5, and an unknown positive integer x. If the mode of the dataset is 3 and the median of the ordered dataset is 5, determine all possible integer values for x.",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I'm totally lost on this one. There's an unknown x and multiple things to find like median and mode."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student is expressing general confusion and hasn't started yet. I need to assess their baseline understanding of the most straightforward given term, the mode.",
+      "state": "Diagnosis",
+      "response": "That's okay! Let's break it down piece by piece. What does the word 'mode' mean when we look at a set of numbers?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Mode is the number that shows up the most often in the list, right?"
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student correctly defined the mode. I should now check how they apply that definition to the given numbers and the unknown x.",
+      "state": "Diagnosis",
+      "response": "Exactly. Given the numbers 3, 7, 2, 9, 3, 5 and x, what can you tell me about x if the mode is 3?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Hmm, 3 appears twice already. Does x have to be 3 as well so there are three 3s?"
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student's suggestion makes sense for creating a mode, but they sound unsure. I will guide them to test what happens if x is 3 versus other possibilities.",
+      "state": "Support",
+      "response": "If x equals 3, 3 would definitely be the mode. But could x be something else, or must it be 3?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "If x was something else, like 7, then 3 and 7 would both appear twice. That would mean two modes, right?"
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student correctly identified a tie for the mode. Now I need to pivot them to the second part of the problem involving the median.",
+      "state": "Diagnosis",
+      "response": "Spot on. So what does that tell us about what x must be, given the problem states the mode is 3?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "Oh, so x has to be 3 so that 3 is the only mode. Now we need to look at the median being 5."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "The student successfully resolved the mode and moved to the median. I will prompt them on how to set up the dataset with x = 3 to check the median.",
+      "state": "Support",
+      "response": "Right, x must be 3. Now, if we put all seven numbers in order from least to greatest, how do we find the median?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "The ordered list is 2, 3, 3, 3, 5, 7, 9. Since there are seven numbers, the middle one is the fourth number, which is 3. Wait, the problem says the median is 5, but here the middle number is 3!"
+    },
+    {
+      "turn": 12,
+      "speaker": "tutor",
+      "reasoning": "The student noticed a contradiction with x = 3 and the median being 5, showing they are engaged in the hard part of the problem. I need to guide them to reconsider x.",
+      "state": "Support",
+      "response": "You found a key conflict! If x isn't 3, how else could 3 remain the unique mode while the median becomes 5?"
+    },
+    {
+      "turn": 13,
+      "speaker": "student",
+      "text": "Wait... if x is actually 5 or 7 or something else, wait no—if x equals 5, then 3 still appears twice as the most frequent number. Let's list it: 2, 3, 3, 5, 5, 7, 9. The middle is still 5! Wait, if x is 5, we have two 5s. Does that change the mode?"
+    },
+    {
+      "turn": 14,
+      "speaker": "tutor",
+      "reasoning": "The student is exploring alternative values for x and testing the mode condition. I'll prompt them to check the frequency counts carefully.",
+      "state": "Support",
+      "response": "Check the counts for 3 and 5 if x is 5. Which one appears more often?"
+    },
+    {
+      "turn": 15,
+      "speaker": "student",
+      "text": "Ah, 3 appears twice (3 and 3), and 5 would appear twice if x is 5. Then there would be two modes: 3 and 5. But the problem says the mode is just 3."
+    },
+    {
+      "turn": 16,
+      "speaker": "tutor",
+      "reasoning": "The student correctly ruled out x = 5. They are very close to figuring out the valid range or values for x where 3 stays the sole mode and median is 5.",
+      "state": "Support",
+      "response": "Good catch. So for 3 to be the *only* mode, how many times must 3 appear compared to any other number?"
+    },
+    {
+      "turn": 17,
+      "speaker": "student",
+      "text": "3 has to appear more times than any other number. Right now 3 appears twice. Since x can't make another number appear twice or more, x must be 3? Wait, earlier we checked x = 3 and the median was 3. Is there another x?"
+    },
+    {
+      "turn": 18,
+      "speaker": "tutor",
+      "reasoning": "The student is wrestling with the contradiction between x=3 and the median being 5. Let's have them re-evaluate the ordered positions with x as an unknown variable in the middle.",
+      "state": "Support",
+      "response": "Let's look at the ordered list with x included: 2, 3, 3, [x], 5, 7, 9. Where does x need to sit for the median to be 5?"
+    },
+    {
+      "turn": 19,
+      "speaker": "student",
+      "text": "For the median to be 5, 5 has to be the middle number of the seven sorted values. That means three numbers must be smaller than or equal to 5, and three must be larger than or equal to 5. Since 2, 3, 3 are smaller, x has to be at least 5 so that 5 lands squarely in the fourth position!"
+    },
+    {
+      "turn": 20,
+      "speaker": "tutor",
+      "reasoning": "The student is very close, but let's check what happens to the mode if x is 5 or larger. Can x be 5?"
+    },
+    {
+      "turn": 21,
+      "speaker": "student",
+      "text": "Wait, if x is 5, then 5 appears twice (the original 5 and x). Then 3 appears twice and 5 appears twice, so we'd have two modes. So x can't be 5. But if x is 6, then 3 appears twice, and 6 appears once, 5 appears once. Then 3 is the only mode, and if x is 6, the sorted list is 2, 3, 3, 5, 6, 7, 9, making the median 5!"
+    },
+    {
+      "turn": 22,
+      "speaker": "tutor",
+      "reasoning": "The student has successfully reasoned through the constraints for both mode and median to find a valid value for x. Now they need to synthesize the rule governing how median positioning and unique mode interact.",
+      "state": "Synthesis",
+      "response": "That's a brilliant deduction. In your own words, how did balancing the median's position and the mode's frequency help you determine the valid values for x?"
+    },
+    {
+      "turn": 23,
+      "speaker": "student",
+      "text": "I made sure 3 stayed the most frequent number so it's the unique mode, and then positioned x so that 5 sat right in the exact middle of the sorted list, which meant x had to be greater than 5 without duplicating any other number's frequency."
+    },
+    {
+      "turn": 24,
+      "speaker": "tutor",
+      "reasoning": "The student has correctly explained the conceptual rule and reasoning. Wrapping up the session warmly.",
+      "state": "Closing",
+      "response": "Spot on! You worked through a really tricky multi-step problem brilliantly. Great job!"
+    }
+  ]
+}
+
+
+{
+  "problem": "Imagine you have a simple circuit with a 9-volt battery connected to two identical light bulbs. If one bulb burns out and the other bulb stays lit, how are the bulbs wired together—in series or in parallel?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I think they might be in parallel, but I'm honestly not totally sure because I always get confused about how the current actually flows when one part stops working."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student suspects parallel wiring but expresses uncertainty about current flow. I will provide direct context about current paths to support their thinking.",
+      "state": "Support",
+      "response": "You are on the right track leaning toward parallel. In a circuit, current needs a complete loop back to the battery to keep a component working. Think about what happens to the pathways when there are multiple branches versus just a single continuous loop."
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Right, so if there are multiple branches, maybe the electricity can take a different route when one bulb breaks? But I'm still a bit fuzzy on why a series circuit wouldn't do that."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student understands multiple branches conceptually but is fuzzy on series behavior. I will directly contrast the two configurations to clarify the structural difference.",
+      "state": "Support",
+      "response": "That's exactly it—multiple branches give the current alternate routes. In a series circuit, everything is lined up on a single pathway, meaning there's only one way for the current to travel through all the components from start to finish."
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Oh, okay! So because there's only one path in series, if anything breaks anywhere on that loop, the whole thing stops working and nothing can get through."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student has correctly grasped the series mechanism from my explanation. I will now ask them to connect that directly back to our original problem about the two bulbs.",
+      "state": "Diagnosis",
+      "response": "That is a really clear way to picture it. Now, taking that rule about a single pathway versus multiple pathways, what does that tell us about our specific problem where one bulb stays lit after the other burns out?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "It means the bulbs must be in parallel, because if one bulb burns out and breaks its own branch, the other branch is totally separate and keeps running."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student has successfully applied the concept to the problem. I now need to prompt them to articulate the underlying rule in their own words for the synthesis step.",
+      "state": "Synthesis",
+      "response": "Spot on. To help lock this idea in place, can you summarize in your own words how branch independence is what makes parallel circuits behave differently from series circuits?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "Yeah, basically in a parallel circuit every load has its own independent loop connected to the power source, so a break in one path doesn't shut down the whole system like it would in a series setup."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "The student has provided a complete, accurate explanation of the core concept. I can now wrap up the conversation warmly.",
+      "state": "Closing",
+      "response": "Nice, that's exactly it! You nailed the explanation. Want to try another one?"
+    }
+  ]
+}
+
+
+{
+  "problem": "Imagine you have $100 today, and the annual inflation rate is sitting at 5 percent. If you decide to tuck that $100 away under your mattress for a full year without investing it or spending it, what happens to the purchasing power of that money by the time next year rolls around?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "Well, since inflation is 5 percent, I'm kind of guessing that my hundred dollars will probably buy about 5 percent less stuff overall after a year goes by, but honestly I'm not entirely sure how that actually plays out in terms of the physical money itself."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student correctly intuits that purchasing power drops, but shows uncertainty about whether the nominal amount changes. I need to diagnose their baseline understanding of nominal versus real value before guiding further.",
+      "state": "Diagnosis",
+      "response": "You are on the right track regarding what happens to the goods you can buy. When you look inside your wallet after that year passes, how many physical dollar bills do you think will actually be sitting there under your mattress?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "I mean, I'd still have the exact same one hundred dollar bill because I didn't spend any of it or add anything to it, so the number of dollars wouldn't change at all."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student correctly identifies that the nominal amount remains unchanged at one hundred dollars. Since they grasp this distinction, I will state a direct explanatory observation about prices rising and ask them to connect that to the value of each dollar.",
+      "state": "Diagnosis",
+      "response": "That's completely right—the physical count of your cash stays locked at one hundred dollars. But as general prices in the economy rise by that 5 percent over the year, how does that affect what each individual dollar can purchase for you?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Since everything costs more money now, each individual dollar doesn't stretch as far as it used to, meaning my hundred dollars effectively buys less stuff than it did last year."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student shows a solid grasp of how rising prices reduce the mileage of each dollar. I can now provide a brief, direct connection to the term 'purchasing power' and prompt them to quantify or summarize the impact.",
+      "state": "Support",
+      "response": "Exactly, we call that loss of buying strength a decline in purchasing power. Knowing that prices went up by 5 percent, how much is your one hundred dollars effectively worth in terms of last year's purchasing power?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "I think it means my hundred dollars has the real purchasing power of about ninety-five dollars from the previous year, because it lost 5 percent of its overall value to inflation."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student has successfully calculated the adjusted real value and understood the core mechanism. I will now prompt them to articulate the overall economic rule in their own words to ensure full internalization.",
+      "state": "Synthesis",
+      "response": "That calculation is spot on. To make sure we have the whole concept clear, could you explain in your own words what inflation does to the real value of cash kept idle over time?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "Even though your actual nominal cash amount stays the exact same, inflation quietly eats away at its purchasing power, meaning your money buys fewer goods and services as prices go up."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "The student has accurately articulated the core concept of inflation eroding real purchasing power despite constant nominal cash. The conversation has successfully reached its goal, so I will now close warmly.",
+      "state": "Closing",
+      "response": "Spot on! You nailed the distinction between nominal cash and real purchasing power. Great job working through that!"
+    }
+  ]
+}

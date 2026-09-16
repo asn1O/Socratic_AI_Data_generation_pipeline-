@@ -1,0 +1,437 @@
+[
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "chemistry",
+    "topic": "Basic stoichiometry",
+    "problem": "In the reaction 2H2 + O2 -> 2H2O, how many moles of H2O are produced from 2 moles of H2?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "The problem says 2H2 + O2 -> 2H2O. If I have 2 moles of H2, what do I do?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has the equation but is unsure of the first step. I need to gauge their understanding of coefficients.",
+        "state": "Diagnosis",
+        "response": "What do the large numbers in front of the molecules represent in this recipe?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think they are the number of atoms inside each of those chemical pieces."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student confused coefficients with subscripts. I'll provide a brief correction and ask them to identify the specific coefficients.",
+        "state": "Support",
+        "response": "Those actually represent the ratio of whole molecules. What are the numbers for H2 and H2O?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "They are both 2, but I'm not sure how that helps with the moles."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student identified the coefficients but lacks the beginner's intuition for mole ratios. I'll ask for a comparison.",
+        "state": "Diagnosis",
+        "response": "If the recipe says 2 molecules makes 2 molecules, how do the amounts compare?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Does that mean we should double it? So 2 moles of H2 makes 4 water?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student incorrectly attempted to calculate. I will point out the identical coefficients to guide them to the 1:1 relationship.",
+        "state": "Support",
+        "response": "The coefficients are the same for both. If the ratio is 2 to 2, what does that imply?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, it's a one-to-one match! So 2 moles of H2 makes 2 moles of water."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student found the correct answer. I'll now move to synthesis so they can internalize the rule.",
+        "state": "Synthesis",
+        "response": "Spot on! In your own words, how do those front numbers help you solve this?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "You look at the ratio of those numbers to see how the starting and ending amounts relate."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the concept of mole ratios using coefficients. The session is complete.",
+        "state": "Closing",
+        "response": "Exactly! You've mastered the basics of mole ratios. Ready for another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Blood relations",
+    "problem": "P is the brother of Q. Q is the daughter of R. R is the wife of S. T is the father of S. How is T related to P?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this family puzzle. P is the brother of Q, and Q is R's daughter. I think P and Q are both children of R, but then S and T come in and I'm totally lost on how they link back to P."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified the sibling link but is overwhelmed by the number of variables. Starting with the first relationship helps simplify the problem by focusing on one connection at a time.",
+        "state": "Diagnosis",
+        "response": "It's a lot of connections to juggle, isn't it? If we just look at the first two sentences, what do we know about the relationship between P, Q, and R specifically?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Right, P is a brother and Q is the daughter of R. I guess that means R is the mother? I'm just not 100% sure if P is also R's child or if I'm overthinking the connection between them."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is unsure if the parental link applies to both siblings. I need to confirm they understand that being a brother of a daughter implies a shared parentage in this family tree context.",
+        "state": "Diagnosis",
+        "response": "Why is it likely they share the same parent? If P is the brother of Q, and Q is the daughter of R, what does that tell us about P's relationship to R?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, that makes sense! If they are siblings, then R must be the mother of both of them. But then the problem says R is the wife of S. Does that mean S is also related to P?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has identified the mother but hasn't yet linked the mother's husband to the children. This step is necessary to establish the father before moving to the next generation in the puzzle.",
+        "state": "Diagnosis",
+        "response": "How would you describe the husband of someone's mother in a family tree? If R is the mother of the children, what does that make her husband, S, to those same kids?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "S would be the father of P and Q! So now I have the parents. But then it says 'T is the father of S.' I think that would make T the uncle of P in this situation."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student incorrectly guessed 'uncle,' showing they are confused by the vertical move up the family tree. I will provide a minimal hint about the 'father of a father' to guide them.",
+        "state": "Support",
+        "response": "What do we usually call the man who is the father of our own father? If S is the father of P, and T is the father of S, where does that put T?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Wait, father's father... that's a grandfather! So if S is the father of P, and T is the father of S, then T is two generations above P. T must be P's grandfather, right?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has arrived at the correct answer. I now need them to synthesize the multi-step logic to ensure they understand the path they took to reach the conclusion.",
+        "state": "Synthesis",
+        "response": "Now that you've reached the answer, could you explain the general logic or steps you used to connect these different family members in your own words?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I've learned that you have to break it down by generations. First, I found that P and Q share R as a mother, then linked her husband S as the father. Since T is the father's father, that makes him the grandfather."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has clearly and accurately explained the logical steps used to solve the blood relation puzzle, demonstrating full mastery of the problem's requirements.",
+        "state": "Closing",
+        "response": "That's a spot-on summary of the logic! You navigated those relationships perfectly by breaking them down into smaller steps. Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Argument structure: premises and conclusions",
+    "problem": "Identify the premise(s) and the conclusion in the following argument: \"We should go to the park today because the weather is perfect and outdoor exercise is good for our health.\"",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this sentence and I can see there are different parts, like the weather being nice and the suggestion to go to the park, but I’m struggling to figure out which is the premise and which is the conclusion. Since the part about the park comes first, does that mean it's the premise or is the conclusion always at the end?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has identified the core components but is confused about the relationship between logical roles and sentence order. I need to diagnose their current understanding of what 'conclusion' means to them.",
+        "state": "Diagnosis",
+        "response": "Since you’ve identified the core parts of the statement but are feeling a bit unsure about the logical order, how would you describe the difference between a statement that provides evidence and the main point that the speaker is actually trying to convince you of in an argument?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think the main point is the thing someone is trying to get you to do or believe. In this case, the speaker wants the other person to go to the park. The support would be the reasons why they should go, like the weather being nice. So, I'm guessing 'going to the park' is the conclusion, but I'm not 100% sure if that's right."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the functional roles of the parts. I will provide a supportive hint using indicator words to help them confirm their intuition and bridge the gap toward formal identification.",
+        "state": "Support",
+        "response": "That is a great way to look at it! The conclusion is indeed the claim being argued for, rather than just the last thing said. In this sentence, we have the word 'because' acting as a signpost. When you see 'because' followed by a reason, what does that tell you about the logical role of the 'weather' and 'exercise' parts?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "That makes sense! Since 'because' is there, it's introducing the reasons for the trip. So, 'the weather is perfect' and 'exercise is good' must be the premises. It just feels a bit strange because usually, when I write, I put the most important thing at the end, so I keep expecting the conclusion to be the very last part of the sentence."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student identified the premises correctly but is still distracted by the sentence structure. I'll offer a direct explanation about flexibility in word order and ask them to restructure it to solidify the logic.",
+        "state": "Support",
+        "response": "You hit the nail on the head! Those are indeed the premises because they provide the 'why' for the main claim. In everyday speech, we often lead with our conclusion and follow up with premises, but we can flip it around too. If you had to rewrite this argument starting with the premises and ending with the conclusion, how would it look?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "If I flipped it, it would be 'The weather is perfect and exercise is good for our health, therefore we should go to the park today.' That feels much more like a standard argument where you build up to the point. So the conclusion is the 'what' and the premises are the 'why,' regardless of where they are placed in the actual sentence?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is making excellent progress. I'll use a diagnostic question to check if they understand the underlying logical necessity by asking them to consider a nonsensical alternative.",
+        "state": "Diagnosis",
+        "response": "How would the argument sound if you tried to force the 'perfect weather' to be the conclusion instead of a premise, and what does that reveal to you about why the original structure was the only one that actually made sense logically in this case?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "If the weather was the conclusion, it would sound like 'We should go to the park, therefore the weather is perfect.' That’s definitely wrong! Going to the park doesn't make the sun come out. The logic only works if the weather is the reason we go, so the weather has to be the premise that supports the conclusion of going to the park."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has demonstrated a clear understanding of the logical flow and correctly identified the parts. Now I will have them synthesize the rule to internalize the concept for future problems.",
+        "state": "Synthesis",
+        "response": "Now that you've seen how the logical flow works independently of the sentence order, how would you summarize the definitions of a premise and a conclusion in your own words so that you can distinguish them clearly no matter where they appear in a text?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I would define premises as the evidence, facts, or reasons that provide the logical support for a claim. The conclusion is the main point or the core idea that those premises are trying to prove to the audience. Even if the sentence order changes, you can find the conclusion by asking what the premises are pointing toward or by using the 'therefore' test."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully synthesized the concepts of premises and conclusions and provided a thorough explanation in their own words.",
+        "state": "Closing",
+        "response": "That is an excellent summary! You've got a really clear handle on how these pieces fit together regardless of how a sentence is written. Great work today—would you like to try identifying these in a slightly more complex argument next?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Mixtures and alligation",
+    "problem": "A vessel contains 80 liters of a mixture of milk and water in the ratio 7:3. How many liters of water should be added to the mixture so that the ratio of milk to water becomes 2:1?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this problem about mixing milk and water. We have 80 liters at a 7:3 ratio, and we need to add water to make it 2:1. I'm not really sure where to start. Do I just subtract the ratios or something? It's all a bit confusing for me."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is expressing overall confusion and lack of a starting point. I need to diagnose how they interpret the initial ratio and total volume to build the foundation for the problem.",
+        "state": "Diagnosis",
+        "response": "How would you approach finding the exact number of liters of milk and water we have in the container currently, given that we have 80 liters total and the ratio is 7:3? It is often helpful to think about how many 'parts' make up the whole volume before trying to calculate the specific amounts for each liquid."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think I get it. If the ratio is 7:3, then there must be 7 liters of milk and 3 liters of water in there, and the rest of the 80 liters is just empty space in the container. So it's 7 liters of milk and 3 liters of water to start with."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student made a mistake by assuming ratio numbers are literal liter amounts. I need to provide support by explaining how ratios relate to a total volume using the concept of parts.",
+        "state": "Support",
+        "response": "Ratios can be tricky because they represent parts of a whole rather than the literal amount. In this case, 7 parts milk plus 3 parts water equals 10 total parts. If those 10 parts represent our 80 liters, how much volume would one single 'part' represent, and how does that help us find the actual milk and water amounts?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, I see! So 80 divided by 10 is 8. That means one part is 8 liters. So milk is 7 times 8, which is 56 liters, and water is 3 times 8, which is 24 liters. Okay, so we have 56 liters of milk and 24 liters of water. But now what do I do with the 2:1 ratio?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly calculated the initial volumes but is stuck on the next step. I will use diagnosis to see if they understand which component in the mixture remains constant.",
+        "state": "Diagnosis",
+        "response": "Since we are only pouring in more water to change the ratio, what do you think happens to the actual amount of milk? Does that 56 liters of milk increase or decrease, or does it stay exactly the same even after we add the extra water into the mixture to reach that new 2:1 ratio?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Well, if the ratio changes to 2:1, that's a new total. Since the total volume of the mixture is going up when we add water, the 56 liters of milk has to increase as well to keep up with the new ratio, right? Like, the milk becomes a bigger part of a bigger container."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has a conceptual misunderstanding that the volume of milk increases when the total volume increases. I need to provide a hint or analogy to show that adding water doesn't change the milk's volume.",
+        "state": "Support",
+        "response": "That's an interesting thought, but think of it this way: if you have a cup of coffee and add water, does the actual amount of coffee bean extract increase? No, only the water does. If our 56 liters of milk stays constant but now needs to represent the '2' in a 2:1 ratio, how many liters would '1' part of water be?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Wait, that makes sense. The milk doesn't move. So 56 liters is the '2' parts in the 2:1 ratio. So 56 divided by 2 is 28. That means the '1' part, which is the water, should be 28 liters in the final mix. We started with 24 liters of water, so we need to add 4 liters more to get to 28!"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly solved the problem. I now need them to synthesize the core principle of identifying the constant element in mixture problems to ensure they can apply it elsewhere.",
+        "state": "Synthesis",
+        "response": "You hit the nail on the head! Since you correctly identified that we need 28 liters of water, meaning we add 4 liters to our original 24, let's look at the 'why'. In your own words, why is identifying the 'constant' substance—the milk here—so important when solving a problem where only one ingredient is changed?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "It's because the milk acts like an anchor. Since we aren't adding or taking any milk away, its actual amount in liters doesn't change, even if the total volume or the percentages do. Once I knew the milk stayed at 56 liters, I could use the new ratio to see how much water was needed to balance it out."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the logic of the constant component in mixture problems. The conversation is complete.",
+        "state": "Closing",
+        "response": "Exactly right! You've really mastered the logic behind these mixture problems. It makes these tricky ratio changes much easier to handle. Great work today! Ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Percentages",
+    "problem": "A store increases the price of a jacket by 25%. Following a slow sales week, the manager wants to lower the price back to its original value. What percentage discount should be applied to the new price?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know if the jacket is $100, the 25% increase makes it $125. I need to get back to $100, so I need to take off $25, but I'm not sure how to find that percentage."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the values but needs help structuring the percentage calculation. I'll provide a hint about using the new price as the base.",
+        "state": "Diagnosis",
+        "response": "You've set the stage perfectly by using $100 as a base. Since we want to find the percentage reduction from this new price, what is your plan for setting up that ratio?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Since we are starting from the new price of $125 to go back down, I guess the calculation would be 25 divided by 125?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student identified the correct base. I'll provide a simplification hint to help them reach the percentage value without giving the answer.",
+        "state": "Support",
+        "response": "Exactly! Think of it this way: you are looking for what part of $125 the $25 represents. If you simplify that fraction, 25/125, what does it tell you about the portion we need to remove?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "25/125 simplifies to 1/5. If I convert that fraction to a percentage, it comes out to 20%. Wait, shouldn't it be 25% since that's how much it went up?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student reached the correct number but is questioning the logic. I'll explain the concept of the changing base to help them resolve the conflict.",
+        "state": "Support",
+        "response": "It's a common trap! Even though the dollar amount is the same, the base value you're calculating from has changed. How does using a larger base like $125 affect the resulting percentage for that $25?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I think I see. Since $125 is bigger than $100, the same $25 is a smaller piece of the total. So, to get back to the start, I actually need to reduce it by 25%?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student made a slip by reverting to 25% despite their earlier calculation. I'll ask a question about the result of a 25% reduction to help them self-correct.",
+        "state": "Support",
+        "response": "If we tried to use 25% again, but calculated it against the new $125 price, would that take us exactly back to $100 or somewhere else?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, right! 25% of 125 is 31.25, which would take me way below $100. So the 20% I calculated first must be the correct reduction to hit the original price."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has reached the correct answer and corrected their slip. Now I want them to articulate the general principle behind the changing base.",
+        "state": "Synthesis",
+        "response": "In your own words, why is it that the percentage for the increase and the decrease can't be the same number if we want to return to the start?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "It's because the percentage is always relative to the starting point. The 25% increase was based on a smaller number, but the decrease is calculated against a larger, new price, so it takes a smaller percentage."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the core concept of shifting percentage bases, so the session is complete.",
+        "state": "Closing",
+        "response": "Spot on! That's a crucial concept to master for any multi-step percentage problem. You handled that logic shift really well. Ready to move on to a new challenge?"
+      }
+    ]
+  }
+]

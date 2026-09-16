@@ -1,0 +1,299 @@
+[
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "physics",
+    "topic": "Buoyancy and density",
+    "problem": "A wooden block of density 0.6 g/cm³ and volume 200 cm³ floats in water (density 1.0 g/cm³). A 50 g metal weight is placed on top of the block. How much of the block's volume is now submerged? (Assume the block stays floating.)",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm trying to find the submerged volume. The block density is 0.6 g/cm³, volume 200 cm³. Water density 1.0. I think buoyant force equals block's weight, so 0.6*200*g = 1.0*V_sub*g? That gives V_sub = 120 cm³. But the metal weight confuses me."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student set up correct force balance for block alone but unsure about adding metal. Need to diagnose how they think metal affects the balance.",
+        "state": "Diagnosis",
+        "response": "You've set up the balance for the block alone correctly. How would you incorporate the 50 g metal weight into that force balance?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "The metal adds weight, so total weight is block plus metal. But buoyant force uses the block's density because the block is what's displacing water? So 0.6*V_sub*g = (120+50)g? Then V_sub = 170/0.6 ≈ 283 cm³, which is more than the block's volume. That can't be right."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student used block density for buoyant force, revealing confusion about what density determines buoyancy. A hint to focus on fluid density is appropriate.",
+        "state": "Support",
+        "response": "The buoyant force depends on the fluid's density, not the block's. What density should appear in the buoyant force expression?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, water density! So 1.0*V_sub*g = weight of block + weight of metal. Weight of block is 0.6*200*g = 120g. Metal is 50g. But the metal also displaces water? So total displaced volume is V_sub + V_metal? I don't know metal volume."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student introduced metal volume into displacement, showing misunderstanding of what displaces fluid. Hint to clarify only submerged block matters.",
+        "state": "Support",
+        "response": "The metal sits on top of the block, so only the block is submerged. The buoyant force only depends on the submerged volume of the block. Does that simplify things?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Right, only block submerges. So 1.0*V_sub*g = (120+50)g. V_sub = 170 cm³. But wait, the fraction submerged should be density_block/density_water = 0.6, so 120 cm³. Adding metal changes the effective density? I'm confused."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student correctly computed V_sub=170 but then fell back to density-ratio rule, indicating they haven't fully integrated the effect of added weight. Need to probe why they think the rule still applies.",
+        "state": "Diagnosis",
+        "response": "You've found V_sub = 170 cm³ from the force balance. The density ratio rule applies only to a freely floating object with no extra loads. Why does adding the metal change the submerged fraction?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Because the metal adds weight but not volume? So effective density = (120+50)/200 = 0.85. Submerged fraction = 0.85/1.0 = 0.85, V_sub = 170. But wait, the metal has volume too, doesn't it? If metal volume is 10 cm³, total volume 210, effective density 170/210 ≈ 0.81. Which volume do we use?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student again considered metal volume for displacement, resurfacing earlier misconception. Hint to reinforce that only block volume is submerged.",
+        "state": "Support",
+        "response": "The metal rests on top, so only the block's volume can be submerged. The metal's volume doesn't enter the displacement. So the effective density uses the block's volume only. Does that resolve it?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Yes, only the block displaces water. So the system's effective density is total mass divided by block volume: 170g/200cm³ = 0.85 g/cm³. Submerged fraction = 0.85/1.0 = 0.85, so V_sub = 170 cm³. That matches the force balance."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has now correctly derived V_sub using both force balance and effective density. Ready to articulate the governing principle.",
+        "state": "Synthesis",
+        "response": "Great. In your own words, what principle determines how much of a floating object is submerged when extra weight is added?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Archimedes' principle: the buoyant force equals the weight of displaced fluid. For a floating object, buoyant force equals total weight. So submerged volume adjusts until the weight of displaced water equals the total weight of the object plus any added load."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has explained Archimedes' principle in own words; conversation can wrap up.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Probability",
+    "problem": "A bag contains 3 red balls and 2 blue balls. Two balls are drawn without replacement. What is the probability that both balls are red?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the probability is 3/5 times 3/5 equals 9/25 because each draw is independent."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student assumed independence and multiplied 3/5 by 3/5, showing they haven't accounted for without replacement. Need to diagnose their understanding of the term.",
+        "state": "Diagnosis",
+        "response": "Can you tell me what 'without replacement' means for the second draw?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "It means you don't put the first ball back, so the total becomes 4, but the number of red stays 3."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student recognizes total decreases but incorrectly thinks red count stays the same. Need to guide them to see red count changes if a red is drawn.",
+        "state": "Support",
+        "response": "If the first ball drawn is red, how many red balls remain in the bag?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, then there would be 2 red left out of 4 total. So the probability is 3/5 times 2/4... that's 6/20, which simplifies to 3/10? Wait, 3/5 times 2/4 is 5/9?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student correctly updated counts but miscalculated the product. Need to support correct multiplication.",
+        "state": "Support",
+        "response": "How do you multiply two fractions? Let's check: 3/5 times 2/4, what do you get?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Right, 3 times 2 is 6, 5 times 4 is 20, so 6/20 = 3/10. But wait, aren't the draws still independent? Because the first draw doesn't affect the second?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student resurfaced independence misconception after correcting multiplication. Need to guide them to see dependence.",
+        "state": "Support",
+        "response": "If the first draw is red, does that change the chance of drawing red on the second draw?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Yes, because there are fewer red balls left. So they're not independent. The probability is 3/10."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student now has correct reasoning and answer. Confirm and prepare for synthesis.",
+        "state": "Support",
+        "response": "That's correct. So the probability both are red is 3/10. How would you describe the steps for this kind of problem?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "First find probability of first red, then adjust for the second draw without replacement, then multiply."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student summarized steps. Now ask for full explanation in own words to synthesize.",
+        "state": "Synthesis",
+        "response": "Can you explain in your own words the rule for finding the probability of two dependent events without replacement?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "When drawing without replacement, the outcome of the first draw changes the probabilities for the second draw. So you multiply the probability of the first event by the conditional probability of the second given the first."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly articulated the rule for dependent events without replacement. Conversation can close.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Simple vs compound interest",
+    "problem": "Calculate the simple interest and compound interest (annually compounded) on $1,000 at 5% annual interest over 3 years. Then determine the compound interest if compounded monthly.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "For simple interest, it's principal times rate times time. For compound interest, you just apply simple interest each year, so it's basically the same as simple interest."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student conflates simple and compound interest, indicating need to clarify the fundamental difference.",
+        "state": "Diagnosis",
+        "response": "Simple interest is P*r*t. Compound interest differs because interest earns interest. The formula is P*(1+r)^t for annual compounding."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "So compound interest formula is P * r * t * n where n is number of years?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student misstates compound interest formula as linear, so I provide correct formula and suggest a concrete calculation.",
+        "state": "Support",
+        "response": "Not quite. The exponent t represents the number of periods. For annual compounding, it's P*(1+r)^t. Let's compute both for $1000 at 5% for 3 years."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "For monthly compounding, I'd use the same formula but with t=36 months, so 1000*(1+0.05)^36."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student applies annual rate to monthly periods without adjusting rate, showing misunderstanding of compounding frequency.",
+        "state": "Support",
+        "response": "When compounding monthly, you need to adjust the rate per period: divide annual rate by 12, and multiply periods by 12. So it's P*(1+r/12)^(12*t)."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "So monthly compounding gives 1000*(1+0.05/12)^36 = 1161.47, interest $161.47."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student correctly computes monthly compounding, so I probe conceptual understanding.",
+        "state": "Diagnosis",
+        "response": "Good. Can you explain in your own words the key difference between simple and compound interest?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Wait, is compound interest P*(1+r*t)?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student reverts to linear formula for compound interest, revealing a persistent misconception.",
+        "state": "Support",
+        "response": "Remember, compound interest uses exponentiation: P*(1+r)^t, not multiplication by t."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Right, it's P*(1+r)^t. For annual compounding, that's it. For monthly, adjust rate and periods."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student now states correct formulas, ready to synthesize the rule.",
+        "state": "Synthesis",
+        "response": "Exactly. Now can you summarize the rule for both types of interest in your own words?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Simple interest calculates interest only on the original principal: I = P*r*t. Compound interest calculates interest on the principal plus accumulated interest: A = P*(1+r/n)^(n*t), so interest grows exponentially."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has accurately explained both interest types, so we close.",
+        "state": "Closing",
+        "response": "Great job! You've got it. Ready for another problem?"
+      }
+    ]
+  }
+]

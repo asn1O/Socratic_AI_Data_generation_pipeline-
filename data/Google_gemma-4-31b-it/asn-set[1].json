@@ -1225,5 +1225,104 @@
         "response": "That's a perfect explanation! You broke down the relationship between the index and the operation beautifully. Great job today—ready to try another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "physics",
+    "topic": "Heat transfer",
+    "problem": "A composite wall consists of a 10cm brick layer (k=0.7 W/mK) and a 5cm insulation layer (k=0.04 W/mK). The inside temperature is 20°C and the outside is -10°C. Calculate the steady-state heat flux through the wall.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm stuck on this composite wall problem. How do I combine the materials?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student is stuck on the composite aspect; checking baseline knowledge of single-layer flux.",
+        "state": "Diagnosis",
+        "response": "What's your current plan for calculating heat flow through one layer?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I'd use q = k Delta T / L. But I don't know which Delta T to use for each."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student knows the formula but not the combination method; using analogy to guide.",
+        "state": "Support",
+        "response": "Think of it like a circuit. If heat flows through one then the other, what's that called?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Series? So maybe I just add the thicknesses? Like L_total = L1 + L2?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student made a procedural error adding lengths; guiding towards thermal resistance.",
+        "state": "Support",
+        "response": "Not quite. The materials have different k values. How do we combine resistances in series?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, I should add the thermal resistance L/k for each layer instead."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student has the correct resistance logic; prompting the final calculation step.",
+        "state": "Support",
+        "response": "How do you find the total flux using the total resistance?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I divide the total temperature difference by the total resistance."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student is calculating correctly; probing understanding of steady-state heat flow.",
+        "state": "Support",
+        "response": "Exactly. Does the heat flux change as it passes from the first to the second layer?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I think it stays the same because it's steady state, but I'm not sure."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student understands flux is constant; prompting articulation of the physics principle.",
+        "state": "Synthesis",
+        "response": "Why must the flux be constant?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "If flux changed, energy would accumulate in the wall, changing its temperature over time."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the conservation of energy in steady state.",
+        "state": "Closing",
+        "response": "Spot on! You've mastered this. Want to try another?"
+      }
+    ]
   }
 ]

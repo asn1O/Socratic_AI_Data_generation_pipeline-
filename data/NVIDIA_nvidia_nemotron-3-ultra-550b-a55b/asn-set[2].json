@@ -1,0 +1,485 @@
+[
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Mean, median, mode",
+    "problem": "Find the mean, median, and mode of the data set: 3, 7, 7, 2, 5.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think I can find the mean by adding all the numbers together and then dividing by how many there are, which is five, but I'm not sure how to get the median or mode from this set because I don't remember the exact steps for those."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student knows the mean formula but is uncertain about median and mode, so I need to elicit their current approach to those measures.",
+        "state": "Diagnosis",
+        "response": "I hear you've got the mean figured out, but I'm curious to hear your current thinking about the median and mode — could you explain how you would approach each of those measures with this particular set of numbers?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I remember that the median is the middle value after you put the numbers in order, so I would sort them: 2, 3, 5, 7, 7, and then the middle is 5. For the mode, I think it's the number that appears most often, but here 7 appears twice and the others once, so maybe 7 is the mode? I'm not completely confident."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student correctly ordered the data and identified a median candidate and mode, but expresses uncertainty; I'll guide them to verify the median position and confirm the mode frequency.",
+        "state": "Support",
+        "response": "You've ordered the data nicely and identified a middle value of 5 — what happens if you double-check the position of the middle when there are five numbers? And for the mode, how would you confirm which value actually occurs most frequently?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "With five numbers the middle is the third one, which is 5, so the median is 5. For the mode, 7 appears twice and everything else once, so the mode is 7. I don't think there's more than one mode here because only 7 repeats."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly found median and mode; now I'll guide them toward calculating the mean.",
+        "state": "Support",
+        "response": "Great, the median and mode look solid. Now, how would you go about calculating the mean for this data set? Could you walk me through the steps you'd take?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I added them up: 3 plus 7 plus 7 plus 2 plus 5 equals 24, and then I divided by 5 to get 4.5 as the mean."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student made an arithmetic error in the mean calculation; I need to diagnose the mistake by asking them to recount the sum and division.",
+        "state": "Diagnosis",
+        "response": "Let's look at that addition again — can you recount the sum of the five numbers to make sure it's 24? And then what does 24 divided by 5 actually equal?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, I see, 3+7+7+2+5 is 24, but 24 divided by 5 is 4.8, not 4.5. I must have mis-divided. So the mean is 4.8."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student corrected the mean; now I'll reinforce understanding before moving to synthesis.",
+        "state": "Support",
+        "response": "Exactly, 4.8 is the mean. Now that you have all three measures, how would you describe what each one tells you about the data set in your own words?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The mean gives the average value, the median gives the middle value when sorted, and the mode shows the most frequent value. They each summarize the data differently."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student summarized the three measures; now I'll ask them to explain when to choose each measure.",
+        "state": "Synthesis",
+        "response": "That's a good summary. Can you explain why we might choose one measure over another depending on the situation, perhaps using this data set as an example?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "If the data has outliers, the median is better because it's not affected by extreme values, while the mean can be skewed. The mode is useful for categorical data or to see the most common value. Here, the mean 4.8 is close to the median 5, so the data is fairly symmetric, but the mode 7 shows a slight cluster at the higher end."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept and when to use each measure, so the conversation can close.",
+        "state": "Closing",
+        "response": "Nice work! You've got a solid grasp of mean, median, and mode. Ready to try another set?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "chemistry",
+    "topic": "Acids and bases",
+    "problem": "Calculate the pH of a 0.001 M NaOH solution.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think pH = -log[OH-], so for 0.001 M NaOH, pH = 3. But that seems acidic, not basic."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student is confusing pH and pOH formulas, applying the log directly to hydroxide concentration. Need to diagnose their understanding of what pH measures.",
+        "state": "Diagnosis",
+        "response": "Walk me through your thinking. What does pH actually measure?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "pH measures hydrogen ion concentration. But NaOH gives hydroxide, so I used [OH-]."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student knows pH uses [H+] but doesn't know how to handle bases. Need to guide them to pOH concept with a hint about the relationship.",
+        "state": "Support",
+        "response": "Right, pH uses [H+], not [OH-]. For bases, we first find pOH = -log[OH-]. What's the relationship between pH and pOH?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "pH + pOH = 7, so if pOH = 3, then pH = 4."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student has the wrong sum (7 instead of 14). Need to correct this explicitly since socratic_level is low, and show the full calculation.",
+        "state": "Support",
+        "response": "At 25°C, pH + pOH = 14, not 7. pOH = -log[OH-] = 3, so pH = 14 - 3 = 11."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, 14. So pH = 11. But wait, is NaOH a strong base? I think it's weak."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student now has correct math but misclassifies NaOH as weak. Need to directly state it's strong and confirm their numbers.",
+        "state": "Support",
+        "response": "NaOH is a strong base — it dissociates completely. So [OH-] = 0.001 M is correct. Your pOH = 3 and pH = 11 are right."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Got it. But for pH I could just do -log[OH-] and get 3, right? That's faster."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student resurfaces the original confusion, thinking -log[OH-] directly gives pH. Need to explicitly distinguish pOH from pH again.",
+        "state": "Support",
+        "response": "-log[OH-] gives pOH, not pH. You still need pH = 14 - pOH for the final answer."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Right, pOH = 3, so pH = 11. The solution is basic because pH > 7."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has the correct answer and reasoning. Now need them to articulate the general procedure in their own words.",
+        "state": "Synthesis",
+        "response": "Exactly. In your own words, how do you find pH from a strong base concentration?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Take -log of [OH-] for pOH, subtract from 14 for pH. Strong bases fully dissociate so [OH-] equals concentration."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the complete procedure. Conversation is ready to close.",
+        "state": "Closing",
+        "response": "Perfect! You've got it. Ready for another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Logical fallacies",
+    "problem": "Identify the logical fallacy in the following argument: 'Senator Smith says we should increase funding for education. But Smith was caught cheating on his taxes, so his proposal is worthless.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Okay, so the argument says Senator Smith wants more education funding, but then it points out he cheated on his taxes and concludes his proposal is worthless. I think this might be an appeal to authority fallacy because they're using his tax cheating to undermine his credibility, like saying he's not an authority on education. But I'm not totally sure if that's the right label."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student offered a fallacy label but seems to conflate appeal to authority with ad hominem; need to explore their understanding of each.",
+        "state": "Diagnosis",
+        "response": "Can you walk me through what you think an appeal to authority fallacy looks like, and how you see it playing out in this specific argument about the senator's tax history?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, appeal to authority is when you claim something is true just because an expert or authoritative figure says so, right? Here they're doing the opposite — they're saying the senator isn't trustworthy because of his tax cheating, so maybe it's like they're denying his authority? I'm getting mixed up because it feels like they're attacking him personally rather than his idea."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student recognizes a personal attack but still confuses the fallacy categories; a hint contrasting the two fallacies may help.",
+        "state": "Support",
+        "response": "What would be the key difference between an argument that says 'Trust this because an expert says so' and one that says 'Don't trust this because the person has a flaw'? Which one matches the senator example?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "So the first is appeal to authority, using authority to support a claim. The second sounds like ad hominem, attacking the person instead of the argument. But wait, isn't ad hominem when you attack the logic of the argument itself? Like pointing out a flaw in reasoning? That's what I thought ad hominem meant."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student's definition of ad hominem is inverted; need to clarify the term's meaning before moving on.",
+        "state": "Diagnosis",
+        "response": "What does the phrase 'ad hominem' literally translate to, and who is the target of an ad hominem attack — the argument's reasoning or the person making it?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Ad hominem means 'to the person,' so it targets the person, not the reasoning. In the senator case, they're bringing up his tax cheating, which is about him personally, not about whether education funding is a good idea. So it seems like ad hominem. But earlier I thought it was appeal to authority, and now I'm second-guessing because both involve credibility."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identifies the target but still wavers; a focused question can cement the distinction.",
+        "state": "Support",
+        "response": "If the argument had said 'Senator Smith's proposal is flawed because his tax cheating proves he's dishonest about budget numbers,' would that be addressing the proposal's content or the senator's character?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "That would still be about his character — his honesty — not about the actual merits of increasing education funding. So it's definitely ad hominem. I see now that my earlier appeal to authority guess was off because that fallacy relies on citing an authority as evidence, not on discrediting someone."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly identified the fallacy and distinguished it; now they should articulate the defining rule in their own words.",
+        "state": "Synthesis",
+        "response": "Could you sum up in your own words what makes an argument an ad hominem fallacy, using the senator example to illustrate the key elements?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "An ad hominem fallacy happens when someone rejects or dismisses another person's argument by attacking that person's character, background, or personal traits instead of engaging with the actual points of the argument. In the senator example, the fact that he cheated on his taxes has nothing to do with whether increasing education funding is a good policy, so bringing it up to call his proposal worthless is a classic ad hominem."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has clearly explained the ad hominem fallacy in their own words, showing mastery; time to wrap up warmly.",
+        "state": "Closing",
+        "response": "Great job! You've nailed the definition and applied it perfectly. Ready to tackle another fallacy?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "chemistry",
+    "topic": "Acids and bases",
+    "problem": "What is the pH of a solution prepared by mixing 50.0 mL of 0.20 M acetic acid (Ka = 1.8×10^-5) with 30.0 mL of 0.10 M NaOH?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm not sure how to start. Do I just add the concentrations?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student is unsure of first step; need to guide to mole calculation.",
+        "state": "Support",
+        "response": "First, calculate moles of acetic acid and NaOH. Remember to convert mL to L."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Moles acid = 0.20 * 50 = 10 mol. Moles base = 0.10 * 30 = 3 mol."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student forgot volume conversion; correct and guide to reaction stoichiometry.",
+        "state": "Support",
+        "response": "You need to divide by 1000 to get liters. So acid moles = 0.010, base moles = 0.003."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Okay, acid 0.010 mol, base 0.003 mol. Now what? I'm lost."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student has correct moles; now need to determine limiting reagent and products.",
+        "state": "Diagnosis",
+        "response": "Which reactant is limiting? What species remain after reaction?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Base is limiting, so all NaOH reacts. Leftover acid = 0.007 mol. No conjugate base formed."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student missed that reaction produces acetate; explain buffer formation.",
+        "state": "Support",
+        "response": "The reaction produces acetate ion. You now have a buffer: 0.007 mol acetic acid and 0.003 mol acetate."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Got it. But total volume is 80 mL. Concentrations? Acid = 0.007/0.08 = 0.0875 M. Acetate = 0.003/0.08 = 0.0375 M."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student calculated concentrations correctly; now guide to Henderson-Hasselbalch.",
+        "state": "Support",
+        "response": "Now use Henderson-Hasselbalch: pH = pKa + log([acetate]/[acetic acid]). pKa = -log(1.8e-5)."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "pKa ≈ 4.74. Ratio = 0.0375/0.0875 = 0.4286. log = -0.368. pH = 4.74 - 0.37 = 4.37."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student solved correctly; now ask for concept explanation.",
+        "state": "Synthesis",
+        "response": "In your own words, why does this mixture form a buffer and how did you find the pH?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Mixing weak acid with strong base creates conjugate base, giving a buffer. pH from Henderson-Hasselbalch using mole ratio."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student explained concept correctly; wrap up.",
+        "state": "Closing",
+        "response": "Great job! You've got it. Ready for another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Clock and calendar puzzles",
+    "problem": "If today is Monday, what day of the week will it be 10 days from now?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think you add 10 days to Monday, but I'm not sure how the weeks work. Do I just count each day?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student is attempting to add days but unsure about weekly cycles; need to diagnose their understanding of weekly repetition.",
+        "state": "Diagnosis",
+        "response": "How would you approach figuring out the day after a certain number of days?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I know there are 7 days in a week, but I don't know how to use that here. I'm lost on this part."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student knows weeks are 7 days but can't connect to the problem; provide a minimal hint to link the cycle.",
+        "state": "Support",
+        "response": "Since the days repeat every 7 days, what happens if you count 7 days from Monday?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "After 7 days it's Monday again."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified the 7-day cycle; now guide them to find the remainder.",
+        "state": "Support",
+        "response": "So if 7 days brings you back to Monday, how many days are left after that to reach 10?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "There are 3 days left."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student computed the remainder; ask for the final day to confirm they can apply it.",
+        "state": "Support",
+        "response": "What day is 3 days after Monday?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Thursday."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has the correct answer; now move to synthesis by asking them to articulate the general method.",
+        "state": "Synthesis",
+        "response": "You got the answer! Can you explain in your own words how you would solve this kind of problem for any number of days?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "You divide the number of days by 7, take the remainder, and count that many days from the starting day."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student gave a procedural description; prompt for a bit more clarity on the weekly cycle concept.",
+        "state": "Synthesis",
+        "response": "How would you describe the step with the weeks?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The weeks repeat every 7 days, so you only need to care about the extra days beyond complete weeks. For 10 days, that's 1 week and 3 extra days, so you move 3 days forward from Monday to Thursday."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has clearly explained the concept of using modulo 7 and the weekly cycle; conversation can close.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! Want to try another one?"
+      }
+    ]
+  }
+]
