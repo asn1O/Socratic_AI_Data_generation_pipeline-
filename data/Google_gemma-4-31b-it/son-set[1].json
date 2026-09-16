@@ -1237,5 +1237,203 @@
         "response": "Perfectly explained! You've really mastered the concept of changing bases. Want to try another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "physics",
+    "topic": "Heat transfer",
+    "problem": "A metal rod is placed in a container of hot water. One end is touching the water, the other is in the air. Why does the other end eventually get hot, and what happens if we replace the metal rod with a plastic one?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the heat just moves from the water to the rod... but I don't know how it gets to the other end."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student recognizes heat transfer starts at the source but doesn't understand the internal mechanism; I need to elicit their mental model of the solid's interior.",
+        "state": "Diagnosis",
+        "response": "That's a great start. To dive deeper, how do you imagine the heat actually traveling through the solid material from one end to the other?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I don't really get what that means. Like, does the water actually flow into the rod and carry the heat?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is confused about the nature of solids; I will provide a minimal hint about the atomic level to guide them.",
+        "state": "Support",
+        "response": "What if you thought about the atoms in the rod? If one end starts vibrating faster because of the heat, what might it do to its neighbor?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, so the atoms actually move from the hot end to the cold end, carrying the heat with them as they travel?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has made a conceptual mistake by suggesting atoms move locations rather than transferring energy; I need to guide them to correct this.",
+        "state": "Support",
+        "response": "Think about the structure of a solid. Do the atoms themselves swap places and travel, or do they just bump into each other while staying in their spots?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I guess they just bump into each other? So the energy passes along from one atom to the next?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student now understands the mechanism of conduction; I will move the problem forward to the second part regarding materials.",
+        "state": "Support",
+        "response": "That's a key distinction! Now, applying that same logic, what do you think would happen if we used a plastic rod instead of a metal one?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Plastic is also a solid, so it should work the same way and get just as hot as the metal one, right?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has made a second mistake by assuming all solids conduct heat identically; I'll use a real-world comparison to prompt reflection.",
+        "state": "Support",
+        "response": "Have you ever noticed how a metal spoon in hot soup feels different than a plastic one? Why might that energy transfer happen slower in plastic?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Oh, plastic doesn't let heat move as easily. I guess the vibrations don't pass through it as effectively as they do in metal."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has reached the correct conclusion; now I need them to synthesize the entire concept into a general rule.",
+        "state": "Synthesis",
+        "response": "You've connected the dots! To wrap up, could you explain in your own words the process of how heat moves through solids and why materials differ?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Heat moves through solids by atoms bumping into each other, which is called conduction. Metals are better at this, making them conductors, while plastics are insulators."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the principle of conduction and the difference between conductors and insulators.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! You've mastered the concept of conduction. Ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Argument structure: premises and conclusions",
+    "problem": "Identify the conclusion of the following argument: 'All mammals breathe air. Whales are mammals. Therefore, whales breathe air.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the conclusion is 'Whales are mammals' because that's the main point of the second sentence."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has incorrectly identified the middle premise as the conclusion. I need to see how they are defining a 'main point' to correct the logic.",
+        "state": "Diagnosis",
+        "response": "Can you explain why you think that's the conclusion? What specifically makes it the 'main point' of the argument compared to the other two sentences?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, it's the part that connects the general rule about mammals to the specific animal, the whale."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student understands the connection but is confusing the bridge (premise) with the destination (conclusion). I will provide a hint about indicator words.",
+        "state": "Support",
+        "response": "It does connect the ideas, but usually, the conclusion is the claim the premises are trying to prove. Do you see any specific indicator words that might signal the conclusion?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, 'Therefore'! So the conclusion is 'whales breathe air.' Wait, does that mean 'All mammals breathe air' is a secondary conclusion?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the conclusion but is now overgeneralizing by suggesting a secondary conclusion where one doesn't exist.",
+        "state": "Support",
+        "response": "Not quite. Remember that premises are the pieces of evidence we start with. If 'whales breathe air' is the final result, what is the role of the other two statements?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "They're just the premises. So the first premise is the general rule and the second is the specific case that fits that rule."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has it correct now. I want to test the robustness of this understanding by removing the indicator word.",
+        "state": "Diagnosis",
+        "response": "That's correct. Just to be sure you've got the logic down, if I removed the word 'Therefore,' how would you determine which statement is the conclusion?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I'd look for the statement that is supported by the others. Though, actually, 'All mammals breathe air' could be the conclusion if we were proving mammal traits."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student is momentarily distracted by a hypothetical edge case, resurfacing the confusion about which statement is the conclusion. I'll redirect them to the current argument.",
+        "state": "Support",
+        "response": "In this specific argument, however, is the goal to prove something about mammals in general, or is the goal to prove something specifically about whales?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Right, it's definitely about the whales. So the conclusion is the final claim that results from those two premises."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully navigated the problem and corrected their slips. Now I need them to internalize the general principle.",
+        "state": "Synthesis",
+        "response": "Exactly. To wrap everything up, could you explain in your own words what the general relationship is between premises and conclusions in any logical argument?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Premises are the supporting facts or reasons provided as evidence, and the conclusion is the logical result or the main claim that those premises are intended to prove."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has accurately synthesized the concept of argument structure.",
+        "state": "Closing",
+        "response": "Perfectly put! You've got a great handle on this. Ready to move on to a harder one?"
+      }
+    ]
   }
 ]

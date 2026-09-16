@@ -754,5 +754,674 @@
         "response": "Great job — you've nailed the essential difference! Ready to tackle another comparison?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "chemistry",
+    "topic": "Acids and bases",
+    "problem": "In the reaction NH3 + H2O ⇌ NH4+ + OH-, identify the acid and base according to Brønsted-Lowry theory.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think NH3 is an acid because it has hydrogen atoms."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student thinks NH3 is acid due to presence of hydrogen, showing a common misconception. Need to diagnose reasoning.",
+        "state": "Diagnosis",
+        "response": "What makes you think NH3 is an acid?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Acids have hydrogen, right? NH3 has three hydrogens."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student equates hydrogen content with acidity. Need to introduce Brønsted-Lowry definition to guide.",
+        "state": "Support",
+        "response": "In Brønsted-Lowry, an acid donates a proton. Does NH3 donate or accept a proton here?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I'm not sure. It reacts with water, so maybe it accepts?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student uncertain. Direct attention to products to see proton transfer.",
+        "state": "Diagnosis",
+        "response": "Look at the products: NH4+ and OH-. Which species gained a hydrogen?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "NH4+ has an extra hydrogen compared to NH3. So NH3 gained a hydrogen."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student identified NH3 gained hydrogen. Now guide to role.",
+        "state": "Support",
+        "response": "If NH3 gained a hydrogen (proton), what role did it play?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Then NH3 is a base because it accepted a proton."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified NH3 as base. Now ask for definition to synthesize.",
+        "state": "Synthesis",
+        "response": "Can you state the Brønsted-Lowry definition of a base in your own words?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "A base is a proton acceptor."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student gave base definition. Now check understanding of acid role in same reaction.",
+        "state": "Synthesis",
+        "response": "Right. And what about water in this reaction? What role does it play?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Water donated a proton to NH3, so water is the acid. So acid donates proton, base accepts proton."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student fully explained Brønsted-Lowry acid-base concept. Conversation ready to close.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Elasticity of demand",
+    "problem": "A store raises the price of a widget from $5 to $6. As a result, quantity demanded falls from 200 to 180 units. Using the midpoint method, calculate the price elasticity of demand and determine whether demand is elastic, inelastic, or unit elastic.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know elasticity is percentage change in quantity over percentage change in price, but I'm not sure how to compute the percentages correctly. Do I use the initial values or the average?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student recognizes the elasticity formula but is unsure which percentage change method to apply, indicating a need to diagnose their expected approach.",
+        "state": "Diagnosis",
+        "response": "What method have you learned for calculating percentage changes in elasticity? The midpoint formula uses averages, but some courses use initial values. Which one are you expected to use?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "We're supposed to use the midpoint formula. So I think I need to average the two prices and two quantities. But I'm not 100% sure how to plug them in."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student knows to use midpoint but is uncertain about execution; a hint guiding them to compute the percentage change in price will help them proceed.",
+        "state": "Support",
+        "response": "Right, the midpoint formula uses the average of the two prices as the base for the price change, and similarly for quantity. Can you write out the percentage change in price using the numbers given?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Okay, price goes from 5 to 6. Average price is (5+6)/2 = 5.5. Change in price is 1. So percentage change in price = 1/5.5 ≈ 0.1818 or 18.18%. Quantity goes from 200 to 180. Average quantity = 190. Change = -20. Percentage change = -20/190 ≈ -0.1053 or -10.53%."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student correctly computed both percentage changes; now they need to combine them into the elasticity ratio. A hint to divide the percentage changes will guide the next step.",
+        "state": "Support",
+        "response": "Great, now elasticity is the ratio of the percentage change in quantity to the percentage change in price. What do you get when you divide them?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "So elasticity = -10.53% / 18.18% ≈ -0.579. The absolute value is 0.579, which is less than 1, so demand is inelastic."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student has the correct elasticity value and classification; to deepen understanding, I'll ask why the midpoint method is preferred over initial values.",
+        "state": "Diagnosis",
+        "response": "Why is it important to use the midpoint formula instead of just the initial price and quantity as the base?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Using the midpoint avoids giving different elasticity values depending on whether price rises or falls. It makes the measure symmetric."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student correctly explains the symmetry advantage; now a hint about how the elasticity magnitude would differ with initial values can reinforce the concept.",
+        "state": "Support",
+        "response": "Exactly. If we used the initial price and quantity as the base, how would the calculated elasticity magnitude likely differ for this price increase?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Using initial values, percentage change in price would be 1/5 = 20%, and quantity change would be -20/200 = -10%, giving elasticity = -0.5. The magnitude is slightly smaller than the midpoint result."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has compared both methods; now they are ready to synthesize the full procedure and interpretation in their own words.",
+        "state": "Synthesis",
+        "response": "Now, can you summarize the steps for calculating price elasticity using the midpoint method and explain what the resulting value tells us about demand responsiveness?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "To calculate price elasticity with the midpoint method, first find the average price and average quantity. Then compute the percentage change in price as the change divided by the average price, and similarly for quantity. Divide the percentage change in quantity by the percentage change in price. If the absolute value is less than 1, demand is inelastic, meaning quantity changes proportionally less than price. If greater than 1, it's elastic, and if equal to 1, unit elastic."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has clearly articulated the calculation steps and interpretation, demonstrating mastery; the conversation can now close warmly.",
+        "state": "Closing",
+        "response": "Great job! You've got a solid grasp of elasticity. Ready to try another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Blood relations",
+    "problem": "A is the brother of B. B is the mother of C. How is A related to C?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "So A is brother of B, B is mother of C. I think A is the father of C?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student gave an initial answer (father) that is incorrect; need to understand their reasoning before guiding.",
+        "state": "Diagnosis",
+        "response": "How did you decide A is the father?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Because B is mother, and A is brother of B, so A must be father?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student repeats the same faulty link; break down the relationships step by step with a hint.",
+        "state": "Support",
+        "response": "Let's break it down: B is mother of C. Who is A to B?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "A is brother of B. So A is... maybe grandfather?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student guesses grandfather, still not seeing the sibling-of-parent link; hint that A shares parents with B.",
+        "state": "Support",
+        "response": "If A is brother of B, then A is also a child of B's parents. What does that make A to C?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I'm lost. Does that make A the cousin?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student confuses cousin with uncle; clarify cousin definition and ask for the term for sibling of parent.",
+        "state": "Support",
+        "response": "Cousins are children of siblings. Here A is sibling of B, and B is parent of C. So A is not cousin. What do you call the sibling of your parent?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, that's an uncle! So A is uncle of C."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified uncle; now ask them to articulate the general rule.",
+        "state": "Synthesis",
+        "response": "Exactly. Can you explain in your own words how you figure out the relationship?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "You look at the chain: A is sibling of B, B is parent of C, so A is aunt or uncle of C."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has explained the rule correctly; conversation is ready to close.",
+        "state": "Closing",
+        "response": "Great job! Ready for another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Probability",
+    "problem": "A bag contains 3 red balls and 2 blue balls. Two balls are drawn without replacement. What is the probability that both balls are red?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I have this problem: a bag with 3 red balls and 2 blue balls, draw two without replacement, find the probability both are red. I'm not sure where to start."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student shows initial confusion and needs to articulate their starting approach. Diagnosis state to elicit their thinking.",
+        "state": "Diagnosis",
+        "response": "What do you think the first step might be in solving this probability question? Could you describe your initial approach in a few sentences?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think the draws are independent, so the probability both are red is (3/5) times (3/5) which equals 9/25."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly assumes independence. Support state to guide them to consider the effect of drawing without replacement.",
+        "state": "Support",
+        "response": "If we don't replace the first ball, does that first draw change the composition of the bag for the second draw, and how does that affect the probabilities?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, right. After drawing a red, there are 2 red and 2 blue left. So the second red probability is 2/4 = 1/2. Overall probability = 3/5 * 1/2 = 3/10."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student corrected the mistake and got the right answer. Support state to encourage verification using another method.",
+        "state": "Support",
+        "response": "Can you verify your answer by using combinations to count the total number of outcomes and the number of favorable outcomes, and see if you get the same result?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Using combinations: total ways = 5 choose 2 = 10, favorable = 3 choose 2 = 3, so probability = 3/10. But wait, the rule for dependent events is to multiply probabilities assuming independence, right?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student now expresses a second misconception: that dependent events use independence. Support state to correct this.",
+        "state": "Support",
+        "response": "When events are dependent, do we still assume independence when multiplying their probabilities, or do we need to use conditional probability instead?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "No, for dependent events we multiply the probability of the first event by the conditional probability of the second given the first. So it's 3/5 * 2/4 = 3/10."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has corrected both mistakes and demonstrates understanding. Synthesis state to have them articulate the general rule.",
+        "state": "Synthesis",
+        "response": "Could you explain in your own words the general rule for the probability of two dependent events both occurring, and how it differs from independent events?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "For two dependent events A and B, the probability both occur is P(A) times P(B given A), where P(B given A) is the probability of B after A has already happened."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student correctly explained the rule in their own words. Conversation is ready to close.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for the next problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Elasticity of demand",
+    "problem": "A product's price rises 10% and the quantity demanded falls 5%. Calculate the price elasticity of demand and interpret whether demand is elastic, inelastic, or unit elastic.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think we divide percent changes, but unsure which goes on top."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student shows partial understanding of formula; need to elicit their setup.",
+        "state": "Diagnosis",
+        "response": "How would you set up the calculation?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Elasticity is percent change in price divided by percent change in quantity."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student inverted formula; correct with hint.",
+        "state": "Support",
+        "response": "Elasticity uses quantity change over price change. Try swapping them."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I'm not sure what that means."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student confused; give numeric values.",
+        "state": "Support",
+        "response": "Percent change in quantity is -5%, price is +10%."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "So -5 divided by 10 equals -0.5."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student computed elasticity; highlight magnitude.",
+        "state": "Support",
+        "response": "The magnitude is 0.5 now."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Since it's negative, demand is elastic."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student misinterprets sign; remind about absolute value.",
+        "state": "Support",
+        "response": "The absolute value removes the sign."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "So demand is inelastic because 0.5 is less than 1."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student shows readiness; ask for rule explanation.",
+        "state": "Synthesis",
+        "response": "Can you explain in your own words how we decide elasticity?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Absolute value of quantity change over price change; <1 inelastic, >1 elastic, =1 unit elastic."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student correctly explained rule; wrap up.",
+        "state": "Closing",
+        "response": "Great job! Ready for another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Basic probability distributions",
+    "problem": "A box contains 5 red balls, 3 blue balls, and 2 green balls. Two balls are drawn at random without replacement. What is the probability that both balls are blue?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Okay, so there are 10 balls total, 3 blue. For the first draw, probability of blue is 3/10. For the second draw, if the first was blue, there are 2 blue left out of 9. So maybe it's 3/10 times 2/9? But wait, is that right? I'm not sure if I should consider order or something else."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student shows understanding of total and conditional probability but is uncertain about why multiplication is used and whether order matters.",
+        "state": "Diagnosis",
+        "response": "You've identified the total number of balls and the conditional probability for the second draw given the first was blue. Can you walk me through why you're multiplying those two fractions together? What does that multiplication actually represent in terms of the sequence of draws?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think multiplying gives the probability of both events happening in sequence. But I'm not sure if I need to account for the fact that the draws are without replacement, which I did by changing the denominator. Is that all I need to do?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student understands multiplication for sequential events but is unsure if any additional factor is needed; a hint comparing with replacement will clarify the role of dependence.",
+        "state": "Support",
+        "response": "Good. Since we only care about both draws being blue, the order is fixed: first blue, second blue. There's no other sequence that yields two blues. So the multiplication you did is exactly the probability. But let me ask: what would the probability be if we drew with replacement? How would that change your calculation?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "With replacement, the probability would be 3/10 times 3/10 = 9/100. Without replacement, it's 3/10 times 2/9 = 6/90 = 1/15. So the answer is 1/15? That seems low but maybe correct."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student computed both scenarios correctly but still expresses uncertainty; probing why the without-replacement probability is lower will reinforce the concept of dependence.",
+        "state": "Diagnosis",
+        "response": "You've computed both scenarios correctly. Why does the without-replacement probability come out lower than the with-replacement one? What does that tell you about the effect of removing a blue ball from the box?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Because after taking one blue ball out, there are fewer blue balls left in the box, so the chance of drawing another blue on the second draw decreases. That makes intuitive sense. So the probability is indeed 1/15."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student correctly explains the dependence; now asking to generalize to another color checks transfer of understanding.",
+        "state": "Support",
+        "response": "Exactly. Now, if I asked you to find the probability of drawing two red balls from the same box without replacement, how would you set it up? You don't need to compute the final number, just describe the steps you would take."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "There are 5 red balls out of 10 total. The probability the first draw is red is 5/10. Then, without replacement, there would be 4 red balls left out of 9 total. So I'd multiply 5/10 by 4/9, which simplifies to 20/90 or 2/9."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student correctly generalized to another color; introducing a case with multiple valid sequences tests whether they know to add probabilities of mutually exclusive sequences.",
+        "state": "Diagnosis",
+        "response": "Nice. Let's try one more variation: what if we wanted the probability of drawing one blue and one green in any order, without replacement? How would your approach differ from the previous cases?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "For one blue and one green in any order, there are two sequences: blue then green, or green then blue. I'd calculate each sequence probability and add them. Blue then green: 3/10 * 2/9. Green then blue: 2/10 * 3/9. Then sum."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student demonstrates handling of multiple sequences; now asking for the general rule in their own words moves to synthesis.",
+        "state": "Synthesis",
+        "response": "Great. In your own words, what's the general rule for finding the probability of two dependent events both occurring, and how does it change when there are multiple sequences that satisfy the condition?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "For two dependent events A and B, the probability of both happening is P(A) times P(B given A). If there are multiple sequences that lead to the desired outcome, you calculate the probability for each sequence using the same multiplication rule and then add them together because the sequences are mutually exclusive."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly articulated the general rule for dependent events and the addition of mutually exclusive sequences, indicating mastery.",
+        "state": "Closing",
+        "response": "Perfect, you've got it! Ready for the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Syllogisms",
+    "problem": "All mammals are animals. All dogs are mammals. Therefore, all dogs are animals. Is this syllogism valid? Explain why or why not.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the conclusion follows because dogs are mammals and mammals are animals, but I'm not sure how to check validity formally."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student shows intuitive grasp but hasn't identified the formal premises; need to diagnose their understanding of the argument structure.",
+        "state": "Diagnosis",
+        "response": "Can you tell me what the two premises are in this argument, so we can examine the structure together?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "The first premise is 'All mammals are animals' and the second is 'All dogs are mammals'."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified premises; now guide them to recognize the middle term and its role in the syllogism.",
+        "state": "Support",
+        "response": "Right. In a categorical syllogism, the middle term appears in both premises but not the conclusion. Here the middle term is 'mammals'."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "So the conclusion 'All dogs are animals' is invalid because the middle term isn't in the conclusion."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly thinks missing middle term makes the argument invalid; correct this misconception and hint at the chain reasoning.",
+        "state": "Support",
+        "response": "Actually, the middle term not being in the conclusion is required for a valid syllogism. The argument is valid because premises entail conclusion. Think of it as a chain: if all M are A and all D are M, then all D must be A."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, I see. So the structure is what makes it valid, not the content?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student is grasping the formal nature of validity; reinforce by showing the abstract form.",
+        "state": "Support",
+        "response": "Exactly. Validity depends on form. If the premises were true, the conclusion must be true. Let's check the form: All M are A, All D are M, therefore All D are A."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "But what if some dogs aren't mammals? Then the premise would be false, so the syllogism is invalid."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student conflates soundness with validity; clarify that validity concerns form, not premise truth, and give a template hint.",
+        "state": "Support",
+        "response": "Validity is about logical structure, not truth of premises. Even if a premise were false, the form can still be valid. Form here is AAA-1, which is valid. Think of it like a template: if template is correct, any substitution keeps the argument valid."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Got it. So as long as the form is correct, the argument is valid regardless of actual truth."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student demonstrates readiness to articulate the validity criterion; prompt them to synthesize the concept.",
+        "state": "Synthesis",
+        "response": "Now, can you explain in your own words what makes a categorical syllogism valid, especially the importance of its logical form?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "A categorical syllogism is valid when the conclusion follows necessarily from the two premises because of their logical form, like the middle term linking the categories."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the validity condition in their own words; the conversation can now close warmly.",
+        "state": "Closing",
+        "response": "Great job! You've got the core idea down perfectly. Ready to try another example or do you have questions? Feel free to ask anything."
+      }
+    ]
   }
 ]

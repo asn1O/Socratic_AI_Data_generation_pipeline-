@@ -207,3 +207,127 @@ Config parameter balance
     easy                          36
     hard                          46
     medium                        54
+2026-09-16 20:09:06,437 WARNING Interrupted by user after 0 successful write(s). Exiting cleanly.
+2026-09-16 20:09:06,439 INFO 
+=== Run Statistics Summary ===
+Overall totals
+  Attempts: 0
+  Saved: 0
+  Failed: 0
+  Accept rate: 0.00%
+  Duration (h:m:s): 00:00:04
+
+Per-model results
+  Provider / Model                         Attempts  Saved  Accept %  Avg tokens  Turns  Total convos
+  ----------------------------------------  --------  -----  --------  -----------  -----  Total convos
+
+Failure reasons
+  Category                         Count
+  ------------------------------  -----
+  dead_model_404                      0
+  empty_response                      0
+  invalid_json_syntax                 0
+  turn_count_out_of_range             0
+  speaker_alternation_broken          0
+  malformed_tutor_tags                0
+  missing_problem_field               0
+  final_turn_not_closing              0
+  unexpected_exception                0
+  other                               0
+
+Turn-count distribution
+  no saved conversations
+
+Domain coverage
+
+Config parameter balance
+  socratic_level
+  student_level
+  hint_frequency
+  mistake_frequency
+  verbosity
+  difficulty
+2026-09-16 22:19:06,987 INFO 
+=== Run Statistics Summary ===
+Overall totals
+  Attempts: 183
+  Saved: 133
+  Failed: 50
+  Accept rate: 72.68%
+  Duration (h:m:s): 02:09:37
+
+Per-model results
+  Provider / Model                         Attempts  Saved  Accept %  Avg tokens  Turns  Total convos
+  ----------------------------------------  --------  -----  --------  -----------  -----  Total convos
+  NVIDIA / nvidia/nemotron-3-super-120b-a12b       18     16    88.89%     13182.44  12-16             43
+  NVIDIA / nvidia/nemotron-3-ultra-550b-a55b       18      9    50.00%      7702.78  12-18             36
+  NVIDIA / moonshotai/kimi-k3                     3      0     0.00%         0.00      -             11
+  NVIDIA / deepseek-ai/deepseek-v4-flash-0731        3      0     0.00%         0.00      -              0
+  OpenRouter / nvidia/nemotron-3-super-120b-a12b:free        9      4    44.44%     14135.00  12-14             23
+  OpenRouter / nvidia/nemotron-3-ultra-550b-a55b:free       18     15    83.33%      7703.80  12-14             38
+  Google / gemini-3.6-flash                      18     17    94.44%      7869.06  12-14             49
+  Google / gemini-3.5-flash                      16     12    75.00%      7181.08  12-14             25
+  Google / gemini-3-flash-preview                17     12    70.59%      9197.67  12-16             35
+  Google / gemini-3.5-flash-lite                 18     18   100.00%      3372.50  12-12             50
+  Google / gemini-3.1-flash-lite                 18     17    94.44%      3444.12  12-12             47
+  Google / gemma-4-31b-it                        18     13    72.22%      6026.54  12-16             41
+  Google / gemini-2.5-flash-lite                  3      0     0.00%         0.00      -              0
+  Google / gemini-3.8-flash                       3      0     0.00%         0.00      -              0
+  Google / gemini-3.7-flash                       3      0     0.00%         0.00      -              1
+
+Failure reasons
+  Category                         Count
+  ------------------------------  -----
+  dead_model_404                      0
+  empty_response                     49
+  invalid_json_syntax                 0
+  turn_count_out_of_range             0
+  speaker_alternation_broken          1
+  malformed_tutor_tags                0
+  missing_problem_field               0
+  final_turn_not_closing              0
+  unexpected_exception                0
+  other                               0
+
+Turn-count distribution
+  min=12, max=18, avg=12.83
+
+Domain coverage
+  biology                           14
+  chemistry                          7
+  computer_science_light             8
+  economics_and_finance             12
+  ethics_and_critical_thinking      10
+  everyday_reasoning                12
+  history_and_social_studies         9
+  language_and_grammar               7
+  logic_and_puzzles                 14
+  physics                           14
+  quantitative_aptitude             11
+  statistics_and_data               15
+
+Config parameter balance
+  socratic_level
+    high                          48
+    low                           46
+    medium                        39
+  student_level
+    advanced                      37
+    beginner                      51
+    intermediate                  45
+  hint_frequency
+    high                          42
+    low                           42
+    medium                        49
+  mistake_frequency
+    high                          38
+    low                           53
+    medium                        42
+  verbosity
+    high                          42
+    low                           46
+    medium                        45
+  difficulty
+    easy                          50
+    hard                          48
+    medium                        35

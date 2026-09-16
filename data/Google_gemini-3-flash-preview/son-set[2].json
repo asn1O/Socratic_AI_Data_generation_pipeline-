@@ -1,0 +1,473 @@
+[
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Argument structure: premises and conclusions",
+    "problem": "Analyze the following argument to identify the final conclusion and the intermediate conclusion: 'We should invest in solar power because fossil fuels are depleting. Since fossil fuels are depleting, energy prices will inevitably skyrocket. If energy prices skyrocket, our economy will suffer unless we have a cheap alternative like solar.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this paragraph about solar power and fossil fuels, but I'm really struggling to figure out which part is which. It all just feels like a bunch of related sentences. How am I supposed to know which one is the actual conclusion when they all sound like opinions or facts?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is overwhelmed by the complexity of the argument. I need to see if they can identify any single component of the argument structure before we look at the connections.",
+        "state": "Diagnosis",
+        "response": "It is definitely a lot to take in at once because there are several different ideas layered on top of each other. In this specific passage, which statement do you think the author is trying to convince you is true, rather than just stating a background fact? Just try to find one piece that feels like a 'point' they are making."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, I think 'energy prices will inevitably skyrocket' sounds like a claim because it's talking about the future. But then the stuff about fossil fuels depleting also seems like a point they are making. I don't really get how to tell which one is supporting the other one, though."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student identified a claim but doesn't see the link between statements. I will use a hint to guide them toward identifying the relationship between the first two sentences.",
+        "state": "Support",
+        "response": "Looking closely at the relationship between the first two sentences of the paragraph, which of those specific statements do you think is intended to serve as the evidence, and which one is the point being proven? It might help to think about which fact would have to come first for the other one to make sense in a logical sequence."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I guess 'fossil fuels are depleting' is the conclusion? It seems like the most important fact in the whole thing, so I assume the other sentences about prices and the economy are probably just there to explain why the depletion is such a big deal for us right now."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made a mistake by reversing the premise and conclusion. I'll provide a direct hint about linguistic signposts like 'since' to help them self-correct the direction of the logic.",
+        "state": "Support",
+        "response": "Actually, think about the direction of the logic there. If fossil fuels run out, what happens to the price? Notice the word 'since' at the start of that sentence. Usually, the statement immediately following 'since' is the evidence. If the evidence is that fuels are depleting, what is the immediate result or conclusion the author wants you to accept from that fact?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, I see. So because the author says 'since' the fuels are depleting, that means the depletion is the reason for the prices going up. So 'energy prices will skyrocket' is a conclusion. It's weird because it's in the middle of the argument, but it's a conclusion of that one specific sentence, right?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the intermediate conclusion. Now I need to guide them toward the final conclusion, which is the ultimate goal of the text.",
+        "state": "Support",
+        "response": "After all of this discussion about price increases and fuel depletion, what is the ultimate action, policy, or belief the author wants the reader to take away as the final goal of the entire argument? If you had to pick the one main point that the author is truly trying to sell you on, what would it be?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "That would be the very first part, where they say we should invest in solar power. The stuff about the economy and prices is all just a big explanation to prove that we need an alternative. So 'skyrocketing prices' was just a middle step to get to the solar power point."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully identified both the intermediate and final conclusions. Now I need them to articulate the general principle of this structure to ensure they internalize it.",
+        "state": "Synthesis",
+        "response": "You have successfully navigated a complex structure where one idea supports another, which then supports the final point. To wrap this up, how would you explain to someone else the difference between an 'intermediate conclusion' and the 'final conclusion' based on the steps we just took today to solve this?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "An intermediate conclusion is like a stepping stone. It's a claim that is proved by a premise, but then it turns around and acts as a premise itself to prove a bigger point. The final conclusion is the end of the line—the main thing the author wants you to believe or do after all the steps are done."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has provided an excellent explanation of the concept, so the session is complete.",
+        "state": "Closing",
+        "response": "That is a perfect way to describe it! You really have a handle on how these logical chains work now and how one sentence can wear two hats. Would you like to try another complex argument, or should we move on to something else?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "history_and_social_studies",
+    "topic": "Primary vs secondary sources",
+    "problem": "Classify a newspaper article written in 2024 about the Battle of Yorktown as a primary or secondary source.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this newspaper article about the Revolution. Is it a primary source because it's news?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is identifying the format but hasn't considered the timing. I need to see their logic for newspapers.",
+        "state": "Diagnosis",
+        "response": "What specifically makes you think a newspaper article counts as a primary source?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, reporters are eyewitnesses, so their articles are always direct records of history."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student assumes all reporters are eyewitnesses. I need to guide them to check the date of the article.",
+        "state": "Diagnosis",
+        "response": "When was this article written relative to the events of the American Revolution?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "It was written today, but since it's a newspaper, doesn't it stay primary?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is over-generalizing the category of 'newspaper'. I will hint at where the information originated.",
+        "state": "Support",
+        "response": "If the reporter wasn't alive in the 1700s, what sources did they use?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I guess they would have to read old letters or books from that time."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified that the reporter used other records. Now I'll check if they see the implication.",
+        "state": "Diagnosis",
+        "response": "Since the article relies on those other records, how does that change its category?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "It's still primary because the journalist is the first person to write this specific story."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student is confusing 'original writing' with 'primary source'. I need to highlight the witness vs. researcher distinction.",
+        "state": "Support",
+        "response": "What is the main difference between an eyewitness and someone who researches the past?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The eyewitness saw it happen, while the researcher just studies what the eyewitness wrote."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully defined the roles. Now I will ask them to apply it to the problem.",
+        "state": "Diagnosis",
+        "response": "Based on that distinction, how would you classify this modern article about George Washington?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "It's a secondary source because the author wasn't there; they are just interpreting old info."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student reached the correct answer. Now I will have them synthesize the general rule.",
+        "state": "Synthesis",
+        "response": "In your own words, how do we distinguish between these two source types?"
+      },
+      {
+        "turn": 15,
+        "speaker": "student",
+        "text": "Primary sources are firsthand accounts from the time, while secondary sources analyze them much later."
+      },
+      {
+        "turn": 16,
+        "speaker": "tutor",
+        "reasoning": "The student provided an accurate and concise explanation of the concept, concluding the lesson.",
+        "state": "Closing",
+        "response": "Exactly right! You've got it. Want to try another one now?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Logical sequences",
+    "problem": "What is the next number in this sequence: 3, 9, 27, 81...?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I see 3, 9, 27, and 81, but I'm not sure how to find the next one."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is unsure how to proceed. I'll start by diagnosing their ability to see relationships between terms.",
+        "state": "Diagnosis",
+        "response": "What do you notice about the relationship between the first two numbers?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, 9 is 6 more than 3, but 27 is way more than 9."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student noticed that addition isn't consistent. I'll suggest looking at other operations as a hint.",
+        "state": "Support",
+        "response": "If adding isn't the same each time, what other operation could connect 3 and 9?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Maybe multiplication? I know that 3 times 3 equals 9."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student found a potential rule. I need to diagnose if they can apply it to the rest.",
+        "state": "Diagnosis",
+        "response": "How does that multiplication rule hold up when you look at the jump from 9 to 27?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "It works! 9 times 3 is 27, and 27 times 3 is 81."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The pattern is confirmed. I'll now guide the student to apply it to the last term.",
+        "state": "Support",
+        "response": "Since you found the pattern, how would you use it to find the number after 81?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I need to do 81 times 3. Is the answer 241?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student made a minor calculation error. I'll provide a procedural hint to help them self-correct.",
+        "state": "Support",
+        "response": "Can you re-check that by calculating 3 times 1 and then adding 3 times 80?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Oh, 3 plus 240 is 243. The next number is 243!"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student reached the correct answer. I'll now have them synthesize the rule in their own words.",
+        "state": "Synthesis",
+        "response": "How would you describe the general rule for this sequence in your own words?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "You just take the number before it and multiply that by 3 every time."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the concept and solved the problem.",
+        "state": "Closing",
+        "response": "Exactly right! You nailed it. Want to try a different pattern?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "biology",
+    "topic": "Human circulatory system",
+    "problem": "Which type of blood vessel is responsible for carrying blood from the rest of the body back to the heart?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm trying to remember which vessels return blood to the heart. Is it the arteries?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is unsure and asking a question. I need to probe their understanding of circulatory flow.",
+        "state": "Diagnosis",
+        "response": "Think about the heart as a pump; does blood move in a loop or a line?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "It's a circle. So if it leaves one way, it has to come back another."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student understands the loop concept but confuses the names. I'll provide a mnemonic hint to distinguish them.",
+        "state": "Support",
+        "response": "Arteries carry blood 'Away' from the heart. Knowing that, where do veins go?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, so if the arteries go away, then veins must be the ones returning."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has identified the answer. I'll probe for structural knowledge to ensure they understand the mechanism.",
+        "state": "Diagnosis",
+        "response": "What is a specific structural feature of veins that helps blood travel in that direction?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I think they have valves? I'm not totally sure how those help, though."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student knows about valves but not their function. I'll offer a hint regarding gravity's effect on flow.",
+        "state": "Support",
+        "response": "Valves prevent blood from falling backward. Why would a vessel from the legs need that?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "To keep it moving toward the heart against gravity. So veins definitely handle the return."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student correctly connected the structure and function. Now I'll ask for a summary of the concept.",
+        "state": "Synthesis",
+        "response": "Can you explain the main difference in direction between these two vessels in your own words?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Arteries always carry blood away from the heart, while veins always carry blood back."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student provided a clear, correct explanation of the principle, so the session is complete.",
+        "state": "Closing",
+        "response": "Excellent work! You explained that perfectly. Would you like to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Percentages",
+    "problem": "A clothing store increases the price of a shirt from $40 to $50. What is the percentage increase in the price of the shirt?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Okay, so the price goes from $40 to $50. That's a $10 increase. I know I need to find the percentage, so I just divide the change by something, but I'm blanking on which number goes on the bottom."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student identified the price difference but is unsure about the denominator. I will define the base as the starting value to guide their setup.",
+        "state": "Diagnosis",
+        "response": "Exactly, the increase is $10. Since we are looking for the 'increase,' we compare that change to where we started. Looking at the $40 and the $50, which one represents our original starting point?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Wait, if the final price is $50, then the $10 increase must be 10% because 10 is a tenth of 100, and $50 is half of 100. So it's 10%?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student incorrectly generalized to a base of 100. I'll explain that percentages are relative to the specific starting amount to correct this.",
+        "state": "Support",
+        "response": "Actually, percentages represent a part of a specific whole. Since we're tracking how the $40 price changed, that original amount serves as our denominator. Try setting up your fraction using that $40 as the base."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, right. So I should do 10 divided by 40. That simplifies to 1/4, which is 0.25. So that would be a 25% increase."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student arrived at the correct percentage. I'm confirming the result while checking if they understand why we don't use the final price.",
+        "state": "Support",
+        "response": "You've got the math right; 1/4 is indeed 25%. We use the starting value because an 'increase' is defined by how much the source grew. Would the percentage change if we compared it to the $50 instead?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Actually, now that I think about it, wouldn't 10/50 also make sense? That would be 20%. I think the percentage increase should be calculated on the price people actually pay at the end, right?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is reconsidering the base, which is a common point of confusion. I'll clarify that 'increase' specifically requires the original value as the reference.",
+        "state": "Support",
+        "response": "Actually, 'increase' must be calculated based on the starting value. If you used $50, you'd be finding what percentage of the new price the $10 represents, which is a different concept. What would 10/40 give you again?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Yeah, that makes sense. If I'm measuring how much it 'grew,' I have to start from the smaller, original amount. So 10/40 is the only way to show that 25% growth from the start."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully navigated the problem and its potential pitfalls. Now I'll have them summarize the logic to ensure the concept is internalized.",
+        "state": "Synthesis",
+        "response": "You've got it. To make sure this sticks for other problems, how would you describe the general steps or the formula for finding a percentage increase to someone else?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "To find the percentage increase, you first find the difference between the new and old price. Then, you divide that difference by the original price and multiply by 100 to turn the decimal into a percent."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student provided a complete and accurate summary of the percentage increase formula. The learning objective has been met.",
+        "state": "Closing",
+        "response": "That's a perfect explanation! You handled that tricky base selection really well. Ready to move on to the next one?"
+      }
+    ]
+  }
+]

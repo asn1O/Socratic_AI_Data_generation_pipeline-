@@ -1,0 +1,758 @@
+[
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "history_and_social_studies",
+    "topic": "Cause-and-effect in historical events",
+    "problem": "Explain the cause-and-effect relationship between the Industrial Revolution and urbanization in 19th-century Europe.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know the Industrial Revolution and urbanization are linked, but I'm not sure which caused which."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student identifies a link but hasn't explained mechanism; need to elicit deeper reasoning.",
+        "state": "Diagnosis",
+        "response": "The Industrial Revolution introduced factory production. What do you think drew people to cities?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Urbanization caused the Industrial Revolution because cities had lots of workers."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student reversed cause and effect; correct with direct explanation and minimal hint.",
+        "state": "Support",
+        "response": "Actually, factories needed workers, so people moved to cities. Which came first: factories or large cities?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Factories came first, so they attracted workers to cities."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student now has correct mechanism; check geographic scope.",
+        "state": "Diagnosis",
+        "response": "The Industrial Revolution spread beyond England to other regions. Did it affect only Western Europe?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "It only affected Western Europe."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student overgeneralizes; correct with direct explanation.",
+        "state": "Support",
+        "response": "It also reached the United States, Japan, and other areas."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, it spread globally, not just Western Europe."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has corrected both mistakes; ready to articulate rule.",
+        "state": "Synthesis",
+        "response": "The Industrial Revolution drove urbanization worldwide. In your own words, what's the cause-effect rule?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The Industrial Revolution caused urbanization by creating factory jobs that drew people to cities, and this happened globally."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student correctly explained the cause-effect relationship; wrap up.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Probability",
+    "problem": "A factory produces widgets using two machines. Machine A produces 60% of widgets with a 2% defect rate. Machine B produces 40% with a 5% defect rate. A quality control test detects defects with 95% accuracy but has a 3% false positive rate. If a randomly selected widget tests positive for defects, what's the probability it's actually defective?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Okay, so we have two machines with different defect rates. Machine A makes 60% of widgets at 2% defect, Machine B makes 40% at 5% defect. The test is 95% accurate with 3% false positives. I need P(defective | positive test). I think I should use Bayes' theorem. First, overall defect probability is 0.6 * 0.02 + 0.4 * 0.05 = 0.012 + 0.02 = 0.032. Then P(positive | defective) is 0.95. So answer is 0.95 * 0.032 divided by... wait, denominator is P(positive) which I'm not sure about yet."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified Bayes' theorem and computed prior defect probability, but is uncertain about the denominator P(positive). This reveals they understand the structure but need guidance on computing total probability of a positive test, including false positives from non-defective widgets.",
+        "state": "Diagnosis",
+        "response": "Good start! You've correctly set up Bayes' theorem: P(defective|positive) = P(positive|defective) * P(defective) / P(positive). Your prior P(defective) = 0.032 is right. Now, P(positive) has two parts: true positives from defective widgets and false positives from non-defective ones. Since the test has 3% false positive rate, P(positive|non-defective) = 0.03. Can you write out the full expression for P(positive) using the law of total probability?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Right, law of total probability. P(positive) = P(positive|defective) * P(defective) + P(positive|non-defective) * P(non-defective). So that's 0.95 * 0.032 + 0.03 * (1 - 0.032) = 0.0304 + 0.03 * 0.968 = 0.0304 + 0.02904 = 0.05944. Then P(defective|positive) = 0.0304 / 0.05944 ≈ 0.511. Wait, that seems low. Only 51% chance it's actually defective given a positive test? But the test is 95% accurate! That feels wrong. Maybe I messed up the false positive rate interpretation."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student correctly computed P(positive) and got ~0.511, but is surprised by the low result, indicating a common base-rate neglect intuition. They're questioning whether they misinterpreted the false positive rate. This is a good moment to validate their calculation while explaining why the result is counterintuitive but correct.",
+        "state": "Support",
+        "response": "Your calculation is actually correct! The 51.1% result surprises many people because the defect rate is low (3.2%) so even with a 3% false positive rate, false positives outnumber true positives. The test's '95% accuracy' refers to sensitivity (true positive rate), not positive predictive value. You haven't misinterpreted the false positive rate — P(positive|non-defective) = 0.03 is right. The low base rate of defects drags down the posterior. This is a classic base-rate fallacy trap. Want to double-check by computing the actual numbers per 10,000 widgets?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Let me verify with 10,000 widgets. Machine A: 6,000 widgets, 2% defect = 120 defective. Machine B: 4,000 widgets, 5% defect = 200 defective. Total defective = 320. Non-defective = 9,680. Test catches 95% of defectives: 0.95 * 320 = 304 true positives. False positives: 3% of 9,680 = 290.4 ≈ 290. Total positives = 304 + 290 = 594. So P(defective|positive) = 304 / 594 ≈ 0.5118. Same answer. But wait — the problem says '95% accuracy'. Does that mean 95% sensitivity AND 95% specificity? Or just 95% true positive rate? If specificity is 95%, then false positive rate is 5%, not 3%."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student did an excellent verification with concrete numbers and caught a potential ambiguity in '95% accuracy' — it could mean overall accuracy, or sensitivity only, or both sensitivity and specificity. They're now questioning whether false positive rate is 3% (given) or 5% (if 95% specificity). This shows advanced critical reading. Need to clarify that the problem explicitly states '3% false positive rate' separately, so we use that.",
+        "state": "Support",
+        "response": "Great catch on the verification! And you're right to question '95% accuracy' — in practice that phrase is ambiguous. But the problem explicitly gives '3% false positive rate' as a separate number, so we use that directly rather than deriving it from '95% accuracy'. The 95% here refers to sensitivity (true positive rate) only. Specificity would be 97% (since false positive rate = 3%). Your calculation using the given 3% false positive rate is correct. The '95% accuracy' wording is just descriptive of the test's sensitivity, not a separate constraint."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Okay, that makes sense. So we have P(defective) = 0.032, P(positive|defective) = 0.95, P(positive|non-defective) = 0.03. Bayes gives 0.5118. But I'm still uneasy — the problem mentions two machines with different defect rates. I used the overall 3.2% defect rate. Should I instead compute separately for each machine? Like P(defective|positive) = P(positive|defective, A)P(A|defective)P(defective) + ... no, that's not right. The machine origin doesn't matter once we know defect status, right? The test only depends on whether it's defective, not which machine made it."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student is now overcomplicating by wondering if they need to condition on machine type. They correctly realize the test depends only on defect status, not machine, but they're second-guessing because the problem gave machine-specific rates. This is a good diagnostic moment — they understand conditional independence but need confirmation.",
+        "state": "Diagnosis",
+        "response": "You're exactly right — the test result depends only on whether the widget is defective, not which machine produced it. The machine information was only needed to compute the overall prior P(defective) = 3.2%. Once you have that, the machine origin is irrelevant for the Bayes update. This is conditional independence: test result ⟂ machine | defect status. Your single Bayes calculation using the pooled 3.2% prior is the correct and efficient approach. No need to stratify by machine."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Got it. Conditional independence — the test doesn't care which machine made the widget, only whether it's defective. So my calculation stands: 304 true positives out of 594 total positives = 51.18%. But wait, earlier I thought the answer should be higher because of the '95% accuracy'. That was me confusing P(positive|defective) with P(defective|positive). The base rate of 3.2% defects means most widgets are non-defective, so even a small false positive rate generates many false alarms. That's the base rate fallacy."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has now correctly identified their earlier confusion as the base rate fallacy, articulated conditional independence, and confirmed the numerical answer. They're ready to synthesize the concept. The mistake about confusing sensitivity with PPV has been resolved and they can explain it.",
+        "state": "Synthesis",
+        "response": "Perfect — you've nailed the key insight. The trap was exactly that confusion between sensitivity (95%) and positive predictive value (~51%). Because the defect base rate is low, false positives swamp true positives even with a decent test. Can you now explain in your own words the general principle this problem illustrates, and when this kind of Bayesian updating is necessary?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The principle is that the probability of a condition given a positive test depends heavily on the base rate of that condition, not just the test's accuracy. Even with high sensitivity and low false positive rate, if the condition is rare, most positive results will be false positives. Bayesian updating is necessary whenever we have a prior probability and want to revise it with new evidence — here, the test result. The formula P(hypothesis|evidence) = P(evidence|hypothesis) * P(hypothesis) / P(evidence) combines the prior with the likelihood of the evidence under the hypothesis, normalized by the total probability of the evidence. The trap is forgetting the denominator includes false positives from the much larger non-condition population."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has given an excellent, thorough explanation of the base rate fallacy, Bayesian updating, and the specific trap in this problem. They've articulated the rule in their own words perfectly. The conversation is ready to close.",
+        "state": "Closing",
+        "response": "Excellent explanation — you've captured the core idea beautifully. That base-rate trap catches even experienced people! Ready to tackle another probability puzzle?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Active vs passive voice",
+    "problem": "Identify whether the sentence 'The cake was eaten by the children.' is active or passive voice, then rewrite it in the opposite voice.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think it's active because the children did the eating."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student claims sentence is active, revealing confusion about subject and action. Need to diagnose their understanding of voice.",
+        "state": "Diagnosis",
+        "response": "What makes you think the children are doing the action?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Because 'children' is the subject."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student thinks children is subject. Provide hint to focus on who performs action.",
+        "state": "Support",
+        "response": "Who is performing the action in the sentence?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "The cake? No, the cake is being eaten."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student unsure about subject. Need to clarify subject identification.",
+        "state": "Diagnosis",
+        "response": "What is the subject of the sentence?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "The cake."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student identified subject correctly. Now guide to verb form.",
+        "state": "Support",
+        "response": "And what verb form follows the subject?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Was eaten."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student identified verb form. Now guide to voice classification.",
+        "state": "Support",
+        "response": "Does that verb form indicate active or passive?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Passive."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified passive voice. Now ask them to rewrite and explain rule.",
+        "state": "Synthesis",
+        "response": "Can you rewrite the sentence in active voice and explain the difference?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Active voice means the subject does the action; passive voice means the subject receives the action. So, 'The children ate the cake.'"
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student explained rule in own words, demonstrating mastery. Wrap up.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for another?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Elasticity of demand",
+    "problem": "A product's price increases from $10 to $12, and quantity demanded falls from 100 to 80 units. Calculate the price elasticity of demand using the midpoint formula, and interpret the result.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think I need to find the percentage change in quantity over percentage change in price. So (80-100)/100 divided by (12-10)/10... that gives -0.2 / 0.2 = -1."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student jumped straight to calculation using the point elasticity formula instead of the midpoint formula specified in the problem. Need to diagnose whether they know the difference.",
+        "state": "Diagnosis",
+        "response": "Walk me through which formula you chose and why."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I used the standard elasticity formula: percent change in Q over percent change in P. The problem says midpoint formula but isn't that the same thing? You just use the initial values as the base."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student explicitly claims the midpoint formula uses initial values as base — a concrete error. Need to guide them toward the correct midpoint calculation without giving it away.",
+        "state": "Support",
+        "response": "The midpoint formula uses the average of initial and final values as the base, not the initial value. What would the average quantity and average price be here?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, right. Average quantity is (100+80)/2 = 90, average price is (10+12)/2 = 11. So percent change in Q is (80-100)/90 = -20/90 = -0.222. Percent change in P is (12-10)/11 = 2/11 = 0.182. Elasticity = -0.222 / 0.182 = -1.22."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student correctly computed midpoint percentages but may have rounding issues. The calculation is close but let's check the exact fraction. Also need to see if they interpret the magnitude correctly.",
+        "state": "Support",
+        "response": "Good. Keep it as fractions: -20/90 divided by 2/11. What does that simplify to exactly?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "(-20/90) * (11/2) = -220/180 = -11/9 = -1.222... Since it's negative, that means when price goes up, demand goes up too, right? Because the negative signs cancel?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student made an explicit sign-interpretation error: claiming negative elasticity implies demand increases with price. Need to diagnose their understanding of the law of demand.",
+        "state": "Diagnosis",
+        "response": "What does the negative sign actually tell us about the relationship between price and quantity demanded?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The negative sign means they move in opposite directions. So price up, quantity down — that's the law of demand. But wait, if elasticity magnitude is greater than 1, that means it's inelastic, right? Because the percentage change in quantity is bigger?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student corrected the sign interpretation but now asserts an explicit overgeneralization: magnitude > 1 means inelastic. This resurfaces a classification error. Need to guide the elastic/inelastic distinction.",
+        "state": "Support",
+        "response": "Check that: when |elasticity| > 1, the percentage change in quantity is larger than the percentage change in price. What do we call that?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Right, that's elastic demand — quantity responds more than proportionally to price. So here |−11/9| = 1.22 > 1, meaning demand is elastic. Total revenue would fall when price rises."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly calculated elasticity using midpoint formula, interpreted the sign, and classified elasticity magnitude with revenue implication. Ready for synthesis.",
+        "state": "Synthesis",
+        "response": "In your own words, what does the midpoint elasticity formula capture and why does the sign matter?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The midpoint formula uses average quantity and price as the base so the elasticity is symmetric — same result whether price rises or falls. The negative sign reflects the inverse price-quantity relationship from the law of demand. We usually talk about absolute value to classify elastic vs inelastic."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has articulated the concept correctly in their own words, covering midpoint symmetry, sign interpretation, and classification. Conversation is complete.",
+        "state": "Closing",
+        "response": "Exactly. You've got a solid handle on this. Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Map reading and distance estimation",
+    "problem": "A map has a scale of 1:50,000. You measure a winding road on the map using a piece of string, and the string measures 8.4 cm when straightened. How many kilometers is the road in reality? If you drive at 60 km/h, how many minutes will it take to travel that road?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'll multiply 8.4 by 50,000 to get centimeters, then convert to kilometers. After that, divide by 60 for hours and convert to minutes."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student outlined a plan but hasn't executed the scale conversion; need to diagnose their understanding of the ratio.",
+        "state": "Diagnosis",
+        "response": "Can you explain how the scale 1:50,000 converts map centimeters to actual kilometers?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Since 1:50,000 means 1 cm equals 50 km, 8.4 cm gives 420 km."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student misinterpreted the scale; asking them to explain their reasoning may prompt self-correction.",
+        "state": "Diagnosis",
+        "response": "Could you walk me through how you derived 50 km per centimeter from the ratio?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, I see. 1:50,000 means 1 cm on map equals 50,000 cm on ground. 50,000 cm is 0.5 km, so 8.4 cm is 4.2 km."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student corrected the distance; now need to elicit their plan for the time calculation.",
+        "state": "Diagnosis",
+        "response": "Now that you have the road distance, how do you plan to find the travel time in minutes?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Time = distance/speed = 4.2/60 = 0.07 hours. So the trip takes 0.07 minutes."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student confused hours with minutes; a targeted hint is needed to convert units.",
+        "state": "Support",
+        "response": "How would you convert a time in hours into minutes?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Right, multiply by 60: 0.07 * 60 = 4.2 minutes."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has the correct answer and fixed both errors; time to synthesize the overall method.",
+        "state": "Synthesis",
+        "response": "Can you summarize the full process for converting a map measurement to travel time using a scale ratio?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "First, multiply map distance by scale denominator to get ground distance in same units. Convert to km. Divide by speed for hours, then multiply by 60 for minutes."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student articulated the complete procedure correctly; conversation can close warmly.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "history_and_social_studies",
+    "topic": "Comparing political systems",
+    "problem": "Compare the accountability mechanisms in parliamentary and presidential systems, focusing on confidence votes, impeachment, fixed terms, party discipline, veto powers, and crisis response.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Parliamentary systems seem more accountable with confidence votes, but presidential systems have fixed terms."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student identifies confidence votes and fixed terms but hasn't explored other accountability mechanisms. Diagnosis to probe further.",
+        "state": "Diagnosis",
+        "response": "Confidence votes let legislatures remove executives. Presidential systems use impeachment. What else differs?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Impeachment is rare, so maybe less accountable? Also parliamentary elections can be called early."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student notes impeachment rarity and early elections. Support to guide toward party discipline and gridlock.",
+        "state": "Support",
+        "response": "Early elections increase responsiveness. Fixed terms provide stability but can cause gridlock. Consider party discipline."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Party discipline in parliamentary systems forces cohesion, but presidential systems have separate elections."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student mentions party discipline and separate elections. Support to hint at divided government and veto powers.",
+        "state": "Support",
+        "response": "Separate elections can create divided government. That affects accountability. How do veto powers interact?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Presidential veto can block legislation, but legislature can override. Parliamentary executives usually control agenda."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student discusses veto and agenda control. Support to introduce coalition governments and judicial review.",
+        "state": "Support",
+        "response": "Agenda control strengthens accountability. However, coalition governments can weaken it. What about judicial review?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Judicial review exists in both, but constitutional courts vary. I'm not sure how that changes accountability."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student uncertain about judicial review. Support to suggest constitutional courts and crisis response.",
+        "state": "Support",
+        "response": "Constitutional courts can check executives. In some parliamentary systems, courts are weaker. Let's compare crisis response."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "In crises, parliamentary systems can act fast via confidence, but presidential systems may stall due to checks."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student compared crisis response. Ready to synthesize; ask for summary.",
+        "state": "Synthesis",
+        "response": "Summarize the key accountability differences in your own words."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Parliamentary: confidence votes, party discipline, quick removal but instability. Presidential: fixed terms, impeachment, veto overrides, stability but gridlock."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student gave clear summary. Conversation complete.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for another comparison?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "computer_science_light",
+    "topic": "Boolean logic",
+    "problem": "Simplify the Boolean expression: (A + B') * (A' + C) * (B + C') + A * B * C'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Okay, so I have this expression: (A + B') * (A' + C) * (B + C') + A * B * C'. I think I should start by multiplying out the first three factors, but that seems like it'll get really messy. Maybe there's a shortcut?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student recognizes the expression but is unsure how to proceed, indicating need to explore their current strategy.",
+        "state": "Diagnosis",
+        "response": "How did you decide to start by multiplying out the first three factors?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, I know I can use the distributive law to expand (A + B')(A' + C) first, then multiply by (B + C'), and finally add the last term. But I'm worried it'll be too many terms."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student is on a valid but heavy path; a hint about a pattern could steer them toward a more efficient simplification.",
+        "state": "Support",
+        "response": "What if you looked for a known identity that matches part of the expression, like the consensus theorem or a similar pattern?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I've heard of consensus theorem but I'm not sure how it applies here. The consensus theorem is (X+Y)(X'+Z)(Y+Z) = (X+Y)(X'+Z), right? But my third factor is (B + C'), not (B + C). So it doesn't match exactly."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student identified the mismatch; a hint about modifying the expression could help.",
+        "state": "Support",
+        "response": "Could you manipulate the third factor using De Morgan's law or double negation to see if it fits a known pattern?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Let's see... (B + C') is already a sum. If I complement it twice: (B + C') = ((B + C')')' = (B' * C)'. That gives a product inside a negation. Not sure if that helps."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student attempted a transformation but didn't see the connection; need to understand their reasoning about the third factor.",
+        "state": "Diagnosis",
+        "response": "What made you think of applying De Morgan's law to (B + C')? What were you hoping to achieve?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I thought maybe I could turn it into a product so it might combine with the other terms after expanding. But now I'm not sure that's the right direction."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student is stuck; a hint about an alternative identity for the first two factors might be more productive.",
+        "state": "Support",
+        "response": "What happens if you apply the identity (X+Y)(X'+Z) = XZ + X'Y to the first two factors? Have you seen that before?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Oh, that's (A+B')(A'+C) = A*C + A'*B' + B'*C? Wait, the identity (X+Y)(X'+Z) = XZ + X'Y doesn't have the YZ term. Let me check: (A+B')(A'+C) = A A' + A C + A' B' + B' C = A C + A' B' + B' C. So there's an extra B'C term. The identity (X+Y)(X'+Z) = XZ + X'Y is actually missing the YZ term? I think the correct expansion is XZ + X'Y + YZ. So (A+B')(A'+C) = AC + A'B' + B'C. That's what I got."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly expanded the first two factors and recognized the extra term; now ready to articulate the next simplification step.",
+        "state": "Synthesis",
+        "response": "In your own words, how does the third factor (B + C') interact with that expansion? What happens to the B'C term when you multiply by (B + C')?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "When I multiply (AC + A'B' + B'C) by (B + C'), the B'C term gets multiplied by B and C'. B'C * B = 0, and B'C * C' = 0. So the B'C term disappears! Then I get AC*B + AC*C' + A'B'*B + A'B'*C' = ABC + 0 + 0 + A'B'C'. Then adding the last term ABC' gives ABC + ABC' + A'B'C' = AB(C+C') + A'B'C' = AB + A'B'C'. So the simplified expression is AB + A'B'C'."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly simplified the expression and explained the crucial insight; conversation can wrap up.",
+        "state": "Closing",
+        "response": "Great work! You've nailed the simplification and explained the crucial step. Ready for another challenge?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Basic probability distributions",
+    "problem": "A fair coin is flipped 5 times. What is the probability of getting exactly 2 heads?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "So we're flipping a fair coin five times and want exactly two heads. I think this is a binomial distribution because each flip is independent and there are only two outcomes. But I'm not completely sure how to set up the parameters like n, k, and p. I remember the formula uses combinations, but I'm a little fuzzy on the details of calculating them."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student recognizes binomial but is unsure about parameters n, k, p. Need to diagnose their understanding of these values.",
+        "state": "Diagnosis",
+        "response": "You're on the right track recognizing this as a binomial experiment. The number of trials n is the number of flips, which is 5. The number of successes k is the number of heads we want, which is 2. The probability of success p on each trial is 0.5 for a fair coin. So we have n=5, k=2, p=0.5. Do you recall the binomial probability formula?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Okay, so n=5, k=2, p=0.5. The formula is P(X=k) = C(n,k) * p^k * (1-p)^(n-k). Plugging in: C(5,2) * (0.5)^2 * (0.5)^3. I know C(5,2) is 5 choose 2, but I'm not totally confident about the arithmetic for the combination and the powers of 0.5."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student knows the formula but needs help computing the combination and the powers of 0.5. Provide direct explanation of these calculations.",
+        "state": "Support",
+        "response": "Great, you've written the formula correctly. C(5,2) is the number of ways to choose 2 heads out of 5 flips. It's calculated as 5! / (2! * 3!) which simplifies to (5*4)/(2*1) = 10. Also, (0.5)^2 = 0.25 and (0.5)^3 = 0.125. So the probability becomes 10 * 0.25 * 0.125. Would you like to multiply those numbers?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Let's do the multiplication: 10 times 0.25 is 2.5. Then 2.5 times 0.125... 2.5 * 0.125 = 0.3125. So the probability is 0.3125. That's 5/16 as a fraction. I think that's the answer, but I want to double-check the combination step to be sure."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student computed correctly but expresses uncertainty. Confirm the arithmetic and the fraction equivalence.",
+        "state": "Support",
+        "response": "Your multiplication is spot on. 10 * 0.25 = 2.5, and 2.5 * 0.125 = 0.3125. And you're right that 0.3125 equals 5/16. So the probability of exactly two heads in five flips is 5/16 or 0.3125. That's the final numeric answer. Now, can you walk me through why we used the binomial formula for this problem?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "We used the binomial formula because the coin flips are independent trials with two possible outcomes: heads or tails. The number of trials is fixed at five, and we're counting the number of heads, which is a binomial random variable. The formula accounts for all the different orders that two heads can appear in five flips, which is why we need the combination term."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student explained the reasoning but hasn't articulated the general rule. Reinforce the role of the combination and ask about the exponent (n-k).",
+        "state": "Support",
+        "response": "Exactly, the combination term counts the distinct sequences that yield two heads. Each specific sequence of five flips has probability (0.5)^5 because the flips are independent and fair. Since there are C(5,2) such sequences, we multiply. This is the core idea of the binomial distribution: number of ways times probability of each way. What does the exponent (n-k) represent in the formula?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The exponent (n-k) is the number of failures, which in this case is the number of tails. Since n=5 and k=2, n-k = 3, so we have (0.5)^3 for the three tails. It's the probability of getting the remaining outcomes that are not heads. So the formula multiplies the probability of k successes and n-k failures."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student correctly interprets the exponent. Provide a direct comment on the combination's importance and ask for the main idea behind the formula.",
+        "state": "Support",
+        "response": "That's a clear explanation of the exponent. The combination term is crucial because it accounts for all possible orders of successes. So the probability of any one specific sequence of two heads and three tails is (0.5)^5, and there are 10 such sequences. What would you say is the main idea behind the binomial probability formula?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The binomial model applies when you have a fixed number of independent trials, each with the same probability of success. The probability of exactly k successes is the number of ways to choose which trials are successes times the probability of each specific sequence of successes and failures. So it's combinations times p^k times (1-p)^(n-k)."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has given a good summary; now prompt them to articulate the key rule in their own words for synthesis.",
+        "state": "Synthesis",
+        "response": "That's a great summary. In your own words, what is the key rule for finding the probability of exactly k successes in n independent trials with success probability p?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The key rule is: P(X = k) = C(n, k) * p^k * (1-p)^(n-k), where n is the number of trials, k is the number of successes, p is the probability of success on a single trial, and C(n,k) counts the number of ways to arrange k successes among n trials. This works because each specific sequence of successes and failures has probability p^k * (1-p)^(n-k), and there are C(n,k) such sequences."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the binomial probability rule in their own words, demonstrating solid understanding. Time to wrap up.",
+        "state": "Closing",
+        "response": "Nice work! You've got a solid grasp of the binomial distribution. Ready to try another problem or move on to a different topic?"
+      }
+    ]
+  }
+]

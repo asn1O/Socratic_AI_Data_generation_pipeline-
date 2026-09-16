@@ -706,5 +706,650 @@
         "response": "That is a perfect explanation! You've really mastered how to break down a total into parts using the ratio sum. It’s a very versatile skill in quantitative problems. Excellent work today—would you like to try a slightly more challenging problem now, or move on to a new topic?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Seating arrangement",
+    "problem": "Five friends—A, B, C, D, and E—are sitting in a row of five seats. A is at one of the ends. B and C must sit next to each other. D cannot sit next to A or B. E sits to the immediate left of C. What is the correct order of the friends from left to right?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this seating arrangement. A is at an end, so position 1 or 5. Since B and C are together, I'll start by putting A at seat 1 and then placing B and C in seats 2 and 3."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified the possibilities for A but is ignoring the restrictions on D. I need to prompt them to consider how D's constraints affect the placement of other characters.",
+        "state": "Diagnosis",
+        "response": "That's a solid starting point for A, but if we assume A is at position 1, how might the restrictions on where D can sit influence your choice to put B and C in those specific seats?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "If A is at 1, D must be at 5 to stay as far away as possible. Then B and C could take seats 2 and 3, which leaves seat 4 for E. So the order is A-B-C-E-D."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student made their first mistake by ignoring the constraint that E must be to the immediate left of C. I should point this out by asking about that specific rule.",
+        "state": "Support",
+        "response": "If we look at your proposed sequence A-B-C-E-D, how does the rule about E sitting to the immediate left of C affect the validity of having E in seat 4 while C is in seat 3?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, I see! E has to be on the left of C. So if B is also next to C, the whole group must be E-C-B or B-C-E. Wait, it must be E-C-B to keep E on C's left."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the E-C-B block. Now I need to guide them to realize that this block cannot fit if A is at position 1 because of D's constraints.",
+        "state": "Support",
+        "response": "That's a very helpful realization that E-C-B functions as a single unit. If you try to fit that E-C-B unit into the row while A is still at position 1, where can D possibly go?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "If E-C-B is 2-3-4, D is 5, but D can't be next to B. If E-C-B is 3-4-5, D is 2, but D can't be next to A. That means my original assumption was wrong—A can't be at 1!"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student successfully used elimination to move A to position 5. I will now ask them to re-evaluate the arrangement with this new anchor point.",
+        "state": "Diagnosis",
+        "response": "Great deduction! Now that you've ruled out the first chair for A, how does the arrangement of the friends look if we place A at the other end in position 5 instead?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "If A is at 5, D could be at 4 because it's far from the left end. That would leave seats 1, 2, and 3 for the E-C-B block to sit in."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student made a second mistake by placing D next to A. I need to prompt them to check D's adjacency rules again to self-correct.",
+        "state": "Support",
+        "response": "Looking at D in seat 4 and A in seat 5, how does that arrangement sit with the specific rule about who D is allowed to be next to in this row?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Right, D can't be next to A either. So D has to be at the far left in seat 1. That forces the E-C-B block into seats 2, 3, and 4. The final order is D-E-C-B-A."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has found the correct final arrangement. I will now move to Synthesis to have them explain the logical principle that resolved the puzzle.",
+        "state": "Synthesis",
+        "response": "Spot on! To make sure the logic is clear for next time, how would you explain why D ended up in that specific spot relative to the other four people?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Since D couldn't be next to A or B, and the E-C-B block took up three consecutive seats, D was squeezed out. Once A was at position 5, D had to be at position 1 to stay away from both A and the B-C pair."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the reasoning and solved the problem. The conversation is complete.",
+        "state": "Closing",
+        "response": "That is a perfect summary of the logic! You navigated those spatial constraints and neighbor rules very well to find the solution. Ready to try the next logic challenge?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Active vs passive voice",
+    "problem": "Transform the following complex sentence into passive voice while maintaining all the original nuance and descriptive details: 'The committee believes that the unexpected budget cuts significantly impacted the research team's morale.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this sentence: 'The committee believes that the unexpected budget cuts significantly impacted the research team's morale.' I know I need to change it to passive, but there are two verbs here, 'believes' and 'impacted.' I think I should start with 'The research team's morale was impacted,' but then I don't know where to put the part about the committee. Should I just ignore that part or stick it at the end somehow?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified a component of the passive structure but is struggling with the hierarchy of a complex sentence containing a reporting verb. I need to diagnose how they perceive the relationship between the main clause and the subordinate clause.",
+        "state": "Diagnosis",
+        "response": "While focusing on the research team's morale is a great starting point for the inner part of the sentence, who would you say is doing the 'believing' and what exactly is the 'thing' that is being believed in the original version? If we treat that entire 'that' clause as a single unit, how does that change how you see the action occurring in the main part of the sentence, and what role would that whole clause play?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Okay, so the committee is the subject for the first part, and the thing they believe is the whole situation with the budget cuts and the morale. If I treat the whole clause as the object, I could say 'It is believed by the committee that the unexpected budget cuts significantly impacted the research team's morale.' That makes the 'believing' part passive, but it feels like the second part is still active. Is that the right way to do it?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student found the impersonal passive construction. To increase the difficulty and meet the 'personal passive' target, I'll guide them toward the more complex structure where the object of the subordinate clause becomes the main subject.",
+        "state": "Support",
+        "response": "Since you've successfully identified the 'impersonal' passive construction as a valid way to handle these reporting verbs, can you think of a way to make the research team's morale the primary subject of the entire sentence? What would happen to the structure if we started the sentence directly with 'The research team's morale' and then attempted to link it to the committee's belief using a passive form?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "If I start with 'The research team's morale,' I suppose I'd say 'The research team's morale is believed...' and then I have to connect it to the impact. It would be something like 'is believed to be impacted' or maybe 'to have been impacted.' I'm leaning toward 'to be impacted,' but I'm not sure which one fits the timing of the original sentence better with those budget cuts."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is narrowing down the correct structure but is uncertain about the infinitive tense. I will offer a hint through a comparison of the timelines involved in the original sentence.",
+        "state": "Support",
+        "response": "Since you are navigating a very tricky part of English grammar with those infinitive forms, which of those two options you mentioned best captures an action that happened in the past relative to the committee's current belief? Once you've selected the correct tense for that infinitive, where do you think those descriptive words like 'significantly' and 'unexpected' should naturally sit to keep their original meaning and emphasis?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I think 'is believed to be impacted' sounds more natural because it feels like the morale is still low now. And since the budget cuts were the cause, I'll say 'The research team's morale is believed to be significantly impacted by the unexpected budget cuts by the committee.' Wait, I used 'by' twice in a row there, and that sounds really clunky and wrong."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student made an explicit mistake regarding the tense ('to be' instead of 'to have been') and identified a stylistic issue with the double 'by.' I need to guide them to correct the tense and refine the placement of the agents.",
+        "state": "Support",
+        "response": "If we look at the original verb 'impacted,' does that suggest the impact is a current, ongoing state, or something that has already occurred in relation to the committee's current belief? Regarding that double use of 'by' that you noticed, is there a way to mention the committee earlier in the sentence so that the flow feels more natural while still keeping the morale as our primary subject?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, 'impacted' was past tense in the original, so 'to have been impacted' is the right way to show it happened before the belief. And I can move the committee! If I say, 'The research team's morale is believed by the committee to have been significantly impacted by the unexpected budget cuts,' does that fix the flow and keep all the original meaning?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has arrived at the correct, complex passive construction. Now I need to ensure they have internalized the logic behind this multi-step transformation.",
+        "state": "Synthesis",
+        "response": "Since that sentence flows much more professionally and maintains all the nuance of the original, how would you explain the general process for turning a complex sentence with a 'reporting' verb like 'believes' into this kind of passive voice? What are the key transformations you have to keep in mind regarding the subject and the verb forms when moving between these structures?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "To do this, you take the object from the deep part of the sentence—the morale—and make it the main subject. Then you change the first verb into a passive like 'is believed.' The tricky part is the second verb; you have to change it into an infinitive like 'to have been' if it happened in the past, or 'to be' if it's happening now. Then you just make sure the agents like the committee and the budget cuts are placed where they don't overlap awkwardly."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has provided a clear, accurate explanation of the complex transformation. The conversation is complete.",
+        "state": "Closing",
+        "response": "Spot on, you've mastered a very complex grammatical transformation! You've got a great handle on how those moving parts fit together—would you like to try one more with a different reporting verb?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "biology",
+    "topic": "Human circulatory system",
+    "problem": "A red blood cell has just returned from the lungs, saturated with oxygen. It enters the heart and must be pumped out to reach the distant extremities, like the toes. Which specific chamber of the heart is responsible for this task, and why does its structure differ from the other chambers?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know the blood comes back from the lungs to the left side of the heart, but I'm a bit mixed up on the specific chambers. I think it goes into the atrium first? But I'm not really sure which part actually does the heavy lifting to get it all the way to the feet."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identifies the left side but is unsure about the specific chamber responsible for systemic circulation. I need to see if they can distinguish between the 'receiving' and 'pumping' chambers.",
+        "state": "Diagnosis",
+        "response": "Can you recall the specific name for the lower heart chambers that are designed for powerful pumping, as opposed to the upper chambers that act as receivers, especially considering the long distance blood must travel from the heart all the way down to your toes?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, right, the bottom ones are the ventricles. So it must be the left ventricle that sends it out. I remember it's really muscular, but I'm trying to remember if it goes straight to the body or if there's another step I'm forgetting in between."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified the left ventricle but shows slight hesitation about the path. I'll provide a hint about the major vessel to help them visualize the destination and the pressure required.",
+        "state": "Support",
+        "response": "When you think about the massive, high-pressure vessel the blood enters immediately after leaving the heart to reach the entire body, does that help you explain why the muscle wall in that specific chamber must be much thicker than the wall on the right side?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "The aorta! Yeah, that's a huge vessel. I guess if the right side only has to push blood to the lungs, which are right next to the heart, it doesn't need to be as strong? Whereas the left side has to fight gravity and go everywhere."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is connecting the anatomy to the function. I will push them to consider the consequences of pressure differences to deepen their understanding of why the structural difference is necessary.",
+        "state": "Support",
+        "response": "If the right ventricle only has to move blood a short distance to the lungs, what do you imagine might happen to the delicate, thin tissues of the lungs if they were hit with the same intense pressure the heart uses to send blood to your extremities?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "It would probably damage the vessels in the lungs because they are so thin for gas exchange. So the left side needs that thick wall to create high pressure, while the right side stays lower. Wait, did I get the chambers right? Atrium is top, Ventricle is bottom?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is asking for confirmation of the anatomical positions. I'll use a mnemonic-based hint to help them self-verify before they describe the full flow sequence.",
+        "state": "Support",
+        "response": "If you think about the alphabetical order of the letters 'A' and 'V' as they relate to the top-to-bottom flow of blood, does that help you confirm the chamber arrangement before you walk me through the full path an oxygenated drop of blood takes from entry to exit?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Okay, A for Atrium is top and V for Ventricle is bottom. So oxygenated blood comes into the left atrium from the lungs, drops into the left ventricle, and then that thick muscle squeezes to shoot it out the aorta to the rest of the body."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully described the process. Now I'll move to synthesis to have them articulate the core principle of form meeting function in their own words.",
+        "state": "Synthesis",
+        "response": "Now that you have the path and the anatomy down perfectly, how would you describe the relationship between the physical thickness of the left ventricle's muscular wall and its unique role in the circulatory system to someone who is just starting to learn about how the body works?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I'd say the left ventricle is like the heart's strongest engine because it has the hardest job. It has much thicker muscle walls than the other chambers because it needs to create enough pressure to pump blood through the entire body, from your head to your toes, while the other side only pumps to the lungs nearby."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has clearly explained the concept and its anatomical reasoning. The learning objective is met, so I will wrap up the conversation.",
+        "state": "Closing",
+        "response": "That's a fantastic way to put it—it really is the engine of the system! You've got a great handle on how form follows function in the heart. Would you like to look at the valves next, or try a different topic?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "computer_science_light",
+    "topic": "Big-O intuition via analogies",
+    "problem": "Imagine you have a library with N books. You need to perform two specific tasks: First, you search for a single target book in a massive, unsorted pile of N books by checking each one individually. Second, once you find it, you go to a separate shelf containing a different set of N books and shift every single one of those books to the right to make a gap for the new book. If the number of books N grows significantly—say from 10 books to 10 million books—how do we describe the overall growth of this two-step process using Big-O notation, and why?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm a bit overwhelmed by how to combine these two different parts of the problem. If I'm looking through a pile of N books one by one, I know that takes longer as N gets bigger, but then I have to go to a totally different shelf and move all those books too. Is the total time just adding those two things together into one formula, or does one part matter more than the other when we talk about Big-O?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student identifies two distinct steps but is unsure how they interact. I need to diagnose their understanding of the first step's growth rate in isolation before moving to the combination.",
+        "state": "Diagnosis",
+        "response": "That is a great way to start looking at the problem! Before we worry about how they combine, could you walk me through how the effort changes for just that first step—searching the unsorted pile—if you suddenly had ten times as many books to look through? What exactly happens to your workload in that specific scenario as the size of the pile increases?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, if the pile is ten times bigger and I'm looking one by one, it'll take ten times as long, right? If there are 1,000 books it's some amount of work, but 10,000 books means 10,000 checks. I guess that's a linear relationship? I remember hearing the word 'linear' before in math class, but I'm not sure if that's the specific term we use for this type of computer science efficiency."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified linear growth for the first task. Now I'll offer a hint about the second task to see if they can identify its growth rate, while nudging them to think about patterns.",
+        "state": "Support",
+        "response": "You nailed it; when the work grows at the same rate as the number of items, we do call that linear growth, or O(N). Now, if we look at the second task—shifting every book on that other shelf of N books to make room—how does that workload change as that shelf also grows from 1,000 to 10,000 books? Is there anything fundamentally different about the 'pattern' of growth there compared to the searching task?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I think that second part might actually be much harder, like maybe it's N times N because moving books feels like a lot more physical labor than just looking at a cover. Since I have to move every single book to make space, it feels like the effort would explode much faster than just searching, so would we call that part O(N^2) because it's so much more intense?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has made an explicit mistake by equating physical intensity with a higher complexity class (N^2). I need to help them see that the number of operations still only scales with N.",
+        "state": "Diagnosis",
+        "response": "That is an interesting perspective on the physical effort, but if we focus strictly on the count of operations, are you imagining that for every one book you find, you have to do N separate moves, or are you just thinking that moving is more exhausting than looking? If you have a shelf of N books and you move each one exactly once, how does that total number of 'moves' relate mathematically to N?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, I see what you mean. Even if moving a book is 'heavier' work than looking at a title, if I have 1,000 books, I'm still only doing 1,000 moves. If the library grows to 10,000 books, it's 10,000 moves. So I guess even though it's more 'tiring' to my arms, the way the work grows is actually the same as the searching part? It's just N again?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student corrected their mistake. Now I need to guide them through combining N + N and explain why constants are dropped in Big-O notation.",
+        "state": "Support",
+        "response": "Exactly! They both follow that same linear pattern where the work is proportional to N. So, if we represent the total time as N for searching plus N for shifting, which gives us 2N total operations, how do you think a computer scientist would describe the 'Big-O' of that total? If N becomes a billion, does that '2' out front change the overall category of the growth curve compared to just a single N?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I'm honestly not sure about the '2' part. I feel like 2N is definitely more work than N, but if N is already a billion, does doubling it really change the 'category' of the problem? It’s still just a straight line if I were to graph it, right? I'm guessing we might just ignore the number in front because the 'line' shape is the same, but that feels a bit like cheating."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student is hesitating on dropping the constant. I'll provide a hint by contrasting linear growth with quadratic growth to show why constants are negligible in the long run.",
+        "state": "Support",
+        "response": "It might feel like cheating, but if you had a different process that was N times N—like comparing every book in the pile to every other book—how would the '2N' work compare to that N-squared work as N keeps growing toward infinity? If the goal of Big-O is to describe the long-term 'speed limit' or growth category of the algorithm, why might we focus on the N and ignore constant multipliers?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Okay, I think I'm finally getting the hang of it! Big-O isn't about the exact number of seconds or the physical 'weight' of the task; it's about how the work scales up when the input gets huge. Since both searching the pile and moving the shelf books grow linearly with N, the whole process is O(N). Even if it's 2N or 100N, we just call it O(N) because the most important thing is that it's a straight-line growth, and that 'linear' nature is what tells us how the system will handle a truly massive library."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully synthesized the concept, explaining that Big-O measures scaling and ignores constants, arriving at the correct O(N) conclusion.",
+        "state": "Closing",
+        "response": "That is a perfect summary of the intuition behind Big-O! You correctly identified that we care about the rate of growth rather than the specific details of the work. You're really getting the hang of this—shall we try one that's a bit more complex?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Ethical dilemmas (trolley-problem style)",
+    "problem": "A hospital has five patients who each need a different organ transplant to survive. A healthy traveler with no family comes in for a routine check-up. The traveler is a perfect match for all five patients. Is it ethical for the doctor to sacrifice the traveler to save the five? Use the principles of Utilitarianism vs. Deontological ethics (specifically the 'Formula of Humanity') to analyze the situation.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this hospital dilemma where one healthy person could save five. From a numbers perspective, five lives saved seems better than one, so I'm leaning toward saying the doctor should do it. But it feels really wrong to just kill someone who's healthy. I'm not sure how to justify that feeling using actual ethical theories besides just saying it feels bad."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has identified the basic utilitarian calculation but feels a moral conflict. I need to introduce Deontology as a counter-framework to help them name that intuition.",
+        "state": "Diagnosis",
+        "response": "You've correctly identified the utilitarian approach, which focuses on maximizing the 'greatest good for the greatest number.' In that framework, five lives saved generally outweigh one lost. However, most people feel a strong 'moral intuition' against this. To explore that, we should look at Deontology, specifically Immanuel Kant's idea that certain actions are inherently right or wrong regardless of outcomes. How do you think Kant would view using a person's body parts as a solution to a problem?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I guess Kant would say you shouldn't kill people, but if you don't act, you're essentially letting five people die. Isn't 'letting die' also a choice? I'm struggling because it seems like either way, the doctor is responsible for people dying. If the goal is to respect life, shouldn't we respect the five lives as much as the one traveler's life?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is treating all lives as interchangeable units. I'll provide a direct explanation of the 'Formula of Humanity' to show why individuals can't be used as mere tools for others.",
+        "state": "Support",
+        "response": "That's a very common point of confusion! In Deontology, there is a principle called the 'Formula of Humanity.' It states that you should always treat people as 'ends in themselves' and never 'merely as a means' to an end. In this case, the doctor would be using the traveler's body as a tool—a literal warehouse of parts—to achieve a goal. Even if the goal is noble, using someone as a tool violates their inherent dignity. Does that distinction help clarify the 'wrongness' you felt?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Okay, so treating them as a means is the problem. So, if the traveler actually agreed to it and volunteered, then the doctor wouldn't be treating them as a means anymore because they chose it, right? In that case, the 'wrongness' disappears because the traveler is now the one making the choice to be the tool."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made an error by assuming consent resolves the 'means' issue in this framework. I will correct this and shift the focus to the broader social consequences to provide a hint toward Rule Utilitarianism.",
+        "state": "Support",
+        "response": "Actually, that’s a common misconception in Kantian ethics! Even with consent, Kant argued that we have a duty to respect the humanity within ourselves, meaning we shouldn't treat even our own bodies merely as disposable tools. But moving back to the doctor's perspective: if the doctor kills a healthy patient, think about the broader 'rule' that would create. What would happen to the medical system if people were afraid to go for check-ups because they might be harvested for organs?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, I see. If that became a standard practice, nobody would ever go to the hospital. The trust between doctors and patients would be totally destroyed. Even if you saved five people today, you might cause thousands of deaths later because people avoid healthcare. So, it's not just about the one person; it's about the entire rule of how we treat people and society."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully transitioned to a Rule Utilitarian perspective. I will now ask them to contrast this with the original 'simple math' approach to see if they can articulate the core conflict.",
+        "state": "Diagnosis",
+        "response": "Exactly! You've hit on 'Rule Utilitarianism,' which looks at the long-term consequences of a general policy. It seems like both the Kantian view of respecting individual rights and Rule Utilitarianism point toward not sacrificing the traveler. To make sure we've got the core logic down, how would you describe the difference between looking only at the immediate outcome versus looking at the duty we owe to individuals?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The immediate outcome is just a math problem—five minus one equals four lives gained. But the duty part is about realizing that people aren't just numbers you can move around to get a better total. We have a responsibility to treat every individual as a person with their own rights, not just as a way to fix someone else's problem. If we ignore that duty, we lose the moral basis for society."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has shown they understand the balance. I will now ask for a final synthesis to ensure they can explain the full reasoning in their own words before closing.",
+        "state": "Synthesis",
+        "response": "You've articulated that beautifully. You've balanced the 'consequentialist' view of maximizing lives with the 'deontological' view of individual rights and duties. To wrap this up, can you summarize in your own words why, according to the ethical principles we discussed, the doctor cannot sacrifice the traveler, even if it saves more lives in the short term?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The doctor can't do it because of two main reasons. First, under the Formula of Humanity, you can't treat a person like a tool or a 'means' to an end, because everyone has inherent dignity. Second, if we made it a rule to sacrifice individuals for the 'greater good,' it would destroy public trust and cause more harm in the long run. So, protecting individual rights is actually essential for a stable, moral society."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student provided a comprehensive synthesis of the two ethical frameworks. The goal of the lesson is achieved.",
+        "state": "Closing",
+        "response": "That is a perfect summary of the conflict between utilitarian math and deontological principles. You've really grasped how these frameworks provide a more rigorous way to explain our moral intuitions. Excellent work today—would you like to try another ethical puzzle?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Sampling bias",
+    "problem": "A city government wants to evaluate the success of its new 'Bike-to-Work' initiative. They decide to place QR code surveys on bike racks at 'GreenTech Plaza,' a major eco-friendly corporate hub. They then compare the percentage of cyclists found in this survey to five-year-old traffic counts from the city’s main downtown commuter bridge to conclude that cycling has significantly increased. Identify the flaws in this sampling methodology.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I can see a few issues here. They are surveying people at bike racks, which makes sense if you want to find cyclists, but they might be missing people who don't use those specific racks."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student identifies a minor logistical issue but misses the fundamental mismatch between the sample and the target population. I need to guide them to think about the broader population.",
+        "state": "Diagnosis",
+        "response": "If the city's goal is to measure the total impact of the initiative on traffic congestion, how well do users of those specific bike racks represent the entire commuting population of the city?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, I see. The target population should be all commuters, but they only sampled people who are already cycling or work at that one plaza. They aren't capturing the people who still drive or take the bus."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the population mismatch. Now I will probe the choice of the specific location to see if they recognize the environmental demographic bias.",
+        "state": "Diagnosis",
+        "response": "Exactly. Why might the demographics and habits of commuters at a location like GreenTech Plaza differ specifically from the general population of commuters found on a major city bridge?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Actually, I think GreenTech is a good choice because it’s a major employment hub. Since thousands of people work there, the sheer volume of data should make it a reliable proxy for the average commuter's habits."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student makes the mistake of equating sample size with representativeness. I need to provide a hint about demographic bias without giving the answer away.",
+        "state": "Support",
+        "response": "While it provides a large dataset, remember that employees at a high-tech, eco-friendly park might have different values. How might their environmental attitudes affect their likelihood to cycle compared to a random driver downtown?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Right, people at 'GreenTech' are probably much more likely to cycle regardless of the initiative. So the sample is skewed toward a group that was already predisposed to bike, unlike the general public on the bridge."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student now understands the location bias. I'll move to the next sub-point: the survey delivery method (QR codes) to check for self-selection bias.",
+        "state": "Diagnosis",
+        "response": "That’s a great insight. Now, let’s consider the QR code survey itself. Is every cyclist who passes those racks equally likely to end up in the final data set?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I think the QR code is pretty fair. Since almost every professional has a smartphone these days, it provides an equal opportunity for any cyclist passing by to participate, making it a random selection."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student incorrectly assumes accessibility equals randomness. I need to guide them toward voluntary response bias by highlighting the motivation required to participate.",
+        "state": "Support",
+        "response": "Even if everyone has the technology, think about the effort involved. What kind of person is most likely to actually stop their commute to scan a code and provide feedback for the city?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "That's voluntary response bias! People who are enthusiasts or have strong feelings about the initiative are way more likely to bother with the survey. The data will over-represent supporters and ignore casual commuters."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the self-selection issue. Now I will address the final flaw regarding the historical comparison to ensure they see the 'trap' in the data sources.",
+        "state": "Diagnosis",
+        "response": "You've got it. Finally, what is the danger of comparing these current, filtered survey results to general bridge traffic data that was collected five years ago?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "It’s an apples-to-oranges comparison. The bridge data is a broad count of everyone, while the survey is a small, biased group. Plus, five years of city growth or different economic conditions make the old data a poor baseline."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully identified all major flaws. I'll now ask them to synthesize the concept to ensure they've internalized the principle of sampling bias.",
+        "state": "Synthesis",
+        "response": "You’ve broken down those methodology flaws very well. How would you define the core principle of sampling bias for someone who believes that a large sample size always guarantees accurate results?"
+      },
+      {
+        "turn": 15,
+        "speaker": "student",
+        "text": "Sampling bias happens when your selection process systematically favors certain groups, meaning your sample doesn't mirror the population. No matter the sample size, if the 'who' and 'how' are skewed, your conclusions will be fundamentally incorrect."
+      },
+      {
+        "turn": 16,
+        "speaker": "tutor",
+        "reasoning": "The student has provided an excellent synthesis of the topic. The conversation is complete.",
+        "state": "Closing",
+        "response": "That is a perfect summary! You really teased apart the nuances of how selection and response methods can compromise a study. Ready to try another scenario?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Map reading and distance estimation",
+    "problem": "On a trail map, the Main Loop is 5 centimeters long. The map legend indicates that 2 centimeters on the map is equal to 10 kilometers in real life. If a shortcut path on the map measures 3 centimeters, how many kilometers shorter is the shortcut than the Main Loop?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this map where the trail is 5 cm and the shortcut is 3 cm. The legend says 2 cm equals 10 km, but I'm really not sure how to find the difference in real kilometers."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has identified the key numbers but doesn't know how to relate the scale to the specific distances. I need to see if they understand the concept of a scale legend.",
+        "state": "Diagnosis",
+        "response": "To get us started, what do you think that legend '2 centimeters equals 10 kilometers' is trying to tell us about how the map represents the real world?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think I should add the 2 cm and 10 km to get 12 total, but I don't really know how that helps me find the distance for just one centimeter."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student made a conceptual mistake by suggesting addition. I will provide a hint to guide them toward the idea of a unit rate through division.",
+        "state": "Support",
+        "response": "If we imagine those 10 kilometers are spread out perfectly evenly across the 2 map centimeters, how many kilometers would be assigned to each individual centimeter on the paper?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, so if I split the 10 kilometers between the 2 centimeters, then each centimeter is actually 5 kilometers! That makes much more sense than adding them together."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly calculated the unit rate. Now I want them to apply that rate to the first specific trail mentioned in the problem.",
+        "state": "Support",
+        "response": "Exactly! Now that we know every single centimeter on the paper represents 5 kilometers in the real world, what calculation would you use to find the real-life length of the 5-centimeter trail?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "If each cm is 5 km, then I would multiply 5 by 5, right? That means the main trail is 25 kilometers long in the real world."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly calculated the first distance. I will now guide them to perform the same logic for the shortcut and find the final difference.",
+        "state": "Support",
+        "response": "That is correct! Using that same logic for the 3-centimeter shortcut, how many real kilometers would that be, and how does it compare to the 25 kilometers you just found?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The shortcut is 3 cm, so 3 times 5 is 15 km. Since the main trail is 25 km and the shortcut is 15 km, the shortcut is 10 km shorter than the trail."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student reached the correct numerical answer. Now I need them to articulate the general process to ensure they can apply this logic to future problems.",
+        "state": "Synthesis",
+        "response": "You solved it perfectly! If you had to explain the general rule for using a map scale like this to a friend, how would you describe the steps?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I would tell them to first divide the real distance by the map distance to find out what one centimeter represents. Then, multiply that number by the map measurements to get real distances."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the underlying principle of unit rates in map reading, so the session is ready to close.",
+        "state": "Closing",
+        "response": "That is a perfect summary! You have a solid handle on how to interpret map scales and use them for distances now. Ready to try another one?"
+      }
+    ]
   }
 ]

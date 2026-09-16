@@ -382,5 +382,377 @@
         "response": "Nice work, you've clearly explained the reasoning—great job! Would you like to try another similar problem to practice, or maybe discuss a different ethical dilemma?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Unit conversions",
+    "problem": "A car travels at 60 miles per hour. How many meters does it travel in 10 seconds?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I would just multiply 60 by 10 to get 600 meters."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student gave an answer without unit conversion, indicating they skipped essential steps; need to elicit their reasoning.",
+        "state": "Diagnosis",
+        "response": "Could you explain the reasoning behind your choice to simply multiply the speed by the time, without changing any units?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I know speed times time gives distance, but I didn't change the units. I think I need to convert hours to seconds, and I believe there are 60 seconds in an hour, so I divide 60 by 60 to get 1 mile per second."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly believes there are 60 seconds in an hour, showing a unit‑time misconception; need to hint at the correct conversion factor.",
+        "state": "Support",
+        "response": "You mentioned 60 seconds in an hour; let's check that. How many seconds are actually in an hour, and why does that matter for the conversion?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh right, 3600 seconds in an hour. So to get miles per second I divide 60 by 3600, which is about 0.0167 miles per second. Now to get meters, I multiply by 1000 because there are 1000 meters in a mile. Then I multiply by 10 to get the distance in 10 seconds."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student still clings to the idea that a mile is about 1000 meters, revealing a persistent length‑conversion misconception; need to probe their thinking about where that number comes from.",
+        "state": "Diagnosis",
+        "response": "You mentioned using 1000 meters per mile; let's think about where that number comes from. How could we verify how many meters are in a mile?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I'm still thinking it's about 1000 meters in a mile; I know a kilometer is 1000 meters and a mile is a bit more than a kilometer, so maybe 1200? I also know a mile is 5280 feet and a foot is 0.3048 meters, but I'm not confident; sometimes I think a mile is roughly 1000 meters."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student recalls the foot‑and‑feet facts but is unsure how to combine them; need to guide them to compute the exact meters‑per‑mile value.",
+        "state": "Diagnosis",
+        "response": "You know a mile is 5280 feet and a foot is exactly 0.3048 meters. How would you use those to find the exact number of meters in a mile?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I would multiply 5280 by 0.3048, which gives 1609.344 meters."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student now has the correct meters‑per‑mile figure but hasn’t linked it to the time conversion; need to prompt them to combine length and time steps.",
+        "state": "Diagnosis",
+        "response": "Now that you have meters per mile, how would you use it to find meters per second from miles per hour?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I would take the speed in miles per hour, multiply by 1609.344 to get meters per hour, then divide by 3600 to get meters per second."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has demonstrated the correct multi‑step conversion; need to have them articulate the overall rule in their own words.",
+        "state": "Synthesis",
+        "response": "In your own words, what's the overall process for converting a speed from miles per hour to meters per second?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "First you change miles to meters using the factor 1609.34 meters per mile, then you change hours to seconds by dividing by 3600, so you multiply the speed by 1609.34 and divide by 3600 to get meters per second."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has successfully explained the conversion process; the conversation can wrap up warmly.",
+        "state": "Closing",
+        "response": "Nice work! You've got the conversion process down. Want to try another similar problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "physics",
+    "topic": "Series vs parallel circuits",
+    "problem": "Two identical resistors of resistance R are connected to a battery of voltage V. Determine the total resistance when the resistors are (a) in series and (b) in parallel.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know series is one after another, parallel is side by side, but I'm unsure how to calculate total resistance."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student expressed uncertainty about how current changes in series; need to probe their understanding of current behavior.",
+        "state": "Diagnosis",
+        "response": "What do you think happens to the current when you add another resistor in series?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I'm not sure how the current changes when you add another resistor."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student is unsure about current change; provide a minimal hint that connects fixed voltage to Ohm's law to guide them.",
+        "state": "Support",
+        "response": "If you know the battery voltage is fixed, how does total resistance affect the current from Ohm's law?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "If voltage stays the same, higher resistance means lower current from V=IR."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student correctly recalled Ohm's law; now ask them to predict total resistance for two series resistors to build on that.",
+        "state": "Support",
+        "response": "So for two resistors in series, what would you expect the total resistance to be compared to one resistor?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "For two resistors in series, the total resistance should be twice one resistor."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student correctly stated that resistance doubles; ask them to explain why resistance adds in series to deepen understanding.",
+        "state": "Synthesis",
+        "response": "In your own words, why does resistance add when resistors are in series?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Same current flows through both, each adds voltage drop; total voltage sums, so resistance adds via V=IR."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Moving to parallel configuration, ask about voltage across each resistor to elicit student's initial ideas.",
+        "state": "Diagnosis",
+        "response": "In a parallel connection, what do you think is true about the voltage across each resistor?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "In parallel, the voltage across each resistor equals the battery voltage."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified equal voltage; give a hint about how total current relates to branch currents to guide them toward the parallel resistance formula.",
+        "state": "Support",
+        "response": "With equal voltage across each, how does the battery's total current relate to the currents through each resistor?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Same voltage means currents add; total I = V/R1 + V/R2, so 1/Req = 1/R1 + 1/R2."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the parallel resistance rule; conversation can end with a warm wrap-up.",
+        "state": "Closing",
+        "response": "Great job! You've got both series and parallel resistance down. Want to try another?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Simple vs compound interest",
+    "problem": "You invest $8,000 for 4 years. Option A earns 4% simple interest per year. Option B earns interest that is compounded annually, but the rate changes: 3.8% per year for the first two years, then 4.2% per year for the last two years. Which option yields more after 4 years? Show your work.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Option A: 8000*(1+0.04*4)=9280. Option B: first 2 years at 3.8% simple: 8000*(1+0.038*2)=8608; next 2 years at 4.2% simple: 8608*(1+0.042*2)≈9331. So B ≈ $9331 > A $9280."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student gave numeric answers but treated compound interest as simple within each period, indicating a confusion between simple and compound interest.",
+        "state": "Diagnosis",
+        "response": "I see you used simple interest for each block; can you explain how you decided to calculate the interest for each two‑year block in Option B?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I assumed that because the rate stays constant within each two‑year stretch, I could just use the simple‑interest formula for that stretch, since the rate doesn’t change mid‑block."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student explained their reasoning but still conflates simple and compound interest; a hint about how compound interest works each year may help them self‑correct.",
+        "state": "Support",
+        "response": "Recall that with compound interest, you earn interest on the interest already earned each year, not just on the original principal."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I compounded the first two years: 8000*(1.038)^2 ≈ 8619.55. Then I applied simple interest for the next two years at 4.2%: 8619.55*(1+0.042*2)≈8619.55*1.084≈9344. So Option B ≈ $9344."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student corrected the first error but still applied simple interest to the second period, showing a lingering confusion about when to use compounding.",
+        "state": "Diagnosis",
+        "response": "It looks like you used simple interest for the second block; let's see what happens if we compound yearly. Does compound interest earn interest on the growing balance each year, or just on the amount at the start of the block?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I need to compound each year. After two years at 3.8%: 8000*(1.038)^2≈8619.55. Then compound that for two more years at 4.2%: 8619.55*(1.042)^2≈8619.55*1.0858≈9358.80. Option A stays at $9280, so B ≈ $9358.80 is higher."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student has the correct final amounts and can now articulate the underlying principle; a follow‑up question about why compounding each year matters will draw out their reasoning.",
+        "state": "Diagnosis",
+        "response": "You got the right final amount; can you explain why we need to compound each year rather than just apply simple interest for each block?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Because with compound interest, each year’s interest is added to the principal and earns interest in the following years, you have to apply the rate to the balance that’s grown so far."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has explained the mechanics; now we ask them to articulate the rule in their own words to consolidate understanding.",
+        "state": "Synthesis",
+        "response": "In your own words, explain why compound interest gives a different result than simple interest, especially when the rate changes over time."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Simple interest pays interest only on the original principal each period, so interest never earns interest. Compound interest adds year’s interest to the principal, letting it earn interest later; a rate change means using the new rate on the grown balance for the remaining years."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept, indicating mastery; we can wrap up.",
+        "state": "Closing",
+        "response": "Nice work! You’ve correctly explained how simple and compound interest differ, especially when rates change. Want to try another similar problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "computer_science_light",
+    "topic": "Tracing a simple algorithm by hand",
+    "problem": "Consider the following pseudocode:\n\n```\nsum = 0\nfor i from 1 to 5:\n    sum = sum + i * 2\n```\n\nWhat is the value of `sum` after the loop finishes?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the loop goes from 1 to 4, so it runs 4 times."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student claims loop runs 4 times, showing confusion about loop bounds; need to elicit correct interpretation.",
+        "state": "Diagnosis",
+        "response": "Think about counting from 1 to 5 inclusive—how many numbers is that?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, it goes 1 to 5 inclusive, so 5 times. But I think each step adds just i, not i*2."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified loop count but wrong operation; need to hint at operation.",
+        "state": "Support",
+        "response": "Recall we multiply i by 2 before adding. What is the update to sum?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "We do sum = sum + i * 2. First adds 2, second 4, third 6, fourth 8, sum 20."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student omitted fifth iteration in sum; need to prompt inclusion of last term.",
+        "state": "Support",
+        "response": "What does the fifth iteration add, given i is 5 and we add i*2?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Now I see, fifth adds 10, making total 30."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student has correct sum but we want to check understanding of loop bounds; ask to confirm.",
+        "state": "Support",
+        "response": "Let's verify the loop bounds: how many values does i take from 1 to 5?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I think it runs 4 times because I'm used to zero-based indexing."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student resurfaced off-by-one loop misconception; need to clarify bounds.",
+        "state": "Support",
+        "response": "So if we add 2,4,6,8,10, what's the total?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "We start sum at 0, then for each i from 1 to 5 we add i times 2 to sum."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student explained rule correctly; conversation ending.",
+        "state": "Closing",
+        "response": "Nice, you've got it! Want to try another one?"
+      }
+    ]
   }
 ]

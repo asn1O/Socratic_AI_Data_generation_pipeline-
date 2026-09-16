@@ -1150,5 +1150,326 @@
         "response": "Great, you've got it! Ready for the next one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "physics",
+    "topic": "Buoyancy and density",
+    "problem": "A cube of side length 10 cm and density 700 kg/m³ floats in water (density 1000 kg/m³). A 200 g mass is placed on top of the cube. How much deeper does the cube sink into the water? Assume g = 9.8 m/s².",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think I need to find the initial submerged volume using Archimedes' principle: weight of cube equals buoyant force. Then add the mass, find the new submerged volume, and the difference in submerged depth is the answer. But I'm not sure about the exact calculations."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student outlined the correct overall approach but hasn't performed any calculations; need to elicit the first step (cube volume) to ensure unit consistency.",
+        "state": "Diagnosis",
+        "response": "Good start. What is the volume of the cube in cubic meters?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Side length is 10 cm = 0.1 m, so volume = 0.1^3 = 0.001 m³."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student correctly converted units and computed volume; now guide to initial submerged volume using density ratio.",
+        "state": "Support",
+        "response": "Right. Now, using Archimedes' principle, what is the initial submerged volume of the cube?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Submerged volume = (700/1000) * 0.001 = 0.0007 m³."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Correct initial submerged volume; next step is to incorporate the added mass.",
+        "state": "Support",
+        "response": "Exactly. When the 200 g mass is placed on top, what is the additional weight added?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "The mass is 200 g = 0.2 kg, so additional weight = 0.2 * 9.8 = 1.96 N."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Additional weight correct; now student must find the extra displaced water volume.",
+        "state": "Support",
+        "response": "Good. That additional weight must be supported by extra buoyant force. What additional volume of water must be displaced to provide that buoyant force?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The additional submerged volume = mass / density_cube = 0.2 / 700 ≈ 0.000286 m³."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student used cube density instead of water density for displaced volume; need to redirect to the correct density.",
+        "state": "Support",
+        "response": "What density determines the buoyant force when an object is submerged in water?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Oh, it's the density of water. So additional submerged volume = 0.2 / 1000 = 0.0002 m³."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Corrected additional volume; now need cross-sectional area to find extra depth.",
+        "state": "Support",
+        "response": "Right. Now, what is the cross-sectional area of the cube, and how much deeper does it sink?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Area = 0.1 m, so extra depth = 0.0002 / 0.1 = 0.002 m = 0.2 cm."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student used side length instead of area for depth calculation; hint to check area formula.",
+        "state": "Support",
+        "response": "Check the units: area should be in square meters. What is the area of one face of the cube?"
+      },
+      {
+        "turn": 15,
+        "speaker": "student",
+        "text": "Area = 0.1 m × 0.1 m = 0.01 m². Extra depth = 0.0002 / 0.01 = 0.02 m = 2 cm."
+      },
+      {
+        "turn": 16,
+        "speaker": "tutor",
+        "reasoning": "Student has correct final answer; now ask for synthesis of the principle.",
+        "state": "Synthesis",
+        "response": "In your own words, what principle governs how much deeper the cube sinks when extra mass is added?"
+      },
+      {
+        "turn": 17,
+        "speaker": "student",
+        "text": "The added weight increases the total weight, so the buoyant force must increase by displacing more water. The extra displaced volume equals the added mass divided by the fluid density, and the extra depth is that volume divided by the cross-sectional area."
+      },
+      {
+        "turn": 18,
+        "speaker": "tutor",
+        "reasoning": "Student correctly explained the principle; conversation can close.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "computer_science_light",
+    "topic": "Big-O intuition via analogies",
+    "problem": "Explain why an O(n log n) algorithm scales better than an O(n^2) algorithm for large inputs, using a real-world analogy.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know O(n^2) is worse than O(n log n) for big inputs, but I'm not sure how to explain why using an analogy."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student knows the ordering but lacks an analogy; need to elicit their mental model of the growth difference.",
+        "state": "Diagnosis",
+        "response": "What do you think makes the growth rates different when the input size doubles?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, n^2 grows linearly because you're just multiplying n by itself, while n log n grows exponentially because of the log factor."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student conflates polynomial and exponential growth; a hint to compare log n vs n directly.",
+        "state": "Support",
+        "response": "How does the log n factor actually change as n gets larger compared to just n?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Log n grows really slowly, so n log n is like n times a small number that barely increases."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student grasps log growth; now need to connect to a concrete analogy.",
+        "state": "Diagnosis",
+        "response": "Can you think of a real-world task where doubling the work leads to quadrupling the effort versus only a bit more than doubling?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Like checking every pair in a group versus sorting with a divide-and-conquer method. So n log n is basically linear since log n is tiny, right?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student thinks n log n is nearly linear; guide them to examine merge sort scaling.",
+        "state": "Support",
+        "response": "What does the merge step actually do at each level?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Each level of merging touches all n elements, and the number of levels grows by one when you double, so total work is n times log n."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student correctly describes merge sort scaling; check if they can generalize the comparison.",
+        "state": "Diagnosis",
+        "response": "How would you describe the general rule for comparing any two polynomial versus linearithmic complexities?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The dominant term decides: n^2 grows faster because its exponent is higher, while n log n is slower since log n grows slower than any positive power of n."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correct reasoning; prompt them to articulate the core principle in their own words.",
+        "state": "Synthesis",
+        "response": "In your own words, what's the key idea for why n log n eventually beats n^2?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Because log n grows slower than n, multiplying n by log n adds less than multiplying n by n, so for large enough n, n^2 will always be larger."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has explained the concept correctly; wrap up warmly.",
+        "state": "Closing",
+        "response": "Nice, you've got it! Ready for another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Basic probability distributions",
+    "problem": "A discrete random variable X has the probability distribution: P(X=1)=0.2, P(X=2)=0.5, P(X=3)=0.3. Find P(X ≤ 2).",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I need to find P(X ≤ 2). I think I add probabilities for 1 and 2, but not sure about 3."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student identifies need to sum probabilities for X≤2 but is uncertain whether to include X=3. Need to clarify which values satisfy the condition.",
+        "state": "Diagnosis",
+        "response": "Which values of X satisfy X ≤ 2?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "X can be 1 or 2, so I sum those probabilities."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified relevant values; now guide to compute the sum.",
+        "state": "Support",
+        "response": "What are P(X=1) and P(X=2)?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "P(X=1)=0.2, P(X=2)=0.5. Their sum is 0.7."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student computed correct sum; reinforce understanding by asking why only those two.",
+        "state": "Support",
+        "response": "Why don't we include P(X=3) in the sum?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Because 3 is not ≤ 2, so it's excluded."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student shows correct reasoning for exclusion; check if they can generalize to another cumulative probability.",
+        "state": "Diagnosis",
+        "response": "What would P(X ≤ 3) equal?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "That would be 0.2+0.5+0.3 = 1.0, since all values are included."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student correctly generalized; now prompt articulation of the general rule.",
+        "state": "Support",
+        "response": "How would you describe the process for finding P(X ≤ k) for any k?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "You sum the probabilities of all values less than or equal to k."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has stated the rule; now ask them to explain it in their own words to solidify.",
+        "state": "Synthesis",
+        "response": "Can you put that into your own words as a general rule?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "To find the cumulative probability up to a value, you add up the probabilities of all outcomes that are less than or equal to that value."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept in their own words; conversation can wrap up.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for another one?"
+      }
+    ]
   }
 ]

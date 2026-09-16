@@ -75,3 +75,76 @@
     }
   ]
 }
+
+
+{
+  "problem": "Imagine you have a deck of 1,000 unsorted cards. If you need to find one specific card, how would you compare the 'cost' or time complexity of checking every card one by one versus if the deck were perfectly sorted? What does this tell us about Big-O notation?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "Searching an unsorted deck feels like O(n) because you check every card. If the deck is sorted, I guess it stays O(n) too because you still have to look at each card individually to see if it matches the one you want."
+    },
+    {
+      "turn": 2,
+      "reasoning": "The student correctly identified the linear search but made a misconception about sorted search, assuming the cost doesn't change. I need to diagnose why they think sorted order provides no advantage.",
+      "state": "Diagnosis",
+      "response": "That's a fair starting point for the unsorted case. If the cards are sorted, though, does the information about their order give you any shortcuts, or does it really force you to check every single card every time?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "I suppose you could stop early, but that's still just linear search. Wait, actually, maybe you can skip cards? No, I think checking them one by one is always necessary because you have to be sure it's not there."
+    },
+    {
+      "turn": 4,
+      "reasoning": "The student is stuck on the idea that every card must be visited. I should provide a small hint about how they might approach finding a specific page in a large book to prompt a rethink.",
+      "state": "Support",
+      "response": "Think about how you'd look for a name in a physical phonebook or a specific page in a textbook. If you jump to the middle and see the name isn't there, do you really need to check the first half?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Oh! You can just ignore half the book. So, in a sorted deck, you look at the middle card, and if it's too low, you throw away the first 500 cards. That's definitely faster than O(n)."
+    },
+    {
+      "turn": 6,
+      "reasoning": "The student grasped the binary search logic. Now I want to see if they can generalize that 'throwing away' half the search space into Big-O terms.",
+      "state": "Diagnosis",
+      "response": "Exactly. If you can discard half the remaining cards with every single comparison, how does the number of operations grow as the deck size 'n' increases?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Well, it's not linear. Since you divide by two every time, it must be O(n/2) which simplifies to O(n) again, right? The constant factor doesn't really matter for Big-O."
+    },
+    {
+      "turn": 8,
+      "reasoning": "The student fell into a common trap of confusing linear division with logarithmic reduction. I need to correct this misconception that O(n/2) is the same as logarithmic time.",
+      "state": "Support",
+      "response": "That's a common confusion. If we just dropped half once, it would be linear. But we repeat the halving process until we find the card. If you have 8 cards, how many steps does that take in the worst case?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "8 cards... 4, 2, 1. That's 3 steps. Oh, 2 to the power of 3 is 8. So it's not n/2, it's related to how many times you can cut the deck until you hit 1."
+    },
+    {
+      "turn": 10,
+      "reasoning": "The student has successfully intuited the logarithmic nature of the process. Now I need them to synthesize this into a formal definition of Big-O behavior for this specific scenario.",
+      "state": "Synthesis",
+      "response": "Right. How would you describe the difference in complexity between the two scenarios now, and what does that tell us about why we use Big-O to categorize these algorithms?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "The unsorted search is O(n) because it grows linearly, but the sorted search is O(log n) because the number of steps grows much slower by halving the search space. Big-O helps us ignore constant factors and focus on how the scale of the input forces the workload to climb."
+    },
+    {
+      "turn": 12,
+      "reasoning": "The student has correctly identified the difference between linear and logarithmic growth and understood the purpose of Big-O notation.",
+      "state": "Closing",
+      "response": "Spot on! That's a perfect way to look at it. You've really mastered the intuition behind these growth rates. Ready to try another one?"
+    }
+  ]
+}

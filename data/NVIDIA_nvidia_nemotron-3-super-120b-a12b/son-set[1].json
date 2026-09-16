@@ -1150,5 +1150,278 @@
         "response": "Nice work! Want to try another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Coding-decoding",
+    "problem": "You are given the following encodings: BRAVE → DNEJA, GLADE → YTEBA, QUIET → OKWAL. Using the same rule, what is the code for BLACK?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I notice that the length of the word is 5, and maybe each letter is shifted forward by 5?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student hypothesized that each letter is shifted forward by the word length, which is an incorrect claim. I need to elicit their thinking and test this hypothesis.",
+        "state": "Diagnosis",
+        "response": "If we shift each letter forward by the word length, what would BRAVE become?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "If I just shift each letter forward by 5, BRAVE becomes GWFAJ, which doesn't match DNEJA. Maybe we also need to reverse the word after shifting?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student found the shift-only idea fails and proposed shifting then reversing, another incorrect claim. I give a minimal hint to test this new idea.",
+        "state": "Support",
+        "response": "What do you get if you shift BRAVE forward by 5 and then reverse the result?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Shift then reverse gave JAFWG, still not right. What if we first replace each letter with its opposite in the alphabet (A↔Z, etc.) and then shift each letter forward by the word length?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student tested shift+reverse and it didn't work, then hypothesized opposite then shift. I guide them to test this hypothesis on another example.",
+        "state": "Support",
+        "response": "If we first replace each letter with its opposite in the alphabet (A<->Z, etc.) and then shift each letter forward by the word length, what do we get for GLADE?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Let's try that on GLADE: opposite gives T O Z W V, shifting each by 5 yields Y T E B A, which matches the example YTEBA. It also works for QUIET: opposite J F R V G, shift 5 gives O K W A L, matching OKWAL."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student confirmed that opposite+shift works for the given examples. Now I want to see if they can apply the rule to the new word.",
+        "state": "Diagnosis",
+        "response": "Now, using those two steps, what would be the code for BLACK?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "For BLACK, opposite gives Y O Z X P, shifting each by 5 gives D T E C U, so the code should be DTECU."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student correctly applied the rule and obtained DTECU. I now ask them to articulate the rule in their own words to consolidate understanding.",
+        "state": "Synthesis",
+        "response": "Can you describe the rule you used to go from the original word to the code?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "First, replace each letter with its opposite in the alphabet (A becomes Z, B becomes Y, and so on). Then, shift each resulting letter forward in the alphabet by the number of letters in the original word, wrapping around if needed."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the rule in their own words, indicating mastery.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "physics",
+    "topic": "Buoyancy and density",
+    "problem": "A rectangular block of wood (density 0.5 g/cm^3) measures 10 cm × 10 cm × 20 cm. A solid lead plug (density 11.3 g/cm^3) of volume 5 cm^3 is glued to the bottom face of the block. The block is placed gently in fresh water (density 1.0 g/cm^3). Determine whether the block floats or sinks, and if it floats, calculate the height of the block that remains above the water surface.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the block will sink because the lead plug is really heavy, so the average density must be higher than water."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student attributes sinking solely to the lead’s weight, ignoring the wood’s contribution; we need to uncover their density‑mixing method.",
+        "state": "Diagnosis",
+        "response": "It sounds like you think the lead makes it sink; can you walk me through how you combined the densities of wood and lead to get the average density you used?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I added the densities: 0.5 + 11.3 = 11.8 g/cm^3, then divided by 2 to get ~5.9, still higher than water, so it sinks."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student used an incorrect simple average of densities; we prompt them to think about proper weighting using masses and volumes.",
+        "state": "Support",
+        "response": "I see you tried averaging by adding the densities and dividing by two; what does it mean to find the average density of a composite object, and how might you use the masses and volumes of each part?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I guess I need to weight each density by its volume fraction, but I'm not sure how to do that."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student recognizes they need to weight by volume but is unsure how; we ask them to compute total mass and volume as a next step.",
+        "state": "Support",
+        "response": "You mentioned needing to weight each density by its volume fraction; how would you find the total mass and total volume of the block using density = mass/volume for each part?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "So wood mass is 0.5*2000=1000 g, lead mass is 11.3*5=56.5 g, total mass 1056.5 g. Total volume is 2000+5=2005 cm^3."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly calculated total mass and volume; we check whether they understand the floating condition.",
+        "state": "Diagnosis",
+        "response": "You have the total mass and total volume; if the block floats, what must be true about its weight and the buoyant force acting on it in equilibrium?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The weight must equal the buoyant force, so m_total * g = ρ_water * g * V_total, where V_total is the whole block volume."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly applied buoyancy using the total volume; we redirect them to consider what volume of water is actually displaced.",
+        "state": "Support",
+        "response": "You used the total volume in the buoyancy equation; what determines the volume of water actually displaced by a floating object?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "So I set m_total * g = ρ_water * g * V_submerged, cancel g, and solve V_submerged = m_total / ρ_water = 1056.5 cm^3."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly found the submerged volume; we now ask them to articulate the overall reasoning in their own words.",
+        "state": "Synthesis",
+        "response": "In your own words, explain the steps you used to determine whether the block floats and how much of it stays above the water surface."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "I added the masses of wood and lead to get total mass, divided by water density to get displaced volume (not the block's total volume), then divided by base area to find submerged height, and subtracted from total height to get height above water."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has clearly explained the buoyancy reasoning, indicating mastery; we close the conversation.",
+        "state": "Closing",
+        "response": "Nice work! You've grasped the buoyancy concept well. Would you like to try another similar problem to practice and reinforce what you've learned?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Scaling a recipe",
+    "problem": "A recipe for chocolate chip cookies makes 24 cookies and calls for 1 1/2 cups of flour, 1/2 cup of sugar, 1/4 cup of butter, 1 tsp of baking soda, and a pinch of salt. You want to make 60 cookies. How much of each ingredient do you need?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Well, looking at the numbers, 60 cookies is about double the original 24, so I guess I should just double everything—multiply each amount by 2—to get close to what I need. I haven’t done the exact math yet, but doubling seems like a reasonable first approximation because the numbers are close enough."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student approximated the scaling factor as 2 without calculating the exact ratio, showing reliance on intuition rather than precise computation. I need to uncover their reasoning about how they chose that factor.",
+        "state": "Diagnosis",
+        "response": "How did you decide on the factor to multiply the ingredients by? Think about how many times the original batch of 24 cookies fits into the amount you want, which is 60 cookies. What operation would give you that number? Consider using division to find the ratio."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I figured the factor is 2 because 24 times 2 equals 48, which is close to 60, and I didn’t want to overcomplicate it by doing exact division; I thought a simple doubling would be good enough for the cookies. I figured that being off by a few cookies wouldn’t matter much for the taste."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student asserted an incorrect scaling factor of 2, based on an approximate equality rather than the exact ratio. I should provide a minimal hint that points them toward the correct operation without revealing the factor.",
+        "state": "Support",
+        "response": "Let’s think about the relationship between the amounts: the factor is the ratio of the desired number of cookies to the original number. What operation would give you that ratio? You could start by dividing 60 by 24. Doing that will give you the exact multiplier you need for each ingredient. That way you’ll avoid guessing and get accurate amounts."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I divided 60 by 24 and got 2.5, so the scaling factor is 2.5. That means I need to multiply each ingredient amount by 2.5 to adjust the recipe for 60 cookies. I’ll use that factor to figure out the new quantities for flour, sugar, butter, baking soda, and salt. This way I keep the proportions the same while increasing the batch size."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the scaling factor as 2.5. Now I want to check whether they can apply that factor to a specific ingredient without error, so I’ll ask them to compute the flour amount and give a hint to break the multiplication down.",
+        "state": "Diagnosis",
+        "response": "Let’s start with the flour. The original recipe calls for 1 ½ cups. How would you compute 1.5 times 2.5? You might find it helpful to split 1.5 into 1 and 0.5 and multiply each part separately. Then add the two products together to get the total flour needed. This method reduces the chance of making a multiplication error."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I multiplied 1 by 2.5 to get 2.5, and I thought 0.5 times 2.5 equals 1.0, so adding those gives 2.5 plus 1.0 equals 3.5 cups of flour needed. I know it’s not exact, but I think that’s close enough for baking. If I’m off by a little, the cookies should still turn out fine."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student incorrectly calculated half of 2.5 as 1.0 instead of 1.25, showing a slip in the fractional multiplication. I’ll give a hint that encourages them to re‑evaluate that step without directly providing the correct product.",
+        "state": "Support",
+        "response": "When you multiply 0.5 by 2.5, think of 0.5 as one‑half. What is one‑half of 2.5? You can find half of 2 and half of 0.5 separately, then add them. That should give you the correct value to add to the product of 1 and 2.5. Then you’ll have the accurate flour amount. This avoids the common slip of treating 0.5 times a number as just half the integer part."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I recalculated: half of 2.5 is 1.25, so 0.5 times 2.5 equals 1.25. Adding that to 2.5 from the 1 times 2.5 gives 3.75 cups of flour. That seems right because 1.5 times 2.5 should be a bit more than three cups. I’ll use that amount for the flour in the scaled‑up recipe."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has now correctly applied the scaling factor to flour, showing they understand the procedure. I want them to articulate the general rule for scaling any recipe in their own words to consolidate their learning.",
+        "state": "Synthesis",
+        "response": "In your own words, describe the step‑by‑step process you would use to scale any ingredient amount when changing the number of servings in a recipe. Explain how you find the factor and then apply it to each quantity. Make sure to mention why the factor is based on the ratio of desired to original servings."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "First, I find the scaling factor by dividing the number of servings I want by the number the original recipe makes. Then I multiply every ingredient amount by that factor to get the new quantities. This keeps the proportions the same so the recipe turns out right."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the scaling rule in their own words, indicating mastery of the concept. The conversation can now wrap up with a brief, encouraging closing.",
+        "state": "Closing",
+        "response": "Great job! You’ve clearly explained how to scale a recipe by finding the ratio of desired to original servings and multiplying each ingredient by that factor. Understanding this proportional reasoning will help you adjust any recipe confidently. Would you like to try another scaling problem?"
+      }
+    ]
   }
 ]
