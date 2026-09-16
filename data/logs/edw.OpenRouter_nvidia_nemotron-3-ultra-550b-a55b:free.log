@@ -84,3 +84,50 @@
   failure_categories:
   empty_response: 1
   invalid_json_syntax: 1
+2026-09-16 16:08:34,326 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-16 16:10:25,823 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=6955 turns=14 path=data/OpenRouter_nvidia_nemotron-3-ultra-550b-a55b:free/edw-set[1].json
+2026-09-16 16:11:25,825 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-16 16:12:30,892 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=5859 turns=14 path=data/OpenRouter_nvidia_nemotron-3-ultra-550b-a55b:free/edw-set[1].json
+2026-09-16 16:13:30,894 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-16 16:17:26,948 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=12830 turns=14 path=data/OpenRouter_nvidia_nemotron-3-ultra-550b-a55b:free/edw-set[1].json
+2026-09-16 16:18:26,956 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-16 16:21:36,944 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=14598 turns=14 path=data/OpenRouter_nvidia_nemotron-3-ultra-550b-a55b:free/edw-set[2].json
+2026-09-16 16:22:36,946 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-16 16:23:34,051 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=5782 turns=14 path=data/OpenRouter_nvidia_nemotron-3-ultra-550b-a55b:free/edw-set[2].json
+2026-09-16 16:24:34,059 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-16 16:28:51,269 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=12424 turns=14 path=data/OpenRouter_nvidia_nemotron-3-ultra-550b-a55b:free/edw-set[2].json
+2026-09-16 16:29:51,276 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-16 16:31:48,134 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=6915 turns=14 path=data/OpenRouter_nvidia_nemotron-3-ultra-550b-a55b:free/edw-set[2].json
+2026-09-16 16:32:48,142 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-16 16:37:38,937 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=9185 turns=14 path=data/OpenRouter_nvidia_nemotron-3-ultra-550b-a55b:free/edw-set[2].json
+2026-09-16 16:38:38,935 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-16 16:43:03,338 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=9541 turns=14 path=data/OpenRouter_nvidia_nemotron-3-ultra-550b-a55b:free/edw-set[2].json
+2026-09-16 16:44:03,345 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-16 16:48:19,976 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=11580 turns=14 path=data/OpenRouter_nvidia_nemotron-3-ultra-550b-a55b:free/edw-set[2].json
+2026-09-16 16:49:19,978 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-16 16:51:37,923 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=6244 turns=12 path=data/OpenRouter_nvidia_nemotron-3-ultra-550b-a55b:free/edw-set[2].json
+2026-09-16 16:52:37,916 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-16 16:54:53,600 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=7293 turns=14 path=data/OpenRouter_nvidia_nemotron-3-ultra-550b-a55b:free/edw-set[2].json
+2026-09-16 16:55:53,601 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-16 16:57:34,720 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=7130 turns=14 path=data/OpenRouter_nvidia_nemotron-3-ultra-550b-a55b:free/edw-set[2].json
+2026-09-16 16:58:34,718 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-16 16:59:55,886 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=5809 turns=14 path=data/OpenRouter_nvidia_nemotron-3-ultra-550b-a55b:free/edw-set[2].json
+2026-09-16 17:00:55,894 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-16 17:04:39,897 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=8646 turns=12 path=data/OpenRouter_nvidia_nemotron-3-ultra-550b-a55b:free/edw-set[2].json
+2026-09-16 17:05:39,904 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-16 17:08:52,430 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=7871 turns=14 path=data/OpenRouter_nvidia_nemotron-3-ultra-550b-a55b:free/edw-set[2].json
+2026-09-16 17:09:52,437 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-16 17:11:47,660 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=8721 turns=12 path=data/OpenRouter_nvidia_nemotron-3-ultra-550b-a55b:free/edw-set[2].json
+2026-09-16 17:12:47,662 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-16 17:15:07,999 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=5342 turns=14 path=data/OpenRouter_nvidia_nemotron-3-ultra-550b-a55b:free/edw-set[2].json
+2026-09-16 17:16:08,001 INFO MODEL_SUMMARY
+  provider_model: OpenRouter / nvidia/nemotron-3-ultra-550b-a55b:free
+  attempts: 18
+  saved: 18
+  failed: 0
+  accept_rate: 100.00%
+  average_tokens: 8484.72
+  turn_range: 12-14
+  expired: False
+  failure_categories:
+  none

@@ -1102,5 +1102,290 @@
         "response": "Spot on! You nailed the process and caught those tricky edge cases perfectly. Ready to try another conversion?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "computer_science_light",
+    "topic": "Boolean logic",
+    "problem": "Evaluate the Boolean expression: 'not A or B and C' where A = False, B = True, and C = False.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm trying to evaluate 'not A or B and C' with A=False, B=True, C=False, but I'm stuck."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has stated the problem but hasn't shown their work. I need to diagnose their starting point while keeping Socratic level low by stating a fact first.",
+        "state": "Diagnosis",
+        "response": "Boolean operators have a specific order of operations, just like math. How did you start evaluating this?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I evaluated left-to-right, so I did 'not A' first, which is True."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly evaluated the first part but needs a hint about operator precedence for the next step.",
+        "state": "Support",
+        "response": "That's correct, 'not False' is True. Remember that 'and' has higher precedence than 'or'. What is next?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Since 'and' is higher, I should do 'B and C' which is True."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made their first mistake by incorrectly evaluating 'True and False' as True. I will directly correct this and offer a hint.",
+        "state": "Support",
+        "response": "Actually, B is True and C is False. An 'and' needs both to be True. What is 'True and False'?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Ah, right, 'True and False' is False. So that part is False."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student corrected their mistake. Now I will directly guide them to combine the two evaluated parts.",
+        "state": "Support",
+        "response": "Exactly, that evaluates to False. Now we combine the 'not A' result with 'B and C' using 'or'."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "So we have 'True or False'. Since one is False, the expression is False."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student made their second mistake regarding the 'or' operator. I will directly explain how 'or' works to guide them.",
+        "state": "Support",
+        "response": "An 'or' statement only needs one side to be True to result in True. What is 'True or False'?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Oh, so 'True or False' is True. The final answer is True!"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student reached the correct final answer. I will transition to Synthesis to have them articulate the order of operations in their own words.",
+        "state": "Synthesis",
+        "response": "Spot on, that is correct. In your own words, what is the order of operations we used?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "We evaluate 'not' first, then 'and' because it has higher priority, and we do 'or' last."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student successfully explained the operator precedence. I can now wrap up the conversation warmly.",
+        "state": "Closing",
+        "response": "Perfect, you've got the precedence down! Ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Parts of speech",
+    "problem": "Identify the part of speech of the word 'outside' in the sentence: 'We went outside.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think 'outside' is a preposition here because it shows the spatial direction or location of where we went."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified the spatial nature of the word but made a common edge-case error by labeling it a preposition. I need to guide them to realize a preposition needs an object.",
+        "state": "Diagnosis",
+        "response": "Prepositions do show spatial relationships, but they usually need a companion. What kind of word typically follows a preposition to complete its phrase?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, right, they are followed by nouns. So is 'outside' a noun here instead, since it refers to a place?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student made a second mistake, calling it a noun. I will provide a hint regarding noun markers and prepositional objects to help them self-correct.",
+        "state": "Support",
+        "response": "Nouns usually have markers like articles or determiners. If 'outside' were a preposition, it would need a separate noun object. Does it have one in this sentence?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "No, there's no noun after it. So it must be a preposition that links directly back to modify the verb 'went'."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student's preposition misconception has resurfaced. I need to explicitly point out that words modifying verbs are not prepositions, guiding them to the correct part of speech.",
+        "state": "Support",
+        "response": "Actually, prepositions can't modify verbs directly without an object. If a word tells us *where* an action happens without needing an object, what part of speech is it?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Ah, of course! It's modifying the verb 'went' by telling us where, which makes 'outside' an adverb in this context."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has reached the correct answer. Now I want to deepen their understanding and test the contrast with actual prepositions using a brief follow-up.",
+        "state": "Diagnosis",
+        "response": "You got it! To solidify this, what part of speech is 'outside' if we change the sentence to: 'We went outside the house'?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "In that case, it is a preposition, because 'the house' acts as the noun object completing the prepositional phrase."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student correctly distinguished the prepositional use. I will test one more variation to ensure complete mastery of this multi-functional word.",
+        "state": "Diagnosis",
+        "response": "Perfect. What part of speech is 'outside' in the sentence: 'The outside of the building was painted white'?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "That one is a noun because it has the article 'the' in front of it and functions as the subject of the sentence."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified all three variations. I will now ask them to synthesize the general rule in their own words.",
+        "state": "Synthesis",
+        "response": "Spot on! In your own words, how do we figure out the correct part of speech for a word that can play multiple roles like 'outside'?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "We can't just look at the word itself; we have to look at its function in the sentence. If it modifies a verb without an object, it's an adverb. If it introduces a noun object, it's a preposition. And if it acts as a naming word, often with an article, it's a noun."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has provided an excellent, comprehensive synthesis of the concept. The learning objective is fully met, so I will wrap up the session.",
+        "state": "Closing",
+        "response": "That is a perfect summary! You handled those tricky edge cases beautifully. Ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Reading and interpreting graphs",
+    "problem": "The line graph shows the daily high temperatures in Celsius for a week: Monday (12°), Tuesday (15°), Wednesday (14°), Thursday (18°), and Friday (11°). The vertical axis has grid lines labeled every 2 degrees (10, 12, 14, 16, 18). Between which two consecutive days did the temperature decrease the most, and by how much?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at the graph to find the biggest temperature drop. The steepest line going down is between Thursday and Friday. Thursday is at 18 degrees, and Friday looks like it's at 10 degrees, so is the drop 8 degrees?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the correct days but made an error reading Friday's temperature on the y-axis. I need to diagnose how they read that specific data point.",
+        "state": "Diagnosis",
+        "response": "You spotted the steepest downward slope! To be absolutely sure about the 8-degree drop, could you explain how you read Friday's value on the vertical axis?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, Friday's point is near the bottom. The grid line right below it is labeled 10, and the one above it is 12. Since it's in between them, I just assumed it was 10."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student explains they rounded down to the nearest labeled line. I will provide a minimal support prompt to guide them to read the exact halfway value.",
+        "state": "Support",
+        "response": "If that point sits exactly halfway between the grid lines for 10 and 12, what temperature value does that halfway position actually represent?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, right! Halfway between 10 and 12 is 11, not 10. So Friday's high was actually 11 degrees."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student self-corrected the data point. I should now ask them to re-evaluate the total temperature drop with this new value.",
+        "state": "Diagnosis",
+        "response": "Exactly. With Friday's temperature corrected to 11 degrees, what does that make the actual drop from Thursday's high of 18 degrees?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "That would mean the temperature dropped by 7 degrees, since 18 minus 11 is 7."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has the correct calculation. I want to verify if they checked other intervals to ensure they are thorough, reinforcing good graphing habits.",
+        "state": "Diagnosis",
+        "response": "Are there any other intervals on the graph where the temperature decreased, and how do they compare to this one?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The only other drop was Tuesday to Wednesday, which only went from 15 down to 14. That's just a 1-degree drop, so Thursday to Friday is definitely the biggest."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has fully solved the problem and verified their work. Now, I will ask them to generalize the rule for reading values between grid lines.",
+        "state": "Synthesis",
+        "response": "When reading graphs with points that fall between labeled grid lines, what steps should we take to ensure we get the exact values?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "We need to check the scale of the axis to see what interval the grid lines represent, and then find the exact value of the midpoint rather than just rounding to the nearest labeled line."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly articulated the rule. I will now close the session warmly without introducing new concepts.",
+        "state": "Closing",
+        "response": "Spot on! Paying close attention to the scale of the axis is key for accurate reading. You did a fantastic job working through that. Ready to try another graph?"
+      }
+    ]
   }
 ]

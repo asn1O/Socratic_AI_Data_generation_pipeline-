@@ -1,0 +1,350 @@
+[
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "computer_science_light",
+    "topic": "Boolean logic",
+    "problem": "Determine the output of the following boolean expression: (True AND False) OR (NOT False).",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this problem: (True AND False) OR (NOT False). I think the whole thing just evaluates to False because of that first part. Is that right?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has made an incorrect assumption by ignoring the second half of the expression. I need to diagnose their understanding of boolean operators.",
+        "state": "Diagnosis",
+        "response": "That's an interesting starting point. What makes you think that the entire expression is decided solely by the first part in the parentheses?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, I just assumed that if one side is False, the whole 'AND' part makes everything False. But wait, there's that 'OR' in the middle. I'm honestly not sure how that changes things."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is confused about order of operations and the 'OR' operator. I will provide a hint to help them break it down into smaller, manageable parts.",
+        "state": "Support",
+        "response": "You're right that 'AND' and 'OR' behave differently. If we look at the two groups separated by the 'OR'—the (True AND False) side and the (NOT False) side—what do those individual parts evaluate to on their own?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Okay, so (True AND False) would be False because they aren't both True. But I'm stuck on (NOT False). Does that mean it's just False as well?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has made another conceptual error regarding the NOT operator. I need to guide them toward the correct understanding of what 'NOT' does.",
+        "state": "Support",
+        "response": "Think of the 'NOT' operator like a toggle switch. If you have a light that is currently off, and you apply a 'NOT' switch to it, what happens to the state of that light?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh! It would turn on, right? So if it was False, then NOT False would actually be True?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly self-corrected. Now I need to help them combine this back into the full expression.",
+        "state": "Support",
+        "response": "Exactly! You've got that part down. Now, if we look back at our full expression: (False) OR (True), how would you describe how an 'OR' operator decides whether the final result is True or False?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I'm still a bit fuzzy on how 'OR' works compared to 'AND'. Does it need both sides to be True to work?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student is still struggling with the definition of 'OR'. I will ask a guiding question to help them differentiate 'OR' from 'AND'.",
+        "state": "Support",
+        "response": "If I told you that you could have a sandwich OR a salad for lunch, would you be happy if I gave you a salad? Does an 'OR' operator need both options to be true, or just one of them?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "That makes sense! So 'OR' only needs at least one True to be True, while 'AND' needs both. So since I have False OR True, the final answer must be True!"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully synthesized the rules for AND, OR, and NOT, and correctly applied them to the expression.",
+        "state": "Closing",
+        "response": "That's perfect! You really nailed the logic behind those operators. Ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Seating arrangement",
+    "problem": "Five people (A, B, C, D, E) are sitting in a row. A must sit next to B. C cannot sit next to D. E must be at one of the ends. How many valid seating arrangements exist?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "If E is at one end, I think there are 4! arrangements for the rest, so 24 times 2 for both ends, which is 48."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student ignored the constraints about A, B, C, and D. I need to point out the missing constraints.",
+        "state": "Support",
+        "response": "That counts all permutations, but we have specific constraints for A, B, C, and D. How do those change your count?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Okay, A and B are a pair, so I can treat them as one unit. So I have 4 units left if E is fixed."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is on the right track with the unit method. I will explain the calculation for that unit block to guide them.",
+        "state": "Support",
+        "response": "Treating A and B as one unit is correct. If we have 4 units total including the [AB] block, how many ways can they be arranged?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "That would be 3! arrangements, but since A and B can swap, it's 3! times 2, so 12 ways for each end."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student found the ways to seat A and B but needs to account for the C and D constraint next.",
+        "state": "Diagnosis",
+        "response": "That correctly handles A and B. Now, how do you subtract the arrangements where C and D are adjacent?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I can just subtract the cases where C and D are together, so there are 2! * 2 * 2 = 8 cases to remove."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student made a calculation error; they are subtracting too many arrangements. I need to guide them to recalculate the 'bad' cases.",
+        "state": "Support",
+        "response": "That assumes C and D are always together inside the group, but we have 3 units here: [AB], [CD], and E. Calculate the invalid cases again."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, wait. If I have [AB], [CD], and E, there are only 2! for the remaining spots, so it's 2! * 2 * 2 = 8, wait, no, 2! * 2 * 2 is 8, so 12 minus 8 is 4."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student is still struggling with the 'bad' cases. I will clarify that they need to arrange 3 items: [AB], [CD], and E. If E is at the end, [AB] and [CD] fill the remaining slots.",
+        "state": "Support",
+        "response": "Let's list them: if [AB] and [CD] are blocks, we arrange 3 items. If E is fixed, we arrange 2 blocks. That's 2! * 2(for AB) * 2(for CD) = 8."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Right, so for each end E is at, there are 12 total arrangements of [AB], minus the 8 where C and D are also together, leaving 4 valid ways per end, totaling 8."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully navigated the constraints and arrived at the correct answer through logical deduction.",
+        "state": "Closing",
+        "response": "Perfect logic! You've nailed it. Ready to try another puzzle?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "physics",
+    "topic": "Buoyancy and density",
+    "problem": "A hollow aluminum sphere with a radius of 10 cm and a mass of 0.5 kg is placed in a tank of water (density 1000 kg/m³). It is completely submerged and held down by a thin string attached to the floor. Calculate the tension in the string.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Okay, so I know I need to find the buoyant force and subtract the weight, but I'm not sure how to handle the volume. Do I just use the mass of the sphere divided by the density of aluminum to find the volume, or is there something else involved?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is confusing the volume of the material (aluminum) with the volume of the displaced fluid. I need to guide them toward the distinction between the object's bulk volume and its mass/density.",
+        "state": "Diagnosis",
+        "response": "That's a common point of confusion! If you calculated the volume using the density of aluminum, what exactly would that represent, and how does that compare to the amount of water the sphere pushes out of the way while it's fully submerged?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Wait, if I use the density of aluminum, that's the volume of the solid part. But since it's a hollow sphere, the displaced water depends on the total size of the sphere, not just the metal's volume. So I should use the 10 cm radius to find the total volume, right?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified that the displaced fluid depends on the total volume. I will now encourage them to apply the geometry formula for that volume.",
+        "state": "Support",
+        "response": "Exactly. Since the sphere is fully submerged, it displaces its entire outer volume. How would you determine the total volume of that sphere using the 10 cm radius provided?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I'll use the sphere volume formula, which is 4/3 * pi * r cubed. That would be 4/3 * pi * (0.1 meters)^3. So that gives me about 0.00419 cubic meters of displaced water."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly calculated the volume. Now they need to link this to the buoyant force using Archimedes' principle.",
+        "state": "Support",
+        "response": "That looks correct. Now that you have the volume of the displaced water, how do you relate that to the upward buoyant force acting on the sphere?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "The buoyant force equals the weight of the water displaced, so I'll multiply that volume by the density of water and gravity. That's 0.00419 * 1000 * 9.8. That gives me about 41.06 Newtons."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The calculation is correct. Now I need to ensure they account for all forces on the sphere, specifically the tension and gravity.",
+        "state": "Support",
+        "response": "That's the correct buoyant force. Now, think about the sphere in equilibrium. What are the three vertical forces acting on it while it's held underwater by the string?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "There's the buoyant force pushing up, and pulling down is gravity and the tension in the string. Wait, is the gravity acting on the sphere just the 0.5 kg mass? So weight is 0.5 * 9.8 = 4.9 Newtons?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has identified the forces correctly. I want to make sure they can now assemble the final equation to find the tension.",
+        "state": "Support",
+        "response": "That's right. If those are the three forces in equilibrium, how would you set up your equation so that the upward force equals the sum of the downward forces?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "So, the buoyant force (Fb) must equal the weight of the sphere (mg) plus the tension (T). Since the buoyant force is what keeps it up and the string is preventing it from floating to the surface, the tension is just the buoyant force minus the weight, which is 41.06 minus 4.9, or 36.16 Newtons."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student correctly synthesized the physical principles and performed the steps to solve the problem.",
+        "state": "Closing",
+        "response": "Spot on! That logic is perfect. You've mastered the relationship between buoyancy and equilibrium. Ready to move on to the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "computer_science_light",
+    "topic": "Binary number conversion",
+    "problem": "Convert the decimal number 13 into its binary representation.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm trying to convert 13 into binary. I think I just need to keep dividing by two, but I'm a bit confused about how to write the result down. Is it just 1011?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has an incorrect answer and is guessing. I need to diagnose their process for converting the number.",
+        "state": "Diagnosis",
+        "response": "Let's look at your process. If you have 13 and divide by 2, what do you get for the quotient and the remainder?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "13 divided by 2 is 6 with a remainder of 1. So the last digit is 1."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student identified the first step correctly. I'll support them in continuing the process to see if they can find the next bits.",
+        "state": "Support",
+        "response": "That's exactly right. Now, what do you get if you take that 6 and divide it by 2 again?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "6 divided by 2 is 3, with a remainder of 0. So, 0 is the next digit."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is tracking well, but I need to make sure they are building the number correctly, so I'll prompt for the next step.",
+        "state": "Support",
+        "response": "Good. Keep going with the 3—what happens when you divide that by 2?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "3 divided by 2 is 2 with a remainder of 1. So now I have 1, 0, 1, 1."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student made a procedural error in division. I need to gently point out the mistake in the arithmetic.",
+        "state": "Support",
+        "response": "Check that math again—if you have 3 and divide it by 2, how many times does 2 actually fit into 3, and what is left over?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, right! 2 goes into 3 only once, so the quotient is 1 and the remainder is 1. My mistake."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student corrected their arithmetic error. Now I want to see if they can finish the sequence and assemble the binary string.",
+        "state": "Diagnosis",
+        "response": "Exactly. So if your last step is 1 divided by 2, what is your final quotient and remainder, and how do you put all those pieces together?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The final step is 1 divided by 2, which is 0 remainder 1. Reading the remainders from bottom to top, it's 1101. The rule is to keep dividing by two and collect the remainders in reverse order to get the binary bits."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student successfully explained the process and arrived at the correct answer.",
+        "state": "Closing",
+        "response": "Perfect explanation! You've got the hang of it now. Ready to try another one?"
+      }
+    ]
+  }
+]

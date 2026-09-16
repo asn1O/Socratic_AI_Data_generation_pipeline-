@@ -1027,5 +1027,401 @@
         "response": "Perfectly put! Ready to try another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Common grammar errors",
+    "problem": "Correct the sentence: \"Their going to the park over there.\"",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think it's 'Their going' because they are people."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is confusing people with possession. I need to see how they define 'their'.",
+        "state": "Diagnosis",
+        "response": "Can you explain why being people makes 'their' the right word?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Because they own the action of going?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has a conceptual mistake about ownership. I will provide a direct explanation as per low socratic level.",
+        "state": "Support",
+        "response": "'Their' is for owning objects, like 'their car'. Not for actions."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I don't really get what that means."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is lost. I'll explain the contraction 'they're' directly.",
+        "state": "Support",
+        "response": "We use 'they're' as a shortcut for the words 'they are'."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "So it's 'They're going to the park over their'?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student corrected the first word but incorrectly changed the second. I'll explain 'there' directly.",
+        "state": "Support",
+        "response": "'There' is used when you are talking about a place or location."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "So 'their' is for the place?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student is repeating the possession/location confusion. I will explicitly contrast the two.",
+        "state": "Support",
+        "response": "No, 'their' is for ownership. 'There' is for the place."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Oh, 'They're going to the park over there'."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student reached the correct answer. Now I need them to internalize the rule.",
+        "state": "Synthesis",
+        "response": "That's right. In your own words, what is the difference between those words?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "They're is 'they are' and there is for a place."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the rule. Wrapping up the session.",
+        "state": "Closing",
+        "response": "Perfect, you've got it! Ready for another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Ethical dilemmas (trolley-problem style)",
+    "problem": "A doctor has five patients who are all dying of different organ failures. A healthy traveler comes into the clinic for a routine check-up. The doctor realizes that if they kill the traveler and harvest their organs, they can save all five patients. However, this means killing one innocent person who did nothing wrong. Is this action ethically permissible?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm not sure, but I guess it's okay to do it because five lives are more than one? If the doctor can save five people by only sacrificing one, isn't that the best outcome for everyone involved? It seems like the right thing to do if you're just looking at the numbers."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is using a purely quantitative approach. I need to determine if they can justify this beyond simple arithmetic.",
+        "state": "Diagnosis",
+        "response": "You're focusing on the numbers right now, which is a very common starting point for these kinds of problems. I want to understand your logic better. Can you explain why you think the total number of lives saved is the most important factor to consider when making this decision?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I don't really get what you mean by 'logic' here. Isn't it just basic math? Five people living is objectively better than one person living. I don't see why we need to overthink it if the result is that more families are happy."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is stuck on the utilitarian outcome. I will guide them to consider the perspective of the victim to introduce the concept of rights.",
+        "state": "Support",
+        "response": "It does seem like simple math at first glance, but let's shift perspectives. Imagine you were that healthy traveler who just walked into the clinic for a routine check-up. Would you still feel the same way about the decision? Does the act of killing an innocent person change the calculation for you?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Wait, I see what you're saying, but if the doctor doesn't act, five people die. That means the doctor is basically killing those five people by doing nothing. So, really, if he doesn't kill the one person, he's responsible for five deaths. That's way worse."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is making a conceptual mistake by equating omission (letting die) with commission (killing). I need to challenge this distinction.",
+        "state": "Support",
+        "response": "Is there a fundamental difference between letting a patient die from a natural illness and actively choosing to kill a healthy person? Why might that distinction be important for a doctor's role in society and the trust people have in medical professionals?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I'm lost on this part. I don't really understand what you mean by 'distinction' or 'doctor's role.' I thought the only thing that mattered in ethics was making sure the most people survive. Why does it matter how they die?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is struggling with the concept of duty. I will introduce the idea of duty-based ethics as a contrast to their current thinking.",
+        "state": "Support",
+        "response": "It's a bit confusing because we're balancing two different values. Some philosophers argue that certain actions, like killing an innocent person, are strictly forbidden regardless of the outcome. This is called a duty-based approach. If we follow that rule, does the number of lives saved still make the action right?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, I think I get it. So the doctor has a rule he has to follow. But if he follows that rule and lets five people die, isn't he just being selfish? He's choosing his own clean conscience over the lives of five actual human beings."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student is mischaracterizing the moral principle as selfishness. I'll provide a hint about systemic trust and then ask them to synthesize the two viewpoints.",
+        "state": "Synthesis",
+        "response": "It's less about the doctor's personal feelings and more about the inherent right to life. If we allow doctors to kill healthy people for the 'greater good,' would you feel safe visiting a hospital for a cold? Now, looking at the whole picture, how would you summarize the two conflicting goals here?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I think I see the whole picture now. It's a clash between two different ways of thinking. One way is just about the numbers—saving the most people possible to get the best result. The other way is about following a strict moral rule, like 'do not kill,' regardless of how many people it might help."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly articulated the tension between utilitarianism and deontology.",
+        "state": "Closing",
+        "response": "That's exactly it! You've perfectly captured the tension between those two ethical frameworks. You handled a really tough problem today. Ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Elasticity of demand",
+    "problem": "A coffee shop increases the price of a latte from $4.00 to $5.00. As a result, the quantity demanded drops from 100 cups per day to 70 cups per day. Calculate the Price Elasticity of Demand (PED) and determine if the demand is elastic or inelastic.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this coffee shop problem, but I'm not really sure where to start. Do I just divide the price by the number of cups?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is unsure of the fundamental approach. I need to define the concept and guide them to the first step of the calculation.",
+        "state": "Diagnosis",
+        "response": "Elasticity measures how much the quantity demanded changes in response to a change in price. We first need to find the percentage change for both. How would you calculate the percentage change in quantity?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think I just subtract them? So 100 minus 70 is 30. Is the change 30%?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is confusing the raw difference with the percentage change. I will provide a direct correction and a hint on the operation.",
+        "state": "Support",
+        "response": "Subtraction gives you the raw change, but for a percentage, you must divide that change by the original amount. Try dividing 30 by the original 100 cups."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, okay. 30 divided by 100 is 0.3, so that is 30%."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student successfully calculated the first part. Now I will direct them to apply the same logic to the price.",
+        "state": "Support",
+        "response": "Correct. Now we do the exact same thing for the price. The price went from $4 to $5. What is the percentage change there?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Wait, $5 minus $4 is $1. Since it's 1 dollar, is the change just 1%?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is again confusing the nominal value with the percentage. I'll provide a direct statement of the rule and a specific hint.",
+        "state": "Support",
+        "response": "Not quite. Remember the rule: you have to divide the change by the original price. In this case, divide the $1 increase by the original $4."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "1 divided by 4 is 0.25. So that's 25%."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has both percentage changes. I will now explain the final calculation step.",
+        "state": "Support",
+        "response": "Exactly. To find the elasticity, you divide the percentage change in quantity by the percentage change in price. What do you get when you do that?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "So I divide 25% by 30%? That's about 0.83. Since it's less than 1, that means it's elastic, right?"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student flipped the numerator and denominator and misinterpreted the elasticity threshold. I need to correct both directly.",
+        "state": "Support",
+        "response": "Actually, it's quantity divided by price, so 30% divided by 25%. Also, if the result is less than 1, it's 'inelastic' because the response is small. Try the division again."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "My bad. 30 divided by 25 is 1.2. Since that is over 1, it must be elastic!"
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has reached the correct answer. Now I want them to internalize the conceptual meaning of 'elastic'.",
+        "state": "Synthesis",
+        "response": "You got the right answer! To make sure it sticks, can you explain in your own words what 'elastic demand' actually means regarding how customers react to price?"
+      },
+      {
+        "turn": 15,
+        "speaker": "student",
+        "text": "It means the customers are pretty sensitive to the price. If the price goes up a little bit, they stop buying a lot more of the product."
+      },
+      {
+        "turn": 16,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the concept, so the tutoring session is complete.",
+        "state": "Closing",
+        "response": "Spot on! You've totally mastered this. Ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Percentages",
+    "problem": "A jacket originally costs $80, but it is on sale for 20% off. What is the sale price of the jacket?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know the jacket is $80 and it's 20% off, so I think I need to find 20% of 80 first. But I'm honestly not totally sure if I should be adding that amount to the original price or subtracting it to get the final cost."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student identifies the first step but is unsure about the operation required for a discount. I will provide a direct explanation of what a sale means to guide them.",
+        "state": "Diagnosis",
+        "response": "When something is 'on sale' or has a 'discount,' it means the price is being reduced from the original amount. Because of that, you'll want to subtract the discount from the starting price. Does that make sense? How would you go about calculating that 20% first?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Okay, that makes sense. So I just multiply 80 by 0.20 to get the percentage. 80 times 0.2 is 16, so the sale price is $16."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly calculated the discount amount but mistakenly identified it as the final sale price. I need to clarify the difference between the discount and the final price.",
+        "state": "Support",
+        "response": "You've correctly found the discount amount, which is indeed $16. However, $16 is just the amount being taken off the price, not the final cost you pay at the register. To find the actual sale price, you have to take that discount away from the original $80. What does that give you?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, I get it now. I need to combine them. So if I take the $80 and add the $16 discount, the total sale price comes out to be $96."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is now adding the discount instead of subtracting it. I will directly explain why addition is incorrect in the context of a sale.",
+        "state": "Support",
+        "response": "Actually, remember that a sale means the item is cheaper than it was before. If you add the $16, the jacket becomes more expensive, which wouldn't be much of a sale! You need to subtract the $16 from the $80 to find the lower price. Try that calculation again and let me know what you get."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "My bad, I'm overthinking it. 80 minus 16... that would be 64. So the sale price is $64. I think that's right, but I always get nervous with these."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student reached the correct answer, but given the previous errors, I want to verify their understanding of the percentage calculation to ensure it wasn't a guess.",
+        "state": "Diagnosis",
+        "response": "That is correct! The final price is $64. Just to make sure we're totally solid on the math, can you walk me through exactly how you calculated that 20% of 80 was 16? I want to see the steps you used in your head."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I just did 80 times 20 in my head, which is 1600, and then since it's a percentage, I think I just move the decimal point two places to the left... wait, 1600 becomes 16.00. Oh, wait, is it 160? I think I might have moved it the wrong way."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student is confused about decimal placement. I will provide a direct explanation of the 'per hundred' rule to correct this procedural error.",
+        "state": "Support",
+        "response": "You were on the right track with 1600. Since a percent is 'per hundred,' moving the decimal two places to the left is exactly how you convert that whole number into the actual value. So 1600 becomes 16.0, not 160. You actually had it right the first time!"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Okay, thanks for clearing that up. So 80 times 20 is 1600, divide by 100 to get 16, and then 80 minus 16 gives me 64. It all clicks now."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully solved the problem and understands the steps. I will now ask them to synthesize the general rule.",
+        "state": "Synthesis",
+        "response": "You've nailed the math for this problem. To make sure you can do this with any item on sale, could you explain to me in your own words the general rule or the steps you'd follow to find the sale price of any object given a percentage discount?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Sure! First, you find the discount amount by multiplying the original price by the percentage, usually in decimal form. Once you have that discount value, you subtract it from the original price to get the final sale price."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly articulated the process for calculating a percentage discount, completing the learning objective.",
+        "state": "Closing",
+        "response": "Spot on! You've got the process down perfectly. Great job today—want to try another one or are you all set?"
+      }
+    ]
   }
 ]

@@ -184,5 +184,104 @@
         "response": "Spot on, perfect explanation! Ready to tackle the next one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Simple vs compound interest",
+    "problem": "You invest $1,000 for 3 years at an annual interest rate of 10%. How much more total interest will you earn if the interest is compounded annually compared to if it earns simple interest?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "For simple interest, 10% of $1,000 is $100 a year, so that's $300 total. For compound interest, I think you just take 10% of that total interest at the end, so you'd earn $330."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student correctly calculated simple interest but misapplied the compound interest mechanism by treating it as an end-of-period surcharge. Diagnosis is needed to uncover how they perceive the timing of compounding.",
+        "state": "Diagnosis",
+        "response": "How does the timing of when interest is calculated differ between simple interest and compound interest over those three investment years?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, right, simple interest stays based on the original deposit. Compound interest adds the interest back into the balance as you go, so it recalculates each year instead of just once at the end."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has self-corrected the conceptual timing error and is ready to work through the yearly calculations. Support is needed to prompt the first two years of compounding.",
+        "state": "Support",
+        "response": "Since compound interest recalculates each year, how would the investment grow year by year starting from that initial $1,000 deposit?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "In year one, you earn 10% on $1,000, which is $100, bringing the balance to $1,100. Then in year two, 10% on $1,100 gives $110, so you have $1,210."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student successfully calculated the balances through year two. Support is needed to guide them through the final year of compounding.",
+        "state": "Support",
+        "response": "Now that you have $1,210 heading into year three, how much interest would you earn in that final year?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "In year three, 10% of $1,210 is $121, so adding that makes the balance $1,331. That means you earn $1,331 in total compound interest over the three years."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly computed the final balance but confused the total accumulated balance with the interest earned. Support with a targeted hint is needed to help them separate interest from principal.",
+        "state": "Support",
+        "response": "If the account started with $1,000 and ended at $1,331, how much of that final figure is actually new interest earned?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Ah, right, $1,000 was my original principal, so the interest earned is $1,331 minus $1,000, which leaves $331 in compound interest."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has resolved their second mistake and now has both interest amounts. Support is needed to prompt the final comparative step required by the problem.",
+        "state": "Support",
+        "response": "Now that you know both totals, how much more interest did the compound option generate compared to the simple interest?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Simple interest gave $300, and compound interest earned $331, so compounding gives an extra $31 in interest over the three years."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully solved the quantitative problem. A transition to Synthesis is needed so the student articulates the underlying financial rule in their own words.",
+        "state": "Synthesis",
+        "response": "Looking back at how that extra money accumulated, how would you explain the fundamental difference between simple and compound interest in your own words?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "With simple interest, you only earn money on your initial principal each year. But with compound interest, you earn interest on your principal plus the interest already added, so your earnings snowball over time."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student clearly and accurately explained the core principle, completing the learning cycle. The session is now ready to wrap up warmly.",
+        "state": "Closing",
+        "response": "Terrific explanation, you've got the concept down completely! Would you like to try another problem?"
+      }
+    ]
   }
 ]

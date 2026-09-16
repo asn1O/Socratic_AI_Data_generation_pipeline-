@@ -1162,5 +1162,302 @@
         "response": "Excellent! You've got a solid grasp of reading broken-axis graphs. Ready for another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "chemistry",
+    "topic": "Basic stoichiometry",
+    "problem": "Calculate the mass of ammonia (NH3) produced when 6 grams of hydrogen gas (H2) react with excess nitrogen gas (N2) according to the reaction: N2 + 3 H2 → 2 NH3.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'll start by converting 6 g H2 to moles. Molar mass H2 is 1 g/mol, so that's 6 mol."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student used an incorrect molar mass for H2, indicating a misunderstanding of diatomic molar mass. Need to diagnose their reasoning.",
+        "state": "Diagnosis",
+        "response": "How did you find the molar mass of H2?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Hydrogen's atomic mass is 1, so H2 is 1 g/mol."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student thinks the subscript doesn't affect molar mass. Guide them to recognize the meaning of the subscript.",
+        "state": "Support",
+        "response": "Okay. What does the '2' in H2 indicate?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, it means two atoms. So molar mass is 2 g/mol. Then 6 g is 3 mol H2."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student corrected molar mass. Now need to check if they can apply the mole ratio from the balanced equation.",
+        "state": "Diagnosis",
+        "response": "Now, how many moles of NH3 does 3 mol H2 produce?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Since 3 H2 make 3 NH3, it's 3 mol NH3."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student assumes a 1:1 mole ratio, misreading the coefficients. Prompt them to examine the balanced equation.",
+        "state": "Support",
+        "response": "Right. What do the coefficients tell you about the mole ratio?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The coefficients are 3 for H2 and 2 for NH3, so ratio is 3:2. So 3 mol H2 gives 2 mol NH3."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student correctly used the mole ratio. Now verify they know the final conversion to grams.",
+        "state": "Diagnosis",
+        "response": "How do you convert moles of NH3 to grams?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Multiply by molar mass. NH3 molar mass is 14+3=17 g/mol. So 2 mol × 17 = 34 g."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has solved the problem correctly. Move to synthesis to have them articulate the general procedure.",
+        "state": "Synthesis",
+        "response": "Nice. Can you summarize the steps you used to solve this?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "First, convert grams of reactant to moles using molar mass. Then use the balanced equation's mole ratio to find moles of product. Finally, convert moles of product to grams using its molar mass."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has clearly explained the stoichiometry process. Conversation can close warmly.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Supply and demand",
+    "problem": "Suppose the market for coffee beans is initially in equilibrium. A frost in Brazil reduces the supply of coffee beans, while a new study shows coffee has health benefits, increasing demand. What happens to the equilibrium price and quantity?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Price goes up because both shifts push it up. Quantity probably goes up too since demand increases."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student recognizes price rises but incorrectly assumes quantity rises. Need to diagnose understanding of individual shift effects.",
+        "state": "Diagnosis",
+        "response": "What happens to price and quantity when only supply shifts left?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Supply left raises price and raises quantity."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student misstates supply shift effect on quantity. Guide to correct direction before combining shifts.",
+        "state": "Support",
+        "response": "And when only demand shifts right?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Demand right raises price but lowers quantity."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student reverses demand shift effect on quantity. Provide a hint to self-correct.",
+        "state": "Support",
+        "response": "Does demand shifting right increase or decrease quantity demanded at each price?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, it increases quantity. So both shifts push price up, but quantity effects oppose."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student now sees opposing quantity effects. Check if they understand magnitude determines net change.",
+        "state": "Diagnosis",
+        "response": "If the shifts are different sizes, what determines the net quantity change?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "If supply shift larger, quantity rises."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly states direction of supply shift effect on quantity. Hint to recall supply shift reduces quantity.",
+        "state": "Support",
+        "response": "What about the direction of the supply shift effect on quantity?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Right, supply left reduces quantity. So larger supply shift means quantity falls."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identifies magnitude dependence and price direction. Ready to synthesize the general rule.",
+        "state": "Synthesis",
+        "response": "Can you state the general rule for simultaneous supply and demand shifts?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "When supply and demand shift in opposite directions for quantity, the net change depends on relative magnitudes. Price moves in the direction both shifts push it."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has articulated the correct rule in their own words. Conversation can close warmly.",
+        "state": "Closing",
+        "response": "Nice work! Want to try another?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "chemistry",
+    "topic": "Basic stoichiometry",
+    "problem": "For the reaction 2 Al(s) + 3 Cl2(g) → 2 AlCl3(s), you have 27.0 g of Al and 71.0 g of Cl2. Calculate the theoretical yield of AlCl3 in grams. If the actual yield is 100.0 g, what is the percent yield?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Okay, I'll start by converting the masses to moles. Aluminum's molar mass is 27 g/mol, so 27.0 g gives 1.00 mole of Al. For chlorine gas, the formula is Cl2, but I'll use the atomic mass of chlorine, 35.5 g/mol, so 71.0 g divided by 35.5 gives 2.00 moles of Cl. Now I have 1 mole Al and 2 moles Cl. The balanced equation shows 2 Al and 3 Cl2, but I have Cl atoms, not Cl2. I'm not sure how to proceed."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student correctly converted Al but used atomic Cl instead of Cl2, showing confusion about diatomic molecules. Need to diagnose their understanding of molecular vs. atomic molar masses.",
+        "state": "Diagnosis",
+        "response": "How many moles of Cl2 do you actually have? And once you have both reactants in moles, what does the balanced equation tell you about the ratio they react in?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Right, Cl2 molar mass is 71 g/mol, so 71.0 g is 1.00 mole of Cl2. Now I have 1 mole Al and 1 mole Cl2. The equation says 2 Al react with 3 Cl2. Since I have equal moles, they react in a 1:1 mole ratio? That would mean Al is limiting because its coefficient is 2 vs 3 for Cl2? I'm mixing up the ratio."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student now has correct moles but misinterprets stoichiometric ratio, thinking 1:1. Need to guide them to use coefficients to find required amounts.",
+        "state": "Support",
+        "response": "Good catch on the Cl2 moles. The coefficients give the mole ratio: 2 mol Al requires 3 mol Cl2. So for your 1 mol Al, how many moles of Cl2 would be needed? Compare that to the 1 mol Cl2 you have — which reactant runs out first?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Let's see: 1 mol Al needs 1.5 mol Cl2 (since 2 Al : 3 Cl2). I only have 1 mol Cl2, so Cl2 is limiting. Now for product: 3 Cl2 produce 2 AlCl3, so 1 mol Cl2 gives 2/3 mol AlCl3. Molar mass of AlCl3... Al is 27, Cl is 35.5, so AlCl3 = 27 + 35.5 = 62.5 g/mol? Wait, that's AlCl. AlCl3 should be 27 + 106.5 = 133.5 g/mol. Theoretical yield = (2/3) × 133.5 = 89.0 g."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student corrected their own molar mass slip and correctly calculated theoretical yield. Now need to guide percent yield calculation.",
+        "state": "Support",
+        "response": "The problem states an actual yield of 100.0 g. What percent yield does that give you?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Percent yield = (100.0 / 89.0) × 100% = 112%. That's over 100%, which can't happen. Maybe I identified the wrong limiting reagent? If Al were limiting, 1 mol Al gives 1 mol AlCl3 = 133.5 g, and percent yield would be 75%. That seems more reasonable. So perhaps Al is actually limiting?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student suggests Al might be limiting to avoid >100% yield, but that contradicts the mole ratio. Need to hint that percent yield >100% signals an error in data or calculation, not a reason to switch limiting reagent.",
+        "state": "Support",
+        "response": "A percent yield above 100% is a red flag — it means something's off. But the limiting reagent is determined by the mole ratio, not by making the percent yield look nice. Double-check: do you have enough Cl2 to react with all the Al? If not, Cl2 is definitely limiting. Could there be a mistake in the given actual yield, or in your theoretical yield calculation?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I rechecked: 1 mol Al needs 1.5 mol Cl2, I have 1 mol Cl2, so Cl2 is limiting. Theoretical yield stays 89.0 g. Actual yield 100.0 g gives 112%. That's impossible for a real reaction. Maybe the problem has a typo in the actual yield? Or maybe I'm supposed to report that the percent yield is 112% and note it's impossible? I'm not sure what the expected answer is."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student recognizes impossibility but is unsure how to proceed. Hint that they should present the calculated percent yield and comment on the anomaly, as sometimes problems include such traps.",
+        "state": "Support",
+        "response": "If the numbers give >100%, what would you report as your final answer?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "So I'd say: Limiting reagent is Cl2, theoretical yield of AlCl3 is 89.0 g, percent yield = 112%. Since percent yield cannot exceed 100%, this indicates an error in the reported actual yield or in the measurements. But wait, could the balanced equation be different? What if it's Al + Cl2 → AlCl3? Then the ratio is 1:1, both 1 mol, theoretical yield 133.5 g, percent yield 75%. That would make sense. But the problem gave 2 Al + 3 Cl2 → 2 AlCl3."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has worked through the stoichiometry, identified the limiting reagent, calculated theoretical yield, recognized the percent yield anomaly, and even considered an alternative equation. Now ask them to articulate the general method.",
+        "state": "Synthesis",
+        "response": "You've done a thorough job analyzing the problem and catching the inconsistency. Before we finish, can you summarize in your own words the step-by-step process for solving any limiting-reagent stoichiometry problem with percent yield, including how you verify which reactant is limiting?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "First, convert all reactant masses to moles using their correct molar masses. Then, use the balanced equation's coefficients to find the stoichiometric mole ratio. Divide each reactant's moles by its coefficient; the smallest quotient identifies the limiting reagent. Use the limiting reagent's moles and the product's stoichiometric coefficient to find moles of product. Convert product moles to grams for theoretical yield. Finally, percent yield = (actual yield / theoretical yield) × 100%. If percent yield exceeds 100%, there's an error in the data or calculations."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has clearly articulated the complete stoichiometric workflow and demonstrated critical thinking about the percent yield anomaly. The conversation can close positively.",
+        "state": "Closing",
+        "response": "Excellent summary — you've captured the whole process perfectly and showed great judgment on the percent yield issue. Well done! Ready to tackle another stoichiometry challenge?"
+      }
+    ]
   }
 ]

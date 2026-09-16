@@ -82,3 +82,51 @@
   expired: False
   failure_categories:
   none
+2026-09-16 16:08:34,337 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-16 16:09:21,111 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=13259 turns=14 path=data/Google_gemini-3-flash-preview/edw-set[2].json
+2026-09-16 16:10:21,112 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-16 16:10:57,561 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=10983 turns=14 path=data/Google_gemini-3-flash-preview/edw-set[2].json
+2026-09-16 16:11:57,564 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-16 16:12:25,137 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=8326 turns=16 path=data/Google_gemini-3-flash-preview/edw-set[2].json
+2026-09-16 16:13:25,137 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-16 16:13:54,721 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=7430 turns=12 path=data/Google_gemini-3-flash-preview/edw-set[2].json
+2026-09-16 16:14:54,723 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-16 16:15:22,687 INFO REJECTED_RESPONSE_SAVED provider=Google model=gemini-3-flash-preview path=data/rejected_responses/edw-Google_gemini-3-flash-preview.txt
+2026-09-16 16:15:22,687 ERROR JSON_INVALID provider=Google model=gemini-3-flash-preview reason=invalid JSON: Expecting ',' delimiter
+2026-09-16 16:16:22,694 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-16 16:17:11,158 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=12618 turns=12 path=data/Google_gemini-3-flash-preview/edw-set[2].json
+2026-09-16 16:18:11,165 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-16 16:18:40,470 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=8697 turns=12 path=data/Google_gemini-3-flash-preview/edw-set[2].json
+2026-09-16 16:19:40,477 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-16 16:20:15,419 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=11828 turns=14 path=data/Google_gemini-3-flash-preview/edw-set[2].json
+2026-09-16 16:21:15,430 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-16 16:21:59,247 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=11748 turns=16 path=data/Google_gemini-3-flash-preview/edw-set[2].json
+2026-09-16 16:22:59,251 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-16 16:23:40,684 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=10964 turns=12 path=data/Google_gemini-3-flash-preview/edw-set[2].json
+2026-09-16 16:24:40,691 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-16 16:26:21,657 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=7280 turns=12 path=data/Google_gemini-3-flash-preview/edw-set[2].json
+2026-09-16 16:27:21,665 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-16 16:27:46,323 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=6939 turns=12 path=data/Google_gemini-3-flash-preview/edw-set[2].json
+2026-09-16 16:28:46,325 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-16 16:29:03,292 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=6845 turns=12 path=data/Google_gemini-3-flash-preview/edw-set[2].json
+2026-09-16 16:30:03,300 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-16 16:30:45,454 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=11216 turns=12 path=data/Google_gemini-3-flash-preview/edw-set[2].json
+2026-09-16 16:31:45,462 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-16 16:32:32,861 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=7989 turns=14 path=data/Google_gemini-3-flash-preview/edw-set[2].json
+2026-09-16 16:33:32,869 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-16 16:34:20,085 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=12733 turns=14 path=data/Google_gemini-3-flash-preview/edw-set[2].json
+2026-09-16 16:35:20,092 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-16 16:35:55,459 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=9802 turns=14 path=data/Google_gemini-3-flash-preview/edw-set[3].json
+2026-09-16 16:36:55,474 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-09-16 16:37:31,251 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=6622 turns=14 path=data/Google_gemini-3-flash-preview/edw-set[3].json
+2026-09-16 16:38:31,259 INFO MODEL_SUMMARY
+  provider_model: Google / gemini-3-flash-preview
+  attempts: 18
+  saved: 17
+  failed: 1
+  accept_rate: 94.44%
+  average_tokens: 9722.29
+  turn_range: 12-16
+  expired: False
+  failure_categories:
+  invalid_json_syntax: 1

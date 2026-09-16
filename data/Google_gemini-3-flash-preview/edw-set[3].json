@@ -1,0 +1,200 @@
+[
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Number series",
+    "problem": "Find the next number in the series: 3, 6, 12, 24, ...",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I see 3, 6, 12, and 24. It's getting bigger, but I'm not sure how the numbers jump."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student acknowledges the increasing pattern but hasn't identified the operation. Diagnosis will help reveal their initial intuition.",
+        "state": "Diagnosis",
+        "response": "What is the relationship between the first two numbers, 3 and 6?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Maybe we just add 3? 3 plus 3 is 6."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student proposed an addition rule. I need to guide them to check if this rule is consistent.",
+        "state": "Diagnosis",
+        "response": "Addition is a good start. Does adding 3 work for the next number, 12?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "No, 6 plus 3 is 9. Maybe we just add 6 every time after the first one?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made a mistake by guessing a different addition rule. I will steer them toward multiplication.",
+        "state": "Support",
+        "response": "Adding 6 to 12 only equals 18. What about using a multiplication rule?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I don't really get how multiplication works for a series like this."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is expressing non-understanding. I'll provide a hint by focusing on the first transition's factor.",
+        "state": "Support",
+        "response": "To get from 3 to 6, what number do you multiply 3 by?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "3 times 2 is 6. So for the next one, is it 12 times 3 to get 24?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student made a calculation mistake and guessed the wrong multiplier. I will provide a corrective hint.",
+        "state": "Support",
+        "response": "Actually, 12 times 3 is 36. What is 12 multiplied by 2?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "12 times 2 is 24! So the next number is 24 times 2, which is 48."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student reached the correct answer. Now I need them to articulate the rule to ensure synthesis.",
+        "state": "Synthesis",
+        "response": "How would you describe the rule for this series in your own words?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Each number in the series is just the previous number multiplied by 2."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student successfully explained the concept, so it is time to wrap up the session.",
+        "state": "Closing",
+        "response": "Perfectly stated! You've got the hang of this. Want to try another series?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "chemistry",
+    "topic": "Periodic table trends",
+    "problem": "Between Sodium (Na) and Chlorine (Cl), which atom has a larger atomic radius? Explain why using periodic trends.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at Na and Cl. Since Chlorine has more electrons, wouldn't it be the larger atom?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student assumes more electrons equals more size. I need to check if they understand shell structure first.",
+        "state": "Diagnosis",
+        "response": "How many electron shells do both of these atoms actually have?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "They are both in the third row, so they both use three shells, right?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the number of shells. Now I'll probe for what else changes across the period.",
+        "state": "Diagnosis",
+        "response": "Exactly! If the number of shells is the same, what else is increasing as we go across?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "The atomic number is higher for Chlorine, but I don't really get why that matters."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is unsure about the atomic number's impact. I will provide a hint about nuclear charge.",
+        "state": "Support",
+        "response": "What does that atomic number tell us about the positive charge inside the nucleus?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "It means Chlorine has 17 protons in its nucleus, while Sodium only has 11."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Now that they know the proton counts, I need to guide them toward the concept of attraction.",
+        "state": "Support",
+        "response": "How would a stronger positive charge in the nucleus affect the pull on those three shells?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Maybe having more protons pushes the electrons further away because the nucleus is bigger?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student made a mistake regarding the direction of the force. I'll use a hint about basic electrostatic attraction.",
+        "state": "Support",
+        "response": "Since protons are positive and electrons are negative, do they push each other or pull together?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Oh, they pull! So 17 protons pull the electrons in tighter than 11 protons would."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has identified the correct mechanism. Now I want them to synthesize the general rule.",
+        "state": "Synthesis",
+        "response": "In your own words, why does the atomic radius decrease from left to right?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "With the same shells, more protons increase the nuclear pull, shrinking the atom's size across the row."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully synthesized and explained the concept in their own words.",
+        "state": "Closing",
+        "response": "That's exactly right! Great job. Ready to move on to the next trend?"
+      }
+    ]
+  }
+]

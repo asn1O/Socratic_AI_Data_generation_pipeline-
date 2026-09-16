@@ -1,0 +1,362 @@
+[
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Ethical dilemmas (trolley-problem style)",
+    "problem": "A driverless trolley is heading toward five workers on a track. You can pull a lever to divert it onto a side track, where it will hit one worker instead. Under utilitarian ethics, should you pull the lever?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know utilitarianism is about outcomes and doing good, but I'm not totally sure how to weigh saving five people against actively pulling a lever to hit one person."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student understands that utilitarianism concerns outcomes, but hesitates regarding active intervention. I will directly state how utilitarianism views choices and ask them to compare outcomes.",
+        "state": "Diagnosis",
+        "response": "Utilitarianism evaluates choices based on their net results rather than the act itself. How would you calculate and compare the total outcome of taking action versus doing nothing in this scenario?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "If I do nothing, five people die. If I pull the lever, one dies. I think pulling it minimizes deaths, but isn't actively causing harm worse than allowing natural harm?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student misapplies deontological concepts regarding active vs. passive harm. I will directly explain that utilitarianism does not make this distinction.",
+        "state": "Support",
+        "response": "Utilitarian ethics actually doesn't distinguish between actively causing harm and passively allowing harm to happen. Both actions are evaluated purely by counting the final lives saved and lost."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, okay! So if active vs passive doesn't matter, then we only care about the final math. Five deaths is worse than one death, so pulling the switch is better."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student grasped the math of the outcomes. I will directly explain how net utility operates here to solidify their understanding.",
+        "state": "Support",
+        "response": "That is correct. In utility calculations, saving four net lives maximizes total happiness and minimizes suffering. The option that results in fewer overall casualties is always preferred in this framework."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "So even though someone dies because of my action, it's still considered the morally right choice under utilitarianism because the final outcome has less suffering."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly resolved the dilemma using utilitarian logic. I will reinforce their conclusion and ask them to specify the decision criteria used.",
+        "state": "Support",
+        "response": "You've got it. The moral value comes entirely from reducing total net harm, not from whether you intervened. What specific factor did you use to decide which outcome was better?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I used the overall number of casualties. One person dying leads to less total suffering and loss than five people dying, so that outcome wins."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully solved the scenario. I will now ask them to synthesize the general rule of utilitarianism in their own words.",
+        "state": "Synthesis",
+        "response": "Exactly right. Now, based on everything we just discussed, how would you explain the core principle of utilitarian ethics in your own words to someone who hasn't studied it before?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Utilitarianism is an ethical framework where the right action is whatever produces the best overall outcome, specifically by maximizing good results or minimizing total harm for the greatest number of people."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student provided an accurate, clear explanation of the core principle. The topic is fully understood, so I will close the session warmly.",
+        "state": "Closing",
+        "response": "That's a fantastic definition! You broke down the concept clearly and applied it really well. Ready to tackle another ethical dilemma?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "physics",
+    "topic": "Buoyancy and density",
+    "problem": "A solid block with a volume of 100 cm³ and mass of 80 g is placed in water (density 1.0 g/cm³). Will the block float or sink, and what percentage of its volume will be submerged under water?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "To figure out if the block floats or sinks, I know I need to look at its density compared to the density of water. The block's density is its mass divided by its volume, so 80 g / 100 cm³ = 0.8 g/cm³. Since 0.8 is less than 1.0, the block will definitely float. But I'm trying to calculate the submerged percentage, and I'm setting up the ratio of densities."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student correctly calculated the block's density and determined that it floats. To probe their understanding of how density relates to submerged volume, I should ask an open-ended question about force equilibrium.",
+        "state": "Diagnosis",
+        "response": "That is a great start with calculating the block's overall density! If the block is floating peacefully in equilibrium on the surface, what can you say about the relationship between the downward gravitational force acting on the block and the upward buoyant force exerted by the water on the submerged portion?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Right, since it's floating in equilibrium, those two forces must be equal. Archimedes' principle says the buoyant force equals the weight of the fluid displaced, so the displaced water mass equals the block's mass. But when I set up the fraction of submerged volume, wouldn't it be the fluid density divided by the object density, which gives 1.0 / 0.8 = 1.25, meaning 125% is submerged?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student made an explicit edge-case error by inverting the density ratio and getting 125% submerged. I need to give a indirect hint prompting them to reflect on the physical meaning of a fraction over 100%.",
+        "state": "Support",
+        "response": "If the submerged volume were 125% of the block's total volume, what would that physically imply about where the block sits relative to the water line, and how might you rearrange your volume equality equation using mass equals density times volume to double-check that ratio?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Ah, wait, 125% submerged makes no sense because an object can't submerged more than 100% of its own volume! Let me re-derive it: mass of block equals mass of displaced water. So density_block × volume_total = density_water × volume_submerged. Rearranging for the ratio volume_submerged / volume_total, I get density_block / density_water = 0.8 / 1.0 = 0.8, which is 80% submerged."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student self-corrected mistake #1 and found the correct submerged percentage (80%). Now I will guide them to reflect on the force magnitude to test another aspect of buoyant force in equilibrium.",
+        "state": "Support",
+        "response": "That derivation makes total sense! Now, if someone asks you what the actual magnitude of the buoyant force acting on this floating block is in terms of force equivalent to grams of water weight, how would you calculate that force using the block's total volume?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Since the total volume of the block is 100 cm³, if it's placed into the water, the buoyant force push would equal the weight of 100 cm³ of water, which is 100 grams-force, because buoyancy depends on the total size of the submerged object in the fluid."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student made mistake #2 by assuming buoyant force depends on total volume rather than submerged volume while floating. I need to hint at force unbalance if buoyancy were 100 g-force.",
+        "state": "Support",
+        "response": "If the upward buoyant force were truly equal to 100 grams-force while the block's downward gravitational force is only 80 grams-force, what net force would be acting on the block, and how would that unbalanced force affect its motion instead of keeping it in static equilibrium?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, right! An upward force of 100 g against a downward weight of 80 g would produce a net upward force of 20 g, which would accelerate the block upward out of the water! In equilibrium, the upward buoyant force must exactly balance the downward gravitational force, so the buoyant force is actually 80 grams-force, matching the displaced 80 cm³ of water."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student corrected mistake #2 and fully understands both force balance and submerged fraction. Now I move to Synthesis so the student articulates the underlying principles in their own words.",
+        "state": "Synthesis",
+        "response": "That is a brilliant realization about how equilibrium dictates the buoyant force! Now that you have worked through both the submerged fraction and the force balance, how would you summarize the general rule in your own words for determining whether an object floats, how much of it is submerged, and what buoyant force acts on it?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "To summarize, whether an object floats depends on its average density relative to the fluid's density—if the object is less dense, it floats. For a floating object, the upward buoyant force must exactly equal the object's weight due to static equilibrium. Because the buoyant force also equals the weight of the displaced fluid, the fraction of the object's volume that is submerged simply equals the ratio of the object's density to the fluid's density."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student provided a complete, accurate synthesis of the principles involved. The dialogue is complete and ready to close.",
+        "state": "Closing",
+        "response": "Spot on! That was a clear, comprehensive explanation of floating objects and force equilibrium. Excellent job working through those edge cases today—you've really mastered this concept! Would you like to move on to another physics problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Argument structure: premises and conclusions",
+    "problem": "Read the following passage carefully: 'City Council ought to increase funding for public transit this year. Congestion on main roads has increased by 30% over the last decade, leading to severe delays for commuters. Some citizens argue that road expansion is better, but building more lanes actually increases traffic in the long run. Since public transit reduces the total number of cars on the road, expanding transit is the most effective way to ease congestion.' Analyze the argument structure by identifying the main conclusion, the sub-conclusion (intermediate conclusion), and the supporting premises.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think I've got the general idea. The main conclusion is definitely the last sentence, 'expanding transit is the most effective way to ease congestion,' because arguments always put the big claim at the end. For premises, we have the congestion increasing by 30%, and also 'some citizens argue that road expansion is better' serves as a premise showing people want solutions."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has incorrectly identified the main conclusion and mistook a counterargument for a premise. Because socratic_level is low, I will explain directly how counterarguments differ from premises before asking them to re-evaluate.",
+        "state": "Diagnosis",
+        "response": "A premise must actively support the author's own stance, whereas mentioning what opposing citizens think is actually introducing a counterargument that the author intends to refute. When an author mentions an opponent's view, it doesn't serve as evidence for their own claim. Looking closely at that sentence about what some citizens argue, why do you think the author included it if it isn't supporting their main point?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, right, that makes sense—they're bringing up the opponent's side just to knock it down. But I still think the final sentence about transit being the most effective way to ease congestion is the ultimate main conclusion. The first sentence, 'City Council ought to increase funding,' feels like just an introductory background statement to get the topic started before the real argument begins."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student corrected their view on the counterargument but repeated the misconception that the last sentence must be the main conclusion. I will directly explain where policy conclusions often sit in argument structures.",
+        "state": "Support",
+        "response": "In many policy arguments, the main conclusion actually appears in the very first sentence as a specific action recommendation, while the final sentence serves as a sub-conclusion supporting it. The recommendation that the City Council should spend money is the ultimate goal of the passage. How does proving that transit eases congestion connect back to that specific recommendation about council funding?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Okay, I see it now. The main conclusion is that the City Council ought to increase funding. But then the premise directly supporting that is just the 30% congestion increase, right? Since congestion is up by 30%, that immediately proves the council has to give transit more money this year, and the rest is just extra detail."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student identified the main conclusion but made a procedural error by skipping the sub-conclusion entirely and connecting raw data straight to the final claim. I will explain directly how sub-conclusions function as logical stepping stones.",
+        "state": "Support",
+        "response": "Raw data like a 30% congestion increase doesn't directly prove a specific spending policy without a middle step; it first proves there is a congestion problem. That is why arguments use intermediate conclusions—or sub-conclusions—as logical stepping stones between evidence and the final recommendation. Where does the claim about transit being the most effective way to ease congestion fit between the traffic data and the funding proposal?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Ah, so it's a chain! The 30% congestion increase is evidence showing we have a problem. Then 'expanding transit is the most effective way to ease congestion' acts as a sub-conclusion supported by that evidence and the point about cars. Finally, that sub-conclusion gives the rationale for the main conclusion, which is that the council should fund transit."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student successfully recognized the chain structure connecting evidence to sub-conclusion to main conclusion. I will directly affirm this structure and guide them to categorize the remaining supporting statements.",
+        "state": "Support",
+        "response": "You mapped out that primary chain perfectly. Authors also use secondary premises to defend their sub-conclusion against alternatives, such as explaining why building more lanes fails. Now, look at 'building more lanes actually increases traffic' and 'public transit reduces the total number of cars.' How do those two specific premises function in supporting that intermediate conclusion?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Well, I think 'building more lanes increases traffic' is definitely the main premise supporting the sub-conclusion, because it proves roads don't work. The statement that public transit reduces cars on the road seems kind of redundant, so I'd say it's just a restatement of the main point rather than an actual independent premise."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student asserted an incorrect claim by dismissing a positive premise as redundant while prioritizing the refutation. I will directly explain the difference between positive evidence and refutation before having them put the whole structure together.",
+        "state": "Diagnosis",
+        "response": "Showing why an alternative fails is indirect support, but stating that transit reduces the total number of cars provides direct, positive evidence for why transit actually works. Both statements are distinct premises that work together to prove the sub-conclusion. Now that we have worked through all these pieces, how would you describe the overall structure of this entire argument?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Okay, putting it all together: the main conclusion is that City Council should increase transit funding. The sub-conclusion supporting it is that transit is the best way to ease congestion. That sub-conclusion is supported by three premises: the 30% congestion stat showing the problem, the lane-expansion point ruling out roads, and the car-reduction point showing transit works."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified all elements of the argument. I will affirm their correct answer directly and move to Synthesis so they can state the general rule.",
+        "state": "Synthesis",
+        "response": "That is a complete and accurate breakdown of the entire passage. You distinguished the main recommendation from the intermediate step and grouped all the supporting premises correctly. In your own words, what is the general rule for distinguishing a main conclusion, a sub-conclusion, and supporting premises in an argument?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The main conclusion is the ultimate point or action the author wants you to accept, which can be at the beginning or end. A sub-conclusion is an intermediate claim that is supported by premises, but then turns around to support the main conclusion. Premises are the basic evidence, reasons, or counterargument refutations that directly support those conclusions without needing further proof themselves."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the concept in their own words. The pedagogical goal is complete, so I will close the conversation warmly.",
+        "state": "Closing",
+        "response": "Spot on! You've mastered how arguments chain claims and premises together. Excellent work working through that—ready to move on to the next problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Opportunity cost",
+    "problem": "Sarah has 2 free hours tonight. She can either go to a concert with a friend or study for her economics exam. If she chooses to go to the concert, what is her opportunity cost?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm not really sure about this topic. Does opportunity cost mean how much money she has to spend to buy the concert ticket?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is confusing opportunity cost with plain monetary cost. I need to ask a probing question with a gentle hint to expand their definition of cost beyond money.",
+        "state": "Diagnosis",
+        "response": "That's a very common thought! When we talk about cost in everyday life, we usually think of money, but opportunity cost is a bit different. What else is Sarah giving up besides money when she makes her choice?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, okay. So I guess the opportunity cost is just the ticket price plus the time she spends at the concert."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student explicitly asserted a wrong claim by including what Sarah chose to do rather than what she sacrificed. I need to steer them toward the missed alternative.",
+        "state": "Support",
+        "response": "Not quite. Remember, opportunity cost focuses on the opportunity you missed out on by making a choice. Since she went to the concert, what was the next best option she had to give up?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I get that she gave up studying, but I don't really get what that means in terms of a cost if no money changed hands."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student expresses non-understanding about non-monetary costs. I will briefly explain that lost benefits count as costs and prompt them to identify the benefit she gave up.",
+        "state": "Support",
+        "response": "In economics, a cost isn't just cash; it can also be a lost benefit or spent time. Since time is limited, doing one thing prevents you from doing another. What specific benefit did Sarah miss out on here?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, so her opportunity cost must be completely failing the exam and also losing twenty dollars on a textbook!"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student made a second explicit mistake by bringing in extreme external assumptions not in the problem. I will narrow their attention back to the specific choices listed.",
+        "state": "Support",
+        "response": "Let me narrow that down for you. We don't need to assume she fails or loses textbook money. Looking strictly at her options, what single alternative activity did she sacrifice to attend the concert?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Ah, I see now. So the alternative option that she sacrificed was just studying for her economics exam."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the opportunity cost for this scenario. Now I need to prompt them to synthesize the general rule in their own words.",
+        "state": "Synthesis",
+        "response": "Spot on! Studying for the exam was her sacrificed alternative. Now, to make sure you've got this concept down, how would you define 'opportunity cost' in your own words to someone who never heard of it?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Opportunity cost is whatever value or next best alternative you give up when you choose to do one thing instead of another."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student successfully explained the concept of opportunity cost in their own words. I will wrap up the session warmly.",
+        "state": "Closing",
+        "response": "That is a perfect definition! You nailed it. Excellent work talking through that concept today—ready to try another problem?"
+      }
+    ]
+  }
+]

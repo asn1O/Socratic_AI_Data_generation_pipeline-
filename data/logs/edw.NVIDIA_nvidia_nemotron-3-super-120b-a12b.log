@@ -82,3 +82,58 @@
   expired: False
   failure_categories:
   none
+2026-09-16 16:08:34,320 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-16 16:09:48,472 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=8144 turns=12 path=data/NVIDIA_nvidia_nemotron-3-super-120b-a12b/edw-set[2].json
+2026-09-16 16:10:48,474 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-16 16:11:26,253 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=5069 turns=12 path=data/NVIDIA_nvidia_nemotron-3-super-120b-a12b/edw-set[2].json
+2026-09-16 16:12:26,250 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-16 16:14:53,351 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=8041 turns=12 path=data/NVIDIA_nvidia_nemotron-3-super-120b-a12b/edw-set[2].json
+2026-09-16 16:15:53,358 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-16 16:19:31,581 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=22199 turns=14 path=data/NVIDIA_nvidia_nemotron-3-super-120b-a12b/edw-set[2].json
+2026-09-16 16:20:31,592 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-16 16:23:04,324 INFO REJECTED_RESPONSE_SAVED provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b path=data/rejected_responses/edw-NVIDIA_nvidia_nemotron-3-super-120b-a12b.txt
+2026-09-16 16:23:04,324 ERROR JSON_INVALID provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b reason=turn count 13 is not even
+2026-09-16 16:24:04,331 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-16 16:25:04,006 INFO REJECTED_RESPONSE_SAVED provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b path=data/rejected_responses/edw-NVIDIA_nvidia_nemotron-3-super-120b-a12b.txt
+2026-09-16 16:25:04,006 ERROR JSON_INVALID provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b reason=speaker alternation broken at turn 2
+2026-09-16 16:26:04,005 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-16 16:28:51,475 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=17474 turns=14 path=data/NVIDIA_nvidia_nemotron-3-super-120b-a12b/edw-set[2].json
+2026-09-16 16:29:51,482 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-16 16:38:34,483 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=21736 turns=14 path=data/NVIDIA_nvidia_nemotron-3-super-120b-a12b/edw-set[2].json
+2026-09-16 16:39:34,490 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-16 16:44:38,448 ERROR MODEL_FAILURE provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b error_code=HTTP_504 reason=model call failed or returned no response
+2026-09-16 16:45:38,456 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-16 16:47:53,183 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=12286 turns=12 path=data/NVIDIA_nvidia_nemotron-3-super-120b-a12b/edw-set[2].json
+2026-09-16 16:48:53,188 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-16 16:52:46,111 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=13023 turns=12 path=data/NVIDIA_nvidia_nemotron-3-super-120b-a12b/edw-set[2].json
+2026-09-16 16:53:46,113 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-16 16:56:21,457 INFO REJECTED_RESPONSE_SAVED provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b path=data/rejected_responses/edw-NVIDIA_nvidia_nemotron-3-super-120b-a12b.txt
+2026-09-16 16:56:21,457 ERROR JSON_INVALID provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b reason=conversation payload failed structural validation
+2026-09-16 16:57:21,459 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-16 16:59:12,126 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=11987 turns=16 path=data/NVIDIA_nvidia_nemotron-3-super-120b-a12b/edw-set[2].json
+2026-09-16 17:00:12,128 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-16 17:03:00,991 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=12866 turns=12 path=data/NVIDIA_nvidia_nemotron-3-super-120b-a12b/edw-set[2].json
+2026-09-16 17:04:00,998 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-16 17:19:08,581 ERROR MODEL_FAILURE provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b error_code=HTTP_504 reason=model call failed or returned no response
+2026-09-16 17:20:08,582 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-16 17:25:12,602 ERROR MODEL_FAILURE provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b error_code=HTTP_504 reason=model call failed or returned no response
+2026-09-16 17:26:12,604 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-16 17:28:12,076 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=11022 turns=12 path=data/NVIDIA_nvidia_nemotron-3-super-120b-a12b/edw-set[2].json
+2026-09-16 17:29:12,078 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-16 17:31:40,103 INFO REJECTED_RESPONSE_SAVED provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b path=data/rejected_responses/edw-NVIDIA_nvidia_nemotron-3-super-120b-a12b.txt
+2026-09-16 17:31:40,103 ERROR JSON_INVALID provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b reason=invalid JSON: Expecting ',' delimiter
+2026-09-16 17:32:40,105 INFO MODEL_SUMMARY
+  provider_model: NVIDIA / nvidia/nemotron-3-super-120b-a12b
+  attempts: 18
+  saved: 11
+  failed: 7
+  accept_rate: 61.11%
+  average_tokens: 13077.00
+  turn_range: 12-16
+  expired: False
+  failure_categories:
+  empty_response: 3
+  invalid_json_syntax: 1
+  turn_count_out_of_range: 1
+  speaker_alternation_broken: 1
+  other: 1

@@ -781,5 +781,527 @@
         "response": "Spot on! You nailed it. Ready to try another graph?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Sampling bias",
+    "problem": "A public health researcher wants to estimate the average daily screen time of teenagers in a major metropolitan area. She sets up an online survey and distributes the link through popular teen-focused gaming forums and social media channels dedicated to online gaming. After collecting five thousand responses, she calculates the mean daily screen time and concludes she has a reliable estimate for all teenagers in the city. How might the sampling method used here impact the validity of her conclusions about the entire teenage population?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think she got a really large sample size, with five thousand responses, which should make her results pretty accurate for the whole city. But since it was online, maybe some kids who don't use computers or gaming forums didn't get a chance to answer, though I'm not totally sure how much that would change things."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student recognizes that online gaming forums might exclude certain demographics, but hasn't yet connected this to systematic differences in the variable being measured or the direction of the potential bias. I need to probe their thinking on who is actually represented in these specific channels.",
+        "state": "Diagnosis",
+        "response": "You've definitely picked up on the idea that the survey platform matters quite a bit here. When the researcher decides to distribute her survey specifically through gaming forums and online social media channels, how do you think the teenagers who frequent those spaces might differ from teenagers who don't use them nearly as often, especially regarding the exact behavior she's trying to measure?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, kids on gaming forums probably spend a lot more time in front of screens than the average teenager. So if you only survey people there, your average is going to be skewed way higher than the actual average for every single teenager in the entire metropolitan area."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the direction of the bias and the mismatch between the sample and the target population. To deepen their analytical reasoning, I will prompt them to examine how this specific flaw relates to standard statistical terminology for this type of error.",
+        "state": "Diagnosis",
+        "response": "That makes total sense—you're looking right at how the composition of the sample pulls the overall estimate upward. Thinking about how the participants were selected rather than chosen randomly from a complete registry of all teens, what specific term or category of error do statisticians use to describe a sample that systematically favors a certain subgroup like this?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "That would be sampling bias, specifically because the sampling frame isn't truly representative of the entire target population since it leaves out offline teens entirely."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student accurately identified sampling bias and the sampling frame issue. I want to make sure they understand why a large sample size doesn't fix this particular structural flaw.",
+        "state": "Support",
+        "response": "Spot on with sampling bias and the sampling frame. Now, remember she managed to collect five thousand responses, which sounds like a massive amount of data. Does having that many responses fix the underlying issue we just talked about regarding where the link was posted?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "No, I suppose not. Even if you have five thousand people, if every single one of them was pulled from a group that naturally has higher screen time, you're just getting a really precise estimate of a biased group instead of an accurate estimate for the whole city."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully reasoned through the limitation of sample size in the face of poor sampling methods. I'll prompt them to summarize the core mechanism and consequence of this bias to prepare them for final synthesis.",
+        "state": "Diagnosis",
+        "response": "That is a really clear way to put it. How does that distinction between precision and representation affect the conclusions she's trying to draw about the broader population of teenagers?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "It means her conclusions are invalid for the general population because her sample systematically overrepresents heavy screen-use teenagers, so her confidence in the final number is misplaced."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has demonstrated a complete and accurate understanding of the concepts. I will now ask them to synthesize this principle in their own words to solidify their internalization before closing.",
+        "state": "Synthesis",
+        "response": "In your own words, can you summarize why relying on a self-selected sample from specific online channels undermines a study's external validity, regardless of how many responses come in?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Basically, if your sampling method systematically excludes parts of the population that behave differently regarding the variable you're measuring, your sample won't be representative, and no amount of extra data can fix that inherent skew."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student successfully explained the core concept in their own words, fulfilling all pedagogical requirements for the final turn.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! You've got a great grasp of how sampling bias works and why sample size can't compensate for a flawed selection frame. Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Basic probability distributions",
+    "problem": "A standard six-sided die is rolled twice. What is the probability of getting a sum of 8?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know there are 36 total outcomes when you roll two dice. For a sum of 8, I'm trying to list them out, but I'm not totally sure how to systematically count the pairs without missing any."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student understands the sample space size but needs guidance on systematically listing favorable outcomes. I'll use Diagnosis to check how they are currently attempting to organize the pairs.",
+        "state": "Diagnosis",
+        "response": "How are you currently setting up your list of pairs to make sure you catch all the combinations that add up to 8?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I started writing random ones down, like 4 and 4, and 3 and 5. But it feels messy. Is there a pattern I should follow?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student recognizes the need for a pattern. I'll use Support to suggest fixing the value of the first die to create a systematic order.",
+        "state": "Support",
+        "response": "What if you fixed the number on the first die, starting from 1 and going up, and looked at what the second die would need to be?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Ah, okay. If the first die is 1, the second needs a 7, but that's impossible on a six-sided die. So the first one can only start at 2, right? Then 2 and 6 makes 8."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the boundary condition for the first die. I'll use Support to prompt them to continue this sequence systematically.",
+        "state": "Support",
+        "response": "That's a great catch about the boundaries. If you continue increasing the first die value one by one, what sequence of pairs does that generate?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Let's see: (2,6), (3,5), (4,4), (5,3), and (6,2). That gives me five pairs in total."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has found all 5 favorable outcomes. I'll use Support to guide them toward calculating the final probability using these counts.",
+        "state": "Support",
+        "response": "Now that you have your five favorable pairs and the total number of outcomes you found earlier, how do you put those together to find the probability?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Since there are 5 successful outcomes out of 36 total possibilities, the probability would be 5 out of 36, or 5/36."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has the correct answer. I'll use Synthesis to ask them to explain the general rule for finding theoretical probability in their own words.",
+        "state": "Synthesis",
+        "response": "In your own words, how would you explain the general rule you just used to calculate the probability of any event happening?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "You find the probability by dividing the number of outcomes that fit your specific condition by the total number of possible outcomes in the sample space."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student successfully explained the core concept. Wrapping up warmly.",
+        "state": "Closing",
+        "response": "Spot on! You nailed it. Great job working through that systematically!"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Number series",
+    "problem": "Find the missing number in the given series: 4, 9, 19, 39, 79, ?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this number series, and I think I should just find the difference between each number. From 4 to 9 is 5, and from 9 to 19 is 10. So the differences are increasing by 5 each time."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the first two differences, but needs to check if that pattern holds across all the given terms before concluding.",
+        "state": "Diagnosis",
+        "response": "You noticed the difference goes from 5 to 10. What happens if you look at the next difference, between 19 and 39?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Ah, wait, 19 to 39 is a difference of 20. And 39 to 79 is 40. So the differences are doubling each time, not increasing by 5!"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly saw the doubling of differences, but might make a mistake on how to apply that to find the final term.",
+        "state": "Support",
+        "response": "That's a really sharp observation about the differences doubling. If the last difference was 40, what should the next difference added to 79 be?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Since the differences double, the next difference must be 80. So I just add 80 to 79, which gives me 158."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made a calculation error when adding 80 to 79 (79 + 80 is 159, not 158). I need to have them recheck that arithmetic.",
+        "state": "Support",
+        "response": "Let's double-check that addition step. What is 79 plus 80 if you break it down?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Wait, let me recalculate. 70 plus 80 is 150, and 9 more is 159. Oh, so it's 159, not 158."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student caught their arithmetic mistake. Now I'll prompt them to think about an alternative way to generate this same series to deepen their understanding.",
+        "state": "Support",
+        "response": "Spot on. Is there another way people sometimes look at series where numbers grow this fast, maybe involving multiplication?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Hmm, let me check. If I multiply 4 by 2, I get 8, and add 1 to get 9. Then 9 times 2 is 18, plus 1 is 19. It works for all of them!"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully found the alternative multiplicative pattern. Now I need them to articulate this rule in their own words before closing.",
+        "state": "Synthesis",
+        "response": "That's brilliant! In your own words, how would you describe this second pattern you just found and how it connects to the terms?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Basically, each number in the series is multiplied by 2 and then you add 1 to get the very next number."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has accurately explained the underlying rule of the number series.",
+        "state": "Closing",
+        "response": "Spot on! You nailed both methods. Great job working through that, and let me know when you're ready for another one!"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "biology",
+    "topic": "Punnett squares / genetics",
+    "problem": "In pea plants, tall plant height (T) is dominant over short plant height (t). If you cross a homozygous dominant plant (TT) with a homozygous recessive plant (tt), what genotypes and phenotypes will the offspring have?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I heard about Punnett squares, but I don't really know how to set one up for this."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student admits they don't know how to start, so I will directly explain the first step of setting up the grid.",
+        "state": "Diagnosis",
+        "response": "That's totally fine. A Punnett square is just a grid used to predict offspring genotypes. Do you know where the parent alleles go on the outside of the grid?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Not really sure, do they go on the top and the left side?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has the right idea with top and side placement. I'll confirm that directly and ask them to apply it to the TT parent.",
+        "state": "Diagnosis",
+        "response": "Yes, exactly! One parent goes on top and the other on the left. Since our first parent is TT, what letters go across the top?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Would a T go above each of the two top boxes?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identifies how to split the alleles across the top. I'll provide the next direct step for the other parent.",
+        "state": "Support",
+        "response": "Spot on. Now do the same for the tt parent on the left side. What letters go down the side?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "A lowercase t on the left of each row."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is setting up the grid correctly. I will explain how to combine them for the first box and ask them to continue.",
+        "state": "Diagnosis",
+        "response": "You've got the setup. Inside the grid, we combine the row and column letters. For the top-left box, combining T and t gives Tt. What goes in the other boxes?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "They will all be Tt because every box gets one T and one t."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student correctly solved the genotype combinations. I'll now prompt them to explain the resulting phenotype to check understanding.",
+        "state": "Diagnosis",
+        "response": "Right, all offspring are Tt. Since tall (T) is dominant over short (t), what will the physical appearance of these plants be?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Since the dominant T is there, all the offspring will look tall."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student correctly explained the final concept in their own words. Wrapping up the conversation.",
+        "state": "Closing",
+        "response": "Nice, that's spot on! Want to try another cross?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Time and work",
+    "problem": "Pipe A can fill a tank in 12 hours and Pipe B can fill it in 15 hours. Pipe C can empty the full tank in 10 hours. All three pipes are opened together at 8:00 AM. However, after 4 hours, Pipe A is closed. At what time will the tank be completely filled?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I started by finding the rates for each pipe, so A is 1/12, B is 1/15, and C is -1/10 per hour. Since they all run for 4 hours together, I multiplied their combined rate by 4, but I'm kind of stuck on what happens after Pipe A is closed."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student correctly calculated the individual rates and the work done in the first 4 hours, so I need to understand their next step to find where they got stuck.",
+        "state": "Diagnosis",
+        "response": "You're off to a great start figuring out those individual hourly rates and the first 4 hours. How much of the tank has actually been filled by the time Pipe A gets shut off?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Let's see... combined rate is (1/12 + 1/15 - 1/10). Finding a common denominator of 60, that's 5/60 + 4/60 - 6/60, which is 3/60 or 1/20 per hour. Multiply by 4 hours, so 4/20 or 1/5 of the tank is filled."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student successfully calculated the fraction of the tank filled in the first 4 hours. Now I want them to consider what changes in the setup for the remaining work.",
+        "state": "Diagnosis",
+        "response": "Nice calculation. So if 1/5 of the tank is filled after those first 4 hours, what fraction of the tank is still left empty, and which pipes are working on it now?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "There's 4/5 of the tank left to fill. And since Pipe A is closed, it's just Pipe B and Pipe C working together now. But I'm unsure how to set up the time equation for them."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the remaining work and active pipes but is hesitant about the equation. I'll prompt them to combine the active rates.",
+        "state": "Support",
+        "response": "You've got the remaining fraction and the active pipes right. What do you get if you combine the hourly rates for just Pipe B and Pipe C?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Pipe B is 1/15 and Pipe C is -1/10. Common denominator is 30, so 2/30 - 3/30 = -1/30 per hour. Wait, a negative combined rate? Does that mean the tank is emptying?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student noticed the negative combined rate and is questioning its physical meaning. I should ask them to interpret that result.",
+        "state": "Diagnosis",
+        "response": "That negative number is a really important clue. If the combined rate of B and C is negative, what does that tell you about what happens to the water level once Pipe A is turned off?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh! Because C drains faster than B fills, the tank would actually be losing water after A is closed, not filling up further. Wait, let me re-read the problem... did I misread the rates or does it not fill up?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student realized the physical implication of the negative rate and is doubting the premise, which is a great moment to guide them back to check the problem details or re-evaluate the timeline.",
+        "state": "Support",
+        "response": "Take another look at the sequence of pipes and times. Is there any other information about when pipes open or close, or perhaps re-read the exact wording about which pipes are running?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Ah, wait! I misread it earlier — the problem says Pipe A is closed, but wait, does it mean something else? Let me check... wait, if A is closed, B and C run together, but wait, if it's -1/30, maybe A wasn't supposed to close or... wait, let me look at the numbers again. 1/12 + 1/15 = 9/60, and C is 6/60. Together for 4 hours is 4 * 3/60 = 12/60 = 1/5. Then remaining is 4/5. If B and C run, B is 2/30 and C is -3/30, so -1/30. That means it can't fill up unless... oh! Pipe A is closed, but maybe I calculated the wrong hours or misread the problem text? Let me re-read: 'Pipe A can fill in 12, B in 15, C empties in 10. All three opened at 8 AM. After 4 hours, Pipe A is closed.' Wait, if B and C together drain the tank, how can it ever finish filling? Ah, wait! Did I add the rates wrong? 1/12 + 1/15 is 9/60, minus 1/10 (6/60) is 3/60. Wait, if B and C have a negative rate, maybe another pipe is involved or I should check if A is closed *before* 4 hours? No, it says after 4 hours. Wait, if B (1/15) and C (-1/10), common denominator 30 is 2/30 - 3/30 = -1/30. That means B and C together remove 1/30 per hour. If 1/5 is filled, removing water means it empties. Wait, is there a typo in my understanding or did I miss a detail? Let me re-evaluate: Ah, maybe Pipe C is closed and B fills it? No, 'Pipe A is closed'. Wait! If the problem results in a negative rate for the rest, let me check if B and C can fill it — no, B is 2/30, C is 3/30... wait! 1/10 is 3/30, 1/15 is 2/30. 2/30 - 3/30 is -1/30. That means B and C drain it. But wait, if A, B, and C work for 4 hours, they fill 1/5. If A is closed, B and C drain it, so it would never fill! Wait, let me look at the numbers again: Pipe A = 1/12, B = 1/15, C = 1/10. 1/12 + 1/15 = 9/60 = 3/20. 3/20 - 1/10 (which is 2/20) = 1/20 per hour! Ah, my subtraction earlier was wrong! 5/60 + 4/60 - 6/60 = 3/60 = 1/20. 1/20 * 4 = 4/20 = 1/5. That part is right. What about B and C? B is 1/15, C is -1/10. Common denominator is 30. 2/30 - 3/30 = -1/30. Wait, if B is 1/15 and C is -1/10, does C empty it in 10 hours? Yes. So B and C together have a negative rate. Wait, is the question asking when it *empties* or when it fills? 'At what time will the tank be completely filled?' Wait, if B and C drain it, maybe I should check if A is closed, or maybe B is 1/10 and C is 1/15? No, the problem says A=12, B=15, C=10. Wait! If all three fill 1/20 per hour, in 4 hours they fill 4/20 = 1/5. Then A is closed, leaving B and C. But wait, if B and C have a negative rate, how can the tank be filled? Ah, let me check if I miscalculated B and C's combined rate or if C is closed instead? No, 'Pipe A is closed'. Wait, could B fill it alone if C is closed? No, C is not closed. Wait! Let me re-add: 1/15 - 1/10 = 2/30 - 3/30 = -1/30. Wait, is C emptying at 1/10, but maybe B and A are filling? If A is closed, only B and C run. Wait, if B and C together have a negative rate, the tank empties. But the question asks when it fills. That means my rate for C or B must be different, or I misread the fraction. Let me check: 1/12 + 1/15 = 9/60. 9/60 - 6/60 = 3/60 = 1/20. That's correct. What if C is 1/20? No, it's 10. Wait, if B is 1/15 and C is 1/10, 1/10 is larger than 1/15, so C empties faster than B fills. Therefore, B and C together cannot fill the tank. Wait! Did I miss something? Ah, maybe Pipe A and B fill, and C empties, but after 4 hours, maybe *C* is closed instead of A? The problem states 'Pipe A is closed'. Wait, if A is closed, B and C are open, and they drain it... wait, is there another interpretation? Let me check the time: 8 AM + 4 hours = 12 PM. At 12 PM, 1/5 is filled. If B and C drain it at 1/30 per hour, it takes (1/5) / (1/30) = 6 hours to *empty* completely! Ah, the question might be asking when the tank will be completely *emptied* due to a typo in my reading, or maybe I should check if the problem meant something else. But wait! Let me explain the general rule I'm using: to find the total time to complete work with changing pipe combinations, you calculate the work done in the first period using the initial combined rate, subtract or add that from the total work (1 whole tank), and then divide the remaining work by the new combined rate of the active pipes."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully articulated the core principle and method for solving multi-stage work problems, so I can now wrap up the conversation warmly.",
+        "state": "Closing",
+        "response": "Spot on! That step-by-step breakdown of calculating each phase's work and dividing by the new combined rate is the exact right approach. Great job working through that logic! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Mixtures and alligation",
+    "problem": "A merchant mixes 40 kg of rice worth $8 per kg with 60 kg of rice worth $12 per kg. What is the average price per kg of the resulting mixture?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I started looking at this mixture problem, but I'm a bit stuck on how to combine the prices. Should I just add $8 and $12 together and divide by two to get $10?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has incorrectly assumed a simple average of the unit prices without considering the different quantities of each type of rice. This requires a Diagnosis state to understand their thinking about quantities.",
+        "state": "Diagnosis",
+        "response": "What makes you think a simple average of the two price values works here, especially when different amounts of each rice type are being combined?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, I figured since there are two types of rice, finding the middle price makes sense. But wait, we have 40 kg of one and 60 kg of the other, so maybe I should multiply 40 by 8 and 60 by 12 to find the total weight instead?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly shifts toward finding totals, but confuses what multiplying weight by price actually produces. I need to use Support to guide them toward what those products represent.",
+        "state": "Support",
+        "response": "Multiplying the quantity by the price per kg for each type is a great instinct. When you multiply 40 kg by $8 per kg, what does that dollar amount actually represent for that batch of rice?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, right! That gives me the total cost for the first batch, which is $320, and the second batch is 60 times 12, which is $720. So the total cost is $1040, and since the total weight is 100 kg, I should divide 1040 by 40 to get the average price!"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly calculated the total cost and total weight, but made a careless arithmetic division error by dividing by 40 instead of the total weight. This calls for a Diagnosis to check their denominator choice.",
+        "state": "Diagnosis",
+        "response": "You found the total cost and total weight wonderfully, but take a close look at your final division step. Which specific weight value should you divide that total cost by to find the price per single kilogram of the whole mixture?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Ah, oops! The total weight is 40 plus 60, which is 100 kg, not just 40 kg. So I should divide $1040 by 100 kg."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has self-corrected the denominator and is on the verge of the final numerical answer. I will use Support to prompt them to finish calculating that division.",
+        "state": "Support",
+        "response": "Exactly right. What do you get when you divide that total cost of $1040 by the total weight of 100 kg?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "That gives me $10.40 per kg."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has arrived at the correct answer. Now, to ensure they internalize the underlying concept, I must prompt them to explain the general rule in a Synthesis state.",
+        "state": "Synthesis",
+        "response": "Spot on. Now, in your own words, how would you explain the general rule or method for finding the average price of any mixture when given different quantities and unit prices?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "To find the average price of a mixture, you first calculate the total cost of each component by multiplying its quantity by its unit price. Then you add those total costs together and divide by the sum of all the quantities, which gives you the weighted average price per unit."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has accurately articulated the concept of weighted averages in mixtures, so the tutoring session is successfully completed.",
+        "state": "Closing",
+        "response": "Brilliant explanation, that's spot on! You've completely nailed how alligation and weighted averages work. Feel free to reach out whenever you want to tackle another one!"
+      }
+    ]
   }
 ]

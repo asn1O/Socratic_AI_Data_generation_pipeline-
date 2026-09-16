@@ -778,5 +778,674 @@
         "response": "Great, you've got it! Ready for the next one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Probability",
+    "problem": "A box contains 2 fair coins and 1 biased coin that lands heads with probability 3/4. You randomly select a coin and flip it twice. Both flips are heads. What is the probability that the selected coin is the biased one?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think it's 1/3 because there are three coins."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student gave an answer ignoring the evidence of two heads; need to diagnose their reasoning.",
+        "state": "Diagnosis",
+        "response": "How did you arrive at 1/3?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Because one of three coins is biased, so chance is 1/3."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student still not using flip information; guide to consider evidence.",
+        "state": "Support",
+        "response": "What does the fact that both flips are heads tell you?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "It doesn't change anything, the coin is already chosen."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student thinks flips irrelevant; need to elicit likelihoods.",
+        "state": "Diagnosis",
+        "response": "What's the probability of two heads if the coin is fair?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "1/2, since each flip is 50%."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student miscalculates fair coin likelihood; hint to count outcomes.",
+        "state": "Support",
+        "response": "If you flip a fair coin twice, how many outcomes are equally likely?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "There are four outcomes, so two heads is 1/4."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student got fair coin likelihood; now need biased coin likelihood.",
+        "state": "Diagnosis",
+        "response": "What about the biased coin? Probability of two heads?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "So the answer is 9/16?"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student conflates likelihood with posterior; prompt for Bayes' rule.",
+        "state": "Synthesis",
+        "response": "How do we combine the prior probabilities with these likelihoods to get the posterior?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "We use Bayes' theorem: multiply prior by likelihood for each coin, then normalize."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student correctly articulated Bayes' theorem; conversation complete.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for another?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Mean, median, mode",
+    "problem": "A data set of five numbers has a mean of 20, a median of 18, a mode of 15, and a range of 12. What are the five numbers?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know the mean is 20 so the sum is 100. The median is 18 so the middle number is 18. The mode is 15 so 15 appears most often. The range is 12 so max minus min is 12. But I'm not sure how to put it all together."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student has identified all four constraints but hasn't started assigning values. Need to elicit their plan for ordering the numbers.",
+        "state": "Diagnosis",
+        "response": "You've listed the constraints well. What would be your first step to assign the five numbers in increasing order?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Since the mode is 15, I think the median should also be 15. But the problem says median is 18, so maybe the mode isn't 15? Or maybe I'm mixing them up."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly equated mode and median. Need to clarify the distinction and guide them to place the 15s correctly.",
+        "state": "Support",
+        "response": "Actually, mode and median are different: mode is the most frequent value, median is the middle value when sorted. They don't have to match. With median 18, the third number is 18. Where could the two 15s go?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, right. So the sorted list is a, b, 18, d, e. The mode 15 must appear at least twice. If the 15s are a and b, that works. If one 15 is elsewhere, the list wouldn't be sorted. So a=15, b=15."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student correctly placed the two 15s and the median. Now need to use sum and range to find d and e.",
+        "state": "Support",
+        "response": "Good. Now you have a=15, b=15, c=18. What do the mean and range tell you about d and e?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "The sum is 100, so 15+15+18+d+e=100 => d+e=52. Range is 12, so e + a = 12 => e + 15 = 12 => e = -3. That can't be right."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student used wrong formula for range (addition instead of subtraction). Need to correct and let them recalc.",
+        "state": "Support",
+        "response": "Range is max minus min, not plus. So e - a = 12. Since a=15, what is e?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Right, e - 15 = 12 so e = 27. Then d = 52 - 27 = 25. The five numbers are 15, 15, 18, 25, 27."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has found the correct set. Now move to synthesis: ask them to articulate how each statistic constrained the solution.",
+        "state": "Synthesis",
+        "response": "Great, you found the numbers. Can you summarize in your own words how each statistic helped narrow down the possibilities?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The mean fixed the total sum. The median fixed the middle number. The mode forced the two smallest to be 15. The range gave the max once the min was known. Together they determined the whole set uniquely."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the interplay of the four statistics. Conversation can close.",
+        "state": "Closing",
+        "response": "Nice work! You've got a solid handle on how mean, median, mode, and range interact. Ready for another challenge?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "biology",
+    "topic": "Cell structure",
+    "problem": "What is the primary function of mitochondria in a eukaryotic cell?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think mitochondria are mainly responsible for making proteins because they have their own DNA and ribosomes, so they probably synthesize a lot of the cell's proteins. But I'm not totally sure if that's their main job or if they do something else more important."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student thinks mitochondria make proteins due to their own DNA and ribosomes, revealing confusion about the main function. Need to elicit more about their understanding of mitochondrial roles versus ribosomes.",
+        "state": "Diagnosis",
+        "response": "Can you walk me through what you know about the different roles mitochondria play in the cell, and maybe compare that to what you know about ribosomes and protein synthesis in general, so I can see where your thinking is? I'm really interested in hearing how you connect those two organelles."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, mitochondria have their own DNA and ribosomes, so they must make their own proteins, and I guess they also help make proteins for the rest of the cell. Ribosomes are in the cytoplasm and on the ER, but mitochondria have their own, so they're like a second protein factory. I'm not sure if that's right though."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student still believes mitochondria are protein factories. Need to guide toward energy production with a minimal hint about ATP.",
+        "state": "Support",
+        "response": "You're right that mitochondria have their own DNA and ribosomes, but think about what the cell needs a lot of energy for. What process produces most of the ATP that powers cellular activities, and where does that process mainly happen in a eukaryotic cell typically?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, I remember now: mitochondria are often called the powerhouse of the cell because they carry out cellular respiration to make ATP. So their main job is energy production, not protein synthesis. The ribosomes inside mitochondria just make a few mitochondrial proteins for their own use."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student corrected the first mistake. Now check for other misconceptions, like confusing mitochondria with chloroplasts.",
+        "state": "Diagnosis",
+        "response": "Now that we've clarified the main role, can you think of any other major processes that mitochondria are known for, or maybe confuse them with another organelle that has a similar-sounding name, like chloroplasts perhaps? I'm asking because it's a common point of confusion for many students."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I think mitochondria might also be involved in photosynthesis because they have their own DNA and a double membrane, kind of like chloroplasts do. So maybe they help capture light energy too, or at least share some similar functions? I'm not entirely sure, but it seems plausible since both organelles have their own genomes."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student asserts mitochondria do photosynthesis, a second explicit mistake. Need to elicit differences between mitochondria and chloroplasts.",
+        "state": "Diagnosis",
+        "response": "That's a common mix-up between mitochondria and chloroplasts. What are the key differences between them in terms of what they actually do for the cell, and which organelle is responsible for capturing light energy? Think about the inputs and outputs of each process. I want to see if you can distinguish their roles clearly."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh right, chloroplasts do photosynthesis in plant cells, capturing light energy to make sugars. Mitochondria do cellular respiration in both plant and animal cells, breaking down sugars to make ATP. They don't do photosynthesis at all; that's strictly a chloroplast thing. So the main function of mitochondria is definitely energy production through respiration."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student corrected second mistake and shows readiness to articulate the concept. Move to synthesis to have them summarize.",
+        "state": "Synthesis",
+        "response": "In your own words, what's the primary function of mitochondria, and how would you distinguish it from what chloroplasts do? Please give me a clear, concise statement that captures the main idea we've covered today, so I know you've really internalized it and can explain it to someone else."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Mitochondria are the powerhouse of the cell because they carry out cellular respiration to produce ATP, which is the energy currency used by the cell. Chloroplasts, on the other hand, perform photosynthesis in plant cells to make glucose from light. So mitochondria are about energy release, chloroplasts about energy capture."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the primary function of mitochondria and distinguished it from chloroplasts. The conversation is ready to wrap up.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! You've nailed the distinction. Ready for the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Time and work",
+    "problem": "A and B together can complete a work in 12 days. B and C together can complete it in 15 days. C and A together can complete it in 20 days. (1) If A, B, C work together, how many days will they take? (2) If A works alone for 4 days, then B and C work together for 5 days, what fraction of work remains?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the first step is to find the individual rates for A, B, and C. So I wrote down the three equations from the pairwise data: one over A plus one over B equals one twelfth, one over B plus one over C equals one fifteenth, and one over C plus one over A equals one twentieth. But I'm not sure how to combine them to get the rate for all three working together."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student has set up the pairwise equations correctly but hasn't yet combined them to find the total rate. Need to elicit the next step.",
+        "state": "Diagnosis",
+        "response": "Good, you've translated the pairwise information into equations correctly. Now, what would be your next step to find the combined rate of A, B, and C working together? Think about what happens when you add those three equations."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I could add all three equations together, which would give me two times the sum of the individual rates on the left side. On the right side I'd have one twelfth plus one fifteenth plus one twentieth. Then I'd divide by two to get the total combined rate. But I'm a bit shaky on adding those three fractions accurately."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student knows the method but is uncertain about fraction addition. Provide a hint on common denominator.",
+        "state": "Support",
+        "response": "Exactly, adding them is the right approach. Let's compute the sum on the right: one twelfth plus one fifteenth plus one twentieth. What common denominator would make that addition straightforward? Once you have that sum, dividing by two will give you the combined daily rate."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "The least common multiple of 12, 15, and 20 is 60. So I convert: one twelfth is five sixtieths, one fifteenth is four sixtieths, one twentieth is three sixtieths. Adding them gives twelve sixtieths, which simplifies to one fifth. Then two times the combined rate equals one fifth, so the combined rate is one tenth. That means together they finish in 10 days."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student solved part 1 correctly. Now need to guide toward part 2.",
+        "state": "Diagnosis",
+        "response": "Perfect, the combined rate is one tenth per day, so 10 days total. Now for the second part: A works alone for 4 days, then B and C work together for 5 days. How would you go about finding the fraction of the work that gets completed in that sequence?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I need the individual rates first. Since I have the total combined rate of one tenth, I can subtract each pairwise rate from it to isolate the third person's rate. For example, one over C equals one tenth minus one twelfth, which is one sixtieth. Similarly, one over A equals one tenth minus one fifteenth equals one thirtieth, and one over B equals one tenth minus one twentieth equals one twentieth. So A takes 30 days, B takes 20 days, C takes 60 days."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student derived individual rates correctly. Now guide to compute work done.",
+        "state": "Support",
+        "response": "Great, you've found the individual rates correctly. Now compute the work done: A's rate is one thirtieth per day, so 4 days gives four thirtieths. B and C together have a combined rate of one twentieth plus one sixtieth, which is four sixtieths or one fifteenth per day, so 5 days gives five fifteenths. What's the total fraction of the job completed?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "A does four thirtieths, which simplifies to two fifteenths. B and C together do five fifteenths, which is one third. Adding them: two fifteenths plus one third equals two fifteenths plus five fifteenths equals seven fifteenths done. So the remaining work is eight fifteenths. I'm not 100% sure about the fraction addition, but it seems right."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student computed correctly but expresses uncertainty. Confirm and check understanding.",
+        "state": "Support",
+        "response": "You added them correctly: two fifteenths plus five fifteenths equals seven fifteenths done, leaving eight fifteenths remaining. Does that process make sense to you for how we combined the individual rates to find the work done in each phase?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Yes, it makes sense now. I see how we used the total combined rate to find each person's individual rate, and then applied those rates sequentially to figure out how much work was done in each segment. I'm feeling more confident about the overall approach."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student ready to articulate the general principle.",
+        "state": "Synthesis",
+        "response": "Great. Can you now explain in your own words the general strategy for solving problems where three workers have pairwise combined rates given? I want to make sure you've internalized the key steps."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The key is to set up equations for each pair's combined rate, add all three equations to get twice the sum of the individual rates, then divide by two to find the total combined rate. From there, subtract each pair's rate from the total to find each person's individual rate. Once you have those, you can calculate work done in any sequence by multiplying each rate by the time worked."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept, so wrap up.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! You've got a solid grasp of the method. Ready for another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "physics",
+    "topic": "Levers and pulleys",
+    "problem": "A uniform lever 4 meters long is pivoted at a point 1 meter from its left end. A 200 N weight hangs from the left end. The right end of the lever is attached to a rope that passes through a pulley system with a mechanical advantage of 3, lifting a load. What is the maximum load that can be lifted? Assume the lever is massless and frictionless.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think I need to use torque balance on the lever, but I'm really not sure how the pulley system changes things. Maybe the force on the right end is three times the load? Or is it the other way around? The mechanical advantage of three is confusing me because I don't know which force gets multiplied."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student expressed confusion about mechanical advantage direction and gave an incorrect relationship; need to diagnose their mental model before guiding.",
+        "state": "Diagnosis",
+        "response": "Can you walk me through how you're thinking about the relationship between the force applied to the rope and the load being lifted by the pulley system, and maybe sketch out what mechanical advantage means to you in this context? I'd like to hear your reasoning step by step so I can see where the confusion might be."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, mechanical advantage of three means the pulley multiplies the force, so if I pull with one hundred newtons, the load feels three hundred newtons. So the force on the right end of the lever is the effort, and the load is three times that. Wait, I said the force on the right end is three times the load earlier, but now I'm saying the load is three times the effort. I'm confused."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student still conflates effort and load; a hint about the definition of mechanical advantage and which force is input will help them self-correct.",
+        "state": "Support",
+        "response": "What does a mechanical advantage of three tell you about the ratio of load to effort, and which side of the lever provides the effort force that goes into the pulley? Think about whether the effort is the input or the output of the pulley system."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Okay, mechanical advantage equals load divided by effort equals three, so load equals three times effort. The effort is the force the lever exerts on the rope at the right end. So the force on the right end is the effort, not three times the load. That makes more sense now."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student now correctly identifies effort as input to pulley; need to check if they can apply lever torque balance correctly.",
+        "state": "Diagnosis",
+        "response": "Good. Now, how will you relate the effort force at the right end to the two hundred newton weight on the left using the lever's geometry? What are the lever arm lengths on each side of the fulcrum?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "The lever is four meters long, fulcrum one meter from left end. So left arm is one meter, right arm is three meters. Torque balance: two hundred newtons times one meter equals effort times three meters. So effort equals two hundred times three equals six hundred newtons."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student made a clear arithmetic error in torque calculation; a guiding question about the torque balance direction should prompt correction.",
+        "state": "Support",
+        "response": "Let's check that torque equation: the weight creates a clockwise torque, the effort creates a counterclockwise torque. If the left arm is one meter and the right arm is three meters, what should the effort be to balance a two hundred newton weight?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, I multiplied instead of divided. Two hundred times one is two hundred, divided by three gives about sixty-six point seven newtons for the effort. So effort is sixty-six point seven newtons."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student corrected effort value; now need to see if they can apply mechanical advantage to find load.",
+        "state": "Diagnosis",
+        "response": "Now that you have the effort, how does the pulley's mechanical advantage of three determine the maximum load that can be lifted? What calculation would you do?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "If effort is sixty-six point seven newtons and mechanical advantage is three, then load equals three times sixty-six point seven, which is two hundred newtons. So the maximum load is two hundred newtons."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has computed correct load; now ready for synthesis by articulating the combined principle.",
+        "state": "Synthesis",
+        "response": "Can you explain in your own words how the lever and the pulley system work together to determine the load, including the role of the lever arms and the mechanical advantage?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The lever balances torques: the weight on the short arm creates a torque that's balanced by the effort on the long arm. That effort becomes the input force for the pulley, which multiplies it by its mechanical advantage of three to give the load. So the load equals the weight times the ratio of the lever arms times the pulley's mechanical advantage."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has successfully explained the concept in their own words; conversation can close warmly.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Simple vs compound interest",
+    "problem": "You have $10,000 to invest for 5 years. Option A offers 6% simple interest per year. Option B offers 5% compound interest compounded semi-annually. Which option yields more total interest, and by how much? Also, calculate the effective annual rate for Option B.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think compound interest will be more because it compounds, but I'm not sure how to calculate semi-annual."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student has identified the two options but is unsure about the semi-annual compounding calculation. Need to elicit their current approach to both interest types.",
+        "state": "Diagnosis",
+        "response": "How would you calculate the total interest for each option?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "For simple interest, I'd do 10000 * 0.06 * 5 = 3000. For compound, I'd do 10000 * (1.05)^5 - 10000 = 2762.82."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly used annual compounding for Option B. Providing a hint about the semi-annual rate and periods guides them to correct formula without giving answer.",
+        "state": "Support",
+        "response": "Remember, Option B compounds semi-annually, so the rate per period is 5%/2 and number of periods is 5*2."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh right, so it's 10000 * (1.025)^10 - 10000. Let me compute... about 2800.84."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student correctly computed both interests. Now need to prompt comparison and effective annual rate, with a hint to compare totals.",
+        "state": "Support",
+        "response": "Good. Now, which option gives more interest? Remember to compare the total interest amounts."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Simple gives 3000, compound gives 2800.84, so simple is better. The effective annual rate for Option B is just 5% because it's 5% nominal."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student stated effective annual rate is 5%, missing the effect of semi-annual compounding. Hint about computing from periodic rate encourages self-correction.",
+        "state": "Support",
+        "response": "The effective annual rate accounts for compounding within the year. How would you compute it from the semi-annual rate?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Right, it's (1 + 0.05/2)^2 - 1 = 5.0625%."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has corrected both calculations. Checking conceptual understanding before synthesis by asking for key difference summary.",
+        "state": "Diagnosis",
+        "response": "Can you summarize the key difference between simple and compound interest in this context?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Simple interest only earns on principal, while compound earns on principal plus accumulated interest each period. Even with a lower nominal rate, compounding frequency affects the effective rate."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student demonstrated correct calculations and conceptual grasp. Now asking them to articulate the general rule for comparing simple vs compound interest with different compounding periods.",
+        "state": "Synthesis",
+        "response": "In your own words, what's the rule for comparing simple vs compound interest when rates and compounding periods differ?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "You need to calculate the total interest for each using the correct formulas: simple interest = P*r*t; compound interest = P*(1 + r/n)^(n*t) - P. Then compare. The effective annual rate for compound is (1 + r/n)^n - 1."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has explained the rule in their own words, showing mastery. Conversation can close warmly.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "computer_science_light",
+    "topic": "Big-O intuition via analogies",
+    "problem": "Suppose you have a sorted list of 1,000 names. You want to find a specific name. Compare the time complexity of linear search and binary search using an analogy of looking up a word in a dictionary.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "So linear search goes through each name one by one, which is O(n), right? And binary search splits the list in half each time, so it's O(log n). But I'm fuzzy on why the logarithm base doesn't change the Big-O class. I mean, if you halve the list, it's log base 2, but Big-O ignores constants, so any base is the same order. Still, I'm not 100% sure."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student understands basic complexities but is unsure about log base invariance; need to elicit their reasoning about constant factors.",
+        "state": "Diagnosis",
+        "response": "In Big-O notation, constant factors are dropped because we care about growth rates as n gets large. Changing the logarithm base only multiplies the result by a constant, like log2(n) = log10(n) / log10(2), so they're equivalent in Big-O. Can you walk me through how you'd explain that to someone using the dictionary analogy?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Okay, so the base doesn't matter because of the constant factor. But wait, if the list size isn't a power of two, binary search might need an extra comparison, making it O(log n + 1), which is still O(log n) but the base would affect that extra step, right?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly thinks the logarithm base affects the additive constant from an uneven split; need to guide them to see that the extra step is constant regardless of base.",
+        "state": "Support",
+        "response": "The extra comparison when the list size isn't a power of two is at most one step, a constant overhead. The logarithm base changes the constant factor in the leading term, not the additive constant. So the base still doesn't affect the Big-O class. Does that distinction make sense?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Ah, I see. The additive constant is separate from the multiplicative constant from the base. So whether it's log2 or log10, the extra step is just +1, not scaled by the base. That clears it up. The additive constant from an uneven split is just one extra comparison, while the base change multiplies the whole logarithm by a constant factor. Both are constants, so Big-O treats them the same."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student now understands log base invariance; need to move to the dictionary analogy to compare linear vs binary search.",
+        "state": "Diagnosis",
+        "response": "Great. Now let's use the dictionary analogy: linear search is like scanning every page from the start, while binary search is like opening the middle, then narrowing down. How would you describe the time complexity difference in your own words using that picture?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Linear search is O(n) because you might check all n pages. Binary search is O(log n) because you halve the pages each time. But if the word is on the first page, linear search is O(1), so it's actually faster than binary search for small n, right?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student conflates best-case with worst-case; need to clarify that Big-O describes worst-case upper bound, not best-case.",
+        "state": "Support",
+        "response": "Big-O describes the worst-case upper bound, not the best-case. Linear search's worst case is still O(n) even if sometimes it finishes early. Binary search's worst case is O(log n). For large n, log n grows much slower than n, so binary search dominates asymptotically. Does that distinction between worst-case and best-case help?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Right, Big-O is about the worst-case scaling. So even though linear search can get lucky, we care about the guarantee as n grows. Binary search gives a logarithmic guarantee, which is far better for large dictionaries. Exactly. The worst-case guarantee is what matters for algorithm analysis, and binary search's logarithmic worst-case is a huge improvement over linear's linear worst-case, especially as the dictionary grows."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student now grasps worst-case vs best-case; ready to synthesize the analogy.",
+        "state": "Diagnosis",
+        "response": "Perfect. Let's tie it back to the analogy: if you have a 1,000-page dictionary, linear search might take 1,000 page turns in the worst case, while binary search takes at most 10 because 2^10 ≈ 1024. Can you explain why that's a powerful intuition for Big-O?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Because the number of page turns for binary search grows logarithmically with the dictionary size, so doubling the pages only adds one more turn, whereas linear search doubles the work. That's the core intuition: logarithmic growth is dramatically slower than linear."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has demonstrated correct reasoning; now ask them to articulate the overarching rule in their own words.",
+        "state": "Synthesis",
+        "response": "Exactly. Now, in your own words, what's the key principle that makes binary search so much more scalable than linear search, and how does the dictionary analogy capture that principle?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The key principle is that binary search reduces the problem size by a constant fraction each step, leading to logarithmic time, while linear search reduces it by a constant amount, leading to linear time. The dictionary analogy shows that halving the remaining pages each time means the number of steps grows only with the logarithm of the total pages, not linearly."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept; conversation can wrap up.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for the next one?"
+      }
+    ]
   }
 ]
