@@ -251,3 +251,89 @@ Config parameter balance
     easy                          61
     hard                          42
     medium                        59
+2026-09-17 18:22:09,379 WARNING Interrupted by user after 173 successful write(s). Exiting cleanly.
+2026-09-17 18:22:09,381 INFO 
+=== Run Statistics Summary ===
+Overall totals
+  Attempts: 221
+  Saved: 173
+  Failed: 48
+  Accept rate: 78.28%
+  Duration (h:m:s): 02:00:21
+
+Per-model results
+  Provider / Model                         Attempts  Saved  Accept %  Avg tokens  Turns  Total convos
+  ----------------------------------------  --------  -----  --------  -----------  -----  Total convos
+  Google / gemini-2.5-flash-lite                 3        0    0.00%       0.00      -              0
+  Google / gemini-3-flash-preview               20      20  100.00%  10314.05  12-18             67
+  Google / gemini-3.1-flash-lite               20      20  100.00%   3406.65  12-12             69
+  Google / gemini-3.5-flash                     19      16   84.21%   7819.56  12-16             57
+  Google / gemini-3.5-flash-lite                20      13   65.00%   3502.69  12-12             53
+  Google / gemini-3.6-flash                     19      16   84.21%   8477.19  12-14             65
+  Google / gemini-3.7-flash                      3        0    0.00%       0.00      -              0
+  Google / gemini-3.8-flash                      3        0    0.00%       0.00      -              3
+  Google / gemma-4-31b-it                       20      16   80.00%   5743.94  12-18             57
+  NVIDIA / deepseek-ai/deepseek-v4-flash-0731    3        0    0.00%       0.00      -              0
+  NVIDIA / deepseek-ai/deepseek-v4-pro-0813      3        0    0.00%       0.00      -              0
+  NVIDIA / moonshotai/kimi-k3                    8        4   50.00%       0.00      -             23
+  NVIDIA / nvidia/nemotron-3-super-120b-a12b    20      18   90.00%  12999.67  12-16             60
+  NVIDIA / nvidia/nemotron-3-ultra-550b-a55b    20      20  100.00%   8514.75  12-16             61
+  OpenRouter / nvidia/nemotron-3-super-120b-a12b:free   20      11   55.00%  12287.82  12-18             54
+  OpenRouter / nvidia/nemotron-3-ultra-550b-a55b:free  20      19   95.00%   8889.58  12-14             64
+
+Failure reasons
+  Category                         Count
+  ------------------------------  -----
+  dead_model_404                      0
+  empty_response                     40
+  invalid_json_syntax                 5
+  turn_count_out_of_range             5
+  speaker_alternation_broken          1
+  malformed_tutor_tags                0
+  missing_problem_field               0
+  final_turn_not_closing              0
+  unexpected_exception                0
+  other                               0
+
+Turn-count distribution
+  min=12, max=18, avg=13.04
+
+Domain coverage
+  biology                           46
+  chemistry                         47
+  computer_science_light            57
+  economics_and_finance             58
+  ethics_and_critical_thinking      50
+  everyday_reasoning                33
+  history_and_social_studies        59
+  language_and_grammar              45
+  logic_and_puzzles                 48
+  physics                           60
+  quantitative_aptitude             63
+  statistics_and_data               67
+
+Config parameter balance
+  socratic_level
+    high                          197
+    low                           208
+    medium                        228
+  student_level
+    advanced                      201
+    beginner                      226
+    intermediate                  206
+  hint_frequency
+    high                          211
+    low                           194
+    medium                        228
+  mistake_frequency
+    high                          242
+    low                           208
+    medium                        183
+  verbosity
+    high                          208
+    low                           205
+    medium                        220
+  difficulty
+    easy                          222
+    hard                          198
+    medium                        213

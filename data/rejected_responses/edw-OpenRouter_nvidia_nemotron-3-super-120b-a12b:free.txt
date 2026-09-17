@@ -239,3 +239,240 @@
     }
   ]
 }
+
+
+{
+  "problem": "Find the next number in the series: 5, 2, 8, 4, 11, 8, 14, 16, ?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I see the numbers go up and down: 5 to 2 is –3, 2 to 8 is +6, 8 to 4 is –4, 4 to 11 is +7. After that I’m not sure what the pattern is."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "Student listed differences but hasn't identified any repeating structure; need to see if they notice grouping.",
+      "state": "Diagnosis",
+      "response": "What do you notice if you look at the numbers in alternating positions?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "I think the pattern repeats every three steps: subtract 3, add 6, subtract 4, and then it starts over."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "Student gave a specific but incorrect repeating pattern; need a minimal hint to re‑examine the sequence.",
+      "state": "Support",
+      "response": "Try writing out the terms in two separate rows: one for the 1st, 3rd, 5th… terms and another for the 2nd, 4th, 6th… terms. What do you see?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Okay, I split them: odd positions are 5, 8, 11, 14… and even positions are 2, 4, 8, 16… I’m not sure how each row progresses."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "Student has separated the rows but hasn't described the progression; need them to articulate the rule for each row.",
+      "state": "Diagnosis",
+      "response": "How does each row change from one term to the next?"
+    },
+    {
+      "turn": 7,
+      "student": "text": "The odd row adds 3 each time, and the even row adds 2 each time."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "Student mischaracterized the even row; need to check the actual even terms to see the error.",
+      "state": "Diagnosis",
+      "response": "Look again at the even‑position terms: 2, 4, 8, 16. What operation gets you from one to the next?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "Each even term is twice the previous one: 2×2=4, 4×2=8, 8×2=16. The odd terms increase by 3: 5+3=8, 8+3=11, 11+3=14."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "Student has correctly described both sub‑sequences; now need them to articulate the overall rule for finding the next term.",
+      "state": "Synthesis",
+      "response": "You’ve identified the two sub‑sequences. In your own words, how would you find the term that comes after 16?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "Since 16 is an even‑position term, the next term is an odd‑position term. The odd‑position sequence starts at 5 and adds 3 each step, so after 14 we add 3 to get 17. Therefore the next number in the series is 17."
+    },
+    {
+      "turn": 12,
+      "speaker": "tutor",
+      "reasoning": "Student has correctly explained the rule and given the answer, so we wrap up.",
+      "state": "Closing",
+      "response": "Nice work! You’ve got it. Want to try another one?"
+    }
+  ]
+}
+
+
+{
+  "problem": "Five friends — Ava, Ben, Cara, Dex, and Eli — are sitting in a row of five chairs numbered 1 through 5 from left to right. The following conditions apply:\n1. Ava is not sitting in chair 1 or chair 5.\n2. Ben sits immediately to the right of Cara.\n3. Dex sits somewhere to the left of Eli.\n4. Eli is not sitting in chair 5.\n5. Dex sits immediately to the left of Ava.\nQuestion: Who is sitting in chair 3?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I know Ava isn’t at the ends, and Ben is right of Cara, but I can’t place everyone."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "Student shows they know some constraints but are stuck; need to elicit their thinking about Cara-Ben positions.",
+      "state": "Diagnosis",
+      "response": "Can you list the possible chair pairs for Cara and Ben given Ben is right of Cara?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Cara‑Ben could be (1,2), (2,3), (3,4), or (4,5)."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "Student listed Cara-Ben pairs; need to hint to combine with Ava's position constraint.",
+      "state": "Support",
+      "response": "Ava can’t be in 1 or 5, so eliminate any Cara‑Ben pair that forces her there. Which pairs remain?"
+    },
+    {
+      "turn": 5,
+      "student": {
+        "text": "(1,2): Ava 3 or 4; (2,3): Ava 4; (3,4): Ava 2; (4,5): Ava 2 or 3"
+      }
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "Student considered Ava restrictions; need to hint to incorporate Dex left of Eli and Eli not 5.",
+      "state": "Support",
+      "response": "Now consider Dex left of Eli and Eli not in chair 5—how does that affect the remaining spots?"
+    },
+    {
+      "turn": 7,
+      "student": {
+        "text": "Only two combos survive: (Ava2,Dex1,Eli3) and (Ava3,Dex1,Eli2) with Cara4,Ben5."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "Student found two possible combos; need to draw attention to the last condition about Dex left of Ava.",
+      "state": "Diagnosis",
+      "response": "Dex must be immediately left of Ava, so only arrangements where Dex is right before Ava work. Which arrangement fits?"
+    },
+    {
+      "turn": 9,
+      "student": {
+        "text": "Only the first combo has Dex left of Ava (Dex1,Ava2), so chair 3 is Eli."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "Student identified unique solution; need to guide them to articulate reasoning process.",
+      "state": "Support",
+      "response": "Can you summarize how you eliminated the other possibilities?"
+    },
+    {
+      "turn": 11,
+      "student": {
+        "text": "I listed Cara‑Ben pairs, used Ava’s end rule, Dex left of Eli, then immediate‑left to find the unique arrangement."
+    },
+    {
+      "turn": 12,
+      "speaker": "tutor",
+      "reasoning": "Student summarized elimination process; now ask them to articulate the rule/principle in their own words.",
+      "state": "Synthesis",
+      "response": "List possibilities, apply each rule to eliminate, see what’s left. Can you describe that in your own words?"
+    },
+    {
+      "turn": 13,
+      "student": {
+        "text": "List possible positions for each pair, apply conditions to eliminate, the leftover spot is the answer."
+    },
+    {
+      "turn": 14,
+      "speaker": "tutor",
+      "reasoning": "Student has correctly explained the concept; conversation wraps up.",
+      "state": "Closing",
+      "response": "Nice, that's exactly it! Want to try another one?"
+    }
+  ]
+}
+
+
+{
+  "problem": "Suppose the price of a coffee rises from $5 to $6 per cup, and as a result, the quantity demanded drops from 200 cups per day to 160 cups per day. Calculate the price elasticity of demand using the midpoint formula.",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I think elasticity is just the change in quantity divided by the change in price, so (200-160)/(6-5) = 40."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student applied an incorrect formula, treating elasticity as a simple ratio of absolute changes. This shows a lack of understanding of percentage changes and the midpoint approach, so I need to diagnose their current thinking.",
+      "state": "Diagnosis",
+      "response": "Can you walk me through how you decided to use that formula? What does elasticity actually measure?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Elasticity shows how much quantity changes when price changes, so I just divided the change in quantity by the change in price to see that relationship."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student still conflates elasticity with a raw change ratio, indicating they haven't grasped the need for relative (percentage) changes. I’ll ask a clarifying question to probe their understanding of percentage change.",
+      "state": "Diagnosis",
+      "response": "When we say 'how much quantity changes,' do we usually look at the absolute number or the relative change compared to the starting level?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "I guess we should use percentages, like the percent change in quantity over the percent change in price."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student now recognizes the need for percentage changes but hasn't specified which base to use. This is a good moment to give a minimal hint about the midpoint formula.",
+      "state": "Support",
+      "response": "What happens if we use the average of the starting and ending values as the base for each percentage change?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "So for quantity, I’d take the change -40 divided by the average of 200 and 160, which is 180. That’s -40/180 ≈ -22.2%. For price, the change is 1 divided by the average of 5 and 6, which is 5.5, giving about 18.2%. Then elasticity is -22.2%/18.2% ≈ -1.22."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student has correctly applied the midpoint formula and arrived at the right numeric answer. They now need to articulate the rule in their own words to consolidate understanding.",
+      "state": "Synthesis",
+      "response": "In your own words, what is the midpoint formula for price elasticity of demand and why do we use averages as the base?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "The midpoint formula calculates elasticity by dividing the percent change in quantity (using the average of the two quantities as the base) by the percent change in price (using the average of the two prices as the base). This avoids depending on whether we start from the higher or lower value."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "The student has successfully explained the concept in their own words, indicating mastery. According to the requirements, the next turn should be the closing wrap-up.",
+      "state": "Closing",
+      "response": "Great job! You've got the elasticity concept down. Want to try another one?"
+    }
+  ]
+}

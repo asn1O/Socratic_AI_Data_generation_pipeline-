@@ -382,5 +382,401 @@
         "response": "Beautifully put — that one-mismatch trap catches a lot of people. You've got this now. Want to try another source-analysis puzzle?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Analogies and vocabulary in context",
+    "problem": "Choose the pair that best completes the analogy: EPHEMERAL : LASTING :: (a) fragile : delicate (b) transparent : opaque (c) ancient : old (d) trivial : minor",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think it's (c), ancient : old, because both pairs are about time."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student matched topic/theme instead of relationship type — a classic analogy trap. Need to diagnose how they see the stem relationship.",
+        "state": "Diagnosis",
+        "response": "Okay — first, what's the relationship between ephemeral and lasting?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Ephemeral means short-lived, lasting means it endures. So they're... opposites."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified antonyms. Now check if they apply that test to their chosen pair.",
+        "state": "Support",
+        "response": "Good. So are ancient and old opposites?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Hmm, no — they're synonyms. But maybe the analogy just needs words from the same category?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student is overgeneralizing: same category as the rule. Push them to test the relationship, not the topic.",
+        "state": "Support",
+        "response": "In analogies, the relationship has to match exactly. Which choice has two words that are opposites?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Transparent and opaque — that's (b). Opaque means light can't pass through, so they're opposites."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Correct answer reached with correct reasoning. But per mistake pattern, probe the distractors to solidify; expect possible resurfacing slip.",
+        "state": "Support",
+        "response": "Right. Now quickly check (a) and (d) — what relationship do those have?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Fragile : delicate and trivial : minor — both synonym pairs. Wait, so actually any of these could work since analogies just need related words?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The 'related words' misconception resurfaced in a new form. Drop back to diagnosis with a concrete challenge.",
+        "state": "Diagnosis",
+        "response": "If that were true, why would only one answer be correct? What makes (b) different from (c)?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Because (b) matches the stem's exact relationship — antonyms. (c) matches the topic but not the relationship."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has now articulated the distinction clearly. Move to synthesis so they state the general rule in their own words.",
+        "state": "Synthesis",
+        "response": "Exactly. So in your own words, what's the rule for solving analogies like this?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Identify the precise relationship between the first pair, then pick the pair with that same relationship — matching topic or vibes isn't enough."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has explained the rule in their own words and corrected the recurring misconception. Time to wrap up warmly.",
+        "state": "Closing",
+        "response": "Nicely said — that's exactly the key insight. Want to try another analogy?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Clock and calendar puzzles",
+    "problem": "What is the angle between the hour hand and the minute hand of a clock at 3:15?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "At 3:15 the minute hand is at the 3, and the hour hand... also points at 3, right? So the angle is zero?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student assumes the hour hand stays fixed at 3, a plausible distractor. Need to probe their reasoning before hinting at the hour hand's movement.",
+        "state": "Diagnosis",
+        "response": "What makes you think the hour hand points exactly at 3 at that time?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Because it's 3-something, so it's the 3 o'clock hand position. Is that wrong?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student is uncertain but hasn't articulated the key fact. A gentle question about the hour hand's behavior over an hour can guide without stating it.",
+        "state": "Support",
+        "response": "As the minutes pass from 3:00 to 4:00, what does the hour hand do?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Hmm, it slowly moves toward the 4? I never thought about that."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student now sees the hour hand drifts. Need them to quantify how much it moves by 3:15.",
+        "state": "Support",
+        "response": "By 3:15, what fraction of the way from 3 to 4 has it gone?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "15 minutes out of 60... so a quarter of the way?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Good. Now they need to convert that fraction into degrees, knowing each hour mark is 30 degrees.",
+        "state": "Support",
+        "response": "The clock is 360° split into 12 hours. How many degrees sit between the 3 and the 4?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "360 divided by 12 is 30 degrees each."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "All the pieces are ready: quarter of 30 degrees. Ask them to combine.",
+        "state": "Support",
+        "response": "So if the hour hand has gone a quarter of that gap, how far is it past the 3?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "A quarter of 30 is 7.5 degrees. And the minute hand is exactly on the 3, so the angle is 7.5°!"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student reached the correct answer. Time to have them articulate the underlying principle in their own words.",
+        "state": "Synthesis",
+        "response": "Exactly. So what's the key idea to remember for any time like this?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The hour hand doesn't stay still — it creeps along as minutes pass, 0.5 degree per minute, so you have to add that drift in."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student correctly explained the rule in their own words. Wrap up warmly.",
+        "state": "Closing",
+        "response": "Nicely put — that's exactly the trick. Want to try a harder time next?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "history_and_social_studies",
+    "topic": "Comparing political systems",
+    "problem": "Country X holds regular elections, but only one political party is ever allowed to run, the courts always side with the government, and independent newspapers have been shut down. Is Country X a democracy? Explain what feature (or features) of a political system matter most for deciding this.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Hmm, so my gut says yes, it's a democracy, because they do have elections. Like, people vote, right? But then the stuff about the courts and the newspapers makes me unsure. I guess I'm not clear on whether elections alone are enough, or if the other stuff cancels it out."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student has partial reasoning — they noticed elections but are unsure how the other features weigh in. Good starting point to diagnose what they think defines a democracy.",
+        "state": "Diagnosis",
+        "response": "Good instinct to notice both sides. You're right that elections exist here — that's a real fact. But before we weigh it, let's get your baseline: when you personally think of what makes a country a democracy, what's the core thing you picture? Tell me in your own words, even if it's rough."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I guess... people choosing their leaders? Like, the population gets a say in who runs things rather than it just being decided for them. That's the main thing I'd think of."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student identified 'people choosing leaders' — correct but incomplete, doesn't yet distinguish genuine choice from staged choice. Directly define the key concept and apply it.",
+        "state": "Support",
+        "response": "Exactly — the people genuinely choosing their leaders is the heart of it. Here's the key point I'll state directly: political scientists say an election only counts as democratic if the choice is *meaningful* — meaning voters have real alternatives to pick from. Now apply that: in Country X, what do voters actually get to choose between?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh — nothing, really. If only one party is allowed to run, then voting is basically just confirming the one option. It's not actually a choice, it's more like... going through the motions?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student has grasped that one-party elections aren't meaningful choice. Now extend to the other features — courts and media — with a direct statement about why those matter too.",
+        "state": "Support",
+        "response": "You've got it — political scientists literally call that 'going through the motions' an electoral ritual, not a real election. And it connects to the other red flags. Here's the principle stated plainly: democracy also needs *checks on power* — independent courts and a free press — so leaders can be criticized and held accountable. What do the courts and newspapers situation in Country X tell you along those lines?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Well, if the courts always side with the government, then nobody can really challenge the leaders legally. And no independent newspapers means people can't even hear criticism of the government, so they can't make informed decisions. I think — is that right?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student correctly connected checks and accountability, just seeking confirmation. Confirm directly and prompt the final verdict with justification.",
+        "state": "Support",
+        "response": "That's completely right — no need to hedge. Citizens can't hold leaders accountable if courts won't check them and media can't criticize them. Accountability is a core pillar of democracy. So now let's put it all together: given the one-party elections and the missing checks, what's your verdict on Country X, and what's your one-sentence justification?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I'd say no, it's not a democracy. Even though it holds elections, those elections don't offer a real choice, and there are no checks on the government, so power isn't accountable to the people at all. It just *looks* democratic on the surface."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student reached the correct answer with solid justification. Move to Synthesis: have them state the general rule in their own words.",
+        "state": "Synthesis",
+        "response": "Well reasoned — the 'looks democratic on the surface' distinction is exactly the point, and it's how real analysts classify these regimes. Last step: zoom out from this example and state the general rule in your own words. When you're comparing political systems, what actually decides whether a country counts as a democracy?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The rule is basically: it's not about whether a country *holds* elections, it's about whether power genuinely comes from and answers to the people. A real democracy needs meaningful electoral choice — actual competition, real alternatives — plus checks on the government like independent courts and a free press. If those are missing, elections are just for show and the system is authoritarian, no matter what it calls itself."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student articulated the principle clearly and completely in their own words — genuine choice plus accountability/checks. Wrap up warmly.",
+        "state": "Closing",
+        "response": "Nicely done — that's exactly the principle, and you explained it better than most textbooks do. You went from 'elections = democracy' to seeing why real choice and accountability are what actually matter. Want to try comparing another pair of systems next?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "physics",
+    "topic": "Buoyancy and density",
+    "problem": "A wooden cube of volume 0.002 m³ and density 600 kg/m³ is tied to the bottom of a tank of water (density 1000 kg/m³) by a vertical string, so it's fully submerged. What is the tension in the string? (g = 10 m/s²)",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Okay, so the cube's submerged... I think the tension should just equal its weight? Since the string holds it down."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student assumes tension equals weight, ignoring buoyancy entirely. Need to probe what forces act on the cube.",
+        "state": "Diagnosis",
+        "response": "What forces are actually acting on the cube right now?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Um... weight down, tension down, and... buoyancy up?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified three forces but tentative. Push them to set up the balance themselves.",
+        "state": "Support",
+        "response": "If the cube is sitting still, what does that tell you about how those three relate?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "So buoyancy equals weight plus tension? T = buoyancy minus weight."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Good force balance. Now check how they compute each term — that's where errors usually appear.",
+        "state": "Support",
+        "response": "Good structure. Now how would you get the buoyant force's size?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Buoyancy is mass of water displaced times g... so 600 times 0.002 times 10, that's 12 N?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Mistake 1: student used the wood's density (600) instead of water's for the displaced fluid. Ask whose density belongs there.",
+        "state": "Diagnosis",
+        "response": "Where did the 600 come from — whose density tells you about displaced water?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh! The water's density. So 1000 × 0.002 × 10 = 20 N buoyancy."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Corrected. Now guide them to the weight and check they compute it similarly.",
+        "state": "Support",
+        "response": "Now the weight — what density belongs there?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "600 × 0.002 × 10 = 12 N. Then tension is 20 − 12... wait, so tension is 8 N upward?"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Mistake 2: direction confusion — tension on a submerged held-down cube pulls down, not up. Probe force directions.",
+        "state": "Support",
+        "response": "Hold on — which way does the string actually pull if it's anchoring the cube down?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Down, toward the bottom. So tension is 8 N pulling down, balancing buoyancy minus weight."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correct answer and directions. Time to have them articulate the principle in their own words.",
+        "state": "Synthesis",
+        "response": "So in your own words — what's the general idea behind tension problems like this?"
+      },
+      {
+        "turn": 15,
+        "speaker": "student",
+        "text": "Buoyancy always uses the displaced fluid's density and the object's full submerged volume. Tension just makes up whatever's left to balance the forces."
+      },
+      {
+        "turn": 16,
+        "speaker": "tutor",
+        "reasoning": "Student articulated the principle correctly on their own — time to close warmly.",
+        "state": "Closing",
+        "response": "That's exactly it — great work sticking with it! Want to try a tougher one?"
+      }
+    ]
   }
 ]

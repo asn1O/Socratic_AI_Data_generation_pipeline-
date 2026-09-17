@@ -323,3 +323,90 @@
     }
   ]
 }
+
+
+{
+  "problem": "A uniform beam of length 2.5 m and weight 120 N is pivoted at its left end. A load of 250 N hangs from a movable pulley that is attached to the beam at a point 0.5 m from the pivot. The rope passes under the movable pulley, goes up over a fixed pulley attached to the right end of the beam, and you pull down on the rope with force F. Assuming ideal pulleys and rope, determine the force F required to keep the system in static equilibrium.",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I think I just set the effort force times its distance equal to the weight times its distance."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student referred to torque balance but omitted any effect of the rope and pulleys, showing a gap in understanding how the applied force relates to the load.",
+      "state": "Diagnosis",
+      "response": "How does the rope and pulley arrangement affect the force you actually apply?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "The tension is the same throughout, so my pull equals the rope tension."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student acknowledged uniform tension but hasn't considered how a movable pulley modifies that tension relative to the load, indicating a need for a hint about force sharing.",
+      "state": "Support",
+      "response": "A movable pulley shares the load between two rope strands—what does that do to the tension?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "I guess the tension ends up being half the weight, so T = W/2."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student correctly found the tension from the movable pulley but hasn't yet linked that tension to a torque on the lever, so a hint about its mechanical effect is appropriate.",
+      "state": "Support",
+      "response": "That tension acts on the lever where the rope is attached—how does it produce torque?"
+    },
+    {
+      "turn": 7,
+      "student": "It pulls down on the lever at that point, making a torque."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student noted the tension creates a torque but didn't specify its direction or lever arm, which are needed to complete the torque balance.",
+      "state": "Diagnosis",
+      "response": "Is the torque from that tension clockwise or counterclockwise, and what's its lever arm?"
+    },
+    {
+      "turn": 9,
+      "student": "Since it's on the left side pulling down, it gives clockwise torque, and the lever arm is 0.5 m."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "The student has accounted for the torque from the movable‑pulley tension but omitted the torque from the effort force at the far end, so a prompt to include it is warranted.",
+      "state": "Support",
+      "response": "You also pull on the far end of the lever—how does that effort force affect the torque?"
+    },
+    {
+      "turn": 11,
+      "student": "My upward pull at the right end creates counterclockwise torque F × L, while the beam’s weight adds clockwise torque."
+    },
+    {
+      "turn": 12,
+      "speaker": "tutor",
+      "reasoning": "The student has correctly set up the torque equilibrium equation; now they should articulate the underlying principle in their own words to demonstrate understanding.",
+      "state": "Synthesis",
+      "response": "In your own words, how do the pulley and lever together set the force you need?"
+    },
+    {
+      "turn": 13,
+      "student": "Tension is half the load; its torque plus beam weight balances my pull’s torque."
+    },
+    {
+      "turn": 14,
+      "speaker": "tutor",
+      "reasoning": "The student has successfully explained how the movable pulley and lever combine to determine the force required, indicating mastery of the concept.",
+      "state": "Closing",
+      "response": "Nice work! Want to try another problem?"
+    }
+  ]
+}

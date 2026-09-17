@@ -1039,5 +1039,425 @@
         "response": "You've got it exactly right! Great job working through that. Ready to try another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Comparing loan/interest offers",
+    "problem": "You need to borrow $1,000 for 2 years. Offer A is a simple interest loan at 10% per year. Offer B is a compound interest loan at 5% per year, but it requires a $30 flat processing fee upfront. Which loan is cheaper?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm not sure. One is 10% simple, one is 5% compound with a fee."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is overwhelmed; I need to diagnose their starting point for the first option.",
+        "state": "Diagnosis",
+        "response": "How would you start calculating the total cost for Offer A?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "10% of 1000 is 100, so the cost is $100?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student forgot the loan duration; I will prompt them to consider the 2-year term.",
+        "state": "Support",
+        "response": "Since the loan is for two years, does that 10% apply once or twice?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, so it's $200 total for Offer A."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Now that Offer A is solved, I need to see how they approach the compound interest.",
+        "state": "Diagnosis",
+        "response": "What about Offer B? How do you handle that 5%?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I don't really get what compound interest means."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is stuck; I'll provide a conceptual hint about the base amount changing.",
+        "state": "Support",
+        "response": "What if the 5% was calculated on the new total each year instead of just the start?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "So $50 for the first year, then 5% of $1050?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student understands the mechanism; now they need to calculate the final amount.",
+        "state": "Support",
+        "response": "Exactly. What does that second year add to the cost?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "That's $52.50. So the total is $102.50."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student forgot the processing fee; I'll hint at the other cost mentioned.",
+        "state": "Support",
+        "response": "Did we miss any other fixed costs mentioned in Offer B?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Right, the $30 fee! So it's $132.50 total."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Both costs are found; now the student must compare them to reach the conclusion.",
+        "state": "Diagnosis",
+        "response": "How does that total compare to the cost of Offer A?"
+      },
+      {
+        "turn": 15,
+        "speaker": "student",
+        "text": "Offer B is cheaper because $132.50 is less than $200."
+      },
+      {
+        "turn": 16,
+        "speaker": "tutor",
+        "reasoning": "The problem is solved; now I need the student to internalize the lesson.",
+        "state": "Synthesis",
+        "response": "In your own words, why can't we just look at the interest rates?"
+      },
+      {
+        "turn": 17,
+        "speaker": "student",
+        "text": "Because fees and the way interest compounds change the actual total cost."
+      },
+      {
+        "turn": 18,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully synthesized the concept; the session is complete.",
+        "state": "Closing",
+        "response": "Perfectly put! Ready for another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Mean, median, mode",
+    "problem": "A set of five positive integers has a unique mode of 6, a median of 7, and a mean of 8. What is the largest possible value for one of the integers?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know the total sum is 40 and the middle number is 7. I'm stuck."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student has the sum and median. I need to see if they can use the mode to find the other values.",
+        "state": "Diagnosis",
+        "response": "What does the mode tell you about the remaining numbers?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Since 6 is the mode, the first two must be 6. So maybe 6, 6, 7, 7, 14?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student suggested a bimodal set. I need to guide them to the 'unique mode' constraint.",
+        "state": "Support",
+        "response": "If there are two 6s and two 7s, what happens to the mode?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, it would be bimodal. So the fourth number has to be at least 8."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student corrected the mode error. Now I'll guide them to find the maximum fifth value.",
+        "state": "Support",
+        "response": "If the fourth number is 8, what is the largest the fifth can be?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Sum is 40, so $40 - (6+6+7+8) = 13$. Or could the fourth be 7.5?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student forgot the 'integers' constraint. I will provide a hint about the number type.",
+        "state": "Support",
+        "response": "Does the problem specify what kind of numbers are in the set?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Right, positive integers. So the maximum must be 13."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student reached the correct answer. Now I need them to articulate the overall logic.",
+        "state": "Synthesis",
+        "response": "How did balancing the mean and mode constraints determine that limit?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "To maximize one value, I minimized the others while keeping the mode unique and the sum constant."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student successfully synthesized the reasoning. The conversation is complete.",
+        "state": "Closing",
+        "response": "Perfectly put! Ready for another challenge?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "history_and_social_studies",
+    "topic": "Cause-and-effect in historical events",
+    "problem": "Analyze how the assassination of Archduke Franz Ferdinand led to World War I, specifically explaining why a local conflict in the Balkans became a global war.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the assassination started it, but I'm not sure why everyone else joined."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student recognizes the trigger but doesn't understand the escalation. I need to see what they know about international relations.",
+        "state": "Diagnosis",
+        "response": "What do you know about the relationships between European countries at that time?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "They were all just friends and wanted to help each other?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is attributing formal alliances to simple friendship. I will guide them toward the concept of treaties.",
+        "state": "Support",
+        "response": "Some were formal agreements. What happens when two countries sign a treaty to defend each other?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "If one is attacked, the other has to fight too."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student understands the mechanism of an alliance. Now I need to apply it to the specific actors.",
+        "state": "Diagnosis",
+        "response": "Exactly. So how does that apply to Austria-Hungary and Serbia?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Austria-Hungary attacked Serbia, so the whole world just started fighting immediately."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is skipping the intermediate steps of the escalation. I need to prompt them for the next specific link.",
+        "state": "Support",
+        "response": "It wasn't immediate. Who was supporting Serbia in that conflict?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I don't really get what that means."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student is stuck. I will provide a small hint about Russia to get the chain moving.",
+        "state": "Support",
+        "response": "Russia had a close connection to Serbia. If Russia stepped in, who would react next?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Germany would help Serbia because they were friends?"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has misidentified the alliance and reverted to the 'friendship' misconception. I need to correct the alliance pairing.",
+        "state": "Support",
+        "response": "Check the alliances again. Was Germany closer to Austria-Hungary or Serbia?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Germany was with Austria-Hungary. So they'd fight Russia and France."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified the chain of events. Now I want them to synthesize the overall principle.",
+        "state": "Synthesis",
+        "response": "Put it all together. How did one assassination lead to a global war?"
+      },
+      {
+        "turn": 15,
+        "speaker": "student",
+        "text": "The assassination triggered a chain reaction of alliances, forcing countries to join their partners until everyone was involved."
+      },
+      {
+        "turn": 16,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the cause-and-effect relationship of the alliance system.",
+        "state": "Closing",
+        "response": "Spot on! You nailed the chain reaction. Ready for the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "physics",
+    "topic": "Projectile motion basics",
+    "problem": "A ball is thrown horizontally at 10m/s from a 20m high cliff. At the same moment, another ball is dropped from the same height. Which ball hits the ground first, and how far from the base of the cliff does the thrown ball land?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm not sure if the thrown ball hits first."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is uncertain; I need to see their mental model of how horizontal motion interacts with vertical motion.",
+        "state": "Diagnosis",
+        "response": "How do you think the forward motion affects the fall?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "It's moving faster overall, so it should take longer to hit?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student incorrectly believes horizontal speed delays the fall. I'll provide a hint about the direction of gravity.",
+        "state": "Support",
+        "response": "Gravity only pulls down. Does it care about side-to-side speed?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I don't really get what that means."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is lost; I will provide a brief explanation and ask a leading question to bridge the gap.",
+        "state": "Support",
+        "response": "Horizontal and vertical motions don't interfere. Does gravity change for the thrown ball?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, so they both fall at the same speed?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student corrected the first mistake. Now we need to move toward calculating the landing distance.",
+        "state": "Support",
+        "response": "Exactly. To find distance, we need the fall time. How do we find that?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I'll use the diagonal distance for that."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student is trying to use the total path length instead of separating components. I'll hint to use only the height.",
+        "state": "Support",
+        "response": "Try using only the height. What's the formula for falling from rest?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Time is about 2 seconds, so distance is 10 times 2, which is 20m."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student reached the correct answer. Now I need them to internalize the core principle of independence.",
+        "state": "Synthesis",
+        "response": "Spot on. In your own words, why could we calculate them separately?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Because horizontal and vertical motions don't affect each other."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly articulated the principle of independence of motion.",
+        "state": "Closing",
+        "response": "Perfect! You've mastered the basics. Ready for another?"
+      }
+    ]
   }
 ]

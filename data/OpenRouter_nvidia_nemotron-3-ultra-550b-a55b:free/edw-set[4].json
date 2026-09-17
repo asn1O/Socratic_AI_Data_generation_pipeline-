@@ -1,0 +1,374 @@
+[
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "chemistry",
+    "topic": "Balancing chemical equations",
+    "problem": "Balance the chemical equation: C2H5OH + O2 -> CO2 + H2O",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'll put 1 CO2 for carbon."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student starts by balancing carbon but uses incorrect coefficient, showing misunderstanding of atom counting. Need to diagnose their approach.",
+        "state": "Diagnosis",
+        "response": "Balancing carbon first is a good strategy. However, how many carbon atoms are on the left side?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Left side has 2 carbons in C2H5OH, so maybe 2 CO2?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student recognizes two carbons but still unsure; provide hint to confirm.",
+        "state": "Support",
+        "response": "Yes, ethanol has two carbons, so you need 2 CO2 on the right. Now, how many hydrogens are in ethanol?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Ethanol has 6 hydrogens, so 3 H2O."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student correctly balanced hydrogen; now guide to oxygen balancing with hint.",
+        "state": "Support",
+        "response": "Good. For oxygen, count total oxygens on the right: 2 CO2 gives 4, 3 H2O gives 3. Hint: left side has 1 oxygen from ethanol."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "So I need 2 O2 to get 4 oxygens?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student miscalculates oxygen needed; diagnose by asking to recount.",
+        "state": "Diagnosis",
+        "response": "Let's recount: right side has 7 oxygens total. Ethanol provides 1, so O2 must supply 6. How many O2 molecules give 6 oxygens?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, 3 O2 gives 6 oxygens. So 3 O2."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student corrected oxygen; confirm full balance and hint to check all atoms.",
+        "state": "Support",
+        "response": "Correct. The balanced equation is C2H5OH + 3 O2 -> 2 CO2 + 3 H2O. Hint: verify each element matches."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Carbon 2, hydrogen 6, oxygen 7 both sides. It's balanced."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has balanced equation; now ask them to articulate the general rule.",
+        "state": "Synthesis",
+        "response": "Can you explain in your own words the steps for balancing a chemical equation?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "First balance elements that appear in one compound each, like C and H. Then balance O last. Adjust coefficients to get same atoms on both sides."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student correctly summarized the balancing procedure; conversation complete.",
+        "state": "Closing",
+        "response": "Great job! You've got it. Ready for another equation?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "history_and_social_studies",
+    "topic": "Cause-and-effect in historical events",
+    "problem": "Explain the cause-and-effect relationships that led to the French Revolution, considering long-term economic and social structures, Enlightenment ideas, and immediate political triggers.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the French Revolution was caused by the king spending too much money and people being unhappy, but I'm not sure how all the pieces fit together."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student shows partial grasp of causes but hasn't distinguished long-term vs immediate factors; need to diagnose their current framework.",
+        "state": "Diagnosis",
+        "response": "I see you've identified some factors. What do you see as the main long-term causes versus the immediate triggers?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Long-term causes include economic problems and social inequality. Immediate triggers were the calling of the Estates-General and the storming of the Bastille."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student identified some long-term and immediate causes; now guide them to connect financial crisis to political action.",
+        "state": "Support",
+        "response": "How did the kingdom's near bankruptcy and severe financial crisis lead the king to call the Estates-General in 1789?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "The king needed money, so he called the Estates-General to raise taxes, but the Third Estate wanted more representation."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student linked financial crisis to Estates-General; now probe the ideological influence of Enlightenment ideas.",
+        "state": "Diagnosis",
+        "response": "Enlightenment ideas were spreading across Europe at the time. What role did they play in shaping the demands of the Third Estate?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Enlightenment ideas spread concepts of liberty and equality, inspiring the Third Estate to challenge the traditional order and demand rights."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student explained Enlightenment's role; now support them to see how failed reforms escalated conflict.",
+        "state": "Support",
+        "response": "How did the monarchy's repeated failed attempts to reform taxation and share power escalate tensions among the three estates?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The king tried to impose taxes on the nobility, they resisted, leading to a deadlock, then the Third Estate declared the National Assembly."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has connected multiple strands; now ask for synthesis of the cause-and-effect framework.",
+        "state": "Synthesis",
+        "response": "Can you summarize how long-term structural problems, Enlightenment ideas, and immediate political missteps combined to produce the revolution?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "So the deep economic and social inequalities created pressure, Enlightenment ideas gave people a framework to demand change, and the king's failure to manage finances and share power turned that pressure into a revolutionary outbreak."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student articulated the integrated cause-and-effect model in their own words; conversation complete.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Blood relations",
+    "problem": "Consider the following family relationships:\n1. A is the father of B.\n2. B is the sister of C.\n3. C is the father of D.\n4. D is the brother of E.\n5. E is the daughter of F.\n6. F is the wife of G.\n7. G is the son of H.\n8. H is the brother of I.\n9. I is the father of J.\n10. J is the mother of K.\n\nHow is K related to A?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'll start by listing each relation. A is father of B, so B is child of A. B is sister of C, so C is also child of A. C is father of D, so D is grandchild of A. D is brother of E, so E is also grandchild of A, child of C. E is daughter of F, so F is mother of E. F is wife of G, so G is father of E. But C is already father of E, so that gives E two fathers. That seems contradictory. Maybe the puzzle expects us to realize C and G are the same person? But they're different letters, so I'm not sure. Also, G is son of H, and H is brother of I. I is father of J, J mother of K. I'm guessing K might be great-grandchild of A? But I'm confused."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student has outlined the chain but is stuck on the double-father problem; need to elicit whether they recognize that puzzle conventions force C and G to be identical.",
+        "state": "Diagnosis",
+        "response": "You've mapped the generations nicely. What does it imply about the identities of C and G if E has both of them as fathers in a standard family puzzle? Could two distinct men both be the biological father of the same child, or does the puzzle convention force them to be the same person?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "In these puzzles, each person usually has a unique identity, so C and G can't both be biological fathers of E unless they're the same person. But the problem uses different letters, so maybe they are different and E has a stepfather? Or maybe D and E are half-siblings sharing only mother F? Statement 4 says D is brother of E, which usually implies full siblings, but it's not explicit. If they're half-siblings, then C could be father of D only, and G father of E. But then C wouldn't be father of E, contradicting the sibling link. I'm leaning that C and G must be identical, but the notation is tricky."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student is considering half-siblings or stepfathers; a hint about full siblings sharing both parents should push them to equate C and G.",
+        "state": "Support",
+        "response": "If D and E are brothers, they typically share both parents. Since C is father of D, and G is father of E (via F), what must be true about C and G for them to both be fathers of the same set of children?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Right, if D and E are full siblings, they have the same father. So C and G must be the same person. That means G = C. Then statement 7: G is son of H, so C is son of H. But we already know A is father of C from statements 1 and 2. That would mean C has two fathers: A and H. Unless H is the same as A? But H is brother of I, and A is father of B and C. Could H be the father of A? That would make H the grandfather of C. But then C would be son of H? No, if H is father of A, then H is grandfather of C, not father. So that doesn't work. Maybe H is a different person and the puzzle has an error? I'm stuck. Therefore H must be the father of A."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly deduced C=G but then incorrectly assumes H could be father of A; a hint about the impossibility of being both son and grandson will correct this.",
+        "state": "Support",
+        "response": "You've got the key equivalences. Let's verify the generations: A is father of C, C is father of E, so A is great-grandfather of E. Meanwhile, A's brother I has child J, who has child K. So K is the great-niece of A. Does that match the definition of great-niece? And are there any other blood ties between K and A besides through I?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, right. That's impossible. So H cannot be the father of A. The only way for C to be son of both A and H is if A and H are the same person. So H = A. Then A is brother of I, etc. So K is great-niece of A. But wait, earlier I thought maybe D and E were half-siblings? That would break the C=G equivalence. But we already established they must be same. So that half-sibling idea was wrong. Great-niece is the child of one's niece. Since J is A's niece, K is A's great-niece. That seems solid."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student has the right answer but hasn't articulated the underlying rule; need to diagnose readiness for synthesis by asking for the rule.",
+        "state": "Diagnosis",
+        "response": "You've correctly identified the relationships. Can you explain in your own words the logical rule that allows us to equate C with G and H with A? And why does that rule hold in this type of puzzle, given the uniqueness of parental roles?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The rule is that each letter stands for a unique individual, and family relations are deterministic: a child has exactly one biological father and one biological mother. So if two men are both described as the father of the same child, they must be the same person. That forced C = G. Then since C is son of both A and H, A = H. I initially thought maybe half-siblings or stepfathers could allow different fathers, but the puzzle's conventions rule that out. So the rule is uniqueness of parental roles."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student explained the rule but could test its necessity; a counterfactual question reinforces why uniqueness matters.",
+        "state": "Support",
+        "response": "You've got it. Just to be thorough, consider what would happen if we didn't enforce the uniqueness of parental roles — if C and G could be different people. How would that change the answer and the structure of the family tree?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "If parental roles weren't unique, then C and G could be different, and H could be different from A. Then K could be related in multiple ways or not at all. The puzzle relies on that uniqueness to have a single solution. So the rule is essential."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student demonstrated understanding of the rule; now ask them to state the core principle in their own words to cement learning.",
+        "state": "Synthesis",
+        "response": "Perfect. Now, to make sure you've internalized the method, can you tell me in your own words what the core principle is that allows us to solve these blood relation puzzles by equating individuals when the same parental role appears twice?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The core principle is that in these puzzles, each named individual is a distinct person, and each child has exactly one biological father and one biological mother. When the same child is assigned two fathers (or two mothers), the two named fathers must refer to the same person. This forces us to equate seemingly different labels, collapsing the family tree and revealing the true relationships."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has fully explained the concept; conversation can close warmly.",
+        "state": "Closing",
+        "response": "Excellent work! You've nailed the logic and articulated the core principle perfectly. I'm impressed by how you worked through the equivalences. Ready for another challenge?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "biology",
+    "topic": "Photosynthesis",
+    "problem": "During photosynthesis, the light reactions produce ATP and NADPH. The Calvin cycle consumes them in a 3:2 ratio (ATP:NADPH). If only non-cyclic electron flow operates, the ratio produced is about 1.5:1 (ATP:NADPH). How does the plant adjust to meet the Calvin cycle's demand? Explain the role of cyclic electron flow.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think non-cyclic electron flow makes both ATP and NADPH, so the Calvin cycle should have what it needs."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student assumes non-cyclic flow alone meets Calvin cycle demand, revealing a gap in understanding ATP/NADPH ratios.",
+        "state": "Diagnosis",
+        "response": "Can you walk me through the ATP and NADPH yields from non-cyclic flow?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Non-cyclic produces 2 ATP per NADPH."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student overestimates ATP yield from non-cyclic flow; need to correct ratio and introduce Calvin cycle demand.",
+        "state": "Support",
+        "response": "Actually, non-cyclic yields about 1.5 ATP per NADPH. The Calvin cycle needs 3 ATP per 2 NADPH, so there's an ATP shortfall."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, so there's a shortage of ATP. Maybe cyclic electron flow helps?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student identifies cyclic flow as possible solution; reinforce that cyclic flow generates extra ATP.",
+        "state": "Support",
+        "response": "Cyclic electron flow around PSI generates extra ATP without making NADPH."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "So cyclic flow makes ATP only. But does it also make NADPH?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student mistakenly thinks cyclic flow might produce NADPH; clarify that it only produces ATP.",
+        "state": "Support",
+        "response": "No, cyclic flow only produces ATP; it recycles electrons back to the plastoquinone pool."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Got it. So the plant uses cyclic flow to boost ATP to match the 3:2 ratio."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has correct reasoning; now ask for synthesis in own words.",
+        "state": "Synthesis",
+        "response": "In your own words, how does the plant balance ATP and NADPH production?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The plant uses non-cyclic flow for both ATP and NADPH, but since that yields too little ATP, it adds cyclic flow around PSI to make extra ATP without NADPH, meeting the Calvin cycle's 3 ATP per 2 NADPH demand."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student correctly explained the concept; conversation can close.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for the next one?"
+      }
+    ]
+  }
+]

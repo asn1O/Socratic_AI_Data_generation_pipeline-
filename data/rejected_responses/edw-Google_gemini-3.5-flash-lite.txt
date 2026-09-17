@@ -623,3 +623,460 @@
     }
   ]
 }
+
+
+{
+  "problem": "Find the missing number in the series: 3, 7, 15, 31, 63, ?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I'm looking at this series and I tried subtracting first. 7 minus 3 is 4, 15 minus 7 is 8, and 31 minus 15 is 16. The differences keep doubling, so I think the next difference should be 32, which gives me 95."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student successfully noticed the doubling differences pattern and reached the correct numerical answer, but hasn't yet explained the underlying structural rule of how each term relates to the previous one.",
+      "state": "Diagnosis",
+      "response": "You tracked those differences really well! How else might you describe how each number in the sequence relates directly to the one right before it?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Wait, let me look at that again. To get from 3 to 7, I could just add 4, but maybe it's multiplying? Like, 3 times 3 is 9, minus 2 is 7. So maybe we multiply by 3 and subtract 2 each time?"
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student has asserted an incorrect rule (multiply by 3 and subtract 2), which conflicts with their own earlier correct difference pattern. I need to guide them back to test that hypothesis against the second step.",
+      "state": "Support",
+      "response": "Let's test that multiplying-by-three idea on your second step. If you take 7, multiply by 3, and subtract 2, what number does that give you, and does it match the series?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Oh, wait. 7 times 3 is 21, minus 2 is 19. But the next number in the series is 15, not 19. So that rule doesn't work at all. Let me go back to my first idea about the differences."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student recognized the flaw in their multiplication rule and returned to their initial correct insight. Now I want them to articulate the relationship between consecutive terms using powers or multiplication by 2.",
+      "state": "Diagnosis",
+      "response": "Right, that one leads away from the sequence. If we stick with those doubling differences you found earlier, what happens if you look at the relationship between doubling a term and adding something?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Hmm. Let's see... 3 times 2 is 6, plus 1 is 7. Then 7 times 2 is 14, plus 1 is 15. Oh! Every single time, you just multiply the previous number by 2 and add 1!"
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student has correctly identified the recursive rule (multiply by 2, add 1). To ensure they have fully internalized it, I need them to explain the general principle back to me.",
+      "state": "Synthesis",
+      "response": "That fits all the steps! Could you explain in your own words the general rule you just found for generating any term in this sequence?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "Sure! To find the next number in the series, you take the current number, multiply it by 2 to double it, and then add 1 to get the next term."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "The student has accurately articulated the rule in their own words, completing the learning objective successfully.",
+      "state": "Closing",
+      "response": "Spot on! You nailed it. Great job working through that, and let me know if you want to tackle another one!"
+    }
+  ]
+}
+
+
+{
+  "problem": "A quality control inspector is testing a batch of 10 electronic components, where each component has an independent 15% probability of being defective. What is the probability that exactly 2 components in the batch are defective, and how would you set up the calculation using a binomial probability distribution?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I started looking at this problem by thinking about combinations. Since we want 2 defective components out of 10, I know we need to use nCr to find the number of ways to choose them. But then for the probability part, I figured since there are 10 components and each has a 15 percent chance of failing, I should just multiply 0.15 by 2 and then multiply by the remaining working ones."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student correctly identified the combination component but made a classic first mistake by linearly scaling the probability instead of using independent probabilities for successes and failures. I will use Diagnosis to explore their thinking about that multiplication step without giving away the formula.",
+      "state": "Diagnosis",
+      "response": "You've made a great start by identifying the combinatorics part with nCr to choose the positions of the defective items. When you multiplied 0.15 by 2, how are you thinking about the probability of getting specifically those two defective components and the other eight working ones simultaneously?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Wait, if the probability of one being defective is 0.15, and we want two, shouldn't we raise 0.15 to the second power? And since the rest work, that means 8 out of 10 work, so the success probability for the working ones is 0.85 raised to the eighth power because each working one is 0.85."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student corrected their multiplication error and correctly identified the exponentiation for successes and failures, maintaining advanced reasoning. I'll use Support to nudge them to synthesize how all these pieces fit together into the full expression.",
+      "state": "Support",
+      "response": "That exponentiation step captures the independent probabilities for both outcomes much more accurately. If you combine that with the combination term you found initially, what does your complete mathematical expression for this binomial probability look like?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "So we have 10 choose 2, multiplied by 0.15 squared, multiplied by 0.85 to the eighth power. If we calculate 10 choose 2, that's 45. Then 0.15 squared is 0.0225. And 0.85 to the eighth is roughly 0.2725. Multiplying all those together gives us our final probability value."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student has correctly structured the calculation and broken down the components, but I want to ensure they deeply grasp why each part represents a distinct condition of the binomial process before moving to synthesis. I'll use Diagnosis to check their understanding of the underlying distribution assumptions.",
+ exatamente: "Diagnosis",
+      "response": "That breakdown of the arithmetic is spot on. Before we wrap this up, how do the individual parts of that formula—the combination and the two probability terms—relate back to the fundamental assumptions we have to make about these electronic components being tested?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "The combination part accounts for all the different possible arrangements or orders in which those two defects could happen among the ten components. The 0.15 squared represents the exact probability of getting two failures in a row, and 0.85 to the eighth is the probability of the other eight passing inspection successfully."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student understands the arrangement and probability components very well now. I'll use Support to prompt them toward generalizing this specific example into the overarching rule for binomial distributions.",
+      "state": "Support",
+      "response": "You've articulated how each factor contributes to the final outcome very clearly. Now, looking at how those pieces work together in this specific problem, how would you describe the general rule or formula for finding the probability of any given number of successes in a binomial setting?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "The general rule is that you take the number of trials choose the number of successes, multiply that by the probability of success raised to the number of successes power, and then multiply by the probability of failure raised to the number of failures, which is total trials minus successes."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "The student has clearly and accurately explained the underlying rule of the binomial probability distribution in their own words. I will now transition to Synthesis to cement this internalization before closing.",
+      "state": "Synthesis",
+      "response": "In your own words, why is it so crucial to include that combination coefficient at the very beginning rather than just calculating the raw probability of a single specific sequence of successes and failures?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "Because the probability calculation for the powers only gives us the exact likelihood of one specific arrangement—like the first two failing and the rest passing. The combination factor scales that up to account for all the other possible orderings where any two components could be the defective ones."
+    },
+    {
+      "turn": 12,
+      "speaker": "tutor",
+      "reasoning": "The student has successfully explained the core concept and reasoning. The session is complete.",
+      "state": "Closing",
+      "response": "Spot on! You've got a fantastic grasp of how binomial distributions work. Great job working through that, and let me know whenever you're ready for another challenge!"
+    }
+  ]
+}
+
+
+{
+  "problem": "Look at this letter sequence: A, C, F, J, O, ... What is the next letter in the sequence, and what rule generates it?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I'm looking at the gaps between the letters. From A to C is 2, C to F is 3, F to J is 4, and J to O is 5. So the differences are increasing by 1 each time. But I'm not totally sure how to apply that to find the next letter."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student correctly identified the arithmetic progression in the differences, so I will confirm this observation directly and prompt them to apply it to the final step.",
+      "state": "Support",
+      "response": "You've got the pattern of differences completely right—they increase by one each step. Since the last difference added to O was 5, what number should you add next?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Ah, okay, so the next difference needs to be 6. O is the 15th letter of the alphabet, so if I add 6 to that, I get 21. The 21st letter is U."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student has correctly calculated the next letter, so I will now ask them to synthesize the general rule to ensure they fully internalize the concept.",
+      "state": "Synthesis",
+      "response": "That's spot on! In your own words, how would you describe the rule we used to generate this entire sequence from start to finish?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "The sequence works by increasing the step size by one each time you move to the next letter. You start by adding 2, then 3, then 4, and so on, where the added value increments by 1 with every single step."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student has successfully explained the rule in their own words, so I am concluding the session with a warm closing turn.",
+      "state": "Closing",
+      "response": "Brilliant explanation, you nailed it! Great work working through that sequence today."
+    }
+  ]
+}
+
+
+{
+  "problem": "Identify and correct the subtle grammar and punctuation errors in the following multi-clause sentence: 'Everyone on the committee, except for the chairman and myself, were surprised by the unexpected budget shortfall that occurred yesterday.'",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I'm looking at this sentence, but honestly grammar rules are pretty overwhelming for me. I think maybe 'myself' should be 'me' because it sounds weird, but I'm completely lost on the rest of it."
+    },
+    {
+      "turn": 2,
+      "speaker": "reasoning": "The student correctly identified a pronoun issue with 'myself', showing partial intuition, but is stuck on the rest of the complex sentence. A Diagnosis state is appropriate here to probe their thinking on the verbs and subjects without giving anything away.",
+      "state": "Diagnosis",
+      "response": "You've already spotted a really interesting part with 'myself'! Before we look closer at that, what noun do you think is actually driving the main verb 'were' later in the sentence?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Wait, is 'were' connected to the chairman? Or maybe the committee? There are so many nouns right there near each other that I get confused about which one is the real subject."
+    },
+    {
+      "turn": 4,
+      "speaker": "reasoning": "The student is struggling to isolate the true grammatical subject from the intervening prepositional phrase, which is a classic beginner trap. A Support state with a gentle hint about what to cross out or ignore will help them focus.",
+      "state": "Support",
+      "response": "That is a really common trap when a phrase gets stuck right in the middle. What happens to the sentence if you temporarily cover up everything between the commas starting from 'except'?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "If I take out 'except for the chairman and myself', then it says 'Everyone on the committee were surprised'. Wait... does 'Everyone' go with 'were'?"
+    },
+    {
+      "turn": 6,
+      "speaker": "reasoning": "The student successfully stripped out the interrupting phrase and got right to the core subject-verb pair, but is hesitating on the agreement rule for an indefinite pronoun. A Diagnosis state will help them examine the number of 'Everyone'.",
+      "state": "Diagnosis",
+      "response": "When you say 'Everyone', does that word treat a group as multiple separate individuals, or as a single collective unit?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Even though it talks about a lot of people, 'everyone' feels like it's singular, kind of like saying 'each person'. So should 'were' actually be 'was'?"
+    },
+    {
+      "turn": 8,
+      "speaker": "reasoning": "The student correctly deduced that 'everyone' is singular and requires 'was'. Now we need to return to their very first instinct about 'myself' to resolve that part of the sentence. A Support state with a targeted prompt will guide them there.",
+      "state": "Support",
+      "response": "Spot on with 'was'! Now, let's circle back to that pronoun 'myself' you noticed at the very beginning. Why might 'me' or 'I' fit better there than 'myself'?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "Well, 'myself' usually sounds right when you're doing something to yourself, like 'I looked at myself in the mirror'. But here, I'm just part of a prepositional phrase following 'except for', so 'me' is the object form that fits best."
+    },
+    {
+      "turn": 10,
+      "speaker": "reasoning": "The student has successfully worked through both major errors and justified them clearly. Moving to Synthesis so they can articulate the core rules in their own words before we wrap up.",
+      "state": "Synthesis",
+      "response": "That is a fantastic explanation for both pieces. In your own words, how would you summarize the rule for checking subject-verb agreement when there's an interrupting phrase like 'except for...'?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "You have to ignore any extra phrases stuck between commas and look only at the main subject, and make sure singular words like 'everyone' match with singular verbs like 'was' instead of plural ones."
+    },
+    {
+      "turn": 12,
+      "speaker": "reasoning": "The student has successfully explained the core concept in their own words after working through the problem step by step. Closing out warmly with no new content.",
+      "state": "Closing",
+      "response": "Precisely right! You worked through a really tricky sentence structure there. Great job, and let me know whenever you're ready for another one!"
+    }
+  ]
+}
+
+
+{
+  "problem": "On a map where 1 centimeter equals 4 kilometers, two towns are 6 centimeters apart. What is the actual distance between them?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I think I need to multiply 6 by 4, but I'm not totally sure how the scale works here."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "Student shows the right instinct with multiplication but expresses hesitation. Since socratic level is low, I will directly confirm the operation while asking a guiding question.",
+      "state": "Support",
+      "response": "You're on the right track using multiplication. Remember that each centimeter represents 4 kilometers, so what does 6 centimeters mean?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "It means six groups of four kilometers, right?"
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "Student understands the grouping concept. I'll provide a direct hint to calculate that product.",
+      "state": "Support",
+      "response": "Exactly. Now try calculating what 6 times 4 gives you."
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "That would be 24."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "Student has the correct numerical value. I need to check if they understand the units.",
+      "state": "Diagnosis",
+      "response": "Good. What unit of measurement should go with that 24?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Kilometers, because the scale turns centimeters into kilometers."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "Student correctly identified kilometers. I will prompt them to synthesize the general rule.",
+      "state": "Synthesis",
+      "response": "Spot on. Can you explain in your own words how you use a map scale to find real distances?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "Yes, you take the map measurement in centimeters and multiply it by the number of kilometers each centimeter represents."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "The student has correctly explained the concept in their own words. Now moving to Closing.",
+      "state": "Closing",
+      "response": "Nice, that's exactly it! Want to try another one?"
+    }
+  ]
+}
+
+
+{
+  "problem": "Read this political argument and identify the primary logical fallacy at play: 'Senator Davis claims we need stricter environmental regulations on factories. But Davis owns shares in a green energy firm that stands to profit directly from those laws. Therefore, we shouldn't trust Davis's argument.'",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "That's clearly a false dilemma because it assumes Davis either wants clean air or personal profit."
+    },
+    {
+      "turn": 2,
+      "speaker": "reasoning": "The student has misidentified the fallacy as a false dilemma, missing the attack on the senator's motives and conflicts of interest. I need to probe their understanding of the structure of the argument.",
+      "state": "Diagnosis",
+      "response": "What makes you see a false dilemma there rather than a focus on who is speaking?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Well, it attacks Davis's financial motives instead of addressing the actual policy merits."
+    },
+    {
+      "turn": 4,
+      "reasoning": "The student has now correctly shifted to noticing the attack on motives, so I will diagnose whether they can link this specific personal attack to standard fallacy categories.",
+      "state": "Diagnosis",
+      "response": "You've spotted the shift from policy to person. What specific fallacy category names an attack on the arguer's character or circumstances?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "It's an appeal to hypocrisy, since Davis is a hypocrite for investing in green energy."
+    },
+    {
+      "turn": 6,
+      "reasoning": "The student made a mistake by mislabeling it as tu quoque (appeal to hypocrisy), which requires a hypocritical action rather than a vested financial interest. I'll prompt them to re-examine the specific subtype.",
+      "state": "Support",
+      "response": "Does Davis actually practice the opposite of what they preach here, or is the argument attacking their personal background and ties?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Ah, right. It attacks their financial ties, so it's circumstantial ad hominem."
+    },
+    {
+      "turn": 8,
+      "reasoning": "The student has successfully corrected their error and identified circumstantial ad hominem. Now I'll ask them to pinpoint the exact logical flaw in that reasoning.",
+      "state": "Diagnosis",
+      "response": "Why does dismissing an argument solely based on those circumstantial ties fail logically?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "Because a person's biases don't automatically make their factual claims or policy logic false."
+    },
+    {
+      "turn": 10,
+      "reasoning": "The student understands the core principle. I'll prompt them to synthesize this into a final definition in their own words.",
+      "state": "Synthesis",
+      "response": "In your own words, how would you define circumstantial ad hominem based on what we've discussed?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "Circumstantial ad hominem is when you reject an argument just because the person making it has a personal or financial stake in the outcome, ignoring whether the argument itself is valid."
+    },
+    {
+      "turn": 12,
+      "reasoning": "The student has correctly and completely explained the concept in their own words, so I am wrapping up the session.",
+      "state": "Closing",
+      "response": "Spot on! You nailed it. Ready for the next one?"
+    }
+  ]
+}
+
+
+{
+  "problem": "Consider the following algorithm: \n\n1. Set x = 2, y = 3, z = 0\n2. While x < 20:\n3.     If x is even:\n4.         z = z + x * y\n5.         y = y + 1\n6.     Else:\n7.         z = z - y\n8.     x = x + 3\n\nTrace the values of x, y, and z after the first two iterations of the while loop.",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "Okay, so x starts at 2 and y is 3. Since x is 2, it's less than 20, so we go into the loop. For the first iteration, x is even so we do z = 0 + 2 * 3 which is 6, and y becomes 4. Then x adds 3 so x is 5. For the second iteration, x is 5 which is odd, so z becomes 6 - 4 = 2, and x becomes 8. I think that's right, but I'm not totally sure about how y updates on the second step."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student correctly completed the first iteration and started the second, but expressed uncertainty about y. Since socratic_level is low, I will directly explain how the if-else branch affects y while nudging them to re-check the second iteration's conditions.",
+      "state": "Support",
+      "response": "You nailed the first iteration completely! Remember that y only increments inside the 'If x is even' branch on line 5. Since x was 5 on the second iteration, it hit the 'Else' branch. How does that affect y for the second step?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Oh, right! Since it hit the Else branch, y doesn't change and stays at 4. So for the second iteration, z was 6, and we subtract y (which is 4), so z becomes 2. And x goes from 5 to 8. Is y still 4 when we finish that second iteration?"
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student correctly resolved the y value for the second iteration. I'll provide direct confirmation of that value and prompt them to verify the final accumulated state of all variables.",
+      "state": "Support",
+      "response": "Yes, exactly, y remains 4 because the else branch doesn't modify it. Now that you have both iterations down, let's look at the final values for x, y, and z right after line 8 executes the second time."
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Let me trace it again. Start: x=2, y=3, z=0. Iteration 1 (x=2, even): z = 0 + (2 * 3) = 6. y becomes 3 + 1 = 4. x becomes 2 + 3 = 5. Iteration 2 (x=5, odd): z = 6 - 4 = 2. y stays 4. x becomes 5 + 3 = 8. So final values are x = 8, y = 4, z = 2."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student has accurately walked through both iterations and arrived at the correct final values. I'll reinforce this success and shift toward synthesizing the overarching logic of state tracking.",
+      "state": "Synthesis",
+      "response": "That trace is spot on. Every variable update was tracked correctly through both the even and odd branches. To make sure this sticks, can you summarize how you decided whether to modify y or not during a loop step?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Basically, you have to check the conditional statement at the start of each loop iteration before running any math. If the condition matches, you follow that specific branch's instructions for updates, and if not, you skip them and go to the else block."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student has successfully explained the core concept in their own words. The problem is fully solved and understood, so I will now transition to the closing turn.",
+      "state": "Closing",
+      "response": "Spot on! Tracking conditionals step-by-step is the key to mastering algorithm tracing. Great job working through this—let me know if you want to tackle another one!"
+    }
+  ]
+}

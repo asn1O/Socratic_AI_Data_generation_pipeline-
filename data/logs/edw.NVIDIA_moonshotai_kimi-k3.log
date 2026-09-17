@@ -90,3 +90,29 @@
   expired: True
   failure_categories:
   empty_response: 3
+2026-09-17 15:58:26,437 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-17 16:13:35,046 ERROR MODEL_FAILURE provider=NVIDIA model=moonshotai/kimi-k3 error_code=HTTP_504 reason=model call failed or returned no response
+2026-09-17 16:14:35,053 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-17 16:29:42,766 ERROR MODEL_FAILURE provider=NVIDIA model=moonshotai/kimi-k3 error_code=HTTP_504 reason=model call failed or returned no response
+2026-09-17 16:30:42,774 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-17 16:45:23,977 INFO SUCCESS provider=NVIDIA model=moonshotai/kimi-k3 total_tokens=3247 turns=14 path=data/NVIDIA_moonshotai_kimi-k3/edw-set[1].json
+2026-09-17 16:46:23,979 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-17 17:01:24,922 INFO SUCCESS provider=NVIDIA model=moonshotai/kimi-k3 total_tokens=3195 turns=14 path=data/NVIDIA_moonshotai_kimi-k3/edw-set[1].json
+2026-09-17 17:02:24,922 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-17 17:20:05,772 ERROR MODEL_FAILURE provider=NVIDIA model=moonshotai/kimi-k3 error_code=HTTP_504 reason=model call failed or returned no response
+2026-09-17 17:21:05,775 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-17 17:26:06,417 INFO SUCCESS provider=NVIDIA model=moonshotai/kimi-k3 total_tokens=3557 turns=12 path=data/NVIDIA_moonshotai_kimi-k3/edw-set[1].json
+2026-09-17 17:27:06,419 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-17 17:32:01,691 INFO SUCCESS provider=NVIDIA model=moonshotai/kimi-k3 total_tokens=3478 turns=16 path=data/NVIDIA_moonshotai_kimi-k3/edw-set[1].json
+2026-09-17 17:33:01,693 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-17 18:22:05,772 ERROR MODEL_FAILURE provider=NVIDIA model=moonshotai/kimi-k3 error_code=HTTP_504 reason=model call failed or returned no response
+  provider_model: NVIDIA / moonshotai/kimi-k3
+  attempts: 8
+  saved: 4
+  failed: 4
+  accept_rate: 50.00%
+  average_tokens: 0.00
+  turn_range: -
+  expired: True
+  failure_categories:
+  empty_response: 4

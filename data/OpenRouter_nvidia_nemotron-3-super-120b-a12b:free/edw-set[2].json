@@ -1261,5 +1261,191 @@
         "response": "Great job explaining how to calculate inflation from CPI numbers; you've got the concept down nicely. Would you like to try another similar problem to reinforce it?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Trip budget planning",
+    "problem": "You are planning a trip with a total budget of $300. Accommodation costs $80 per night, meals $30 per day, and you plan to spend $20 each day on activities. How many full days can you afford?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I started by adding the hotel and food costs because those seemed the biggest, so I did eighty dollars per night for the room plus thirty dollars per day for meals, which gives me one hundred ten dollars each day. Then I took my total budget of three hundred dollars and divided it by one ten, getting about two point seven, so I thought I could stay three days because you can’t have a fraction of a day and you’d want to use as much of the budget as possible."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student identified hotel and meal costs but left out the activity expense and assumed rounding up to the next whole day, indicating a gap in accounting for all daily costs and in interpreting the division result.",
+        "state": "Diagnosis",
+        "response": "Can you walk me through how you decided which expenses to include when calculating the daily cost, and tell me whether you think any other regular expenses might affect how many days you can stay within the budget? Also, could you explain how you interpreted the result of dividing the total budget by the daily cost, especially regarding fractional days?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I figured the activities cost is optional, so I left it out, and I only counted the room and food. When I divided three hundred by one ten, I got two point seven, and since you can’t spend part of a day, I rounded up to three days because I wanted to make sure I didn’t run out of money before the trip ended."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student persists in leaving out the activity cost and believes rounding up is appropriate, showing they need a prompt to review all expense items and to consider what the division result means for whole days.",
+        "state": "Support",
+        "response": "What would happen to your daily total if you added the twenty dollars you plan to spend on activities each day, and how might that change the number of whole days you can afford when you divide your budget by that new daily amount? Also, think about whether having a remainder after division means you can afford an extra full day or not."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Okay, I added the activity cost now: eighty for the room, thirty for food, and twenty for activities, which I think adds up to one hundred twenty dollars per day. Then I divided my three hundred dollar budget by one twenty, getting two point five, and since you can’t stay half a day, I concluded you can afford exactly two full days."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student added the three expense items incorrectly, getting one twenty instead of one thirty, indicating they need a prompt to verify each addend and the sum.",
+        "state": "Support",
+        "response": "If you take the nightly room charge of eighty dollars, add the daily meal cost of thirty dollars, and then also add the activity fee of twenty dollars, what total do you get when you sum those three amounts carefully? Also, consider whether any of those numbers might be misread or combined incorrectly, and how you could double‑check your addition."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I added the costs correctly this time: eighty plus thirty plus twenty equals one hundred thirty dollars per day. Dividing three hundred by one thirty gives about two point three. Since you can’t have a fraction of a day, I think you could still manage three days by using the leftover money for cheaper meals or skipping an activity."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has the correct daily cost but misunderstands how to interpret the quotient, believing leftover funds can stretch to another full day, indicating need for a prompt on whole‑day constraints.",
+        "state": "Support",
+        "response": "When you divide the total budget by the daily cost and get a result like two point three, what does the decimal part tell you about the money left after paying for two full days, and can that leftover amount cover another full day at the same daily rate?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "After thinking about it, two full days cost two times one thirty, which is two hundred sixty dollars, leaving forty dollars left over. Since forty dollars is less than the daily cost of one thirty, I can’t afford a third full day, so the most I can stay is two days."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly computed the number of days and justified it with the cost comparison, showing they are ready to articulate the underlying rule in their own words.",
+        "state": "Synthesis",
+        "response": "Could you describe, in your own words, the general method you used to determine how many days of the trip you can afford given a fixed budget and known daily expenses? Please include the steps of adding up the daily costs, dividing the budget by that total, and interpreting the result to find the maximum whole number of days."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "First, I add up all the expenses that happen each day—like lodging, food, and activities—to get a single daily cost. Then I divide my total budget by that daily cost to see how many days’ worth of money I have. If the division gives a decimal, I drop the fraction because I can only pay for whole days, so the whole number part is the maximum stay."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the budgeting rule in their own words, indicating mastery of the concept and readiness to wrap up.",
+        "state": "Closing",
+        "response": "You've clearly explained how to add up daily costs, divide your total budget by that amount, and use the whole‑number part to find the longest stay you can afford. That’s exactly the right approach for trip budget planning. If you ever want to try another scenario, I'm here to help."
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Ethical dilemmas (trolley-problem style)",
+    "problem": "A runaway trolley is headed toward five workers on the track. You can pull a lever to divert the trolley onto a side track where there is one worker. Is it morally permissible to pull the lever? Explain your reasoning.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think pulling the lever is wrong because you shouldn't kill anyone, even to save others, and you shouldn't use a person as a means."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student expressed deontological view focusing on duty; need to uncover reasoning and hint at consequences.",
+        "state": "Diagnosis",
+        "response": "What do you think about the consequences of each action?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Also, it doesn't matter how many lives are saved; one life is just as valuable as five, so you can't trade lives."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student claims numbers irrelevant; need to hint at outcome focus.",
+        "state": "Support",
+        "response": "Looking at the numbers, five saved versus one lost, does that shift the balance?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Pulling the lever is just like pushing a fat man onto the track; both involve killing someone directly, so it's still murder."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student conflates lever with footbridge; need to explore distinction while hint at difference.",
+        "state": "Diagnosis",
+        "response": "What difference does the method of diversion make to your judgment?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I guess pulling the lever saves more lives, but it still feels wrong to use someone as a means to an end."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student acknowledges benefit but feels wrong; need to hint at consequentialist justification.",
+        "state": "Support",
+        "response": "Think about the result: fewer deaths overall. Does that make the action more acceptable?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I'm not sure; maybe the numbers do matter, but I still worry about rights."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student wavering; need to see guiding principle while hint at outcome.",
+        "state": "Diagnosis",
+        "response": "When you weigh lives saved against lives lost, which outcome looks better?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I think consequences should matter more, so pulling the lever reduces harm and is permissible."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has articulated consequentialist stance; need them to explain rule in own words.",
+        "state": "Synthesis",
+        "response": "In your own words, why does choosing the action with fewer deaths make pulling the lever permissible?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Because choosing the action with fewer deaths minimizes harm, pulling the lever is permissible."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the consequentialist principle; conversation can wrap up.",
+        "state": "Closing",
+        "response": "Nice work, you've got it! Want to try another dilemma?"
+      }
+    ]
   }
 ]

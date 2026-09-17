@@ -129,3 +129,53 @@
   expired: False
   failure_categories:
   none
+2026-09-17 15:58:26,438 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-17 15:58:58,334 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=7181 turns=14 path=data/Google_gemini-3.6-flash/edw-set[3].json
+2026-09-17 15:59:58,337 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-17 16:00:38,125 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=6661 turns=12 path=data/Google_gemini-3.6-flash/edw-set[3].json
+2026-09-17 16:01:38,127 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-17 16:03:30,726 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=8987 turns=12 path=data/Google_gemini-3.6-flash/edw-set[3].json
+2026-09-17 16:04:30,728 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-17 16:05:12,956 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=10332 turns=12 path=data/Google_gemini-3.6-flash/edw-set[3].json
+2026-09-17 16:06:12,953 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-17 16:07:05,258 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=11403 turns=14 path=data/Google_gemini-3.6-flash/edw-set[3].json
+2026-09-17 16:08:05,261 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-17 16:08:45,714 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=10382 turns=12 path=data/Google_gemini-3.6-flash/edw-set[3].json
+2026-09-17 16:09:45,717 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-17 16:11:28,339 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=7322 turns=12 path=data/Google_gemini-3.6-flash/edw-set[3].json
+2026-09-17 16:12:28,342 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-17 16:13:37,897 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=11541 turns=12 path=data/Google_gemini-3.6-flash/edw-set[3].json
+2026-09-17 16:14:37,904 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-17 16:15:11,856 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=9035 turns=14 path=data/Google_gemini-3.6-flash/edw-set[3].json
+2026-09-17 16:16:11,864 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-17 16:16:30,882 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=5679 turns=12 path=data/Google_gemini-3.6-flash/edw-set[3].json
+2026-09-17 16:17:30,889 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-17 16:18:06,668 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=6349 turns=14 path=data/Google_gemini-3.6-flash/edw-set[3].json
+2026-09-17 16:19:06,676 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-17 16:19:33,495 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=6917 turns=12 path=data/Google_gemini-3.6-flash/edw-set[4].json
+2026-09-17 16:20:33,503 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-17 16:21:15,618 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=7724 turns=12 path=data/Google_gemini-3.6-flash/edw-set[4].json
+2026-09-17 16:22:15,616 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-17 16:23:07,764 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=11597 turns=14 path=data/Google_gemini-3.6-flash/edw-set[4].json
+2026-09-17 16:24:07,772 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-17 16:24:31,567 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=5868 turns=12 path=data/Google_gemini-3.6-flash/edw-set[4].json
+2026-09-17 16:25:31,575 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-17 16:26:08,119 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=8657 turns=12 path=data/Google_gemini-3.6-flash/edw-set[4].json
+2026-09-17 16:27:08,114 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-17 16:27:10,653 ERROR MODEL_FAILURE provider=Google model=gemini-3.6-flash error_code=HTTP_429 reason=model call failed or returned no response
+2026-09-17 16:28:10,660 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-17 16:28:13,366 ERROR MODEL_FAILURE provider=Google model=gemini-3.6-flash error_code=HTTP_429 reason=model call failed or returned no response
+2026-09-17 16:29:13,369 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-17 16:29:16,097 ERROR MODEL_FAILURE provider=Google model=gemini-3.6-flash error_code=HTTP_429 reason=model call failed or returned no response
+2026-09-17 16:29:16,098 ERROR MODEL_EXPIRED provider=Google model=gemini-3.6-flash reason=three consecutive API failures
+2026-09-17 16:30:16,101 INFO MODEL_SUMMARY
+  provider_model: Google / gemini-3.6-flash
+  attempts: 19
+  saved: 16
+  failed: 3
+  accept_rate: 84.21%
+  average_tokens: 8477.19
+  turn_range: 12-14
+  expired: True
+  failure_categories:
+  empty_response: 3

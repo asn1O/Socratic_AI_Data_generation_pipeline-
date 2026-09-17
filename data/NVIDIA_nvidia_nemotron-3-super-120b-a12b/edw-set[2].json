@@ -1114,5 +1114,290 @@
         "response": "Nice work! Want to try another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "biology",
+    "topic": "Punnett squares / genetics",
+    "problem": "In a species of plant, flower color is controlled by two genes. Gene A determines whether pigment is made: allele A (dominant) leads to pigment production, allele a (recessive) results in no pigment (white flowers). Gene B modifies the pigment: if at least one B allele is present, the pigment appears blue; if the genotype is bb, the pigment appears red. A plant with genotype AaBb is crossed with a plant that is aaBb. What fraction of the offspring will have white flowers?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this problem and I feel a bit lost because there are two genes involved. I know how to do a Punnett square for one gene, but with two I’m not sure whether I should make one big 4x4 grid or two separate squares and then combine them. I also don’t fully understand how the white phenotype arises from the combination of A and B. Could you help me figure out where to start?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student expresses uncertainty about how to handle two genes and the white phenotype, indicating they need to articulate their current approach so we can diagnose misconceptions.",
+        "state": "Diagnosis",
+        "response": "When you tackle a single‑gene Punnett square, what is your typical process for writing down the parental genotypes, filling in the grid, and reading off the possible offspring genotypes? And when you face a problem where two genes together decide the phenotype, which parts of that process do you think stay the same, and where do you feel unsure about how to combine the information from both genes?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I’d set up a 4x4 Punnett square using the gametes from each parent. The AaBb parent can give AB, Ab, aB, or ab; the aaBb parent can only give aB or ab. I think white flowers show up only when both genes are recessive, so I’d look for aabb genotypes in the square and count them to find the fraction."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student incorrectly ties white to both genes being recessive, showing a misunderstanding of the role of gene A alone in pigment production; we ask them to explain their thinking to surface the misconception.",
+        "state": "Diagnosis",
+        "response": "You said that white flowers show up only when both genes are recessive. Could you explain in detail how you arrived at that conclusion, what you think each gene contributes to the phenotype, and why you believe the B gene must also be homozygous recessive for the flower to be white?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I think the chance of getting aa is 1/2 because the Aa parent gives a half the time and the aa parent always gives a. For the B gene, each parent gives a b allele half the time, so the chance of bb is 1/2 * 1/2 = 1/4. Since I need both aa and bb for white, I multiply them: 1/2 * 1/4 = 1/8 of the offspring will be white."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student still believes both recessive alleles are needed for white, indicating they haven’t grasped that aa alone yields white; we ask them to reconsider the definition of white based on gene A alone.",
+        "state": "Diagnosis",
+        "response": "When you claim that white only appears with the genotype aabb, what specific reasoning leads you to think the B gene must be homozygous recessive for whiteness? If you were to ignore the B gene entirely and focus only on the A locus, what genotype would you say guarantees a white flower, and why?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I now see that if the plant is aa at the pigment locus, it cannot make any pigment, so intuitively the flowers should be white regardless of the B alleles. However, I’m still uneasy because I imagine that a dominant B allele might somehow interact with the lack of pigment to produce a faint color, so I think the safest way to guarantee white flowers is to require both genes to be homozygous recessive, aabb, to be absolutely certain no color can appear."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student still believes both recessive alleles are needed for white, indicating they haven’t grasped that aa alone yields white; we prompt them to consider the phenotype of aa with any B allele.",
+        "state": "Support",
+        "response": "If a plant has the genotype aa at the pigment locus, it cannot synthesize any pigment, regardless of whether it carries BB, Bb, or bb at the modifier gene. What would the flowers look like in those cases—would they still be white, or would the B allele somehow produce color even without pigment? How does this help us decide which genotypes actually produce white flowers?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Okay, I think I get it now: white flowers appear whenever the plant is aa, because no pigment is made, so the B gene doesn’t matter. To find the fraction of white offspring, I need the probability of aa from the cross Aa × aa. I recall that gives a ½ chance, but I’m unsure if I need to also consider the B gene, which makes me guess the answer might be 1/4."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has identified the correct condition for white (aa) but is unsure about the probability and incorrectly thinks the B gene might affect it; we ask them to explain their reasoning about the cross so we can see where the uncertainty lies.",
+        "state": "Diagnosis",
+        "response": "You mentioned being unsure whether to consider the B gene when calculating the chance of aa. Can you walk me through in detail how you think the B gene might influence the outcome, and what you know about the gametes each parent contributes for the A locus?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I see now that the Aa parent gives either A or a, each half the time, and the aa parent always gives a, so the offspring genotypes at the A locus are Aa or aa, each with a ½ probability. Therefore the chance of getting aa is ½. Since white flowers occur whenever the plant is aa, regardless of what the B gene does, the fraction of white‑flowered offspring is also ½."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly computed the probability and stated that white depends only on aa, indicating they have grasped the concept; we now ask them to articulate the underlying rule in their own words to ensure internalization.",
+        "state": "Synthesis",
+        "response": "In your own words, explain why the B gene does not influence whether a flower is white, and describe the rule that determines flower color based on the A and B genes."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "White flowers happen only when the plant cannot make any pigment, which is when it has two recessive a alleles (aa). The B gene only changes the color of the pigment that is made, so if there is no pigment at all, the B alleles have nothing to act on and the flower stays white regardless of whether it is BB, Bb, or bb. Therefore, to get white offspring we just need to look for the aa genotype at the A locus."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the rule for white flowers in their own words, showing they have internalized the concept; the conversation can now end with a positive closing.",
+        "state": "Closing",
+        "response": "Nice work! You’ve explained the concept perfectly—white flowers occur whenever the plant is aa, and the B gene doesn’t affect that. Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Simple vs compound interest",
+    "problem": "You invest $10,000 at a nominal annual rate of 6%. Determine the amount after 5 years for (a) simple interest, (b) interest compounded quarterly, and (c) interest compounded continuously. Which option yields the highest amount?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Simple interest: $10,000 × 0.06 × 5 = $3,000 interest, total $13,000."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student computed simple interest correctly but hasn't addressed compounding.",
+        "state": "Diagnosis",
+        "response": "You computed simple interest correctly. Let's see how you'd handle quarterly compounding."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Quarterly: divide rate by 4 → 0.015 per quarter. 5 years ×4 =20 quarters. Interest =0.015×20×$10,000 = $3,000, total $13,000."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student treated quarterly interest as simple rather than compounded.",
+        "state": "Support",
+        "response": "Consider reinvesting each quarter's interest."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Each quarter I multiply principal by 1.015. After 20 quarters: $10,000×1.015^20 ≈ $13,468."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student correctly computed quarterly compounding; ready to explore continuous compounding.",
+        "state": "Support",
+        "response": "As compounding frequency increases, growth approaches a continuous limit."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Continuous: A=Pe^{rt}. With r=0.06, t=5: A=$10,000×e^{0.3}≈$10,000×1.3499=$13,499."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student has computed all three amounts; need to prompt comparison of trends.",
+        "state": "Support",
+        "response": "Think about how the amounts change as compounding frequency goes from 1 to 4 to infinity."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Simple gives $13,000; quarterly about $13,468; continuous about $13,499."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student listed amounts; need to explain why continuous is highest.",
+        "state": "Support",
+        "response": "Explain why continuous compounding yields the most money."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Continuous compounds continually, giving exponential growth; simple is linear; quarterly grows slower due to fewer periods."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept; conversation concludes.",
+        "state": "Closing",
+        "response": "Great job! Want to try another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Direction sense",
+    "problem": "A person starts at point O facing north. They walk 6 meters forward, then turn 90° to their right and walk 4 meters, then turn 90° to their left and walk 3 meters, then turn 90° to their right and walk 2 meters, then turn 90° to their left and walk 5 meters. In which direction is the final point relative to the starting point?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the person ends up north of the start because they only counted the forward walks."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student only considered forward movements, ignoring how turns change orientation.",
+        "state": "Diagnosis",
+        "response": "How did the turns affect the direction they were facing after each segment?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "After turning right then left, I think they end up facing east."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student misjudged the net effect of the turn sequence; need to prompt them to track facing after each turn.",
+        "state": "Support",
+        "response": "What direction are they facing after the first turn?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "After the first turn they face east, and after the second turn they face west."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly applied a left turn from east; need a hint about left turn direction.",
+        "state": "Support",
+        "response": "If you're facing east and turn left, which way are you pointing?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I'm not sure how left and right work when you're not facing north."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student expresses uncertainty about left/right relative to current facing; need to elicit their understanding of left from a known orientation.",
+        "state": "Diagnosis",
+        "response": "When you're facing north, which way is left?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "If I'm facing north, left is west."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified left from north; now need to apply same logic to east to solidify the concept.",
+        "state": "Support",
+        "response": "If you're facing east, which way is left?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "If I'm facing east, left is north."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student now grasps left/right turns; ready to synthesize how to combine movements to find net displacement.",
+        "state": "Synthesis",
+        "response": "Can you explain how you would combine all the moves to find the final position relative to the start?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "I add north moves, subtract south, add east, subtract west. I got 14 north and 6 east, so NE."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the rule for combining movements to find net direction.",
+        "state": "Closing",
+        "response": "Nice, you've got it! Want to try another one?"
+      }
+    ]
   }
 ]

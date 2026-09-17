@@ -52,3 +52,21 @@
   expired: True
   failure_categories:
   empty_response: 3
+2026-09-17 15:58:26,443 INFO MODEL_START provider=Google model=gemini-2.5-flash-lite
+2026-09-17 15:58:27,927 ERROR MODEL_FAILURE provider=Google model=gemini-2.5-flash-lite error_code=HTTP_404 reason=model call failed or returned no response
+2026-09-17 15:59:27,925 INFO MODEL_START provider=Google model=gemini-2.5-flash-lite
+2026-09-17 15:59:28,560 ERROR MODEL_FAILURE provider=Google model=gemini-2.5-flash-lite error_code=HTTP_404 reason=model call failed or returned no response
+2026-09-17 16:00:28,562 INFO MODEL_START provider=Google model=gemini-2.5-flash-lite
+2026-09-17 16:00:29,333 ERROR MODEL_FAILURE provider=Google model=gemini-2.5-flash-lite error_code=HTTP_404 reason=model call failed or returned no response
+2026-09-17 16:00:29,333 ERROR MODEL_EXPIRED provider=Google model=gemini-2.5-flash-lite reason=three consecutive API failures
+2026-09-17 16:01:29,333 INFO MODEL_SUMMARY
+  provider_model: Google / gemini-2.5-flash-lite
+  attempts: 3
+  saved: 0
+  failed: 3
+  accept_rate: 0.00%
+  average_tokens: 0.00
+  turn_range: -
+  expired: True
+  failure_categories:
+  empty_response: 3
