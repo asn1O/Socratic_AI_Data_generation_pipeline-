@@ -156,3 +156,53 @@
   expired: False
   failure_categories:
   empty_response: 4
+2026-09-17 06:14:41,868 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b
+2026-09-17 06:14:43,396 ERROR MODEL_FAILURE provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b error_code=HTTP_404 reason=model call failed or returned no response
+2026-09-17 06:15:43,397 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b
+2026-09-17 06:15:43,639 ERROR MODEL_FAILURE provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b error_code=HTTP_404 reason=model call failed or returned no response
+2026-09-17 06:16:43,639 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b
+2026-09-17 06:16:43,862 ERROR MODEL_FAILURE provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b error_code=HTTP_404 reason=model call failed or returned no response
+2026-09-17 06:16:43,862 ERROR MODEL_EXPIRED provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b reason=three consecutive API failures
+2026-09-17 06:17:43,862 INFO MODEL_SUMMARY
+  provider_model: NVIDIA / nvidia/nemotron-3-ultra-550b-a55b
+  attempts: 3
+  saved: 0
+  failed: 3
+  accept_rate: 0.00%
+  average_tokens: 0.00
+  turn_range: -
+  expired: True
+  failure_categories:
+  empty_response: 3
+2026-09-17 08:44:29,066 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b
+2026-09-17 08:44:30,184 ERROR MODEL_FAILURE provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b error_code=HTTP_404 reason=model call failed or returned no response
+2026-09-17 08:44:30,184 ERROR MODEL_EXPIRED provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b reason=three consecutive API failures
+2026-09-17 08:45:30,185 INFO MODEL_SUMMARY
+  provider_model: NVIDIA / nvidia/nemotron-3-ultra-550b-a55b
+  attempts: 1
+  saved: 0
+  failed: 1
+  accept_rate: 0.00%
+  average_tokens: 0.00
+  turn_range: -
+  expired: True
+  failure_categories:
+  empty_response: 1
+2026-09-17 08:47:18,712 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b
+2026-09-17 08:47:19,653 ERROR MODEL_FAILURE provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b error_code=HTTP_404 reason=model call failed or returned no response
+2026-09-17 08:48:19,653 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b
+2026-09-17 08:48:19,910 ERROR MODEL_FAILURE provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b error_code=HTTP_404 reason=model call failed or returned no response
+2026-09-17 08:49:19,910 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b
+2026-09-17 08:49:20,139 ERROR MODEL_FAILURE provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b error_code=HTTP_404 reason=model call failed or returned no response
+2026-09-17 08:49:20,142 ERROR MODEL_EXPIRED provider=NVIDIA model=nvidia/nemotron-3-ultra-550b-a55b reason=three consecutive API failures
+2026-09-17 08:50:20,143 INFO MODEL_SUMMARY
+  provider_model: NVIDIA / nvidia/nemotron-3-ultra-550b-a55b
+  attempts: 3
+  saved: 0
+  failed: 3
+  accept_rate: 0.00%
+  average_tokens: 0.00
+  turn_range: -
+  expired: True
+  failure_categories:
+  empty_response: 3

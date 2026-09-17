@@ -92,3 +92,87 @@
     }
   ]
 }
+
+
+{
+  "problem": "Maya won a pair of concert tickets in a radio contest — she paid nothing for them. She could sell them online for $120. If she goes to the concert instead, she'll spend $30 on parking and gas, and going to the concert means missing a 4-hour babysitting gig that pays $15 per hour. What is the true opportunity cost of Maya attending the concert, and why?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "Okay so... the tickets were free, so I feel like the concert basically costs her nothing? Like, maybe just the $30 for parking and gas? But that seems too simple, so I'm guessing I'm missing something."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student has latched onto the money actually leaving Maya's pocket (the $30) and ignored everything she gives up by attending. I need to first understand how she's thinking about 'cost' before steering her, so I'll diagnose her current approach.",
+      "state": "Diagnosis",
+      "response": "Good instinct that it's more than $30 — you're right to be suspicious of the simple answer. Let me ask you something first: when we say 'cost' in economics, are we only talking about money that leaves your wallet? Think about what Maya gives up by choosing the concert. Walk me through everything she's sacrificing, not just what she pays for."
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Hmm, well, she's giving up the babysitting money, I guess. Four hours at $15, so that's $60 she doesn't earn. But the tickets were free, so I don't think they count as a cost of anything?"
+    },
+    {
+      "turn": 3,
+      "speaker": "tutor",
+      "state": "Support"
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student correctly identified the forgone babysitting income ($60) but is stuck on the 'free ticket' intuition — a classic trap. I'll give a direct reframe (low socratic level) with a hint that points at resale value without computing anything for her.",
+      "state": "Support",
+      "response": "You're exactly right about the $60 — earning nothing that night is a real cost. Now, about those 'free' tickets: free to get doesn't mean free to keep. Here's the key — by using the ticket, Maya is giving up whatever the ticket could have gotten her. What's the alternative if she doesn't go to the concert? What could she actually do with that ticket?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Ohh, she could sell it for $120. So going to the concert means giving up that $120 too? Even though she never paid for it in the first place?"
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student just had the key insight — the resale value counts even though the tickets were free — but she's still tentative. I'll confirm it directly and push her to now assemble the full picture herself.",
+      "state": "Support",
+      "response": "Exactly — that $120 is money in her pocket that she chooses to walk away from. You either sell the ticket or you watch the concert; you can't do both. So tell me now: if you put everything together, what are all the things Maya gives up by attending, and what's the total? Lay it out piece by piece."
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Okay, so: $120 from not selling the ticket, $60 from not babysitting, and $30 for parking and gas. So... $210 total? I think that's it, but I'm not totally sure whether all three really belong in there or if some of them overlap."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student reached $210 with all three components, but she voices reasonable uncertainty about whether items overlap or all count. I'll validate the answer and then test her understanding with a quick boundary case so it's robust, not memorized.",
+      "state": "Support",
+      "response": "$210 is correct, and all three belong — none of them overlap, because each is a separate thing she sacrifices: one is spending, one is foregone earnings, one is a foregone resale. Here's a quick check to make sure the idea sticks: what if the tickets were completely worthless — she couldn't sell them to anyone, not even for a dollar? What would the opportunity cost be then?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "Then it would just be the $60 babysitting money plus the $30 parking — so $90. Because a ticket you can't sell isn't worth anything, so giving it up costs you nothing."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "The student handled the variation perfectly, showing she really grasps that opportunity cost depends on the value of what's given up, not what was paid. She's ready to articulate the general principle in her own words.",
+      "state": "Synthesis",
+      "response": "Perfect — that's exactly right, and it shows you're not just pattern-matching numbers. So now, stepping back from Maya: how would you describe opportunity cost in general, in your own words? What's the actual rule for figuring it out in any situation?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "It's basically the value of everything you give up when you choose something — not just the money you spend, but also what you could've earned or gotten by doing the next best thing instead. What you paid to get something originally doesn't matter; what matters is what it's worth to you right now and what alternatives you're sacrificing."
+    },
+    {
+      "turn": 12,
+      "speaker": "tutor",
+      "reasoning": "The student explained the concept fully and correctly in her own words, capturing both forgone spending and the irrelevance of sunk acquisition price. The learning goal is met, so it's time to wrap up warmly.",
+      "state": "Closing",
+      "response": "Nicely said — that's opportunity cost exactly. You worked through the tricky 'free ticket' part all on your own. Want to try another one, maybe with a business decision this time?"
+    }
+  ]
+}

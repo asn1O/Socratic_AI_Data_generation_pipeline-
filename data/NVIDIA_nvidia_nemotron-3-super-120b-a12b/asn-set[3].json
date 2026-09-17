@@ -853,5 +853,575 @@
         "response": "Nice work! Ready for another problem?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "biology",
+    "topic": "Punnett squares / genetics",
+    "problem": "In a certain plant, flower color is determined by two genes. Gene A has alleles A (dominant, red) and a (recessive, white). Gene B has alleles B (dominant, pigment production) and b (recessive, no pigment). If a plant is homozygous recessive for gene B (bb), it produces no pigment and appears white regardless of gene A. A cross between two heterozygous plants for both genes (AaBb × AaBb) is performed. What fraction of the offspring will have red flowers?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think I need to make a Punnett square for each gene, but I'm not sure how to combine the results to predict flower color."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student knows to make separate Punnett squares but is unsure how to combine the two genes for phenotype; we ask them to articulate what each square shows to uncover their thinking.",
+        "state": "Diagnosis",
+        "response": "Can you walk me through what genotypes and phenotypes you would get from each individual Punnett square for gene A and for gene B?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "For gene A, crossing Aa × Aa gives 1 AA : 2 Aa : 1 aa, so 3/4 have at least one A. For gene B, the same cross gives 3/4 with at least one B."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student correctly gave monohybrid ratios; we affirm and provide a hint about the epistatic effect of bb to guide them toward phenotype mapping.",
+        "state": "Support",
+        "response": "You're right that each gene gives a 3/4 chance of the dominant allele. Remember that if the plant is bb, it makes no pigment and the flower is white no matter what the A allele is."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I think if the plant is bb, the flower is white; otherwise the color depends on whether there is at least one A allele."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student identified that bb leads to white but hasn't considered the case of aa with B_; we ask about that case to push them to complete the phenotype rule.",
+        "state": "Diagnosis",
+        "response": "What would you expect the flower color to be when the plant has at least one B allele but is aa for the A gene?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "If there is at least one B but the genotype is aa, there is no red pigment, so the flower would be white as well."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student correctly noted that aa B_ also yields white; we affirm their understanding to reinforce correct reasoning.",
+        "state": "Support",
+        "response": "That's correct: whenever bb is present or the plant is aa with B_, the flower lacks red pigment and appears white."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "So for a flower to be red, it must have at least one B allele to make pigment and at least one A allele to make that pigment red; otherwise it's white."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has articulated the phenotype rule for red flowers; we ask how to compute the probability given independent assortment to prompt quantitative reasoning.",
+        "state": "Diagnosis",
+        "response": "Given that the two genes assort independently, how would you find the probability of getting both at least one A and at least one B?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I would multiply the probabilities: 3/4 chance of at least one A times 3/4 chance of at least one B, which equals 9/16."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student correctly calculated the probability as 9/16; we affirm their work to confirm understanding before they explain the rule.",
+        "state": "Support",
+        "response": "Exactly, you've got the right calculation: 9/16 of the offspring are expected to have red flowers, which matches the phenotypic ratio we expect."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Red flowers need at least one B for pigment and at least one A to make it red; each gene gives a 3/4 chance of the dominant allele, so multiply to get 3/4 × 3/4 = 9/16."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has successfully explained the rule and probability in their own words; we wrap up the conversation with praise and an invitation to continue.",
+        "state": "Closing",
+        "response": "Great job understanding how the two genes interact to determine flower color. Let me know if you'd like to practice more similar problems."
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Simple vs compound interest",
+    "problem": "Suppose you deposit $2000 in a savings account that offers 4% annual interest. Calculate the amount after 5 years using (a) simple interest and (b) compound interest compounded yearly.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "For simple interest, I find the yearly interest: 2000 * 0.04 = 80, then multiply by 5 years = 400. So the interest earned is $400."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student gave interest only, missing adding principal to get total amount. Need to elicit how to get total.",
+        "state": "Diagnosis",
+        "response": "How would you get the total amount from the interest?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think the total amount is the principal times (1 plus the rate) to the power of the years, so 2000 * (1.04)^5."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student applied compound formula to simple interest; need to remind them that simple interest adds same amount each year.",
+        "state": "Support",
+        "response": "Simple interest adds the same amount each year. What total interest does that give after 5 years?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Each year the interest is 80, so over 5 years that's 80 * 5 = 400. Adding to the principal gives 2000 + 400 = $2400 total."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student now has correct simple interest total; need to move to compound interest.",
+        "state": "Diagnosis",
+        "response": "How would you compute the amount with compound interest?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "For compound interest, you just multiply the principal by (1 plus rate times years), so 2000 * (1 + 0.04 * 5) = 2000 * 1.2 = $2400."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly applied simple interest formula to compound; need to elicit correct compound reasoning.",
+        "state": "Diagnosis",
+        "response": "What happens to the interest earned in the first year when calculating interest for the second year?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "In the second year, you earn interest on the new balance, which includes the first year's interest. So after year one: 2000 * 1.04 = 2080. Year two: 2080 * 1.04 = 2163.20. Year three: 2163.20 * 1.04 = 2249.73. Year four: 2249.73 * 1.04 = 2339.72. Year five: 2339.72 * 1.04 = 2433.31."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has correct compound amount; they previously said simple interest total $2400. Now they might compare.",
+        "state": "Support",
+        "response": "You calculated simple interest total as $2400. Which amount ends up larger, simple or compound?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Simple interest yields more money than compound interest."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly claims simple yields more; need to guide them to articulate difference.",
+        "state": "Synthesis",
+        "response": "You've found simple interest gives $2400 and compound interest gives about $2433. Explain in your own words how simple and compound interest differ."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "With simple interest, you earn the same interest each year based only on the original principal, so the total is principal plus principal times rate times years. With compound interest, you earn interest on the principal plus any interest already accumulated, so the balance grows each year and you earn interest on a larger amount."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the rule; conversation can wrap up.",
+        "state": "Closing",
+        "response": "Nice, you've got it! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "chemistry",
+    "topic": "Periodic table trends",
+    "problem": "Compare the atomic radii of lithium and beryllium. Which is larger and explain the trend.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think beryllium is bigger than lithium because it has more protons."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student claims Be larger due to more protons, showing misunderstanding of nuclear charge effect. Need to probe reasoning.",
+        "state": "Diagnosis",
+        "response": "What makes you think more protons makes the atom bigger?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I guess because more positive charge pushes the electron cloud outward."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student still thinks positive charge expands cloud; need to hint about effective nuclear charge pulling inward.",
+        "state": "Support",
+        "response": "Think about how protons attract electrons—does attraction make things bigger or smaller?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "But more protons also mean more electrons, so the size might stay about the same."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student invokes proton-electron cancellation; need to see if they grasp net effect.",
+        "state": "Diagnosis",
+        "response": "When protons increase, what happens to the pull on electrons?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I think atomic radius only depends on the number of electron shells."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student focuses solely on shells; need to hint about effective nuclear charge across period.",
+        "state": "Support",
+        "response": "Across a period, protons increase but electrons stay in same shell—what does that do to pull on electrons?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "More protons pull electrons tighter, making the atom smaller."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student gave correct reasoning about pull; now ask them to articulate rule in own words.",
+        "state": "Synthesis",
+        "response": "In your own words, why does atomic radius change across a period?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Across a period, atomic radius decreases because effective nuclear charge increases, pulling electrons closer to the nucleus."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept, so conversation wraps up.",
+        "state": "Closing",
+        "response": "Great job! Want to try another similar problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Coding-decoding",
+    "problem": "In a certain code, each letter is replaced by the next letter in the alphabet (Z goes to A). For example, 'HELLO' is written as 'IFMMP'. How would you write 'WORLD' in this code?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I see HELLO turns into IFMMP but I'm not sure what the pattern is."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student shows uncertainty about the pattern; need to elicit their observations.",
+        "state": "Diagnosis",
+        "response": "What do you notice about how each letter changes?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Each letter looks different, but I can't tell if it's plus one or something else."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student uncertain about the operation; ask an open question to encourage testing a hypothesis.",
+        "state": "Support",
+        "response": "How could you check whether each letter moved by the same amount?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I could look at the positions of each letter in the alphabet and see the difference."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student suggested checking positions; need to see what they find.",
+        "state": "Support",
+        "response": "What do you find when you compare the positions?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "H is 8, I is 9 (+1); E is 5, F is 6 (+1); L is 12, M is 13 (+1). Looks like each goes up by one."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student identified a uniform +1 shift; prompt them to apply it to the new word.",
+        "state": "Support",
+        "response": "How would you use that observation to encode WORLD?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "W (23) -> X (24), O (15) -> P (16), R (18) -> S (19), L (12) -> M (13), D (4) -> E (5). So the code is XPSME."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student correctly applied the rule; now ask them to articulate it in their own words.",
+        "state": "Synthesis",
+        "response": "In your own words, what is the rule being used here?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "You take each letter and replace it with the next letter in the alphabet, and if it's Z you go back to A."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has explained the rule correctly; conversation wraps up.",
+        "state": "Closing",
+        "response": "Nice, you've got it! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "biology",
+    "topic": "Photosynthesis",
+    "problem": "In an experiment, isolated chloroplasts are illuminated with either 660 nm light (primarily absorbed by Photosystem II) or 730 nm light (primarily absorbed by Photosystem I), or a combination of both. The rate of NADPH production is measured. With 660 nm light alone, NADPH production is low; with 730 nm light alone, NADPH production is also low; but when both wavelengths are provided together, NADPH production is high. Explain why NADPH production requires both photosystems to be active, describing the flow of electrons from water to NADP+.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think that shining 660 nm light mainly drives Photosystem II, which splits water and passes electrons to the plastoquinone pool, but I'm unclear why 730 nm light alone, which mainly excites Photosystem I, doesn't lead to much NADPH production. Perhaps PSI needs reduced plastoquinone from PSII to have electrons to donate to NADP+."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student shows partial understanding of PSII's role but is unclear about PSI's need for light; we need to elicit their view of the full electron flow from water to NADP+.",
+        "state": "Diagnosis",
+        "response": "Can you walk me through the typical path an electron takes from water splitting in Photosystem II all the way to NADP+ reduction in Photosystem I, mentioning the carriers involved? Please include the role of each carrier and where light energy is used."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I know PSII uses light to split water and produce plastoquinol, which then goes to the cytochrome b6f complex, and plastocyanin carries electrons to PSI. But I'm not sure what light energy does at PSI or how that leads to NADPH."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student described the electron flow up to PSI but is uncertain about what light energy does at PSI; we give a minimal hint about light boosting electron energy.",
+        "state": "Support",
+        "response": "In the chain we discussed, electrons arrive at PSI with a certain energy level after passing through plastoquinone and cytochrome b6f. Recall that each photosystem uses light to raise the energy level of electrons; what do you think happens to the electrons when PSI absorbs light?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I think when PSI absorbs light, the electrons get boosted to a higher energy level, allowing ferredoxin to transfer them to NADP+ reductase, which then produces NADPH. Without this second light-driven boost, the electrons from water would not have sufficient reduction potential to reduce NADP+."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student has explained PSI's role but hasn't yet connected it to the requirement of both wavelengths; we ask about a scenario with only 660 nm light to provoke thinking about the consequence for electron flow and NADPH production.",
+        "state": "Diagnosis",
+        "response": "We’ve established that electrons from water go through plastoquinone to PSI; now consider an experiment where chloroplasts are illuminated exclusively with 660 nm light, which primarily drives Photosystem II. Which photosystem would be active in this case, and how would that affect the overall flow of electrons and the eventual production of NADPH?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "If only 660 nm light is present, Photosystem II can split water and produce plastoquinol, but Photosystem I won't receive light energy, so the electrons cannot be boosted enough to reduce NADP+, resulting in low NADPH production. When both wavelengths are provided, each photosystem can be excited, but I'm not fully sure how that leads to high NADPH."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student remains uncertain about how simultaneous activation of both photosystems leads to high NADPH; we ask them to think about the overall electron flow when both can absorb light at the same time.",
+        "state": "Diagnosis",
+        "response": "What do you think happens to the overall electron flow when both Photosystem II and Photosystem I are able to absorb light simultaneously? Please explain your reasoning, considering the roles of water splitting, electron carriers, and NADP+ reduction, and how this overall affects NADPH production."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I think that when both photosystems can absorb light, electrons from PSII still travel via plastoquinone and cytochrome b6f to PSI, but I'm unclear whether the light energy at PSI is essential for boosting those electrons to reduce NADP+ or if another factor limits NADPH production."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student still questions whether PSI's light energy is essential; we pose a counterfactual about a PSI‑light‑deficient mutant to clarify the necessity of PSI's light absorption for NADPH production.",
+        "state": "Diagnosis",
+        "response": "Imagine we use a mutant chloroplast that cannot absorb light at PSI but still has normal PSII activity. What would you predict for NADPH production under illumination with both wavelengths, and what reasoning leads you to that prediction? Please explain your thinking in detail clearly."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I think that if PSI cannot absorb light, the electrons arriving from PSII would lack the energy boost needed to reduce NADP+, so NADPH production would stay low; however, I wonder if there might be some other way for the electrons to reach NADP+ without that boost."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has demonstrated understanding of the electron transport chain and the role of light at each photosystem; they are now ready to articulate the principle that both wavelengths are required for high NADPH production.",
+        "state": "Synthesis",
+        "response": "Based on our discussion of how electrons move from water to NADP+ via plastoquinone, cytochrome b6f, and plastocyanin, and how each photosystem uses light to boost electron energy, in your own words, explain why providing both 660 nm and 730 nm light together results in high NADPH production, whereas each wavelength alone gives low production."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Both photosystems need to be activated by light: PSII uses 660 nm light to split water and generate electrons that travel through the electron transport chain to PSI; PSI then uses 730 nm light to re‑energize those electrons so they have enough reducing power to ferredoxin and NADP+ reductase, producing NADPH. If only one wavelength is present, either electrons aren’t made or they aren’t boosted enough, so NADPH stays low."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the rule that both photosystems must be activated by light to drive electron flow from water to NADP+, producing high NADPH only when both wavelengths are present.",
+        "state": "Closing",
+        "response": "Great job explaining how both photosystems work together to produce NADPH! Ready for another challenge?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Supply and demand",
+    "problem": "Given the demand curve Qd = 100 - 2P and supply curve Qs = 20 + 3P, find the equilibrium price and quantity.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think equilibrium is where demand equals zero, so I set 100-2P=0 and got P=50."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly set demand to zero, showing misunderstanding of equilibrium definition. Need to clarify concept before proceeding.",
+        "state": "Diagnosis",
+        "response": "Equilibrium in a market is where quantity demanded equals quantity supplied, not where demand is zero. How would you set up the equation for equilibrium?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I would set Qd equal to Qs, so 100 - 2P = 20 + 3P."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student correctly set up equilibrium equation; now they need to solve for P. Provide a minimal hint to isolate P.",
+        "state": "Support",
+        "response": "Try to get all the P terms on one side of the equation to solve for P."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I subtract 3P from both sides: 100 - 2P - 3P = 20. Then subtract 100: -5P = -80, so P = -16."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student made an algebra slip when solving for P, resulting in a negative price. Need to point out the error and guide them to correct solving.",
+        "state": "Diagnosis",
+        "response": "When you subtracted 3P from both sides you correctly got 100 -5P = 20, but solving -5P = -80 gives P = 16, not -16. Check your division by -1."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, I see, dividing -5P = -80 by -5 gives P = 16."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly found the equilibrium price; acknowledge progress and prepare them to compute quantity without giving a direct hint.",
+        "state": "Support",
+        "response": "Nice work finding the equilibrium price; you've correctly isolated P and are ready to compute the equilibrium quantity by substituting back into either demand or supply."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "To find the equilibrium quantity, I plug P = 16 into the demand equation: Qd = 100 - 2*16 = 100 - 32 = 68."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student computed quantity using demand; we can affirm and suggest verifying with supply to reinforce understanding.",
+        "state": "Support",
+        "response": "You can also check using the supply equation to confirm the same quantity, which helps ensure that your solution is consistent."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Using supply: Qs = 20 + 3*16 = 20 + 48 = 68, which matches the quantity I got from demand, confirming the solution."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has demonstrated correct solution steps; now prompt them to articulate the underlying principle in their own words.",
+        "state": "Synthesis",
+        "response": "In your own words, explain why setting quantity demanded equal to quantity supplied finds equilibrium and how you solved for price and quantity, describing each step clearly."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Equilibrium means the market clears, so quantity demanded equals quantity supplied. Setting Qd = Qs gives the price where this happens. Then I solve for P and plug it back into either demand or supply to get the equilibrium quantity."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the equilibrium concept and solution process in their own words; conversation can wrap up.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! You've grasped the equilibrium concept well and solved the problem correctly. Want to try another problem to practice?"
+      }
+    ]
   }
 ]

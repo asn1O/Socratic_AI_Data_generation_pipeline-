@@ -539,3 +539,169 @@ print x, y",
     }
   ]
 }
+
+
+{
+  "problem": "A can finish a task in 6 days, B can finish the same task in 9 days. How many days will they take if they work together?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I think if they work together we just add the days, so 6 plus 9 equals 15 days."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "Student gave an incorrect additive approach; need to understand their reasoning.",
+      "state": "Diagnosis",
+      "response": "I see you added the days; let's talk about what adding days means in this context."
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "I'm not really sure why adding days doesn't work. It just seemed like the total time should be more."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "Student expresses uncertainty about why addition fails; need to hint at daily work concept.",
+      "state": "Support",
+      "response": "Think about how much of the job each person finishes in one day instead of the total days."
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Okay, so maybe A does some part each day and B does some part each day?"
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "Student is approaching the idea of daily work; we provide A's daily share to move forward.",
+      "state": "Support",
+      "response": "Let's find each person's daily work share: A finishes one sixth of the job per day."
+    },
+    {
+      "turn": 7,
+      "student": {
+        "text": "A finishes one sixth of the job each day because he completes it in six days."
+      }
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "Student now knows A's share; we give B's share to set up addition.",
+      "state": "Support",
+      "response": "Now we need B's daily share; since he finishes the job in nine days, he completes one ninth each day."
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "B finishes one ninth each day, and together they do one sixth plus one ninth per day."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "Student has the two fractions; we ask them to interpret the sum and find time.",
+      "state": "Synthesis",
+      "response": "What does the combined fraction represent, and how do you get the total time from it?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "One sixth plus one ninth equals five eighteenths of the job per day, so to finish the whole job you take the reciprocal, which is eighteen fifths days, or three and three fifths days."
+    },
+    {
+      "turn": 12,
+      "speaker": "tutor",
+      "reasoning": "Student has correctly explained the rule and arrived at the solution; conversation can end warmly.",
+      "state": "Closing",
+      "response": "Nice work! You've got the idea of adding rates and flipping to find time. Want to try another problem?"
+    }
+  ]
+}
+
+
+{
+  "problem": "In pea plants, tall (T) is dominant to short (t). A heterozygous tall plant (Tt) is crossed with a homozygous short plant (tt). What fraction of the offspring will be tall?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I know tall is dominant, but I'm not sure how to set up the Punnett square for Tt x tt."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "Student shows uncertainty about initializing the Punnett square; need to elicit their current approach to identify gaps.",
+      "state": "Diagnosis",
+      "response": "It looks like you're unsure where to place the alleles. Can you tell me what you think the first step is when making a Punnett square for this cross?"
+    },
+    {
+      "turn": 3,
+      "speaker": "tutor",
+      "reasoning": "Student asserts that filling boxes with only the top allele yields all tall offspring, indicating a misunderstanding of how to combine alleles; need a minimal hint to redirect attention to the correct combination process.",
+      "state": "Support",
+      "response": "When you fill each box, you combine the allele from the top with the allele from the side. So what would you get if you combine a T from the top with a t from the side?"
+    },
+    {
+      "turn": 4,
+      "speaker": "student",
+      "text": "You would get Tt. Since T is dominant, I think tt would also be tall, so all offspring end up tall."
+    },
+    {
+      "turn": 5,
+      "speaker": "tutor",
+      "reasoning": "Student still believes tt genotype yields a tall phenotype, showing a confusion about dominance; need to clarify phenotype-genotype relationship before proceeding.",
+      "state": "Diagnosis",
+      "response": "You mentioned that tt might be tall because T is dominant. Let's think about what the genotype tt actually means for the phenotype. What phenotype would you expect from a plant with genotype tt, given that T is dominant for tall?"
+    },
+    {
+      "turn": 6,
+      "speaker": "student",
+      "text": "If the genotype is tt, there's no T allele, so the plant would be short."
+    },
+    {
+      "turn": 7,
+      "speaker": "tutor",
+      "reasoning": "Student now correctly identifies tt as short; next step is to have them enumerate the actual genotypes from the cross to see the distribution.",
+      "state": "Diagnosis",
+      "response": "Great. Now can you list the genotypes you would expect in each box of the Punnett square for Tt x tt?"
+    },
+    {
+      "turn": 8,
+      "speaker": "student",
+      "text": "I think we'd get TT, Tt, tT, and tt. Since TT and Tt are tall, three out of four would be tall."
+    },
+    {
+      "turn": 9,
+      "speaker": "tutor",
+      "reasoning": "Student introduced a TT genotype that cannot arise from the given parents, indicating a need to revisit which alleles each parent can actually contribute.",
+      "state": "Diagnosis",
+      "response": "Let's double-check the alleles each parent can contribute. The tall parent is Tt, so what alleles can it give? The short parent is tt, what alleles can it give?"
+    },
+    {
+      "turn": 10,
+      "speaker": "student",
+      "text": "The tall parent can give either T or t, and the short parent can only give t."
+    },
+    {
+      "turn": 11,
+      "speaker": "tutor",
+      "reasoning": "Student has correctly identified the possible alleles; now we need them to articulate the expected phenotypic ratio and reasoning in their own words to internalize the concept.",
+      "state": "Synthesis",
+      "response": "Based on what we've discussed, can you explain what phenotypic ratio you expect from this cross and why?"
+    },
+    {
+      "turn": 12,
+      "speaker": "student",
+      "text": "Because the tall parent can pass T or t and the short parent always passes t, we get Tt (tall) and tt (short) offspring in equal numbers. So half the offspring are tall and half are short, a 1:1 phenotypic ratio."
+    },
+    {
+      "turn": 13,
+      "speaker": "tutor",
+      "reasoning": "Student has successfully explained the rule in their own words, indicating mastery of the concept; conversation can wrap up warmly.",
+      "state": "Closing",
+      "response": "Nice work! You've got it. Want to try another problem?"
+    }
+  ]
+}

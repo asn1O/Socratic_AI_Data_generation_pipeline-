@@ -1,0 +1,881 @@
+[
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "history_and_social_studies",
+    "topic": "Timeline reasoning",
+    "problem": "A historian is trying to place events on a timeline. Event A occurred in 1492, Event B occurred 30 years after Event A, Event C occurred half as many years before Event A as Event B occurred after Event A, and Event D occurred 20 years before Event C. What year did Event D occur?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think Event B is 1492 plus 30, so 1522. Then Event C is halfway between A and B? I'm not sure."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student correctly computed B but expressed uncertainty about C, indicating they need to articulate their reasoning for the 'half as many' relationship.",
+        "state": "Diagnosis",
+        "response": "Can you tell me how you decided what Event C should be?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think Event C is 1492 plus half of 30, so 1492 +15 =1507."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly placed C after A by adding half the interval; they need a reminder that the description specifies C occurs before A.",
+        "state": "Support",
+        "response": "Remember, the description said C occurs before A. What does 'half as many years before A as B occurred after A' mean for the direction?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "So C is before A, maybe 1492 minus 15? That would be 1477."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student now has C correct; to check understanding of D we ask them to apply the 'before' operation.",
+        "state": "Support",
+        "response": "Now that we have C at 1477, how would you find D if it occurred 20 years before C?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I think D is 20 years after C, so 1477 +20 =1497."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student mistakenly added years for D instead of subtracting, showing confusion about the direction indicated by 'before'.",
+        "state": "Support",
+        "response": "Think about the word 'before'—if something happens 20 years before a date, do you add or subtract those 20 years?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I should subtract, so D is 1477 minus 20 =1457."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has the correct numeric answer; we now ask them to articulate the underlying rule in their own words to consolidate understanding.",
+        "state": "Synthesis",
+        "response": "In your own words, can you explain how you determined the year for any event based on the description?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "You find each event by adding or subtracting the years given, making sure to go the right direction based on whether it says before or after."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student's explanation omitted the proportional 'half as many' step; we prompt them to explain how they handled that specific relationship.",
+        "state": "Support",
+        "response": "You mentioned adding or subtracting; how did you handle the part where C is half as many years before A as B is after A?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "First I found B by adding 30 years to A. Then I took half of that 30, which is 15, and subtracted it from A to get C because it said before A. Finally I subtracted 20 years from C to get D because it said before C."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has successfully explained the rule for solving timeline problems, so we can wrap up the conversation.",
+        "state": "Closing",
+        "response": "Nice, you've got it! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "chemistry",
+    "topic": "Periodic table trends",
+    "problem": "Which element has a higher first ionization energy: magnesium (Mg) or aluminum (Al)?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think Al has a higher ionization energy because it has more protons."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student attributes higher IE to more protons alone, showing a simplistic view. Need to explore their reasoning.",
+        "state": "Diagnosis",
+        "response": "What makes you think more protons leads to higher ionization energy?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "More protons always means higher ionization energy."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student asserts an absolute rule that ignores subshell effects, indicating a misconception. Need to hint at electron configuration influence.",
+        "state": "Support",
+        "response": "What happens when you add a proton but also add an electron to a new subshell?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I'm not sure what you mean by subshell."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student expresses uncertainty about subshell concept, revealing a gap. Need to diagnose their knowledge of electron locations.",
+        "state": "Diagnosis",
+        "response": "Can you tell me where the outermost electron of Mg and Al are located?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Mg's outermost electron is in the 3s orbital, and Al's is also in the 3s orbital."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly places Al's outermost electron in 3s, showing misunderstanding of electron configuration. Need to guide them to recall Al's actual configuration.",
+        "state": "Support",
+        "response": "What about the electron configuration of Al?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Al has configuration [Ne] 3s2 3p1."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student now gives correct configuration, showing readiness to connect configuration to ionization energy. Prompt them to explain the consequence.",
+        "state": "Synthesis",
+        "response": "In your own words, why does that make Mg's ionization energy higher than Al's?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Mg's 3s electron is lower energy than Al's 3p electron, so Mg needs more energy to remove it."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student correctly explained the rule linking subshell energy to ionization energy, indicating mastery.",
+        "state": "Closing",
+        "response": "Nice work! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Opportunity cost",
+    "problem": "Maya has a free weekend. She can either work a part-time job that pays $12 per hour for 8 hours, take a short certification course that costs $80 and will increase her hourly wage by $2 for future work (so she could earn $14 per hour for the same 8 hours after the course), or go hiking with friends which costs nothing but she values the enjoyment at $30. What is the opportunity cost of choosing the certification course?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think opportunity cost is what you give up, maybe the $80 cost of the course? But I'm not sure if that's right."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student expressed uncertainty about opportunity cost, mentioning the course cost but not sure; need to elicit their reasoning about trade-offs.",
+        "state": "Diagnosis",
+        "response": "I want to understand how you're thinking about each option. Can you tell me what you'd be giving up if you chose the certification course?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "If I take the course, I pay $80 and I could have worked instead earning $12 per hour for 8 hours, which is $96. So I'd be giving up $96."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student gave correct numeric trade-off but hasn't articulated the general concept; we need to guide them to define opportunity cost in their own words.",
+        "state": "Support",
+        "response": "You correctly found that choosing the course means giving up $96 from working. How would you describe opportunity cost in your own words?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Opportunity cost is what you lose when you pick one option instead of another."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student offered a partial definition missing the idea of the next best alternative; we need to hint at that missing piece.",
+        "state": "Support",
+        "response": "You said it's what you lose; that's a good start. What do you think about the idea of the 'next best' alternative? How does that fit in?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "It's the value of the best alternative you didn't choose."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student now has a correct definition; we want them to apply it to another scenario to reinforce understanding.",
+        "state": "Synthesis",
+        "response": "That's a solid definition. Let's try applying it: if Maya decided to go hiking instead, what would be the opportunity cost?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "She would give up working, which pays $96, because that's more than what she'd get from the course."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified the foregone alternative for hiking; we want to confirm they considered both alternatives and reinforce the concept.",
+        "state": "Support",
+        "response": "You correctly identified that working gives $96, which is more than the course's net gain. Does that make working the next best alternative when hiking is chosen?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Yes, working is the best alternative you'd give up, so opportunity cost of hiking is $96."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has applied the concept correctly twice; now we prompt them to articulate the general principle in their own words.",
+        "state": "Synthesis",
+        "response": "You've applied the idea correctly twice now. Can you state what opportunity cost means in your own words, summarizing the principle?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Opportunity cost is the value of the next best alternative you give up when you make a choice."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept in their own words; conversation can wrap up.",
+        "state": "Closing",
+        "response": "Great job! You've explained opportunity cost nicely. Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Sampling bias",
+    "problem": "A researcher wants to estimate the average weekly exercise time of adults in a city by surveying people at a local gym. Identify the potential sampling bias and explain why it occurs.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think surveying people at the gym is fine because it's easy to reach many people quickly."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student mentions convenience but hasn't considered bias; need to check understanding of sample representativeness.",
+        "state": "Diagnosis",
+        "response": "Is the gym crowd similar to the whole adult population?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Even if it's not similar, a large sample size will cancel out any bias."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student claimed sample size fixes bias; need to correct that bias is about selection, not size.",
+        "state": "Support",
+        "response": "Bias depends on who is selected, not just how many. What makes this sample non-random?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Because we only asked people who go to the gym, it's not random."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student identified non-randomness; now need to think about direction of bias.",
+        "state": "Support",
+        "response": "Consider the direction: if gym-goers exercise more, would your estimate be too high or too low?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "It would be too high because they likely exercise more than average."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student explained direction; now need to articulate general rule.",
+        "state": "Synthesis",
+        "response": "Think about representativeness: in your own words, when does a sample cause bias?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "A sample causes bias only if it's too small; size matters, not who is in it."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student reverted to sample size misconception; need to correct that bias is about representativeness.",
+        "state": "Support",
+        "response": "Is the gym crowd representative of all adults in the city? Why or why not?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "No, because gym-goers are likely more active, so they don't represent all adults."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student now understands representativeness; need them to summarize rule.",
+        "state": "Synthesis",
+        "response": "Can you summarize the bias issue in one sentence, focusing on who is left out?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "If the sample over-represents active people, the estimate will be too high, like gym-goers."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student correctly explained the concept; conversation can wrap up.",
+        "state": "Closing",
+        "response": "Nice, you've got it! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Blood relations",
+    "problem": "P is the father of Q. Q is the sister of R. R is the mother of S. S is the son of T. How is P related to T?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think P is the father of S."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student claims P is father of S without showing generational reasoning; need to explore their thinking.",
+        "state": "Diagnosis",
+        "response": "How did you reach that conclusion?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "P is the brother of T."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student asserts brother relationship; need to see basis.",
+        "state": "Diagnosis",
+        "response": "What makes you think they are brothers?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "P is the son of T."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student claims P is son of T, which confuses generations; hint to consider generation gap.",
+        "state": "Support",
+        "response": "What generation would P be in compared to T?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Maybe P is the grandfather of T."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student suggests grandfather; need to see how they would test.",
+        "state": "Diagnosis",
+        "response": "How would you test if P is grandfather of T?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I think P is the father-in-law of T."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student gave correct answer but we want to ensure understanding; ask for justification.",
+        "state": "Diagnosis",
+        "response": "Why do you think that is?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "But could P also be the grandfather of T?"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student gave answer but also shows lingering doubt; need to have them articulate rule.",
+        "state": "Synthesis",
+        "response": "In your own words, how would you describe the relationship between P and T?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "P is father of R, R is married to T, so P is father-in-law of T."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept; conversation wraps up.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Speed, time and distance",
+    "problem": "A person travels from home to office at a speed of 30 km/h and returns along the same route at a speed of 50 km/h. If the total travel time is 4 hours, find the distance between home and office.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the average speed is just (30+50)/2 = 40 km/h, so the total distance is 40 * 4 = 160 km, meaning each way is 80 km."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student used average speed method incorrectly; need to probe understanding of average speed.",
+        "state": "Diagnosis",
+        "response": "Can you explain what average speed means and how you would compute it from total distance and total time?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Average speed is total distance divided by total time. Since we don't know the distance, I assumed each leg takes the same time, so with total time 4 hours, each leg is 2 hours."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student assumed equal times without justification; need to hint to examine relationship.",
+        "state": "Support",
+        "response": "If the distances are equal but the speeds differ, would the times necessarily be equal? How would you express each time using distance and speed?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Okay, I'll let the one-way distance be d. Then time forward is d/30 and time back is d/50. Adding them gives d/30 + d/50 = 4. I add the fractions: 1/30 + 1/50 equals 2/80 = 1/40, so d/40 = 4, thus d = 160 km."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student made error in adding fractions; need to correct fraction addition.",
+        "state": "Support",
+        "response": "To add 1/30 and 1/50, use a common denominator of 150: 1/30 equals 5/150, 1/50 equals 3/150, so the sum is 8/150 which simplifies to 4/75."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "So d * 4/75 = 4, therefore d = 4 * 75/4 = 75 km. Each way is 75 km, total round trip distance is 150 km."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student has correct answer; need to have them articulate the concept in their own words.",
+        "state": "Synthesis",
+        "response": "In your own words, explain how you used the speeds and the total time to find the distance."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I let the one‑way distance be d. Time for each leg is distance divided by speed, so I wrote d/30 for the first leg and d/50 for the return leg. Adding those times gives the total travel time of 4 hours, then I solved the equation for d."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student explained rule; now check understanding of average speed definition.",
+        "state": "Support",
+        "response": "The average speed for the whole trip is total distance divided by total time. Using your answer of 75 km each way, what is the average speed?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The average speed is (30+50)/2 = 40 km/h because you just average the two speeds."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student resurfaced misconception about average speed being arithmetic mean; need to probe thinking.",
+        "state": "Diagnosis",
+        "response": "Remember, average speed is total distance divided by total time. You said the average speed is (30+50)/2 = 40 km/h. Can you walk me through how you arrived at that using total distance and total time?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The correct way is to let the distance be d, compute each leg’s time as d/speed, add them to equal the total time, and solve for d. The average speed is total distance over total time, which is 150 km / 4 h = 37.5 km/h, not the average of the speeds."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept; conversation wraps up.",
+        "state": "Closing",
+        "response": "Nice work! You've got the idea. Want to try another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Sampling bias",
+    "problem": "A town council wants to know what proportion of residents favor building a new park. In the town, 60% of residents are aged 35 or older, and 40% are younger than 35. Among those 35 or older, 40% favor the park; among those younger than 35, 70% favor the park. The council decides to survey people who visit the town's farmers market on Saturday mornings, where 80% of visitors are younger than 35 and the remaining 20% are 35 or older. What proportion of supporters would the market survey likely estimate? What is the direction and approximate magnitude of the bias compared with the town‑wide support?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the survey at the farmers market will give a different answer than the true town opinion because only certain people go there. I’m not exactly sure how to figure out what that difference would be, but I know the sample isn’t random and that could lead to bias. I just need help figuring out which direction the bias might go and how big it might be."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student noted the sample isn’t random but didn’t specify which demographics might be skewed; we need them to articulate their intuition about which groups are over‑ or under‑represented.",
+        "state": "Diagnosis",
+        "response": "You mentioned the sample isn’t random. To see how that might skew the results, can you describe which kinds of people you think are more likely to be found at the farmers market on Saturday mornings compared with the rest of the town, and which groups might be missing or under‑represented? Think about age, employment status, or habits that could affect who shows up, and explain why those differences matter for estimating support for the new park."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think older residents are actually more likely to visit the farmers market because they have more free time on weekends, so the sample will contain a higher proportion of people aged 35 or older than the town overall. Since that group tends to support the park less, the market survey will probably give an estimate that is too low compared with the true town‑wide support."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student expressed a directional mistake about who visits the market; we give a minimal hint pointing them back to the visitor breakdown provided in the problem.",
+        "state": "Support",
+        "response": "Let’s look back at what the problem told us about the market’s visitors: it said that 80 % of the people there are younger than 35 and the remaining 20 % are 35 or older. Using those percentages, what does that tell you about which age group is over‑represented in the sample compared with the town’s actual age distribution?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "You’re right—the problem states that 80 % of market visitors are younger than 35, while only 40 % of the town’s residents are in that age group. That means younger people are over‑represented in the sample. Because younger residents support the park at a higher rate (70 %), the market survey will likely produce an estimate that is too high, not too low."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student corrected the direction; now we prompt them to compute the true town‑wide support proportion.",
+        "state": "Support",
+        "response": "Based on the information that 60 % of residents are 35 or older with a 40 % support rate and 40 % are younger than 35 with a 70 % support rate, what calculation would you perform to find the overall proportion of supporters in the entire town?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "First I multiply the proportion of residents 35 or older (0.60) by their support rate (0.40), which gives 0.24. Then I multiply the proportion younger than 35 (0.40) by their support rate (0.70), giving 0.28. Adding those two products yields 0.24 + 0.28 = 0.52, so the true town‑wide proportion of supporters is 52 %."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Having obtained the true proportion, we ask the student to calculate what the market survey is likely to find using the visitor breakdown.",
+        "state": "Diagnosis",
+        "response": "Using the market visitor breakdown (80 % younger than 35, 20 % 35 or older) and the same support rates for each age group, how would you determine the proportion of supporters that the market survey is likely to find? Please show the calculation you would perform, weighting each group’s support rate by its share of the market visitors."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I believe the market survey would produce an estimate of 50 % support, because I think the market attracts half younger and half older people, and if I average the two support rates (40 % for older and 70 % for younger) I get (0.40+0.70)/2 = 0.55, which I round to 50 % as a quick estimate."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student made an arithmetic error in combining the group weights; we support them with a reminder to weight each group’s support rate by its market share.",
+        "state": "Support",
+        "response": "You need to weight each group’s support rate by how large that group is within the market sample. The market draws 80 % of its visitors from the younger-than-35 group and 20 % from the 35‑or‑older group. What do you get when you multiply each group’s share by its support rate and add the results?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I’ll multiply the younger group’s share (0.80) by their support rate (0.70), which gives 0.56. Then I’ll multiply the older group’s share (0.20) by their support rate (0.40), giving 0.08. Adding those gives 0.56 + 0.08 = 0.64, so the market survey would likely find 64 % support. Compared with the true town‑wide proportion of 52 %, that’s an upward bias of about 12 percentage points."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has produced the correct numbers and identified the bias; we now ask them to explain the concept of sampling bias in their own words.",
+        "state": "Synthesis",
+        "response": "Based on what we just worked through, could you describe in your own words what sampling bias means, why the farmers‑market sample—because it over‑represents younger residents who are more likely to support the park—led to an overestimate of the true support, and how you would check for similar bias in future surveys by comparing sample demographics to the population?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Sampling bias happens when the group you survey isn’t representative of the whole population; here the farmers‑market sample had too many younger people (80 % vs 40 % in the town) and younger folks support the park more (70 % vs 40 % for older). Because of that over‑representation, the survey gave an estimate of 64 % support instead of the true 52 %, which is an upward bias of about 12 percentage points."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained sampling bias and its impact, indicating mastery of the concept.",
+        "state": "Closing",
+        "response": "Nice work! You’ve nailed the idea of sampling bias and its effect. Feel free to tackle another question whenever you’re ready."
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "chemistry",
+    "topic": "States of matter and phase changes",
+    "problem": "A solid sample of naphthalene is heated at constant atmospheric pressure. Explain what happens to its temperature and state as heat is added continuously, and why the temperature remains constant during the phase changes.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know heating makes things hotter, but I'm not sure what happens when a solid melts. Does the temperature just keep going up?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student shows uncertainty about temperature trend during melting, indicating a need to explore their mental model of energy addition.",
+        "state": "Diagnosis",
+        "response": "When you heat a solid, does the added energy mostly increase molecular speed or break bonds first?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "The energy goes into making the molecules move faster, so the temperature rises steadily until it melts."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student claims temperature rises steadily through melting, revealing a misconception that energy always raises kinetic energy; we need to hint at energy use for bond breaking.",
+        "state": "Support",
+        "response": "At the melting point, the added energy goes into breaking intermolecular bonds instead of raising temperature. Does that sound familiar?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "During melting, the temperature actually drops because the solid is absorbing heat, so it gets colder."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student asserts temperature drops during melting, indicating confusion about energy direction; we ask about heating curve to redirect thinking.",
+        "state": "Support",
+        "response": "If you look at a heating curve for water, does a flat segment mean the temperature is changing or staying the same?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I'd see a straight line sloping upward on a temperature vs time graph because temperature keeps increasing."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student expects a constantly rising line, missing the plateau concept; we give a hint about constant temperature during boiling to reinforce idea.",
+        "state": "Support",
+        "response": "During boiling, the temperature stays constant while the liquid turns to gas; the heat is used to overcome attractions. Does that match what you're thinking?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I think when it's melting, the temperature stays the same for a while because the heat is used to break bonds, but after it's all liquid, it starts rising again."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student shows emerging correct idea about temperature plateau during melting but hasn't linked it to boiling or explained why; we ask where the energy goes during a phase change to deepen understanding.",
+        "state": "Support",
+        "response": "So, if the temperature isn't changing during a phase change, is the energy going into breaking bonds or raising kinetic energy?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "While it's melting or boiling, the temperature stays flat because the heat goes into changing the state, not into raising the average kinetic energy."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has captured the core idea but hasn't fully articulated the role of intermolecular forces and constant kinetic energy; we prompt them to explain the rule in their own words.",
+        "state": "Synthesis",
+        "response": "In your own words, describe why the temperature remains constant while a substance melts or boils."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "During a phase change like melting or boiling, the added heat energy is used to overcome intermolecular forces rather than increase the speed of molecules, so the average kinetic energy—and thus temperature—remains constant until the phase change is complete."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept of constant temperature during phase changes in their own words, indicating mastery; we wrap up.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "chemistry",
+    "topic": "Periodic table trends",
+    "problem": "Explain why atomic radius generally decreases as you move from left to right across a period in the periodic table.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the radius gets smaller because there are more protons, so the nucleus pulls the electrons in tighter, making the atom smaller."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student mentioned proton pull but hasn't discussed electron arrangement; need to see their understanding of electron addition across a period.",
+        "state": "Diagnosis",
+        "response": "Can you explain how the electrons are arranged in the outer shell when we move from one element to the next across a period?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Electrons are added to the same outer shell as we move across a period, which means the shielding effect from inner electrons remains roughly constant."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student correctly noted same shell; need to probe shielding concept further to see if they understand effective nuclear charge.",
+        "state": "Diagnosis",
+        "response": "What does that imply about the effective nuclear charge felt by the outer electrons as we go across a period?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Shielding actually increases because each new electron contributes to shielding, which reduces the effective nuclear charge experienced by the outer electrons."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student claimed shielding increases across a period, which is incorrect; need to hint that electrons in same shell shield poorly.",
+        "state": "Support",
+        "response": "Think about whether an electron in the same shell can shield another electron in that shell very effectively; does it contribute much to shielding?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Since the added electron resides in the same outer shell, it shields poorly, so the effective nuclear charge rises and pulls the electron cloud closer to the nucleus."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student now understands across period concept; need to see if they can apply to down a group to check for confusion.",
+        "state": "Diagnosis",
+        "response": "How about moving down a group? What changes in the number of electron shells, the shielding effect, and the distance of the outer electrons from the nucleus?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Radius decreases down a group because the increasing number of protons pulls the electrons in more strongly, which makes the atom smaller despite the addition of electron shells."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly applied across-period reasoning to down a group, claiming radius decreases; need to hint about increasing shells.",
+        "state": "Support",
+        "response": "Consider how the electron shells increase as you go down a group; does that increase or decrease the atomic radius despite more protons?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "As we go down a group, electrons fill higher energy shells that are farther from the nucleus, so the atomic radius increases even though the number of protons also grows."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has corrected both mistakes and demonstrated understanding of both trends; now prompt them to articulate the across-period rule in their own words.",
+        "state": "Synthesis",
+        "response": "You've described how effective nuclear charge and shielding work across a period; in your own words, what is the main reason the radius gets smaller?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Across a period, electrons are added to the same shell, so shielding doesn't change much while the nuclear charge increases, pulling the electrons closer and making the atom smaller."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept in their own words; conversation can wrap up.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! Want to try another one?"
+      }
+    ]
+  }
+]

@@ -56,3 +56,53 @@
   expired: True
   failure_categories:
   empty_response: 3
+2026-09-17 06:14:41,870 INFO MODEL_START provider=NVIDIA model=deepseek-ai/deepseek-v4-pro-0813
+2026-09-17 06:14:43,315 ERROR MODEL_FAILURE provider=NVIDIA model=deepseek-ai/deepseek-v4-pro-0813 error_code=HTTP_410 reason=model call failed or returned no response
+2026-09-17 06:15:43,316 INFO MODEL_START provider=NVIDIA model=deepseek-ai/deepseek-v4-pro-0813
+2026-09-17 06:15:43,590 ERROR MODEL_FAILURE provider=NVIDIA model=deepseek-ai/deepseek-v4-pro-0813 error_code=HTTP_410 reason=model call failed or returned no response
+2026-09-17 06:16:43,591 INFO MODEL_START provider=NVIDIA model=deepseek-ai/deepseek-v4-pro-0813
+2026-09-17 06:16:43,852 ERROR MODEL_FAILURE provider=NVIDIA model=deepseek-ai/deepseek-v4-pro-0813 error_code=HTTP_410 reason=model call failed or returned no response
+2026-09-17 06:16:43,852 ERROR MODEL_EXPIRED provider=NVIDIA model=deepseek-ai/deepseek-v4-pro-0813 reason=three consecutive API failures
+2026-09-17 06:17:43,853 INFO MODEL_SUMMARY
+  provider_model: NVIDIA / deepseek-ai/deepseek-v4-pro-0813
+  attempts: 3
+  saved: 0
+  failed: 3
+  accept_rate: 0.00%
+  average_tokens: 0.00
+  turn_range: -
+  expired: True
+  failure_categories:
+  empty_response: 3
+2026-09-17 08:44:29,067 INFO MODEL_START provider=NVIDIA model=deepseek-ai/deepseek-v4-pro-0813
+2026-09-17 08:44:29,989 ERROR MODEL_FAILURE provider=NVIDIA model=deepseek-ai/deepseek-v4-pro-0813 error_code=HTTP_410 reason=model call failed or returned no response
+2026-09-17 08:44:29,989 ERROR MODEL_EXPIRED provider=NVIDIA model=deepseek-ai/deepseek-v4-pro-0813 reason=three consecutive API failures
+2026-09-17 08:45:29,990 INFO MODEL_SUMMARY
+  provider_model: NVIDIA / deepseek-ai/deepseek-v4-pro-0813
+  attempts: 1
+  saved: 0
+  failed: 1
+  accept_rate: 0.00%
+  average_tokens: 0.00
+  turn_range: -
+  expired: True
+  failure_categories:
+  empty_response: 1
+2026-09-17 08:47:18,714 INFO MODEL_START provider=NVIDIA model=deepseek-ai/deepseek-v4-pro-0813
+2026-09-17 08:47:19,676 ERROR MODEL_FAILURE provider=NVIDIA model=deepseek-ai/deepseek-v4-pro-0813 error_code=HTTP_410 reason=model call failed or returned no response
+2026-09-17 08:48:19,677 INFO MODEL_START provider=NVIDIA model=deepseek-ai/deepseek-v4-pro-0813
+2026-09-17 08:48:19,905 ERROR MODEL_FAILURE provider=NVIDIA model=deepseek-ai/deepseek-v4-pro-0813 error_code=HTTP_410 reason=model call failed or returned no response
+2026-09-17 08:49:19,905 INFO MODEL_START provider=NVIDIA model=deepseek-ai/deepseek-v4-pro-0813
+2026-09-17 08:49:20,141 ERROR MODEL_FAILURE provider=NVIDIA model=deepseek-ai/deepseek-v4-pro-0813 error_code=HTTP_410 reason=model call failed or returned no response
+2026-09-17 08:49:20,142 ERROR MODEL_EXPIRED provider=NVIDIA model=deepseek-ai/deepseek-v4-pro-0813 reason=three consecutive API failures
+2026-09-17 08:50:20,142 INFO MODEL_SUMMARY
+  provider_model: NVIDIA / deepseek-ai/deepseek-v4-pro-0813
+  attempts: 3
+  saved: 0
+  failed: 3
+  accept_rate: 0.00%
+  average_tokens: 0.00
+  turn_range: -
+  expired: True
+  failure_categories:
+  empty_response: 3

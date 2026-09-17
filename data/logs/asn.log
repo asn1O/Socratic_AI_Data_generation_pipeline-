@@ -239,3 +239,188 @@ Config parameter balance
     easy                          15
     hard                           3
     medium                         7
+2026-09-17 08:20:28,619 INFO 
+=== Run Statistics Summary ===
+Overall totals
+  Attempts: 53
+  Saved: 33
+  Failed: 20
+  Accept rate: 62.26%
+  Duration (h:m:s): 02:05:46
+
+Per-model results
+  Provider / Model                         Attempts  Saved  Accept %  Avg tokens  Turns  Total convos
+  ----------------------------------------  --------  -----  --------  -----------  -----  Total convos
+  NVIDIA / nvidia/nemotron-3-super-120b-a12b       30     25    83.33%     13270.76  12-16             79
+  NVIDIA / nvidia/nemotron-3-ultra-550b-a55b        3      0     0.00%         0.00      -             46
+  NVIDIA / moonshotai/kimi-k3                    11      7    63.64%      3743.14  14-16             20
+  NVIDIA / deepseek-ai/deepseek-v4-pro-0813        3      0     0.00%         0.00      -              1
+  NVIDIA / deepseek-ai/deepseek-v4-flash-0731        6      1    16.67%      9106.00  12-12              1
+
+Failure reasons
+  Category                         Count
+  ------------------------------  -----
+  dead_model_404                      0
+  empty_response                     17
+  invalid_json_syntax                 0
+  turn_count_out_of_range             2
+  speaker_alternation_broken          1
+  malformed_tutor_tags                0
+  missing_problem_field               0
+  final_turn_not_closing              0
+  unexpected_exception                0
+  other                               0
+
+Turn-count distribution
+  min=12, max=16, avg=13.76
+
+Domain coverage
+  biology                            4
+  chemistry                          4
+  computer_science_light             1
+  economics_and_finance              3
+  ethics_and_critical_thinking       2
+  everyday_reasoning                 2
+  history_and_social_studies         4
+  language_and_grammar               2
+  logic_and_puzzles                  4
+  physics                            1
+  quantitative_aptitude              5
+  statistics_and_data                1
+
+Config parameter balance
+  socratic_level
+    high                          17
+    low                            5
+    medium                        11
+  student_level
+    advanced                       8
+    beginner                      11
+    intermediate                  14
+  hint_frequency
+    high                           7
+    low                           17
+    medium                         9
+  mistake_frequency
+    high                          10
+    low                           12
+    medium                        11
+  verbosity
+    high                           9
+    low                           12
+    medium                        12
+  difficulty
+    easy                          13
+    hard                          11
+    medium                         9
+2026-09-17 08:45:47,261 WARNING Interrupted by user after 0 successful write(s). Exiting cleanly.
+2026-09-17 08:45:47,261 INFO 
+=== Run Statistics Summary ===
+Overall totals
+  Attempts: 0
+  Saved: 0
+  Failed: 0
+  Accept rate: 0.00%
+  Duration (h:m:s): 00:01:18
+
+Per-model results
+  Provider / Model                         Attempts  Saved  Accept %  Avg tokens  Turns  Total convos
+  ----------------------------------------  --------  -----  --------  -----------  -----  Total convos
+
+Failure reasons
+  Category                         Count
+  ------------------------------  -----
+  dead_model_404                      0
+  empty_response                      0
+  invalid_json_syntax                 0
+  turn_count_out_of_range             0
+  speaker_alternation_broken          0
+  malformed_tutor_tags                0
+  missing_problem_field               0
+  final_turn_not_closing              0
+  unexpected_exception                0
+  other                               0
+
+Turn-count distribution
+  no saved conversations
+
+Domain coverage
+
+Config parameter balance
+  socratic_level
+  student_level
+  hint_frequency
+  mistake_frequency
+  verbosity
+  difficulty
+2026-09-17 09:55:04,432 INFO 
+=== Run Statistics Summary ===
+Overall totals
+  Attempts: 32
+  Saved: 20
+  Failed: 12
+  Accept rate: 62.50%
+  Duration (h:m:s): 01:07:45
+
+Per-model results
+  Provider / Model                         Attempts  Saved  Accept %  Avg tokens  Turns  Total convos
+  ----------------------------------------  --------  -----  --------  -----------  -----  Total convos
+  NVIDIA / nvidia/nemotron-3-super-120b-a12b       20     20   100.00%     12729.70  12-16             99
+  NVIDIA / nvidia/nemotron-3-ultra-550b-a55b        3      0     0.00%         0.00      -             46
+  NVIDIA / moonshotai/kimi-k3                     3      0     0.00%         0.00      -             20
+  NVIDIA / deepseek-ai/deepseek-v4-pro-0813        3      0     0.00%         0.00      -              1
+  NVIDIA / deepseek-ai/deepseek-v4-flash-0731        3      0     0.00%         0.00      -              1
+
+Failure reasons
+  Category                         Count
+  ------------------------------  -----
+  dead_model_404                      0
+  empty_response                     12
+  invalid_json_syntax                 0
+  turn_count_out_of_range             0
+  speaker_alternation_broken          0
+  malformed_tutor_tags                0
+  missing_problem_field               0
+  final_turn_not_closing              0
+  unexpected_exception                0
+  other                               0
+
+Turn-count distribution
+  min=12, max=16, avg=13.60
+
+Domain coverage
+  biology                            4
+  chemistry                          3
+  computer_science_light             3
+  economics_and_finance              3
+  history_and_social_studies         1
+  language_and_grammar               1
+  logic_and_puzzles                  1
+  quantitative_aptitude              2
+  statistics_and_data                2
+
+Config parameter balance
+  socratic_level
+    high                           6
+    low                            4
+    medium                        10
+  student_level
+    advanced                       8
+    beginner                       7
+    intermediate                   5
+  hint_frequency
+    high                           6
+    low                            9
+    medium                         5
+  mistake_frequency
+    high                           6
+    low                            3
+    medium                        11
+  verbosity
+    high                           5
+    low                            6
+    medium                         9
+  difficulty
+    easy                           5
+    hard                           4
+    medium                        11

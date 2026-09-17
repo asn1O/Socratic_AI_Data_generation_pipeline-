@@ -1309,5 +1309,215 @@
         "response": "Exactly — that's a really solid way to put it. Want to try another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "chemistry",
+    "topic": "Acids and bases",
+    "problem": "Calculate the pH when 25.0 mL of 0.100 M acetic acid (CH3COOH, Ka = 1.8 × 10^-5) is mixed with 15.0 mL of 0.100 M NaOH. Assume volumes are additive.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know the NaOH will neutralize some acetic acid, and I converted the volumes to moles, but I’m stuck on whether this is just neutralization or a buffer problem."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has partial setup but has not organized species after reaction, so I need to elicit their current model rather than hint too narrowly.",
+        "state": "Diagnosis",
+        "response": "Walk me through what you think is in the beaker after the NaOH reacts. Which species matter for the pH?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Since NaOH is a strong base, I think it makes the solution neutral, so the pH should be 7 once it reacts with the acid."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student asserted a concrete wrong claim: strong base plus acid automatically gives pH 7. I should support correction by comparing moles rather than stating the answer.",
+        "state": "Support",
+        "response": "That would be true for a strong acid with exactly enough strong base. Here the acid is weak—compare the initial moles of HA and OH− first. Which one runs out?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Acetic acid is 0.00250 mol and NaOH is 0.00150 mol, so OH− is limiting. That leaves 0.00100 mol acetic acid and makes 0.00150 mol acetate, I think."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student now has the correct stoichiometric leftovers and is ready for the buffer relation, but needs a hint toward the acid/conjugate base pair.",
+        "state": "Support",
+        "response": "Good—that leftover pair is the key. If HA and A− are both present after reaction, what equation lets you use their ratio directly?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, this is Henderson-Hasselbalch. But since it’s a buffer near acetic acid, the pH should just equal pKa, so about 4.74."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student made a second explicit wrong claim by assuming pH equals pKa whenever a buffer exists. I should narrow attention to the log ratio without computing it for them.",
+        "state": "Support",
+        "response": "pH equals pKa only at one special ratio. In pH = pKa + log([A−]/[HA]), is your [A−]/[HA] equal to 1, bigger than 1, or smaller than 1?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "It’s 0.00150 over 0.00100, so 1.5, bigger than 1. Then pH = 4.74 + log(1.5) ≈ 4.74 + 0.18, so about 4.92."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has reached the correct pH and used the right ratio; now I should have them justify why the approximation works instead of merely accepting the number.",
+        "state": "Synthesis",
+        "response": "That’s the right track—about 4.92. Why is it okay here to use the mole ratio directly instead of converting both to concentrations first?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Because they’re in the same total volume, so the volume cancels in [A−]/[HA]. I’m less sure why we ignore the equilibrium shift after mixing."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student understands the volume cancellation but is unsure about the approximation, so one more synthesis prompt can push them to state the rule clearly.",
+        "state": "Synthesis",
+        "response": "The buffer has relatively large amounts of both HA and A− compared with how much equilibrium changes them. Put the whole rule in your own words: what did we do and why did it give pH?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "First neutralize with stoichiometry: OH− converts HA to A− one-to-one. Then use the leftover HA and formed A− as a buffer. Since the volume cancels, pH = pKa + log(moles A− / moles HA), and more A− than HA pushes pH above pKa."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the principle in their own words after reaching the answer, so the conversation is ready for a brief warm wrap-up.",
+        "state": "Closing",
+        "response": "Exactly—that’s a clean explanation. Nice work sticking through the ratio idea! Want to try another buffer problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "computer_science_light",
+    "topic": "Boolean logic",
+    "problem": "Simplify the Boolean expression: ¬(A ∧ B) ∨ (¬A ∧ B). Show your reasoning and verify with a truth table check.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "So I need to simplify ¬(A ∧ B) ∨ (¬A ∧ B). I'm thinking the first part, ¬(A ∧ B), is basically ¬A ∧ ¬B, so the whole thing is (¬A ∧ ¬B) ∨ (¬A ∧ B)."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student made the classic De Morgan slip — flipping the negation over the AND without changing the connective. Before correcting, I want to see how confident they are and why they think that rule holds.",
+        "state": "Diagnosis",
+        "response": "Okay, you jumped to distributing that outer negation. Walk me through why you think ¬(A ∧ B) becomes ¬A ∧ ¬B — how do you know that's what the rule says?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I guess... the not just applies to each thing inside? Like, if it's not (A and B), then it's not-A and not-B. That's how I remember it, but now I'm second-guessing."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is relying on a fuzzy memory rather than reasoning. A concrete counterexample check will let them discover the slip themselves rather than me stating De Morgan's law.",
+        "state": "Support",
+        "response": "Let's test that memory instead of trusting it. If A is true and B is false, what does ¬(A ∧ B) give you, and what does ¬A ∧ ¬B give you?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Hmm, ¬(A ∧ B) is ¬(true ∧ false) = ¬false = true. But ¬A ∧ ¬B is false ∧ true = false. They don't match! So it should be ¬A ∨ ¬B, not AND."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Good, the student self-corrected to ¬A ∨ ¬B. Now we have the full corrected expression and I want to see what they do with it before pushing toward the final simplification.",
+        "state": "Diagnosis",
+        "response": "Right — the connective flips when you push the negation through. So now your expression is (¬A ∨ ¬B) ∨ (¬A ∧ B). What can you do with that?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I can distribute, right? Something like... ¬A ∨ (¬B ∧ B)? No wait. Or maybe distribute the OR: (¬A ∨ ¬A) ∧ (¬B ∨ B)... I think I'm messing this up."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is flailing with distribution and produced a malformed step. Rather than untangle the bad distribution, a smaller move is to look at the structure: something OR'd with a smaller conjunction of itself.",
+        "state": "Support",
+        "response": "Slow down — forget distributing for a second. Look at the shape: you have (something) ∨ (¬A ∧ B), and ¬A is already part of that first something. If ¬A alone makes the whole thing true, what does adding \"∨ (¬A ∧ B)\" really contribute?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Ohh. If ¬A is true, the whole expression is already true regardless. And if ¬A is false, then ¬A ∧ B is false too, so that term never adds anything. So it just... absorbs away?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has essentially derived absorption: X ∨ (X ∧ Y) = X. Now they need to state the final simplified form explicitly.",
+        "state": "Support",
+        "response": "Exactly, that's the absorption idea. So write out the final simplified expression for me — what are you left with?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "So it simplifies to ¬A ∨ ¬B. Let me sanity check with a row: A=0, B=1. Then ¬(A ∧ B)... 0 ∧ 1 is 0, ¬0 is... 0? Wait no, ¬0 is 1, so it's 1. And ¬A ∨ ¬B is 1 ∨ 0 = 1. They match."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student briefly wobbled on negating arithmetic-0 (that old inversion instinct resurfaced) but self-corrected instantly and confirmed match. Good time to have them check one more row and then articulate the principle.",
+        "state": "Support",
+        "response": "Good catch on that ¬0. One more row to be safe — what about A=1, B=1? Check both the original and your simplified version."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Original: ¬(1 ∧ 1) ∨ (¬1 ∧ 1) = 0 ∨ 0 = 0. Simplified: ¬1 ∨ ¬1 = 0. Match again. So the final answer is ¬A ∨ ¬B — which is interesting, it's just the De Morgan form of ¬(A ∧ B), so the second term really did nothing."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has the answer and verification. Time for synthesis: have them state the two rules they used in their own words, including why their first instinct was wrong.",
+        "state": "Synthesis",
+        "response": "Nice observation. So now put it together in your own words: what are the two rules you actually used here, and what was wrong with how you first applied the negation?"
+      },
+      {
+        "turn": 15,
+        "speaker": "student",
+        "text": "First, De Morgan's law: when you push a NOT through AND or OR, you flip the connective — ¬(A ∧ B) is ¬A ∨ ¬B, not ¬A ∧ ¬B, which is what I wrongly said at first. Second, absorption: if you have X ∨ (X ∧ something), the second term is redundant because whenever X is true the expression is already true, and when X is false that term is false too. So it just collapses to X."
+      },
+      {
+        "turn": 16,
+        "speaker": "tutor",
+        "reasoning": "The student has clearly articulated both De Morgan's law and absorption in their own words, including diagnosis of their original error. The learning goal is complete, so we close warmly.",
+        "state": "Closing",
+        "response": "Beautifully put — you've got both rules down solid now, and you caught your own mistake along the way. Want to try a trickier one next?"
+      }
+    ]
   }
 ]
