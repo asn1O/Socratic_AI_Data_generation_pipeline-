@@ -731,3 +731,70 @@
     }
   ]
 }
+
+
+{
+  "problem": "Compare how executive power is structured and checked in a parliamentary system versus a presidential system, focusing on how prime ministers and presidents can be removed from office before their term expires.",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "A president and a prime minister both lead a country, but presidents are removed through impeachment while prime ministers just quit when they lose an election."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student has an initial misconception about how parliamentary leaders exit, confusing scheduled elections with parliamentary votes of no confidence. I need to diagnose their understanding of executive accountability.",
+      "state": "Diagnosis",
+      "response": "Impeachment is definitely how a presidential removal works. Can you walk me through what happens in a parliament if the legislature suddenly disagrees with the prime minister on a major policy?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "The legislature passes a vote of no confidence, which means the prime minister and their whole cabinet are forced to step down immediately."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student correctly identified the vote of no confidence. I will provide a direct explanation of the structural difference in fixed versus flexible terms before asking about executive removal mechanics.",
+      "state": "Diagnosis",
+      "response": "A vote of no confidence is right. Parliamentary systems have flexible terms linked to legislative support, whereas presidential systems have fixed terms. What does that structural difference mean for a president's tenure if the legislature opposes them?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Since presidents have fixed terms, a hostile legislature can just dissolve the cabinet whenever they want to replace the president."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student made an incorrect claim that a hostile legislature can dissolve a presidential cabinet at will, confusing presidential systems with parliamentary ones. I need to correct this specific edge-case error.",
+      "state": "Support",
+      "response": "Actually, a hostile legislature cannot dissolve a presidential cabinet. Remember that separation of powers keeps them independent. How does that separation affect a president's job security compared to a prime minister?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Ah, right. Because the branches are separate, a president stays in office for their full fixed term even if the legislature hates them, unless they commit an impeachable offense."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student successfully corrected their error about executive independence. I will explain the core distinction in removal mechanisms and ask them to synthesize the overall rule.",
+      "state": "Synthesis",
+      "response": "Spot on. Presidents have fixed terms and survive legislative opposition, while prime ministers serve at the pleasure of the legislature through confidence votes. How would you summarize this fundamental difference in how both systems handle early executive removal?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "In a presidential system, the executive's term is fixed and they can only be removed early for legal wrongdoing via impeachment. In a parliamentary system, the executive's tenure is flexible because the legislature can remove them politically at any time through a loss of confidence."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "The student has correctly and clearly explained the concept in their own words. The conversation is complete.",
+      "state": "Closing",
+      "response": "Spot on! You've got the core distinction down pat. Ready to tackle another topic?"
+    }
+  ]
+}

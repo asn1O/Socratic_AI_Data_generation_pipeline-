@@ -62,3 +62,21 @@
   expired: True
   failure_categories:
   empty_response: 3
+2026-09-17 18:31:33,204 INFO MODEL_START provider=Google model=gemini-3.8-flash
+2026-09-17 18:32:04,033 ERROR MODEL_FAILURE provider=Google model=gemini-3.8-flash error_code=HTTP_503 reason=model call failed or returned no response
+2026-09-17 18:33:04,034 INFO MODEL_START provider=Google model=gemini-3.8-flash
+2026-09-17 18:33:36,784 ERROR MODEL_FAILURE provider=Google model=gemini-3.8-flash error_code=HTTP_503 reason=model call failed or returned no response
+2026-09-17 18:34:36,785 INFO MODEL_START provider=Google model=gemini-3.8-flash
+2026-09-17 18:34:46,779 ERROR MODEL_FAILURE provider=Google model=gemini-3.8-flash error_code=HTTP_503 reason=model call failed or returned no response
+2026-09-17 18:34:46,779 ERROR MODEL_EXPIRED provider=Google model=gemini-3.8-flash reason=three consecutive API failures
+2026-09-17 18:35:46,779 INFO MODEL_SUMMARY
+  provider_model: Google / gemini-3.8-flash
+  attempts: 3
+  saved: 0
+  failed: 3
+  accept_rate: 0.00%
+  average_tokens: 0.00
+  turn_range: -
+  expired: True
+  failure_categories:
+  empty_response: 3

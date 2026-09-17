@@ -1,0 +1,710 @@
+[
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "chemistry",
+    "topic": "Balancing chemical equations",
+    "problem": "Balance the following chemical equation: C3H8 + O2 -> CO2 + H2O",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "For balancing C3H8 + O2 -> CO2 + H2O, I changed the product to C3O2 to match. Is that right?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student made their first mistake by changing subscripts instead of coefficients. I need to diagnose if they understand what subscripts represent.",
+        "state": "Diagnosis",
+        "response": "What happens to the chemical identity of a substance when we change its subscript?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, it changes the molecule itself. So I should only change the coefficients in front?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student self-corrected the subscript concept. Now I will guide them back to balancing the carbon atoms using coefficients.",
+        "state": "Diagnosis",
+        "response": "Exactly. If we leave CO2 as it is, how do we get 3 carbons on the right?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I'll put a 3 in front of CO2. For hydrogen, should I put an 8 in front of H2O?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made a second mistake by suggesting a coefficient of 8 for H2O, forgetting that H2O already contains 2 hydrogen atoms. I need to elicit the correct math.",
+        "state": "Diagnosis",
+        "response": "How many hydrogen atoms are already inside a single water molecule?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "There are 2. So if I need 8 total, I should use a coefficient of 4?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student corrected the hydrogen coefficient. Now we need to balance oxygen. I'll ask them to count the current oxygen atoms on the product side.",
+        "state": "Diagnosis",
+        "response": "Perfect! We have C3H8 + O2 -> 3CO2 + 4H2O. How many total oxygens are on the right?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "There are 2 in CO2 and 1 in H2O, so 3 total?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student made their third mistake, failing to multiply the oxygen subscripts by the coefficients. This is a resurfacing of their struggle with coefficients. I will offer a low-level hint to guide them.",
+        "state": "Support",
+        "response": "If you have 3 molecules of CO2, how many oxygen atoms is that?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Ah, 6! Plus 4 from water makes 10. So I put a 5 in front of O2?"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student successfully balanced the equation. Now I need them to synthesize the core concept in their own words before closing.",
+        "state": "Synthesis",
+        "response": "Spot on! In your own words, what is the main rule for coefficients versus subscripts?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Coefficients change the amount of the whole molecule, while subscripts change the molecule's actual identity."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student gave an excellent explanation of the core concept. The conversation is complete, so I will transition to the Closing state.",
+        "state": "Closing",
+        "response": "That is a perfect summary! You did a great job. Ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "computer_science_light",
+    "topic": "Binary number conversion",
+    "problem": "Convert the binary number 1101 to decimal.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know 1101 has four digits, but I'm not sure if the leftmost digit represents $2^3$ or $2^4$."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student knows place values are powers of two but is confused about the starting index. I will diagnose their baseline by asking about the rightmost digit.",
+        "state": "Diagnosis",
+        "response": "Powers of two start from the right. What power of two does the rightmost digit represent?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "The rightmost digit represents $2^0$, which is 1."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the rightmost place value. I will now support them in finding the remaining place values.",
+        "state": "Support",
+        "response": "What are the next three place values as you move to the left?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "They would be $2^1$, $2^2$, and $2^3$, which are 2, 4, and 8."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student knows all the place values. I will support them in mapping these values to the bits of the problem.",
+        "state": "Support",
+        "response": "Perfect. Now, map those values to 1101. Which ones do we actually add up?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "We have 1s at 8, 4, and 2, so we add 8 + 4 + 2 = 14?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student made a minor mapping error with the 0 bit. I will support them to self-correct by focusing on that specific position.",
+        "state": "Support",
+        "response": "Which place value actually corresponds to the 0 in 1101?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Ah, the 0 is in the 2s place. So we add 8 + 4 + 1 to get 13."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student successfully calculated the correct decimal value. I will move to synthesis so they can internalize the concept in their own words.",
+        "state": "Synthesis",
+        "response": "Spot on! In your own words, how do you convert any binary number to decimal?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "You assign powers of two starting from $2^0$ on the right, then sum the values with 1s."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the conversion process in their own words, so we can wrap up.",
+        "state": "Closing",
+        "response": "That is exactly it! Want to try another binary conversion?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Ethical dilemmas (trolley-problem style)",
+    "problem": "A trolley is running out of control down a track. In its path are five people who will be killed. You can flip a switch to divert the trolley onto a side track. However, on this side track, there is one very heavy person. In this scenario, the side track loops back to the main track right before the five people. If the trolley hits the heavy person, their body is so large it will physically block and stop the trolley, saving the five. If the track were empty, the trolley would loop around and kill the five anyway. Is it ethically permissible to flip the switch under the Doctrine of Double Effect? Explain why or why not, distinguishing between aiming at harm as a means versus foreseeably causing harm as a side effect.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm really lost on this. This Doctrine of Double Effect sounds super complicated. If we save five people, isn't that always a good thing? I don't get why it matters if the track loops or how the heavy person stops it. Either way, one dies and five live, right?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is confused by the complexity of the loop scenario. I will start with a diagnosis turn to help them isolate the core concepts of 'side effect' versus 'means'.",
+        "state": "Diagnosis",
+        "response": "It is totally normal to feel a bit overwhelmed by this! Ethical theories can get really technical. Let's break it down together. In the standard trolley case, we flip a switch, the train goes to a side track, and a person dies as a byproduct. But in our loop case, we actually need the heavy person's body to physically block the train. What do you think is the difference between an event being a 'byproduct' versus being the 'tool' we use to get what we want?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I don't think there's a difference. In both cases, the person dies because we flipped the switch. Under this double effect doctrine, as long as our main goal is to save the five people, aren't we allowed to do whatever it takes? The death of the one person is just a side effect of our good intention to save the others."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has made their first conceptual mistake, believing any action is allowed if the motive is good. I will offer a support hint using a classic medical analogy to challenge this.",
+        "state": "Support",
+        "response": "I see why it feels that way, but the Doctrine of Double Effect is actually much stricter than that. It says we can never actively use a bad thing to achieve a good result. Think about a hospital: could a doctor kill one healthy person to harvest their organs and save five dying patients, arguing the death was just a 'side effect' of saving five lives? Why or why not?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Well, no, that doctor is actively murdering someone to use their organs. That feels totally different because the doctor is directly causing the harm to use them. But on the trolley loop, we aren't carving anyone up. We just redirect the trolley, and it's the trolley that does the hitting, not us. So isn't the heavy person's death still just an unfortunate side effect because we didn't physically push him?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has made a second mistake by confusing physical agency with moral means. I will use a counterfactual 'vanishing' hint to help them see how the heavy person's presence is structurally required.",
+        "state": "Support",
+        "response": "That is a very common distinction to make, but let's look at what would happen if the heavy person suddenly vanished from the track. In the standard side-track case, if they vanish, we are happy because the five are saved and no one dies. But in our loop scenario, if the heavy person vanishes, what happens to the trolley and the five people?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh... if he vanishes, the trolley just loops around and hits the five people anyway. So we actually need him to be there to get hit. Wait, does that mean we are using him? But still, our intent is only to save the five, not to kill him. If we could save the five without killing him, we would. So doesn't our good intent make it okay under the doctrine?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is still struggling with the intention/means distinction, falling back on the idea that good motives justify the action. I need to explicitly define the 'means' restriction of DDE to support them.",
+        "state": "Support",
+        "response": "You've hit on the exact core of the puzzle! The Doctrine of Double Effect actually has a specific rule about this: the bad effect must not be the 'means' by which you achieve the good effect. Even if your ultimate intention is pure, you cannot use a bad means. Since we physically rely on the trolley crashing into his body to stop it, are we using his harm as a necessary means to save the five, or is it just a side effect?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I think I'm starting to see it. Since the loop requires his body to block the train, we are actually using the collision with him as the tool to stop the train. Without that collision, the five die. So, because we are using the harm to him as a means to an end, the Doctrine of Double Effect would say flipping the switch is... not permissible?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified that flipping the switch is impermissible because it uses the person as a means. I will now transition to Synthesis to have them explain the underlying rule in their own words.",
+        "state": "Synthesis",
+        "response": "Spot on! You nailed it. Under this doctrine, we cannot target an innocent person as a stepping stone to a good outcome. Now, to make sure you've got this down, how would you explain the difference between a 'foreseen side effect' and 'harm as a means' in your own words, using the trolley examples we just talked about?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Okay, so 'harm as a means' is when you actually need the bad thing to happen to get the good result—like the trolley needing to hit the heavy person to stop, or the doctor needing the organs. A 'foreseen side effect' is when the bad thing happens as a byproduct of your action, but you don't actually need it to happen to save the others. If they magically disappeared, you'd be happy because the plan still works!"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully synthesized the difference between means and side effects under the Doctrine of Double Effect, demonstrating complete understanding. The lesson is now successfully concluded.",
+        "state": "Closing",
+        "response": "That is an absolutely perfect explanation! You perfectly captured the heart of the Doctrine of Double Effect and how it applies to these tricky dilemmas. Excellent work pushing through those tough concepts. Would you like to try another ethical puzzle, or do you want to wrap up here?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Analogies and vocabulary in context",
+    "problem": "Complete the analogy: SPOIL is to FOOD as TARNISH is to ______? Choose from: A) GOLD, B) WOOD, C) SILVER, D) SHINE.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this analogy, and I'm a bit stuck. I know what food is, and I know food can spoil, but I'm really not sure how to connect that to 'tarnish' and the other options. Does 'spoil' just mean what happens to food over time?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student understands the basic terms but doesn't yet see the functional relationship. I need to elicit their thinking about the relationship between 'spoil' and 'food' while providing a gentle hint about what kind of change spoiling represents.",
+        "state": "Diagnosis",
+        "response": "You're definitely on the right track by noticing that time is involved! If we think about what actually happens when food spoils, is it a positive change or a negative one, and what does it do to the quality of the food? How might we describe that specific relationship before we look at 'tarnish'?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, spoiling makes food go bad, so it's definitely negative. But for the second part, I think 'tarnish' is a positive thing, right? Like, doesn't tarnishing mean to polish something and make it really bright and shiny? So would the answer be 'shine' or maybe 'gold' because they are both bright?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has made their first explicit mistake by defining 'tarnish' as a positive polishing action. I need to guide them to self-correct this definition using a hint about household objects without directly telling them the definition.",
+        "state": "Support",
+        "response": "That's an interesting guess, but let's think about that word 'tarnish' a bit more closely. Have you ever seen an old metal spoon or a coin that has been sitting in a drawer for years and has turned dark and dull? If that dullness is what we call tarnish, does that sound more like polishing something to make it shiny, or does it sound like a different kind of process?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, wait. I guess I really don't get what tarnish actually means then. If it makes things dark and dull, is it like a disease for metal or something? I'm kind of lost on how that connects back to the food spoiling part of the question."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is expressing genuine beginner confusion about the concept of tarnishing. I will offer a comparison hint to help them bridge the gap between 'spoiling' (for food) and 'tarnishing' (for metals) to show they are parallel processes of degradation.",
+        "state": "Support",
+        "response": "You've actually hit on a great comparison there! Just like bacteria causes food to spoil and lose its freshness, exposure to air causes certain metals to lose their luster and tarnish on the surface. Since both 'spoil' and 'tarnish' are actions that degrade the quality of something, what kind of material do you think is most famously known for getting that dark, dull coating?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, I see! So both words mean something is getting ruined or losing its original good state. If it's about things getting ruined over time, could the answer be B, wood? Because wood rots and gets ruined when you leave it outside in the rain, just like food spoils."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has made their second mistake by selecting 'wood' based on the general idea of degradation, failing to match the specific vocabulary of 'tarnish.' I need to ask a guiding question to help them realize 'tarnish' specifically applies to metals, not wood.",
+        "state": "Support",
+        "response": "It's true that wood can rot and degrade, but let's look at the specific vocabulary word we have: 'tarnish.' We usually use words like 'rot' or 'decay' for wood, but have you ever heard someone say a piece of wood is 'tarnished'? If 'tarnish' specifically refers to a chemical reaction on the surface of metals, which of our remaining options fits that description?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Ah, that makes so much sense! We don't say wood tarnishes, we say metals do. And gold doesn't really get dull like that, but silver definitely does. My grandmother has silver silverware that gets dark and has to be polished. So the answer has to be C, silver!"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully identified the correct answer. Now, to ensure deep understanding, I must prompt them to synthesize the relationship and state the general rule of this analogy in their own words.",
+        "state": "Synthesis",
+        "response": "Spot on! You nailed it. Now that we've worked through the whole puzzle, how would you describe the rule or relationship of this analogy to someone else in your own words? What is the connection between the first pair and the second pair?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The rule is that the first word is an action that ruins or degrades the appearance and quality of the second word. So, just like 'spoiling' is the specific way that 'food' goes bad and loses its freshness, 'tarnishing' is the specific way that 'silver' goes bad and loses its shine over time. They are both processes of decay for those specific things!"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has beautifully articulated the exact relationship and rule. The conversation is successfully completed, so I will wrap up warmly without any new questions or content.",
+        "state": "Closing",
+        "response": "That is an absolutely perfect explanation! You captured the relationship beautifully. Fantastic job working through that vocabulary. Are you ready to try another analogy?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "physics",
+    "topic": "Newton's laws in everyday scenarios",
+    "problem": "A person holds a book against a vertical wall by pushing horizontally. If they are in an elevator accelerating upwards, does the minimum horizontal force required to keep the book from sliding down increase, decrease, or stay the same?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the horizontal force stays the same, since vertical acceleration only affects vertical forces. Right?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has made an incorrect assertion about the independence of vertical and horizontal forces here. I need to diagnose their understanding of the vertical forces first.",
+        "state": "Diagnosis",
+        "response": "What vertical forces act on the book while the elevator accelerates upwards?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Just gravity pulling down and static friction from the wall pushing up."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the forces. Now, I will guide them to connect these forces to the upward acceleration.",
+        "state": "Support",
+        "response": "With upward acceleration, how does the magnitude of friction compare to gravity?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Friction must be greater than gravity to accelerate it upward, so static friction equals m(g+a)."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly solved the vertical force equation. Now, I will prompt them to link this friction to the horizontal push.",
+        "state": "Support",
+        "response": "And how does this friction force relate to the horizontal normal force?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "The maximum static friction is coefficient times normal force, so friction cannot exceed that."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student knows the limit of static friction. I will guide them to draw the final connection regarding the minimum normal force.",
+        "state": "Support",
+        "response": "Since the required friction is now larger, what happens to the minimum normal force?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "It has to increase because normal force must be at least m(g+a) divided by the coefficient."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has reached the correct conclusion. Now I will transition to synthesis so they can internalize the concept.",
+        "state": "Synthesis",
+        "response": "Spot on. Can you explain in your own words how vertical acceleration affects horizontal push?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Vertical acceleration demands more vertical friction to prevent slipping, which requires a larger horizontal normal force."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully synthesized the concepts. I will now close the conversation warmly.",
+        "state": "Closing",
+        "response": "That is exactly it! Ready to try another scenario?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Active vs passive voice",
+    "problem": "Rewrite this sentence in the active voice: 'The ancient scroll was carefully restored by the conservator.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know 'by the conservator' is important, but I'm not sure how to start rewriting it."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has identified a key part of the sentence but is unsure of the next step. I will diagnose if they can identify the core action.",
+        "state": "Diagnosis",
+        "response": "You're on the right track. What is the main action happening in this sentence?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "The action is 'was carefully restored', which is the restoring part."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student successfully identified the action. Now I need to see if they can identify who performed it.",
+        "state": "Support",
+        "response": "Who or what is actually performing that restoration?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I think the scroll is doing the restoring, right?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made a mistake, confusing the receiver with the doer. I need to offer a subtle hint pointing to the agent.",
+        "state": "Support",
+        "response": "Look at the end of the sentence. Who is performing the action after 'by'?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, the conservator is doing it! So, 'The conservator carefully restored the ancient scroll'?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly rewrote the sentence. I will now transition to synthesis to help them analyze the change.",
+        "state": "Synthesis",
+        "response": "What changed about the position of the conservator when we switched to active voice?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "In active, the person doing the action goes to the front of the sentence."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student understands the placement of the subject. Now I want them to define the general rule in their own words.",
+        "state": "Synthesis",
+        "response": "That's it. How would you summarize the main difference between active and passive voice in your own words?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Active voice has the doer of the action first, while passive voice puts the receiver of the action first."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has accurately articulated the rule in their own words. The session is complete.",
+        "state": "Closing",
+        "response": "Perfect explanation! You've got this down. Ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Direction sense",
+    "problem": "A traveler starts walking North. After 5 miles, they turn 90 degrees right, walk 3 miles, and then make a 135-degree turn to their left. In which direction are they walking now?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I mapped the first two steps to East, but I'm stuck on the 135-degree left turn."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student successfully tracked the first steps. I need to establish their current orientation before addressing the angled turn.",
+        "state": "Diagnosis",
+        "response": "Which direction is the traveler facing just before they make that 135-degree turn?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "They went North, turned right, so they are facing East."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has the correct orientation. Now, I will guide them to break down the 135-degree turn into manageable steps.",
+        "state": "Diagnosis",
+        "response": "Correct. If they made a standard 90-degree turn to their left from East, where would they face?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "A 90-degree left turn from East would point them North."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the 90-degree point. Now I'll guide them to calculate the remaining angle.",
+        "state": "Support",
+        "response": "Exactly. Since the total turn is 135 degrees, how much further left must they go?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "They need 45 degrees more, which would put them at North-East."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student made a minor slip, turning right (Eastward) instead of left (Westward) from North. I need to prompt them to check the direction of the turn.",
+        "state": "Support",
+        "response": "If you are facing North and continue turning left, which cardinal direction do you lean toward?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Ah, left of North is West. So it's North-West, not North-East!"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student self-corrected and got the right answer. Now I want them to synthesize the rule to internalize the concept.",
+        "state": "Synthesis",
+        "response": "Great catch! How would you explain the rule for breaking down angled turns like this?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Break the angle into 90-degree steps first, then apply the remaining degrees in the same rotation direction."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the rule in their own words. The session is ready to close.",
+        "state": "Closing",
+        "response": "Exactly! That's a perfect strategy. Ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Basic probability distributions",
+    "problem": "A quality control inspector tests batches of 50 electronic components. The probability of any single component being defective is 0.04, independently. A batch is rejected if it contains 3 or more defective components. The inspector tests batches one by one until they reject a batch. What is the probability that the inspector rejects a batch on exactly their 4th test?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Hi! I'm trying to solve this problem. Since each component has a 0.04 defect rate, I set up a Binomial distribution for a single batch of 50. To find the rejection probability, I calculated the complement of getting 1 or 2 defects, so P(Reject) = 1 - nCr(50, 1)*(0.04)^1*(0.96)^49 - nCr(50, 2)*(0.04)^2*(0.96)^48. Now I need to figure out how to handle the 4th test part. Do I just multiply this probability by 4?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has set up the binomial complement but missed the zero-defect case, and also suggested a naive multiplication for the sequential testing. I will first diagnose their understanding of the complement calculation before addressing the sequential part.",
+        "state": "Diagnosis",
+        "response": "You've made a really strong start by identifying that using the complement is the most efficient way to find the rejection probability for a single batch. If we want to find the complement of '3 or more defects,' we need to subtract all cases with fewer than 3 defects. Looking closely at your current terms, what happens if a batch contains absolutely no defective components?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, of course! A batch with zero defects wouldn't be rejected either, so I completely missed the P(X=0) term in my complement. That means P(Reject) = 1 - P(X=0) - P(X=1) - P(X=2). Let me compute that: 1 - 0.130 - 0.271 - 0.276 = 0.323. So the probability of rejecting any single batch is 0.323. Now, since we want to find the probability of rejecting on exactly the 4th test, shouldn't we just multiply 0.323 by 4 to account for the four tests?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student corrected the binomial complement but is now asserting that they should multiply the probability by 4. I need to ask a question that guides them to realize why multiplying probabilities like this doesn't make sense for independent sequential events.",
+        "state": "Support",
+        "response": "That correction for the single-batch probability is perfect! Now, regarding your idea of multiplying by 4: if the probability of rejecting a single batch is 0.323, what would happen to our overall probability if we had, say, 10 tests and multiplied by 10? What does that tell us about how we should combine these independent events?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Ah, multiplying by 10 would give a probability greater than 1, which is impossible! Right, these are independent events, so we must multiply the probabilities of each test's outcome together. Since we have 4 trials and we want exactly 1 rejection, this should follow a Binomial distribution where we want 1 success in 4 trials, right? So we use the binomial formula with n=4 and k=1."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student corrected the multiplication issue but has now asserted another mistake: using a Binomial distribution for 1 success in 4 trials. This misses the 'until' condition. I need to ask a question that highlights why the specific order matters.",
+        "state": "Support",
+        "response": "You've made a great connection about multiplying probabilities for independent events! But let's think about the order. If we use the standard binomial distribution for 1 success in 4 trials, it includes scenarios where the rejection happens on the first test. If the inspector rejects the very first batch, would they even perform a second, third, or fourth test?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "No, they wouldn't, because the problem says they test 'until' they reject a batch. That means the first three tests must be non-rejections, and only the fourth one can be a rejection. So the order is completely fixed! That means it's a geometric distribution. Since we have 4 tests in total, the probability should be (1 - 0.323)^4 * 0.323."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the geometric nature but made an off-by-one boundary/indexing error, using an exponent of 4 for the failures instead of 3. I need to guide them to count the exact number of failures before the success.",
+        "state": "Support",
+        "response": "You are doing fantastic—recognizing that the fixed order makes this a geometric scenario is a huge step! Let's look closely at your exponent. If the first rejection happens on exactly the fourth test, how many successful non-rejection tests must occur before that final fourth test?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Ah, my boundary error again! If the fourth test is the rejection, then only the first, second, and third tests are non-rejections. That's 3 non-rejections, not 4. So the probability is (1 - 0.323)^3 * 0.323 = (0.677)^3 * 0.323, which is about 0.310 * 0.323, equaling approximately 0.100. So there is a 10% chance!"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully resolved all errors and calculated the correct probability. Now, I want them to synthesize the concepts by explaining the relationship between the two distributions and the edge cases in their own words.",
+        "state": "Synthesis",
+        "response": "Spot on! That is the correct probability. Looking back at this entire journey, how would you explain the key steps and the common traps—like the ones with the complement and the geometric exponents—to a classmate who is learning this for the first time?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I'd tell them to first break the problem down into two parts: finding the single-event probability, and then modeling the sequential trials. For the single event, if you use the complement, always check your boundaries so you don't accidentally leave out the zero-success case. For the sequential part, look for keywords like 'until' which signal a Geometric distribution rather than a Binomial one because the order is fixed. Finally, always write out the sequence of trials explicitly so you don't make an off-by-one error with your exponents!"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has provided a stellar synthesis of the conceptual steps and traps. I will wrap up warmly as requested.",
+        "state": "Closing",
+        "response": "That is an absolutely perfect summary! You articulated the boundary checks and the structural differences between Binomial and Geometric beautifully. Excellent work today! Ready to tackle another problem?"
+      }
+    ]
+  }
+]

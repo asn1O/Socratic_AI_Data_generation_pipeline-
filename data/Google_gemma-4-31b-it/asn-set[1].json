@@ -1324,5 +1324,116 @@
         "response": "Spot on! You've mastered this. Want to try another?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Mixtures and alligation",
+    "problem": "A shopkeeper mixes rice at $20/kg and $30/kg to get a mixture worth $24/kg. In what ratio should he mix them?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm not sure where to start. Do I just add them?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student is lost; needs to understand the goal of alligation to proceed.",
+        "state": "Diagnosis",
+        "response": "No. Alligation helps find the mixing ratio. How would you find the difference?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I don't really get what \"alligation\" means."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student is unfamiliar with the term; providing a direct explanation for a beginner.",
+        "state": "Support",
+        "response": "It's a method for mixtures. Subtract the lower price from the mean price."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "So, 24 minus 20 is 4. Is that right?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student succeeded on the first step; guiding them to the second step.",
+        "state": "Support",
+        "response": "Yes. Now subtract the mean price from the higher price."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "30 minus 24 is 6. So the ratio is 4:6?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student inverted the ratio components; providing a direct correction.",
+        "state": "Support",
+        "response": "Not quite. The cheaper part's ratio is the higher price's difference."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, so it's 6:4. That's 3:2."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student reached the correct answer; confirming the result.",
+        "state": "Support",
+        "response": "That is correct. You found the right ratio."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "So if the mean was 28, I just add 4 to both?"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has a conceptual misunderstanding of how the mean affects the ratio.",
+        "state": "Support",
+        "response": "No. You must calculate new differences from the new mean."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "I see. It's about the distance from the average."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student understands the logic; now they must articulate the rule to internalize it.",
+        "state": "Synthesis",
+        "response": "Precisely. In your own words, how do you find the ratio?"
+      },
+      {
+        "turn": 15,
+        "speaker": "student",
+        "text": "Subtract the mean from the high price and the low from the mean."
+      },
+      {
+        "turn": 16,
+        "speaker": "tutor",
+        "reasoning": "Student has successfully explained the principle; conversation is complete.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! Want to try another one?"
+      }
+    ]
   }
 ]

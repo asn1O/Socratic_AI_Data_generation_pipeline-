@@ -1186,5 +1186,302 @@
         "response": "Nice work! You've got it. Want to try another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "biology",
+    "topic": "Human circulatory system",
+    "problem": "A resting adult has a heart rate of 72 beats per minute and a stroke volume of 70 mL. During exercise, their heart rate rises to 150 bpm and stroke volume to 110 mL. (a) Calculate the resting and exercise cardiac output. (b) Explain why systolic blood pressure tends to increase more than diastolic blood pressure during exercise.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think cardiac output is heart rate times stroke volume, but I'm not sure how to convert mL to L."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student mentioned formula but unsure about conversion; need to elicit their reasoning.",
+        "state": "Diagnosis",
+        "response": "How did you decide to multiply heart rate by stroke volume?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Actually I think you divide heart rate by stroke volume to get output, and the units stay in mL/min."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student wavering on operation and introduced BP misconception; give hint about units to solidify operation.",
+        "state": "Support",
+        "response": "What happens to cardiac output if heart rate goes up but stroke volume stays the same?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "If HR up, output up, so multiply? Also I think systolic BP drops when you exercise because arteries widen."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student gave wrong conversion factor; need hint about correct factor.",
+        "state": "Support",
+        "response": "Think about the units: beats per minute multiplied by mL per beat gives what unit?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "You get mL per minute, then I divide by 60 to get liters per minute."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student gave wrong conversion factor; need hint about correct factor.",
+        "state": "Support",
+        "response": "How many milliliters are in a liter?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Resting CO ≈5 L/min; exercise CO ≈16.5 L/min."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has correct CO; need to probe BP understanding and address earlier systolic down misconception.",
+        "state": "Support",
+        "response": "If cardiac output increases, what effect would that have on the pressure in the arteries during each heartbeat?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Systolic goes up with more blood per beat; diastolic may drop slightly. But could a fast HR lower systolic?"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student resurged systolic down misconception; need to correct via hint about pressure vs filling time.",
+        "state": "Support",
+        "response": "Even with a fast heart rate, each contraction still pushes blood into arteries; what determines the peak pressure?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Cardiac output = HR × SV. More CO raises systolic BP; diastolic may fall slightly due to vasodilation."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the rule in their own words; conversation wraps up.",
+        "state": "Closing",
+        "response": "Nice job! Ready for another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Logical fallacies",
+    "problem": "Consider the argument: 'If we allow students to use calculators in math exams, then soon they will rely on them for all calculations and will forget how to do basic arithmetic. Therefore, we should ban calculators in exams.' Identify the logical fallacy present and explain why.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the argument is a false cause fallacy because it says using calculators causes students to forget basic arithmetic."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student labeled the fallacy as false cause, showing they noticed a causal claim but may confuse it with slippery slope. Need to explore their understanding of false cause.",
+        "state": "Diagnosis",
+        "response": "What makes you think it's a false cause rather than, say, a slippery slope? How would you define a false cause fallacy?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Actually, on second thought, it feels more like an appeal to fear because they're scaring us about losing math skills if we allow calculators."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student switched to appeal to fear, still missing the causal chain nature. Need to hint at the sequential predictions.",
+        "state": "Support",
+        "response": "Notice how the argument predicts a series of events: first calculators, then reliance, then forgotten arithmetic. What kind of fallacy involves a chain of predicted outcomes?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I guess it could be a slippery slope, but slippery slope needs more than one step, and here there's just one cause leading to one effect, so it doesn't fit."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly thinks slippery slope requires multiple distinct steps, missing that the argument already presents a chain. Need to clarify the chain present.",
+        "state": "Support",
+        "response": "The argument actually links three stages: allowing calculators leads to reliance on them, which in turn leads to forgetting basic arithmetic. Does that look like a chain to you?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Okay, I see the chain now. But maybe it's not a fallacy if the chain could really happen; I'm not sure there's enough evidence either way."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student recognizes the chain but is unsure about evidential sufficiency. Need to prompt them to articulate why lack of evidence makes it fallacious.",
+        "state": "Synthesis",
+        "response": "In your own words, why does arguing that this chain will happen without evidence make the reasoning flawed?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Because a slippery slope fallacy occurs when someone assumes a chain of events will happen without showing that each step is likely; the argument gives no proof that calculators will cause reliance or that reliance will erase arithmetic skills."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student gave a good definition; now we can push them to distinguish slippery slope from reasonable causal prediction to deepen understanding.",
+        "state": "Support",
+        "response": "How would you tell the difference between a slippery slope fallacy and a legitimate warning about possible consequences?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "A legitimate warning would provide evidence or probabilities for each step, showing the chain is plausible, whereas a slippery slope just asserts the chain will happen without such support."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student articulated the distinction well; now ask them to summarize the rule in their own words to consolidate.",
+        "state": "Synthesis",
+        "response": "Please summarize the rule for identifying a slippery slope fallacy in one or two sentences, using your own words."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "A slippery slope fallacy happens when someone claims that a relatively small first step will inevitably lead to a chain of related events ending in a significant outcome, without providing evidence that each step in the chain is likely to occur."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept, indicating mastery; we can wrap up.",
+        "state": "Closing",
+        "response": "Nice work! You've nailed the slippery slope fallacy. Want to try another example?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Analogies and vocabulary in context",
+    "problem": "Read the following three sentences:\n1. The chef meticulously measured each ingredient, ensuring the sauce had the perfect consistency.\n2. The editor carefully reviewed the manuscript, correcting every grammatical error.\n3. The architect ______ the blueprints, making sure every dimension was accurate.\n\nWhich word best completes the third sentence based on the analogy presented by the first two sentences?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the answer is 'designed' because architects design buildings."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student gave an answer without explaining the relationship; they focused on the typical activity of an architect but missed the adverb clues about manner.",
+        "state": "Diagnosis",
+        "response": "How did you arrive at 'designed'? What about the first two sentences helped you choose that?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I noticed that both sentences talk about someone using tools: chef uses measuring tools, editor uses a red pen, so I thought architect uses a ruler to design."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student focused on tools rather than how the actions are described; need to redirect attention to the adverbs that indicate manner.",
+        "state": "Support",
+        "response": "Notice that the sentences describe how the actions are done, not just what tools are used. What do the adverbs 'meticulously' and 'carefully' tell you about the manner of the actions?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "They show the actions are done with great effort, so I think the architect must have 'worked hard' on the blueprints."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student recognized the adverbs but supplied a verb phrase that doesn't properly take 'blueprints' as an object; need to guide them to a suitable verb.",
+        "state": "Support",
+        "response": "What verb can describe what an architect does to blueprints that can be modified by an adverb like 'carefully'?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Maybe 'drew' because architects draw blueprints."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student offered a verb that doesn't convey the careful checking implied by the adverbs; need to hint at the idea of verifying correctness.",
+        "state": "Support",
+        "response": "Think about what someone does when they want to make sure something is correct before moving forward. What verb fits that idea with the blueprints?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "They might 'checked' the blueprints."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student suggested a verb that matches the sense of careful verification; now we want them to articulate the underlying pattern in their own words.",
+        "state": "Synthesis",
+        "response": "In your own words, why does 'checked' fit the pattern shown by the first two sentences?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The chef measured meticulously, the editor reviewed carefully, and the architect checked carefully—all involve looking at something closely to make sure it's right."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student explained the rule; we confirm understanding and ensure they've captured the essential idea.",
+        "state": "Support",
+        "response": "So the pattern is that each sentence uses an adverb to show a careful action performed on the professional's work product to ensure correctness. Does that capture it?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Yes, each sentence shows a professional doing their job carefully—using an adverb like meticulously or carefully—to verify that everything is correct before moving on."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept; the conversation can wrap up.",
+        "state": "Closing",
+        "response": "Great job! You've nailed the relationship. Want to try another analogy?"
+      }
+    ]
   }
 ]

@@ -705,3 +705,276 @@ print x, y",
     }
   ]
 }
+
+
+{
+  "problem": "A researcher notices that as the number of firefighters at a scene increases, the amount of damage from the fire also increases. Does having more firefighters cause more damage? Explain your reasoning.",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I think more firefighters cause more damage because big fires always have lots of firefighters and lots of damage."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "Student asserted a causal claim (more firefighters → more damage). Need to explore their reasoning without confirming or denying the claim.",
+      "state": "Diagnosis",
+      "response": "What makes you think the number of firefighters influences the damage?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "reasoning": "Student expresses uncertainty rather than a false claim, showing they are open to revising their idea.",
+      "state": "Diagnosis",
+      "response": "I'm not sure. Maybe the firefighters don't cause the damage; maybe bigger fires just need more people."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "Student is uncertain but leaning toward the correct direction. Provide a minimal hint about temporal order to guide self‑correction.",
+      "state": "Support",
+      "response": "Think about what happens first: does the fire start big, or do we send firefighters after we see the fire?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "reasoning": "Student begins to grasp the correct temporal direction, indicating emerging correct reasoning.",
+      "state": "Support",
+      "response": "Oh, I guess the fire starts first, then we send firefighters based on its size."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "Student shows correct direction but hasn't articulated the general principle. Probe another example to see if they overgeneralize.",
+      "state": "Diagnosis",
+      "response": "What about ice cream sales and drowning incidents? Do you think ice cream causes drowning?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "reasoning": "Student explicitly asserts a false causal claim (ice cream → drowning), marking the second mistake.",
+      "state": "Diagnosis",
+      "response": "Yes, eating ice cream makes you swim more, which leads to more drowning."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "Student made a second mistaken causal claim. Need to give a non‑explicit hint about a common factor to guide correction.",
+      "state": "Support",
+      "response": "Consider the season: when do ice cream sales go up? When do drownings go up?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "reasoning": "Student identifies the confounding variable (hot weather) and rejects the causal link, showing correct reasoning but not yet the general rule.",
+      "state": "Support",
+      "response": "Both increase in summer because of the heat, not because one causes the other."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "Student grasped the specific example; now guide them to articulate the general principle about correlation and causation.",
+      "state": "Support",
+      "response": "When two things rise and fall together we call that a correlation. Does correlation mean one causes the other?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "reasoning": "Student is hesitating, showing they have not yet verbalized the rule in their own words.",
+      "state": "Diagnosis",
+      "response": "I'm not completely sure... maybe it's just that they happen at the same time but one doesn't make the other happen?"
+    },
+    {
+      "turn": 12,
+      "speaker": "tutor",
+      "reasoning": "Student is close to the principle but needs a bit more prompting to express it clearly and fully.",
+      "state": "Support",
+      "response": "Let's try to state it plainly: if two variables are correlated, what can we actually conclude about cause and effect?"
+    },
+    {
+      "turn": 13,
+      "speaker": "student",
+      "reasoning": "Student now articulates the core idea in their own words, demonstrating understanding of correlation vs. causation.",
+      "state": "Synthesis",
+      "response": "Just because two things are correlated doesn't mean one causes the other; there could be a third factor or it could be coincidence."
+    },
+    {
+      "turn": 14,
+      "speaker": "tutor",
+      "reasoning": "Student has correctly explained the rule; conversation is ready to end with a warm wrap‑up.",
+      "state": "Closing",
+      "response": "Nice, you've got it! Want to try another one?"
+    }
+  ]
+}
+
+
+{
+  "problem": "A student measures the rate of oxygen production in a leaf at different light intensities. At low light, the rate rises linearly with light intensity. At higher light intensities, the rate levels off and no longer increases with more light. Explain why the rate of photosynthesis plateaus at high light intensity.",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I see that oxygen production goes up with more light at first, but then it levels off. I'm not sure why it stops increasing."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student expressed uncertainty about why the oxygen production plateaus; I need to elicit their understanding of what photosynthesis requires beyond light energy.",
+      "state": "Diagnosis",
+      "response": "What do you think is required for photosynthesis besides light energy?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Water and carbon dioxide are needed to make sugars and release oxygen."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student identified water and CO2 as necessary inputs; to guide them toward considering which might become limiting under high light, I give a minimal hint about scarcity.",
+      "state": "Support",
+      "response": "If light is abundant, which of those inputs might become scarce or limit the process?"
+    },
+    {
+      "turn": 5,
+      "student": "student",
+      "text": "Maybe carbon dioxide could run out if it's being used fast."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student suggested CO2 might be depleted; I check their thinking about how to test this hypothesis with an open‑ended diagnostic question.",
+      "state": "Diagnosis",
+      "response": "How could you check whether CO2 availability is what's limiting the rate at high light?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "I could increase the CO2 concentration around the leaf and see if the oxygen production goes up again."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student proposed testing with added CO2; to deepen their reasoning I hint at another possible limitation—enzyme capacity—without giving the answer.",
+      "state": "Support",
+      "response": "Besides CO2, what part of the Calvin cycle could become saturated even with plenty of CO2?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "The enzyme RuBisCO that fixes CO2 might only work at a certain maximum speed."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "The student mentioned RuBisCO capacity; now I ask them to articulate the overall reason for the plateau in their own words, moving toward synthesis.",
+      "state": "Synthesis",
+      "response": "In your own words, why does the rate of oxygen production stop increasing when the light intensity gets very high?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "At very high light, the light reactions produce lots of ATP and NADPH, but the Calvin cycle can only use them up to the speed set by how fast CO2 can be fixed—limited by CO2 concentration and the capacity of RuBisCO—so extra light doesn't raise the oxygen output."
+    },
+    {
+      "turn": 12,
+      "speaker": "tutor",
+      "reasoning": "The student has correctly explained the limiting factor concept in their own words, indicating mastery; the conversation can close warmly.",
+      "state": "Closing",
+      "response": "Nice work! You've got the idea. Want to try another one?"
+    }
+  ]
+}
+
+
+{
+  "problem": "You have a topographic map with a scale of 1:25,000 and a contour interval of 10 meters. Two trailheads, A and B, are shown 6.5 cm apart on the map. Between A and B the elevation rises steadily from 340 m to 460 m. Assuming the path follows the straight line between the points on the map, estimate the actual ground distance you would walk from A to B, taking into account both horizontal distance and elevation change.",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I got 6.5 cm on the map, which equals 1.625 km horizontally."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "Student correctly computed horizontal map distance but expressed uncertainty about incorporating elevation change, indicating need to probe their understanding of how elevation affects actual walking distance.",
+      "state": "Diagnosis",
+      "response": "If you had to walk up a hill, would the ground distance be longer or shorter than the map distance?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "I think the actual distance will be longer because of the uphill."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "Student acknowledged that slope increases distance, showing readiness to consider geometric modeling; a prompt to use right triangle will guide them toward the correct method.",
+      "state": "Support",
+      "response": "Could you use the horizontal distance and elevation as legs of a right triangle?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "I could use Pythagoras with horizontal and vertical sides."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "Student recalled Pythagoras but may overlook unit consistency; prompting them to check units prepares them for accurate calculation.",
+      "state": "Support",
+      "response": "Did you convert the elevation change to the same units as the horizontal distance before squaring?"
+    },
+    {
+      "turn": 7,
+      "student": "student",
+      "text": "I convert 120 m to 0.12 km."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "Student identified need for unit conversion; suggesting to compute squares separately helps avoid arithmetic errors and keeps focus on the method.",
+      "state": "Support",
+      "response": "Would it help to first compute the squares separately before adding?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "Horizontal squared is 2.6406, vertical squared is 0.0144, sum is 2.655."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "Student has computed the sum of squares; asking for the square root directs them to complete the Pythagorean step.",
+      "state": "Support",
+      "response": "What is the square root of that sum?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "Square root of 2.655 is about 1.6295 km."
+    },
+    {
+      "turn": 12,
+      "speaker": "tutor",
+      "reasoning": "Student arrived at the correct distance, indicating grasp of the procedure; requesting an explanation in their own words will consolidate understanding.",
+      "state": "Synthesis",
+      "response": "Can you describe, in your own words, how to find the actual ground distance using map distance and elevation change?"
+    },
+    {
+      "turn": 13,
+      "speaker": "student",
+      "text": "First scale map distance to horizontal, convert elevation to same units, then apply Pythagoras."
+    },
+    {
+      "turn": 14,
+      "speaker": "tutor",
+      "reasoning": "Student has successfully articulated the method, showing mastery; conversation can conclude with a positive wrap-up.",
+      "state": "Closing",
+      "response": "Nice, that's exactly it! Want to try another one?"
+    }
+  ]
+}

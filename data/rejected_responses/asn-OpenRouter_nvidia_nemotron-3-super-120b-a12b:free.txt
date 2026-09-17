@@ -207,3 +207,93 @@
     }
   ]
 }
+
+
+{
+  "problem": "A town has a vacant lot. They can either build a community garden costing $200,000 that yields $30,000 of annual produce value and $10,000 of annual environmental benefit, or build a parking lot costing $150,000 that yields $20,000 of annual reduced traffic congestion benefit but causes $5,000 of annual air‑pollution cost. Assuming a 5‑year horizon with no discounting, which option gives the higher net benefit?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I think we should pick the parking lot because it costs less."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "Student focused only on cost, ignoring benefits. Need to elicit their full consideration of both costs and benefits.",
+      "state": "Diagnosis",
+      "response": "What factors are you thinking about when comparing the two options?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "I just looked at the costs: garden $200k, parking $150k."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "Student mentioned costs only; they need to think about benefits as well. Provide acknowledgement and ask about benefits.",
+      "state": "Support",
+      "response": "I see you focused on cost. What about the benefits each option provides?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "The garden gives $30k of produce each year plus $10k environmental benefit, so $40k per year."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "Student gave garden benefits but not parking lot benefits; need to check understanding of both sides.",
+      "state": "Diagnosis",
+      "response": "And what are the yearly benefits for the parking lot option?"
+    },
+    {
+      "turn": 7,
+      "student": "text": "The parking lot reduces traffic congestion worth $20k per year, but causes $5k of pollution per year, so net $15k per year."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "Student has yearly benefits for both options; now they need to aggregate over the five‑year horizon. Acknowledge their work and ask how to get total benefit.",
+      "state": "Support",
+      "response": "Good work on the yearly numbers. How would you find the total benefit over five years for each option?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "Garden: $40k×5 = $200k benefit. Parking: $15k×5 = $75k benefit."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "Student computed total benefits; they should now articulate the decision rule they used.",
+      "state": "Synthesis",
+      "response": "In your own words, describe how you would decide which option is better using the numbers you have."
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "Subtract the cost from the total benefit to get net benefit, then choose the higher net benefit."
+    },
+    {
+      "turn": 12,
+      "speaker": "tutor",
+      "reasoning": "Student gave a rule but could benefit from restating it to solidify understanding; acknowledge and ask for a rephrasing.",
+      "state": "Support",
+      "response": "Your explanation makes sense. How would you tell a friend the main idea in one sentence?"
+    },
+    {
+      "turn": 13,
+      "speaker": "student",
+      "text": "Add up all benefits over time, subtract all costs, and pick the option with the highest net result."
+    },
+    {
+      "turn": 14,
+      "speaker": "tutor",
+      "reasoning": "Student has correctly explained the cost‑benefit rule in their own words; the concept is mastered.",
+      "state": "Closing",
+      "response": "Nice work! You've got cost‑benefit reasoning down. Want to try another example?"
+    }
+  ]
+}

@@ -108,3 +108,55 @@
   failure_categories:
   empty_response: 2
   speaker_alternation_broken: 3
+2026-09-17 18:31:33,198 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-17 18:35:11,953 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=18499 turns=14 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/asn-set[1].json
+2026-09-17 18:36:11,953 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-17 18:37:21,177 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=8775 turns=14 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/asn-set[1].json
+2026-09-17 18:38:21,177 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-17 18:38:21,920 ERROR MODEL_FAILURE provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free error_code=UNEXPECTED_ERROR reason=model call failed or returned no response
+2026-09-17 18:39:21,920 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-17 18:40:36,413 INFO REJECTED_RESPONSE_SAVED provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free path=data/rejected_responses/asn-OpenRouter_nvidia_nemotron-3-super-120b-a12b:free.txt
+2026-09-17 18:40:36,414 ERROR JSON_INVALID provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free reason=invalid JSON: Expecting ',' delimiter
+2026-09-17 18:41:36,414 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-17 18:43:42,648 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=10006 turns=14 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/asn-set[1].json
+2026-09-17 18:44:42,648 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-17 18:51:27,853 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=10298 turns=14 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/asn-set[2].json
+2026-09-17 18:52:27,853 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-17 18:53:14,552 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=6381 turns=14 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/asn-set[2].json
+2026-09-17 18:54:14,553 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-17 18:56:19,333 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=11722 turns=12 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/asn-set[2].json
+2026-09-17 18:57:19,334 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-17 18:59:04,373 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=10240 turns=14 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/asn-set[2].json
+2026-09-17 19:00:04,373 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-17 19:02:56,932 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=16754 turns=12 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/asn-set[2].json
+2026-09-17 19:03:56,932 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-17 19:06:13,019 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=13774 turns=12 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/asn-set[2].json
+2026-09-17 19:07:13,019 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-17 19:09:44,773 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=13007 turns=12 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/asn-set[2].json
+2026-09-17 19:10:44,774 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-17 19:15:57,009 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=23422 turns=14 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/asn-set[2].json
+2026-09-17 19:16:57,009 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-17 19:19:14,975 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=14687 turns=12 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/asn-set[2].json
+2026-09-17 19:20:14,976 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-17 19:21:56,901 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=12122 turns=14 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/asn-set[2].json
+2026-09-17 19:22:56,901 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-17 19:24:25,727 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=10171 turns=12 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/asn-set[2].json
+2026-09-17 19:25:25,728 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-17 19:25:26,867 ERROR MODEL_FAILURE provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free error_code=UNEXPECTED_ERROR reason=model call failed or returned no response
+2026-09-17 19:26:26,867 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-17 19:26:27,996 ERROR MODEL_FAILURE provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free error_code=UNEXPECTED_ERROR reason=model call failed or returned no response
+2026-09-17 19:27:27,996 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-17 19:27:28,820 ERROR MODEL_FAILURE provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free error_code=UNEXPECTED_ERROR reason=model call failed or returned no response
+2026-09-17 19:27:28,820 ERROR MODEL_EXPIRED provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free reason=three consecutive API failures
+2026-09-17 19:28:28,821 INFO MODEL_SUMMARY
+  provider_model: OpenRouter / nvidia/nemotron-3-super-120b-a12b:free
+  attempts: 19
+  saved: 14
+  failed: 5
+  accept_rate: 73.68%
+  average_tokens: 12847.00
+  turn_range: 12-14
+  expired: True
+  failure_categories:
+  empty_response: 4
+  invalid_json_syntax: 1

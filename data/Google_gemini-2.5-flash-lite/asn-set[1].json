@@ -1252,5 +1252,92 @@
         "response": "Excellent! You've got a great handle on subordinate clauses. Ready to try another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "biology",
+    "topic": "Cell structure",
+    "problem": "A cell needs to transport a large protein molecule from the cytoplasm into the nucleus. Which organelle is primarily responsible for packaging and modifying proteins for transport, and how does it prepare this protein for its journey to the nucleus?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the ribosome makes proteins, so maybe it sends it to the nucleus? Or does the nucleus make the protein itself?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is unsure about the initial steps of protein synthesis and transport, mentioning ribosomes and the nucleus. This indicates a need to diagnose their current understanding of protein processing and movement within the cell.",
+        "state": "Diagnosis",
+        "response": "That's a good start, thinking about where proteins are made! Ribosomes are indeed key to protein synthesis. However, after a protein is made, it often needs some additional processing or modification before it can go to its final destination. What do you remember about other organelles involved in modifying or packaging molecules within the cell?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Hmm, I'm not sure. Is it the mitochondria? It makes energy, but I don't remember it doing anything with proteins."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is still guessing and incorrectly attributes protein modification to the mitochondria. This is a clear misconception and requires direct correction before moving forward. The student needs to be pointed toward the correct organelle.",
+        "state": "Support",
+        "response": "You're right, mitochondria are powerhouses! But they have a different main job. Think about an organelle that acts like a cellular post office, sorting, modifying, and packaging molecules. Does that ring a bell?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, the Golgi apparatus! It does look like stacks of flattened sacs. So the Golgi processes the protein?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified the Golgi apparatus and its general function. Now, the next step is to understand *how* it prepares the protein for transport.",
+        "state": "Diagnosis",
+        "response": "Exactly, the Golgi apparatus is often described that way! You've got the right organelle. Now, let's focus on how it specifically 'packages and modifies' that large protein for its trip to the nucleus. What kinds of changes do you think a protein might need before it's ready to leave the Golgi?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Maybe it needs a specific tag or label so the cell knows where it's going? Or perhaps it gets folded in a certain way?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is making good conceptual leaps, suggesting 'tags' and 'folding' as modifications. These are relevant. The next step is to help them connect these ideas to the Golgi's specific actions and the ultimate destination.",
+        "state": "Support",
+        "response": "Those are excellent ideas! Both adding 'tags' and ensuring proper 'folding' are crucial. How might the Golgi apparatus physically add these tags or ensure the protein is correctly folded and ready for transport to a specific location like the nucleus?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Maybe it adds little sugar molecules, like glycosylation? And then it puts the protein into a little bubble, like a vesicle, to send it off?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has now correctly identified the Golgi's role in modification (glycosylation) and packaging (vesicles) for transport. They are ready to articulate the complete process.",
+        "state": "Synthesis",
+        "response": "You've hit on two very important processes! Glycosylation is indeed a key modification that happens in the Golgi, and forming vesicles is exactly how the Golgi packages and ships molecules. So, in your own words, can you explain the role of the Golgi apparatus in getting that protein ready for the nucleus?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The Golgi apparatus receives proteins from the endoplasmic reticulum, then it modifies them, like adding sugar chains, and sorts them. Finally, it packages them into vesicles, which are like little transport bubbles, to send them to their final destination, like the nucleus."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the concept in their own words, demonstrating a complete understanding of the Golgi's role in protein modification and transport.",
+        "state": "Closing",
+        "response": "That's a perfect summary! You've really grasped how the Golgi functions as the cell's processing and shipping center. Great job!"
+      }
+    ]
   }
 ]
