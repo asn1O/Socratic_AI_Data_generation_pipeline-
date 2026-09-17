@@ -1,0 +1,101 @@
+[
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Time and work",
+    "problem": "A and B together can finish a job in 6 days. B and C together can finish it in 8 days. A and C together can finish it in 12 days. Find the time each would take to finish the job alone.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think A alone can finish the work in 3 days because if A and B together take 6 days, then each must be half as fast, so A would take half of 6, which is 3 days."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student assumed equal speeds to get A=3 days, showing a partial attempt but ignoring the other pair data. We need to uncover their reasoning before guiding them.",
+        "state": "Diagnosis",
+        "response": "Let's test that assumption with the other given times. If A were 3 days, what would B and C's individual times have to be to satisfy the other two pairs?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "If A is 3 days, then A's rate is 1/3 per day. Since A+B finish in 6 days, their combined rate is 1/6, so B's rate would be 1/6 - 1/3 = -1/6, which doesn't make sense. I'm not sure now."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student realized the assumption leads to nonsense, showing they can follow logic but are stuck; we should support by giving a hint to set up equations.",
+        "state": "Support",
+        "response": "Let's define each person's daily work rate as a, b, and c. Then from the problem we have a+b = 1/6, b+c = 1/8, a+c = 1/12."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I think A alone would take 12 days, since A+B take 6 days and A+C take 12 days, I guessed A's time is somewhere between those, maybe 12."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student gave an explicit wrong claim (A=12 days) without justification; we need to support by correcting and hinting at the correct method.",
+        "state": "Support",
+        "response": "Let A = 12 days: a = 1/12, then b = 1/6 - 1/12 = 1/12, c = 1/8 - 1/12 = 1/24. But a + c = 1/8, not 1/12, so A isn't 12 days. Solve by adding three equations."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Okay, I'll try solving: from a+b = 1/6 and a+c = 1/12, subtract to get b - c = 1/6 - 1/12 = 1/12. I'm not sure what to do next."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has b - c = 1/12 but stuck; we need to support by hinting to use b + c = 1/8.",
+        "state": "Support",
+        "response": "You also have b + c = 1/8 from the second pair. Add the two equations (b - c) + (b + c) to eliminate c and solve for b."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Adding gives 2b = 1/12 + 1/8 = (2/24 + 3/24) = 5/24, so b = 5/48. Then c = b - 1/12 = 5/48 - 4/48 = 1/48. Then a = 1/6 - b = 8/48 - 5/48 = 3/48 = 1/16."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly found the individual rates; we now support them to convert rates to times.",
+        "state": "Support",
+        "response": "Now, to get each person's time, take the reciprocal of their daily work rate. For instance, if a rate is 1/5, the time is 5 days. Apply that to the rates you found for a, b, and c."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "We added the three pair equations (a+b, b+c, a+c) and divided by two to get a+b+c, the combined daily work rate of A, B, and C."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student gave a partial description of the method; we now prompt them to articulate the full rule in their own words.",
+        "state": "Synthesis",
+        "response": "Please explain the overall strategy we just used to find each person's individual time, using your own words, and mention why each step works."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "We added the three pair equations to get twice the sum of individual rates, halved it to find the total rate of A, B, and C, subtracted each pair rate from that total to get each person’s rate, and took reciprocal to find their times."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the rule in their own words, indicating mastery of the concept.",
+        "state": "Closing",
+        "response": "Nice, you've got it! Want to try another one?"
+      }
+    ]
+  }
+]

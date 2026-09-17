@@ -331,3 +331,85 @@ Config parameter balance
     easy                          50
     hard                          48
     medium                        35
+2026-09-17 22:40:41,622 INFO 
+=== Run Statistics Summary ===
+Overall totals
+  Attempts: 188
+  Saved: 156
+  Failed: 32
+  Accept rate: 82.98%
+  Duration (h:m:s): 01:52:37
+
+Per-model results
+  Provider / Model                         Attempts  Saved  Accept %  Avg tokens  Turns  Total convos
+  ----------------------------------------  --------  -----  --------  -----------  -----  Total convos
+  NVIDIA / nvidia/nemotron-3-super-120b-a12b       20     18    90.00%     14659.78  12-18             61
+  NVIDIA / nvidia/nemotron-3-ultra-550b-a55b       20     20   100.00%      8310.50  12-18             56
+  OpenRouter / nvidia/nemotron-3-super-120b-a12b:free       20     15    75.00%     16290.93  12-14             38
+  OpenRouter / nvidia/nemotron-3-ultra-550b-a55b:free       20     20   100.00%      7870.60  12-16             58
+  Google / gemini-3.6-flash                       6      3    50.00%      8080.67  12-14             52
+  Google / gemini-3.5-flash                      20     17    85.00%      7897.35  12-16             42
+  Google / gemini-3-flash-preview                13     10    76.92%      9396.90  12-16             45
+  Google / gemini-3.5-flash-lite                 20     17    85.00%      3513.35  12-12             67
+  Google / gemini-3.1-flash-lite                 20     20   100.00%      3350.35  12-12             67
+  Google / gemma-4-31b-it                        20     16    80.00%      6260.88  12-16             57
+  Google / gemini-2.5-flash-lite                  3      0     0.00%         0.00      -              0
+  Google / gemini-3.8-flash                       3      0     0.00%         0.00      -              0
+  Google / gemini-3.7-flash                       3      0     0.00%         0.00      -              1
+
+Failure reasons
+  Category                         Count
+  ------------------------------  -----
+  dead_model_404                      0
+  empty_response                     26
+  invalid_json_syntax                 1
+  turn_count_out_of_range             3
+  speaker_alternation_broken          2
+  malformed_tutor_tags                0
+  missing_problem_field               0
+  final_turn_not_closing              0
+  unexpected_exception                0
+  other                               0
+
+Turn-count distribution
+  min=12, max=18, avg=13.22
+
+Domain coverage
+  biology                           12
+  chemistry                         19
+  computer_science_light             8
+  economics_and_finance             21
+  ethics_and_critical_thinking      12
+  everyday_reasoning                11
+  history_and_social_studies        10
+  language_and_grammar              12
+  logic_and_puzzles                 15
+  physics                           14
+  quantitative_aptitude             10
+  statistics_and_data               12
+
+Config parameter balance
+  socratic_level
+    high                          54
+    low                           45
+    medium                        57
+  student_level
+    advanced                      47
+    beginner                      51
+    intermediate                  58
+  hint_frequency
+    high                          56
+    low                           50
+    medium                        50
+  mistake_frequency
+    high                          57
+    low                           43
+    medium                        56
+  verbosity
+    high                          50
+    low                           53
+    medium                        53
+  difficulty
+    easy                          50
+    hard                          57
+    medium                        49

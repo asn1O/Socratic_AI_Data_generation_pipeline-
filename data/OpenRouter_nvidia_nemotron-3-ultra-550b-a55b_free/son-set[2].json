@@ -754,5 +754,674 @@
         "response": "Nice work! You've got a solid grasp of the binomial distribution. Ready to try another problem or move on to a different topic?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Mean, median, mode",
+    "problem": "Find the mean, median, and mode of the data set: 4, 8, 6, 8, 2, 10.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think I need to add all numbers and divide by how many there are for the mean. For median, I order them and find middle. Mode is most frequent. But I'm not sure about the median when there's even count."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student described general approach but unsure about even-count median; need to probe their sorting and middle-finding process.",
+        "state": "Diagnosis",
+        "response": "How would you order the numbers to find the median for this set?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I'd sort them: 2, 4, 6, 8, 8, 10. Since there are six numbers, the median is between the 3rd and 4th? So maybe average of 6 and 8 = 7."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified middle positions but hesitates; a hint about even-count rule will help self-correction.",
+        "state": "Support",
+        "response": "What do you do when there's an even number of data points?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Right, you take the average of the two middle numbers. So (6+8)/2 = 7. That seems right."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student has median and mode pending; now guide them to compute mean using sum and count.",
+        "state": "Support",
+        "response": "How would you compute the mean for this set?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Sum is 2+4+6+8+8+10 = 38. Divide by 6 gives 6.333... or 19/3."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student has mean and median; now elicit mode by asking about frequency.",
+        "state": "Support",
+        "response": "Which number appears most often in the list?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "8 appears twice, others once. So mode is 8."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly computed all three; now ask them to synthesize the concepts in their own words.",
+        "state": "Synthesis",
+        "response": "Can you summarize the steps for finding each measure in your own words?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Mean is sum divided by count. Median is middle value after sorting; if even count, average the two middle. Mode is most frequent value."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has explained the rule; conversation can close warmly.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Cost-benefit reasoning",
+    "problem": "Imagine you are an analyst for a regional government evaluating a proposal to construct a large hydroelectric dam. The project has an upfront construction cost of $2 billion, annual maintenance of $50 million, and will flood a valley that is home to 5,000 people and a unique ecosystem. The dam will generate 1,000 MW of electricity (valued at current market rates), provide flood protection for downstream cities (estimated to avoid $100 million in annual damages), and supply irrigation water to agriculture (valued at $30 million annually). The project lifespan is 50 years. The government uses a 5% discount rate for infrastructure projects. However, critics argue that the discount rate should be lower for intergenerational equity, that the ecosystem provides non-use values (existence, bequest) not captured in market prices, and that the displaced community's cultural heritage is irreplaceable. How would you structure a comprehensive cost-benefit analysis for this decision? What are the key methodological choices that could dramatically alter the conclusion?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'd start by listing all the monetary costs and benefits: construction, maintenance, electricity revenue, flood damage avoided, irrigation value. Then I'd discount the net annual benefits at 5% over 50 years and compare to upfront cost. But I'm not sure how to handle the non-market values like ecosystem existence or cultural heritage—maybe they just get a footnote?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student has identified major market costs and benefits but omitted non-market values and hasn't questioned the discount rate; need to probe their awareness of these gaps.",
+        "state": "Diagnosis",
+        "response": "You've outlined the core market components well. What about the valley's ecosystem and the displaced community's heritage—how might those factor into a rigorous cost-benefit framework, and have you considered whether a single discount rate adequately captures intergenerational equity?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Those non-market values are too subjective to quantify, so I'd exclude them from the formal analysis and just mention them qualitatively. Also, the 5% discount rate is standard for infrastructure, so I'd apply it uniformly across all 50 years without adjustment."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student dismissed non-market values and accepted discount rate uncritically; need to guide them toward valuation methods and discount rate sensitivity.",
+        "state": "Support",
+        "response": "Could techniques like contingent valuation or choice experiments help assign monetary proxies for existence and bequest values? And what might a declining discount rate schedule imply for the weight given to benefits and costs borne by future generations?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I see—contingent valuation surveys could elicit willingness-to-pay for preserving the ecosystem, and a declining discount rate would give more weight to long-term environmental costs. I'll incorporate those into the NPV calculation."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student now acknowledges non-market valuation and discount rate nuance; next need to ensure they handle displacement costs correctly and avoid double-counting.",
+        "state": "Support",
+        "response": "When valuing the displacement of 5,000 people, how would you distinguish between compensation payments—which are transfers—and the true economic cost of lost livelihoods and cultural disruption? Also, could flood protection and irrigation benefits overlap in any way?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Compensation payments fully capture the cost because they make people whole, so I'd just add the resettlement budget as a cost. And flood protection and irrigation are separate benefits—one avoids damage, the other adds agricultural value—so I'd sum them directly."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student conflates transfers with real resource costs and may double-count hydrological benefits; need to probe opportunity cost and benefit independence.",
+        "state": "Support",
+        "response": "If compensation is financed by taxes, does that create deadweight loss elsewhere? And consider whether the same water stored for flood control also supplies irrigation—might the marginal value of water storage be counted twice if you add them naively?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Right, compensation involves distortionary taxation, so the social cost exceeds the transfer. And the reservoir's storage capacity serves both flood control and irrigation jointly; I should model the joint optimization of water releases rather than adding separate benefit streams."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student now grasps key methodological issues; time to deepen by asking about sensitivity and distributional weighting.",
+        "state": "Support",
+        "response": "How would you test the robustness of your net present value to alternative discount rates, valuation assumptions, and climate scenarios? And should the analysis weight impacts differently for the displaced indigenous community versus urban electricity consumers?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I'd run Monte Carlo simulations on key parameters—discount rate, electricity price, ecosystem value—and present a cost-benefit distribution. For equity, I'd apply distributional weights based on income or capability approach, giving higher weight to the displaced community's losses."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has integrated valuation, discounting, transfer vs real cost, joint benefits, sensitivity, and equity weighting; ready to articulate the overarching principle.",
+        "state": "Synthesis",
+        "response": "In your own words, what is the core principle that should guide a comprehensive cost-benefit analysis for a project with intergenerational and distributional complexities like this dam?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The core principle is that a rigorous cost-benefit analysis must account for all welfare-relevant impacts—including non-market and intergenerational ones—using appropriate valuation methods, avoid double-counting by modeling joint production, treat transfers separately from real resource costs, apply discount rates that reflect ethical stance on future generations, and incorporate distributional weights to ensure equity across affected groups."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly articulated the comprehensive principle; conversation can close warmly.",
+        "state": "Closing",
+        "response": "Excellent synthesis—you've captured the full scope of what makes cost-benefit analysis both powerful and ethically demanding. Ready to tackle another case?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Supply and demand",
+    "problem": "Suppose the demand curve is Qd = 100 - 2P and the supply curve is Qs = 20 + 3P. Find the equilibrium price and quantity. Then, if a price ceiling of $15 is imposed, determine the shortage.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think I need to set demand equal to supply to find equilibrium price."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student identifies the correct approach but hasn't executed it; I'll confirm and show the equation setup.",
+        "state": "Support",
+        "response": "Right. Set Qd = Qs: 100 - 2P = 20 + 3P."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "100 - 2P = 20 + 3P => 80 = 5P => P = 12."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student made an arithmetic error solving for P; I'll correct the division.",
+        "state": "Support",
+        "response": "Check your division: 80 divided by 5 is 16, not 12."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh right, P = 16."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student has correct price; now guide to find equilibrium quantity.",
+        "state": "Support",
+        "response": "Good. Now plug P=16 into either equation to get equilibrium quantity."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Q = 100 - 2*16 = 68."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Equilibrium quantity found; introduce price ceiling and shortage concept.",
+        "state": "Support",
+        "response": "Now a price ceiling of $15 is imposed. Since it's below equilibrium, there's a shortage."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "At P=15, Qd = 70, Qs = 65, so shortage = 70 + 65 = 135."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student added quantities instead of subtracting; correct the shortage calculation.",
+        "state": "Support",
+        "response": "Shortage is quantity demanded minus quantity supplied, not sum. So 70 - 65 = 5."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Right, shortage = 5."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correct shortage; now ask for synthesis of the whole process.",
+        "state": "Synthesis",
+        "response": "Can you summarize how we find equilibrium and shortage?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Equilibrium is where supply equals demand. Set equations equal, solve for price, then find quantity. A price ceiling below equilibrium creates a shortage equal to the difference between quantity demanded and quantity supplied at that price."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student explained the concept correctly; wrap up.",
+        "state": "Closing",
+        "response": "Great job! You've got it. Ready for another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "chemistry",
+    "topic": "Acids and bases",
+    "problem": "Calculate the pH of a 0.01 M HCl solution.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "HCl is a strong acid, so it fully dissociates. But I'm stuck on converting concentration to pH."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student knows HCl is strong acid but unsure about pH calculation; need to assess their recall of pH formula.",
+        "state": "Diagnosis",
+        "response": "What do you recall about the relationship between [H+] and pH?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think pH = -log[H+], but I'm not 100% sure."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student recalls pH = -log[H+] but uncertain; guide them to identify [H+] for strong acid.",
+        "state": "Support",
+        "response": "That's the formula. For 0.01 M HCl, what's [H+]?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "[H+] = 0.01 M because it fully dissociates."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified [H+]; now prompt them to compute pH with hint about negative sign.",
+        "state": "Support",
+        "response": "Good. Now apply the formula: what do you get?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "pH = -log(0.01) = 2."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student computed pH correctly; ask them to articulate why negative sign appears to solidify concept.",
+        "state": "Synthesis",
+        "response": "Can you explain why the negative sign is there?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Because log of a number less than 1 is negative, so negative sign makes pH positive."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student explained negative sign well; probe understanding of weak vs strong acid to check depth.",
+        "state": "Diagnosis",
+        "response": "What would happen if the acid were weak?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Then [H+] wouldn't equal concentration, need Ka."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student contrasted weak acid; now ask them to summarize steps for this problem to synthesize procedure.",
+        "state": "Support",
+        "response": "Right. For this problem, summarize the steps you used."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "First, identify strong acid so [H+] = concentration. Then pH = -log[H+]."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the rule and steps; wrap up warmly.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Logical fallacies",
+    "problem": "Consider the following argument: 'We should not implement the new recycling program because the mayor who proposed it was caught littering last year.' Identify the logical fallacy present in this argument.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this argument about the recycling program and the mayor's littering incident. I think it might be a fallacy, but I'm not sure which one exactly. It seems like the arguer is attacking the mayor's personal character instead of addressing the actual merits of the recycling program, but I don't know the technical name for that kind of error."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student recognizes a personal attack but cannot name the fallacy; need to diagnose their understanding of the difference between person and proposal.",
+        "state": "Diagnosis",
+        "response": "Could you explain a bit more about what you see as the difference between criticizing a person's actions and criticizing the proposal they put forward, and what name you might give to that sort of shift in reasoning when someone attacks the person instead of the idea they are proposing?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think it might be an appeal to authority fallacy because the argument uses the mayor's past mistake to undermine his authority on the recycling program, suggesting that since he littered, he lacks the credibility to propose environmental policy, so his proposal should be rejected."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student misidentifies fallacy as appeal to authority; provide a hint about relevance to guide toward ad hominem.",
+        "state": "Support",
+        "response": "If we ask ourselves whether the mayor's past littering has any logical bearing on the effectiveness of the recycling program itself, what does that tell us about the type of error being made when a person's behavior is used to dismiss their proposal instead of evaluating the proposal on its own merits?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I'm not really sure what you mean by 'logical bearing.' I know the mayor did something bad by littering, but I don't see how that connects to the fallacy name or why it matters for the argument's structure, because to me it just looks like a personal attack."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student expresses confusion about logical bearing; diagnose their grasp of relevance to tailor next hint.",
+        "state": "Diagnosis",
+        "response": "Could you try to explain in your own words what it means for a piece of evidence to be relevant to a conclusion, and then apply that to whether the mayor's littering is relevant to the recycling program's merits, especially in terms of whether it supports or undermines the program's effectiveness?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Relevance means the evidence directly supports or opposes the conclusion. The mayor's littering doesn't support or oppose the recycling program's effectiveness, so it's irrelevant to the argument about the program. But I still don't know the specific fallacy name for this kind of irrelevant personal attack in this context."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student understands relevance but still lacks fallacy name; offer a hint describing the fallacy's defining feature.",
+        "state": "Support",
+        "response": "Which fallacy is characterized by rejecting a claim based on a characteristic or action of the person presenting it, instead of engaging with the claim's actual content, and what do we call that specific error when the person's hypocrisy is highlighted as a reason to dismiss the argument?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Is it a straw man fallacy? Because the arguer seems to be misrepresenting the mayor's position by bringing up his littering as if it disproves the recycling program, creating a distorted version of the mayor's argument that is easier to knock down, even though the mayor never claimed to be perfect."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly suggests straw man; give a hint comparing straw man to ad hominem to clarify distinction.",
+        "state": "Support",
+        "response": "How does a straw man differ from attacking the person's character, and which one fits better when the argument says 'the mayor littered, so his program is bad' without actually distorting the program's details, but instead relies on the mayor's personal flaw to reject the proposal?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Oh, I think it's an ad hominem fallacy, specifically a tu quoque, because the arguer points out the mayor's hypocrisy in littering to dismiss his recycling proposal, rather than addressing the proposal's actual merits or evidence, which makes the personal attack irrelevant to the policy's validity."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified ad hominem tu quoque; now ask them to synthesize by explaining the fallacy in their own words.",
+        "state": "Synthesis",
+        "response": "In your own words, what does an ad hominem tu quoque fallacy involve, and how does the argument about the mayor's littering fit that pattern, especially regarding the irrelevance of the person's behavior to the claim being made, and why does that make the argument fallacious?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "An ad hominem tu quoque fallacy occurs when someone rejects an argument by pointing out that the person making it has acted inconsistently or hypocritically, instead of addressing the argument itself. In this case, the mayor's littering is used to dismiss the recycling program, but his personal behavior doesn't prove the program is flawed or ineffective."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has accurately explained the fallacy; conversation ready to close with warm wrap-up.",
+        "state": "Closing",
+        "response": "Great job! You've clearly explained the ad hominem tu quoque fallacy and why the mayor's littering doesn't undermine the recycling program. Would you like to try another fallacy identification to practice further and strengthen your critical thinking skills with a new example next time we meet?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Scaling a recipe",
+    "problem": "A recipe for 12 muffins uses 300g flour, 150g sugar, 100g butter, 2 eggs, 2 tsp baking powder, and 180ml milk. You want to make 18 muffins using a muffin tin that holds 18 muffins, but the original tin held 12. The baking powder should only be increased by half the scaling factor because it's a leavening agent. Eggs are discrete; you have 3 eggs available. The oven temperature stays the same, but baking time increases by 15%. How do you adjust each ingredient and the baking time?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Okay, I need to scale from 12 to 18 muffins. That's a factor of 18 divided by 12 = 1.5. Multiply everything by 1.5: flour 450g, sugar 225g, butter 150g, milk 270ml. Baking powder: 2 tsp × 1.5 = 3 tsp. Eggs: 2 × 1.5 = 3 eggs, and I have 3. Baking time increases 15%, so multiply original time by 1.15. But I'm fuzzy on the baking powder rule."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student correctly found the 1.5 scaling factor and applied it to most ingredients, but they multiplied baking powder by the full factor instead of half the factor, indicating they haven't internalized the leavening agent adjustment. I'll ask them to explain their thinking on baking powder to diagnose the gap.",
+        "state": "Diagnosis",
+        "response": "I see you've got the 1.5 scaling factor down and applied it to flour, sugar, butter, and milk. Can you walk me through why you multiplied the baking powder by 1.5 as well? What does the problem say about how leavening agents should be scaled?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I figured all ingredients scale the same, so I multiplied baking powder by 1.5. The problem mentions 'half the scaling factor,' but I'm not sure what that means—maybe use half the amount, so 1 tsp? Or multiply by 0.75? Half the scaling factor sounds like half the increase, but 1 tsp seems too little."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student recognizes there's a special rule but misinterprets 'half the scaling factor' as either multiplying by 0.75 or halving the amount. I'll give a hint comparing leavening agents to other ingredients to steer them toward the correct interpretation: increase by half the factor, not multiply by half.",
+        "state": "Support",
+        "response": "Right, the phrase 'increased by half the scaling factor' means you take the scaling factor—1.5—calculate half of that increase, which is 0.25, and add it to 1. So the baking powder multiplier is 1.25, not 1.5 or 0.75. Think about why leavening agents behave differently: too much can cause collapse. Does that help clarify?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "So baking powder becomes 2 tsp × 1.25 = 2.5 tsp. Eggs: 2 × 1.5 = 3 eggs, I have 3, fine. But if it were 2.5 eggs, I'd round down to 2 because you can't have half an egg. Baking time: multiply by 1.15. Oven temperature stays same, right?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student now has baking powder correct but thinks eggs should be rounded down when fractional. In baking, eggs provide structure and leavening, so rounding up is safer. I'll hint at the role of eggs to guide them.",
+        "state": "Support",
+        "response": "Good catch on the baking powder. For eggs, consider their role: they add structure, moisture, and leavening. If a scaled recipe calls for 2.5 eggs, rounding down to 2 might make the batter too dry or affect rise. Usually you'd round up or use a partial egg by beating and measuring. Since you have 3 eggs here, you're fine, but what would you do if you only had 2 eggs and needed 2.5?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "If I had only 2 eggs and needed 2.5, I'd maybe use 2 eggs plus extra milk? Not sure. Baking time: multiply original by 1.15. Temperature unchanged. The tin holds 18 vs 12, but each cup same size, so the 15% accounts for more total batter."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student addressed baking time but expressed uncertainty about pan size effect. Need to check if they understand the 15% increase is for the whole batch, not per muffin, and that temperature unchanged.",
+        "state": "Diagnosis",
+        "response": "Correct, temperature constant. The 15% increase applies to the total baking time because there's more batter in the oven at once, even though each muffin is the same size. Can you explain why the time increases even though the muffin cups are identical?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "More muffins means more total batter, so oven needs extra time. But I'm confused about baking powder again. You said multiplier 1.25, but scaling factor is 1.5. Why not scale baking powder fully? It's an ingredient like flour. Unless half scaling only applies with pan depth change? I'm leaning back to 3 tsp."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student reverted to full scaling for baking powder, showing the misconception resurfaced. I'll reinforce why leavening agents are scaled differently: too much causes over-rise and collapse.",
+        "state": "Support",
+        "response": "Exactly, more batter means longer bake. For baking powder, leavening agents create gas bubbles; too much makes them merge and collapse the structure. That's why you only increase by half the scaling factor—so multiplier = 1 + (1.5-1)/2 = 1.25. So 2 tsp × 1.25 = 2.5 tsp. Does that reasoning stick?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Okay, leavening agents need less increase to avoid collapse. Final: flour 450g, sugar 225g, butter 150g, milk 270ml, baking powder 2.5 tsp, eggs 3, oven temp same, bake time ×1.15. That covers it."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly computed all adjustments. Now I'll ask them to articulate the general principle for scaling recipes with leavening agents and discrete ingredients.",
+        "state": "Synthesis",
+        "response": "Perfect, you've nailed the calculations. Now, in your own words, what's the general rule for scaling a recipe when it includes leavening agents and discrete items like eggs? And how do you handle baking time and temperature for the scaled version? Please explain the reasoning behind each adjustment."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "First, find scaling factor (desired/original). Multiply most ingredients by that factor. For leavening agents, increase by half the factor: multiplier = 1 + (factor-1)/2. For eggs, round up to next whole number because they provide structure. Temperature unchanged; baking time increases proportionally to total batter volume, often by a given percentage."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the scaling principle, covering factor calculation, linear scaling, leavening adjustment, discrete ingredient handling, and time/temperature. The conversation is complete.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Correlation vs causation",
+    "problem": "A study finds that ice cream sales and drowning incidents both increase during the summer. Does this mean ice cream causes drowning?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I see ice cream sales and drowning both rise in summer, but I'm not sure if one causes the other."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student notes correlation but unsure about causation; need to diagnose their understanding of confounding variables.",
+        "state": "Diagnosis",
+        "response": "What do you notice about the relationship between ice cream sales and drowning incidents?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "They both increase during the summer months."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student identifies correlation; now guide to consider third variable.",
+        "state": "Support",
+        "response": "Could there be a third factor influencing both?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Maybe hot weather?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student suggests temperature; probe how it affects each variable.",
+        "state": "Support",
+        "response": "How does hot weather affect ice cream sales and swimming?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Hot weather boosts ice cream sales and leads more people to swim."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student explains mechanism; now ask what this implies about correlation.",
+        "state": "Diagnosis",
+        "response": "What does that suggest about the correlation between ice cream and drowning?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "It's not causation; both are related to temperature."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identifies confounding; now ask for synthesis of concept.",
+        "state": "Synthesis",
+        "response": "In your own words, what's the difference between correlation and causation here?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Correlation means two things move together, but causation means one actually causes the other. Here, temperature causes both, so ice cream doesn't cause drowning."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has accurately explained the concept; conversation can close.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for another example?"
+      }
+    ]
   }
 ]

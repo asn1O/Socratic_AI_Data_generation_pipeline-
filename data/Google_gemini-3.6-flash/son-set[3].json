@@ -358,5 +358,290 @@
         "response": "That's spot on! You explained biomagnification and energy transfer with complete accuracy and clarity. Excellent job reasoning through those edge cases—ready to move on to the next problem?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Supply and demand",
+    "problem": "A severe frost destroys half of the world's coffee bean crop. At the exact same time, a new medical study proves drinking coffee significantly boosts daily work productivity. What happens to the equilibrium price and equilibrium quantity of coffee?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know coffee gets popular, but I'm lost on how to combine both events together."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student expresses initial confusion with handling dual shifts. I will diagnose by asking them to isolate the frost's impact on supply.",
+        "state": "Diagnosis",
+        "response": "What does a severe frost destroy, and how does that affect the supply curve?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "It destroys crops, so supply decreases because coffee beans become scarcer and more expensive."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified supply shifting left. I will prompt them to determine the effect of this single shift on price and quantity.",
+        "state": "Support",
+        "response": "When supply shifts left by itself, what happens to coffee price and quantity?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Price goes up, and quantity sold goes down."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student successfully analyzed the supply shift. Now I need to guide them to evaluate the productivity study's impact on demand.",
+        "state": "Support",
+        "response": "Now, how does a study proving coffee's productivity benefits affect the demand curve?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Demand shifts right, raising price and quantity. So overall, quantity must go up!"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student made a classic mistake by asserting quantity increases, ignoring the conflicting signals from supply and demand.",
+        "state": "Support",
+        "response": "If supply reduces quantity while demand increases it, how can we know which is stronger?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, they push in opposite directions! So quantity is actually uncertain without knowing which shift is bigger."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student self-corrected regarding quantity ambiguity. Now I will prompt them to examine the combined impact on price.",
+        "state": "Support",
+        "response": "What do both the supply decrease and demand increase do to price?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Both reduced supply and increased demand push the price up, so price definitely rises!"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully deduced both outcomes (price rises, quantity is indeterminate). I will now ask them to synthesize the general rule.",
+        "state": "Synthesis",
+        "response": "In your own words, what is the rule when supply and demand shift at the same time?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "If effects agree, that outcome is certain; if they oppose each other, it's ambiguous."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student clearly articulated the rule for simultaneous shifts. The problem is solved, so I am wrapping up.",
+        "state": "Closing",
+        "response": "That's exactly right! Great job navigating a tough problem. Want to move on?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Sentence structure and clauses",
+    "problem": "Analyze the following sentence by identifying every clause, classifying each as independent or dependent, and determining the overall sentence structure: 'Although Maria was exhausted from working all night, she prepared a detailed presentation for her client, who was visiting from Chicago, because the contract was crucial to her firm.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this long sentence, but I'm really lost on how to even start breaking it down into clauses. I know a clause needs a subject and a verb, but there are so many words here that I don't know where one clause ends and another begins."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student understands basic clause definitions but is overwhelmed by the sentence length. I need to diagnose their ability to isolate clause boundaries by asking them to spot main action verbs.",
+        "state": "Diagnosis",
+        "response": "Finding clauses in a long sentence can definitely feel overwhelming at first! A helpful trick is to locate all the main verb phrases first, since every clause centers around its own action. Looking at the first part of the sentence, 'Although Maria was exhausted from working all night, she prepared a detailed presentation', what separate actions or states of being are happening here, and who is doing them?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Okay, so 'was exhausted' is one verb phrase with Maria as the subject, and 'prepared' is another verb phrase with 'she' as the subject. So those are two clauses: 'Although Maria was exhausted from working all night' and 'she prepared a detailed presentation for her client'. But I'm not really sure about the next part with 'who was visiting from Chicago'."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student successfully found the first two clauses but expresses non-understanding about relative clauses starting with 'who'. I should provide a hint about how relative pronouns function as subjects within dependent clauses.",
+        "state": "Support",
+        "response": "Spotting those first two actions is a great start! For that third part, 'who was visiting from Chicago', notice how the word 'who' replaces 'client' and acts as the subject for 'was visiting'. Since it contains a subject and a verb, it actually forms its own clause as well. Knowing that, can you tell me if 'who was visiting from Chicago' can stand alone as a complete sentence on its own?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I think 'who was visiting from Chicago' is an independent clause because 'who' acts as the subject and 'was visiting' is the full verb. Since it has both a subject and a verb, it can stand completely on its own as a simple sentence, like asking or stating who was visiting."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student explicitly made their first mistake by asserting that a relative clause is independent. I need to offer a contextual hint to help them realize that relative pronouns leave thought incomplete without the antecedent.",
+        "state": "Support",
+        "response": "That is a very common trap to fall into! While it does have a subject and a verb, think about what happens if someone walks up to you and just says, 'Who was visiting from Chicago.' Without the rest of the sentence, does that phrase express a complete, finished thought, or does the word 'who' attach it to the client to give extra details?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Ah, right, if someone said that out of nowhere, it sounds like an incomplete thought or a question missing context. So 'who was visiting from Chicago' must be a dependent clause because 'who' attaches it to 'client'. That means 'Although Maria was exhausted' is also dependent because of 'Although', right? And 'because the contract was crucial' is dependent too!"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified all three dependent clauses after self-correcting. Now I need to guide them toward classifying the entire sentence structure based on clause counts.",
+        "state": "Support",
+        "response": "You nailed it! Words like 'although', 'who', and 'because' make those three clauses dependent, leaving 'she prepared a detailed presentation for her client' as our single independent clause. Now that we have counted one independent clause and three dependent clauses, what would you classify the overall structure of this entire sentence as?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Since there are four clauses altogether and so many conjunctions connecting them, I think this has to be a compound-complex sentence. Whenever a sentence gets this long with multiple dependent clauses hooked together, that makes it compound-complex because it's compound in size."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student made their second explicit mistake by assuming multiple dependent clauses make a sentence compound-complex. I need to hint at the strict structural definition of 'compound'.",
+        "state": "Support",
+        "response": "It definitely feels like it should be compound-complex because of how much information is packed into it! However, in grammar, the term 'compound' specifically requires having at least two independent clauses joined together. Since we established earlier that this sentence only has one independent clause alongside three dependent clauses, how does that change our classification?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Oh, I see! 'Compound' strictly means two independent clauses, like two complete sentences joined together. But since we only have one main independent clause here—'she prepared a detailed presentation for her client'—and three dependent clauses attached to it, it can't be compound. It has to just be a complex sentence!"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified the structure as complex and overcome both errors. Now I transition to Synthesis so they can state the overall rules in their own words.",
+        "state": "Synthesis",
+        "response": "Spot on! You worked through all those tricky clauses step by step. To make sure you've got this concept down solidly for future problems, how would you explain in your own words how to tell the difference between independent and dependent clauses, and how you decide if a sentence is complex versus compound-complex?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "To tell clauses apart, a dependent clause might have a subject and verb, but it starts with words like 'although', 'because', or 'who' that make it an incomplete thought that depends on something else. An independent clause can stand alone as a complete thought. Then for sentence structure, a complex sentence has only one independent clause with one or more dependent clauses, while a compound-complex sentence must have at least two independent clauses plus at least one dependent clause."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student provided a clear and complete explanation of the target grammatical rules. The learning objective is achieved, so I will close the session warmly.",
+        "state": "Closing",
+        "response": "That is a perfect explanation! You handled a tricky sentence structure really well today. Great job working through it—would you like to try another problem, or are you good for now?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "biology",
+    "topic": "Punnett squares / genetics",
+    "problem": "In pea plants, purple flowers (P) are dominant to white flowers (p). Two heterozygous pea plants (Pp) are crossed. What is the probability of producing an offspring with white flowers, and what is the phenotypic ratio of the offspring?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "For a cross between two heterozygous parents (Pp x Pp), both plants have one dominant and one recessive allele. Since each parent passes on 'p' half the time, any plant receiving a recessive allele will show the white flower phenotype. That means there's a 50% chance for white flowers among the offspring, and the phenotypic ratio would be 1:1."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified parental genotypes, but incorrectly assumed a single recessive allele produces the recessive phenotype. Need to diagnose their understanding of dominant allele masking.",
+        "state": "Diagnosis",
+        "response": "You have correctly identified the parental genotypes as Pp. However, let's pause on how alleles interact to determine physical traits in heterozygous offspring. If an individual plant ends up with one dominant allele (P) and one recessive allele (p), what physical flower color will that plant actually display?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Ah, right—dominant means P masks p, so Pp plants are purple. To actually get white flowers, the plant must inherit pp, needing 'p' from both parents. Since each parent has a 50% chance of passing 'p', we just add those together, so 50% plus 50% gives a 100% total, or wait, maybe a 50% overall chance of getting white offspring."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student realized white flowers require genotype pp, but incorrectly added independent probabilities. Need to guide them toward visual probability representation via a Punnett square.",
+        "state": "Support",
+        "response": "Since white flowers require the homozygous recessive genotype 'pp', how might drawing a 2x2 Punnett square grid with each parent's alleles help us systematically visualize all possible combinations and find the true proportion of offspring that inherit 'p' from both parents?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Okay, drawing the 2x2 grid with P and p on top and P and p on the side, I get four boxes: one PP, two Pp, and one pp. So that gives us one homozygous dominant, two heterozygous, and one homozygous recessive. That means the phenotypic ratio of offspring is 1:2:1 for purple to white flowers."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student successfully constructed the grid, but confused genotypic ratio with phenotypic ratio. Need to provide support reminding them of the definition of phenotype versus genotype.",
+        "state": "Support",
+        "response": "You set up the Punnett square perfectly, and 1:2:1 is indeed the correct ratio for the genotypes PP, Pp, and pp. But remember, phenotype refers to physical appearance rather than genetic code. Since both PP and Pp result in purple flowers, how does combining those genotypes change the ratio of purple to white plants?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Right, PP and Pp both produce purple flowers! So three of the boxes—PP, Pp, and Pp—are purple, while only pp is white. So white flowers represent 25% of the total, or 1 out of 4. But for the ratio, since white is recessive, wouldn't the phenotypic ratio be written as 1:3 for purple to white?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student calculated the correct 25% probability for white flowers, but expressed the purple to white ratio backwards. Need to guide them on standard ratio formatting.",
+        "state": "Support",
+        "response": "You calculated the 25% probability for white flowers perfectly! Now, regarding how we express that phenotypic ratio, we standardly list the dominant trait first followed by the recessive trait. With three purple-flowered boxes and one white-flowered box, how should we properly write out that purple to white ratio?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, of course! Since there are 3 purple-flowered boxes and only 1 white-flowered box, the phenotypic ratio of purple to white flowers is 3:1. So the overall probability of getting an offspring plant with white flowers is 1 out of 4, which equals 25%."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has derived the correct probability and phenotypic ratio. Moving to Synthesis so the student can explain the underlying rule and procedure in their own words.",
+        "state": "Synthesis",
+        "response": "Spot on! You worked through the genotype combinations and physical traits step by step. To make sure you really have this concept internalized, how would you explain to another student how to determine phenotypic probabilities and ratios from a monohybrid cross of two heterozygous parents?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "To find phenotypic outcomes for two heterozygous parents, you first set up a 2x2 Punnett square using their alleles. Since each parent contributes one allele, you combine them to get four equal outcomes: one PP, two Pp, and one pp. Because dominant alleles mask recessive ones, PP and Pp both show the dominant phenotype, making 3 out of 4 (75%) purple, while only pp (1 out of 4, or 25%) shows the recessive white trait, giving a 3:1 phenotypic ratio."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student demonstrated complete mastery by articulating the full concept and procedure in their own words. Wrap up the conversation warmly.",
+        "state": "Closing",
+        "response": "That is a brilliant explanation! You explained the genetic inheritance and probability steps clearly. Excellent job working through that, and feel free to let me know whenever you are ready to tackle another genetics problem!"
+      }
+    ]
   }
 ]

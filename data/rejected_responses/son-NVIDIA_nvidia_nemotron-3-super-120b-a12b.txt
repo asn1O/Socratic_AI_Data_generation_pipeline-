@@ -244,3 +244,157 @@
     }
   ]
 }
+
+
+{
+  "problem": "Below are five sources related to the American Civil War. For each, state whether it is a primary or secondary source and explain your reasoning.\n\n1. A diary entry written by a Union soldier in 1863.\n2. A 2020 textbook chapter summarizing the Battle of Gettysburg.\n3. A photograph of the battlefield taken by Mathew Brady in 1863.\n4. A 1990 documentary film that includes interviews with historians and reenactments of battle scenes.\n5. A letter from Abraham Lincoln to a general, published in an 1865 newspaper.",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I think the diary is secondary because it's just personal thoughts, the photograph is secondary because it's a picture not a document, the textbook is primary because it gives facts, the documentary is primary because it shows real footage from the war, and the letter is secondary because it was printed in a newspaper."
+    },
+    {
+      "reasoning": "The student shows confusion about what makes a source primary, mixing personal nature and medium; need to elicit their definition.",
+      "state": "Diagnosis",
+      "response": "Can you describe in your own words what distinguishes a primary source from a secondary source? Think about who created it and when."
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "A primary source is something made at the time of the event, like a diary or a photo, while a secondary source is something made later that talks about it, like a textbook."
+    },
+    {
+      "reasoning": "The student gave a decent definition but hasn't applied it to the photograph; we need to see if they think medium matters.",
+      "state": "Diagnosis",
+      "response": "How would you classify the photograph taken by Mathew Brady in 1863? Does the fact that it's a picture change whether it's primary or secondary?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "I think the photograph is secondary because it's just an image, not a written account, so it's not a primary source."
+    },
+    {
+      "reasoning": "The student insists an image isn't primary; we need a minimal hint that it shows direct evidence without interpretation.",
+      "state": "Support",
+      "response": "What does a photograph show us directly about the battlefield, without someone interpreting it? Does that make it more like a diary?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Oh, I see, the photograph shows the battlefield as it was, so it's primary, like a diary."
+    },
+    {
+      "reasoning": "The student corrected the photo misconception; we need to check if they apply similar reasoning to the documentary.",
+      "state": "Diagnosis",
+      "response": "Would you consider the 1990 documentary primary or secondary, and why?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "I think the documentary is primary because it shows real footage and interviews from the time, so it's direct evidence."
+    },
+    {
+      "reasoning": "The student claims the documentary is primary; we need to probe about its creation date and interpretive nature.",
+      "state": "Diagnosis",
+      "response": "The documentary was made in 1990, long after the war. How does that affect whether it's primary or secondary, even if it uses old footage?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "Because it was made later, it's secondary, even if it includes old footage, because it interprets and presents the events."
+    },
+    {
+      "reasoning": "The student has shown correct classification for all items now; we want them to articulate the rule in their own words.",
+      "state": "Synthesis",
+      "response": "In your own words, what is the key difference between a primary source and a secondary source? Explain it as if you were teaching a classmate."
+    },
+    {
+      "turn": 13,
+      "speaker": "student",
+      "text": "A primary source is an original record created at the time of the event, like a diary, letter, or photograph, showing direct evidence without interpretation. A secondary source is later interpretation or summary, like a textbook or documentary, that discusses or analyzes the primary sources."
+    },
+    {
+      "reasoning": "The student correctly explained the concept; conversation wraps up.",
+      "state": "Closing",
+      "response": "Nice work! You've got the distinction clear. Want to try another set of sources?"
+    }
+  ]
+}
+
+
+{
+  "problem": "A 10 kg box is being pulled across a horizontal floor by a rope that makes a 30° angle above the horizontal. The box moves at a constant speed of 2 m/s. The coefficient of kinetic friction between the box and the floor is 0.20. What is the tension in the rope?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I would start by drawing a free‑body diagram showing the tension force at a 30° angle upward from the horizontal, the weight straight down, the normal force upward from the floor, and the kinetic friction force opposing the motion. Because the box moves at a constant speed, I know the acceleration is zero, so the net force in each direction must be zero. I think the horizontal component of the tension must balance the friction force, but I’m not completely sure how the upward part of the tension changes the normal force that friction depends on."
+    },
+    {
+      "reasoning": "The student identified the need for zero net force and correctly noted the horizontal balance but expressed uncertainty about how the vertical component of tension influences the normal force, which is key to linking friction to tension.",
+      "state": "Diagnosis",
+      "response": "Considering that the box remains at a constant height with no vertical acceleration, how would you apply Newton’s second law in the vertical direction to relate the normal force, the gravitational weight, and the upward component of the tension? What equation would you set up for the forces in the y‑axis?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "In the vertical direction, the forces are the normal force upward, the weight downward, and the upward component of the tension, T sin θ. Since there is no vertical acceleration, the net vertical force is zero, so the upward forces equal the downward force: N + T sin θ = mg. Solving for the normal force gives N = mg − T sin θ."
+    },
+    {
+      "reasoning": "The student correctly expressed the vertical force balance, showing they understand how the upward tension component reduces the normal force. Now we need to connect this to the friction force.",
+      "state": "Support",
+      "response": "You’ve correctly written N = mg − T sin θ. Recall that kinetic friction magnitude is μ times the normal force. How would you substitute your expression for N into the friction formula f_k = μN to obtain f_k in terms of m, g, μ, T, and θ?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Since kinetic friction opposes the motion and its magnitude is the coefficient of kinetic friction multiplied by the normal force, I substitute the expression for N we derived. Thus, f_k equals μ multiplied by (mg minus T sin θ), which gives f_k = μ (mg − T sin θ)."
+    },
+    {
+      "reasoning": "The student correctly wrote the friction force in terms of tension. Next we need to link the horizontal forces using the constant‑speed condition.",
+      "state": "Support",
+      "response": "You’ve correctly expressed the kinetic friction as f_k = μ (mg − T sin θ). Because the speed is constant, the net horizontal force must be zero. How would you set up an equation that balances the horizontal component of the tension, T cos θ, against the friction force you just found?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Since the box is not accelerating horizontally, Newton’s second law tells us that the sum of forces along the x‑axis equals zero. The only horizontal forces are the forward component of the tension, T cos θ, and the backward kinetic friction force, f_k. Setting them equal gives T cos θ = f_k, and substituting the expression for f_k yields T cos θ = μ (mg − T sin θ)."
+    },
+    {
+      "reasoning": "The student has correctly set up the governing equation. Now we need to guide them toward solving for T while keeping the focus on reasoning rather than just giving the algebra.",
+      "state": "Support",
+      "response": "You have T cos θ on the left and μ mg minus μ T sin θ on the right. To isolate T, you could add μ T sin θ to both sides, which would move the T‑term from the right to the left, giving T cos θ + μ T sin θ = μ mg. Then you could factor T out of the left‑hand side. Does that sound like a reasonable first step?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "I’ll start by adding μ T sin θ to both sides of the equation to eliminate the minus term on the right. This gives T cos θ + μ T sin θ = μ mg. Next, I factor out the common T from the left side, resulting in T (cosθ + μ sinθ) = μ mg. Finally, I divide both sides by (cosθ + μ sinθ) to solve for the tension, yielding T = μ mg / (cosθ + μ sinθ)."
+    },
+    {
+      "reasoning": "The student has successfully solved for the tension. Now we need them to articulate the underlying physics principles in their own words, demonstrating synthesis of the concept.",
+      "state": "Synthesis",
+      "response": "Can you describe, using your own words, how Newton’s second law applies separately to the vertical and horizontal directions in this problem? Specifically, explain why the sum of vertical forces leads to N = mg − T sin θ, why the horizontal forces give T cos θ = f_k, and how these together determine the tension."
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "I believe we equate the horizontal component of the tension to the frictional force because the box isn’t speeding up or slowing down, so the net horizontal force must be zero. The upward part of the tension lifts the box slightly, which reduces the normal force and therefore the friction, but I’m not entirely sure how to express that connection clearly."
+    },
+    {
+      "reasoning": "The student captured the essence of the horizontal balance and mentioned the effect of the vertical tension component on friction, but they expressed uncertainty about making the link explicit. A supportive hint will help them state the relationship clearly.",
+      "state": "Support",
+      "response": "You correctly noted that the upward component of the tension decreases the normal force, which in turn lowers the kinetic friction. Recall that you wrote N = mg − T sin θ. How would you substitute this expression for N into the friction formula f_k = μN to show explicitly how the vertical component of tension influences the friction force?"
+    },
+    {
+      "turn": 13,
+      "speaker": "student",
+      "text": "Because the box moves at constant speed, Newton’s second law requires zero net force in each direction. Vertically, the normal force plus the upward tension component balances weight: N = mg − T sin θ. Horizontally, the tension’s forward component equals the kinetic friction: T cos θ = μN. Substituting N gives T cos θ = μ (mg − T sin θ), which can be solved for the tension."
+    },
+    {
+      "reasoning": "The student has now clearly explained the application of Newton’s second law to both axes, how the normal force is altered by the vertical tension component, and how friction depends on that normal force, culminating in the correct expression for tension. This demonstrates mastery of the concept.",
+      "state": "Closing",
+      "response": "Great job explaining the reasoning! If you'd like, we can look at another scenario next."
+    }
+  ]
+}

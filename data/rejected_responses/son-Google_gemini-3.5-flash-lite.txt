@@ -118,3 +118,192 @@
     }
   ]
 }
+
+
+{
+  "problem": "Balance the chemical equation for the combustion of methane: CH4 + O2 -> CO2 + H2O",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "For CH4 + O2 -> CO2 + H2O, I balanced it by just putting a 2 in front of the O2 to make four oxygens on both sides: CH4 + 2O2 -> CO2 + H2O."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student made an explicit wrong claim by missing that water also contains oxygen, meaning the product side actually has three oxygens. Since socratic_level is low, I should directly point out the oversight regarding the products before asking a guiding question.",
+      "state": "Support",
+      "response": "You've correctly identified that we need more oxygen on the reactant side, but remember to count the oxygen atoms in every single molecule on the product side, including the water. If you look at the right side right now, how many total oxygen atoms are there between the carbon dioxide and the water?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Oh right, CO2 has two and H2O has one, so that's three oxygens on the right and four on the left. Wait, so I can just change the subscript of the water to H2O2 so it matches!"
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student asserted another classic wrong claim by trying to change a chemical formula subscript instead of using coefficients. Given the low socratic_level, I will directly state that subscripts cannot be changed and then offer a hint about coefficients.",
+      "state": "Support",
+      "response": "We actually can't change the subscripts of a chemical formula like changing H2O to H2O2, because that completely alters the identity of the substance. Instead, we have to change the coefficients in front of the molecules. Let's look at the hydrogen atoms next—how many hydrogens are in CH4 on the left, and how many are currently in H2O on the right?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Ah okay, subscripts stay fixed. There are four hydrogens in CH4 and only two in H2O, so I should put a coefficient of 2 in front of H2O to make four hydrogens."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student successfully corrected their subscript mistake and balanced the hydrogen atoms. Now I need to guide them to re-evaluate the oxygen count with this new coefficient in place.",
+      "state": "Support",
+      "response": "That's it for the hydrogens—placing a 2 in front of H2O gives you four hydrogens on both sides. Now that you've updated that coefficient, let's recount your total oxygen atoms on the product side to see how many O2 molecules you need on the left."
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "With 2 H2O, I have two oxygens from CO2 and another two oxygens from the 2 H2O, giving a total of four oxygens on the product side. So since O2 has two oxygen atoms per molecule, I need a coefficient of 2 in front of O2."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student has correctly balanced the equation and explained their reasoning clearly. I should now transition to Synthesis to have them articulate the underlying principle of mass conservation.",
+      "state": "Synthesis",
+      "response": "Spot on, the balanced equation is CH4 + 2O2 -> CO2 + 2H2O. To make sure you've got the core concept down solid, could you explain in your own words why we use coefficients rather than subscripts to balance equations?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "We use coefficients because they change the amount of whole molecules without altering what the chemical actually is, whereas changing a subscript would change the actual chemical substance into something completely different."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "The student has provided an excellent explanation of the rule, fulfilling the learning objective completely. This is the final turn, so I will close warmly.",
+      "state": "Closing",
+      "response": "That is a fantastic explanation! You've completely nailed it. Great job working through this today, and let me know if you want to tackle another one!"
+    }
+  ]
+}
+
+
+{
+  "problem": "If you invest $1,000 at a 5% annual interest rate, how much total interest will you earn after 3 years using simple interest?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I started by multiplying $1,000 by 5% and got $50. But for 3 years, do I just multiply $50 by 3 to get $150?"
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student has correctly calculated one year of interest and guessed the multi-year approach. Since socratic_level is low, I will directly confirm their first step while hinting at the formula structure.",
+      "state": "Support",
+      "response": "You nailed the first part—$50 per year is spot on. For simple interest, you just calculate that same percentage on the original principal every single year. Try thinking about how that formula looks as Principal times Rate times Time."
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Wait, for simple interest, do I add the $50 to the $1,000 first so the next year's interest is based on $1,050?"
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student asserted a compound interest method instead of simple interest, which is our high mistake frequency. Since socratic_level is low, I will directly clarify that simple interest keeps the base the same, then ask a guiding question.",
+      "state": "Diagnosis",
+      "response": "That rolling addition is actually how compound interest works, where interest earns interest. With simple interest, the principal stays locked at the starting amount. Keeping that in mind, what is your total interest after those 3 years?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Oh right, so the principal is always $1,000. So $50 for year one, $50 for year two, and $50 for year three gives $150 total."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student successfully corrected their mistake and arrived at the right numerical answer. I need to guide them into articulating the underlying concept before we finish.",
+      "state": "Synthesis",
+      "response": "Exactly, $150 total interest is correct because the base never changes. To make sure you've got this down solid, how would you explain the main difference between simple and compound interest to someone else in your own words?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Simple interest is just calculated on the original starting amount every year, so the interest payment stays flat. Compound interest adds the interest back into the pile, so you end up earning interest on your previous interest too."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student has accurately explained the concept in their own words after reaching the correct solution, so we are ready for the closing turn.",
+      "state": "Closing",
+      "response": "Spot on explanation! You've got that concept completely mastered. Great job working through it!"
+    }
+  ]
+}
+
+
+{
+  "problem": "Convert the binary number 1011 into its decimal equivalent.",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "Is it just adding up 1, 2, 1, and 1?"
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student is confusing individual digits with place values, so I need to check their current understanding of binary positions.",
+      "state": "Diagnosis",
+      "response": "How do place values increase as you move from right to left in binary?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Oh right, they double each time, so 1, 2, 4, 8."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student correctly identified the powers of two, so I will now prompt them to apply those to the digits of 1011.",
+      "state": "Support",
+      "response": "What happens when you match those place values with the digits in 1011?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "So that's 8 plus 0 plus 2 plus 1, which equals 12."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student made a minor arithmetic addition mistake (8+0+2+1=11, not 12). I should guide them to re-add carefully.",
+      "state": "Support",
+      "response": "Could you double-check the sum of 8, 0, 2, and 1?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Wait, 8 plus 2 is 10, plus 1 is 11. Ah, 12 was wrong."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student successfully caught their arithmetic slip. Now I'll prompt them to summarize the underlying method.",
+      "state": "Synthesis",
+      "response": "In your own words, what's the rule for converting binary to decimal?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "You multiply each binary digit by its corresponding power of two and add them up."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "The student has accurately articulated the core concept, so I can now wrap up the conversation warmly.",
+      "state": "Closing",
+      "response": "Spot on! Great work figuring that out. Ready to try another one?"
+    }
+  ]
+}

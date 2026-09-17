@@ -754,5 +754,674 @@
         "response": "Nice, you've got it! Want to try another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Parts of speech",
+    "problem": "Identify the part of speech for each word in the sentence: 'Running quickly, the athlete snatched the trophy and proudly displayed it on the shelf.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think 'Running' is a verb because it shows action, 'quickly' is an adjective describing how the action happens, 'the' is a noun since it's a word that names something, 'athlete' is a noun, 'snatched' is a verb, 'the' again a noun, 'trophy' a noun, 'and' is a conjunction, 'proudly' is an adjective, 'displayed' is a verb, 'it' is a noun because it stands for a thing, 'on' is a preposition, 'the' is a noun, and 'shelf' is a noun."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student exhibited several misconceptions about parts of speech, labeling 'Running' as a verb, 'quickly' as an adjective, and 'the' as a noun, showing partial understanding but needing clarification of their reasoning.",
+        "state": "Diagnosis",
+        "response": "You've labeled several words; can you walk me through how you decided each part of speech, especially for 'Running' and 'quickly'? What made you think 'Running' is a verb and 'quickly' is an adjective, and how did you determine the role of 'the' in the sentence? I'd like to hear your reasoning for each choice so we can see where the confusion might be."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I see now that 'the' might be an article that modifies a noun, but I still think 'Running' is a verb because it ends in -ing and shows the athlete's action, and 'quickly' is an adjective since it describes how the running happens; 'proudly' is also an adjective describing how the displaying is done, and 'it' is a noun because it replaces a thing like the trophy."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student still misidentified 'Running' as a verb, 'quickly' as an adjective, and 'it' as a noun, while correctly identifying 'the' as an article; they need a hint about articles and -ing words to reconsider.",
+        "state": "Support",
+        "response": "Remember that articles like 'the' always modify nouns and are never nouns themselves; they signal that a noun is coming. Also, think about whether a word ending in -ing is acting as a verb or describing a noun. What do you think 'Running' is doing in the sentence—describing the athlete or showing an action the athlete performs?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I think 'Running' is a participle that modifies 'athlete', so it's acting like an adjective; 'quickly' is an adverb because it modifies the participle 'Running'; 'the' is an article modifying 'athlete'; 'proudly' is an adjective because it describes how the displaying is done; 'it' is a noun standing for the trophy; 'on' is a preposition; 'shelf' is a noun."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student improved on 'Running' and 'quickly' but still called 'proudly' an adjective and 'it' a noun, indicating confusion between adverbs/adjectives and pronouns/nouns; a hint about adverbs and pronouns is appropriate.",
+        "state": "Support",
+        "response": "Keep in mind that adverbs often modify verbs, adjectives, or other adverbs and answer questions like how, when, or where; pronouns replace nouns and do not name things themselves. Looking at 'proudly' and 'it', what question does each answer, and what word does each modify or replace?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I think 'proudly' is an adverb because it tells how the displaying happened, answering 'how'; 'it' is still a noun because it stands for the trophy; and I'm not sure about 'the'—maybe it's a noun since it seems to name something specific like the athlete."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student reverted to labeling 'the' as a noun and kept 'it' as a noun, showing a persistent misconception about function words; a pure question prompting them to examine the role of 'the' and 'it' will help them reconsider.",
+        "state": "Support",
+        "response": "Let's focus on 'the' and 'it': what grammatical role does each play in the sentence, and how can you tell whether a word is an article versus a noun, or a pronoun versus a noun? Think about what words typically follow each, and whether they can be pluralized or have possessive forms."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "'Running' is a present participle acting as an adjective describing 'athlete'; 'quickly' is an adverb modifying 'Running'; 'the' (first) is an article modifying 'athlete'; 'athlete' is a noun, subject; 'snatched' is a verb; 'the' (second) is an article modifying 'trophy'; 'trophy' is a noun, direct object; 'and' is a conjunction; 'proudly' is an adverb modifying 'displayed'; 'displayed' is a verb; 'it' is a pronoun standing for 'trophy'; 'on' is a preposition; 'the' (third) is an article modifying 'shelf'; 'shelf' is a noun, object of the preposition."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly identified all parts of speech for each word, showing they have reached the correct answer; now we ask them to articulate the reasoning in their own words to internalize the concept.",
+        "state": "Synthesis",
+        "response": "In your own words, explain how you decided each word's part of speech—what questions did you ask yourself to distinguish between similar categories like adjectives and adverbs, or nouns and pronouns, and how did you use the word's function in the sentence to make those decisions?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I first see what the word does in the sentence: if it names something, it's a noun; if it shows an action or state, it's a verb; if it modifies a noun, it's an adjective; if it modifies a verb or adverb, it's an adverb; if it connects words, it's a conjunction; if it shows location or time, it's a preposition; if it replaces a noun, it's a pronoun; words like 'the' or 'a' that specify nouns are articles. I also check endings to confirm."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has successfully explained the rule for determining parts of speech in their own words, indicating mastery; the conversation can conclude with a warm wrap-up.",
+        "state": "Closing",
+        "response": "Great job! You've explained the parts of speech clearly. Want to try another sentence?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Personal budgeting",
+    "problem": "Alex earns $3,200 per month after taxes. His fixed monthly expenses are rent $900, utilities $150, and transportation $200. He wants to save 20% of his income for an emergency fund. How much can he allocate each month to discretionary spending after saving and covering fixed expenses?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know I need to subtract his expenses from his income, but I'm not really sure how to handle the savings part. I understand that expenses like rent and utilities must be paid, but I'm unsure where the savings fits in the calculation. Do I take the savings out first, or do I figure out what's left after expenses and then save from that?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student shows partial understanding by knowing to subtract expenses but is unsure about where savings fits in; we need to elicit their approach.",
+        "state": "Diagnosis",
+        "response": "When you look at Alex's monthly budget, taking into account his income, his fixed expenses like rent and utilities, and his goal to save 20% of his income, what initial action would you consider to determine how much money remains for monthly discretionary spending?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I'm still confused about whether the savings should be subtracted from his income before I take out the expenses, or after I've already removed the expenses. Which order gives the right amount for discretionary spending? I think maybe I should calculate the savings first, but I'm not certain if that's correct."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student expressed uncertainty about the order of subtracting savings versus expenses; we give a hint to compute the savings amount first.",
+        "state": "Support",
+        "response": "To determine the savings portion of Alex's budget, you calculate 20% of his monthly after‑tax income by multiplying 3,200 by 0.20, which yields the dollar amount he plans to put aside for his emergency fund each month. What is that exact resulting dollar amount, please?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I calculated 20% of his income by multiplying 3,200 by 0.20, which gives me $640. That seems like the amount he should set aside for savings each month. I'm pretty confident about this step, but I want to make sure I'm using the right percentage."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student correctly calculated the savings amount; we now prompt them to consider how fixed expenses factor into the discretionary calculation.",
+        "state": "Support",
+        "response": "Now that you know Alex's savings amount is $640 and you have his fixed expenses of rent ($900), utilities ($150), and transportation ($200), what step would you take next to determine the amount of money he has left for discretionary spending after accounting for both savings and expenses?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I'm not sure how to add up his fixed expenses. I know rent is $900, utilities $150, and transportation $200, but I get confused when trying to sum them. Could you remind me how to add those numbers correctly? I think the total might be around $1,200, but I'm not confident."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student is unsure how to sum the fixed expenses; we prompt them to add the three amounts together.",
+        "state": "Support",
+        "response": "To calculate Alex's total fixed monthly expenses, you need to add together his rent of $900, his utilities of $150, and his transportation costs of $200, because fixed expenses are those regular, unavoidable costs that must be paid each month regardless of other spending. What is the sum of those three numbers?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Rent $900 plus utilities $150 equals $1,050, and then adding transportation $200 gives a total of $1,250 for fixed expenses. I double-checked by adding them in a different order and got the same result. I feel good about this total now. It seems reasonable given the numbers."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has the fixed expenses total; we ask how to combine savings and expenses to find discretionary spending, guiding them toward subtraction.",
+        "state": "Support",
+        "response": "Considering you now know the savings amount and the fixed expenses, and recalling that discretionary spending is what remains after both are subtracted from income, what calculation would you perform with Alex's monthly income of $3,200 to find out how much money is left for discretionary spending?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "To find discretionary spending, I subtract the fixed expenses and the savings from his income: $3,200 minus $1,250 minus $640 equals $1,310. I did the subtraction step by step to avoid mistakes, and I think that's the amount he has left for things like groceries, entertainment, or other personal spending."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student correctly described subtracting both savings and expenses from income; we now ask them to articulate the rule in their own words to ensure conceptual understanding.",
+        "state": "Synthesis",
+        "response": "From your previous steps, you've calculated the savings as 20% of income, summed the fixed expenses, and then subtracted both from the total income to find the discretionary amount. Please describe, in your own words, the rule or procedure you just followed to solve this problem."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "First I calculate the savings as 20% of the income, which is $640. Then I add up all the fixed expenses—rent, utilities, and transportation—to get $1,250. Finally, I subtract both the savings and the total fixed expenses from the income to find what's left for discretionary spending, which comes out to $1,310."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has successfully explained the rule in their own words, indicating mastery; we wrap up the conversation.",
+        "state": "Closing",
+        "response": "Great job working through that budgeting problem step by step; you clearly understand how to calculate discretionary income after savings and fixed expenses. Feel free to tackle another similar problem whenever you're ready. You did a nice job explaining the rule in your own words, which shows you’ve really grasped the concept."
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Comparing loan/interest offers",
+    "problem": "You are considering two personal loan offers for $10,000 over one year. Offer A charges a flat 5% interest rate with no additional fees. Offer B charges a 4.5% interest rate but includes a $200 processing fee added to the principal. Which offer results in a lower total amount to repay after one year?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think Offer B is the better choice because its interest rate of 4.5% is lower than Offer A's 5%, so you would pay less interest over the year. I didn't really factor in the $200 processing fee yet, but I assume it doesn't change much."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student gave a preliminary comparison focusing only on interest rates, ignoring the fee; need to elicit their thinking about fees.",
+        "state": "Diagnosis",
+        "response": "Can you walk me through how you decided which offer would be cheaper, and tell me whether you thought the $200 fee would affect the total cost at all?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I subtracted the $200 fee from the loan amount, so I figured I was really borrowing only $9,800. Then I calculated 4.5% of $9,800, which is $441, and thought that would be the total extra cost, ignoring the fee because I’d already taken it out."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly subtracted the fee from principal; need to hint that the fee should be added to the borrowed amount.",
+        "state": "Support",
+        "response": "Let’s think about the fee differently: if the $200 processing fee is added to the amount you borrow, what does that mean for the starting balance on which interest accrues, and how should you compute the interest on that new balance to figure out the total you’d have to repay at the end of the year?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "If I add the fee, the amount becomes $10,200. Interest at 4.5% on $10,200 is $459. I thought the total extra cost would just be that interest, $459, because the fee is already included in the borrowed amount, so I wouldn’t have to pay anything else on top of it."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student computed interest on the fee-included principal but omitted the fee itself from total repayment; need to hint that both principal and fee must be repaid plus interest.",
+        "state": "Support",
+        "response": "When you take out a loan, you have to repay the original amount you borrowed plus any fees, and then interest is charged on that total amount. Could you walk me through how you would compute the total repayment for Offer B by adding the fee to the principal, calculating interest on that sum, and then adding the interest to get the final amount you’d owe?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "So I add the $200 fee to the $10,000 principal, getting $10,200. Interest at 4.5% on $10,200 is $459. The total repayment is the principal plus fee plus interest, which is $10,200 + $459 = $10,659. For Offer A, the interest is 5% of $10,000 = $500, so the total is $10,500. Since $10,500 is less than $10,659, Offer A is the cheaper option."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student has reached the correct numeric conclusion for the specific problem; now we prompt them to articulate the general rule in their own words.",
+        "state": "Synthesis",
+        "response": "In your own words, what principle or rule should you use when comparing two loan offers that have different interest rates and upfront fees, so you can decide which one will cost less overall, taking into account both the interest charged and any fees that must be repaid?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I think the rule is to just look at the interest rates; if the fee is small relative to the loan amount, you can basically ignore it because it won’t change the outcome much, so you’d pick the offer with the lower rate, unless the fee is unusually large."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student expressed the misconception that small fees can be ignored; need to guide them back to considering fees as part of the base amount on which interest accrues.",
+        "state": "Support",
+        "response": "Consider what you actually have to repay: the principal, any fees, and the interest on that combined amount. Do you think a small fee still adds to the amount you owe before interest is calculated, and is there any scenario where you could disregard the fee entirely when comparing total costs?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "You need to calculate the total amount you’ll have to repay for each offer, which means adding any upfront fees to the principal to get the amount on which interest is charged, then computing the interest and adding it to that total. Finally, compare the final repayment amounts to see which offer is cheaper."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the rule for comparing loan offers with fees; conversation is ready to conclude.",
+        "state": "Closing",
+        "response": "Nice work! You’ve got the concept down. Want to try another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Direction sense",
+    "problem": "You start at point (0,0) facing north. You follow these steps: 1) Walk 5 units forward. 2) Turn left 90°, walk 3 units forward. 3) Turn right 90°, walk 7 units forward. 4) Turn left 90°, walk 2 units forward. 5) Turn right 90°, walk 4 units forward. 6) Turn left 90°, walk 6 units forward. After completing the steps, what are your final coordinates relative to the start, and which direction are you facing?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Start at (0,0) north. Up5, left→east, right3; right→south, down7; left→east, right2; right→north, up4; left→west, left6. End at (?,?) facing east."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student’s first turn contains multiple direction and coordinate errors, indicating they are mixing up left/right turns and mis‑tracking position. I need to explore how they arrived at those conclusions.",
+        "state": "Diagnosis",
+        "response": "Can you walk me through how you decided which way you were facing after each turn, and how you used that to find the new coordinates?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "After step 2 I'm at (-3,5) facing west. Step3: right turn → north, move to (-3,12). Step4: left turn → west, move to (-5,12). Step5: right turn → north, move to (-5,16). Step6: left turn → west, move to (-11,16). Final direction west."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student’s turn 3 shows they can follow the steps correctly, but I’m unsure if they grasp the underlying rule for turning. I’ll probe their understanding of a left turn from a known heading with a brief hint.",
+        "state": "Support",
+        "response": "Let's check your understanding of turn effects. What does a left turn do to your heading if you're currently facing north?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I think a left turn always points west, no matter which way you're facing before the turn, because turning left seems to rotate you to the west side."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "In turn 5 the student stated an explicit misconception (‘left turn always points west’). I want to hear their reasoning behind this claim without giving away the correct rule.",
+        "state": "Support",
+        "response": "You said a left turn always points west. Can you explain how you came to that conclusion?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Turning left from east points you north, since a left turn adds 90° counter‑clockwise to your current direction, taking east to north."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student corrected their misconception in turn 7, demonstrating they can apply the turn rule to a new heading. I’ll now ask them to explain their reasoning for a specific step to see if they can articulate the process.",
+        "state": "Support",
+        "response": "Can you tell me how you determined your direction after step 4?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "After turning left from north I face west, because a left turn adds 90° counter‑clockwise to your heading, turning north into west."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student’s turn 9 shows they can correctly determine heading after a specific left turn. I’ll now ask them to summarize the general effect of left and right turns to see if they can generalize.",
+        "state": "Support",
+        "response": "Summarizing what we've discussed, how would you describe the effect of left and right turns on any heading?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I think that whenever you turn left, you always end up facing west, and whenever you turn right, you always end up facing east, no matter what direction you were facing before the turn."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "In turn 11 the student revived the misconception that left turns always point west and right turns always point east. I need to prompt them to articulate the correct rule in their own words.",
+        "state": "Synthesis",
+        "response": "Can you explain, in your own words, how you determine your final facing direction after a series of left and right turns?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "I start with my initial heading. For each left turn I add 90° counter‑clockwise; for each right turn I add 90° clockwise. I update my heading after each turn, and the final heading is my direction."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has now correctly explained the turn rule in their own words, showing mastery of the concept. The conversation can wrap up.",
+        "state": "Closing",
+        "response": "Nice, you've got it! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "physics",
+    "topic": "Projectile motion basics",
+    "problem": "A ball is thrown from the top of a 45 m tall building with an initial speed of 20 m/s at an angle of 30° above the horizontal. Ignoring air resistance, determine (a) the time it takes for the ball to hit the ground and (b) the horizontal distance from the building where it lands.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I found the vertical velocity as 10 m/s upward, but I’m not sure how to get the time from there."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student gave vertical component but stuck on time.",
+        "state": "Diagnosis",
+        "response": "How did you approach finding the time?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I’d set displacement zero and use s = v_y t + ½ a t² to find t."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student set displacement zero ignoring height.",
+        "state": "Support",
+        "response": "What term should you add to the vertical displacement to account for the starting height?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I used s = –45 m, so –45 = 10 t – 4.9 t², then solved and got t ≈ 2.3 s."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student made arithmetic error solving quadratic.",
+        "state": "Support",
+        "response": "Check your discriminant; did you add 882 to 100 correctly?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Discriminant is 100 + 882 = 982, sqrt ≈ 31.3, so t = (10 + 31.3)/9.8 ≈ 4.2 s."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student got correct time, now need horizontal distance.",
+        "state": "Diagnosis",
+        "response": "How would you find the horizontal distance once you have the time?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Horizontal velocity is v_x = 20 cos30° ≈ 17.3 m/s; distance = v_x × t ≈ 17.3 × 4.2 ≈ 72.7 m."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student computed distance; hint to check reasonableness.",
+        "state": "Support",
+        "response": "Does multiplying horizontal speed by time give a reasonable distance for this speed and time?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Yes, about 73 m fits because 17 m/s × 4.2 s ≈ 71 m, close to our 72.7 m."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correct answer and method; need them to articulate concept.",
+        "state": "Synthesis",
+        "response": "In your own words, describe the steps you used to solve this problem."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "I split velocity into components, solved vertical motion with height for time, then multiplied horizontal velocity by that time."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept, ready to wrap up.",
+        "state": "Closing",
+        "response": "Great job! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Common grammar errors",
+    "problem": "Identify the grammar error in the sentence: 'The list of items are on the table'.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the verb should be 'are' because 'items' is plural."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student focused on plural noun inside prepositional phrase, need to check subject identification.",
+        "state": "Diagnosis",
+        "response": "What do you think the main subject of the sentence is?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "The main subject is 'items' because it's right before the verb."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly identified subject; need to test understanding of prepositional phrase effect.",
+        "state": "Support",
+        "response": "Does the phrase 'of items' change what the subject refers to?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Yes, it makes the subject plural, so the verb should be 'are'."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student believes prepositional phrase changes subject; need to clarify its role.",
+        "state": "Diagnosis",
+        "response": "What does the phrase 'of items' actually describe?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "It describes the list, so the subject is still 'list'."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student identified correct subject; need to confirm verb choice.",
+        "state": "Support",
+        "response": "If the subject is 'list', which verb fits?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The verb should be 'is'."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student gave correct answer; need to test understanding with similar sentence to see if misconception resurfaces.",
+        "state": "Support",
+        "response": "How about 'The box of chocolates ___ on the table'?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The verb should be 'are' because 'chocolates' is plural."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student reverted to matching noun inside prepositional phrase; need to prompt them to articulate the correct rule.",
+        "state": "Synthesis",
+        "response": "Can you explain why the verb agrees with 'box' and not 'chocolates'?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The verb must agree with the main subject, ignoring any prepositional phrases that follow it."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the rule; conversation wraps up.",
+        "state": "Closing",
+        "response": "Nice, you've got it! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "chemistry",
+    "topic": "Basic stoichiometry",
+    "problem": "If 4.0 g of hydrogen gas (H2) reacts with 32.0 g of oxygen gas (O2) to form water (H2O), what is the maximum mass of water that can be produced?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I believe I should start by converting the given masses of H2 and O2 to moles using their molar masses, but I'm uncertain about the exact values for hydrogen and oxygen and whether I need to consider the balanced equation right away or just get the moles first."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student shows they know the first step but are unsure about molar masses and when to bring in the balanced equation; need to elicit their plan for what to do after obtaining moles.",
+        "state": "Diagnosis",
+        "response": "Once you've turned the masses into moles, the next step is to compare those amounts to the proportions required by the balanced chemical equation; what specific comparison would you make to see if one reactant will run out before the other? Explain your reasoning in detail."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I remember that H2 has a molar mass of roughly 2 g/mol and O2 is about 32 g/mol, but I'm not completely confident; sometimes I forget whether to use atomic or molecular masses, so I wonder if I should double-check by using 1 g/mol for each hydrogen atom and 16 for oxygen and then multiply."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student expressed uncertainty about molar masses but recalled the substances are diatomic; we guide them to confirm the correct values and proceed to mole calculation without giving the answer directly.",
+        "state": "Support",
+        "response": "You recalled that these are diatomic molecules; what molar masses would you assign to H2 and O2 based on that, and how would you then use those values to find the number of moles present in each sample? Please explain your reasoning step by step."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I'll divide the mass of each gas by its molar mass: for hydrogen, 4.0 g divided by 2.0 g/mol equals 2.0 mol H2; for oxygen, 32.0 g divided by 32.0 g/mol equals 1.0 mol O2. Now I have the mole amounts, but I'm not sure how to proceed to find the limiting reactant."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student has calculated the moles correctly but is uncertain about the next step to determine the limiting reactant; we need to elicit their thinking about how the balanced equation informs the needed ratio.",
+        "state": "Diagnosis",
+        "response": "With the mole amounts you just calculated, look at the coefficients in the balanced equation (2 H2 : 1 O2); what does that ratio indicate about the required relationship between the amounts of H2 and O2 for them to both be consumed fully? Please explain your thoughts."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Since hydrogen has a smaller mass (4.0 g) compared to oxygen (32.0 g), hydrogen will be the limiting reactant because there's less of it, and therefore it will determine how much water can form. I don't need to convert to moles because the mass directly shows which is limiting."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly claimed limiting reactant based on mass alone; we need to hint at comparing the actual mole ratio to the stoichiometric ratio to correct this misunderstanding.",
+        "state": "Support",
+        "response": "You compared masses, but the equation relates moles; consider the ratio of moles you have (2 mol H2 : 1 mol O2) versus the ratio required by the balanced equation (2:1); what does that comparison tell you about which reactant, if any, is limiting? Explain your reasoning."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Looking at the moles, oxygen has only 1.0 mol while hydrogen has 2.0 mol, so oxygen is the limiting reactant since there's less of it, and that will limit the amount of water produced. I don't need to consider the stoichiometric coefficients because the smaller mole amount decides which runs out first."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly claimed limiting reactant based on mole amounts alone, ignoring the stoichiometric coefficients; we prompt them to consider the required ratio from the balanced equation and compare it to what they have.",
+        "state": "Support",
+        "response": "You've looked at the mole amounts; now think about how the balanced equation's coefficients relate those amounts—what ratio of H2 to O2 is actually needed for them to react completely, and how does that compare to the ratio you have? Please explain your reasoning."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Since the mole ratio of H2 to O2 I have (2:1) matches the required ratio from the equation (2:1), both reactants will be used up completely. Using either reactant, 2.0 mol H2 produces 2.0 mol H2O, which is 36.0 g of water (2.0 mol × 18.0 g/mol)."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has arrived at the correct answer and explained the reasoning; now we need to have them articulate the concept in their own words to internalize it.",
+        "state": "Synthesis",
+        "response": "In your own words, explain how you determine which reactant limits the amount of product in a chemical reaction and how you then use that information to find the maximum amount of product that can be formed. Please walk me through the steps as if teaching a classmate."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "First, I write the balanced equation and note the stoichiometric coefficients. Then I convert the given masses of each reactant to moles using their molar masses. Next, I divide each reactant's moles by its coefficient in the equation; the reactant with the smallest resulting value is the limiting one. Finally, I take the moles of the limiting reactant, multiply by the coefficient of the product in the equation, and convert to grams using the product's molar mass to get the theoretical yield."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the limiting reactant concept in their own words, showing mastery of the procedure; we wrap up the conversation warmly.",
+        "state": "Closing",
+        "response": "Great job explaining the limiting reactant steps clearly—converting to moles, comparing to the balanced equation's ratios, identifying the limiting reactant, and then using it to calculate the theoretical yield of water. Keep up the solid work; would you like to try another similar problem to reinforce the skill?"
+      }
+    ]
   }
 ]

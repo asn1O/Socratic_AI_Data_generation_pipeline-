@@ -1051,5 +1051,377 @@
         "response": "That's a perfect explanation! You've really nailed the relationship between the nucleus and the energy required to remove electrons. Great job working through that logic today. Do you feel ready to try another trend, or maybe take a break?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Trip budget planning",
+    "problem": "You have a total budget of $1,300 for a 4-day trip. The flight is $300. A hotel costs $150 per night. Food is $60 per day. Local transport is $20 per day. You have two options for sightseeing: a 3-day all-access pass for $120, or paying a daily fee of $50. Calculate if you have enough money for the trip and determine the cheapest sightseeing option, keeping in mind that you want to do sightseeing every day.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm starting with the big stuff first to see how much is left. The flight is $300. For the hotel, I'm calculating $150 times 4 days, which comes out to $600. So far, that's $900 spent. Since my total budget is $1,300, I have about $400 left for food, transport, and the sightseeing activities. I think I'm on the right track, but I need to double-check the rest."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is treating the hotel cost as a daily expense rather than a nightly one, which is a common mistake in trip planning. I need to diagnose if they understand the difference between days and nights.",
+        "state": "Diagnosis",
+        "response": "You've laid out the basic structure of the budget very clearly. However, let's pause on that hotel calculation for a second. When you're planning a 4-day trip, do you actually pay for a hotel room for every single day you're there, or is there a difference between the number of days and the number of nights?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, you're right! I'm staying for 4 days, but that only means I need a room for 3 nights. So it should be $150 times 3, which is $450. Now my flight and hotel total is $300 plus $450, which is $750. That leaves me with $550 for food, transport, and activities. That feels much more manageable than my first estimate."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student corrected the first mistake. Now I need to guide them through the variable daily costs and the choice between the sightseeing options.",
+        "state": "Support",
+        "response": "That's a critical correction to make early on. Now let's tackle the daily variables. You have food and transport for the full 4 days. Once you sum those up, how do you plan to compare the two sightseeing options to see which one fits best while ensuring you have activities every day?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Food is $60 times 4, so $240. Transport is $20 times 4, which is $80. Together, the basic daily costs are $320. Adding that to the $750 for flight and hotel gives me $1,070. For sightseeing, the 3-day pass is $120, and since it's a pass, it should cover the trip. So $1,070 plus $120 is $1,190. I'm well under the $1,300 budget!"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made a mistake by assuming a 3-day pass covers a 4-day trip. I need to provide a hint to help them realize they need to account for the fourth day of sightseeing.",
+        "state": "Support",
+        "response": "You've got the basic arithmetic down perfectly. However, take another close look at the sightseeing requirements. If you have a 3-day pass but you explicitly want to do sightseeing for all 4 days of your trip, does that pass cover everything you need, or is there a gap in your schedule that needs to be funded?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Wait, I see the trap now. The pass only covers 3 days, and I'm there for 4. To do something on the fourth day, I have to pay the daily fee of $50. So the pass option is actually $120 plus $50, which is $170. The other option is just paying the $50 daily fee every day, which is $50 times 4, or $200. So the pass plus one day is definitely cheaper."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has corrected their second mistake and identified the cheapest option. I now want them to synthesize everything into a final total to ensure no other errors occurred.",
+        "state": "Diagnosis",
+        "response": "You've correctly identified the cheaper sightseeing path and the total cost for that specific part. Just to be absolutely thorough, can you walk me through the final total budget calculation for the entire trip? I want to make sure all the interacting costs are accounted for correctly."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Sure thing. The flight is $300, and the hotel for 3 nights is $450. Then we have food at $240 and transport at $80. Finally, the cheapest sightseeing option is $170. Adding those up: $300 plus $450 is $750. $750 plus $240 is $990. $990 plus $80 is $1,070. And $1,070 plus $170 equals $1,240. Since my budget is $1,300, I have $60 left over."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has reached the correct final answer. Now I need to move to the Synthesis state to ensure they've internalized the general reasoning principles used here.",
+        "state": "Synthesis",
+        "response": "Perfect calculation. You've navigated the pitfalls of this planning problem successfully. Now, reflecting on the whole process, how would you describe the general rule for handling 'per day' costs versus 'per night' costs or 'bundle' passes when planning a budget like this?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I learned that you have to be really precise about the units of time. For things like hotels, you count nights, which is usually one less than the total days of the trip. For food or transport, you count every single day you're actually there. And for bundles, you have to check if the bundle's duration actually matches your trip duration, or if you need to add separate daily costs to cover the remaining gaps."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has clearly and accurately explained the conceptual rules of the problem. The tutoring session is now complete.",
+        "state": "Closing",
+        "response": "That's a spot-on explanation! You've completely mastered the logic of budgeting for these kinds of trips. Great job working through those tricky details. Ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "chemistry",
+    "topic": "States of matter and phase changes",
+    "problem": "Describe what happens to the temperature and the molecular arrangement of a sample of ice as it is heated from -10°C to 110°C at constant pressure.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know it starts as ice, then melts, then boils. So the temperature just keeps rising as we add heat, right?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student assumes a linear temperature increase. I need to see if they understand the concept of phase change plateaus.",
+        "state": "Diagnosis",
+        "response": "Let's look closer at that. While the ice is melting or the water is boiling, do you think the temperature behaves the same way as when it's just warming up?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Yeah, since we are adding heat, the temperature should just go up steadily from -10 all the way to 110."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student made a procedural mistake. Since socratic_level is low, I will directly correct the temperature claim and guide them toward the energy's purpose.",
+        "state": "Support",
+        "response": "Actually, during a phase change, the temperature stays constant. This is because the energy is being used for something other than raising the temperature. What do you think happens to the molecules during melting?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I guess the energy makes the molecules move faster, which makes the water hotter even while it's melting?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has made a second mistake, confusing kinetic energy with potential energy during a phase change. I will provide a direct explanation.",
+        "state": "Support",
+        "response": "Not quite. The temperature remains flat because the energy is breaking the intermolecular bonds rather than increasing the speed of the molecules. How does the arrangement of molecules change from ice to water?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, okay. So the molecules stop being in a fixed grid and start sliding around each other, but they still stay pretty close together?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly describes the transition to liquid. I'll confirm this and move to the next stage of the problem.",
+        "state": "Support",
+        "response": "That's right. They move from a rigid structure to a fluid one. Now, keeping in mind what we discussed about plateaus, what happens when the water reaches 100°C?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "It starts to boil and turn into steam. I'm guessing the temperature stays at 100 again until it's all gas?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly applied the plateau concept to boiling. I will confirm and ask about the molecular state of gas.",
+        "state": "Support",
+        "response": "Exactly. The energy is again used to completely separate the molecules. How would you describe the distance between molecules in steam compared to liquid water?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "They'd be much further apart and moving randomly in all directions."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified all steps. Now I need them to synthesize the core principle.",
+        "state": "Synthesis",
+        "response": "You've mapped out the whole process perfectly. To make sure it's clear, could you explain the general rule for why temperature doesn't rise during a phase change?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The rule is that during a phase change, the temperature stays the same because the added heat energy is used to break the attractions between molecules instead of increasing their speed."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has clearly and correctly articulated the concept. The session is complete.",
+        "state": "Closing",
+        "response": "Spot on! You've mastered the concept of phase change plateaus. Ready to try another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Active vs passive voice",
+    "problem": "Convert the following sentence from passive to active voice and explain the change: 'The ancient manuscript, which had been meticulously preserved for centuries by the monks of the remote monastery, was finally deciphered by the linguists last year.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the linguists are the ones doing the action, so maybe it's 'The linguists finally deciphered the ancient manuscript last year.' But I'm not totally sure what to do with the part about the monks and the preserving, because that also feels like it's happening to the manuscript."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student identified the main agent but is confused by the nested clause. Since socratic_level is low, I will provide a direct explanation of passive voice before asking for the next step.",
+        "state": "Diagnosis",
+        "response": "You've correctly identified the main action! In a passive sentence, the subject is being acted upon rather than doing the acting. The part about the monks is a relative clause that is also in the passive voice, which means there are actually two separate actions happening here. How do you think you should handle that second action?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Okay, since the monks are mentioned, maybe it's 'The ancient manuscript, which the monks meticulously preserved for centuries, was deciphered by the linguists.' Wait, I think I just moved the monks, but I kept the 'was deciphered' part. Is that right?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student corrected the relative clause but left the main clause passive. I will explicitly explain the 'by' phrase trigger to guide them.",
+        "state": "Support",
+        "response": "You fixed the first part, but the main sentence is still passive. Whenever you see 'was [verb] by [someone],' that's a huge signal that the agent is at the end. To make it active, you have to move the person after the 'by' to the front of that specific clause. Why don't you try moving the linguists to the start of the main action again?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Got it. So it would be 'The linguists finally decipher the ancient manuscript, which the monks meticulously preserved for centuries.' But wait, the original said 'was deciphered,' so maybe it should be 'deciphered' or 'had deciphered'?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is now struggling with tense consistency. I will provide a direct rule about maintaining the original tense.",
+        "state": "Support",
+        "response": "You're very close! When converting voice, you must keep the original tense of the verb. Since 'was deciphered' is simple past, you should use the simple past 'deciphered' in your active version. You correctly handled the relative clause, but let's look at that verb again. Does 'deciphered' match the timing of the original sentence?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Okay, so 'The linguists finally deciphered the ancient manuscript which the monks meticulously preserve for centuries.' I think I got the main part right now, but I'm not sure if the monks part needs to be 'preserve' or 'preserved' because it happened over a long time."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has made a procedural error with the nested clause tense (recurring mistake). I will explain the past perfect tense directly.",
+        "state": "Support",
+        "response": "Actually, the original said 'had been preserved,' which is the past perfect tense. This indicates an action that happened even further back in the past than the deciphering. You'll want to keep that 'had' in there to maintain the timeline. Try rewriting the whole thing one more time, keeping both the simple past and the past perfect."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Alright, let me try. 'The linguists finally deciphered the ancient manuscript, which the monks had meticulously preserved for centuries.' I think that's it! The linguists did the deciphering, and the monks did the preserving."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully converted both clauses and maintained the tenses. Now I need them to internalize the logic.",
+        "state": "Synthesis",
+        "response": "That's perfectly executed. You handled both the main clause and the nested clause while keeping the tenses intact. To make sure this sticks, can you explain to me in your own words how you actually identify what needs to move when you're changing a sentence from passive to active voice?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Basically, I look for the person or thing that is actually doing the work—the agent—which is usually hiding at the end of the sentence after the word 'by.' Then I move that agent to the front to be the subject and change the verb so it's not using 'was' or 'been' anymore, while making sure I keep the same time period."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has clearly explained the process of identifying the agent and adjusting the verb and subject. The conversation is now complete.",
+        "state": "Closing",
+        "response": "Spot on! You've really mastered the logic behind this. Great job working through those tricky tenses! Ready to move on to something else?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Inflation basics",
+    "problem": "A consumer price index (CPI) basket cost $120 in Year 1 and $126 in Year 2. Calculate the inflation rate between Year 1 and Year 2.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "The price increased by $6. I'm trying to figure out the inflation rate, but I'm not sure whether the increase is calculated against the starting price or the ending price."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is unsure about the base for the percentage calculation, so I need to diagnose their understanding of percentage increases.",
+        "state": "Diagnosis",
+        "response": "That's a key question. In your own words, when we talk about a 'percentage increase' in economics, what are we usually comparing the change to?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Usually the starting value. So it would be $6 divided by 120, which is 0.05."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has the correct decimal but hasn't converted to a percentage yet; I'll guide them through that step.",
+        "state": "Support",
+        "response": "You've arrived at the decimal ratio. To express this as a percentage rate, what mathematical step do you normally take with a decimal like 0.05?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I just move the decimal one place to the right, so it's 0.5% inflation?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made a minor calculation slip on the decimal conversion, so I'll provide a comparison hint.",
+        "state": "Support",
+        "response": "Think about the scale. If a value of 0.1 represents a 10% increase, what would a value of 0.05 represent in percentage terms?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, I see. It should be 5%. My mistake."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is correct, but I want to reinforce the base-year logic to ensure it's not a guess.",
+        "state": "Support",
+        "response": "Perfect. Now, just to double check your logic, what would happen to the result if we used the Year 2 price instead of Year 1 as our base?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "If we use 126, the rate would be $6/126, which is about 4.7%. Actually, that's more accurate because it's the current value, right?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has incorrectly asserted that the ending price is more accurate; I need to redirect them back to the definition of growth.",
+        "state": "Support",
+        "response": "Does the concept of inflation measure the change relative to where the price ended up, or where the price originally started?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "It starts from the original price. So the 5% I calculated earlier is the correct inflation rate."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has reached the correct answer and logic, so it's time to synthesize the general rule.",
+        "state": "Synthesis",
+        "response": "Exactly. Now, to make sure this is internalized, can you explain the general formula for calculating the inflation rate between any two periods in your own words?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The rule is to find the difference between the new price and the old price, divide that difference by the original old price, and then multiply by 100 to get the percentage."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly articulated the principle, so the session can wrap up.",
+        "state": "Closing",
+        "response": "Spot on! You've mastered the concept and corrected those slips perfectly. Ready to move on to the next one?"
+      }
+    ]
   }
 ]

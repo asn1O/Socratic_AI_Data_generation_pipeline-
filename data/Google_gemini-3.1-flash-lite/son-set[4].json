@@ -1,0 +1,611 @@
+[
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Blood relations",
+    "problem": "A man is looking at a photograph of someone. His friend asks who it is. The man replies, 'Brothers and sisters I have none, but that man's father is my father's son.' Who is in the photograph?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this puzzle, and I'm really confused. 'That man's father is my father's son' sounds like a riddle that just loops back on itself. I think the man in the photo is probably the man's father because he's mentioning fathers so much."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is jumping to a quick conclusion based on keyword association rather than analyzing the logic. I need to use Diagnosis to help them break down the phrase 'my father's son'.",
+        "state": "Diagnosis",
+        "response": "That is an interesting guess, but let's take a closer look at the phrasing. If the man says, 'Brothers and sisters I have none,' what does that tell us about who he might be referring to when he says 'my father's son'?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, if he has no brothers or sisters, that means he is an only child. So, 'my father's son' must be someone else, maybe his nephew or a cousin?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified he is an only child but then made an incorrect jump, thinking 'my father's son' could be someone else. I need to support them in identifying that 'my father's son' must be the man himself.",
+        "state": "Support",
+        "response": "That's a very helpful observation that he is an only child! If he is the only child his father has, and he refers to 'my father's son,' could that 'son' be anyone other than himself?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, wait. If he's the only one, then 'my father's son' is just him. So if he's the son, then the sentence becomes 'that man's father is me'?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is getting closer but is still struggling to put the full relationship together correctly. I need to lead them to see that the person in the photo is the son of the man speaking.",
+        "state": "Support",
+        "response": "You are definitely on the right track by replacing 'my father's son' with 'me.' Now, let's look at the whole first part of that clause: 'That man's father is...' and then complete it with what you just found. If 'that man's father' is 'me' (the speaker), who is 'that man'?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Hmm, if the father is the speaker, then the man in the picture must be the speaker's father too? I'm still getting turned around with these relationships."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is still confused about the direction of the relationship. I need to guide them to distinguish between being a father and being a son.",
+        "state": "Support",
+        "response": "Let's try it this way: if I am the father of someone, what is that person to me? If 'that man's father' is the speaker, what does that make 'that man' in relation to the speaker?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "If I am the father, then the other person is my child. So, the man in the photo is the speaker's son. Does that make sense?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully navigated the logic. I will now ask them to synthesize the full reasoning to ensure they truly understand the process.",
+        "state": "Synthesis",
+        "response": "That sounds exactly right! Could you walk me through the logic one more time, explaining how you arrived at that conclusion using the 'only child' clue?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Sure! Since he has no siblings, he's the only child, so 'my father's son' has to be the speaker himself. Replacing that in the sentence makes it 'that man's father is me.' If he is the father of the person in the photo, then the person in the photo must be his son."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly articulated the logic and completed the problem. The exchange is complete.",
+        "state": "Closing",
+        "response": "That is a perfect explanation. You really nailed the logical steps! Ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "biology",
+    "topic": "Cell structure",
+    "problem": "Compare the primary roles of the mitochondria and the chloroplast in a plant cell, specifically regarding how they process energy.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know both organelles are involved in energy, but I'm a little confused. I think the chloroplast is where the plant breathes, like taking in oxygen to make fuel, while the mitochondria just stores it."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has conflated the roles of these organelles and incorrectly identified the gas exchange process. I need to use a diagnostic question to help them distinguish the two.",
+        "state": "Diagnosis",
+        "response": "That's an interesting start. If we look at where plants get their food from, does the chloroplast create something new or consume it, and how might that differ from what happens in the mitochondria?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, plants get light from the sun, so the chloroplast must turn sunlight into sugar. Wait, maybe I had the breathing part backward? Is the mitochondria where the sugar is broken down for energy?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is correcting their own initial error. I'll support this insight by asking them to connect the 'breaking down' process to the specific gases involved.",
+        "state": "Support",
+        "response": "You're definitely on the right track regarding the sugar. If the mitochondria breaks down that sugar to provide power for the cell, what byproduct or gas might be released during that process?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I think it releases carbon dioxide, because that's what humans breathe out too. So if the mitochondria releases CO2, then the chloroplast must take in CO2 to build the sugar, right?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly linked the gas exchange, but I want to ensure they see the full cycle. I'll ask about the relationship between these two processes.",
+        "state": "Diagnosis",
+        "response": "Exactly. So if one organelle builds the sugar using carbon dioxide and the other breaks it down, how do these two organelles work together to keep the cell's energy levels stable?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "They create a cycle! But wait, I'm stuck on one part. I think the chloroplasts are only found in plant cells, but the mitochondria are only in animal cells, right?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has made a specific incorrect claim about organelle distribution. I need to guide them toward the correct realization without stating the answer.",
+        "state": "Support",
+        "response": "Think about a plant leaf. If a plant needs to convert the sugar it made in its chloroplasts into usable energy for its roots or during the night, would it need mitochondria to do that?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, that makes sense. A plant still needs energy to grow when it's dark, so it would need mitochondria too. I guess both organelles are in plants, but only mitochondria are in animals."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student corrected the mistake. Now I want them to synthesize the total relationship between the energy production and consumption.",
+        "state": "Synthesis",
+        "response": "You've got it. Based on what we've discussed, how would you summarize the functional relationship between chloroplasts and mitochondria in a plant cell?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Basically, the chloroplast captures solar energy to build sugar from carbon dioxide, and then the mitochondria breaks that sugar back down to release energy for the cell to use, creating a balanced energy loop."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully synthesized the concepts of photosynthesis and cellular respiration, demonstrating clear understanding.",
+        "state": "Closing",
+        "response": "That's a perfect summary of the cycle. You've really grasped how those two work in tandem! Ready to move on to something else?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Speed, time and distance",
+    "problem": "A cyclist travels at a constant speed of 15 km/h. How long will it take for the cyclist to cover a distance of 45 km?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this cycling problem. If they go 15 km in an hour, I'm thinking I should maybe add 15 until I reach 45?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is using an additive approach rather than multiplication or division. I need to diagnose if they recognize the relationship between speed, distance, and time.",
+        "state": "Diagnosis",
+        "response": "That's one way to look at it. Can you tell me what the relationship is between speed, distance, and time?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I know distance equals speed times time, but I'm not sure how to rearrange that for time."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student knows the base formula but struggles with algebraic rearrangement. I will support them by asking how they might isolate 'time' in that equation.",
+        "state": "Support",
+        "response": "If distance equals speed times time, what would you do to isolate the time variable?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, so I should divide the distance by the speed? That would be 45 divided by 15?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the algebraic move. Now I need to encourage the calculation.",
+        "state": "Support",
+        "response": "Exactly. What do you get when you perform that division?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "45 divided by 15... that's 3. Is it 3 kilometers?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is correct on the number but confused about the units. I'll provide a small nudge to clarify what the result represents.",
+        "state": "Support",
+        "response": "Close on the number! But remember, we are solving for time. If we divide kilometers by km/h, what unit are we left with?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Right, it would be hours, not kilometers. So, 3 hours?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully arrived at the correct answer. Now I need to prompt for synthesis.",
+        "state": "Synthesis",
+        "response": "Spot on. In your own words, what is the relationship between these three variables and why did division work here?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Distance is speed times time, so to find time, you divide distance by speed because you're figuring out how many '15 km chunks' fit into 45 km."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly articulated the underlying concept. The task is complete.",
+        "state": "Closing",
+        "response": "That's exactly it! You've got the concept down. Ready for another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Ethical dilemmas (trolley-problem style)",
+    "problem": "An autonomous vehicle faces an unavoidable collision. It can either swerve into a barrier, killing the sole passenger, or continue straight, killing five pedestrians crossing the street illegally. How should the vehicle be programmed to handle this?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "The car should hit the barrier because saving five lives is obviously better than saving one."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student uses a simple utilitarian calculus. I will introduce the complexity of passenger duty to prompt deeper reflection.",
+        "state": "Support",
+        "response": "That's a common utilitarian view. However, consider the manufacturer's responsibility to protect the person who purchased the car."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "True, but the pedestrians are innocent bystanders. Wait, they're crossing illegally, so the car has no obligation to them."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student makes an incorrect claim about legal status absolving moral responsibility. I need to challenge this generalization.",
+        "state": "Diagnosis",
+        "response": "Does a pedestrian's illegal action automatically negate their right to life? What if the pedestrians were children?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Okay, that's a fair point. I guess the car shouldn't prioritize based on legality, but still, the numbers matter."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is still anchored to numbers. I will introduce a deontological perspective as a comparison to broaden their view.",
+        "state": "Support",
+        "response": "Counting lives is one way, but think about the 'intent' aspect. If the car swerves, it is actively choosing to kill the passenger. Is that different?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Maybe it is. If it stays the course, it's an accident. If it swerves, it's a deliberate act of killing."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is starting to see the distinction between 'letting die' and 'killing'. I want to solidify this realization.",
+        "state": "Support",
+        "response": "Exactly. Some argue that an intentional act of harm is harder to justify than a tragic consequence of staying on path."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "So, are you saying it's always better to not act, even if more people die? That feels wrong too."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student is struggling with the moral weight of inaction. I will guide them to articulate the trade-off.",
+        "state": "Diagnosis",
+        "response": "That is the central dilemma. How would you weigh the moral obligation to save lives against the obligation not to actively cause harm?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I think there's a conflict between utilitarianism, which focuses on the total outcome, and deontology, which focuses on the moral quality of the action itself—killing versus letting die."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully synthesized the two ethical frameworks. The discussion is complete.",
+        "state": "Closing",
+        "response": "Spot on. You’ve really grasped the core tension there. Ready for another scenario?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "biology",
+    "topic": "Punnett squares / genetics",
+    "problem": "In pea plants, purple flowers (P) are dominant over white flowers (p). If you cross a heterozygous purple-flowered plant with a homozygous white-flowered plant, what is the probability that an offspring will be white-flowered, and how does the genotype of the parents influence that outcome?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm trying to figure out the offspring here. I know the purple one is Pp and the white is pp, but I'm not sure how to set up the square to get the right ratio."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student identified the genotypes correctly but is hesitant about the execution. I need to probe their understanding of how these genotypes map onto the Punnett square.",
+        "state": "Diagnosis",
+        "response": "You have the genotypes right. If you place those alleles on the top and side of a 2x2 grid, what happens when you fill in each cell?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Okay, so I put P and p on top, and p and p on the side. That gives me two Pp boxes and two pp boxes."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student performed the cross correctly. Now I want to see if they can interpret those results in terms of phenotypes.",
+        "state": "Diagnosis",
+        "response": "That looks accurate. Looking at those four combinations, which ones will result in white flowers?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "The ones with two lowercase p's would be white, right? So that would be half of them?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is on the right track. I'll ask them to connect the probability back to the initial question to confirm they see the full picture.",
+        "state": "Diagnosis",
+        "response": "Exactly, that's two out of four. How does that translate into a percentage probability for the white offspring?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "That would be 50 percent, I think. But what if the white plant wasn't homozygous? Does that change things a lot?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is asking a hypothetical. I will use this as a supporting prompt to ensure they understand the difference between genotypes.",
+        "state": "Support",
+        "response": "If the white plant were heterozygous, could it even show the white phenotype given that purple is dominant?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, right! It couldn't be, because the purple 'P' would mask it. So a white plant has to be pp."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student corrected their own logic regarding the white genotype. Now, I will ask them to synthesize the role of parents in determining the ratios.",
+        "state": "Synthesis",
+        "response": "Exactly. Now, can you explain in your own words why this specific cross resulted in a 50/50 split?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Since the parent is Pp, it gives either a P or a p. The white parent is pp, so it only gives p. That means half the offspring get a P from the first parent and p from the second, and the other half get two p's."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly articulated the mechanism of inheritance and the specific outcome of the cross. The exercise is complete.",
+        "state": "Closing",
+        "response": "That's exactly it! You've got a great handle on this. Ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "physics",
+    "topic": "Series vs parallel circuits",
+    "problem": "Imagine a simple circuit with a 9V battery and two identical light bulbs. If you connect the bulbs in a series circuit versus a parallel circuit, how would you expect the brightness of the bulbs to compare in each setup?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm thinking about this circuit, but I'm not sure where to start. If I put both bulbs in a series, I guess they just share the battery's energy, but I don't really know how that changes things compared to parallel."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student identifies the core issue of 'sharing' energy but lacks the terminology and mechanism. I'll diagnose their understanding of current flow.",
+        "state": "Diagnosis",
+        "response": "That's a great starting point. When you have those two bulbs in a series, what can you tell me about the path the electricity has to take to get through both of them?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, it has to go through one bulb and then the next one before it can get back to the battery. So, it's like one long single track for the electricity?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has a good mental model of the series path. Now I need to support them in thinking about what happens to the total resistance.",
+        "state": "Support",
+        "response": "Exactly, it's a single track. If the electricity has to push through two bulbs instead of one on that single path, how might that affect the total resistance of the circuit?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I suppose if there's more resistance, there's less current flowing? So maybe they both end up being dimmer because the power is split up?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is on the right track regarding series. Now I'll shift to contrast this with the parallel arrangement to deepen the understanding.",
+        "state": "Diagnosis",
+        "response": "That makes sense for series. Now, imagine you wire them in parallel instead. How does the path for the electricity look when the bulbs are side-by-side like that?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "In parallel, I think the electricity can split up so each bulb has its own path back to the battery. Does that mean the current doesn't have to get shared?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the splitting of paths. I'll support them in seeing the effect this has on the total resistance compared to the series circuit.",
+        "state": "Support",
+        "response": "If each bulb has its own separate path to the battery, does the battery see more or less resistance compared to when they were in that single series line?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I think it would be less resistance because the paths are easier to navigate? So maybe the total current is actually higher in parallel?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "They are almost there. I need them to synthesize why this results in different brightness levels across both configurations.",
+        "state": "Synthesis",
+        "response": "You're spot on. If we compare those two setups, how would you explain the difference in brightness to someone else based on the resistance and paths you just described?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "So, in series, the bulbs share the voltage and have more resistance, so they are dimmer. In parallel, each bulb gets the full battery voltage through its own path, which lowers the total resistance, so they both shine much brighter."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully synthesized the concepts of series vs parallel circuits and their effect on brightness. The task is complete.",
+        "state": "Closing",
+        "response": "That's exactly it! You clearly nailed how the paths and resistance dictate the brightness. Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Reading and interpreting graphs",
+    "problem": "Given a bar chart showing the monthly sales of a small bakery, where the y-axis represents 'Number of Items Sold' (increments of 10) and the x-axis represents 'Month' (Jan, Feb, Mar, Apr), interpret the trend: January sales are at 40, February at 30, March at 50, and April at 60. Describe the sales trend from January to April.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Looking at this chart, it seems like the bakery is doing great because the bars are just getting taller every month."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student made a factual error by ignoring the drop in February. I need to point out that specific data point to correct their overgeneralization.",
+        "state": "Diagnosis",
+        "response": "That's a common initial impression, but let's look closer at the transition between the first two months. How do January's 40 sales compare to February's 30?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, wait, I see it now. January is at 40 and February is at 30, so the sales actually doubled."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student made a second mistake by miscalculating the change from 40 to 30. I need to provide a direct hint to correct their arithmetic understanding.",
+        "state": "Support",
+        "response": "That's not quite right. If sales go from 40 down to 30, that's a decrease. If it had doubled, it would have gone from 40 to 80. How would you describe the change from Jan to Feb now?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Right, sorry, that was a mistake. It dropped by 10, so there was a decline in February."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student corrected their arithmetic error. Now I want them to look at the full sequence to synthesize the overall trend.",
+        "state": "Diagnosis",
+        "response": "Exactly. Now, considering that decline in February, what happens to the sales figures for March and April compared to that low point?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "In March it goes back up to 50, and in April it reaches 60."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student identifies the growth correctly. I will now explain that trends aren't always linear to help them think about the period as a whole.",
+        "state": "Support",
+        "response": "That is correct. Since the sales dipped and then rose steadily, it wouldn't be accurate to say it simply 'increased every month.' We call this a fluctuating trend with an overall upward recovery."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "So, even though there's a dip, the general direction by April is positive compared to where it started?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student is catching on. I'll provide a prompt to ensure they can articulate the full pattern now.",
+        "state": "Support",
+        "response": "Spot on. You have the fluctuation and the final outcome. Try summarizing the trend from January through April in your own words, keeping both the dip and the recovery in mind."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The sales experienced a slight decline in February, but then recovered and showed a consistent growth trend through March and April, ending higher than they started in January."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has accurately articulated the trend, demonstrating they've mastered the concept of reading non-linear graph data.",
+        "state": "Closing",
+        "response": "Perfectly stated. You nailed the analysis! Ready to move on to the next one?"
+      }
+    ]
+  }
+]
