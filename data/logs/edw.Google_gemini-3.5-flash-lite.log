@@ -200,3 +200,54 @@
   failure_categories:
   invalid_json_syntax: 3
   turn_count_out_of_range: 4
+2026-09-18 21:26:17,002 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 21:26:24,108 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3499 turns=12 path=data/Google_gemini-3.5-flash-lite/edw-set[3].json
+2026-09-18 21:27:24,110 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 21:27:28,342 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3234 turns=12 path=data/Google_gemini-3.5-flash-lite/edw-set[3].json
+2026-09-18 21:28:28,344 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 21:31:02,753 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3398 turns=12 path=data/Google_gemini-3.5-flash-lite/edw-set[3].json
+2026-09-18 21:32:02,751 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 21:32:08,866 INFO REJECTED_RESPONSE_SAVED provider=Google model=gemini-3.5-flash-lite path=data/rejected_responses/edw-Google_gemini-3.5-flash-lite.txt
+2026-09-18 21:32:08,867 ERROR JSON_INVALID provider=Google model=gemini-3.5-flash-lite reason=turn count 10 outside [12, 18]
+2026-09-18 21:33:08,869 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 21:33:14,246 INFO REJECTED_RESPONSE_SAVED provider=Google model=gemini-3.5-flash-lite path=data/rejected_responses/edw-Google_gemini-3.5-flash-lite.txt
+2026-09-18 21:33:14,246 ERROR JSON_INVALID provider=Google model=gemini-3.5-flash-lite reason=turn count 11 outside [12, 18]
+2026-09-18 21:34:14,249 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 21:34:19,792 INFO REJECTED_RESPONSE_SAVED provider=Google model=gemini-3.5-flash-lite path=data/rejected_responses/edw-Google_gemini-3.5-flash-lite.txt
+2026-09-18 21:34:19,792 ERROR JSON_INVALID provider=Google model=gemini-3.5-flash-lite reason=turn count 8 outside [12, 18]
+2026-09-18 21:35:19,792 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 21:35:26,172 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3789 turns=12 path=data/Google_gemini-3.5-flash-lite/edw-set[3].json
+2026-09-18 21:36:26,174 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 21:36:30,007 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3135 turns=12 path=data/Google_gemini-3.5-flash-lite/edw-set[3].json
+2026-09-18 21:37:30,014 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 21:37:33,612 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3125 turns=12 path=data/Google_gemini-3.5-flash-lite/edw-set[3].json
+2026-09-18 21:38:33,614 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 21:38:37,409 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3229 turns=12 path=data/Google_gemini-3.5-flash-lite/edw-set[3].json
+2026-09-18 21:39:37,411 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 21:39:42,377 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3438 turns=12 path=data/Google_gemini-3.5-flash-lite/edw-set[4].json
+2026-09-18 21:40:42,380 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 21:40:47,722 INFO REJECTED_RESPONSE_SAVED provider=Google model=gemini-3.5-flash-lite path=data/rejected_responses/edw-Google_gemini-3.5-flash-lite.txt
+2026-09-18 21:40:47,722 ERROR JSON_INVALID provider=Google model=gemini-3.5-flash-lite reason=turn count 13 is not even
+2026-09-18 21:41:47,725 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 21:41:52,845 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3465 turns=12 path=data/Google_gemini-3.5-flash-lite/edw-set[4].json
+2026-09-18 21:42:52,847 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 21:43:07,418 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3289 turns=12 path=data/Google_gemini-3.5-flash-lite/edw-set[4].json
+2026-09-18 21:44:07,421 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 21:44:13,999 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3920 turns=12 path=data/Google_gemini-3.5-flash-lite/edw-set[4].json
+2026-09-18 21:45:14,002 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 21:45:20,252 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3267 turns=12 path=data/Google_gemini-3.5-flash-lite/edw-set[4].json
+2026-09-18 21:46:20,255 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 21:46:24,811 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3343 turns=12 path=data/Google_gemini-3.5-flash-lite/edw-set[4].json
+2026-09-18 21:47:24,814 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 21:47:29,414 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3402 turns=12 path=data/Google_gemini-3.5-flash-lite/edw-set[4].json
+2026-09-18 21:48:29,423 INFO MODEL_SUMMARY
+  provider_model: Google / gemini-3.5-flash-lite
+  attempts: 18
+  saved: 14
+  failed: 4
+  accept_rate: 77.78%
+  average_tokens: 3395.21
+  turn_range: 12-12
+  expired: False
+  failure_categories:
+  turn_count_out_of_range: 4

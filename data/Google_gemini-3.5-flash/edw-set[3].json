@@ -1090,5 +1090,266 @@
         "response": "Perfect explanation! You nailed it. Ready to try another tricky logic problem?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Mean, median, mode",
+    "problem": "Find the median of this set of numbers: 3, 9, 1, 7, 5.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I need to find the median of 3, 9, 1, 7, 5. Is it 1 because it's in the middle?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student made a common mistake of picking the middle of an unsorted list. I need to gauge their understanding of 'median'.",
+        "state": "Diagnosis",
+        "response": "What does the word 'median' mean to you?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I'm not really sure. I thought it just meant the middle number."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is unsure of the definition. I will provide a hint about sorting first and ask them to apply it.",
+        "state": "Support",
+        "response": "The median is indeed the middle value, but the numbers must be sorted first. How should we arrange them?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "So we put them in order? Like, 1, 3, 7, 9, 5?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student understands they need to sort but made a mistake in ordering. I need to guide them to correct the order.",
+        "state": "Support",
+        "response": "Almost, but 9 is larger than 5. Can you write them from smallest to largest?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Ah, okay. So it should be 1, 3, 5, 7, 9."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The list is now correctly sorted. I want to see if the student can now identify the median.",
+        "state": "Diagnosis",
+        "response": "Which number is now in the exact middle of that list?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The middle number is 5."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student got the correct answer. I will now ask them to synthesize the rule in their own words.",
+        "state": "Synthesis",
+        "response": "Spot on! In your own words, how do you find the median of a list?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "You put the numbers in order from smallest to biggest, then find the middle one."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student successfully explained the rule. The learning objective is complete, so I will wrap up.",
+        "state": "Closing",
+        "response": "Exactly, that's it! Ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Ratio and proportion",
+    "problem": "A bag contains red and blue marbles in the ratio 3:5. If 10 more red marbles are added, the ratio of red to blue marbles becomes 2:3. How many blue marbles are in the bag?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know the initial ratio of red to blue is 3:5, so maybe I can write them as 3x and 5x. But I'm not sure how to set up the equation when we add 10 red marbles."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified the initial algebraic representations. I will directly validate this setup and guide them to express the change in the red marbles to check their understanding.",
+        "state": "Diagnosis",
+        "response": "You've made a great start by representing the marbles as 3x and 5x. Adding 10 red marbles means we just add 10 to the red part, 3x. What would the expression for the new ratio of red to blue look like?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Okay, so the new red is 3x + 10, and blue is still 5x. So the new ratio is (3x + 10) / 5x. Since the new ratio is 2:3, does that mean (3x + 10) / 5x = 3/2?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly set up the left side of the equation but made a procedural mistake by inverting the target ratio to 3/2 instead of 2/3. I will directly explain the alignment to help them correct it.",
+        "state": "Support",
+        "response": "You set up the left side perfectly. Remember that the problem says the ratio of red to blue becomes 2 to 3, so red is 2 parts and blue is 3 parts. Try matching the sides of your equation again."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Ah, I see! Red is on top, so it should match the 2. So the equation is (3x + 10) / 5x = 2/3. Now I need to solve for x, but cross-multiplying always confuses me."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student successfully corrected the ratio equation but is uncertain about the execution of cross-multiplication. I will explain the mechanism of cross-multiplication directly to reduce their anxiety and guide the calculation.",
+        "state": "Support",
+        "response": "Cross-multiplication just means we multiply the numerator of one side by the denominator of the other. So, you will multiply 3 by (3x + 10), and 2 by 5x. What equation do you get when you write that out?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Okay, so 3 * (3x + 10) = 2 * 5x. If I expand that, it becomes 9x + 30 = 10x. If I subtract 9x from both sides, I get x = 30. Is that right?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student successfully solved for x. I will validate their correct algebra and directly guide them to the final step of the problem, which is finding the total number of blue marbles.",
+        "state": "Support",
+        "response": "That is absolutely correct, x is indeed 30. Now, the question asks for the number of blue marbles in the bag. We represented blue marbles as 5x earlier. How do we use our x value to find that?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "We just multiply 5 by 30, which gives us 150 blue marbles. Wow, that actually makes sense now!"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has reached the correct final answer. Now, I want to solidify their conceptual understanding by having them summarize the core mathematical strategy they used.",
+        "state": "Synthesis",
+        "response": "Reflecting on how we solve these is a great way to remember them. In your own words, how do we use a common multiplier like 'x' to solve ratio change problems?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "We represent the actual quantities as a multiple of the ratio parts using a variable like x. Then we change the quantities as described, set up a new fraction equal to the new ratio, and solve for x to find the real amounts."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student provided an excellent, accurate synthesis of the ratio-change method. The learning objective is fully met, so I will close the session warmly.",
+        "state": "Closing",
+        "response": "Spot on! That is a perfect summary of the method. You did a fantastic job working through that. Ready to try another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Logical fallacies",
+    "problem": "Analyze this argument: 'If we let students use AI for drafting essays, soon they won't know how to write at all, and our entire education system will collapse. We must either ban AI entirely or accept the death of critical thinking. Besides, the people pushing for AI in schools are just tech executives looking to make a quick buck.' Identify and explain the specific logical fallacies committed here.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I can see a few fallacies here. The first part about the education system collapsing feels like a slippery slope, but I'm not really sure how to label the other two parts. They just seem like bad arguments."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified the first fallacy but is uncertain about the rest. I need to diagnose their understanding of the first fallacy before moving on to the trickier parts.",
+        "state": "Diagnosis",
+        "response": "You've got a great instinct there! Why does that first sentence about the education system collapsing strike you as a slippery slope fallacy?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, it assumes that one small step—using AI for drafts—will inevitably lead to an extreme disaster without showing any proof. But for the next sentence, 'either ban AI entirely or accept the death of critical thinking,' that's definitely a Straw Man, right? Because it's misrepresenting the options."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student understands slippery slope, but made mistake 1 by mislabeling false dilemma as straw man. I need to support them with a hint focusing on the 'either/or' structure.",
+        "state": "Support",
+        "response": "That's a very common mix-up! While it does misrepresent reality, what do you notice about how the options are structured when it uses the words 'either' and 'or'?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, wait. It's forcing a choice between only two extreme options when there are probably other choices in between, like using AI responsibly. Is that a False Dilemma instead?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student self-corrected Mistake 1. Now I should guide them to analyze the third part of the argument regarding the tech executives.",
+        "state": "Diagnosis",
+        "response": "Spot on! That is indeed a false dilemma. Now, how would you analyze that final sentence about the tech executives looking to make a quick buck?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I think that last one is a Red Herring. It changes the subject to money and tech companies to distract us from the actual issue of education."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student made mistake 2 by mislabeling ad hominem as red herring. While it is distracting, it specifically targets the people making the argument. I need to offer a hint pointing to this target.",
+        "state": "Support",
+        "response": "It is definitely distracting! But look closely at the target of that distraction: is it focusing on the idea of AI itself, or is it attacking the character and motives of the people promoting it?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Ah, I see. It's attacking the tech executives' motives rather than addressing their actual arguments about AI. That makes it an Ad Hominem fallacy, doesn't it?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully identified all three fallacies. Now I need to transition to synthesis so they can cement their understanding of these concepts.",
+        "state": "Synthesis",
+        "response": "Exactly! You found all three. To make sure you've got this down, how would you summarize the core differences between a False Dilemma and an Ad Hominem in your own words?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "A False Dilemma limits a complex situation to just two extreme choices, ignoring any middle ground. An Ad Hominem doesn't even address the choices or arguments; instead, it attacks the personal character or motives of the person making the argument."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has provided a clear, accurate explanation of both concepts. The learning goal is met, so I will wrap up the session.",
+        "state": "Closing",
+        "response": "That is a perfect summary! You navigated those tricky fallacies beautifully today. Ready to try another challenge?"
+      }
+    ]
   }
 ]

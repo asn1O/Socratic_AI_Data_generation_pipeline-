@@ -1,0 +1,386 @@
+[
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "history_and_social_studies",
+    "topic": "Comparing political systems",
+    "problem": "Compare the key features of a parliamentary system and a presidential system, focusing on how the executive is chosen and its relationship to the legislature.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know in a parliamentary system the prime minister comes from parliament, but I'm fuzzy on how a president is chosen and how they relate to congress."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student shows partial knowledge of parliamentary selection; need to elicit more detail before moving to presidential comparison.",
+        "state": "Diagnosis",
+        "response": "Can you explain how the prime minister is selected and what role the legislature plays in that process?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "The prime minister is usually the leader of the majority party or coalition in parliament and must maintain its confidence."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student correctly describes parliamentary executive selection; now guide to presidential selection with a brief affirmation and question.",
+        "state": "Support",
+        "response": "Good. In a presidential system, how is the president chosen, and does the legislature have a direct role?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "The president is elected separately, often by popular vote or electoral college, not by the legislature."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student identifies separate election; now probe accountability difference with a brief affirmation and question.",
+        "state": "Support",
+        "response": "Right. How does that separation affect the executive's accountability to the legislature compared to a parliamentary system?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "In a presidential system, the president doesn't need legislative confidence to stay in office, unlike a prime minister."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student notes confidence distinction; now ask about removal mechanisms to deepen comparison.",
+        "state": "Support",
+        "response": "What mechanisms exist to remove a president versus a prime minister?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "A prime minister can be ousted by a vote of no confidence, while a president typically faces impeachment for high crimes."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student covers removal methods; ready to synthesize the core distinction in their own words.",
+        "state": "Synthesis",
+        "response": "Summarize the core distinction in executive-legislative relations between the two systems in your own words."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "In parliamentary systems the executive emerges from and depends on the legislature, while in presidential systems the executive is independently elected and not reliant on legislative confidence."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the key difference; wrap up warmly.",
+        "state": "Closing",
+        "response": "Great job! That's exactly the key difference. Ready for another comparison?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "chemistry",
+    "topic": "Acids and bases",
+    "problem": "Calculate the pH of a buffer solution containing 0.2 M acetic acid (Ka = 1.74×10^-5) and 0.1 M sodium acetate.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think I just need to add the pKa and the log of the concentration of the acid."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student's initial response shows they recall the Henderson-Hasselbalch equation but omit the base term and misstate the formula. Need to diagnose their understanding of the equation structure.",
+        "state": "Diagnosis",
+        "response": "Can you walk me through how you'd set up the Henderson-Hasselbalch equation for this buffer?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "So the pH is pKa plus log of acid over base?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student inverted the ratio in the log term. Providing a hint about the correct ratio (base/acid) guides them without giving the answer.",
+        "state": "Support",
+        "response": "Remember, the equation uses the ratio of conjugate base to acid. What are the concentrations of each?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "If I use the pKb of the conjugate base, that should work."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly substitutes pKb for pKa. A direct hint to use pKa from given Ka redirects them.",
+        "state": "Support",
+        "response": "The equation uses pKa of the acid, not pKb. Check the given Ka value."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Okay, pKa is 4.76. Base is 0.1 M, acid is 0.2 M. So pH = 4.76 + log(0.2/0.1) = 4.76 + 0.3 = 5.06."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student repeated the ratio inversion despite prior hint. Need to probe their reasoning for numerator choice to see if misconception persists.",
+        "state": "Diagnosis",
+        "response": "How did you decide which concentration goes in the numerator?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh right, it's base over acid. So log(0.1/0.2) = -0.3, pH = 4.76 - 0.3 = 4.46."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student now has correct pH calculation. Asking about buffer capacity encourages synthesis of concept.",
+        "state": "Support",
+        "response": "Good. Now, what does that pH tell you about the buffer's capacity?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "pH near pKa means good buffer capacity. Henderson-Hasselbalch links pH to base/acid ratio."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has demonstrated correct calculation and partial explanation. Now ask them to articulate the core relationship in their own words to consolidate learning.",
+        "state": "Synthesis",
+        "response": "In your own words, what's the key relationship the Henderson-Hasselbalch equation captures?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "pH = pKa + log([base]/[acid]), so pH depends on relative base and acid amounts."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the Henderson-Hasselbalch relationship. Conversation can close warmly.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! Ready for another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "physics",
+    "topic": "Projectile motion basics",
+    "problem": "A ball is thrown horizontally from a 20 m high cliff with an initial speed of 15 m/s. How far from the base does it hit the ground? Use g = 10 m/s² for simplicity.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think we need to find the time it takes to fall 20 m, then multiply by 15 m/s. But I'm not sure if the horizontal speed changes the fall time."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student shows partial understanding but conflates horizontal and vertical motion; need to diagnose vertical motion focus.",
+        "state": "Diagnosis",
+        "response": "Only gravity acts vertically, so the vertical motion is free fall from rest. What determines the time in the air?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "The vertical motion starts with an initial upward velocity of 15 m/s because that's the launch speed."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly assigns initial vertical velocity; need to correct with direct explanation and formula hint.",
+        "state": "Support",
+        "response": "Since the launch is horizontal, the initial vertical velocity is zero. The fall time comes from h = 1/2 g t^2."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "But doesn't the horizontal speed affect how long it stays in the air? Faster horizontal means more time?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student resurfaces horizontal-affects-time misconception; provide direct calculation of time and prompt for distance.",
+        "state": "Support",
+        "response": "The vertical fall time is sqrt(2*20/10) = 2 s. Now you can find the horizontal distance."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Okay, so time is 2 seconds, distance = 15 * 2 = 30 meters."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student computed correctly; now guide to articulate independence principle with direct statement about horizontal velocity.",
+        "state": "Support",
+        "response": "The horizontal velocity stays constant at 15 m/s since there's no horizontal force. Can you explain why the horizontal motion doesn't affect the fall time?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Because vertical and horizontal motions are independent; gravity only acts vertically, so horizontal speed doesn't change fall time."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student gave partial explanation; prompt for general principle without stating it.",
+        "state": "Support",
+        "response": "Good. Now can you put that into a general principle for horizontally launched projectiles?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "So the rule is that horizontal velocity stays constant and vertical motion is free fall from rest."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student nearly has the rule; ask for synthesis in own words.",
+        "state": "Synthesis",
+        "response": "Great. Now, in your own words, summarize the rule for projectile motion when launched horizontally."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "When launched horizontally, the initial vertical velocity is zero, so the time to fall depends only on height and gravity. Horizontal distance is just horizontal speed times that time."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept; wrap up.",
+        "state": "Closing",
+        "response": "Nice work! You've got the concept down. Ready for another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Scaling a recipe",
+    "problem": "You have a recipe for a classic vanilla layer cake that serves 8 people. The recipe calls for: 2 cups (240 g) all‑purpose flour, 1 ½ cups (300 g) granulated sugar, ¾ cup (170 g) unsalted butter, 2  tsp baking powder, ½ tsp salt, 4 large eggs, 1 cup (240 ml) milk, 2 tsp vanilla extract. You need to scale the recipe to serve 12 people. However, leavening agents (baking powder, salt) should scale with the square root of the serving‑size multiplier, eggs must remain whole (you can’t use a fraction of an egg), and the baking time and temperature must be adjusted because you’ll use a larger pan. Determine the scaled ingredient amounts and the new baking parameters.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Okay, so the original serves 8 and we need 12, that's a multiplier of 12 divided by 8, which is 1.5. I'll just multiply each ingredient by 1.5. So flour becomes 3 cups, sugar 2.25 cups, butter 1.125 cups, baking powder 3 tsp, salt 0.75 tsp, eggs 6, milk 1.5 cups, vanilla 3 tsp. For baking, I guess I'll increase the time by 1.5 too."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student applied a straight 1.5× multiplier to every ingredient and to baking time, missing the special rules for leavening, eggs, and pan geometry. Need to diagnose their understanding of why those elements might scale differently.",
+        "state": "Diagnosis",
+        "response": "I see you used a straight 1.5× multiplier for everything. Can you walk me through why you chose to scale the baking powder, salt, and eggs the same way as the flour and sugar? What do you know about how leavening agents or whole eggs behave when a recipe is scaled up?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I thought all ingredients just scale proportionally, so baking powder and salt should also go up by 1.5. Eggs are just another ingredient, so 4 times 1.5 is 6 eggs, that's fine. And baking time should scale with the amount of batter, so 1.5 times longer makes sense."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student explicitly claims linear scaling for leavening and eggs, and linear time scaling. Need to guide them toward the square‑root rule for leavening and the whole‑egg constraint without giving the answer outright.",
+        "state": "Support",
+        "response": "Actually, leavening agents like baking powder and salt don't scale linearly; they scale with the square root of the multiplier because their effect is related to gas production and diffusion. And eggs must stay whole — you can't use half an egg, so you'll need to round to the nearest whole egg and adjust other liquids slightly. How would you apply the square‑root rule to the 1.5 multiplier?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Okay, square root of 1.5 is about 1.22, so baking powder becomes 2 times 1.22 = 2.44 tsp, salt 0.5 times 1.22 = 0.61 tsp. I'll still use 6 eggs because 4 times 1.5 is 6, that's a whole number anyway. For baking time, maybe I should also use the square root factor, so multiply original time by 1.22."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student correctly applied square‑root to leavening but still thinks egg scaling is linear (though it works here) and incorrectly extends square‑root to baking time. Need to hint that baking adjustments depend on pan size and depth, not the same factor.",
+        "state": "Support",
+        "response": "Good catch on the square‑root for leavening. For eggs, since 4×1.5 = 6 exactly, you’re fine this time, but remember the rule is to round to the nearest whole egg after scaling. Now, baking time and temperature aren't scaled by the same factor — they depend on the pan size and batter depth. If you use a larger pan, the batter spreads thinner, so it may bake faster. What do you think happens to the oven temperature and time when you move from an 8‑inch to a 9‑inch pan?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "If the pan is bigger, the batter is thinner, so I'd raise the oven temperature by 1.5 to compensate and cut the baking time by 1.5. That way the cake sets faster. Also, I'll keep the leavening amounts as 2.44 tsp baking powder and 0.61 tsp salt, and use 6 eggs."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student proposes increasing temperature and decreasing time proportionally, which is a common misconception. Need to elicit reasoning about pan area and depth to guide toward correct adjustment.",
+        "state": "Diagnosis",
+        "response": "Interesting idea. Let's think about the geometry: an 8‑inch round pan has area π×4² ≈ 50 in², while a 9‑inch pan has area π×4.5² ≈ 64 in². The batter volume increases by 1.5×, but the depth changes differently. How does that affect heat penetration and what adjustment do professional bakers usually make — temperature up, down, or time only?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "So the area goes up by 1.28, volume by 1.5, so depth increases by 1.5 divided by 1.28 ≈ 1.17. That means the cake is a bit thicker, so it might need a little more time, not less. I'd keep temperature at 350°F and add maybe 10‑15% more time. But I'm not sure about the exact percentage."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student correctly reasoned depth increases slightly but is unsure of the standard adjustment. Provide a hint about the common practice of lowering temperature and extending time.",
+        "state": "Support",
+        "response": "You're on the right track — depth increases slightly, so the cake needs a bit more time. A common rule for scaling up cake pans is to lower the oven temperature by about 25 °F (≈15 °C) to prevent over‑browning, and then extend the baking time by 10‑20 %. Does that align with your depth calculation, and how would you apply it to the original 30‑minute bake at 350 °F?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Alright, final scaled recipe: flour 3 cups (360 g), sugar 2.25 cups (450 g), butter 1.125 cups (255 g), baking powder 2.44 tsp (≈2½ tsp), salt 0.61 tsp (≈½ tsp), 6 eggs, milk 1.5 cups (360 ml), vanilla 3 tsp. Bake at 325 °F for about 35 minutes (30 min ×1.15). I rounded the leavening to the nearest half teaspoon for practicality."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has produced a correct scaled recipe and baking parameters. Now need to move to synthesis by asking them to articulate the underlying principles in their own words.",
+        "state": "Synthesis",
+        "response": "Great work pulling it all together. Now, in your own words, what are the key principles for scaling a recipe like this — especially regarding leavening agents, whole eggs, and adjusting baking time and temperature for a different pan size? Can you explain why each rule matters and how they interact when you change the number of servings?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "So the main idea: most ingredients scale linearly with the serving multiplier, but leavening like baking powder and salt scale with the square root of that multiplier because their chemical action doesn't double linearly. Eggs have to stay whole, so you round after scaling. For baking, you calculate the new pan area, see how depth changes, then usually lower the temperature a bit and add time instead of just scaling time."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the scaling principles in their own words, demonstrating mastery. The conversation can now close warmly.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! You've got a solid handle on recipe scaling. Ready for another one?"
+      }
+    ]
+  }
+]

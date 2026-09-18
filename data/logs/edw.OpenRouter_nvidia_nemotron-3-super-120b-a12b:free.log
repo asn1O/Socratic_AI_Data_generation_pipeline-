@@ -190,3 +190,54 @@
   empty_response: 6
   invalid_json_syntax: 2
   turn_count_out_of_range: 1
+2026-09-18 21:26:17,000 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-18 21:28:42,835 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=6154 turns=14 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/edw-set[3].json
+2026-09-18 21:29:42,838 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-18 21:32:53,537 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=16553 turns=14 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/edw-set[3].json
+2026-09-18 21:33:53,535 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-18 21:36:15,809 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=17470 turns=12 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/edw-set[3].json
+2026-09-18 21:37:15,816 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-18 21:48:31,838 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=23534 turns=18 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/edw-set[3].json
+2026-09-18 21:49:31,841 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-18 21:51:19,779 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=11176 turns=14 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/edw-set[3].json
+2026-09-18 21:52:19,781 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-18 21:54:19,076 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=9352 turns=12 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/edw-set[3].json
+2026-09-18 21:55:19,075 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-18 21:57:05,459 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=10178 turns=14 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/edw-set[4].json
+2026-09-18 21:58:05,462 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-18 22:00:27,518 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=14615 turns=14 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/edw-set[4].json
+2026-09-18 22:01:27,519 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-18 22:03:04,090 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=11470 turns=12 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/edw-set[4].json
+2026-09-18 22:04:04,093 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-18 22:04:05,307 ERROR MODEL_FAILURE provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free error_code=UNEXPECTED_ERROR reason=model call failed or returned no response
+2026-09-18 22:05:05,309 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-18 22:08:25,439 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=19557 turns=14 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/edw-set[4].json
+2026-09-18 22:09:25,421 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-18 22:18:14,751 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=14507 turns=14 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/edw-set[4].json
+2026-09-18 22:19:14,758 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-18 22:20:05,032 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=7151 turns=14 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/edw-set[4].json
+2026-09-18 22:21:05,034 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-18 22:27:56,849 INFO REJECTED_RESPONSE_SAVED provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free path=data/rejected_responses/edw-OpenRouter_nvidia_nemotron-3-super-120b-a12b:free.txt
+2026-09-18 22:27:56,849 ERROR JSON_INVALID provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free reason=conversation payload failed structural validation
+2026-09-18 22:28:56,851 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-18 22:28:57,448 ERROR MODEL_FAILURE provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free error_code=UNEXPECTED_ERROR reason=model call failed or returned no response
+2026-09-18 22:29:57,447 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-18 22:34:11,857 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=25243 turns=12 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/edw-set[4].json
+2026-09-18 22:35:11,860 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-18 22:39:09,559 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=23002 turns=18 path=data/OpenRouter_nvidia_nemotron-3-super-120b-a12b:free/edw-set[4].json
+2026-09-18 22:40:09,566 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-09-18 22:42:18,883 INFO REJECTED_RESPONSE_SAVED provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free path=data/rejected_responses/edw-OpenRouter_nvidia_nemotron-3-super-120b-a12b:free.txt
+2026-09-18 22:42:18,883 ERROR JSON_INVALID provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free reason=invalid JSON: Expecting ',' delimiter
+2026-09-18 22:43:18,891 INFO MODEL_SUMMARY
+  provider_model: OpenRouter / nvidia/nemotron-3-super-120b-a12b:free
+  attempts: 18
+  saved: 14
+  failed: 4
+  accept_rate: 77.78%
+  average_tokens: 14997.29
+  turn_range: 12-18
+  expired: False
+  failure_categories:
+  empty_response: 2
+  invalid_json_syntax: 1
+  other: 1

@@ -476,3 +476,178 @@
     }
   ]
 }
+
+
+{
+  "problem": "Balance the following chemical equation: Fe2(SO4)3 + NaOH → Fe(OH)3 + Na2SO4",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I started by balancing Fe: two Fe in Fe2(SO4)3, so I put 2 in front of Fe(OH)3. For Na, I saw NaOH and thought I needed 2 NaOH to match the 2 Na in one Na2SO4, so I wrote 2 NaOH. Then I noted three sulfate groups on the left, so I wrote three SO4 on the right, meaning three Na2SO4. That gave 6 Na on the right, so I changed NaOH to 6. I checked H and O: left H from NaOH (6), O from sulfates (12) plus O from NaOH (6) =18 O; right H from Fe(OH)3 (6), O from OH (6) plus O from sulfates (12) =18 O. But I’m unsure if I should count the OH oxygens separately from the sulfates."
+    },
+    {
+      "speaker": "tutor",
+      "reasoning": "The student correctly balanced iron but made an arbitrary initial choice for sodium hydroxide and expressed uncertainty about whether hydroxide oxygens should be counted separately from sulfate oxygens, indicating they are not yet treating the sulfate group as a unit.",
+      "state": "Diagnosis",
+      "response": "I see you balanced iron by placing a 2 in front of Fe(OH)3 and tried to match sodium with an initial guess of 2 NaOH, but you also wondered whether hydroxide oxygens should be counted separately from sulfate oxygens. Let's explore how treating the sulfate group as a single unit might simplify the counting. What would happen to the sodium and oxygen counts if you treated each sulfate group as a single unit instead of splitting its sulfur and oxygen?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "I followed your hint and treated each sulfate as a unit, so I kept Fe2(SO4)3 as is and wrote three Na2SO4 for the sulfates. That gave me six Na on the right, so I put six NaOH on the left. I then thought each NaOH contributes two hydrogen atoms, giving twelve H on the left, while each Fe(OH)3 only gives three H, so with two Fe(OH)3 I have six H, which is short. To fix the hydrogen imbalance, I doubled the Fe(OH)3 coefficient to four, giving twelve H on the right. Now I have Fe2(SO4)3 + 6 NaOH → 4 Fe(OH)3 + 3 Na2SO4."
+    },
+    {
+      "speaker": "tutor",
+      "reasoning": "The student correctly kept sulfate as a unit and derived six NaOH, but mistakenly believed each NaOH supplies two hydrogen atoms, leading them to consider doubling the Fe(OH)3 coefficient. This shows a misunderstanding of hydrogen contribution from NaOH and an unnecessary adjustment to the iron‑hydroxide coefficient.",
+      "state": "Support",
+      "response": "Consider that each NaOH molecule provides only one hydrogen atom—how would that affect the total hydrogen count on the left side compared to the hydrogen contributed by two Fe(OH)3 molecules on the right, and would you need to adjust the coefficient of Fe(OH)3 to balance hydrogen, or would the existing six NaOH already give the correct six H to match the six H from the Fe(OH)3 groups?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "I realized each NaOH gives one H, so six NaOH give six H left, matching the six H from two Fe(OH)3. Oxygen also balances: left O from NaOH (6) plus sulfates (12) =18; right O from Fe(OH)3 (6) plus sulfates (12) =18. But I’m uneasy and think I should add an extra Na2SO4 to balance oxygen, which would give four Na2SO4, eight Na, and require eight NaOH, throwing off hydrogen again."
+    },
+    {
+      "speaker": "tutor",
+      "reasoning": "The student correctly balanced hydrogen but then proposed adding an extra Na2SO4 to fix oxygen, revealing they are still treating the sulfate’s oxygen as changeable rather than recognizing that the sulfate group’s oxygen is fixed when the unit is kept intact.",
+      "state": "Support",
+      "response": "If you treat the sulfate group as a single unit, how does changing its coefficient affect the sodium count on both sides of the equation, and what would happen to the overall sodium balance if you added an extra Na2SO4, thereby increasing the number of sodium atoms on the right and requiring a different number of NaOH on the left to keep sodium balanced?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Treating sulfate as a unit, I kept Fe2(SO4)3 unchanged and wrote three Na2SO4 for the sulfates, giving six Na on the right, so I used six NaOH on the left. Iron is balanced with 2 Fe(OH)3. Hydrogen: six NaOH give six H, matching the six H from two Fe(OH)3. Oxygen: sulfates give 12 O each side; NaOH adds 6 O left; Fe(OH)3 adds 6 O right; total 18 O each side. The balanced equation is Fe2(SO4)3 + 6 NaOH → 2 Fe(OH)3 + 3 Na2SO4."
+    },
+    {
+      "speaker": "tutor",
+      "reasoning": "The student has arrived at the correct balanced equation and verified each atom type, showing readiness to articulate the general strategy they used, especially regarding the polyatomic sulfate ion and the order of balancing elements.",
+      "state": "Support",
+      "response": "Can you describe the overall strategy you used to balance this equation, especially how you handled the polyatomic sulfate ion, why you chose to balance certain elements first, which steps simplified the problem, which checks you performed to verify the final coefficients, and how you confirmed that the coefficients are the smallest whole‑number set?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "I started by balancing the iron atoms, putting a 2 in front of Fe(OH)3. Then I treated each sulfate group as a single unit, which told me I needed three Na2SO4 and therefore six NaOH to match the sodium. After setting those coefficients, I checked that hydrogen and oxygen balanced automatically, confirming the equation Fe2(SO4)3 + 6 NaOH → 2 Fe(OH)3 + 3 Na2SO4."
+    },
+    {
+      "speaker": "tutor",
+      "reasoning": "The student has described their balancing steps but has not yet articulated the overarching rule or principle they applied, particularly the treatment of polyatomic ions as units and the sequencing of element balancing.",
+      "state": "Synthesis",
+      "response": "You’ve clearly walked through the steps of balancing this equation, showing how you treated the sulfate group as a unit and matched sodium and hydroxide counts. Now, in your own words, what is the general rule or principle you applied to balance this equation, particularly regarding polyatomic ions and the order in which you balanced elements? Please explain why those choices simplified the problem and how you verified the final coefficients."
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "The rule I used is to first identify any polyatomic ion that appears unchanged on both sides of the equation and treat it as a single unit during balancing; this reduces the number of individual atoms you need to track. Then balance the remaining elements one at a time, starting with the most complex molecule, using coefficients to match counts, and finally verify that each atom type has the same total on both sides, adjusting to the smallest set of whole‑number coefficients if needed."
+    },
+    {
+      "speaker": "tutor",
+      "reasoning": "The student has successfully explained the general rule for balancing equations with polyatomic ions in their own words, indicating a solid grasp of the concept.",
+      "state": "Closing",
+      "response": "Excellent work! You’ve clearly grasped how to balance equations with polyatomic ions. Ready for another challenge?"
+    }
+  ]
+}
+
+
+{
+  "problem": "Balance the chemical equation: Al2(SO4)3 + Ca(OH)2 → Al(OH)3 + CaSO4",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I'll start by balancing aluminum: put 2 Al(OH)3 on the right."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "Student showed partial focus on Al only, need to explore their overall approach.",
+      "state": "Diagnosis",
+      "response": "How did you decide to put 2 Al(OH)3 on the right?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Because there are 2 Al atoms on the left, so I need 2 Al(OH)3 on the right to balance Al."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "Student balanced Al; need to see how they handle sulfate groups.",
+      "state": "Support",
+      "response": "Let's check the sulfate groups now; how many are on each side?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Left has 3 sulfate, so I'll put 3 O on the right to balance sulfate."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "Student made an error treating sulfate as just oxygen; need to hint about its polyatomic nature.",
+      "state": "Support",
+      "response": "What is the formula for the sulfate ion?"
+    },
+    {
+      "turn": 7,
+      "student": "text": "Three sulfate groups give 3 sulfur atoms and 12 oxygen atoms."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "Student corrected sulfate count; now need to see how they handle calcium.",
+      "state": "Support",
+      "response": "Now look at calcium; where does it appear on each side?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "I'll put 3 CaSO4 on the right to get 3 calcium and three sulfate groups."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "Student added calcium sulfate; now need to address calcium hydroxide.",
+      "state": "Support",
+      "response": "How many calcium ions do we need to balance the right side?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "I'll put 3 Ca(OH)2 on the left, which gives 3 oxygen and 3 hydrogen."
+    },
+    {
+      "turn": 12,
+      "speaker": "tutor",
+      "reasoning": "Student miscounted O and H in hydroxide; need to hint about each hydroxide group.",
+      "state": "Support",
+      "response": "Consider the hydroxide groups; how many O and H does each Ca(OH)2 provide?"
+    },
+    {
+      "turn": 13,
+      "speaker": "student",
+      "text": "Each Ca(OH)2 has 2 O and 2 H, so three of them give 6 O and 6 H."
+    },
+    {
+      "turn": 14,
+      "speaker": "tutor",
+      "reasoning": "Student now has correct counts for all parts; ready to articulate the principle.",
+      "state": "Synthesis",
+      "response": "In your own words, how do you treat groups like sulfate or hydroxide when balancing?"
+    },
+    {
+      "turn": 15,
+      "speaker": "student",
+      "text": "I treat sulfate and hydroxide as single units, balancing them as whole ions rather than splitting atoms."
+    },
+    {
+      "turn": 16,
+      "speaker": "tutor",
+      "reasoning": "Student has correctly explained the concept; conversation can close.",
+      "state": "Closing",
+      "response": "Great work! Want to try another problem?"
+    }
+  ]
+}

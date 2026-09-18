@@ -1126,5 +1126,290 @@
         "response": "Spot on! You've got it. Ready for another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Sampling bias",
+    "problem": "A city wants to estimate the average daily commute time for all its residents. To do this, they conduct a survey by interviewing people at the city's largest train station between 7:00 AM and 9:00 AM on a Tuesday. Is this a reliable way to find the average commute time for the whole city? Why or why not?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the survey is okay because it's a major station, so they get a lot of people."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is equating sample size with representativeness; I need to elicit their understanding of the target population first.",
+        "state": "Diagnosis",
+        "response": "What exactly are we trying to find out from this survey, and who does that target group include?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "We want the average commute for all residents. The station people are definitely residents, so that works."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student sees that the sample is part of the population but doesn't see the selection gap; I'll probe the specific nature of the sample.",
+        "state": "Diagnosis",
+        "response": "If we only talk to people at that specific station during those hours, who specifically are we talking to, and who are we not?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "People who take the train to work in the morning. I'm not really sure why that's a problem though."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is stuck on the logic of the gap; I will provide a minimal hint by suggesting other commute methods.",
+        "state": "Support",
+        "response": "If we consider people who commute by car, bike, or work from home, would they be represented in this group?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "No, they wouldn't be there. But the station is huge, so doesn't that make up for the missing people?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is still clinging to the 'major station' size as a fix; I need to decouple quantity from diversity.",
+        "state": "Support",
+        "response": "Does the fact that the station is 'major' and has many people change whether certain types of commuters are missing entirely?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, I see. Even with a lot of people, we're still only getting train users. So the average might be wrong."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student recognizes the flaw; now I need them to connect the biased sample to the resulting data error.",
+        "state": "Diagnosis",
+        "response": "Why might the average commute time for train users be significantly different from the average for everyone in the city?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Maybe train rides take longer or shorter than driving. So the result is skewed because we ignored others."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has reasoned through the problem; now I want them to articulate the general principle of sampling bias.",
+        "state": "Synthesis",
+        "response": "Based on this whole scenario, how would you describe what happened to the sample and how it affects the final result?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "It's when the people you pick don't represent the whole group because some types of people are more likely to be chosen than others. That's sampling bias."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the concept of sampling bias in their own words.",
+        "state": "Closing",
+        "response": "Spot on! You've nailed the concept perfectly. Ready for another challenge?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "chemistry",
+    "topic": "Periodic table trends",
+    "problem": "Which element has a larger atomic radius: Lithium (Li) or Potassium (K)?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think it's Lithium because it's first, but I'm not sure."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is guessing based on sequence. I need to see if they recognize the group relationship.",
+        "state": "Diagnosis",
+        "response": "Where are these two elements located on the periodic table?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "They are both in the first column."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student knows they are in the same group. Now I'll check their understanding of energy levels.",
+        "state": "Support",
+        "response": "What happens to the number of energy levels as you move down a group?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I don't really get what that means."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student is confused about the term. I will provide a hint about the effect of shells on size.",
+        "state": "Support",
+        "response": "Does adding more electron shells make an atom larger or smaller?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Larger, I guess?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student understands the relationship between shells and size. Now I'll guide them to apply it.",
+        "state": "Support",
+        "response": "Which of these two elements has more energy levels?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Potassium is further down, so it has more. So it's larger?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has reached the correct answer. I now need them to articulate the general rule.",
+        "state": "Synthesis",
+        "response": "In your own words, what is the general rule for atomic size down a group?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "As you go down a group, atoms get bigger because they add more shells."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly synthesized the concept. Ending the session.",
+        "state": "Closing",
+        "response": "Spot on! Ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "biology",
+    "topic": "Photosynthesis",
+    "problem": "If a plant is kept in the light but provided with no carbon dioxide, why does the light-dependent stage of photosynthesis eventually stop, even though light is still available?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think it stops because they need CO2 to make the glucose, and if they can't make glucose, the whole plant just shuts down."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student understands CO2 is needed for the end product but doesn't see the link between the two stages. I need to determine if they know where CO2 actually enters the process.",
+        "state": "Diagnosis",
+        "response": "That's a start. But let's look closer at the two stages. Do the light-dependent reactions actually use CO2 directly to function?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Yeah, I think they do. CO2 is what absorbs the light energy, right?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has a fundamental misconception about what absorbs light. I'll correct this and pivot to the connection between the light reactions and the Calvin cycle.",
+        "state": "Support",
+        "response": "Actually, chlorophyll absorbs the light. CO2 is used later in the Calvin cycle. If the Calvin cycle stops because there's no CO2, what happens to the ATP and NADPH it usually consumes?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I don't really get what that means. What are ATP and NADPH doing there?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is lost on the role of energy carriers. I will provide a simplified analogy (batteries) to help them visualize the relationship between the two stages.",
+        "state": "Support",
+        "response": "They are like batteries charged by the light reactions and used by the Calvin cycle. If the cycle stops, these 'batteries' stay full. Why might that be a problem for the light reactions?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Maybe they just overflow? Or maybe the Calvin cycle is what gives the light reactions the energy to start?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is confused about the direction of energy flow. I'll clarify that energy flows from light reactions to the Calvin cycle and prompt them to think about the 'empty' carriers.",
+        "state": "Support",
+        "response": "It's actually the other way around; the light reactions provide the energy. Think about the empty 'batteries' (ADP and NADP+). Where do those come from?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "They come from the light reactions... oh, wait. If the Calvin cycle isn't running, the plant just keeps making more ATP because the light is still there, right?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student is ignoring the finite supply of carriers, which is the 'trap' in this problem. I'll ask a targeted question about the supply of empty carriers.",
+        "state": "Support",
+        "response": "If they are all converted to ATP and NADPH and never used, what happens to the supply of ADP and NADP+?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Oh! If the Calvin cycle doesn't use them, we run out of the empty ones. And if there's no NADP+, the light reactions can't keep moving electrons."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has reached the correct conclusion. Now I need them to synthesize the entire multi-step chain of logic to ensure internalization.",
+        "state": "Synthesis",
+        "response": "In your own words, can you explain the whole chain of why no CO2 eventually stops the light reactions?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "So, no CO2 means the Calvin cycle stops. This means ATP and NADPH aren't used, so they don't turn back into ADP and NADP+. Since the light reactions need those empty versions to work, they eventually run out and stop too."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the complex interaction between the two stages of photosynthesis.",
+        "state": "Closing",
+        "response": "Spot on! You nailed the connection between the two stages. Great job today!"
+      }
+    ]
   }
 ]

@@ -116,3 +116,21 @@
   expired: True
   failure_categories:
   empty_response: 4
+2026-09-18 21:26:16,999 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-18 21:41:26,236 ERROR MODEL_FAILURE provider=NVIDIA model=moonshotai/kimi-k3 error_code=HTTP_504 reason=model call failed or returned no response
+2026-09-18 21:42:26,239 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-18 21:57:33,954 ERROR MODEL_FAILURE provider=NVIDIA model=moonshotai/kimi-k3 error_code=HTTP_504 reason=model call failed or returned no response
+2026-09-18 21:58:33,957 INFO MODEL_START provider=NVIDIA model=moonshotai/kimi-k3
+2026-09-18 22:13:41,631 ERROR MODEL_FAILURE provider=NVIDIA model=moonshotai/kimi-k3 error_code=HTTP_504 reason=model call failed or returned no response
+2026-09-18 22:13:41,631 ERROR MODEL_EXPIRED provider=NVIDIA model=moonshotai/kimi-k3 reason=three consecutive API failures
+2026-09-18 22:14:41,639 INFO MODEL_SUMMARY
+  provider_model: NVIDIA / moonshotai/kimi-k3
+  attempts: 3
+  saved: 0
+  failed: 3
+  accept_rate: 0.00%
+  average_tokens: 0.00
+  turn_range: -
+  expired: True
+  failure_categories:
+  empty_response: 3

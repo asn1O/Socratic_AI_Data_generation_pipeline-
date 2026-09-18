@@ -889,5 +889,599 @@
         "response": "Nice, that's exactly it! Want to try another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "physics",
+    "topic": "Buoyancy and density",
+    "problem": "A block of wood floats in fresh water with exactly one-third of its volume above the surface. What is the density of the wood? (Take density of water as 1000 kg/m³.)",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know it floats, so its density is less than water, but I can't get the exact number."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student recognizes floating implies lower density but lacks quantitative link to submerged fraction.",
+        "state": "Diagnosis",
+        "response": "What does the fraction of volume above water tell you about the submerged part?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "If one-third is above, then two-thirds is under water."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified submerged fraction; need to connect to density via weight balance.",
+        "state": "Support",
+        "response": "The weight of the displaced water equals the weight of the wood. How does that relate to density?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "So the displaced water's weight equals the wood's weight. The displaced water's weight is its volume times water density times g."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student linked weight equality but hasn't expressed density relation; prompt to substitute submerged volume.",
+        "state": "Support",
+        "response": "The displaced volume is the submerged fraction of the wood's volume. How can you write that?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Displaced volume = (2/3) × V_wood. So weight of displaced water = (2/3) V_wood × ρ_water × g."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student has expression for buoyant weight; now equate to wood's weight to solve for density.",
+        "state": "Support",
+        "response": "Set that equal to the wood's weight (V_wood × ρ_wood × g) and solve for ρ_wood."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "(2/3) V_wood × ρ_water × g = V_wood × ρ_wood × g. Cancel V_wood and g gives ρ_wood = (2/3) ρ_water."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student derived correct formula; need them to articulate the rule in own words.",
+        "state": "Synthesis",
+        "response": "In your own words, explain why the object's density equals the submerged fraction times the fluid's density."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Because the buoyant force equals the weight of fluid displaced, which depends on submerged volume; equating it to the object's weight gives density ratio equal to submerged fraction."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student gave a correct explanation; confirm understanding and prepare to close.",
+        "state": "Support",
+        "response": "That's exactly right. Does that make sense now?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Yes, the density of the wood is two‑thirds that of water, so about 667 kg/m³."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept and solved the problem; conversation concludes.",
+        "state": "Closing",
+        "response": "Great job! Want to try another similar problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Clock and calendar puzzles",
+    "problem": "January 1, 2000 was a Saturday. What day of the week was January 1, 2100?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I need to find the number of days between the dates and then see what weekday it lands on."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student wants overall plan but hasn't detailed steps; need to elicit approach.",
+        "state": "Diagnosis",
+        "response": "What's your first step to get the total days?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think there are 24 leap days between the dates."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student gave an incorrect leap year count, likely forgetting the century rule and that 2000's leap day counts.",
+        "state": "Support",
+        "response": "2000 is a leap year; its Feb 29 counts. Century years not leap unless divisible by 400."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I think 36,500 is divisible by 7."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student claimed 36,500 is divisible by 7, false; need to correct via modular arithmetic.",
+        "state": "Support",
+        "response": "365 mod 7 equals 1, so 36,500 mod 7 equals 100 mod 7 equals 2."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "So I should add the remainder from leap days as well?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student is ready to combine remainders; give a hint on how to do it.",
+        "state": "Support",
+        "response": "Find each remainder modulo 7, then add them and reduce modulo 7."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Base remainder 2, leap remainder 4, sum 6."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has the correct offset; prompt them to apply to starting weekday.",
+        "state": "Support",
+        "response": "Add that offset to the starting weekday Saturday."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Saturday plus 6 days is Friday."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student gave answer; now ask them to explain reasoning in their own words to synthesize.",
+        "state": "Diagnosis",
+        "response": "Can you walk me through your reasoning in your own words?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "We found 36,525 days total; 36,525 mod 7 equals 6, so Saturday advances six days to Friday."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept; conversation wraps up.",
+        "state": "Closing",
+        "response": "Great job! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Simple vs compound interest",
+    "problem": "Suppose you invest $1,000 at an annual interest rate of 5%. Compare the amount you would have after 3 years if the interest is simple versus if it is compounded annually.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "So, for simple interest, I started with the principal of $1,000 and multiplied it by the annual rate of 5% to get $50 interest per year, then I multiplied that by 3 years to get $150 total interest, and added that to the principal to get $1,150. I haven't figured out the compound interest part yet."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student correctly computed the simple interest amount but has not yet addressed compound interest, showing they understand the basic linear calculation but need to articulate their approach to the exponential case.",
+        "state": "Diagnosis",
+        "response": "Could you walk me through how you would compute the amount after three years if the interest is compounded annually, describing each step you would take or any formula you might consider using? I'm interested in hearing your thought process, whether you prefer to iterate year by year or to apply a direct expression, and what assumptions you're making about the compounding frequency."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I’d start with the $1,000 and add 5% each year: after the first year it’s $1,050, after the second year I multiply $1,050 by 1.05 to get $1,102.50, and after the third year I multiply $1,102.50 by 1.05 to get $1,157.625, which is the final amount with compound interest."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student successfully used iterative multiplication to find the compound amount, indicating they grasp the process but haven't yet connected it to a compact exponential expression.",
+        "state": "Support",
+        "response": "When you repeatedly apply the 5% increase each year, what mathematical operation are you performing on the balance, and how could you represent doing that operation three times in a single expression using exponents? Think about how multiplication by 1.05 each year relates to raising a factor to a power, and what that power would be."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Each year I’m multiplying the current balance by 1.05, so after three years that’s 1.05 multiplied by itself three times, which is 1.05 to the third power. Therefore the amount is $1,000 times 1.05 cubed, giving $1,157.625. For simple interest, I’d just multiply the principal by one plus the rate times time, which yields $1,150."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has expressed both the iterative and formulaic forms for compound interest and recalled the simple interest expression, showing they can compute both but may not yet articulate the conceptual difference in yearly interest accrual.",
+        "state": "Support",
+        "response": "If you look at the interest earned each year under simple versus compound interest, how does the amount of interest change from year to year in each case, and what does that tell you about the overall growth? Consider whether the interest increments are constant or increasing, and how that relates to linear versus exponential functions."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "With simple interest, the interest each year stays the same because it’s always calculated on the original $1,000, so you get $50 every year. With compound interest, the interest each year grows because you’re applying the rate to a larger balance, so the interest amounts are $50, then $52.50, then $55.125, increasing each year."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has clearly distinguished how interest accrues each year under the two schemes, indicating they grasp the mechanistic difference; next we can guide them to express these patterns algebraically.",
+        "state": "Support",
+        "response": "If you were to write a general formula for the total amount after t years for simple interest and another for compound interest, what would those expressions look like in terms of the principal P, rate r, and time t? Assume the rate is expressed as a decimal, and recall that simple interest adds a fixed proportion of the principal each period."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "For simple interest, you calculate the total amount by taking the principal and adding the product of the principal, the interest rate, and the number of years. For compound interest, you calculate the total amount by taking the principal, multiplying it by one plus the interest rate, and then raising that result to the power of the number of years."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has articulated both interest formulas correctly, showing they can compute each; now we need them to synthesize the underlying principle that compound interest generates interest on previously earned interest, leading to exponential growth.",
+        "state": "Synthesis",
+        "response": "In your own words, explain why compound interest results in a larger final amount than simple interest when the rate and time are the same, focusing on how interest is calculated each year. Think about whether the interest each year is based on the original principal only or on the growing balance, and how that affects the total over multiple years."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "With compound interest, you earn interest not just on the original amount you put in, but also on the interest that has already been added to your account. Each year the interest is calculated on a larger balance, so the interest you earn keeps increasing, while with simple interest the interest each year stays the same because it’s always based only on the initial principal."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the concept in their own words, demonstrating mastery of the distinction between simple and compound interest.",
+        "state": "Closing",
+        "response": "Great job explaining the difference between simple and compound interest in your own words; you clearly see how earning interest on interest leads to faster growth. You’ve grasped the key idea that simple interest grows linearly while compound interest grows exponentially, and you can articulate that distinction clearly. Would you like to try another similar problem to reinforce what we just discussed?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Basic probability distributions",
+    "problem": "A fair coin is flipped 10 times. What is the probability of getting exactly 6 heads?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the probability is just (0.5)^6 because we need six heads and each has a 0.5 chance."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student focused only on the probability of heads, ignoring combinations and tails. This calls for a Diagnosis to uncover their reasoning.",
+        "state": "Diagnosis",
+        "response": "Can you explain how you arrived at that answer?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I multiplied 0.5 six times because we need six heads for the event."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student still hasn't considered the tails or the number of arrangements. Another Diagnosis question will probe what else might affect the probability.",
+        "state": "Diagnosis",
+        "response": "What else might affect the probability besides the heads?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I guess the tails also matter, but I'm not sure how they change the calculation."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is uncertain about tails. A minimal hint about counting arrangements is appropriate to guide them toward combinations.",
+        "state": "Support",
+        "response": "Think about how many different ways you could arrange six heads among ten flips. What does that look like?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, I need to count the ways, so it's (10 choose 6) times (0.5)^6."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student included combinations but omitted the tails probability. A Support turn asking about the probability of a specific sequence will remind them to consider each flip's outcome.",
+        "state": "Support",
+        "response": "We know each flip is independent with probability 0.5 for heads. What is the probability of any particular sequence of ten flips?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Each specific sequence has probability (0.5)^10."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student now knows each sequence probability but may still forget to apply it to all flips. A hint about the exponent reflecting total flips will guide them to include tails.",
+        "state": "Support",
+        "response": "Remember each sequence includes both heads and tails, so the exponent on 0.5 should reflect total flips. What should the exponent be?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I think it's (10 choose 6) times (0.5)^6."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student omitted tails again, showing a resurfacing of the earlier misconception. A Support turn asking them to write the full expression will make their thinking explicit.",
+        "state": "Support",
+        "response": "Write out the expression for the probability using the number of ways and the probability of each sequence."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "(10 choose 6)*(0.5)^6."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student's expression still lacks the tails factor. A reflective yes/no question prompts self‑correction without giving the answer.",
+        "state": "Support",
+        "response": "Does your expression account for both heads and tails?"
+      },
+      {
+        "turn": 15,
+        "speaker": "student",
+        "text": "No, it only accounts for heads; I need to include tails, so it should be (10 choose 6) times (0.5)^10."
+      },
+      {
+        "turn": 16,
+        "speaker": "tutor",
+        "reasoning": "The student has produced the correct expression. A Synthesis turn asks them to articulate the rule in their own words to consolidate understanding.",
+        "state": "Synthesis",
+        "response": "You've derived the correct expression. In your own words, describe the steps to find this probability."
+      },
+      {
+        "turn": 17,
+        "speaker": "student",
+        "text": "First, count the number of ways to choose which flips are heads using combinations. Then multiply by the probability of any specific sequence of ten flips, which is (0.5)^10, because each flip is independent."
+      },
+      {
+        "turn": 18,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the concept in their own words, indicating mastery of the topic.",
+        "state": "Closing",
+        "response": "Nice, you've got it! Ready for the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "history_and_social_studies",
+    "topic": "Cause-and-effect in historical events",
+    "problem": "Identify a direct cause and its effect for the United States' entry into World War I.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the US joined World War I because of the Pearl Harbor attack, since that seems like a big event that would pull a country into war."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student gave an incorrect cause (Pearl Harbor) showing confusion about timeline; need to elicit their thinking to diagnose misconception.",
+        "state": "Diagnosis",
+        "response": "Can you share what year the Pearl Harbor attack occurred and what year the United States entered World War I?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, I just realized Pearl Harbor happened in 1941, while the US entered WWI in 1917, so that doesn’t line up; I’m not sure what the real cause is."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student recognizes the mismatch but hasn't offered a correct cause; ready for a hint to narrow possibilities.",
+        "state": "Support",
+        "response": "What specific event in early 1917 involved a secret message from Germany to Mexico?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Was it the Zimmermann Telegram? I remember hearing about a secret message from Germany to Mexico around 1917 that tried to get them to join the war."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student identified the correct potential cause; need to check if they understand how it led to war.",
+        "state": "Support",
+        "response": "How did the contents of that telegram influence American public opinion and lead to a declaration of war?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "The telegram proposed that Mexico ally with Germany and attack the United States, which angered the American public and pushed Congress to declare war on Germany."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student explained the link correctly; to see if they overgeneralize or add inaccurate detail, ask for clarification about Mexico's actual response.",
+        "state": "Diagnosis",
+        "response": "Did Mexico actually agree to attack the United States after receiving the Zimmermann Telegram?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I think Mexico actually agreed to the plan, sent troops to attack the US, which is why we declared war."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student asserted an incorrect effect (Mexico attacking); need to guide them to recall historical outcome without giving answer.",
+        "state": "Support",
+        "response": "According to historical records, what was Mexico's actual response to the Zimmermann Telegram?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "But I recall now that Mexico declined the offer and never attacked; instead, the US used the telegram as propaganda to build support for entering the war."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student now has correct cause-effect details; ready to articulate the general principle.",
+        "state": "Synthesis",
+        "response": "In your own words, what defines a cause and an effect in a historical event?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "A cause is an event that happens before and helps bring about another event; the effect is the result that follows from that cause."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept; conversation can end with a brief warm wrap-up.",
+        "state": "Closing",
+        "response": "Great job explaining cause and effect! You’ve really grasped how to link events. Would you like to try another historical scenario?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Correlation vs causation",
+    "problem": "A researcher observes that in a city, months with higher ice cream sales also have higher numbers of drowning incidents. Based on this observation, can we conclude that eating ice cream causes drowning? Explain your reasoning.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think eating ice cream causes drowning because when people buy ice cream they go to the beach and swim more, leading to more drownings."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student asserts a causal link based on correlation, showing a common misconception. Need to elicit their reasoning to understand their thinking.",
+        "state": "Diagnosis",
+        "response": "What makes you think ice cream sales lead to more drowning incidents?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I guess when it's hot, people buy ice cream and also go swimming, so both happen together."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student notes both increase together in hot weather but hasn't identified a third variable. Prompt them to consider other seasonal factors.",
+        "state": "Support",
+        "response": "Besides ice cream sales, what else tends to be high during those hot months?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Temperature is higher."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student identified temperature as a seasonal factor. Need to explore how they think temperature connects to the variables.",
+        "state": "Diagnosis",
+        "response": "How does going to the beach relate to drowning incidents?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "More people swimming means there's a higher chance of accidents and drowning."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student linked beach trips to drowning but hasn't tied temperature to both ice cream and beach trips. Guide them to consider temperature as a common cause.",
+        "state": "Support",
+        "response": "You noticed more beach trips in summer; what other seasonal factor could be influencing both ice cream sales and beach trips?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The temperature is higher in summer, which makes people want ice cream and also go to the beach."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student now sees temperature as a common driver of both ice cream sales and beach trips. Prompt them to articulate why correlation doesn't imply causation.",
+        "state": "Synthesis",
+        "response": "In your own words, why can't we conclude ice cream causes drowning from this correlation?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Because both ice cream sales and drowning increase when it's hot, but the heat itself is the underlying factor causing both, so the correlation doesn't mean ice cream directly leads to drowning."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained that correlation does not imply causation due to a confounding variable. Ready to wrap up.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! Want to try another one?"
+      }
+    ]
   }
 ]

@@ -1080,3 +1080,281 @@
     }
   ]
 }
+
+
+{
+  "problem": "Look at the provided line graph showing a tech company's quarterly active user growth over two years. The vertical axis starts at 1,000,000 users and increases by increments of 500,000, while the horizontal axis tracks the eight quarters. Between Q3 and Q4 of the second year, the line goes up very sharply, appearing nearly vertical compared to previous quarters. Based on this visual slope, the company's marketing team claims that user acquisition velocity more than quadrupled in that final quarter. Is this conclusion about the acquisition velocity valid, and what specific graphical feature supports or undermines it?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I think the marketing team's claim is totally valid because the line is practically shooting straight up in Q4. When a slope is that steep, it visually proves that the actual number of new users gained in that quarter was way higher than any previous period, so the velocity definitely quadrupled."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student has fallen for a common visual trap regarding slope steepness, asserting an incorrect claim about constant scale. Since socratic_level is low, I will directly point out a structural issue with the graph's layout before asking them to look closer.",
+      "state": "Support",
+      "response": "That steep visual climb is definitely eye-catching, but let's remember that graphical slopes can sometimes be exaggerated depending on how the axes are formatted. Take a careful look at the scaling and intervals on both the vertical and horizontal axes—is there any chance the grid dimensions changed recently?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Oh, wait, looking closely at the grid, the horizontal axis compresses the earlier quarters into wider spacing, and the vertical axis actually skips a few numbers right before Q4 to save space. That's why the jump looks so massive visually."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student noticed some axis features, but their explanation for why the line is steep is still mixed up with a mistaken claim about axis values changing. I need to diagnose their specific reading of the data points themselves.",
+      "state": "Diagnosis",
+      "response": "You are noticing some important layout details, but let's check the actual coordinate values plotted for Q3 and Q4 rather than just the visual grid lines. Exactly what numerical value does the data point start at in Q3, and what does it reach in Q4?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Ah, okay, looking at the grid lines again, the axis scale didn't actually break; it's uniform at 500,000 increments. In Q3 it's sitting right at 3,000,000 users, and in Q4 it goes up to 4,500,000 users. So the absolute growth is 1,500,000 new users."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student correctly read the absolute numbers for Q3 and Q4, resolving their previous axis confusion. Now I want to support them in connecting this absolute growth figure back to the marketing team's claim about quadrupling acquisition velocity.",
+      "state": "Support",
+      "response": "Spot on, that's a growth of 1.5 million users in Q4. Now, if earlier quarters averaged around 1.2 million new users each, let's test that marketing claim. If velocity quadrupled, we would expect Q4 growth to be four times a baseline quarter. Does a 1.5 million increase support a quadrupling?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Wait, if a normal quarter is 1.2 million, quadrupling it would mean getting almost 4.8 million new users in a single quarter. Since Q4 only added 1.5 million, the real numerical growth is only slightly higher than usual, not four times greater."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student correctly evaluated the math against the claim, showing strong analytical reasoning. I should prompt them to synthesize the discrepancy between the misleading visual steepness and the actual numerical reality.",
+      "state": "Synthesis",
+      "response": "You've got the numbers sorted out now. To tie this all together, how would you explain why relying solely on the steepness of a graph's line led the marketing team to a false conclusion about user acquisition velocity?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "You can't just judge growth by how steep a line looks because visual angles can be deceptive. Even though the line looks like it's shooting straight up, the actual numerical difference in users was only a modest bump, so the slope exaggerated the real-world performance."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "The student has successfully explained the core concept in their own words, demonstrating a complete understanding of how to interpret graph slopes versus underlying data values. The conversation is successfully concluded.",
+      "state": "Closing",
+      "response": "Nailed it! You've got a great grasp on spotting misleading graph visuals. Excellent work today—let me know whenever you're ready to tackle another one!"
+    }
+  ]
+}
+
+
+{
+  "problem": "You have a brownie recipe that makes a 9x9 inch square pan and yields 16 brownies, but you only have a standard 8x8 inch square pan. Additionally, you want to adjust the recipe so that each individual brownie has double the amount of chocolate chips as the original recipe specified. How do you scale the ingredients, and what is the new yield of brownies?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I'm really lost on this part. I know an 8x8 pan is smaller than a 9x9, so I should probably just cut all the ingredients in half, but then I'm not sure how to double the chocolate chips afterwards."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student incorrectly assumes an 8x8 pan is half the size of a 9x9 pan and wants to cut everything in half. I need to diagnose their area calculation approach first.",
+      "state": "Diagnosis",
+      "response": "Cutting everything in half is a common instinct when a pan looks smaller, but let's check the actual surface areas. How do you find the area of a 9x9 square pan compared to an 8x8 square pan?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Oh, the area of a 9x9 is 81 square inches, and an 8x8 is 64 square inches. Wait, so it's not half at all, it's 64 over 81. I guess I multiply the recipe ingredients by 64/81?"
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student correctly calculated the areas but applied them as a direct linear ratio instead of considering depth, though for square pans of standard depth, the area ratio actually dictates the scaling factor. Let's provide direct guidance on the scaling fraction.",
+      "state": "Support",
+      "response": "You've got the exact surface areas right at 81 and 64 square inches, meaning your scaling factor for the pan size is indeed 64/81. Since the depth stays the same, you multiply all the base ingredients by that fraction."
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Okay, so multiplying by 64/81 sounds really messy for measuring, but I guess that's the math. Now, what about the second part where I want double the chocolate chips per brownie?"
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student has accepted the pan scaling fraction and moved on to the chocolate chip adjustment. I need to check how they plan to combine the pan scaling and the chip doubling.",
+      "state": "Diagnosis",
+      "response": "It is a bit of a messy fraction, but you're tracking it well. For the chocolate chips, you want twice as many chips in every single brownie. How will that affect the total amount of chips you need, considering the pan is also shrinking?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Does doubling the chips per brownie mean I just take whatever final amount of chips I get from the 64/81 scaling and multiply that number by two?"
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student correctly intuited that scaling the base recipe and then doubling the specific ingredient works, but let's give a supportive hint about what happens to the total brownie yield and individual density.",
+      "state": "Support",
+      "response": "Yes, exactly! If you scale the whole recipe down by 64/81 to fit the smaller pan, and then multiply just the chocolate chips by two, you'll hit that goal. Also, don't forget that your total yield of brownies changes based on the pan ratio too."
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "Right, the new yield would be 16 brownies multiplied by 64/81, which tells me how many brownies the 8x8 pan produces. And for the chips, I take the original chip amount, multiply it by 64/81 for the pan size, and then multiply by 2 for the concentration."
+    },
+    {
+      "turn": 10,
+      "speaker": "student",
+      "text": "So basically, scaling a recipe for a different pan means you find the ratio of the new pan's area to the old pan's area, multiply all ingredients by that ratio to keep the depth the same, and then if you want more of a specific mix-in per serving, you apply that multiplier directly to that ingredient's adjusted amount."
+    },
+    {
+      "turn": 11,
+      "speaker": "tutor",
+      "reasoning": "The student has clearly and accurately articulated the entire scaling principle in their own words. I can now wrap up the conversation warmly.",
+      "state": "Closing",
+      "response": "Spot on! You nailed both the area ratio scaling and how to layer specific ingredient adjustments on top of it. Great job working through that math—ready to try another one?"
+    }
+  ]
+}
+
+
+{
+  "problem": "Consider the following algorithm that takes an array of integers and a target value:\n\n1. Set `i` to 0, `j` to the length of the array minus 1, and `result` to -1.\n2. While `i <= j`:\n   a. Set `mid` to `(i + j) / 2` (using integer division).\n   b. If the array element at index `mid` equals the target, set `result` to `mid` and break.\n   c. Else if the array element at index `mid` is less than the target, set `i` to `mid + 1`.\n   d. Else, set `j` to `mid - 1`.\n3. Return `result`.\n\nTrace this algorithm by hand using the sorted array `[2, 5, 8, 12, 16, 23, 38]` and the target value `23`. What is the value of `i`, `j`, and `mid` during each iteration, and what final value does the algorithm return?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I started looking at the array of seven elements, so `i` is 0 and `j` is 6. For the first step, `mid` would be `(0 + 6) / 2`, which is 3. The element at index 3 is 12. Since 12 is less than our target 23, I know we update `i` to `mid + 1`, making `i` equal to 4. After that, I'm a bit unsure how to systematically track the next updates for `mid` and `j` without losing track of which indices are active."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student successfully completed the first iteration and identified the correct boundary update for `i`, but feels uncertain about tracking subsequent iterations. A Diagnosis state is appropriate here to invite them to articulate their current mental model for the next step.",
+      "state": "Diagnosis",
+      "response": "You've got a great start by correctly identifying the first midpoint and updating the lower bound `i` to 4. To help me see how you're visualizing the next step, could you walk me through what the new active range of indices looks like now that `i` is 4 and `j` is still 6?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Okay, so the active range is from index 4 to index 6, since `i` is 4 and `j` is 6. The elements in that slice are 16, 23, and 38. So for the second iteration, `mid` would be `(4 + 6) / 2`, which gives 5 using integer division. The element at index 5 is 23, which matches our target! So `result` should become 5, and we break out of the loop."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student correctly traced the second iteration, calculated the new midpoint, found the target, and determined the correct loop termination condition. Since they are progressing very well, a Synthesis prompt is too early, but we can verify their understanding of the final return value using a gentle Support/Diagnosis hybrid.",
+      "state": "Support",
+      "response": "That second iteration trace is spot on, especially how you handled the new index boundaries and found the target right at index 5. Knowing that `result` was updated to 5 during that step, what value does the algorithm ultimately return at the very end?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Since `result` was set to 5 when it found the target value 23, and step 3 simply says to return `result`, the algorithm should return 5."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student has correctly determined the final return value based on their trace. Now that they have successfully walked through the entire algorithm execution, it is time to move to Synthesis so they can explain the underlying search strategy in their own words.",
+      "state": "Synthesis",
+      "response": "That is completely correct. Now that you've successfully traced this entire search process from start to finish, how would you describe in your own words the overall strategy or pattern this algorithm uses to find the target compared to just checking every element one by one?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Instead of checking every single number sequentially, this algorithm cuts the search space in half each time by looking at the middle element. Because the array is sorted, if our target is bigger than the middle element, we can completely throw away the entire lower half of the remaining numbers and just focus on the upper half, which makes finding the answer much faster."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student has accurately and clearly explained the concept of binary search in their own words. The pedagogical goal has been fully met, so we transition to the Closing state.",
+      "state": "Closing",
+      "response": "Spot on! You've captured the essence of binary search and how dividing the search space in half makes it so efficient. Excellent work walking through that trace today!"
+    }
+  ]
+}
+
+
+{
+  "problem": "Analyze the following complex sentence, identifying all independent and dependent clauses, and determine the exact clause type of the subordinate clause: 'Although she finished her presentation early, she stayed to answer questions from the audience, which impressed the directors.'",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I'm looking at this sentence, and I can see the main part is 'she stayed to answer questions from the audience.' But there are other pieces attached to it, and I'm not totally sure how to break them down or what to call them."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student has correctly identified the core independent clause but is unsure about the surrounding chunks. I will use Diagnosis to prompt them to isolate the first dependent phrase.",
+      "state": "Diagnosis",
+      "response": "Finding the core independent clause is a great start. What do you notice right at the very beginning of the sentence, before 'she stayed'?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "It starts with 'Although she finished her presentation early'. Since it has a subject and a verb, is that also an independent clause?"
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student correctly notes a subject and verb but mistakes its independence due to the leading subordinator. I will use Support with a hint about the word 'Although'."
+    },
+    {
+      "turn": 5,
+      "speaker": "tutor",
+      "reasoning": "The student has a slight misconception about whether that first chunk can stand alone. I will use Support to guide them to test its independence.",
+      "state": "Support",
+      "response": "It definitely has a subject and a verb, which is great. But try saying 'Although she finished her presentation early' all by itself as a complete thought—does it leave you hanging, or does it feel totally finished?"
+    },
+    {
+      "turn": 6,
+      "speaker": "student",
+      "text": "Ah, it definitely leaves you hanging because of the word 'Although'. So that makes it a dependent clause, right? Specifically, since it talks about when or how something happened, maybe an adverbial clause?"
+    },
+    {
+      "turn": 7,
+      "speaker": "tutor",
+      "reasoning": "The student successfully self-corrected and identified the first clause as dependent/adverbial. Now I need them to look at the end of the sentence. I will use Diagnosis to steer their attention there.",
+      "state": "Diagnosis",
+      "response": "Spot on with that reasoning! Now, what about the very tail end of the sentence, starting with 'which impressed the directors'?"
+    },
+    {
+      "turn": 8,
+      "speaker": "student",
+      "text": "That part starts with 'which'. It refers back to the whole preceding action. Is that another dependent clause?"
+    },
+    {
+      "turn": 9,
+      "speaker": "tutor",
+      "reasoning": "The student correctly identifies it as a dependent clause. I will use Support to help them specify its exact grammatical function based on what it modifies.",
+      "state": "Support",
+      "response": "You've got it, it's dependent. Since it starts with 'which' and describes the entire preceding clause rather than just a noun, what specific type of dependent clause does that make it?"
+    },
+    {
+      "turn": 10,
+      "speaker": "student",
+      "text": "Wait, if it describes the whole action, is it an adjective clause modifying a noun, or a relative clause, or something else since it modifies the whole idea?"
+    },
+    {
+      "turn": 11,
+      "speaker": "tutor",
+      "reasoning": "The student is wrestling with the clause type. I will use Support to give a small hint about clauses introduced by relative pronouns that modify an entire clause or antecedent.",
+      "state": "Support",
+      "response": "You're on the right track thinking about relative words. Think about clauses starting with 'which' that modify an entire preceding clause—what special label do we give to those relative clauses?"
+    },
+    {
+      "turn": 12,
+      "speaker": "student",
+      "text": "Right, it's a relative clause, specifically a non-restrictive relative clause acting adjectivally to modify the main clause's action. An independent clause carries the main idea, while dependent clauses like the concessive adverbial clause and the relative clause add surrounding context."
+    },
+    {
+      "turn": 13,
+      "speaker": "tutor",
+      "reasoning": "The student has accurately explained the entire structure and the roles of the clauses in their own words. I can now close the session warmly.",
+      "state": "Closing",
+      "response": "Fantastic job breaking that down and explaining the roles of each clause so clearly! You've got a great handle on this. Have a wonderful rest of your day!"
+    }
+  ]
+}
