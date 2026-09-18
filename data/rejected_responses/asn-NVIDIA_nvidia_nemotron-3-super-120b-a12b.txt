@@ -978,3 +978,70 @@ print x, y",
     }
   ]
 }
+
+
+{
+  "problem": "Read the following argument: 'We ought to implement a universal basic income because it would reduce poverty, and reducing poverty leads to better health outcomes, which in turn decreases healthcare costs, thereby freeing up government funds that can be invested in education, ultimately fostering a more skilled workforce.' Identify all explicit premises, any intermediate conclusions, the final conclusion, and discuss any hidden assumptions required for the argument to be valid.",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I see that the argument starts with UBI reducing poverty and ends with the claim that we ought to implement UBI, but I'm not sure how the middle parts about health, costs, education, and workforce fit together."
+    },
+    {
+      "reasoning": "Student shows partial understanding, missing how intermediate statements connect; need to elicit their reasoning about the argument's flow.",
+      "state": "Diagnosis",
+      "response": "Can you walk me through how each statement in the argument connects to the next?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Okay, so the argument says: If UBI reduces poverty, then poverty reduction leads to better health; better health leads to lower healthcare costs; lower costs free up funds for education; more education funding creates a more skilled workforce; therefore we ought to implement UBI."
+    },
+    {
+      "reasoning": "Student has outlined the chain but hasn't examined the assumptions linking each step; a hint about the poverty‑health link will guide them to uncover hidden premises.",
+      "state": "Support",
+      "response": "What would need to be true for the link between reduced poverty and better health to actually hold in this reasoning?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "For that link to work, we need to assume that reducing poverty actually improves people's health, perhaps via better nutrition and healthcare access."
+    },
+    {
+      "reasoning": "Student identified the poverty‑health assumption; now they need to consider the next link (costs to education funding).",
+      "state": "Support",
+      "response": "And what about the step from lower healthcare costs to more education funding?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "We would need to assume that the government decides to reallocate the saved healthcare money toward education rather than other uses."
+    },
+    {
+      "reasoning": "Student has considered the costs‑education assumption; the final link to skilled workforce remains unexamined, so another hint keeps them analyzing.",
+      "state": "Support",
+      "response": "Is there any other assumption needed for the final claim about a skilled workforce to follow from more education funding?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "We also need to assume that increased education funding actually results in a more skilled workforce, assuming the funds are used effectively."
+    },
+    {
+      "reasoning": "Student has correctly identified all explicit premises and the necessary hidden assumptions; now they should articulate the general method for unpacking such arguments.",
+      "state": "Synthesis",
+      "response": "In your own words, how would you describe the process of identifying premises and hidden assumptions in an argument like this?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "You break down each explicit statement, see how each leads to the next, note any missing links that are needed for the argument to work, and then state the overall conclusion that ties everything together."
+    },
+    {
+      "reasoning": "Student has explained the rule in their own words, showing mastery of the concept; conversation can end with a brief encouraging wrap‑up.",
+      "state": "Closing",
+      "response": "Nice, that's exactly it! Want to try another one?"
+    }
+  ]
+}

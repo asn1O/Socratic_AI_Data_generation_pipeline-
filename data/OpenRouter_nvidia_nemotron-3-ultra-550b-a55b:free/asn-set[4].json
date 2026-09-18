@@ -1,0 +1,671 @@
+[
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Trip budget planning",
+    "problem": "You are planning a 4-day trip. Flights cost $250 round-trip. Hotel is $120 per night. Daily food budget is $60. Local transport is $20 per day. You have a total budget of $1000. Can you afford the trip? If not, how much would you need to reduce daily food budget to stay within budget?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I started by adding the flight cost and hotel for four nights: 250 plus 120 times 4 equals 730. But I'm not sure how to include the daily food and transport costs."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student computed fixed costs correctly but hasn't incorporated variable daily costs. Need to elicit their plan for those.",
+        "state": "Diagnosis",
+        "response": "Good start on the fixed costs. How do you think the daily food and transport expenses factor into the total?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I guess I need to add 60 plus 20 for each day, so 80 per day times 4 days is 320. Then total would be 730 plus 320 equals 1050. That's over 1000, so I can't afford it as is."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student correctly computed total and sees it's over budget. Now guide to find reduced food budget with direct explanation.",
+        "state": "Support",
+        "response": "Right, the total is 1050, which exceeds your budget by 50. To stay within 1000, you'll need to lower the daily food budget since transport is fixed. Let's set up an equation: let f be the new daily food cost. Then (f + 20) * 4 + 730 ≤ 1000."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Okay, so (f + 20) * 4 = 4f + 80. Then 4f + 80 + 730 ≤ 1000 → 4f + 810 ≤ 1000 → 4f ≤ 190 → f ≤ 47.5. So I need to reduce food budget to $47.50 per day, a cut of $12.50."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student solved inequality correctly. Confirm and ask for summary of general approach.",
+        "state": "Support",
+        "response": "Exactly. You found that the daily food budget must be at most $47.50, which is a reduction of $12.50 from the original $60. Can you summarize the general approach for adjusting a budget when costs exceed the limit?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I think the approach is: first calculate all fixed costs, then add variable daily costs multiplied by days, compare to budget, and if over, set up an inequality to solve for the adjustable expense."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student articulated the approach. Check depth by asking about a variation.",
+        "state": "Diagnosis",
+        "response": "That's a solid summary. How would the process change if the transport cost could also be adjusted?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "If transport could change too, you'd have two variables. You'd need to decide which to adjust or set up an equation with both, maybe minimize total reduction."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student shows understanding of multiple variables. Reinforce core idea with direct statement.",
+        "state": "Support",
+        "response": "Good point. With two adjustable costs, you'd have more flexibility but also more combinations. The core idea remains: total cost ≤ budget, solve for the unknowns."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "So basically you always set up an inequality where total cost equals fixed plus variable times days, then solve for the variable you can control."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has explained the rule in own words. Now ask for formal principle.",
+        "state": "Synthesis",
+        "response": "In your own words, what's the key principle for budget planning when you have fixed and variable costs?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The key principle is to separate fixed and variable costs, calculate the total, compare to your budget, and if it's over, use an inequality to find the maximum allowable variable cost."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student correctly explained the principle. Conversation is complete.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "computer_science_light",
+    "topic": "Boolean logic",
+    "problem": "Simplify the Boolean expression (A && B) || (A && !B).",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this expression (A && B) || (A && !B) and I think maybe it simplifies to just A? But I'm not really sure how to prove it. I tried making a truth table with columns for A, B, A && B, !B, A && !B, and the final OR, but I got confused when combining the last two columns. For instance, when A is true and B is false, A && B is false, A && !B is true, so the OR is true. But when both are false? I think I messed up the order."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student has a guess but lacks systematic justification; need to understand their current approach to identify where guidance is needed.",
+        "state": "Diagnosis",
+        "response": "That's a good starting guess. Can you walk me through how you set up the truth table? What columns did you include and where exactly did you get stuck when combining the results?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I made columns for A, B, then A && B, then !B, then A && !B, then the final OR of those two. But when I filled in the rows, I wasn't sure if I was combining the last two columns correctly. For example, when A is true and B is false, A && B is false, A && !B is true, so the OR is true. But when both A and B are false? A && B is false, !B is true, A && !B is false because A is false, so OR is false. I think I might have missed a row."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student understands the mechanics but is getting lost in the table; a hint to factor out the common term could provide a simpler path.",
+        "state": "Support",
+        "response": "You're on the right track with the truth table, but it can get messy. Another way to think about it is to factor out the common part. Do you see a common factor in both terms of the original expression that you could pull out front?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, both terms have A. So I could write it as A && (B || !B). Is that allowed? Like factoring in algebra, where you take out the common factor?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified the common factor and applied distribution in reverse; now need to evaluate the remaining expression.",
+        "state": "Support",
+        "response": "Exactly, factoring works the same way with Boolean operators. Now what does B || !B evaluate to, regardless of whether B is true or false?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "B || !B is always true, right? Because either B is true or not B is true, there's no third option. So then A && true is just A. So the whole thing simplifies to A."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student reached the correct simplification using the complement law; now guide them to name the specific laws used to reinforce the concept.",
+        "state": "Support",
+        "response": "Perfect. You used two important laws there. Can you name the law that lets you rewrite (A && B) || (A && !B) as A && (B || !B)?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "That's the distributive law, like A && (B || C) = (A && B) || (A && C) but in reverse. And B || !B is the complement law or law of excluded middle."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified both laws; now prompt them to synthesize the overall pattern for future recognition.",
+        "state": "Support",
+        "response": "Right. So when you see a common factor across terms joined by OR, you can factor it out, and if the remaining part is a tautology like B || !B, the expression collapses to just the common factor. Does that match how you'd describe the pattern?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Yes, basically if you have (X && Y) || (X && !Y), it simplifies to X because Y || !Y is always true. So the pattern is: common factor AND something, OR common factor AND its negation, equals common factor."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has articulated the pattern clearly; now ask them to state the general rule in their own words to solidify understanding.",
+        "state": "Synthesis",
+        "response": "Great. In your own words, what's the general rule you just discovered for simplifying expressions of that form?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The rule is: if you have an expression where a variable is ANDed with something and also ANDed with the negation of that something, all ORed together, you can factor out the variable and the middle part becomes a tautology (always true), leaving just the variable. So (A && B) || (A && !B) = A."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept in their own words, demonstrating mastery.",
+        "state": "Closing",
+        "response": "Excellent, you've got it! Ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Permutations and combinations",
+    "problem": "How many different 3-letter codes can be formed from the letters A, B, C, D, E if no letter is repeated?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think we need to use combinations because we're picking 3 letters out of 5. So it's 5 choose 3 = 10."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly assumes order doesn't matter and applies combinations. Need to diagnose why they think that.",
+        "state": "Diagnosis",
+        "response": "What makes you think order doesn't matter here?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, a code like ABC is different from BAC, right? So order does matter. Maybe it's permutations then. So 5*4*3 = 12."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student now recognizes permutations but miscalculates the product. Provide a minimal hint to self-correct.",
+        "state": "Support",
+        "response": "Let's check that multiplication: 5 times 4 is 20, times 3 is?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, 20 times 3 is 60. So 60 codes."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student has correct answer. Now elicit reasoning to solidify understanding.",
+        "state": "Diagnosis",
+        "response": "Why do we multiply 5, 4, and 3 instead of adding them?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Because for the first position we have 5 choices, then 4 left for second, then 3 for third. Multiplying gives all possible sequences."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student explains the multiplication principle. Now ask for general rule to synthesize.",
+        "state": "Synthesis",
+        "response": "Exactly. So what's the general rule for permutations of n items taken r at a time?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "It's n!/(n-r)! or n*(n-1)*...*(n-r+1)."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student states the formula. Now ask for distinction between permutations and combinations to deepen synthesis.",
+        "state": "Synthesis",
+        "response": "Perfect. How would you describe the difference between permutations and combinations?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Permutations count arrangements where order matters, combinations count selections where order doesn't matter."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly articulated the core concept. Conversation can close warmly.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! Ready for the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Active vs passive voice",
+    "problem": "Determine if the sentence 'The cake was eaten by the children' is active or passive, and explain the rule for passive voice.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm confused about active vs passive voice."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student expresses confusion; need to elicit initial observations about the example sentence.",
+        "state": "Diagnosis",
+        "response": "What do you notice about the sentence 'The cake was eaten by the children'?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "It has 'was eaten' and 'by the children'."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student noticed verb phrase but hasn't identified subject; guiding to find subject to determine voice.",
+        "state": "Support",
+        "response": "Who is the subject of the sentence?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "The cake."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student identified subject; now checking if they understand subject's role in passive construction.",
+        "state": "Diagnosis",
+        "response": "Does the cake perform the action or receive it?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "It receives the action."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student says subject receives action; probing deeper into what the verb phrase indicates.",
+        "state": "Diagnosis",
+        "response": "What does the verb phrase 'was eaten' tell you about the subject?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "It shows the subject is being acted upon."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student described subject's role; now eliciting description of verb form to build toward rule.",
+        "state": "Diagnosis",
+        "response": "Can you describe the verb form used here?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "It's a form of 'be' plus a past participle."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has identified key components; asking them to articulate the passive voice rule in their own words.",
+        "state": "Synthesis",
+        "response": "In your own words, when is a sentence passive?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "A sentence is passive when the subject receives the action, using a 'be' verb and past participle."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student correctly explained passive voice; conversation complete, offering encouragement and next step.",
+        "state": "Closing",
+        "response": "Great job! Ready for another?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "physics",
+    "topic": "Newton's laws in everyday scenarios",
+    "problem": "A 10 kg box is pushed across a horizontal floor with a constant horizontal force of 50 N. The coefficient of kinetic friction between the box and floor is 0.2. The box starts from rest. (a) What is the acceleration of the box? (b) What is its velocity after 3 seconds? (c) How far does it travel in those 3 seconds?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Okay, for part (a) I'll start with Newton's second law, F equals m a. The applied force is 50 newtons, the mass is 10 kilograms, so dividing gives an acceleration of 5 meters per second squared. I'm not considering any other forces yet, just the push."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student gave an acceleration value without accounting for friction, indicating they may not have identified all forces acting on the box. I need to elicit their understanding of the force diagram before guiding further.",
+        "state": "Diagnosis",
+        "response": "What other forces might be acting on the box besides the applied push? Could any of them affect the net force that determines acceleration?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Right, there's kinetic friction opposing the motion. The normal force equals the weight, so friction equals mu_k times m times g, which is 0.2 times 10 times 9.8, giving 19.6 newtons. Net force is 50 minus 19.6, which is 30.4 newtons, so acceleration is 30.4 divided by 10, or 3.04 meters per second squared."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly computed the net force and acceleration. Now they are ready for the next kinematic step, so I'll guide them toward finding velocity with a targeted question.",
+        "state": "Support",
+        "response": "Good, now that you have the acceleration, how would you find the velocity after 3 seconds? Which kinematic equation relates velocity, acceleration, and time when starting from rest?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Since it starts from rest, initial velocity is zero. Using v equals u plus a t, with u equals zero, a equals 3.04, t equals 3, the velocity comes out to 9.12 meters per second."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly found the velocity. The next logical step is distance, so I'll prompt them to choose the appropriate displacement equation.",
+        "state": "Support",
+        "response": "Excellent. For the distance traveled in those 3 seconds, which kinematic equation would you use? Remember the initial velocity is zero and you already have the acceleration."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I'll use s equals u t plus one-half a t squared. With u equals zero, a equals 3.04, t equals 3, distance equals 0.5 times 3.04 times 9, which is 13.68 meters."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "All numerical parts are solved correctly. Now I want to check the student's conceptual grasp of why friction is subtracted, so I'll ask for an explanation in their own words.",
+        "state": "Diagnosis",
+        "response": "You've worked through the calculations nicely. Can you explain in your own words why we subtracted friction from the applied force to get the net force?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Because friction opposes the motion, so it acts opposite to the applied force. Net force is the vector sum, so we subtract the friction magnitude from the applied force to get the net force in the direction of motion."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student described the vector nature but hasn't explicitly linked net force to acceleration via Newton's second law. I'll nudge them to make that connection.",
+        "state": "Support",
+        "response": "That's right. How does Newton's second law connect that net force to the acceleration you calculated?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Newton's second law says net force equals mass times acceleration. So once we have the net force of 30.4 newtons, dividing by the mass of 10 kilograms gives the acceleration of 3.04 meters per second squared."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has articulated the core principle. Now I'll ask them to synthesize the whole scenario into a single coherent explanation.",
+        "state": "Synthesis",
+        "response": "Perfect. In your own words, what's the overarching principle that ties together the applied force, friction, net force, and acceleration in this scenario?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The overarching principle is Newton's second law: the acceleration of an object is determined by the net force acting on it, which is the vector sum of all forces. Here, the applied force and friction combine to give a net force, and that net force divided by mass gives the acceleration. Then kinematics equations give velocity and displacement."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the concept in their own words, demonstrating full understanding. The conversation can now close warmly.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Common grammar errors",
+    "problem": "Find and fix the grammar error: 'Each of the students have a book.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the sentence is fine because 'students' is plural, so 'have' matches."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student believes the verb agrees with 'students', indicating a misunderstanding of the true subject. Need to diagnose their subject identification.",
+        "state": "Diagnosis",
+        "response": "What is the subject of the sentence?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "The subject is 'students'."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student misidentified the subject. Guide them to look at the word before 'of' to find the actual subject.",
+        "state": "Support",
+        "response": "Let's look at the start of the sentence. What word comes before 'of'?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "It's 'each', but 'each' is plural because it refers to many students."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student thinks 'each' is plural. Need to diagnose their understanding of the number of 'each' as a subject.",
+        "state": "Diagnosis",
+        "response": "Is 'each' singular or plural when it's the subject?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I'm not sure, but I think it's plural since there are multiple students."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student still thinks 'each' is plural. Provide a minimal hint by comparing to a known singular pronoun.",
+        "state": "Support",
+        "response": "Let's try a simpler subject. What verb goes with 'he'?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "He has."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student produced correct singular verb for 'he'. Now check if they transfer that to 'each'.",
+        "state": "Diagnosis",
+        "response": "Is 'each' more like 'he' or 'they'?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "It's like 'he', so 'has'."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student correctly applied singular verb. Now prompt them to articulate the underlying rule.",
+        "state": "Synthesis",
+        "response": "Good. Now explain the rule for 'each of the' in your own words."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The subject 'each' is singular, so the verb must be singular 'has'."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has explained the rule correctly. Conversation can close warmly.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Personal budgeting",
+    "problem": "You have a monthly net income of $3,200. Your fixed expenses are rent $1,200, utilities $200, car payment $300. Variable expenses average $600. You want to save 20% of net income each month. An unexpected medical bill of $400 arrives. How should you adjust your budget to still meet your savings goal?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'd start by listing all my expenses and subtracting from income to see what's left for savings and the medical bill."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student outlines a general approach but hasn't quantified the savings target or addressed the unexpected expense. Need to diagnose their understanding of the 20% savings goal.",
+        "state": "Diagnosis",
+        "response": "How would you determine the amount you need to save each month to meet the 20% goal?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "20% of 3200 is 320, so I need to save $320."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student miscalculated the savings target (20% of 3200 is 640). Provide a minimal hint to recalc.",
+        "state": "Support",
+        "response": "Let's double-check that percentage calculation. What is 20% of 3200?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, it's 640. But I can just save less this month because of the medical bill, right?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student suggests compromising the savings goal, but the problem requires meeting it. Need to clarify the priority of the savings target.",
+        "state": "Diagnosis",
+        "response": "The problem says you want to meet your savings goal. What does that imply about adjusting your budget?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "My variable expenses are fixed at $600, so I can't change them. I'd have to cut rent or utilities."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly treats variable expenses as fixed. Guide them to identify flexible categories.",
+        "state": "Support",
+        "response": "Variable expenses can often be adjusted. Where might you find flexibility to cover the extra $400?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I see. If I reduce variable expenses by $140, from $600 to $460, then total expenses become $2,160, plus $640 savings = $2,800, leaving $400 for the medical bill. That works."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly computed the adjustment. Now move to synthesis to have them articulate the underlying principle.",
+        "state": "Synthesis",
+        "response": "Can you explain in your own words the principle for handling unexpected expenses while keeping a savings target?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "You first calculate your savings target as a percentage of net income. Then sum all planned expenses. If an unexpected cost appears, you adjust flexible spending categories so that total expenses plus savings still fit within income, without reducing the savings amount."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the budgeting principle. Conversation can close warmly.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for another scenario?"
+      }
+    ]
+  }
+]

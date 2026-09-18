@@ -1063,5 +1063,377 @@
         "response": "Nice, you've got it! Want to try another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Common grammar errors",
+    "problem": "Identify and correct the grammar error in the following sentence: 'The list of items are on the table.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the sentence is correct because 'items' is plural, so the verb 'are' matches."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student incorrectly identifies the verb agreement target, focusing on the plural noun inside the prepositional phrase rather than the head noun. Need to uncover their understanding of the sentence's subject.",
+        "state": "Diagnosis",
+        "response": "What do you think the subject of the sentence is?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I guess the subject is 'list of items' because that's the whole phrase before the verb."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student sees the whole phrase as the subject but hasn't isolated the head noun. A hint to remove the prepositional phrase will help them see the core subject.",
+        "state": "Support",
+        "response": "Let's try removing the prepositional phrase 'of items'. What does the sentence become?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "It becomes 'The list are on the table.' That sounds odd, but I'm not sure why."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student notices the oddness but is uncertain about agreement with the head noun alone. Prompting them to consider the verb with just 'list' will clarify subject-verb agreement.",
+        "state": "Support",
+        "response": "If the subject were just 'list', which verb would you use: 'is' or 'are'?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I'd use 'is' because 'list' is singular."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly matches the verb to the head noun but hasn't linked this to the original sentence. Reinforcing that the modifying phrase doesn't change number will guide them to the correct verb.",
+        "state": "Support",
+        "response": "The phrase 'of items' describes the list but doesn't change its number. So what should the verb be in the original sentence?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The verb should be 'is' because the subject 'list' is singular."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has the correct answer but hasn't articulated the underlying rule. Asking them to explain why 'are' doesn't work will elicit the principle.",
+        "state": "Support",
+        "response": "How would you explain why 'are' doesn't work here?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I guess you ignore the 'of items' and just match the verb to 'list'."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "state": "Synthesis",
+        "reasoning": "The student offers a tentative explanation; we need them to state the rule clearly in their own words to confirm internalization.",
+        "response": "In your own words, what's the rule for subject-verb agreement when there's a prepositional phrase after the subject?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The verb agrees with the main subject, not with the noun inside a prepositional phrase that follows it."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the rule in their own words, indicating mastery of the concept.",
+        "state": "Closing",
+        "response": "Nice, you've got it! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Reading and interpreting graphs",
+    "problem": "A bar graph shows the number of books read by four students in a month. The vertical axis is labeled 'Number of books' with tick marks at 1, 2, 3, ... The heights of the bars are at 3, 5, 7, and 9 books respectively. What is the average number of books read per student?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the first bar is 2 books, the second is 4, the third is 6, and the fourth is 8, so the total is 20 books."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student gave incorrect bar heights, showing a misreading of the scale; need to elicit their reasoning.",
+        "state": "Diagnosis",
+        "response": "How did you determine the height of each bar?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I looked at where the top of each bar lines up with the horizontal lines on the graph, and I thought each line stood for 2 books, so I multiplied the line number by 2."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student persists with mistaken scale interpretation; need a minimal hint to redirect attention to axis labels without giving answer.",
+        "state": "Support",
+        "response": "What do the numbers on the vertical axis indicate?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, the axis actually has numbers 1, 2, 3, 4... So each line is 1 book. That means the bars are actually 3, 5, 7, 9 books."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student now has correct heights; need to elicit their computation of total to see if they can proceed.",
+        "state": "Diagnosis",
+        "response": "If you add those heights together, what total do you get?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I added them up: 3+5+7+9 equals 24 books."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student has correct total; now need to prompt them to articulate what average means and compute it.",
+        "state": "Synthesis",
+        "response": "What does finding the average tell you about the data?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The average is the total divided by the number of students, so 24 divided by 4 equals 6 books per student."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student gave correct average but hasn't explained the underlying rule; need to have them articulate reasoning in own words.",
+        "state": "Synthesis",
+        "response": "In your own words, why do we divide the total by the number of students?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "To find the average, you sum all the values and then split that sum equally among all the items, so you divide by how many items there are."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept of average; conversation can wrap up.",
+        "state": "Closing",
+        "response": "Great job! You've got the idea of averaging. Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "history_and_social_studies",
+    "topic": "Primary vs secondary sources",
+    "problem": "A historian is researching the protests of 1968. They have the following items: a newspaper article from June 1968 reporting on the protests, a 2020 documentary film about the protests, a personal letter written by a participant in May 1968, and a scholarly journal article published in 2021 analyzing the protests. For each item, state whether it is a primary or secondary source, and explain why.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the newspaper article from 1968 is a secondary source because it's published after the events, the 2020 documentary is a primary source since it shows footage of the protests, the participant's letter is a secondary source because it's just a personal account, and the 2021 journal article is a primary source because it analyzes the protests."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student conflates timing with mediation, labeling later accounts as primary and contemporaneous accounts as secondary, showing a misunderstanding of what makes a source primary.",
+        "state": "Diagnosis",
+        "response": "Can you explain what distinguishes a primary source from a secondary source in your own words?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "A primary source is something created after the event that talks about it, and a secondary source is made at the time of the event."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student reversed the definitions, indicating they need a concrete example to test their understanding.",
+        "state": "Support",
+        "response": "Think about a diary written during a war—would you call that primary or secondary? Why?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "A diary written during the war would be secondary because it's someone's personal reflection after the fact."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student still views personal reflections as secondary, showing they equate any personal account with being secondary regardless of timing.",
+        "state": "Support",
+        "response": "What about a newspaper article printed the day after a battle—does it count as something created at the time?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "The newspaper article printed the next day is still secondary because it's a report, not the original event."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student persists in classifying any report as secondary, needing clarification on what counts as an 'original' material.",
+        "state": "Diagnosis",
+        "response": "When you say 'original materials', what kinds of materials do you think qualify as primary sources?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Original materials are things like letters, photographs, or artifacts made by people who directly experienced the event, so a newspaper from that time, a letter, or a photo would be primary."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student now correctly identifies examples of primary sources; next step is to articulate the defining rule themselves.",
+        "state": "Synthesis",
+        "response": "In your own words, what's the rule that separates primary from secondary sources?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "A primary source is an original document or object created at the time under study, like a diary, photograph, or newspaper from that period. A secondary source interprets or analyzes primary sources, such as textbooks, documentaries, or scholarly articles."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the distinction between primary and secondary sources in their own words, indicating mastery of the concept.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Trip budget planning",
+    "problem": "You are planning a weekend road trip. You have a budget of $200. Your car gets 25 miles per gallon and gas costs $3.50 per gallon. The round-trip distance is 200 miles. You will stay for 2 nights in a hotel that costs $40 per night. You plan to eat three meals a day, each costing $12. How much money will you have left after paying for gas, food, and hotel?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know I need to figure out gas, food, and hotel costs, but I'm not sure how to start."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student shows uncertainty about where to begin; need to elicit their thinking on what info is needed for gas cost.",
+        "state": "Diagnosis",
+        "response": "What information do you think you need to find the gas cost?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I need to know how many gallons of gas I'll use and the price per gallon."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified needed info; now guide them to compute gallons.",
+        "state": "Support",
+        "response": "To find gallons, divide the total miles by the car's miles per gallon."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "So 200 miles divided by 25 mpg equals 8 gallons."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student computed gallons correctly; now hint to get gas cost.",
+        "state": "Support",
+        "response": "Now multiply the gallons by the price per gallon to get the gas cost."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "8 gallons times $3.50 is $28."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student got gas cost; need to see if they know how to approach food cost.",
+        "state": "Diagnosis",
+        "response": "What do you need to calculate the food cost?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I need to know how many meals I'll eat and the cost per meal."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student knows the components; give hint on combining meals per day and days.",
+        "state": "Support",
+        "response": "Multiply meals per day by the number of days, then multiply by the cost per meal."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Three meals a day for two days is six meals. Six times $12 is $72."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has gas and food costs; need to prompt them to explain how to combine all costs and find remaining budget.",
+        "state": "Synthesis",
+        "response": "Think about combining the three costs and seeing what remains from your budget."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "First I add gas, food, and hotel costs to get total expenses. Then I subtract that from my budget to see what's left."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the procedure for finding leftover budget.",
+        "state": "Closing",
+        "response": "Great job! You've got it. Want to try another one?"
+      }
+    ]
   }
 ]

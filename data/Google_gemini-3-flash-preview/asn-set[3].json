@@ -964,5 +964,476 @@
         "response": "Spot on! That's a perfect summary. Ready to try a question on a different organelle?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "biology",
+    "topic": "Human circulatory system",
+    "problem": "A drop of blood has just been oxygenated in the lungs and is returning to the heart. Identify the first chamber it enters and the sequence it follows to reach the rest of the body.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know blood comes from the lungs back to the heart to get sent out. Does it go into the right atrium? I think it's the right side because that's where things start."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identifies that blood returns from the lungs but incorrectly assigns the oxygenated role to the right side. I need to probe their understanding of which side handles oxygen.",
+        "state": "Diagnosis",
+        "response": "That's an interesting starting point. When blood comes back from the lungs, has it just picked up oxygen or dropped it off, and which side of the heart usually handles that fresh oxygen?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "It just picked up oxygen from the lungs. I thought the right side was for oxygen because it's the 'main' side that pumps it out to the rest of the body, right?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student still believes the right side is the primary pump for the body. I will provide a hint about the right side's destination to guide them toward the left side.",
+        "state": "Support",
+        "response": "If the right side is busy pumping deoxygenated blood to the lungs to get that oxygen, would it make sense for that same side to also pump it out to the body?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, so the right side only pumps to the lungs? Then the left side must receive it from the lungs and send it to the body. So it enters the left ventricle first?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified the left side but is confused about which chamber receives blood. I'll ask a question about chamber function to help them choose.",
+        "state": "Support",
+        "response": "Excellent progress on identifying the side! Since the blood is just arriving from the lungs, does it enter the top 'receiving' chamber or the bottom 'pumping' chamber first?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "It goes to the bottom one, the ventricle, because that's the strong part. Wait, no, maybe the right atrium again? I always mix up the top and bottom names and the sides."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is oscillating between the right and left sides again and is confused by terminology. I will offer a linguistic hint to help them distinguish the chambers.",
+        "state": "Support",
+        "response": "Think about the names: Atrium and Ventricle. Which one sounds like an 'entryway' like you'd find in a building, and which one acts as the powerful pump to push blood out?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Okay, an atrium is like a hallway or entrance. So the blood from the lungs enters the left atrium first. Then it must go down to the left ventricle to be pushed out?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully traced the path of oxygenated blood. I will now ask them to synthesize the overall logic of the heart's double-pump structure.",
+        "state": "Synthesis",
+        "response": "You've mapped it out! Could you explain in your own words why the heart is split into these two specific sides for handling oxygenated versus deoxygenated blood?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The heart is a double pump. The right side takes used blood and sends it to the lungs for oxygen. Then the left side receives that fresh blood into the atrium, moves it to the ventricle, and pumps it to the whole body."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has provided a clear, accurate explanation of the circulatory circuits and chamber functions, indicating they have mastered the concept.",
+        "state": "Closing",
+        "response": "Exactly right! You've got a great handle on how those two circuits work together now. Ready to move on to the next topic?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "biology",
+    "topic": "Photosynthesis",
+    "problem": "A plant is performing photosynthesis at a steady state. If the light is suddenly turned off, the concentration of Ribulose 1,5-bisphosphate (RuBP) is observed to plummet almost immediately. Explain why this happens.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think RuBP drops because Rubisco stops working immediately and the leftover RuBP just degrades."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student suggests RuBP degrades due to enzyme inactivity; I need to probe why degradation doesn't fit the rapid drop.",
+        "state": "Diagnosis",
+        "response": "If RuBP were just sitting there, would it disappear that rapidly?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Maybe it's because there's no CO2 for Rubisco to use in the dark?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student suggests CO2 is missing; I need to check if they understand CO2 is atmospheric and independent of light.",
+        "state": "Diagnosis",
+        "response": "Does the availability of CO2 change when the lights are switched off?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "No, CO2 is still there. So Rubisco must still be consuming the RuBP?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly realizes Rubisco continues consuming RuBP; now I need to highlight the lack of production.",
+        "state": "Diagnosis",
+        "response": "If consumption continues, what is required for the RuBP levels to stay steady?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "It needs to be replaced, but I thought Rubisco needed light to work?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student reverts to enzyme activation; I need to shift focus to the actual reagents of regeneration.",
+        "state": "Diagnosis",
+        "response": "What products from the light stage are needed to turn G3P back into RuBP?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "It probably uses the oxygen from the light reactions to power that process."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student suggests oxygen is the energy source; I'll point toward energy molecules to help them self-correct.",
+        "state": "Support",
+        "response": "Is oxygen the molecule that provides energy for the cycle's reactions?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Wait, it's ATP and NADPH, right? I mixed it up with the light stage."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student identified the correct reagents; now I'll have them articulate the full mechanism of the drop.",
+        "state": "Synthesis",
+        "response": "And in your own words, why does that lead to the RuBP levels dropping?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Regeneration needs those products to replace RuBP, so consumption by Rubisco quickly depletes the supply."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully synthesized the concept and provided a clear explanation.",
+        "state": "Closing",
+        "response": "Perfect! You've got the process down. Ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "history_and_social_studies",
+    "topic": "Cause-and-effect in historical events",
+    "problem": "Explain the cause-and-effect relationship between the attack on Pearl Harbor and the United States' entry into World War II.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the US joined WWII because they didn't like Germany, but I'm not sure of the trigger."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student identifies the broad context but misses the specific trigger. I will confirm their partial knowledge and ask for the specific event.",
+        "state": "Diagnosis",
+        "response": "You're right about the tension. What do you think was the turning point that forced them into action?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I'm pretty sure it was the sinking of the Lusitania that brought them into WWII."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student confused the world wars. I'll provide a direct correction and a hint about the location of the correct event.",
+        "state": "Support",
+        "response": "That was actually World War I. Think about a surprise naval base attack in the Pacific in 1941."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, that was Pearl Harbor! So that made them join the war immediately?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student identified the correct event. I will explain the direct consequence to strengthen the cause-effect link.",
+        "state": "Support",
+        "response": "Exactly. The attack destroyed lives and ships, forcing a declaration of war the next day."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "So the US only joined because they were attacked directly by Japan?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is asking about the exclusivity of the cause. I'll explain its role in ending the neutrality debate.",
+        "state": "Diagnosis",
+        "response": "It was the final straw. How did this one event solve the debate about staying neutral?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I guess it made everyone agree to fight because they were protecting their own country?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student understands the shift in public opinion. I'll emphasize the direct causal link here.",
+        "state": "Support",
+        "response": "Yes. Direct threats often override hesitation. This event was the clear cause of their entry."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I actually think the US was going to join the war regardless of the attack."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student makes a mistake regarding historical necessity. I'll correct this by mentioning the strong isolationist sentiment of the time.",
+        "state": "Support",
+        "response": "Actually, most Americans wanted peace. The attack was the necessary cause for that effect."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "I get it now. One specific event triggers a result that wasn't happening before."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student shows mastery of the relationship. I'll prompt them to articulate the general principle.",
+        "state": "Synthesis",
+        "response": "Spot on. In your own words, how do historians define a cause-and-effect relationship?"
+      },
+      {
+        "turn": 15,
+        "speaker": "student",
+        "text": "Cause and effect is when a specific action directly creates a major change or outcome."
+      },
+      {
+        "turn": 16,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly synthesized the concept. The session is complete.",
+        "state": "Closing",
+        "response": "That's exactly it! You've got this down. Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "history_and_social_studies",
+    "topic": "Comparing political systems",
+    "problem": "Compare how Parliamentary and Presidential systems resolve a legislative-executive 'gridlock' (a situation where the executive and the legislature cannot agree on policy). Describe the structural mechanisms in each system that either permit or resolve such a stalemate.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at how Parliamentary and Presidential systems handle gridlock. I get that in a Presidential system like the US, the branches are separate, but it seems like Parliamentary systems would actually be more prone to deadlocks because they often have many parties involved in coalitions. If those parties in a coalition disagree on a bill, isn't the whole government stuck just like a divided Congress?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is confusing coalition instability with institutional gridlock. I need to clarify the relationship between the executive and the legislature and provide a direct explanation as per the low Socratic level.",
+        "state": "Diagnosis",
+        "response": "That's an insightful observation about the complexity of coalitions! However, we have to distinguish between a government being hard to form and a system being 'deadlocked' in policy terms. In a Presidential system, the President and Congress have entirely separate electoral mandates, which is the institutional root of gridlock. In contrast, think about how a Prime Minister's position is inherently tied to the legislature's ongoing support. How does that specific connection change the dynamic when they disagree?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, the Prime Minister is chosen by the legislature, so they have to have a majority to even start. But if that majority disagrees later on a specific law, they are still stuck. In a Presidential system, it seems more efficient because the President can just use an executive order or dissolve the legislature if they won't cooperate, right?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has an edge-case error, thinking Presidents can dissolve the legislature. I will use a direct explanation to correct this and then hint at the Parliamentary mechanism for removal.",
+        "state": "Support",
+        "response": "Actually, in a strict Presidential system, the President cannot dissolve the legislature; both branches have fixed terms and are forced to 'cohabit' even when they completely disagree. This is why gridlock can persist for years. Now, think back to the Parliamentary model. If the Prime Minister loses the support of that majority, they don't just sit in a stalemate. What specific mechanism allows the legislature to essentially remove the executive and reset the government?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, right, the vote of no confidence. I forgot that's specific to Parliamentary systems. So, in that case, the legislature just replaces the Prime Minister. But wait, couldn't a President just call for a vote of no confidence in a stubborn Congress to force them to pass a bill? That would be a way to break the deadlock in the US system too, wouldn't it?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is incorrectly applying a Parliamentary tool to a Presidential system. I'll provide a direct explanation about the separation of powers and hint at the outcome of disagreements in each system.",
+        "state": "Support",
+        "response": "In a Presidential system, the separation of powers is quite rigid, meaning the President has no formal power to trigger a 'no confidence' vote against the legislature—that tool simply doesn't exist in that framework. Each branch is independent and essentially stuck with the other until the next election. Since you know Parliamentary systems use 'no confidence' votes to remove an executive, how does that result differ from a Presidential system where both sides just wait for the calendar to run out?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "So Parliamentary systems are faster because they can just change the government. But I still think Presidential systems might be more stable. If a Parliamentary government can be dissolved any time there's a tiny disagreement, isn't that just a different kind of deadlock? It feels like they'd be constantly starting over, which is basically the same as being stuck."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student's previous confusion about instability versus gridlock has resurfaced. I need to explain that 'starting over' is the resolution mechanism, not the deadlock itself, following the low Socratic level.",
+        "state": "Support",
+        "response": "You're touching on 'government instability' versus 'policy gridlock.' In a Parliamentary system, if the parties disagree, the government falls and a new one is formed that can pass laws, or an election is held to create a new majority. The 'deadlock' is resolved by the system's design. In a Presidential system, the President stays and the Congress stays, but nothing passes. Between 'changing the players' and 'keeping the players but doing nothing,' which one actually ends the policy stalemate?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I see the difference now. Parliamentary systems resolve deadlocks by forcing a change in leadership or a new election, ensuring the executive and legislative branches are back in sync. Presidential systems are designed to endure the deadlock until the voters decide at the next fixed interval. It's a trade-off between policy efficiency and the stability of the office-holders."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has finally grasped the core concept. Now I will move to Synthesis to have them explain the underlying structural reason in their own words.",
+        "state": "Synthesis",
+        "response": "You've hit on the practical outcome perfectly! The 'instability' of a government falling is actually the system's way of preventing a long-term policy freeze. To wrap this up, can you explain in your own words the fundamental structural difference between these two systems that leads to these different ways of handling a stalemate? Focus on where the executive's power comes from and how that dictates their relationship with the legislature."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "In a Parliamentary system, the executive and legislature are fused; the Prime Minister is an extension of the majority, so if they fall out of sync, the 'vote of no confidence' or 'dissolution' resets the system to find a new unified front. In a Presidential system, powers are strictly separated with fixed terms, meaning the President and the legislature have independent mandates from the voters. This separation means they can disagree and stay in a total stalemate without any way to force a resolution until the next election cycle occurs."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly and thoroughly explained the concept, so it is time to close the conversation.",
+        "state": "Closing",
+        "response": "Exactly! You've clearly grasped how the fusion of powers versus the separation of powers dictates the method of resolving political conflicts. That was a great breakdown of a complex institutional comparison. Ready to try another one, or are you all set for today?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Ratio and proportion",
+    "problem": "A merchant has two alloys of copper and zinc. In Alloy A, the copper to zinc ratio is 1:2. In Alloy B, the ratio is 3:5. He mixes 42kg of Alloy A with a certain amount of Alloy B to create a final mixture with a 5:9 ratio. How many kg of Alloy B did he use?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I've identified the copper fractions as 1/3 and 3/8, but how do I incorporate the 42kg into an equation?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student identifies the fractional components but needs to relate them to the unknown mass. I will probe for a weight-based relationship.",
+        "state": "Diagnosis",
+        "response": "What is the relationship between the weights of the individual alloys and the final mixture's total weight?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "The total weight would just be 42 plus x, where x is the weight of Alloy B, right?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identifies the total mass. I'll now guide them to express the copper mass from each source.",
+        "state": "Support",
+        "response": "If that is the total, how can we express the copper weight coming from each source individually?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "It's 1/3 of 42 plus 3/8 of x, which equals 5/14 of the total mass, 42 plus x."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has set up the correct mass-balance equation. I'll nudge them to start the algebraic simplification.",
+        "state": "Support",
+        "response": "What happens to the terms on the right side if we distribute the fraction across the parentheses?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Simplifying gives 14 plus 3x/8 equals 15 plus 5x/14. Does that mean x/56 equals negative 1?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student made a sign error during subtraction. I need to guide them to self-correct the arithmetic slip.",
+        "state": "Support",
+        "response": "Can a physical mass be negative, or should we re-check the signs in that subtraction step?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Ah, 15 minus 14 is positive 1. So x/56 equals 1, which means x is 56kg."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The numerical solution is found. I will now check if the student understands why tracking one component is sufficient.",
+        "state": "Diagnosis",
+        "response": "How does the fixed total weight ensure the zinc ratio is correct once copper is balanced?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Since the components always sum to the total mass, balancing one part automatically fixes the other's ratio correctly."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the conservation of mass and ratio logic, signifying a complete understanding.",
+        "state": "Closing",
+        "response": "Spot on! You handled that mixture logic beautifully. Shall we try one with three components next?"
+      }
+    ]
   }
 ]

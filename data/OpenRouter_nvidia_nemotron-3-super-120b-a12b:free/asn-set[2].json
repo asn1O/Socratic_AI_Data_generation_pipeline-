@@ -1015,5 +1015,377 @@
         "response": "Great job! You’ve grasped how the heart adjusts during exercise. Want to try another scenario?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "biology",
+    "topic": "Food chains and ecosystems",
+    "problem": "In a simple food chain, grass → rabbit → fox. If the biomass of grass is 1000 units and only 10% of energy is transferred between trophic levels, what is the approximate biomass available to the fox?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the fox gets 100 units because only 10% of the grass goes to the rabbit."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student gave answer missing second transfer; need hint about energy after rabbit eats grass.",
+        "state": "Support",
+        "response": "What happens to the energy after the rabbit eats the grass?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I took 10% of 1000, which is 100, and assumed that's the fox's biomass."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student explained but still missing second transfer; need hint about rabbit's biomass before fox.",
+        "state": "Support",
+        "response": "What happens to the rabbit's biomass before it reaches the fox?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "The rabbit gets 10% of grass (100), then the fox gets 10% of rabbit, so 10 units."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student solved two-level correctly; ready for extension to four levels.",
+        "state": "Support",
+        "response": "If we add a wolf that eats the fox, how would you find its biomass?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I think the wolf would get 100 units because each level only loses 10%."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student gave incorrect wolf biomass; need hint to apply rule again.",
+        "state": "Support",
+        "response": "What would happen if you apply the 10% rule to the fox's biomass?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I got 100 for rabbit, 10 for fox, then I assumed wolf stays at 100."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student still mistaken; need hint about what to do with fox's biomass.",
+        "state": "Support",
+        "response": "What should you do with the fox's biomass to find the wolf's?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I take 10% of the fox's biomass, giving 1 unit. Each level passes about 10% energy upward."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student correctly explained the rule.",
+        "state": "Closing",
+        "response": "Nice, you've got it! Ready for another?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Scaling a recipe",
+    "problem": "A recipe for 4 servings calls for 2 cups of flour, 1 cup of sugar, and 3 eggs. How much of each ingredient would you need to make the recipe for 10 servings?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I have a recipe for 4 people but I need to make it for 10 people. I'm not sure how to change the amounts."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student expressed uncertainty about scaling factor; need to elicit their thinking about what factor means.",
+        "state": "Diagnosis",
+        "response": "To scale a recipe, you need to find the factor that changes the number of servings. What do you think that factor should be?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I'm not really sure how to find that factor. Should I add something or multiply?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student is unsure about operation; need to give a minimal hint to direct them to consider the relationship between servings.",
+        "state": "Support",
+        "response": "Think about how the number of servings changes from 4 to 10."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I'm still not sure whether I should add or multiply the ingredients."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student still uncertain about operation; we want to guide them to think about maintaining proportions.",
+        "state": "Diagnosis",
+        "response": "To keep the recipe proportions the same, we need to adjust each ingredient by the same factor. What kind of adjustment do you think we need to make?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "We need to multiply each ingredient by the same factor."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student identified multiplication; need to elicit how to determine the factor.",
+        "state": "Diagnosis",
+        "response": "We want to find a number that tells us how much bigger 10 is than 4. How could you express that using numbers?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I could write it as 10 divided by 4, or 10/4."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student proposed fraction; we need to help them interpret what the fraction means without revealing the operation directly.",
+        "state": "Diagnosis",
+        "response": "The fraction 10/4 represents how many times the original amount fits into the new amount. What does that mean for scaling the ingredients?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "It means we multiply each ingredient by 10/4."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly expressed the scaling factor; now we need them to articulate the general rule in their own words.",
+        "state": "Synthesis",
+        "response": "So far we've figured out the scaling factor. In your own words, describe how you would scale any recipe."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "You take the desired number of servings, divide it by the original number of servings, and multiply each ingredient by that result."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has explained the rule correctly; conversation can wrap up.",
+        "state": "Closing",
+        "response": "Nice, you've got it! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Map reading and distance estimation",
+    "problem": "You have a map where the scale indicates that 1 inch on the map equals 0.5 miles in reality. Using a ruler, you measure the distance between two campsites on the map as 7.2 cm. What is the actual distance between the campsites in kilometers? Give your answer to one decimal place.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I multiplied 7.2 by 0.5 to get 3.6 miles, then changed to km."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student tried to apply the scale directly, ignoring that the measurement is in centimeters while the scale is per inch.",
+        "state": "Diagnosis",
+        "response": "Can you walk me through what you did step by step?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I thought each cm equals 0.5 miles, so 7.2*0.5=3.6 miles."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student conflated centimeters with inches, treating the scale as if it applied per centimeter.",
+        "state": "Support",
+        "response": "Remember, the scale is per inch, so we need to turn centimeters into inches first."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I used 1 inch ≈ 2 cm, so 7.2/2 = 3.6 inches."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student used an incorrect conversion factor for inches to centimeters.",
+        "state": "Support",
+        "response": "Actually, 1 inch equals exactly 2.54 cm. Try using that."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I converted cm to inches (7.2/2.54≈2.83), got 1.415 miles, then *2 for km."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student used an approximate factor of 2 for miles to kilometers, which is too rough.",
+        "state": "Support",
+        "response": "Actually, 1 mile is approximately 1.609 kilometers."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "1.415 mi *1.609 =2.276 km → 2.3 km (one decimal)."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student arrived at the correct numeric answer; now we need them to articulate the reasoning.",
+        "state": "Synthesis",
+        "response": "In your own words, describe how you went from the map measurement to the real distance."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "First cm→inches (÷2.54), then ×0.5 for miles, then ×1.609 for km."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the concept, so the conversation can wrap up.",
+        "state": "Closing",
+        "response": "Nice work! Want to try another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Comparing loan/interest offers",
+    "problem": "You are considering two loan offers for a $10,000 loan over three years. Offer A charges 5% simple interest per year. Offer B charges 4.8% interest per year, compounded monthly. Which offer results in lower total interest paid?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I don't really get how to compare these loans. One says 5% simple interest, the other says 4.8% compounded monthly. I'm not sure which is cheaper."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student shows confusion and hasn't attempted any calculation, so I need to find out how they're thinking about the offers.",
+        "state": "Diagnosis",
+        "response": "Let's start by looking at what each offer actually means. Can you tell me how you would begin to compare them?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think the 4.8% is lower, so you pay less interest because it's a smaller percent."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student claims the lower percentage automatically means lower cost, showing a missing step of calculating actual interest. I'll give a hint to compute interest over three years on a concrete amount.",
+        "state": "Support",
+        "response": "Let's compute the interest for each offer over three years on a $10,000 loan to see the difference. What would be the interest for Offer A?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "For the 5% simple, interest is 5% of 10000 each year, so $500 per year, total $1500. For the 4.8% compounded, I think you just multiply 4.8% by 3 years, so $1440."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly applied simple interest logic to the compound offer, showing they don't grasp how monthly compounding works. I'll explain the compounding mechanism.",
+        "state": "Support",
+        "response": "With compound interest, interest is added each month, so you earn interest on the interest already added. Does that make sense?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "So does that mean I add 0.4% each month? I'm not sure."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student is uncertain about how to get the monthly rate from the yearly percentage, indicating a need to clarify the conversion.",
+        "state": "Support",
+        "response": "The monthly rate is the yearly rate divided by 12, and we need to use it as a decimal. What do you get when you divide 4.8% by 12?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "0.48% each month?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly calculated the monthly rate, showing a slip in converting percent to decimal. I'll remind them of the correct steps.",
+        "state": "Support",
+        "response": "Remember to convert the percent to a decimal first, then divide by 12 to get the monthly decimal rate. What is that value?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "So 0.048/12 = 0.004, that's 0.4% per month."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has the correct monthly rate; now they need to apply the compound interest formula. I'll prompt them to use it.",
+        "state": "Support",
+        "response": "To find the amount after n months, you multiply the principal by (1 + monthly rate) to the power of n. Can you apply that for 36 months?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "You take the principal, multiply it by (1 plus the monthly rate) raised to the number of months, then subtract the principal to get the interest."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept, so we wrap up.",
+        "state": "Closing",
+        "response": "Nice work! You've got it. Want to try another problem?"
+      }
+    ]
   }
 ]

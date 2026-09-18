@@ -1312,5 +1312,92 @@
         "response": "Spot on! You handled that complex setup perfectly. Ready for the next one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Opportunity cost",
+    "problem": "A student spends 3 hours studying for an economics test instead of working at a part-time job that pays $20 per hour. What is the opportunity cost of studying?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the cost is just the 3 hours of time spent."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student identifies the time spent but not the value lost; needs to connect time to monetary cost.",
+        "state": "Diagnosis",
+        "response": "How does that time translate into a financial cost?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "They'd make $20 an hour, so that's $60."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student calculated the value; now I must check if they understand it depends on the best alternative.",
+        "state": "Support",
+        "response": "Correct. If they had a higher-paying job, would the cost be different?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Yeah, it would be whatever that higher pay was."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Testing the 'single best alternative' rule by introducing a secondary distraction.",
+        "state": "Support",
+        "response": "What if they also gave up a free meal during those hours?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Does that add to the cost? Like $60 plus the meal?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student is unsure about summing alternatives; need to clarify that only the 'next best' counts.",
+        "state": "Support",
+        "response": "Remember we only consider the next best alternative. Does the meal beat the job?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "No, the job pays more. So the cost is still $60."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has reached the correct answer and logic; moving to synthesize the general concept.",
+        "state": "Synthesis",
+        "response": "In your own words, what is opportunity cost?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "It's the value of the best thing you give up when choosing something else."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the principle, allowing the conversation to wrap up.",
+        "state": "Closing",
+        "response": "Perfect! You've got it. Want to try another?"
+      }
+    ]
   }
 ]

@@ -297,3 +297,231 @@
     }
   ]
 }
+
+
+{
+  "problem": "On a map, 1 centimeter represents 5 kilometers. Two towns are 3.5 centimeters apart on the map. What is the actual distance between the towns?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I see the scale says 1 cm equals 5 km, and the map distance is 3.5 cm. I'm not totally sure whether I should multiply 3.5 by 5 or divide 3.5 by 5, because sometimes with conversions you go the other way depending on what the ratio means."
+    },
+    {
+      "reasoning": "The student shows uncertainty about whether to multiply or divide when applying the scale, indicating a need to elicit their reasoning about the meaning of the scale factor.",
+      "state": "Diagnosis",
+      "response": "I notice you're unsure whether to multiply or divide when using the scale. Could you explain what the scale '1 cm represents 5 km' means to you, and why that makes you think about either multiplying or dividing the map distance? Take a moment to describe your reasoning step by step as if you were teaching someone else."
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Well, the scale tells me that each centimeter on the map stands for five kilometers in reality, so if I have more centimeters, I should have more kilometers, which makes me lean toward multiplying. But I also remember that sometimes you divide when you're going from a larger unit to a smaller one, and that makes me second‑guess myself."
+    },
+    {
+      "reasoning": "The student leans toward multiplication but expresses doubt due to unit‑direction confusion; a minimal hint via a simple case can help them test their intuition.",
+      "state": "Support",
+      "response": "To help clarify, let's try a simpler example that follows the same scale. If the map distance were 2 cm, what real‑world distance would that correspond to, based on 1 cm = 5 km? Feel free to say your thought process out loud. Explain why you chose that operation for the 2‑cm case."
+    },
+    {
+      "turn": 5,
+      "student": {
+        "text": "If 1 cm equals 5 km, then 2 cm would be twice that, so 2 times 5 equals 10 km. I multiplied because each centimeter adds the same amount of kilometers, so doubling the centimeters doubles the kilometers."
+      }
+    },
+    {
+      "reasoning": "The student correctly applies multiplication for the integer case, showing they grasp the constant‑rate idea; we can now hint at extending this to the non‑integer 3.5 cm case.",
+      "state": "Support",
+      "response": "Based on the pattern you just described—where each centimeter adds 5 kilometers—how would you calculate the real distance for 3.5 centimeters on the map? Please walk me through the steps you'd take. You can think of it as 3.5 times the scale factor, or as adding 5 km three and a half times."
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "I would multiply 3.5 by 5 because each centimeter contributes 5 km. So 3.5 times 5 equals 17.5 kilometers. You can also think of it as 3 times 5 is 15, plus half of 5 is 2.5, and 15 plus 2.5 gives 17.5 km."
+    },
+    {
+      "reasoning": "The student has computed the correct answer (17.5 km) and shows confidence in multiplication; we now prompt them to articulate why multiplication is appropriate, preparing for rule synthesis.",
+      "state": "Support",
+      "response": "It looks like you've got the right answer; can you explain in your own words why multiplying the map distance by the scale factor gives the actual distance, and what the scale factor represents in this context? Think about how the units cancel or how each centimeter maps to kilometers."
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "The scale factor tells us how many kilometers one centimeter stands for, so it's a constant rate. To find the total kilometers for any number of centimeters, you multiply that rate by the number of centimeters, just like converting units with a constant conversion factor."
+    },
+    {
+      "reasoning": "The student has explained the reasoning behind multiplication; we now ask them to state the conversion rule succinctly in their own words to internalize the concept.",
+      "state": "Synthesis",
+      "response": "Based on our discussion, if you had to tell someone else how to turn any map measurement into a real‑world distance when the scale is 1 cm = 5 km, what would you say the rule is? Please phrase it as a short sentence or formula. Remember to mention whether you multiply or divide, and why."
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "The rule is to multiply the map distance in centimeters by 5 to get the actual distance in kilometers, because each centimeter represents 5 kilometers, so the scale factor acts as a constant multiplier. This works for any map distance; you simply apply the same multiplication, ensuring the units change from cm to km."
+    },
+    {
+      "reasoning": "The student has correctly articulated the rule for converting map distance to real distance using the scale, indicating mastery of the concept.",
+      "state": "Closing",
+      "response": "Great job explaining the rule—you've shown that multiplying the map distance by the scale factor converts centimeters to kilometers correctly. I'm glad you see how the scale works. Would you like to try a similar problem with a different scale to practice?"
+    }
+  ]
+}
+
+
+{
+  "problem": "You have a diary entry written by a soldier during World War II and a textbook chapter about World War II. Identify which is a primary source and which is a secondary source, and explain why.",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I think the diary is a primary source because it’s from the time, but I’m not sure about the textbook; maybe it’s secondary because it’s written later?"
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "Student shows partial understanding, correctly identifies diary as primary but uncertain about textbook; need to explore their criteria for primary sources.",
+      "state": "Diagnosis",
+      "response": "You said the diary seems primary because it’s from the time; could you explain what aspects of its creation make you label it a primary source?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Because it was written by someone who actually experienced the war, like a soldier, so it’s firsthand and from the period itself."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "Student articulated a correct criterion for the diary (firsthand, contemporaneous); now need to see how they apply that to the textbook.",
+      "state": "Diagnosis",
+      "response": "Regarding the textbook, how was it produced, and when do you think it was written compared to the events it describes?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "The textbook is a primary source because it gives the facts about the war, and presenting facts makes it seem like an original account."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "Student incorrectly labels the textbook as primary based on containing facts, revealing a misunderstanding of what makes a source primary; need to probe their understanding of the definition without giving the answer.",
+      "state": "Diagnosis",
+      "response": "When we talk about a primary source, what specific qualities related to its creator and timing do you think define it?"
+    },
+    {
+      "turn": 7,
+      "student": "text",
+      "text": "I see now—a primary source has to be original material from the time period, made by someone who was there, so the textbook, written later by historians, is secondary."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "Student has correctly distinguished primary vs secondary for the examples and articulated the definition; now we want them to state the rule in their own words to consolidate understanding.",
+      "state": "Synthesis",
+      "response": "In your own words, how would you differentiate a primary source from a secondary source based on the qualities we just discussed?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "A primary source is always more reliable than a secondary source because it comes straight from the witness without any interpretation."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "Student introduced a reliability claim that conflates credibility with the definition of primary vs secondary; need to ask them to reflect on what the definition actually concerns.",
+      "state": "Diagnosis",
+      "response": "You brought up reliability; how do you see reliability fitting into the distinction between primary and secondary sources, and does it affect their classification?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "I think the definition is about who made it and when, not about reliability. A primary source is original material from the time, while a secondary source interprets or summarizes those primary sources."
+    },
+    {
+      "turn": 12,
+      "speaker": "tutor",
+      "reasoning": "Student now has the correct definition; we ask them to apply it to the specific diary and textbook to articulate the rule in their own words, demonstrating synthesis.",
+      "state": "Synthesis",
+      "response": "Using the diary and textbook as examples, can you state which one is primary and which is secondary, and explain your reasoning in your own words?"
+    },
+    {
+      "turn": 13,
+      "speaker": "student",
+      "text": "The diary is a primary source because it was written by a soldier who experienced the war, making it firsthand and from the time. The textbook is a secondary source because it was written later by historians who used the diary to explain the war."
+    },
+    {
+      "turn": 14,
+      "speaker": "tutor",
+      "reasoning": "Student has correctly explained the concept, meeting the learning goal; we can wrap up with a brief, positive closing.",
+      "state": "Closing",
+      "response": "Great job! You've nailed the difference between primary and secondary sources. Want to try another example?"
+    }
+  ]
+}
+
+
+{
+  "problem": "You are given five documents related to the 1969 Moon landing: (1) a transcript of Neil Armstrong's live radio transmission from the lunar surface; (2) a 2020 biography of Buzz Aldrin written by a historian; (3) a 1969 newspaper article from The New York Times published the day after the landing; (4) a NASA technical report dated July 1969 detailing the engineering of the lunar module; (5) a 2015 documentary film that includes interviews with astronauts and archival footage. For each document, state whether it is a primary or secondary source, and explain your reasoning.",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I think the transcript, the newspaper article from 1969, and the NASA technical report are primary sources because they were created at the time of the moon landing. I'm not sure about the 2020 biography of Buzz Aldrin or the 2015 documentary."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student correctly identifies three primary sources but expresses uncertainty about the biography and documentary. I need to explore their reasoning for those classifications.",
+      "state": "Diagnosis",
+      "response": "What made you decide that the transcript, newspaper article, and NASA report are primary sources?"
+    },
+    {
+      "turn": 3,
+      "speaker": "tutor",
+      "reasoning": "The student incorrectly labels the biography as a primary source, likely conflating the subject's experience with source type. I will prompt them to consider authorship and timing.",
+      "state": "Support",
+      "response": "When was the biography written, and who wrote it compared to Aldrin?"
+    },
+    {
+      "turn": 4,
+      "speaker": "student",
+      "text": "Oh, the biography was written in 2020 by a historian who wasn’t on the mission, so it’s actually a secondary source. I’m still unsure about the documentary—maybe it’s primary because it shows real footage."
+    },
+    {
+      "turn": 5,
+      "speaker": "tutor",
+      "reasoning": "The student corrected the biography but is uncertain about the documentary, focusing on the footage aspect. I will guide them to think about the documentary’s purpose and framing.",
+      "state": "Support",
+      "response": "What is the main purpose of a documentary like this one—does it aim to show raw footage or to give an interpretation of the events?"
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student again misclassifies the documentary as primary due to the footage, overlooking its interpretive nature. I will encourage them to consider how added narration changes the source type.",
+      "state": "Support",
+      "response": "If a film includes archival footage but also adds narration and commentary, how does that affect whether we call it primary or secondary?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Because the documentary adds narration and edits the footage, it’s interpreting the event, so it’s a secondary source, even though it uses primary material."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student has now correctly identified all five documents and can articulate the distinction. I will ask them to summarize the rule in their own words to solidify understanding.",
+      "state": "Synthesis",
+      "response": "In your own words, what distinguishes a primary source from a secondary source?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "A primary source is an original record created at the time of an event by someone with direct experience, like a transcript or a contemporaneous newspaper article. A secondary source is later work that interprets, analyzes, or summarizes those primary sources, such as a biography written years later or a documentary that adds commentary."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "The student has successfully explained the rule, showing mastery of the concept. The conversation can now conclude with a warm wrap-up.",
+      "state": "Closing",
+      "response": "Nice work! You've got the difference clear. Want to try another example?"
+    }
+  ]
+}

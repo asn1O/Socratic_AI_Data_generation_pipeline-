@@ -362,3 +362,55 @@
   failure_categories:
   speaker_alternation_broken: 2
   other: 1
+2026-09-18 14:40:35,323 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-18 14:41:14,243 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=6422 turns=14 path=data/NVIDIA_nvidia_nemotron-3-super-120b-a12b/asn-set[7].json
+2026-09-18 14:42:14,244 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-18 14:43:35,782 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=10304 turns=12 path=data/NVIDIA_nvidia_nemotron-3-super-120b-a12b/asn-set[7].json
+2026-09-18 14:44:35,782 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-18 14:45:43,551 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=6281 turns=12 path=data/NVIDIA_nvidia_nemotron-3-super-120b-a12b/asn-set[7].json
+2026-09-18 14:46:43,551 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-18 14:48:12,646 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=10650 turns=14 path=data/NVIDIA_nvidia_nemotron-3-super-120b-a12b/asn-set[7].json
+2026-09-18 14:49:12,647 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-18 14:52:00,550 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=13974 turns=14 path=data/NVIDIA_nvidia_nemotron-3-super-120b-a12b/asn-set[8].json
+2026-09-18 14:53:00,551 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-18 14:55:18,844 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=14184 turns=12 path=data/NVIDIA_nvidia_nemotron-3-super-120b-a12b/asn-set[8].json
+2026-09-18 14:56:18,844 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-18 14:58:29,944 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=9801 turns=14 path=data/NVIDIA_nvidia_nemotron-3-super-120b-a12b/asn-set[8].json
+2026-09-18 14:59:29,945 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-18 15:02:01,284 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=14818 turns=12 path=data/NVIDIA_nvidia_nemotron-3-super-120b-a12b/asn-set[8].json
+2026-09-18 15:03:01,285 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-18 15:03:52,839 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=6935 turns=12 path=data/NVIDIA_nvidia_nemotron-3-super-120b-a12b/asn-set[8].json
+2026-09-18 15:04:52,839 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-18 15:06:59,375 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=15206 turns=16 path=data/NVIDIA_nvidia_nemotron-3-super-120b-a12b/asn-set[8].json
+2026-09-18 15:07:59,375 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-18 15:11:27,786 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=19696 turns=14 path=data/NVIDIA_nvidia_nemotron-3-super-120b-a12b/asn-set[8].json
+2026-09-18 15:12:27,787 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-18 15:13:32,447 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=8761 turns=14 path=data/NVIDIA_nvidia_nemotron-3-super-120b-a12b/asn-set[8].json
+2026-09-18 15:14:32,448 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-18 15:15:42,641 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=8847 turns=14 path=data/NVIDIA_nvidia_nemotron-3-super-120b-a12b/asn-set[8].json
+2026-09-18 15:16:42,641 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-18 15:17:54,776 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=8092 turns=12 path=data/NVIDIA_nvidia_nemotron-3-super-120b-a12b/asn-set[8].json
+2026-09-18 15:18:54,777 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-18 15:19:52,995 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=8790 turns=14 path=data/NVIDIA_nvidia_nemotron-3-super-120b-a12b/asn-set[8].json
+2026-09-18 15:20:52,996 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-18 15:23:18,690 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=10069 turns=12 path=data/NVIDIA_nvidia_nemotron-3-super-120b-a12b/asn-set[8].json
+2026-09-18 15:24:18,691 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-18 15:27:05,605 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=11606 turns=14 path=data/NVIDIA_nvidia_nemotron-3-super-120b-a12b/asn-set[8].json
+2026-09-18 15:28:05,606 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-18 15:30:47,566 INFO REJECTED_RESPONSE_SAVED provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b path=data/rejected_responses/asn-NVIDIA_nvidia_nemotron-3-super-120b-a12b.txt
+2026-09-18 15:30:47,566 ERROR JSON_INVALID provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b reason=speaker alternation broken at turn 2
+2026-09-18 15:31:47,567 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-18 15:33:48,084 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=11593 turns=12 path=data/NVIDIA_nvidia_nemotron-3-super-120b-a12b/asn-set[8].json
+2026-09-18 15:34:48,084 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-18 15:38:01,339 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=21029 turns=14 path=data/NVIDIA_nvidia_nemotron-3-super-120b-a12b/asn-set[8].json
+2026-09-18 15:39:01,339 INFO MODEL_SUMMARY
+  provider_model: NVIDIA / nvidia/nemotron-3-super-120b-a12b
+  attempts: 20
+  saved: 19
+  failed: 1
+  accept_rate: 95.00%
+  average_tokens: 11424.11
+  turn_range: 12-16
+  expired: False
+  failure_categories:
+  speaker_alternation_broken: 1

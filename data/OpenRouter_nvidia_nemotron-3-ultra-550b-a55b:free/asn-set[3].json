@@ -643,5 +643,737 @@
         "response": "Great explanation! You've really nailed the energy balance and the reason behind constant temperature during phase changes. I'm impressed with how you worked through the steps and corrected your own mistakes. Ready to try another problem?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Unit conversions",
+    "problem": "Convert 3 kilometers to meters.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I need to convert 3 kilometers to meters. I think 1 kilometer is 100 meters, so 3 km would be 300 meters."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student gave an incorrect conversion factor (1 km = 100 m). Need to understand their reasoning to address the misconception.",
+        "state": "Diagnosis",
+        "response": "How did you decide that 1 kilometer equals 100 meters?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I'm not sure, maybe kilo means 100?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student is unsure about the meaning of the prefix 'kilo-'. A hint about the prefix can guide them to the correct factor.",
+        "state": "Support",
+        "response": "What does the prefix 'kilo-' typically represent in the metric system?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Kilo means 1000, right? So 1 km = 1000 m."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student now knows 1 km = 1000 m but hasn't chosen the operation. Need to see if they understand multiplication vs division.",
+        "state": "Diagnosis",
+        "response": "Great, now with that conversion factor, what operation would you use to go from kilometers to meters?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I think you divide by 1000 because meters are smaller?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly thinks division is needed. A comparison question helps them realize multiplication yields a larger number.",
+        "state": "Support",
+        "response": "If 1 km equals 1000 m, would 3 km be more or fewer meters than 3?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "More, so you multiply. 3 times 1000 = 3000 meters."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student correctly computed 3000 m. Now they should articulate the general rule to consolidate learning.",
+        "state": "Synthesis",
+        "response": "Can you explain in your own words the rule for converting kilometers to meters?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "You multiply the number of kilometers by 1000 because each kilometer has 1000 meters."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has explained the rule correctly; conversation can wrap up.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! Ready for another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Analogies and vocabulary in context",
+    "problem": "Choose the word that best fits the context of the sentence: 'The scientist's ______ approach to the experiment allowed her to isolate the variable with precision.' Options: (A) haphazard (B) meticulous (C) superficial (D) arbitrary",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the answer is 'haphazard' because the scientist's approach seems random and unplanned, and the sentence mentions isolating a variable, which might need a random method to test different possibilities and see what happens."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student chose 'haphazard' but the context clue 'precision' suggests a careful method. Need to elicit reasoning behind the choice.",
+        "state": "Diagnosis",
+        "response": "I notice you selected 'haphazard.' The sentence says the approach allowed her to isolate the variable with precision, which suggests a careful and exact method rather than a random one. Can you explain why you think a random method would lead to that kind of precision?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, 'haphazard' means random, but the sentence says precision, so maybe it's not that. I'm not sure which word fits better; the other options also seem possible, but I'm leaning away from 'haphazard' now."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student recognized mismatch, ready for a hint linking 'precision' to a careful method.",
+        "state": "Support",
+        "response": "Good catch on noticing the mismatch between 'haphazard' and 'precision.' The word 'precision' points to a careful, thorough method rather than a random one. Which of the options means showing great attention to detail and being very exact in execution?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I think 'superficial' means thorough, so that might be the right choice because it sounds like it could describe a detailed approach that covers everything on the surface."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student misdefined 'superficial' as thorough; need to correct the definition and point to the correct answer.",
+        "state": "Support",
+        "response": "Actually, 'superficial' means on the surface or shallow, not thorough. The word that means careful and precise is 'meticulous,' which matches the idea of precision in the sentence. Does that make sense to you now?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, 'meticulous' fits because it means careful and precise, matching the idea of precision in the sentence. I see now why the other words don't work, especially since they imply the opposite."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student has identified the correct word; now guide them to articulate how the context clue eliminated distractors.",
+        "state": "Support",
+        "response": "Exactly. Now, can you tell me how the context clue 'precision' helped you eliminate the other options like 'haphazard,' 'superficial,' and 'arbitrary' from consideration?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The clue 'precision' suggests a method that is exact and thorough, so I eliminated 'haphazard,' 'superficial,' and 'arbitrary' because they all imply a lack of care or randomness, which contradicts precision."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student explained elimination process; now ask for a general strategy for similar items.",
+        "state": "Support",
+        "response": "That's a solid explanation of the elimination process you used. In your own words, what strategy would you use for similar vocabulary-in-context questions when you encounter a blank in a sentence?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I would look for keywords that indicate the tone or meaning needed, then match the answer choice that aligns with that tone, discarding choices that contradict it, and double-check with the surrounding context."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student articulated a strategy; now prompt for a concise rule summary to internalize the concept.",
+        "state": "Synthesis",
+        "response": "Great. Can you summarize the rule for choosing the right word based on context clues, so you can apply it to future problems without getting stuck?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The rule is to identify the key context word that signals the desired meaning, then select the option that matches that meaning while rejecting choices that contradict it, using the surrounding text as evidence."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student correctly explained the rule in their own words; conversation can close warmly.",
+        "state": "Closing",
+        "response": "Nice work! You've got it. Ready for another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Parts of speech",
+    "problem": "Identify the part of speech of the word 'quickly' in the sentence: 'He ran quickly.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think 'quickly' is an adjective because it describes how he ran, and adjectives describe nouns or pronouns, so it seems to fit that role."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student classifies 'quickly' as an adjective, revealing confusion between adjectives and adverbs. Need to diagnose their reasoning.",
+        "state": "Diagnosis",
+        "response": "Can you explain what leads you to classify 'quickly' as an adjective rather than another part of speech, like an adverb?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I assumed adjectives describe actions, so since 'quickly' describes the action 'ran', it must be an adjective."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student thinks adjectives modify verbs; need to hint that adverbs modify verbs.",
+        "state": "Support",
+        "response": "Adjectives modify nouns, but adverbs modify verbs, adjectives, or other adverbs. What does 'quickly' modify in the sentence?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "It modifies 'ran', which is a verb, so 'quickly' must be an adverb rather than an adjective."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student corrected the classification; now guide them to articulate the general rule for adverbs.",
+        "state": "Support",
+        "response": "Good. Now, can you explain the general rule for identifying adverbs in a sentence, perhaps with an example?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "So any word ending in -ly is an adverb, right? That seems like a reliable pattern."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student overgeneralizes the -ly suffix rule; provide counterexamples to prompt refinement.",
+        "state": "Support",
+        "response": "Is that always true? Think of words like 'friendly' or 'lovely'—they end in -ly but function as adjectives."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, those are adjectives. So not all -ly words are adverbs; it depends on what they modify."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has corrected the overgeneralization; ready to synthesize the concept in their own words.",
+        "state": "Synthesis",
+        "response": "In your own words, how do you decide if a word is an adverb when you encounter it in a sentence?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Adverbs modify verbs, adjectives, or other adverbs, often answering how, when, or where. They often end in -ly but not always, so I check what the word modifies."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the rule for identifying adverbs; conversation can close warmly.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "computer_science_light",
+    "topic": "Big-O intuition via analogies",
+    "problem": "An algorithm's runtime doubles when the input size doubles. What is its Big-O complexity? Explain using an everyday analogy.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think it's O(n) but I'm not sure why."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student offers a guess but expresses uncertainty; need to explore their current understanding.",
+        "state": "Diagnosis",
+        "response": "What do you think happens to runtime when input doubles?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I'm not sure."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student is stuck; ask for a concrete situation to ground the concept.",
+        "state": "Diagnosis",
+        "response": "Can you think of a situation where doubling something doubles the effort?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Like walking twice as far takes twice as long?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student gave a correct analogy; now guide them to connect it to Big-O terminology.",
+        "state": "Support",
+        "response": "Right, so if runtime doubles with input, what's the Big-O?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "O(n)?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student identified O(n); ask them to articulate the reasoning in their own words.",
+        "state": "Synthesis",
+        "response": "Can you explain why that's O(n) in your own words?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Because time grows linearly with input size."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student explained linear growth; now ask for an everyday analogy to solidify the concept.",
+        "state": "Synthesis",
+        "response": "Give an everyday analogy for linear growth."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Reading a book: more pages, more time proportionally."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student provided a clear analogy; the concept is mastered, so wrap up.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for another?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Mean, median, mode",
+    "problem": "A class has 5 students with test scores: 72, 78, 80, 80, 95. Calculate the mean, median, and mode. Then explain which measure of center is most affected if the 95 is changed to 100.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know mean is average, median is middle, mode is most frequent. But I'm not sure how to calculate them for this data."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student knows definitions but unsure about calculation; need to elicit their approach to finding mean.",
+        "state": "Diagnosis",
+        "response": "Mean is the sum divided by count. How would you find the sum?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Add them up? 72+78+80+80+95 = 405. Then divide by 5? That's 81."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student computed mean correctly; now guide to median with direct explanation.",
+        "state": "Support",
+        "response": "Median is the middle value when sorted. The data is already sorted. What's the middle number?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "The middle is the third number: 80."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student found median; now guide to mode with hint.",
+        "state": "Support",
+        "response": "Mode is the value that appears most often. Which score appears twice?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "80 appears twice, so mode is 80."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student identified mode; now address effect of outlier with direct explanation.",
+        "state": "Support",
+        "response": "If the 95 changes to 100, the mean will change because it uses all values. The median and mode might not. Which measure is most affected?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Mean changes because sum changes. Median stays 80? Mode stays 80. So mean is most affected."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified mean as most affected; now ask for synthesis in own words.",
+        "state": "Synthesis",
+        "response": "You've got it. In your own words, why is the mean more sensitive to outliers than median or mode?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Mean uses every data point so a large value pulls it up. Median only cares about order, mode about frequency. So mean changes more."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student articulated why mean is sensitive to outliers; conversation complete.",
+        "state": "Closing",
+        "response": "Great job! You've got a solid grasp. Ready for another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Common grammar errors",
+    "problem": "Identify the grammatical error in the sentence: 'Each of the students have a book.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the error is with 'have' but not sure."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student identifies 'have' as potentially wrong but hasn't identified the subject; need to elicit their reasoning about subject-verb agreement.",
+        "state": "Diagnosis",
+        "response": "What makes you think 'have' might be wrong? Think about the subject."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "The subject is 'students', so plural verb 'have' is correct."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student misidentifies 'students' as subject; provide hint that 'each' is the true subject and ask for verb form.",
+        "state": "Support",
+        "response": "Actually, 'each' is the subject, not 'students'. What verb form does 'each' take?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "So 'each' takes 'have' because it's plural?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student still thinks 'each' is plural; reinforce that 'each' is singular and ask for correct singular verb.",
+        "state": "Support",
+        "response": "‘Each’ is singular, so it needs a singular verb. Which singular verb fits?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I think it's 'has', but I'm not sure."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student suggests 'has' but lacks confidence; ask them to explain why they think 'has' fits to assess understanding.",
+        "state": "Diagnosis",
+        "response": "Why do you think 'has' might be right? Consider the subject."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Because 'students' is plural, so 'has' agrees with 'students'?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student reverts to thinking verb agrees with 'students'; remind that verb agrees with 'each' and ask for singular verb.",
+        "state": "Support",
+        "response": "The verb agrees with 'each', not 'students'. What is the singular verb for 'each'?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "So the correct verb is 'has'."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student produced correct answer; now ask them to state the rule in their own words to consolidate learning.",
+        "state": "Synthesis",
+        "response": "Can you explain the rule for subject-verb agreement with 'each'? Recall the singular nature of 'each'."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "When 'each' is the subject, it's singular, so the verb must be singular like 'has'."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the subject-verb agreement rule for 'each'; conversation can close warmly.",
+        "state": "Closing",
+        "response": "Great job! You've got it. Ready for another?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "physics",
+    "topic": "Newton's laws in everyday scenarios",
+    "problem": "A 5 kg box is pushed across a horizontal floor with a constant force of 20 N applied at 30° above the horizontal. The coefficient of kinetic friction is 0.2. Find the acceleration of the box.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know we need net force, but the angle confuses me. Do I just use 20 N horizontal?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student knows net force concept but unsure about angle decomposition; need to elicit free-body diagram and components.",
+        "state": "Diagnosis",
+        "response": "Let's start with a free-body diagram. The forces are gravity, normal, the 20 N push at 30°, and friction. What are the horizontal and vertical components of the push?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Horizontal is 20 cos30 ≈ 17.3 N, vertical is 20 sin30 = 10 N upward."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student correctly decomposed force; now guide to see how vertical component affects normal force.",
+        "state": "Support",
+        "response": "Good. The vertical component reduces the normal force because it lifts up. So normal force N = mg - 10 N. With m=5 kg, g=9.8, mg=49 N. What's N?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "So N = 49 + 10 = 59 N."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student added vertical component instead of subtracting; correct the sign and compute friction.",
+        "state": "Support",
+        "response": "Actually, the upward component reduces the normal force, so it's mg minus the vertical component. N = 49 - 10 = 39 N. Now friction = μN = 0.2 × 39 = 7.8 N. What's the net horizontal force?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Net horizontal = 17.3 - 7.8 = 9.5 N. Acceleration = 9.5 / 5 = 1.9 m/s²."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student computed correctly; reinforce the sequence of steps.",
+        "state": "Support",
+        "response": "Exactly. So the acceleration is about 1.9 m/s². The key steps: resolve the force, adjust normal, find friction, then net force and acceleration."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Okay, I got the acceleration as 1.9 m/s²."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has correct answer; now ask for generalization to ensure internalization.",
+        "state": "Synthesis",
+        "response": "Can you summarize the general approach for any angled push on a horizontal surface?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "First, break the applied force into components. The vertical component changes the normal force, which changes friction. Then horizontal component minus friction gives net force, and a = F_net/m."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student articulated the rule correctly; conversation can close warmly.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! Ready for the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Logical sequences",
+    "problem": "Find the next number in the sequence: 2, 3, 6, 7, 14, 15, ?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I see the numbers go 2, 3, 6, 7, 14, 15... maybe it's adding 1 then multiplying by 2? But then 15+1=16? Not sure."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student offered a hypothesis but is uncertain; need to explore their thinking to diagnose understanding.",
+        "state": "Diagnosis",
+        "response": "Interesting guess. Can you walk me through how you got from 2 to 3, then 3 to 6, and so on?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, 2 to 3 is plus 1, 3 to 6 is times 2, 6 to 7 is plus 1, 7 to 14 is times 2, 14 to 15 is plus 1. So maybe next is times 2? That would be 30. But earlier I thought maybe plus 1 again? I'm confused."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student identified alternating operations but unsure which comes next; give a hint about pattern consistency.",
+        "state": "Support",
+        "response": "You've spotted the alternating +1 and ×2. What would keep the pattern consistent after 15?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "If it alternates, after plus 1 should be times 2, so 30. But wait, maybe it's plus 1, times 2, plus 1, times 2... so after 15 it's plus 1? That would be 16. I'm not sure which operation comes next."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student confused about order; hint about the starting operation to anchor the pattern.",
+        "state": "Support",
+        "response": "Look at the very first step: 2 to 3. Which operation happened first? That might tell you the sequence's order."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "First step was plus 1. So the pattern is plus 1, times 2, plus 1, times 2... So after 15, it should be times 2? That gives 30. But earlier I thought maybe the pattern changes? I'm lost on why it would change."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student now sees pattern but doubts; need to confirm understanding and address uncertainty.",
+        "state": "Diagnosis",
+        "response": "You've got the alternating operations down. Why do you think the pattern might change? What would make it change?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Maybe because the numbers get bigger? Or maybe there's a different rule like adding increasing numbers? I don't really get what that means."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student considering alternative patterns; hint to test if alternative fits all terms.",
+        "state": "Support",
+        "response": "Good to consider alternatives. Could an 'adding increasing numbers' rule produce 2, 3, 6, 7, 14, 15? Try checking the differences."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Differences: 1, 3, 1, 7, 1... that's not a clear pattern. So the alternating +1 and ×2 fits better. So next is 30."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correct answer and reasoning; ask them to articulate the rule to synthesize learning.",
+        "state": "Synthesis",
+        "response": "Exactly. In your own words, what is the rule that generates this sequence?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The rule is: start with 2, then alternately add 1 and multiply by 2. So you add 1 to get 3, multiply by 2 to get 6, add 1 to get 7, multiply by 2 to get 14, add 1 to get 15, multiply by 2 to get 30, and so on."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student correctly explained the rule; wrap up the session warmly.",
+        "state": "Closing",
+        "response": "Nice work! You've nailed the alternating pattern. Ready for another sequence?"
+      }
+    ]
   }
 ]

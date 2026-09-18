@@ -1129,5 +1129,179 @@
         "response": "Spot on explanation! You've got this concept down completely. Great job working through that!"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Cost-benefit reasoning",
+    "problem": "Imagine a municipal government is deciding whether to approve funding for a new automated traffic camera network that generates significant revenue through fines while reducing accidents by 15%. Critics argue it disproportionately burdens lower-income residents who commit minor infractions. Using cost-benefit reasoning, how should the city weigh quantifiable financial benefits and safety metrics against equity concerns and non-quantifiable community impacts?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I guess the city should just calculate the total revenue from the fines, subtract the installation costs, and see if it's positive. If the net financial gain is higher than the accident reduction value, they should fund it."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is focusing purely on financial and quantifiable metrics, ignoring non-monetizable impacts and equity. I need to probe their reasoning to see how they account for qualitative factors.",
+        "state": "Diagnosis",
+        "response": "How would you factor in the equity concerns for lower-income residents when your formula only looks at financial gain and accident rates?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, equity is just a political talking point, so it doesn't really belong in a pure cost-benefit analysis where everything has to be converted into hard dollar amounts."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has made an incorrect claim that equity cannot or should not be part of cost-benefit analysis. I need to challenge this assumption without giving away the method.",
+        "state": "Diagnosis",
+        "response": "Can non-monetary impacts like fairness or community trust ever be systematically evaluated in a comprehensive ethical framework, or must cost-benefit analysis strictly exclude them?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Hmm, I suppose they could be included if we assign some sort of shadow price or penalty to unequal outcomes, but that feels pretty subjective compared to direct fine revenue."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student recognizes the possibility of shadow pricing but is hesitant about subjectivity. I will offer a hint about how complex decisions handle non-quantifiable factors.",
+        "state": "Support",
+        "response": "What other methods besides direct dollar assignment do analysts use when certain costs or harms resist precise monetary quantification?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "They could use a multi-criteria decision matrix where safety, revenue, and equity are each scored on separate qualitative scales rather than forced into a single dollar figure."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified a multi-criteria approach. Now I need to guide them to synthesize how this integrates back into overall cost-benefit reasoning for this specific dilemma.",
+        "state": "Support",
+        "response": "How does weighting those separate qualitative scales alongside your financial metrics change the final calculation of net benefit?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "It means the net benefit isn't just about money; it's about balancing quantifiable safety and revenue against the distribution of burdens across different income groups."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student is nearly there. I need them to articulate the complete principle in their own words before closing.",
+        "state": "Synthesis",
+        "response": "In your own words, how should a thorough cost-benefit analysis handle both measurable financial returns and unquantified equity impacts when making a final policy decision?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "A rigorous cost-benefit approach has to expand beyond simple financial math to incorporate distributive impacts and qualitative harms, ensuring that a policy isn't deemed beneficial overall if its burdens fall disproportionately and unfairly on a vulnerable group."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has accurately explained the concept. The conversation is complete.",
+        "state": "Closing",
+        "response": "Spot on! You've captured how robust ethical analysis must account for distribution and qualitative harms alongside raw numbers. Ready for another scenario?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Supply and demand",
+    "problem": "Suppose the market for coffee experiences an unexpected frost in Brazil that destroys a large portion of the coffee crop. What happens to the equilibrium price and quantity of coffee?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the frost means fewer coffee beans, so demand goes down because people can't buy as much."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student conflated a supply reduction with a drop in consumer demand. I need to probe their thinking on who is affected by the crop destruction.",
+        "state": "Diagnosis",
+        "response": "When the frost destroys the crop, does that affect the people who want to buy coffee, or the farmers who are trying to grow and sell it?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, right, it affects the farmers. So that changes the supply, not the demand."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student successfully corrected their initial confusion and identified supply. Now I'll guide them to see the directional shift.",
+        "state": "Support",
+        "response": "Exactly. If fewer beans are harvested, what happens to the supply curve on a graph?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "The supply curve would shift to the left, meaning a decrease in supply."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified a leftward shift. I will now ask them to trace the impact of this shift on equilibrium price.",
+        "state": "Diagnosis",
+        "response": "With that supply curve shifted to the left, what happens to the equilibrium price in the market?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Prices should go up because coffee is scarcer now."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly deduced the price change. I will prompt them to complete the picture by looking at the equilibrium quantity.",
+        "state": "Support",
+        "response": "Spot on. And how does that higher price affect the total quantity traded in the market?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The quantity traded decreases since higher prices push some buyers away and less is available."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has the full picture. Now I need them to synthesize the core principle in their own words.",
+        "state": "Synthesis",
+        "response": "In your own words, how does a negative supply shock like this generally affect equilibrium price and quantity?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "When supply decreases, scarcity drives the price up and lowers the overall quantity exchanged in the market."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the economic concept. Closing the session warmly.",
+        "state": "Closing",
+        "response": "Nailed it! Great job working through that shift. Let me know if you want to tackle another one."
+      }
+    ]
   }
 ]

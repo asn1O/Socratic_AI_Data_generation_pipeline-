@@ -151,3 +151,55 @@
   expired: False
   failure_categories:
   empty_response: 5
+2026-09-18 14:40:35,327 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-18 14:45:08,634 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=6310 turns=12 path=data/Google_gemma-4-31b-it/asn-set[2].json
+2026-09-18 14:46:08,635 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-18 14:49:05,789 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=5928 turns=16 path=data/Google_gemma-4-31b-it/asn-set[3].json
+2026-09-18 14:50:05,790 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-18 14:52:06,941 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=5337 turns=14 path=data/Google_gemma-4-31b-it/asn-set[3].json
+2026-09-18 14:53:06,942 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-18 14:55:15,667 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=5990 turns=12 path=data/Google_gemma-4-31b-it/asn-set[3].json
+2026-09-18 14:56:15,667 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-18 14:56:44,501 ERROR MODEL_FAILURE provider=Google model=gemma-4-31b-it error_code=HTTP_500 reason=model call failed or returned no response
+2026-09-18 14:57:44,502 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-18 14:59:12,116 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=5046 turns=16 path=data/Google_gemma-4-31b-it/asn-set[3].json
+2026-09-18 15:00:12,116 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-18 15:00:16,930 ERROR MODEL_FAILURE provider=Google model=gemma-4-31b-it error_code=HTTP_500 reason=model call failed or returned no response
+2026-09-18 15:01:16,930 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-18 15:04:22,291 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=6313 turns=14 path=data/Google_gemma-4-31b-it/asn-set[3].json
+2026-09-18 15:05:22,292 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-18 15:13:00,185 ERROR MODEL_FAILURE provider=Google model=gemma-4-31b-it error_code=HTTP_500 reason=model call failed or returned no response
+2026-09-18 15:14:00,185 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-18 15:15:15,301 ERROR MODEL_FAILURE provider=Google model=gemma-4-31b-it error_code=HTTP_500 reason=model call failed or returned no response
+2026-09-18 15:16:15,302 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-18 15:19:37,759 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=7439 turns=12 path=data/Google_gemma-4-31b-it/asn-set[3].json
+2026-09-18 15:20:37,759 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-18 15:23:04,711 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=6368 turns=12 path=data/Google_gemma-4-31b-it/asn-set[3].json
+2026-09-18 15:24:04,711 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-18 15:26:53,476 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=7022 turns=14 path=data/Google_gemma-4-31b-it/asn-set[3].json
+2026-09-18 15:27:53,476 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-18 15:30:43,125 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=7338 turns=12 path=data/Google_gemma-4-31b-it/asn-set[3].json
+2026-09-18 15:31:43,126 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-18 15:33:40,008 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=4353 turns=12 path=data/Google_gemma-4-31b-it/asn-set[3].json
+2026-09-18 15:34:40,008 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-18 15:37:04,337 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=6520 turns=12 path=data/Google_gemma-4-31b-it/asn-set[3].json
+2026-09-18 15:38:04,337 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-18 15:40:07,565 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=5824 turns=12 path=data/Google_gemma-4-31b-it/asn-set[3].json
+2026-09-18 15:41:07,565 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-18 15:41:51,734 ERROR MODEL_FAILURE provider=Google model=gemma-4-31b-it error_code=HTTP_500 reason=model call failed or returned no response
+2026-09-18 15:42:51,734 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-18 15:43:01,627 ERROR MODEL_FAILURE provider=Google model=gemma-4-31b-it error_code=HTTP_500 reason=model call failed or returned no response
+2026-09-18 15:44:01,627 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-09-18 15:44:06,574 ERROR MODEL_FAILURE provider=Google model=gemma-4-31b-it error_code=HTTP_500 reason=model call failed or returned no response
+2026-09-18 15:44:06,574 ERROR MODEL_EXPIRED provider=Google model=gemma-4-31b-it reason=three consecutive API failures
+2026-09-18 15:45:06,574 INFO MODEL_SUMMARY
+  provider_model: Google / gemma-4-31b-it
+  attempts: 20
+  saved: 13
+  failed: 7
+  accept_rate: 65.00%
+  average_tokens: 6137.54
+  turn_range: 12-16
+  expired: True
+  failure_categories:
+  empty_response: 7
