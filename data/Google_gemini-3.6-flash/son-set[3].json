@@ -643,5 +643,365 @@
         "response": "That is a brilliant explanation! You explained the genetic inheritance and probability steps clearly. Excellent job working through that, and feel free to let me know whenever you are ready to tackle another genetics problem!"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Syllogisms",
+    "problem": "Premise 1: All logs are made of wood.\nPremise 2: Some wood floats on water.\nConclusion: Therefore, some logs float on water.\nIs this argument logically valid?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "The argument is valid because logs are wood and some wood floats."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student conflates factual category membership with logical necessity. I need to probe whether Premise 2 guarantees an overlap with logs.",
+        "state": "Diagnosis",
+        "response": "Does premise two state that the floating wood definitely includes logs?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Yes, since all logs are wood, any property of wood applies to some logs."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student overgeneralized a property of 'some wood' to 'all wood' categories. I will point this distinction out and ask a prompt.",
+        "state": "Support",
+        "response": "Just because some wood floats doesn't mean all wood does. Could the floating wood be something else?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh right. But if we rephrase it, 'some floating things are wood' means logs must float."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made a conversion error to force an intersection. I'll offer a specific counterexample to test their assumption.",
+        "state": "Support",
+        "response": "If the floating wood were only bamboo, would logs necessarily float then?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "No, if only bamboo floats, logs wouldn't float at all."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student recognized the counterexample. I need to check if they now connect this back to formal logical validity.",
+        "state": "Diagnosis",
+        "response": "So is the conclusion guaranteed to follow logically from those premises?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Wait, but wouldn't 'some logs float' still be valid if wood and logs overlap?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The misconception resurfaced—confusing possibility with deductive necessity. I will contrast guaranteed truth with possibility and ask for an explanation.",
+        "state": "Synthesis",
+        "response": "Validity requires guaranteed truth. In your own words, what determines if an argument is valid?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "An argument is valid only if the premises guarantee the conclusion, not if overlap is merely possible."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student correctly articulated the core definition of logical validity in their own words. Time to wrap up.",
+        "state": "Closing",
+        "response": "Spot on! That's the key distinction in formal logic. Ready to try another?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "biology",
+    "topic": "Photosynthesis",
+    "problem": "A researcher exposes isolated, active chloroplasts to light along with labeled H2^18O and 14CO2. Once steady-state photosynthesis is established, a specific chemical inhibitor of phosphoribulokinase (PRK) is added. Predict and explain the sequential effects on 14CO2 fixation, stromal ATP/NADPH levels, and the rate of ^18O2 evolution.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "When the PRK inhibitor is added, RuBP regeneration stops. However, Rubisco will continue to fix 14CO2 into 3-PGA indefinitely at a high rate because 3-PGA production doesn't directly depend on RuBP."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student made an explicit error regarding the substrates of Rubisco, claiming 3-PGA production can continue without RuBP. I need to diagnose their knowledge of the Rubisco reaction.",
+        "state": "Diagnosis",
+        "response": "Let's review the enzyme Rubisco. What are the specific reactant molecules that Rubisco requires to perform the initial carbon fixation reaction?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Ah, right. Rubisco requires both CO2 and RuBP as substrates. So once the existing pool of RuBP is exhausted, 14CO2 fixation will rapidly stop because no new RuBP is being regenerated."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student corrected the substrate requirement for Rubisco. Now I will guide them to consider how this Calvin cycle block impacts the light reaction products.",
+        "state": "Support",
+        "response": "Exactly, RuBP is required for fixation. Since the Calvin cycle is now stalled, consider what happens to ATP and NADPH, which are normally consumed in converting 3-PGA to G3P."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Since 3-PGA isn't being converted to G3P, the Calvin cycle stops consuming ATP and NADPH. That means ATP and NADPH will rapidly accumulate in the stroma."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly deduced ATP/NADPH accumulation. I need to probe if they understand how this stromal NADPH buildup feeds back into the light reactions.",
+        "state": "Diagnosis",
+        "response": "How does this buildup of stromal NADPH affect the availability of NADP+ and the subsequent rate of water splitting and ^18O2 evolution?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "The rate of ^18O2 evolution will remain completely unchanged because photolysis of water in Photosystem II is driven strictly by light absorption, independent of downstream electron acceptors like NADP+."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student asserted a second mistake, claiming photolysis is independent of downstream electron acceptors. I need to provide a hint about electron transport chain requirements.",
+        "state": "Support",
+        "response": "Remember that electron transport requires a complete pathway. If all NADP+ is reduced to NADPH, where can the excited electrons from Photosystem II actually go?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, of course. If there's no NADP+ available to accept electrons, the electron transport chain backs up completely. Without open electron acceptors, PSII can't transfer electrons, so photolysis halts and ^18O2 release drops."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student successfully realized how electron back-pressure halts photolysis. Now I want them to synthesize the entire multi-step pathway in their own words.",
+        "state": "Synthesis",
+        "response": "Could you summarize the complete domino effect in your own words, starting from PRK inhibition and ending with the drop in ^18O2 release?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Inhibiting PRK stops RuBP regeneration, which halts CO2 fixation once RuBP runs out. Without 3-PGA reduction, ATP and NADPH accumulate, depleting NADP+. Without NADP+ as a terminal electron acceptor, electron transport backs up, halting PSII photolysis and stopping ^18O2 evolution."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student correctly synthesized the entire multi-step sequence connecting the Calvin cycle to light reactions. The problem is fully solved, so I am closing the conversation.",
+        "state": "Closing",
+        "response": "Spot on! That was a complex multi-step pathway, and you walked through the entire feedback mechanism perfectly. Excellent work!"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Probability",
+    "problem": "A standard fair six-sided die is rolled once. What is the probability of rolling an even number?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know probability is favorable outcomes divided by total outcomes, but I'm not totally sure how to set that up for rolling an even number on a die."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student remembers the basic probability formula but needs to break down the problem into total outcomes and favorable outcomes. Direct guidance will help them list the possible outcomes.",
+        "state": "Diagnosis",
+        "response": "You already have the right formula in mind. A standard six-sided die has faces numbered 1 through 6. What are all the possible outcomes when you roll it once?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "The possible outcomes are 1, 2, 3, 4, 5, and 6. So there are 6 total outcomes."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the total number of outcomes. Now I will direct them to identify the favorable outcomes from that list.",
+        "state": "Support",
+        "response": "That is correct, so our total number of outcomes is 6. Next, look at those numbers from 1 to 6 and count how many of them are even."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "The even numbers in that list are 2, 4, and 6. So there are 3 favorable outcomes."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the favorable outcomes. Now I'll guide them to combine both values into the probability formula.",
+        "state": "Support",
+        "response": "Spot on. You have 3 favorable outcomes out of 6 total possibilities. Now, plug those two values into your formula to calculate the probability."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "So that would be 3 divided by 6, which reduces to 1/2 or 0.5. I think that's right?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student calculated the correct probability but expressed slight uncertainty. I will confirm their calculation explicitly before moving to synthesis.",
+        "state": "Support",
+        "response": "Yes, 3 out of 6 simplifies to 1/2. You successfully identified both the total possibilities and the targeted outcomes to find the exact probability."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Okay, awesome! That makes sense now."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student reached the correct answer. Now I want them to articulate the core rule in their own words to reinforce conceptual understanding.",
+        "state": "Synthesis",
+        "response": "You did great work on this. In your own words, can you explain the general rule for finding the probability of an event?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "To find the probability of an event, you count the number of favorable outcomes and divide that by the total number of possible outcomes."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the rule in their own words. The session is complete and ready for wrap-up.",
+        "state": "Closing",
+        "response": "That is a perfect summary! You've got this concept down solid. Would you like to try another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "chemistry",
+    "topic": "Acids and bases",
+    "problem": "Calculate the pH of a solution prepared by mixing 50 mL of 0.10 M acetic acid (Ka = 1.8 x 10^-5) with 25 mL of 0.10 M NaOH.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I tried taking the negative log of 0.10 M NaOH to get pH, but I'm completely lost."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student tried to calculate pH directly from NaOH without accounting for the reaction with acetic acid. I need to direct their attention to the chemical reaction first.",
+        "state": "Diagnosis",
+        "response": "What actually happens chemically when you mix a strong base with a weak acid?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I know they react and neutralize each other, but I don't really get what's left behind."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student understands neutralization occurs conceptually but struggles with quantities. I will prompt them to find the starting moles.",
+        "state": "Diagnosis",
+        "response": "Neutralization happens, yes. Can you calculate how many moles of acid and base you started with?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Acetic acid is 0.005 moles and NaOH is 0.0025 moles."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student calculated the moles correctly. Now I should guide them to determine what remains after the reaction consumes reactants.",
+        "state": "Support",
+        "response": "Great calculations. After those reaction moles neutralize, what amounts of acid and conjugate base remain?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Since 0.0025 moles react, we have 0.0025 moles acetic acid left and 0.0025 moles acetate formed."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student accurately completed the stoichiometry step. Now I need to see if they recognize the specific system created by equal amounts of weak acid and conjugate base.",
+        "state": "Diagnosis",
+        "response": "When you have equal amounts of a weak acid and its conjugate base, what special mixture is that?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Wait, is that a buffer solution? I think we use the Henderson-Hasselbalch equation here."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the buffer system. I will ask them to evaluate how equal concentrations affect the Henderson-Hasselbalch equation.",
+        "state": "Support",
+        "response": "Spot on. If the acid and conjugate base concentrations are equal, what does the Henderson-Hasselbalch equation tell us about pH?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The log term becomes log of 1, which is zero, so pH just equals pKa!"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student reached the correct mathematical solution. I now want them to synthesize the entire problem-solving strategy in their own words.",
+        "state": "Synthesis",
+        "response": "Exactly right! In your own words, how do we find the pH when partially neutralizing a weak acid?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "We calculate reactant moles, find remaining weak acid and formed conjugate base, and use buffer math to get pH."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student clearly articulated the multi-step reasoning process. The goal is achieved, so I will close the session.",
+        "state": "Closing",
+        "response": "Fantastic explanation, you nailed it! Ready to try another chemistry problem?"
+      }
+    ]
   }
 ]

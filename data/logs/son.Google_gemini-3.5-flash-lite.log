@@ -192,3 +192,62 @@
   expired: False
   failure_categories:
   turn_count_out_of_range: 3
+2026-09-18 17:38:55,273 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 17:39:03,586 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3489 turns=12 path=data\Google_gemini-3.5-flash-lite\son-set[4].json
+2026-09-18 17:40:03,583 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 17:40:07,421 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3067 turns=12 path=data\Google_gemini-3.5-flash-lite\son-set[4].json
+2026-09-18 17:41:07,418 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 17:41:12,796 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3556 turns=12 path=data\Google_gemini-3.5-flash-lite\son-set[4].json
+2026-09-18 17:42:12,794 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 17:42:16,720 INFO REJECTED_RESPONSE_SAVED provider=Google model=gemini-3.5-flash-lite path=data\rejected_responses\son-Google_gemini-3.5-flash-lite.txt
+2026-09-18 17:42:16,720 ERROR JSON_INVALID provider=Google model=gemini-3.5-flash-lite reason=invalid JSON: Expecting property name enclosed in double quotes
+2026-09-18 17:43:16,718 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 17:43:23,419 INFO REJECTED_RESPONSE_SAVED provider=Google model=gemini-3.5-flash-lite path=data\rejected_responses\son-Google_gemini-3.5-flash-lite.txt
+2026-09-18 17:43:23,419 ERROR JSON_INVALID provider=Google model=gemini-3.5-flash-lite reason=invalid JSON: Invalid \escape
+2026-09-18 17:44:23,417 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 17:44:27,128 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3143 turns=12 path=data\Google_gemini-3.5-flash-lite\son-set[4].json
+2026-09-18 17:45:27,126 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 17:45:31,950 INFO REJECTED_RESPONSE_SAVED provider=Google model=gemini-3.5-flash-lite path=data\rejected_responses\son-Google_gemini-3.5-flash-lite.txt
+2026-09-18 17:45:31,950 ERROR JSON_INVALID provider=Google model=gemini-3.5-flash-lite reason=turn count 10 outside [12, 18]
+2026-09-18 17:46:31,948 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 17:46:36,493 INFO REJECTED_RESPONSE_SAVED provider=Google model=gemini-3.5-flash-lite path=data\rejected_responses\son-Google_gemini-3.5-flash-lite.txt
+2026-09-18 17:46:36,493 ERROR JSON_INVALID provider=Google model=gemini-3.5-flash-lite reason=invalid JSON: Expecting ',' delimiter
+2026-09-18 17:47:36,491 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 17:47:42,036 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3601 turns=14 path=data\Google_gemini-3.5-flash-lite\son-set[4].json
+2026-09-18 17:48:42,034 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 17:48:46,365 INFO REJECTED_RESPONSE_SAVED provider=Google model=gemini-3.5-flash-lite path=data\rejected_responses\son-Google_gemini-3.5-flash-lite.txt
+2026-09-18 17:48:46,365 ERROR JSON_INVALID provider=Google model=gemini-3.5-flash-lite reason=turn count 10 outside [12, 18]
+2026-09-18 17:49:46,363 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 17:49:51,162 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3260 turns=12 path=data\Google_gemini-3.5-flash-lite\son-set[4].json
+2026-09-18 17:50:51,161 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 17:50:56,929 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3741 turns=12 path=data\Google_gemini-3.5-flash-lite\son-set[4].json
+2026-09-18 17:51:56,927 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 17:52:01,098 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3300 turns=12 path=data\Google_gemini-3.5-flash-lite\son-set[4].json
+2026-09-18 17:53:01,097 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 17:53:06,128 INFO REJECTED_RESPONSE_SAVED provider=Google model=gemini-3.5-flash-lite path=data\rejected_responses\son-Google_gemini-3.5-flash-lite.txt
+2026-09-18 17:53:06,128 ERROR JSON_INVALID provider=Google model=gemini-3.5-flash-lite reason=invalid JSON: Expecting ',' delimiter
+2026-09-18 17:54:06,126 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 17:54:09,809 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3112 turns=12 path=data\Google_gemini-3.5-flash-lite\son-set[5].json
+2026-09-18 17:55:09,812 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 17:55:13,597 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3118 turns=12 path=data\Google_gemini-3.5-flash-lite\son-set[5].json
+2026-09-18 17:56:13,595 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 17:56:20,291 INFO REJECTED_RESPONSE_SAVED provider=Google model=gemini-3.5-flash-lite path=data\rejected_responses\son-Google_gemini-3.5-flash-lite.txt
+2026-09-18 17:56:20,291 ERROR JSON_INVALID provider=Google model=gemini-3.5-flash-lite reason=turn count 13 is not even
+2026-09-18 17:57:20,289 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 17:57:25,342 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3399 turns=12 path=data\Google_gemini-3.5-flash-lite\son-set[5].json
+2026-09-18 17:58:25,340 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 17:58:30,419 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3585 turns=12 path=data\Google_gemini-3.5-flash-lite\son-set[5].json
+2026-09-18 17:59:30,418 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-18 17:59:38,568 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=4397 turns=12 path=data\Google_gemini-3.5-flash-lite\son-set[5].json
+2026-09-18 18:00:38,568 INFO MODEL_SUMMARY
+  provider_model: Google / gemini-3.5-flash-lite
+  attempts: 20
+  saved: 13
+  failed: 7
+  accept_rate: 65.00%
+  average_tokens: 3443.69
+  turn_range: 12-14
+  expired: False
+  failure_categories:
+  invalid_json_syntax: 4
+  turn_count_out_of_range: 3

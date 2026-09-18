@@ -161,3 +161,132 @@
     }
   ]
 }
+
+
+{
+  "problem": "You are planning a 2‑night weekend trip. You have $150 total to spend. Transportation: bus $30 round trip, train $50 round trip. Lodging: hostel $40 per night, hotel $80 per night. Meals: $15 per day if you cook, $25 per day if you eat out. You want to have as much money left as possible for activities. Which combination of choices gives you the most leftover money?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I’ve set aside $150 for a short weekend getaway, but I’m feeling a bit overwhelmed about how to break that down into actual expenses. I know I’ll need to cover things like getting there, where I’ll stay, what I’ll eat, and maybe set aside a little extra for fun activities or souvenirs, but I’m not sure how to start calculating whether my budget will cover everything or what trade‑offs I might need to make."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student shows uncertainty and needs to articulate their current thinking about trip expenses.",
+      "state": "Diagnosis",
+      "response": "Before we dive into numbers, it helps to list out what you expect to spend on. What kinds of expenses do you think you’ll need to cover for this trip?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "I suppose the biggest chunks of my budget will go toward the actual travel to the city, the nightly cost of a place to rest, and daily meals. After those are covered, I’d hope to have some leftover cash for fun stuff like museum tickets, guided tours, or little souvenirs to remember the trip by."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student listed general expense categories; now we need to guide them to consider specific transportation options and their costs.",
+      "state": "Support",
+      "response": "Let’s begin with transportation, as it’s often the first major expense you encounter when planning a trip. You’ve got two main choices here: you can take a bus, which tends to be the cheaper option, or you can opt for a train, which might be faster but usually costs more. Do you have a rough idea of how much each of those tickets would set you back?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "reasoning": "The student asserts an incorrect claim about the relative costs of bus and train, mistakenly thinking the train is cheaper.",
+      "state": "Support",
+      "response": "I’m pretty sure the train is the more economical choice, so I’d plan to take the train for a round‑trip fare of just $30, whereas the bus would end up costing me $50 for the same round trip. I think saving $20 on transport would give me more room for other expenses."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student gave a wrong relation between bus and train costs; we need to hint them to check the given numbers without revealing the answer directly.",
+      "state": "Support",
+      "response": "Let’s verify the figures given in the problem statement: it clearly lists the bus fare as $30 for a round trip and the train fare as $50 for a round trip. Does that align with what you just mentioned, or did you perhaps mix the two up?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "reasoning": "The student corrected their misunderstanding about which transport option is cheaper after the hint.",
+      "state": "Support",
+      "response": "Ah, I see where I went wrong now—the bus is actually the cheaper option, priced at $30 for a round trip, while the train comes in at $50 for the same round‑trip distance. I guess I had the two mixed up in my head."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student now knows the correct transport costs; we shift focus to lodging options and ask about the length of stay.",
+      "state": "Support",
+      "response": "Now let’s shift our focus to lodging, where you also have a choice between a budget‑friendly hostel and a more comfortable hotel. The hostel charges $40 for each night you stay, whereas the hotel rate is $80 per night. How many nights are you planning to stay for this weekend trip?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "reasoning": "The student mistakenly treats the hostel price as a flat fee for the entire stay rather than a per‑night rate.",
+      "state": "Support",
+      "response": "Because I’m only staying two nights, I’ll go with the hostel and assume the total lodging cost will be a flat $40, regardless of the number of nights. I’m thinking of it like a one‑time fee that covers the whole stay, even though I know it’s usually per night."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "The student misunderstands the hostel pricing as a flat fee; we remind them it’s per night and prompt them to calculate the correct total for two nights.",
+      "state": "Support",
+      "response": "Just a quick reminder that the hostel’s price is quoted per night, not as a flat fee that covers the entire stay. If the nightly rate is $40, what would the total lodging expense come out to for a two‑night stay, assuming you stay both nights?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "reasoning": "The student correctly calculates the hostel cost for two nights after the per‑night reminder.",
+      "state": "Support",
+      "response": "Okay, that makes sense now—since the hostel charges $40 for each night I stay, for two nights I’d need to multiply $40 by 2, which gives me a total lodging cost of $80. I see how the per‑night rate adds up over multiple nights."
+    },
+    {
+      "turn": 12,
+      "speaker": "tutor",
+      "reasoning": "The student has the lodging cost figured out; we now move on to discuss meal options and ask about the number of days.",
+      "state": "Support",
+      "response": "Moving on to meals, you have two options: you can prepare your own food, which works out to about $15 per day, or you can eat out at restaurants, which tends to run around $25 per day. How many days will you be away on this trip?"
+    },
+    {
+      "turn": 13,
+      "speaker": "student",
+      "reasoning": "The student incorrectly assumes that meal cost is the same whether cooking or eating out, ignoring the higher price for eating out.",
+      "state": "Support",
+      "response": "I’m assuming that whether I cook my own meals or eat out, the daily food cost will be the same—about $15 per day—so for my two‑day trip the total food expense would be $15 multiplied by 2, which equals $30. I’m not thinking about the pricier restaurant option at all."
+    },
+    {
+      "turn": 14,
+      "speaker": "tutor",
+      "reasoning": "The student gave an inaccurate assumption about meal costs; we need to highlight the distinction between the two options presented in the problem.",
+      "state": "Support",
+      "response": "The problem statement actually separates the two meal options: preparing your own food costs $15 per day, whereas eating out at restaurants costs $25 per day. Does that correspond to what you just described, or did you perhaps overlook the difference between the two options?"
+    },
+    {
+      "turn": 15,
+      "speaker": "student",
+      "reasoning": "The student now knows the correct per‑night hostel rate and meal costs, but when computing the total cost for the cheapest combination they relapse into the earlier misconception of treating the hostel as a flat fee.",
+      "state": "Support",
+      "response": "If I choose the cheapest options—bus for transport, hostel for lodging, and cooking for meals—I’d calculate: bus $30, hostel $40 for the whole stay (I think it’s a flat fee), and cooking $15 per day × 2 days = $30. So total would be $30 + $40 + $30 = $100."
+    },
+    {
+      "speaker": "tutor",
+      "turn": 16,
+      "reasoning": "The student resurfaced the hostel‑as‑flat‑fee misconception while attempting to compute the total cost for the cheapest combination; we correct this and prompt them to articulate the underlying rule without giving the final numeric answer.",
+      "state": "Synthesis",
+      "response": "Actually, the hostel charges $40 per night, so for two nights it’s $40 × 2 = $80, not a flat $40. With that correction in mind, think about what the total cost would be if you chose the cheapest option for each category—bus for transportation, hostel for lodging, and cooking for meals. In your own words, explain why choosing the lowest‑priced option in each category leaves you the most money left for activities."
+    },
+    {
+      "turn": 17,
+      "speaker": "student",
+      "reasoning": "After the correction, the student is ready to express the general principle of minimizing individual costs to maximize leftover budget.",
+      "state": "Synthesis",
+      "response": "What I’ve realized is that by selecting the least expensive choice for every individual expense—transportation, lodging, and food—I minimize the total amount I have to spend. That leaves the largest possible portion of my $150 budget free for things like attraction tickets, guided tours, or souvenirs, which is exactly what I want to maximize."
+    },
+    {
+      "turn": 18,
+      "speaker": "tutor",
+      "reasoning": "The student has correctly explained the core concept in their own words, indicating they have internalized the rule for maximizing leftover funds in a budget scenario.",
+      "state": "Closing",
+      "response": "Great job working through those numbers and figuring out the strategy—you’ve clearly grasped how to make the most of a limited budget. Nice, you’ve got it! Would you like to try another similar budgeting problem to practice a bit more, maybe with different numbers or options?"
+    }
+  ]
+}

@@ -1,0 +1,287 @@
+[
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Ethical dilemmas (trolley-problem style)",
+    "problem": "A surgeon has five patients who will die without organ transplants. A healthy traveler arrives for a routine check-up. The surgeon could kill the traveler to save five lives, but doing so would likely cause a total collapse of public trust in hospitals.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I see why saving five is better than one, but it feels wrong to just kill someone."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student grasps the simple trade-off, so I'll verify their understanding of the basic numerical outcome first.",
+        "state": "Diagnosis",
+        "response": "The numerical outcome is a key factor here. Tell me which choice saves more lives in this moment."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Mathematically, saving the five patients is better, but it seems too simple to just count heads."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student understands the basic count, so I'm introducing the systemic trust variable to shift them toward long-term consequences.",
+        "state": "Support",
+        "response": "The immediate count is just one variable. We must also weigh how this action impacts the community's long-term safety."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "If people find out, they might stop going to doctors entirely, which would be a huge disaster."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the trust issue; I'm now explaining how to integrate systemic harm into the total calculation.",
+        "state": "Support",
+        "response": "A system failure would be catastrophic. The goal is to maximize total well-being, including future consequences of our actions."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "So we should ignore the five lives and only focus on keeping the hospital's reputation safe?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student made an error by dismissing one variable; I'll explain the need to aggregate all outcomes together.",
+        "state": "Support",
+        "response": "We don't ignore the five; we aggregate every single outcome to find the highest net benefit for everyone."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I see. The massive harm of a broken health system is a bigger negative than saving five is a positive."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student understands the calculation; now they need to state the underlying principle to internalize the logic.",
+        "state": "Synthesis",
+        "response": "You've correctly identified the trade-offs. How would you describe the general rule for making these tough choices?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "We should always choose the action that results in the greatest total happiness and least suffering for everyone."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the principle of utility, signaling the end of the lesson.",
+        "state": "Closing",
+        "response": "Spot on! That is exactly the right principle. Want to try another dilemma?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Sentence structure and clauses",
+    "problem": "Analyze the following sentence: 'Whatever happens tomorrow, because you studied so hard, you will succeed, provided you remain calm.' Identify every clause, classify its type (independent vs. dependent), and explain the grammatical function of the 'Whatever' clause.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I've started analyzing the sentence. 'You will succeed' seems like the main clause, and 'because you studied' is dependent. But I'm confused about how 'Whatever' and 'provided' fit into the structure."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the independent clause. I will confirm this and then use Diagnosis to probe their understanding of the first dependent clause, which acts as a common trap for advanced students.",
+        "state": "Diagnosis",
+        "response": "You're right that 'you will succeed' is the only independent clause here. Now, look closely at the opening phrase, 'Whatever happens tomorrow.' How do you think that specific part functions in relation to the main idea?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Since it's right at the beginning and starts with 'whatever,' I think 'Whatever happens tomorrow' must be a noun clause acting as the subject of the entire sentence."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student made an edge-case error by misidentifying an adverbial clause as a noun clause. I'll explain the role of noun clauses and hint at the omission test to guide them toward self-correction.",
+        "state": "Support",
+        "response": "Actually, a noun clause must fill a structural slot like a subject or object. If you remove 'Whatever happens tomorrow,' the main clause 'you will succeed' remains grammatically complete. Does that help you re-classify it?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, that makes sense. If it can be removed without breaking the sentence, it's acting more like a modifier. So it must be an adverbial clause of concession, like 'even though' or 'no matter what'."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student corrected their first mistake. I'll confirm their reasoning and move to the final part of the sentence, explaining that 'provided' is a subordinator to offer direct, low-socratic guidance.",
+        "state": "Diagnosis",
+        "response": "Exactly, it's an adverbial modifier. Now let's look at the very end. 'Provided' often acts as a conditional subordinator in complex sentences. What do you make of the phrase 'provided you remain calm'?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I think 'provided' is acting as a preposition here, so 'provided you remain calm' is just a long prepositional phrase that modifies the verb 'succeed'."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student made their second mistake by confusing a clause for a phrase. I'll explain the technical requirement for a clause and hint at the internal structure of the phrase to prompt correction.",
+        "state": "Support",
+        "response": "A prepositional phrase lacks a subject-verb pair, but notice that this section contains 'you' as a subject and 'remain' as a verb. Since it has both, how does that change its label?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "You're right; I missed the subject and verb inside it. That makes it a dependent conditional clause. So, the sentence has one independent clause and three different adverbial dependent clauses."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has now correctly identified all components. I will now ask them to synthesize the rule regarding noun vs. adverbial clauses to ensure they've internalized the distinction.",
+        "state": "Synthesis",
+        "response": "That's a complete and correct analysis of the sentence! To wrap this up, can you explain in your own words how we can distinguish a noun clause from an adverbial clause in these cases?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "A noun clause is a 'must-have' because it functions as a required part of the sentence structure, like the subject. An adverbial clause is a 'nice-to-have' modifier that provides extra context but can be removed."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student provided a clear, accurate explanation of the core concept. The session is complete.",
+        "state": "Closing",
+        "response": "Spot on! You navigated those tricky boundary cases perfectly and really showed a deep understanding of clause functions. Ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "biology",
+    "topic": "Human circulatory system",
+    "problem": "If you were to trace the path of blood leaving the heart to go to the rest of the body, what kind of vessel would it travel through first, and how is that vessel different from the ones that return blood to the heart?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know there are arteries and veins, but I'm not sure which is which. Do they both just move blood around the body in the same way?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student recognizes the names but lacks functional knowledge. I will start by diagnosing how they think the heart's pumping action might affect the vessels.",
+        "state": "Diagnosis",
+        "response": "If the heart pushes blood out with a lot of force, what do you think might be different about a tube carrying blood away from that pump versus one bringing it back?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Maybe the veins carry it away? I think veins are the really big ones that need to handle all that pressure from the heart pumping, right?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has made their first mistake by swapping the functions. I'll offer a support hint using an analogy to help them think about pressure and wall strength.",
+        "state": "Support",
+        "response": "If you imagine a garden hose versus a thin straw, which one do you think would handle a high-pressure blast better? Does that help you guess which vessel has thicker, stretchier walls?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I'm not really sure I follow the hose analogy. I don't really get how the thickness of the walls helps me know if it's an artery or a vein yet."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is struggling with the analogy, so I will provide a linguistic hint to help them associate the correct term with the direction of blood flow.",
+        "state": "Support",
+        "response": "Would it help if we used a word trick, like how 'Artery' starts with 'A'? Can you think of a word starting with 'A' that describes blood moving away from the heart?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, Artery starts with A, like Away! So arteries go away from the heart. That makes more sense than my first guess about the veins."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student corrected their first mistake. Now I need to diagnose their thinking on the vessel structure to address the wall thickness part of the problem.",
+        "state": "Diagnosis",
+        "response": "Thinking about the direction we just established, what kind of walls do you think the arteries would need to handle being so close to the heart's big pump?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I'm lost on the wall part. I don't really get what that means or how the pump affects the tubes. Can you explain that a bit more?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student is expressing non-understanding again. I will use another supportive analogy to help them connect pressure with the physical integrity of the vessel.",
+        "state": "Support",
+        "response": "What do you think would happen if you blew air very hard into a thin paper bag versus a thick rubber tire? Based on that, which one do you think an artery resembles?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I guess if they are carrying blood away and need to go fast, they would be very thin so they don't take up too much space?"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has made a second mistake by claiming arteries are thin. I'll guide them to see the danger of thin walls under high pressure to prompt self-correction.",
+        "state": "Support",
+        "response": "What would happen to a thin-walled tube if the heart pushed blood into it with a huge amount of power? Does that help you decide which of the two vessels needs thicker walls?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Oh, that makes sense! If the walls were thin they would probably burst from all that pressure. So the arteries must be the thick ones, and the veins are the thin ones?"
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has now corrected both mistakes and understands the core concept. I will now ask them to synthesize the entire rule in their own words.",
+        "state": "Synthesis",
+        "response": "Since you have the main ideas down, how would you summarize the differences in direction and wall thickness between an artery and a vein in your own words?"
+      },
+      {
+        "turn": 15,
+        "speaker": "student",
+        "text": "Arteries carry blood away from the heart and have thick, muscular walls to handle the high pressure, while veins carry blood back to the heart and have much thinner walls since pressure is lower."
+      },
+      {
+        "turn": 16,
+        "speaker": "tutor",
+        "reasoning": "The student has provided a perfect explanation of the concept, including both direction and structure. The goal is reached.",
+        "state": "Closing",
+        "response": "Exactly! You've got a great handle on how those blood vessels are built for their specific jobs. Ready to move on to the next part of the heart?"
+      }
+    ]
+  }
+]

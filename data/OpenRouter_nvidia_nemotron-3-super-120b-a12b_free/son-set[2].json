@@ -778,5 +778,662 @@
         "response": "Great job! Want another problem?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Simple vs compound interest",
+    "problem": "You have $1500 to invest. Option A offers 4% simple interest per year. Option B offers 3.8% interest compounded quarterly. Which option yields more after 5 years?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I started by trying to compute the simple interest amount. I used the formula A = P(1 + r)^t because I thought that’s how you calculate interest over time, so I did 1500 times (1 + 0.04) to the fifth power. For the quarterly compounded option, I just took the annual rate, multiplied it by 4 to get a quarterly rate, and then used that as the yearly rate in the same formula. I’m not sure if that’s right."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student showed they attempted to compute interest but incorrectly applied compound formula to simple interest and mishandled quarterly rate; need to uncover their thinking.",
+        "state": "Diagnosis",
+        "response": "Can you walk me through your thought process step by step, describing how you chose the formulas for simple and compound interest, how you interpreted the interest rate and time period for each investment, and what you think each symbol in those formulas actually means?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "For simple interest I thought you add the interest each year, so I used (1+r)^t to add it repeatedly. For quarterly, I figured since interest is added four times a year, I should make the rate bigger by multiplying by four, then treat it as if it’s yearly."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student persisted in using exponential formula for simple interest and incorrectly scaled quarterly rate by multiplying; need to prompt them to think about how simple interest works.",
+        "state": "Support",
+        "response": "With simple interest, think about whether the interest you earn each year gets added to the principal so that it can earn more interest in following years, or if it stays separate. What do you think happens to the interest earned each year? Consider also how this differs from compound interest, where interest itself starts earning interest."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Okay, for simple interest I now calculate interest on the original principal each year: 1500 × 0.04 × 5 = 300, plus 1500 equals 1800. For the quarterly compounded account, I’m still unsure about the rate. I think I should multiply the annual rate by four to get a quarterly rate, so 0.038 × 4 = 0.152 per quarter, then compound for five years: 1500 × (1 + 0.152)^5."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student corrected simple interest but still incorrectly believes quarterly rate should be multiplied by 4; need to guide them to correct rate adjustment.",
+        "state": "Support",
+        "response": "When interest is compounded more than once a year, how do you adjust the annual interest rate to find the rate for each compounding period, and what does that imply for the total number of periods over the whole investment horizon, taking into account that the annual rate must be divided by the number of compounding periods per year and the years multiplied by that same number?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Got it, the quarterly rate is 0.038 divided by 4, which is 0.0095 per quarter. There are 5 years times 4 quarters, so 20 periods. So the amount is 1500 times (1 + 0.0095) to the 20th power. I calculated that and got about 1812. For simple interest I got 1800. So the quarterly compounded option gives more money after five years."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student has correct numeric answers for both options; now ready to articulate conceptual difference.",
+        "state": "Support",
+        "response": "You’ve got the numbers right. Can you describe in your own words how simple interest differs from compound interest, especially regarding how interest is calculated each period? Think about whether the interest earned stays separate or gets added to the principal, and how that affects future earnings."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I think simple interest adds the same amount of interest each year because it’s based on the original principal, but I’m not entirely sure—sometimes I wonder if the interest earned also starts earning interest, like in compound interest. For compound interest, I know you add the interest to the principal, so the next period you earn interest on a larger amount, which makes the total grow faster over time."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student gave a basic distinction but could benefit from linking compounding frequency to formula; need to prompt them to consider effect of n.",
+        "state": "Support",
+        "response": "The formula for compound interest includes the number of times interest is compounded per year; how does changing that number affect the final amount, and why does more frequent compounding usually lead to a larger total? Consider what happens to the rate per period and the total number of periods when you increase the compounding frequency."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "If you compound more often, you divide the annual rate by that number to get a smaller rate per period, but you multiply the number of years by the same number to get more periods. Because interest starts earning interest sooner, the overall amount ends up larger than with less frequent compounding, even though each period’s rate is smaller."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has demonstrated correct understanding of both interest types and compounding frequency effect; now they should summarize the rule in their own words.",
+        "state": "Synthesis",
+        "response": "In your own words, please summarize the rule for calculating simple interest and the rule for calculating compound interest, making sure to mention how the principal, rate, time, and compounding frequency each play their part, and also explain why interest earned each period is treated differently in the two cases and how the number of compounding periods per year changes the effective rate and exponent in the compound interest formula?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Simple interest is found by multiplying the principal by annual rate and the number of years, then adding that to the principal; each year’s interest is based only on original amount. Compound interest uses the formula P(1 + r/n)^(nt), where r is the annual rate, n is the number of compounding periods per year, and t is the years. Interest earned each period is added to the principal, so it earns interest in later periods. More frequent compounding gives a larger total because interest starts earning interest sooner."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the rule in their own words, indicating mastery; conversation can wrap up.",
+        "state": "Closing",
+        "response": "Nice work! You’ve clearly explained the difference between simple and compound interest. Want to try another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Reading and interpreting graphs",
+    "problem": "A bar graph shows the number of books read by students in each month from January to April: January: 5, February: 8, March: 7, April: 12. Between which two consecutive months did the number of books increase the most?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think April had the most books, so that's the answer."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student equated highest bar with biggest increase, showing confusion between amount and change. Need to probe their thinking.",
+        "state": "Diagnosis",
+        "response": "Can you explain why you chose April's highest bar as the biggest increase?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I'm not sure how to tell which month had the biggest increase."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student unsure of method; providing a hint to look at differences directs them without giving answer.",
+        "state": "Support",
+        "response": "Try looking at the difference between each pair of consecutive months."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "So I subtract each month from the next one?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student showing they understand the subtraction idea; confirming helps them proceed.",
+        "state": "Support",
+        "response": "Yes, subtracting consecutive months shows the change."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Feb-Jan = 3, Mar-Feb = -1, Apr-Mar = 5."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student has calculated changes; summarizing clarifies their results before asking which is biggest increase.",
+        "state": "Support",
+        "response": "You've got the changes: +3, -1, +5."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The biggest increase is from March to April, which is 5."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has arrived at correct answer; prompting them to explain the rule in their own words reinforces understanding.",
+        "state": "Synthesis",
+        "response": "In your own words, what's the rule for finding the biggest increase?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "To find the biggest increase, subtract each month from the next and look for the largest positive difference."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has successfully explained the concept; wrap up with praise and invitation.",
+        "state": "Closing",
+        "response": "Great job! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "chemistry",
+    "topic": "Acids and bases",
+    "problem": "Calculate the pH of a 0.1 M solution of acetic acid (Ka = 1.8 × 10^-5). Assume the approximation that x << initial concentration is valid.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think pH = -log(0.1) = 1 because it's an acid."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student applied strong‑acid logic to a weak acid, ignoring Ka. Need to elicit understanding of Ka’s role.",
+        "state": "Diagnosis",
+        "response": "What does Ka tell us about how much the acid dissociates?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "It tells us the ratio of products to reactants at equilibrium."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student recognized Ka definition but hasn't linked it to calculation. Prompt them to set up expression.",
+        "state": "Support",
+        "response": "If we let x be [H+] at equilibrium, how would you write Ka expression?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Ka = x^2/(0.1 - x)."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student wrote correct Ka expression; need to guide approximation based on Ka magnitude.",
+        "state": "Support",
+        "response": "What assumption can we make about x given Ka is small?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "We can assume x is much less than 0.1, so 0.1 - x ≈ 0.1."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student made approximation; now need to solve for x using simplified expression.",
+        "state": "Support",
+        "response": "Using the approximation, Ka = x^2/0.1; what is x?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "x = sqrt(Ka * 0.1) = sqrt(1.8e-5 * 0.1) = sqrt(1.8e-6) ≈ 1.34e-3 M."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student calculated [H+]; need to convert to pH.",
+        "state": "Support",
+        "response": "What is pH = -log(x)?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "pH = -log(1.34e-3) ≈ 2.87."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student obtained pH correctly; now ask them to articulate the overall method in their own words.",
+        "state": "Synthesis",
+        "response": "Let's review: what steps did we use to find the pH?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "We assume little dissociation, use Ka = x^2/C, solve x = sqrt(Ka*C), then pH = -log(x)."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student explained the rule correctly; conversation concludes.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Seating arrangement",
+    "problem": "Six friends – Lily, Max, Noah, Ava, Zoe, and Eli – are seated around a round table. When looking at the table from above, a person's immediate left is the person sitting counter‑clockwise from them. Lily sits opposite Max. Ava sits immediately left of Noah. Who sits immediately to the right of Lily?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think opposite means one person between them, so I placed Lily at top and Max two seats away with one person between. For left, I thought clockwise from Noah gives Ava’s seat. I think the person right of Lily is two seats away."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student’s first turn reveals misconceptions about what ‘opposite’ means and which direction counts as ‘left’. I need to uncover their current definitions before guiding them.",
+        "state": "Diagnosis",
+        "response": "Can you explain what you mean by 'opposite' and how you decided which direction is left for Ava and Noah?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I placed Lily at the top and Max two seats away, thinking there’s one person between them. For Ava left of Noah, I put Ava clockwise from Noah. I still believe the person right of Lily is two seats away."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student still conflates ‘opposite’ with having one person between them; I need to hint at the correct meaning for a six‑person circle without giving the answer.",
+        "state": "Support",
+        "response": "In a circle of six, what does it mean for two people to be opposite each other?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I think opposite means they are directly across from each other, with two people sitting between them. Ava left of Noah means Ava is clockwise from Noah. And the person to the right of Lily is the one two seats away from her."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student persists in thinking ‘left’ is clockwise; I remind them of the problem’s definition to prompt self‑correction.",
+        "state": "Support",
+        "response": "The problem says a person’s immediate left is the person sitting counter‑clockwise from them. How does that affect where Ava could be relative to Noah?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, left means counter‑clockwise, so Ava must be counter‑clockwise from Noah. I still think the person to the right of Lily is the one two seats away."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student still believes ‘right’ means two seats away; I ask them to recall the definition of immediate right.",
+        "state": "Support",
+        "response": "If we are looking from above, what does ‘immediate right’ mean in terms of direction around the table?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Immediate right means the person clockwise from Lily. Now I have Lily opposite Max, Ava left of Noah (counter‑clockwise), and I’m trying to place everyone."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student now has the correct definitions but hasn’t started placing anyone; I ask them to position Lily and Max first to get a foothold.",
+        "state": "Diagnosis",
+        "response": "If Lily is at some seat, where must Max sit?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "If Lily is at some seat, Max must sit directly across from her, three seats away."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has placed Lily and Max correctly; I now guide them to use the left condition to locate Ava and Noah without giving the answer.",
+        "state": "Support",
+        "response": "Now, given that Ava sits immediately left of Noah (counter‑clockwise from Noah), where could Ava and Noah sit relative to Lily and Max?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "I put Lily at 0 and Max opposite at 3. Ava is left of Noah, counter‑clockwise, so I set Noah at 2 and Ava at 1. Clockwise from Lily: Ava, Noah, Max, Zoe, Eli. So person right of Lily is Ava."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the seating logic and identified Ava as the person to Lily’s right, showing they have grasped the concept.",
+        "state": "Closing",
+        "response": "Nice, you’ve got it! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Reading and interpreting graphs",
+    "problem": "Below is a line graph showing the average daily temperature (in degrees Celsius) for each day of a week (Monday to Sunday). The temperatures are: Monday 15°C, Tuesday 16°C, Wednesday 14°C, Thursday 18°C, Friday 19°C, Saturday 20°C, Sunday 22°C. On which day did the temperature increase the most compared to the previous day?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I looked at the line graph and noticed that the point for Sunday is the highest at 22 degrees Celsius. Since the question asks about the biggest increase, I assumed that the day with the highest temperature must also be the day where the increase was the largest, so I answered Sunday."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student linked the highest temperature to the biggest increase, showing a misunderstanding of what 'increase' means in this context.",
+        "state": "Diagnosis",
+        "response": "Can you walk me through how you decided that the day with the highest temperature also corresponds to the largest increase? What exactly are you comparing when you look for an increase in temperature from one day to the next? How might focusing on the highest point mislead you when searching for an increase?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "When I looked at the graph, I simply scanned for the highest point because I thought the biggest jump would happen when the temperature reaches its peak. I didn't think about checking how much it changed from the day before; I just assumed the highest point automatically meant the biggest increase."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student focused on absolute values rather than changes between days, indicating they need a hint to consider differences.",
+        "state": "Support",
+        "response": "What would happen if you looked at how much the temperature changes from each day to the next, instead of just the absolute values? Could you try subtracting Monday's temperature from Tuesday's and see what that tells you? What do you think this process would reveal about which day had the biggest rise?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I subtracted Monday's 15 from Tuesday's 16 and got +1, meaning a one-degree increase. Then I did Tuesday to Wednesday: 16 minus 14 is -2, which is a decrease. I continued a bit and saw that Wednesday to Thursday goes from 14 to 18, which is +4, and that seemed larger than the other changes I had so far, so I'm leaning toward Thursday as the day with the biggest increase."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student computed some differences and identified a candidate biggest increase, but needs to verify all pairs to be confident.",
+        "state": "Support",
+        "response": "Have you checked the remaining pairs—Thursday to Friday, Friday to Saturday, and Saturday to Sunday—to confirm that none of those changes exceed +4? What do those differences turn out to be? How does comparing all the differences help you be confident about the biggest increase?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I checked the rest: Thursday to Friday is 18 to 19, which is +1; Friday to Saturday is 19 to 20, also +1; Saturday to Sunday is 20 to 22, which is +2. None of those are bigger than the +4 I got from Wednesday to Thursday, so the biggest increase indeed happens on Thursday, the day after Wednesday."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified Thursday as the answer and shown the difference calculations; now we need them to articulate the general rule.",
+        "state": "Synthesis",
+        "response": "Can you describe, in your own words, the general method you just used to find the day with the biggest temperature increase? What steps would you tell someone else to follow for any similar line graph? How would you explain why this method works for finding an increase?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "To find the day with the biggest increase, I subtract each day's temperature from the temperature of the next day. This gives me the change from one day to the next. I then look for the largest positive number among those differences; the day that follows the subtraction (i.e., the later day) is the day when the biggest increase happened."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student explained the method but we should confirm they understand why we focus on positive changes and how the method would adapt for a decrease.",
+        "state": "Support",
+        "response": "Does your method automatically ignore any negative changes, or do you have to explicitly look for the largest positive value? Why is it important to focus only on increases when the question asks for the biggest increase? How would you adjust the method if we instead wanted the biggest decrease?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "My method gives both positive and negative numbers; to find the biggest increase I simply pick the largest positive value, ignoring negatives. If we wanted the biggest decrease, I would look for the most negative number instead, which would indicate the biggest drop in temperature from one day to the next."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has conveyed the rule for increase and decrease; now we ask them to summarize the increase rule concisely to ensure internalization.",
+        "state": "Synthesis",
+        "response": "Could you summarize the rule you just explained in one or two sentences, so that someone reading it would know exactly what to do with any similar line graph to find the day of the greatest temperature increase? Could you keep it concise but complete, focusing on the key steps?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "To find the day with the biggest temperature increase, subtract each day's temperature from the next day's temperature to get the daily change; then identify the largest positive change; the day after that change (the later day) is the answer. This method works because increase is defined as a positive difference between consecutive days."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully articulated the rule for finding the biggest increase in a line graph, showing mastery of the concept.",
+        "state": "Closing",
+        "response": "Could you tell me how you feel about trying another similar problem now that you’ve mastered the method for finding the biggest increase in a line graph, and whether you’d like to explain the steps to a friend to reinforce your understanding, or perhaps create your own line graph to practice?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Coding-decoding",
+    "problem": "In a certain code language, each word is transformed by first shifting every letter forward by two positions in the alphabet (with wrap‑around after Z to A), then reversing the resulting string. For example, 'CAT' is coded as 'VCE' and 'DOG' as 'IQF'. What is the code for the word 'STAR'?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I notice that each letter seems to move forward in the alphabet, but I'm not sure by how much or if there's anything else."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student shows uncertainty about the shift amount and possible extra step; need to elicit their current thinking.",
+        "state": "Diagnosis",
+        "response": "What makes you think the letters are moving forward? Can you show how you got that for one word?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "For 'CAT' becoming 'VCE', if I shift C two forward I get E, but the first letter of code is V, which is far ahead. Maybe they reversed after shifting?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student hypothesizes a reversal after a shift; need to test that idea with a minimal hint.",
+        "state": "Support",
+        "response": "What happens if you apply a shift of +2 to each letter of 'CAT' and then look at the result?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "If I shift each letter of 'CAT' by +2 I get E, C, V -> 'ECV'. That's not 'VCE' but it's the reverse."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student recognized the reversal; need to confirm the same process works on the second example.",
+        "state": "Diagnosis",
+        "response": "Does the same process work for 'DOG' -> 'IQF'?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Shift D (+2)=F, O (+2)=Q, G (+2)=I gives 'FQI', reverse gives 'IQF', yes it matches."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student has validated the rule on both examples; now prompt them to articulate the rule in their own words.",
+        "state": "Synthesis",
+        "response": "In your own words, what rule are you using to go from the plain word to the code?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "First, I shift each letter forward by two positions in the alphabet, then I reverse the whole string."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has expressed the rule correctly; now have them apply it to a new word to ensure they can use it.",
+        "state": "Synthesis",
+        "response": "Using that rule, what would be the code for 'STAR'?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Shift S->U, T->V, A->C, R->T gives 'UVCT', reverse gives 'TCUV'."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly applied the rule and explained it; the concept is mastered.",
+        "state": "Closing",
+        "response": "Nice, you've got it! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Ratio and proportion",
+    "problem": "A bag contains red and blue marbles in the ratio 7:3. If there are 42 red marbles, how many blue marbles are there?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think I should first find out what one part of the ratio represents by dividing the number of red marbles, 42, by the red part of the ratio, which is 7. That gives me 6 marbles per part. I'm not sure what to do next to find the number of blue marbles."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student correctly found the value of one part but is unsure how to proceed to find the other quantity. This calls for a Diagnostic approach to elicit their reasoning about using the unit value.",
+        "state": "Diagnosis",
+        "response": "You've correctly determined that one part equals 6 marbles. Now, think about what that means for each share in the ratio: each 'part' corresponds to 6 marbles. How would you use that to find the amount for the blue marbles, which correspond to 3 parts? Please explain your reasoning."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Since one part is 6 marbles and the blue portion corresponds to 3 parts, I multiply 6 by 3 to get 18 blue marbles. To be sure, I can check that the ratio of red to blue marbles becomes 42:18, which simplifies to 7:3 when divided by 6, matching the given ratio."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has solved the first problem correctly and verified it. To build fluency, we move to Support by giving a similar problem to practice the same method without yet asking for a general rule.",
+        "state": "Support",
+        "response": "Let's build confidence with a similar problem. If the ratio of red to blue marbles is 4:5 and there are 20 red marbles, how many blue marbles are there? Please walk me through your steps in detail, showing how you find the value of one part and then use it for the blue portion."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "First, I divide the number of red marbles, 20, by the red part of the ratio, 4, to find that one part equals 5 marbles. Then, since the blue part corresponds to 5 parts, I multiply 5 by 5 to get 25 blue marbles. To verify, I check that the ratio 20:25 simplifies to 4:5 when both numbers are divided by 5."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student solved the second problem correctly. To further develop their ability, we use Diagnosis again to elicit their thinking on a new variation where the known quantity is the other part of the ratio.",
+        "state": "Diagnosis",
+        "response": "Great job on the previous problem. You solved that correctly. Now let's try a problem where you know the quantity of blue marbles: If the ratio of red to blue marbles is 2:7 and there are 56 blue marbles, how many red marbles are there? Please explain your reasoning step by step."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I divide the number of blue marbles, 56, by the blue part of the ratio, 7, to find that one part equals 8 marbles. Since the red part corresponds to 2 parts, I multiply 8 by 2 to get 16 red marbles. To verify, I check that the ratio 16:56 simplifies to 2:7 when both numbers are divided by 8."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student solved the third problem correctly and verified it. To encourage reflection on their method without yet asking for a general statement, we use Support to prompt them to check their work using a ratio comparison.",
+        "state": "Support",
+        "response": "Good job solving that. You can check your answer by forming the ratio of your result to the known quantity and seeing if it simplifies to the given ratio. For this problem, what ratio do you get when you compare 16 red to 56 blue?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I write the ratio as 16/56. The greatest common divisor of 16 and 56 is 8. Dividing both numbers by 8 yields 2/7, which is exactly the given ratio of red to blue marbles, confirming that my answer is correct. Alternatively, I could multiply 2 by 8 to get 16 and 7 by 8 to get 56, showing the equivalence."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully solved three specific problems and verified each. Now we move to Synthesis to prompt them to articulate the general procedure in their own words, consolidating their understanding.",
+        "state": "Synthesis",
+        "response": "You've successfully solved three different ratio problems using the same approach. Now, without referring to the specific numbers, can you explain in your own words the general procedure you used to find an unknown quantity when you know one part of a ratio and the ratio itself?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "First, I identify the known quantity and its corresponding part in the ratio. I divide the known quantity by that part to find the value of one part. Then, I multiply that value by the other part of the ratio to get the unknown quantity. This works because each part represents the same amount, so scaling the known part gives the unknown."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the general rule for solving ratio problems using the concept of equal parts, indicating mastery of the concept.",
+        "state": "Closing",
+        "response": "Great job! You've clearly explained how to use the concept of equal parts to solve ratio problems, showing that you understand the method thoroughly. If you'd like, we can try another problem or move on to a new topic. Keep up the good work."
+      }
+    ]
   }
 ]

@@ -607,5 +607,701 @@
         "response": "Perfectly stated. You nailed the analysis! Ready to move on to the next one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Coding-decoding",
+    "problem": "In a certain code, the word 'CAT' is written as 'DBU'. Based on this, how would you encode the word 'DOG'?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the code just shifts every letter back by one, so 'DOG' becomes 'CNE'."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student identified a pattern but inverted the direction. I need to guide them to check the relationship between C and D again.",
+        "state": "Diagnosis",
+        "response": "Let's look at the first letter. C becomes D. Does that move forward or backward in the alphabet?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, right. It moves forward one. So 'DOG' would be 'EPH'?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student corrected the direction but made an error on the letter G. I should ask them to verify the mapping for G explicitly.",
+        "state": "Support",
+        "response": "Check 'G' again. What is the letter immediately following 'G' in the alphabet?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Wait, it's 'H', not 'I'. So it's 'EPH'."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student corrected the G to H, but failed to realize the pattern applies to all letters, including O. They only updated one part.",
+        "state": "Diagnosis",
+        "response": "You have the 'E' and 'H' right. What happens to the middle letter 'O' if we follow the same rule?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "The rule is just adding one letter, so 'O' plus one is 'N'."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has a consistent error where they confuse the sequence of the alphabet. 'O' followed by 'N' is incorrect.",
+        "state": "Support",
+        "response": "List the letters around 'O'. What comes after 'O'?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Ah, it's 'P'. So 'DOG' must be 'EPH'."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the sequence but still repeated the incorrect last letter from their previous attempt.",
+        "state": "Diagnosis",
+        "response": "Let's re-verify the full word 'DOG' based on the +1 shift. What do you get for each letter?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "D+1 is E, O+1 is P, and G+1 is H, so the code is 'EPH'."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified and explained the transformation rule. Closing the conversation.",
+        "state": "Closing",
+        "response": "Spot on! That's exactly it. Ready for the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "computer_science_light",
+    "topic": "Big-O intuition via analogies",
+    "problem": "Imagine you have a deck of 100 cards. If you search for one specific card by looking at each card one by one, versus splitting the deck in half repeatedly to find it, which method is faster as the deck grows to 1,000,000 cards, and why?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think looking through one by one is better because you don't have to keep stopping to split the deck."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student identifies a physical action as 'better' without considering scale. I need to challenge this by focusing on the number of steps.",
+        "state": "Diagnosis",
+        "response": "What happens to the number of steps you take if the deck grows from 100 to 1,000,000 cards?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, you'd just have to look at way more cards, maybe 1,000,000 times."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identifies linear growth but misses the efficiency of the other method. I need to prompt them to consider how many times we can split 1,000,000 in half.",
+        "state": "Support",
+        "response": "That's right for the first method. If you cut 1,000,000 in half, then that half in half, and so on, how many times could you do that before you're left with just one card?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I'm not sure. Maybe 500,000 times? It feels like you'd still have to do it a lot."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student assumes splitting is just division by two that repeats slowly. I need to nudge them to visualize the speed of logarithmic reduction.",
+        "state": "Support",
+        "response": "If you started with just 8 cards, how many times would you need to cut the pile in half to find one?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "That's easy, just 3 times. 8 to 4, 4 to 2, 2 to 1."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student sees the pattern for 8. I need to bridge the gap between 8 and 1,000,000.",
+        "state": "Support",
+        "response": "Exactly. Now, if you double the deck from 8 to 16, how many more cuts do you need?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Only one more cut. So 4 cuts for 16 cards."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student sees the pattern. Now I need to see if they can generalize this relative to the linear method.",
+        "state": "Diagnosis",
+        "response": "If you keep doubling, the cards grow fast but the cuts grow slowly. How would you describe the difference in effort as we go to 1,000,000?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Linear search takes as many steps as cards, but the splitting method only adds one step each time you double the deck, so it's way faster for big numbers."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully synthesized the concept of logarithmic versus linear growth. Closing the conversation.",
+        "state": "Closing",
+        "response": "That's exactly it! You've got the core idea down. Ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Correlation vs causation",
+    "problem": "A researcher discovers a strong positive correlation (r = 0.85) between the number of ice cream trucks operating in various cities and the number of library books stolen from those same cities. The researcher concludes that ice cream consumption is likely causing people to commit more book thefts. Analyze the validity of this conclusion and identify the potential logical pitfalls in this reasoning.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "This seems straightforward. Since the correlation is really high at 0.85, the data proves that as ice cream truck presence increases, it directly triggers a rise in book thefts. Maybe the sugar rush makes people act impulsively?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is conflating correlation with direct causation based on the high r-value. I need to move to Diagnosis to see if they can identify alternative explanations for the data.",
+        "state": "Diagnosis",
+        "response": "That's an interesting theory about the sugar, but before we commit to that link, could you think about what other factors might be present in a city at the same time that ice cream trucks are out in large numbers?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, ice cream trucks are clearly out in the summer when the weather is warm. So, maybe it's the heat? Actually, come to think of it, since both occur during hot weather, I guess it's fair to say the temperature is just an independent variable that causes both ice cream sales and book thefts."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified a confounding variable (temperature), but mistakenly labeled it as an 'independent variable' causing both. I need to address this terminology/conceptual error.",
+        "state": "Support",
+        "response": "You're spot on about the temperature playing a role! But if temperature is influencing both ice cream truck numbers and crime rates, is it accurate to call it an 'independent variable' in the context of the relationship between ice cream and theft, or is there a better term for a third factor that creates a false link?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, right. It's a confounding variable, not an independent one. So because heat makes both go up, the correlation between ice cream and theft is just a coincidence? I suppose that means the correlation coefficient is basically meaningless here."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the term 'confounding variable'. Now I want to challenge their assertion that the correlation is 'meaningless' to see if they understand the distinction between valid statistical association and false causal inference.",
+        "state": "Diagnosis",
+        "response": "Is it truly 'meaningless' to have a strong positive correlation between two variables, even if they aren't causing each other? What does that correlation value actually tell us about the relationship between ice cream trucks and thefts, versus what it tells us about causality?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "It means the numbers move in the same direction, but it doesn't imply mechanism. Actually, I was thinking about it, and I'm pretty sure that if you controlled for temperature, the correlation between ice cream trucks and book thefts would actually become negative."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student made an incorrect claim that the correlation would necessarily turn negative if temperature were controlled. I need to guide them toward realizing it would likely approach zero.",
+        "state": "Support",
+        "response": "That's a bold claim! If we mathematically remove the effect of temperature, what would remain to connect ice cream truck counts and book thefts? If the only reason they moved together was the heat, where would that leave their shared variance?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Wait, you're right. If the heat is the bridge, removing it should just make the relationship disappear, not flip it. So the correlation would move toward zero, implying there's no inherent connection at all."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has corrected their path and understands why the correlation disappears. Now I need them to synthesize this into a general principle about correlation and causation.",
+        "state": "Synthesis",
+        "response": "Exactly. Now that we've broken down this specific scenario, could you explain in your own words why a high correlation coefficient can be so deceptive when looking at real-world data like this?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "A strong correlation just shows that two things vary together, but it says nothing about one causing the other. Often, a third 'confounding' variable is actually driving both, which creates a false sense of connection. Just because two trends look similar doesn't mean there's a cause-and-effect mechanism behind them."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully synthesized the concept and articulated the danger of the correlation-causation fallacy. The task is complete.",
+        "state": "Closing",
+        "response": "That's exactly it! You've navigated that perfectly. Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "history_and_social_studies",
+    "topic": "Cause-and-effect in historical events",
+    "problem": "Many historians point to both the sinking of the Lusitania and the interception of the Zimmermann Telegram as major factors in the United States' decision to enter World War I. If you were analyzing the importance of these two events, how would you distinguish between their roles as 'immediate triggers' versus 'long-term catalysts' for American involvement?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think they both just made the US really angry at Germany, so they decided to join the war. I'm not totally sure how to label them differently since they both pushed the government toward fighting, but maybe the telegram was more important because it was a direct threat?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student identifies the common emotional impact but lacks a framework for distinguishing types of historical causes. I need to diagnose their understanding of temporal dynamics.",
+        "state": "Diagnosis",
+        "response": "It's interesting that you see both as pushing the US toward the same goal. When you think about 'long-term' versus 'immediate,' what kind of differences in timing or impact come to mind when you look at these two events happening in 1915 and 1917?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, the sinking of the Lusitania happened two years before we actually joined. If it was the trigger, why did we wait so long? Maybe the telegram is the immediate one because it happened right before we declared war."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is grasping the timeline well. I will use a Support turn to guide them toward understanding how a delayed reaction defines a catalyst versus a trigger.",
+        "state": "Support",
+        "response": "That timeline is spot on—two years is definitely a gap. If the Lusitania didn't cause an immediate declaration of war, but it significantly changed how Americans viewed Germany over those two years, what might that suggest about its role compared to a 'trigger' that demands an instant response?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I guess it means the Lusitania was building up the tension or the public opinion, while the telegram was the final straw that forced the actual decision?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is making progress. I want to test their depth of understanding regarding the 'final straw' concept.",
+        "state": "Diagnosis",
+        "response": "That's a helpful way to put it. Why do you think the government could ignore the 'building tension' for so long, but couldn't ignore the telegram once it was intercepted?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Maybe because the Lusitania was just a tragedy at sea, but the telegram was a secret plan for Germany to help Mexico attack us? It felt like the war was coming to our own doorstep."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student recognizes the shift from external tragedy to direct national security threat. I'll offer a prompt to synthesize the concept of causality here.",
+        "state": "Support",
+        "response": "Exactly, it shifted from a foreign policy crisis to a direct national threat. If you were summarizing this to a classmate, how would you define the difference between a catalyst that sets the stage and a trigger that forces an immediate change?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I'm still thinking about it. Maybe the catalyst is like dry wood waiting for a spark, and the trigger is the match?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student's metaphor is excellent. I'll ask them to map the specific historical events to that metaphor to ensure mastery.",
+        "state": "Support",
+        "response": "That's a powerful image. In that specific metaphor, which event—the Lusitania or the Zimmermann Telegram—acts as the dry wood, and which acts as the match that finally ignites the fire?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The Lusitania and all the other tension over those two years is the dry wood, because it made the public ready for war and changed our policy. The Zimmermann Telegram is the match, because it was the specific event that made the government act immediately."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully synthesized the concepts of catalysts and triggers through a clear, personal explanation. The goal is met.",
+        "state": "Closing",
+        "response": "That's a perfect way to visualize it. You've really grasped the difference between underlying trends and specific tipping points! Ready to try another analysis like this?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "history_and_social_studies",
+    "topic": "Comparing political systems",
+    "problem": "Compare the structural differences between a parliamentary system and a presidential system, specifically regarding how the executive branch maintains its mandate to govern.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm thinking about parliamentary vs. presidential systems. In a presidential system, the president is clearly chosen by the people, while in a parliamentary system, the head of government is just whoever the parliament decides to pick at the start of their term."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has a decent start but overlooks the ongoing relationship between the legislature and executive. I need to probe for the 'mandate' aspect.",
+        "state": "Diagnosis",
+        "response": "That's a fair starting point. Once that person is 'picked' in a parliamentary system, do they stay in power for a fixed duration, or does their ability to remain head of government depend on something else?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, in both systems, the head of government usually serves for a set term until the next election, right? So the parliament can't just remove them."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student made a factual error regarding the permanence of the executive in parliamentary systems. I must steer them to reconsider the stability of the executive.",
+        "state": "Support",
+        "response": "That's an interesting assumption about fixed terms. Have you heard of a 'vote of no confidence'? What would happen to a Prime Minister if they lost the support of their own parliament?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, right! I forgot about that. So, the parliament can actually vote to remove the Prime Minister mid-term if they lose their majority support, which makes the executive very dependent on the legislature."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student corrected the mistake. Now I want to contrast this with the presidential system to ensure they see the difference in separation of powers.",
+        "state": "Diagnosis",
+        "response": "Exactly. Now, how does that contrast with a presidential system, where the executive is elected independently of the legislature's majority?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "In a presidential system, the president has a set term and can't be removed just because the legislature disagrees with them. The legislature is only there to pass laws, not to keep the president in office."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is mostly correct but is ignoring the extreme case of impeachment. I'll point them toward that edge case to refine their understanding.",
+        "state": "Support",
+        "response": "You're largely right about the stability. But if a president commits a serious crime, is there no mechanism at all for removal, or is it fundamentally different from a vote of no confidence?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "They can be impeached, but that's for breaking the law, not for just losing political support or failing to pass a budget, which is a big difference compared to parliamentary systems."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully synthesized the critical distinction. Time to ask for a summary before closing.",
+        "state": "Synthesis",
+        "response": "That’s a great distinction. In your own words, how would you summarize the core difference between how the executive maintains their mandate in each system?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "In a parliamentary system, the executive's power is tied to the legislature's confidence, so they must maintain majority support to govern. In a presidential system, the executive has an independent mandate and can only be removed for specific legal breaches, not purely political disagreements."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the concepts. The conversation is complete.",
+        "state": "Closing",
+        "response": "Spot on, that's exactly the distinction. You've really grasped the structural nuances there! Ready to move on to another topic?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Scaling a recipe",
+    "problem": "A recipe calls for 2 cups of flour for every 3 eggs to make a cake. If you only have 2 eggs left, how much flour should you use to keep the ratio consistent?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "The recipe needs 2 cups of flour for 3 eggs. If I have 2 eggs, I'll just subtract one egg, so maybe I should subtract one cup of flour too?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is attempting to solve by subtraction rather than ratios, which is a conceptual error. I need to guide them toward multiplicative thinking.",
+        "state": "Support",
+        "response": "Subtracting might change the proportions. If you have 3 eggs and use 2 cups of flour, what's the ratio of flour per egg?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "That would be 2/3 of a cup of flour for every single egg."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the unit rate. Now I need to prompt them to apply this rate to the new quantity of eggs.",
+        "state": "Diagnosis",
+        "response": "Exactly. Now that you have that unit rate, how do you find the flour amount for 2 eggs?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I guess I multiply the 2/3 cup by the 2 eggs I have?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is on the right track, but I want to ensure they feel confident in the calculation.",
+        "state": "Support",
+        "response": "That sounds right. What do you get when you multiply 2/3 by 2?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "That would be 4/3, or 1 and 1/3 cups of flour."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The math is correct. Now I will check their grasp of the underlying scaling logic.",
+        "state": "Diagnosis",
+        "response": "Does that amount seem reasonable compared to the original 2 cups?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Yes, it's less than 2 cups, which makes sense since I'm using fewer eggs."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student understands the result. Now I need them to articulate the general rule for scaling recipes.",
+        "state": "Synthesis",
+        "response": "Great. Can you explain in your own words why we used multiplication instead of subtraction?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Recipes rely on ratios. To scale them, you have to multiply or divide both ingredients by the same factor so the proportions stay balanced."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the concept of scaling ratios. The conversation is complete.",
+        "state": "Closing",
+        "response": "Perfectly explained! You've got the hang of it. Ready for another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Syllogisms",
+    "problem": "Given these premises: 1. All mammals have lungs. 2. Some whales are not mammals. Does it follow that 'Some whales do not have lungs'?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Since some whales aren't mammals and mammals have lungs, it definitely means some whales lack lungs."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has jumped to a conclusion based on a common logical fallacy. I need to probe their reasoning to see if they can identify the error in the relationship.",
+        "state": "Diagnosis",
+        "response": "What makes you certain that being a non-mammal implies a lack of lungs?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, if you aren't in the group that has lungs, you can't have them."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is explicitly asserting that 'non-mammal' implies 'no lungs', which is a false logical deduction. I will use Support to challenge this generalization.",
+        "state": "Support",
+        "response": "Does the first premise say that *only* mammals have lungs?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, no, it just says all mammals have them. It doesn't exclude others."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student recognizes the limitation of the first premise. Now I need to see if they can apply this to the 'non-mammal' group.",
+        "state": "Diagnosis",
+        "response": "If other creatures could also have lungs, what does that mean for the whales that aren't mammals?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I guess they might still have lungs. So maybe I can't conclude anything?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is on the right track but needs a final push to see that the conclusion is invalid because we lack information about non-mammalian whales.",
+        "state": "Support",
+        "response": "Exactly. If we don't know if non-mammalian whales have lungs, can we definitively state they don't?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "No, we actually can't. My first thought was just assuming too much."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has corrected their logic. Now I need them to synthesize the rule of syllogism regarding missing information.",
+        "state": "Synthesis",
+        "response": "Can you explain why the conclusion is invalid in your own words?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "A valid conclusion must be certain; since the premises don't define what non-mammals have, the conclusion is just an assumption."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified the logic, so the session is complete.",
+        "state": "Closing",
+        "response": "Spot on. You've got it! Ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Cost-benefit reasoning",
+    "problem": "A local government is deciding whether to spend $1 million on a new public park that would increase local property values and tax revenue by $1.2 million over ten years. However, the construction will temporarily disrupt small businesses in the area, causing an estimated $300,000 in lost revenue. Should the park be built based on a cost-benefit analysis?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the park shouldn't be built because the construction cost is $1 million and the business losses are $300,000, so that's $1.3 million total. Since that's more than the $1.2 million benefit, it's a net loss."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified the numbers but is miscalculating the net outcome. I'll use a diagnosis question to help them re-examine how they categorize the costs and benefits.",
+        "state": "Diagnosis",
+        "response": "That's an interesting way to group those figures. When you think about 'cost' versus 'benefit,' does the $1 million cost of the park potentially produce more than just the $1.2 million in tax revenue?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Wait, are you saying the $1.2 million is only part of the benefit? I assumed that was the total. Maybe I should have subtracted the $1 million from the $1.2 million instead?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is still struggling to reconcile the categories. I will support them by asking them to look at the total financial impact again while hinting at the distinction between investment and loss.",
+        "state": "Support",
+        "response": "Let's list them: we have a $1 million investment, a $300,000 cost, and a $1.2 million gain. If the gain is only $1.2 million, does the project make sense? Or is there something else to consider in the 'benefit' column?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh! The property values increasing isn't just the tax revenue, right? The increase in property values is a benefit for homeowners too, which might not be captured in the tax revenue figure."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is gaining clarity but hasn't finalized the math yet. I will nudge them to focus on the numbers provided to see if the project is viable even with the current data.",
+        "state": "Support",
+        "response": "That's a fair point about externalities! But sticking strictly to the $1.2 million benefit figure provided in the prompt, let's re-calculate. If the total costs are $1.3 million and the benefits are $1.2 million, why might someone still argue it's a 'good' project?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Maybe because the costs are one-time, but the benefits happen over ten years? So it's actually $120,000 per year versus a one-time cost? No, that would mean the costs are paid back in a few years."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is shifting toward temporal reasoning, which is good. I need to keep them focused on the core cost-benefit logic without letting them overcomplicate the timeline unnecessarily.",
+        "state": "Support",
+        "response": "You're getting closer to the logic. Let's look at the simple math again: Is it possible that the $1.2 million figure I gave you was only the tax increase, and the actual benefits are higher, or is there a flaw in how I've defined the costs?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I think I see it now. The $1.2 million is the benefit and the $1 million is the investment, but the $300,000 is a negative externality. So the total cost is actually $1.3 million. Maybe it's a bad project after all?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student is circling back to their initial error. I need to use synthesis to force them to look at the balance sheet as a whole and articulate the final decision logic.",
+        "state": "Diagnosis",
+        "response": "Let's pause. If the total benefits are $1.2 million and the total costs are $1.3 million, what does that tell you about the efficiency of this specific project based purely on the numbers provided?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "It means the costs outweigh the benefits by $100,000. So, from a strictly rational cost-benefit perspective, the project is a net loss and shouldn't be pursued unless there are other non-monetary benefits not listed here."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully synthesized the logic of cost-benefit analysis and correctly applied it to the final numbers.",
+        "state": "Closing",
+        "response": "That's exactly right! You've analyzed the inputs and identified the net outcome perfectly. Great work—ready for the next challenge?"
+      }
+    ]
   }
 ]

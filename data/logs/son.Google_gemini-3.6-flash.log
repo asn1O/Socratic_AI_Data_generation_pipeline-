@@ -159,3 +159,33 @@
   expired: True
   failure_categories:
   empty_response: 3
+2026-09-18 17:38:55,271 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-18 17:39:53,859 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=7253 turns=12 path=data\Google_gemini-3.6-flash\son-set[3].json
+2026-09-18 17:40:53,856 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-18 17:41:34,828 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=8070 turns=12 path=data\Google_gemini-3.6-flash\son-set[3].json
+2026-09-18 17:42:34,826 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-18 17:43:04,195 ERROR MODEL_FAILURE provider=Google model=gemini-3.6-flash error_code=HTTP_503 reason=model call failed or returned no response
+2026-09-18 17:44:04,193 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-18 17:45:40,644 ERROR MODEL_FAILURE provider=Google model=gemini-3.6-flash error_code=HTTP_503 reason=model call failed or returned no response
+2026-09-18 17:46:40,642 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-18 17:47:13,624 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=5282 turns=12 path=data\Google_gemini-3.6-flash\son-set[3].json
+2026-09-18 17:48:13,623 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-18 17:49:05,803 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=5962 turns=14 path=data\Google_gemini-3.6-flash\son-set[3].json
+2026-09-18 17:50:05,801 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-18 17:50:33,885 ERROR MODEL_FAILURE provider=Google model=gemini-3.6-flash error_code=HTTP_503 reason=model call failed or returned no response
+2026-09-18 17:51:33,884 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-18 17:51:58,950 ERROR MODEL_FAILURE provider=Google model=gemini-3.6-flash error_code=HTTP_503 reason=model call failed or returned no response
+2026-09-18 17:52:58,949 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-18 17:53:01,782 ERROR MODEL_FAILURE provider=Google model=gemini-3.6-flash error_code=HTTP_429 reason=model call failed or returned no response
+2026-09-18 17:53:01,782 ERROR MODEL_EXPIRED provider=Google model=gemini-3.6-flash reason=three consecutive API failures
+2026-09-18 17:54:01,780 INFO MODEL_SUMMARY
+  provider_model: Google / gemini-3.6-flash
+  attempts: 9
+  saved: 4
+  failed: 5
+  accept_rate: 44.44%
+  average_tokens: 6641.75
+  turn_range: 12-14
+  expired: True
+  failure_categories:
+  empty_response: 5

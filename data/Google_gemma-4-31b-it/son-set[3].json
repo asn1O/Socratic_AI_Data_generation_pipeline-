@@ -1150,5 +1150,314 @@
         "response": "Perfect explanation! You've mastered the logic behind combining these circuits. Ready for another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Speed, time and distance",
+    "problem": "A train travels from City A to City B at 60 km/h and returns from City B to City A at 40 km/h. What is the average speed for the entire journey?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think it's 50. Just average 40 and 60?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student used arithmetic mean for speed. I need to provide the correct formula and a strategy.",
+        "state": "Support",
+        "response": "Average speed is total distance over total time. Try picking a distance."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Let's use 120 km. Time from A to B is 2 hours."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student correctly calculated the first leg. Now they need the return leg time.",
+        "state": "Support",
+        "response": "Correct. Now calculate the time for the return trip at 40 km/h."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "120 / 40 is 3 hours. Total time is 5 hours."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student has the total time. Now they need the total distance to finish the calculation.",
+        "state": "Support",
+        "response": "Right. Total distance is 240 km. Divide that by 5."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "240 / 5 = 48 km/h. Why isn't it 50?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student is confused by the result. I will explain the weighting of time.",
+        "state": "Support",
+        "response": "You spent more time traveling at 40 km/h than at 60."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Got it. So for 60 and 30, the average is 45?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The simple averaging misconception has resurfaced. I'll direct them back to the distance method.",
+        "state": "Support",
+        "response": "No, the same logic applies. Use a distance to check again."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Distance 60. Total is 120. Time is 1 + 3 = 4. So 30?"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student made a procedural error calculating the time for the 30 km/h leg.",
+        "state": "Support",
+        "response": "Almost. 60/30 is 2 hours, so total time is 3. 120/3 is 40."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Oh, it's 40. So you can't just average the numbers."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student now recognizes the pattern. Time to synthesize the rule.",
+        "state": "Synthesis",
+        "response": "Right. In your own words, how do you calculate average speed?"
+      },
+      {
+        "turn": 15,
+        "speaker": "student",
+        "text": "You divide the total distance traveled by the total time spent."
+      },
+      {
+        "turn": 16,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the concept; the session is complete.",
+        "state": "Closing",
+        "response": "Spot on! Great job. Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Analogies and vocabulary in context",
+    "problem": "Complete the analogy: Ephemeral : Perpetual :: Laconic : ?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I see 'Ephemeral' and 'Perpetual' as opposites. One is short-lived, the other is everlasting. So I need the opposite of 'Laconic', which I think relates to being brief."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified the relationship and the general meaning of the target word, but hasn't proposed an answer. I need to probe their understanding of 'laconic' to ensure precision.",
+        "state": "Diagnosis",
+        "response": "You've correctly identified the relationship. To make sure we're precise, how would you describe the specific type of brevity that 'laconic' refers to?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "It's about speaking or writing. Someone who doesn't say much. So I'm looking for a word that means talking a lot."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is on the right track. Since the socratic_level is medium and hint_frequency is high, I will provide a hint regarding the intensity of the first pair to guide them toward a more sophisticated vocabulary choice.",
+        "state": "Support",
+        "response": "If 'perpetual' represents an extreme version of 'long,' what word for 'talkative' would capture that same level of intensity or formality?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I think the word is 'Taciturn'. Since laconic is brief, taciturn is the opposite because it's more about the personality of being quiet."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made a mistake by suggesting a synonym (taciturn) instead of an antonym. I need to guide them to re-evaluate the meanings of both words.",
+        "state": "Support",
+        "response": "If ephemeral and perpetual are opposites, should laconic and taciturn be synonyms or antonyms? How would you describe a taciturn person's style of speaking?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, right. Taciturn is also brief. My mistake. I need a word for someone who talks excessively. Maybe 'Loquacious'?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student found a correct candidate. To maintain the 'hard' difficulty and high hint frequency, I'll push them to consider the specific nuance of 'wordiness' vs 'talkativeness'.",
+        "state": "Support",
+        "response": "That's a strong candidate. But let's refine the nuance. 'Laconic' often implies a certain efficiency. Does 'loquacious' contrast that specifically, or is there a word more about 'wordiness'?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I'll go with 'Verbose'. But wait, 'Verbose' actually refers to the text itself, while 'Laconic' only refers to the person speaking, so they aren't perfect opposites."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has made a second mistake by incorrectly limiting the scope of 'laconic'. I will correct this misconception so they can finalize their answer.",
+        "state": "Support",
+        "response": "Actually, both can describe a style of writing or a person's manner. If a report is laconic, it's concise. If it's verbose, it's wordy. Does that change your choice?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "It does. 'Verbose' or 'Loquacious' both fit. I'll stick with 'Loquacious' as the best match for the formal tone of 'Perpetual'."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has arrived at the correct answer and justified it. Now I need them to synthesize the entire logical process.",
+        "state": "Synthesis",
+        "response": "You've reached the answer. To wrap up the logic, can you explain the overall principle you used to solve this analogy, from the first pair to the second?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The first pair established an antonym relationship with a high degree of intensity. I had to find a word that wasn't just a general opposite of 'laconic' but matched its formal tone and specific meaning of brevity."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the underlying rule and logic of the analogy. The conversation is now complete.",
+        "state": "Closing",
+        "response": "Spot on! You handled those nuances perfectly. Ready for another challenge?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "computer_science_light",
+    "topic": "Boolean logic",
+    "problem": "Simplify the following Boolean expression: (P ∧ Q) ∨ (P ∧ ¬Q) ∨ (¬P ∧ R). Please show your steps and explain the final result.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think I can start by grouping the first two terms since they both have P. That would give me P ∧ (Q ∨ ¬Q), right?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified a way to factor the expression. I need to check if they know the identity of the resulting sub-expression.",
+        "state": "Diagnosis",
+        "response": "That is a great first step. Since you have grouped those terms, what does the specific sub-expression (Q ∨ ¬Q) evaluate to in Boolean logic?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "That's always True. So the expression becomes (P ∧ True) ∨ (¬P ∧ R), which just simplifies to P ∨ (¬P ∧ R)."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is on the right track. I will guide them toward the distributive law to handle the remaining part of the expression.",
+        "state": "Support",
+        "response": "Exactly. Now we are left with P ∨ (¬P ∧ R). If you wanted to distribute the OR over the AND, how would that expand the expression?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I remember the absorption law. Since P is outside and ¬P is inside, doesn't it just simplify directly to P ∧ R?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made a mistake by misapplying absorption or confusing laws. I'll use a counter-example via a truth table approach to lead them to self-correction.",
+        "state": "Support",
+        "response": "Could you try testing that with a truth table? For instance, what happens to P ∨ (¬P ∧ R) if P is True, and how does that compare to your result of P ∧ R?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Wait, if P is True, the whole expression is True regardless of R. But P ∧ R would be False if R is False. My mistake, it doesn't simplify to P ∧ R."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student corrected the first mistake. I will now nudge them back toward the distributive law as suggested earlier.",
+        "state": "Support",
+        "response": "I see. Going back to that distributive law we mentioned—what happens if you apply the rule (A ∨ (B ∧ C)) as (A ∨ B) ∧ (A ∨ C) to this expression?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "That would be (P ∨ ¬P) ∧ (P ∨ R). Since P ∨ ¬P is always True, it just becomes True ∧ (P ∨ R), which is P ∨ R. Wait, no, if P is true, the whole thing is true, so it should just be P."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student correctly did the math but then made a second mistake by over-simplifying the final result. I need to challenge the logic of 'just P'.",
+        "state": "Support",
+        "response": "If P is False, does the expression P ∨ (¬P ∧ R) always evaluate to False, or is there a scenario where it could still be True?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Right, if P is False, the expression depends on R. So if R is True, the whole thing is True. The correct final simplification must be P ∨ R."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has reached the correct answer. Now I need them to articulate the core principle used to solve the 'trap' part of the problem.",
+        "state": "Synthesis",
+        "response": "You've reached the final simplification. To make sure we've got the logic down, could you explain in your own words how the distributive law helped us handle that ¬P term?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The distributive law let me split the OR across the AND, which created the term (P ∨ ¬P). Since that is a tautology, it effectively disappeared, leaving only the other part of the distribution."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the concept and solved the problem. The conversation is now complete.",
+        "state": "Closing",
+        "response": "Spot on! You handled that tricky edge case perfectly. Ready to try another one?"
+      }
+    ]
   }
 ]

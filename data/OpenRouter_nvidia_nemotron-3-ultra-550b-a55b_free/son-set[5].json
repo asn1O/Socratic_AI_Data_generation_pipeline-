@@ -1,0 +1,101 @@
+[
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Percentages",
+    "problem": "A laptop costs $400. There's a 10% discount. How much do you save?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I see the numbers but I'm not sure where to start with percentages."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student is stuck at the very beginning, so I need to diagnose their current understanding of what a percentage even means.",
+        "state": "Diagnosis",
+        "response": "How would you begin thinking about this problem?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I don't really get what 10% means in this context."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student doesn't grasp the meaning of percent, so I'll give a minimal hint linking it to 'per hundred'.",
+        "state": "Support",
+        "response": "What does the word 'percent' literally mean?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Per hundred? So 10% of 400 is 4000?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student made a concrete error (10% of 400 ≠ 4000), so I'll guide them toward the correct operation with a focused question.",
+        "state": "Support",
+        "response": "If 10% is 10 per 100, what fraction or decimal does that give you?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, 0.1 or 1/10. So 400 times 0.1 is 40?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student reached the right number but I need to check if they understand why, so I'll ask them to explain their step.",
+        "state": "Diagnosis",
+        "response": "How did you get 40 from there?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Divided by 10. But wait, is that the final price after discount?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student confused the discount amount with the sale price — a second distinct conceptual mistake — so I'll redirect to what the question actually asks.",
+        "state": "Support",
+        "response": "The problem asks how much you save, not what you pay. What does the 40 represent?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Right, the discount is $40. So 10% means divide by 10 or multiply by 0.1."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has the correct reasoning now; time to have them articulate the general rule in their own words.",
+        "state": "Synthesis",
+        "response": "In your own words, what's the rule for finding any percentage of a number?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Convert the percent to a decimal by dividing by 100, then multiply by the number."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the general rule, so the session can close warmly.",
+        "state": "Closing",
+        "response": "Exactly! You've got it. Want to try another one?"
+      }
+    ]
+  }
+]

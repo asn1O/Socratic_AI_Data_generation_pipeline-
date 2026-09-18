@@ -307,3 +307,524 @@
     }
   ]
 }
+
+
+{
+  "problem": "You need a $1,000 loan. Option A is a $1,000 loan with a flat $100 fee. Option B is a $1,000 loan with a 8% simple interest rate for one year. Which offer costs less overall?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I think Option B is better because 8 percent sounds smaller than a flat hundred dollars."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student made a premature comparison based on raw numbers without calculating the actual cost. I need to prompt them to check their math.",
+      "state": "Diagnosis",
+      "response": "How much would that 8 percent actually be in dollars on a $1,000 loan?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Wait, 8 percent of 1,000 is 80 dollars. So Option B is 80 bucks total."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student correctly calculated Option B's interest, but needs to compare it properly against Option A's total cost now.",
+      "state": "Support",
+      "response": "Now that you know Option B costs $80, how does that compare to the total cost of Option A?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Option A is a flat $100 fee, plus you have to pay back the original $1,000 loan, right?"
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student is acknowledging the fee, but I should have them look closer at the total repayment amount for both options.",
+      "state": "Diagnosis",
+      "response": "What is the total amount you pay back at the end for Option A versus Option B?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "For Option A you pay $1,100 total, and for Option B you pay $1,080 total."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student has the correct numbers. Now I need to guide them to make the final choice based on those totals.",
+</div>",
+      "state": "Support",
+      "response": "Given those total payouts, which one ends up saving you money?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "Option B saves me twenty dollars compared to Option A."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "The student has the right answer and is ready to articulate the underlying rule for comparing loan offers.",
+      "state": "Synthesis",
+      "response": "In your own words, what is the best way to figure out which loan offer is actually cheaper?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "You have to calculate the total cost including all fees and interest, instead of just guessing from the percentage or flat fee alone."
+    },
+    {
+      "turn": 12,
+      "speaker": "tutor",
+      "reasoning": "The student correctly explained the concept. Closing the session warmly.",
+      "state": "Closing",
+      "response": "Spot on! Great work today. Let me know if you want to tackle another one."
+    }
+  ]
+}
+
+
+{
+  "problem": "A 250 g copper calorimeter contains 400 g of water at 20°C. A 150 g piece of an unknown metal, heated to 100°C in a boiling water bath, is quickly dropped into the calorimeter. The final equilibrium temperature of the system is measured to be 24.5°C. Assuming no heat is lost to the surroundings (specific heat of copper is 385 J/(kg·K) and specific heat of water is 4186 J/(kg·K)), calculate the specific heat capacity of the unknown metal and identify the metal based on common specific heat values.",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I started looking at this calorimetry problem, and I know that heat lost equals heat gained. So the hot metal is losing heat, and both the water and the copper calorimeter are gaining heat. But I'm kind of stuck on how to set up the equation because there are three different substances involved and I'm not totally sure which masses and temperature changes go where."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student understands the principle of conservation of energy in heat transfer (heat lost equals heat gained), but needs help organizing the specific components. I will use Diagnosis to have them clarify how they plan to structure the heat terms for each of the three objects.",
+      "state": "Diagnosis",
+      "response": "It's great that you've identified the core principle of energy conservation right away—heat lost by the hot object equals the heat gained by the cooler ones. Since you have three distinct substances interacting, let's break them down individually. How are you thinking about setting up the left side of your equation for the heat lost by the unknown metal?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "For the metal losing heat, I think the formula is mass times specific heat times the change in temperature, so that's 0.15 kg times C_metal times (100 minus 24.5). For the water and calorimeter gaining heat, I should just add their masses together and multiply by the water's specific heat and (24.5 minus 20)."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student made a procedural error by combining the masses of the water and the copper calorimeter into a single term using the specific heat of water. I must point out that different materials have different specific heats so they cannot share a single term. I will use Support to guide them toward treating the calorimeter separately.",
+      "state": "Support",
+      "response": "You've written the metal's heat loss correctly, but remember that the water and the copper calorimeter are two completely different materials with different abilities to store thermal energy. Because they have different specific heat values, you cannot simply add their masses together like that; each one needs its own distinct $mc\\Delta T$ term on the heat gained side."
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Oh right, of course! They are different materials, so they need separate terms. Let me fix that. So the right side should be the heat gained by the water, which is 0.4 kg times 4186 times (24.5 minus 20), plus the heat gained by the copper calorimeter, which is 0.25 kg times 385 times (24.5 minus 20). Is that right?"
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student successfully corrected their mistake regarding the separate calorimeter and water terms. I should now use Diagnosis to see if they can translate this complete equation into finding the unknown specific heat.",
+      "state": "Diagnosis",
+      "response": "Yes, exactly! Separating them out into individual terms for the water and the copper is the right approach. Now that you have the complete expression set up with $Q_{lost} = Q_{gained\_water} + Q_{gained\_copper}$, how would you rearrange this equation to solve for the specific heat capacity of the unknown metal?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Well, I have all the numbers except for C_metal. So I'll calculate the total heat gained on the right side by multiplying out the water part and the copper part and adding them together. Then I'll divide that total by the metal's mass of 0.15 kg and its temperature change of 75.5 degrees."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student has a solid grasp of the algebraic isolation steps now. I will provide a supportive prompt to encourage them to crunch those numbers and see what specific heat value they get.",
+2",
+      "state": "Support",
+      "response": "That algebraic path is spot on. Go ahead and calculate the numerical values for the heat gained by both the water and the copper, add them together, and then perform that final division to find your value for the metal's specific heat."
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "Okay, let's see. The water part gives me about 7534.8 Joules, and the copper part gives about 433.125 Joules. Adding those gives 7967.925 Joules total. Dividing that by (0.15 times 75.5) gives me around 703.8 Joules per kilogram Kelvin. That seems like a reasonable specific heat for a metal!"
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "The student has successfully calculated the correct specific heat value through proper multi-step reasoning. To ensure deep internalisation, I will move to Synthesis and ask them to explain the underlying energy balance concept in their own words.",
+      "state": "Synthesis",
+      "response": "That calculation is completely correct and 703.8 J/(kg·K) is a very reasonable result. Before we wrap up, can you explain in your own words why the total heat gained by the water and calorimeter must equal the heat lost by the metal in this closed system?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "Basically, because energy can't just appear or disappear out of nowhere, all the thermal energy that leaves the hot metal has to go directly into warming up the cooler water and the container holding it, since we're assuming no heat escapes into the room."
+    },
+    {
+      "turn": 12,
+      "speaker": "tutor",
+      "reasoning": "The student has accurately articulated the law of conservation of energy as applied to calorimetry. The problem is fully solved, so I will now transition to Closing.",
+      "state": "Closing",
+      "response": "Spot on! You nailed the energy conservation concept and worked through the multi-step calculation brilliantly. Excellent job today—let me know if you want to tackle another one!"
+    }
+  ]
+}
+
+
+{
+  "problem": "A local public health study found a strong positive correlation between the number of hours people spend jogging per week and their reported stress levels. The researchers conclude that jogging actually causes high stress because more jogging leads to higher stress scores. Evaluate this conclusion. Is this causation, or is there another way to interpret the relationship?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "Well, since the data shows a strong positive correlation where stress goes up as jogging hours increase, it definitely proves that jogging causes stress. More exercise is overworking the body's nervous system, so the running itself is raising their anxiety levels."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student has asserted a direct causal link from a correlation, which is a classic overgeneralization error. Given the low socratic level and high hint frequency, I will directly point out that correlation alone doesn't guarantee causation while offering a hint about hidden variables.",
+      "state": "Support",
+      "response": "It's true that the data shows a strong pattern, but correlation by itself doesn't automatically mean one variable causes the other. Think about what else might be happening in a person's life that could both drive them to jog more and make them feel more stressed overall."
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Oh, right! It's definitely because people who jog are naturally more high-strung and competitive people to begin with, so their personality is what causes both the heavy running routine and the high stress."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student identified a psychological factor, but overcorrected into assuming personality is the only explanation, missing common external confounders like schedule pressure. I will use Diagnosis to prompt them to look closer at situational factors.",
+      "state": "Diagnosis",
+      "response": "Personality can certainly play a role, but let's consider external circumstances too. What external factors in a person's daily schedule might force them to squeeze in exercise while simultaneously adding a lot of pressure to their day?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Hmm, maybe people with super demanding jobs or intense school commitments have less free time, which causes them to feel extremely stressed, and they also use late-night jogging as their primary coping mechanism to deal with it."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student is on the right track with third-variable confounding, but they introduced a slight twist where jogging is a coping mechanism rather than an independent effect. I will provide direct support to refine this third-variable concept.",
+      "state": "Support",
+      "response": "That's a great example of a confounding variable like work pressure influencing both things. When a third factor drives both variables, it creates the illusion of a direct cause-and-effect relationship between jogging and stress when there isn't one."
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Right, so because work stress independently causes high stress and also forces people to schedule tight routines, it looks like jogging is the culprit when it's actually just a shared response or byproduct."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student understands the confounder mechanism well now. I will transition to Synthesis, asking them to summarize the core principle of why correlation doesn't equal causation in this context.",
+      "state": "Synthesis",
+      "response": "You've got a really solid grasp on how confounders work here. In your own words, how would you summarize the difference between seeing a correlation in data versus proving actual causation?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "Correlation just means two things move together in a pattern, but causation means one directly makes the other happen. A correlation can easily trick you if a hidden third factor is actually causing both things to change at the same time."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "The student has successfully explained the concept and distinction. Now I will move to the Closing state to wrap up warmly.",
+      "state": "Closing",
+      "response": "Spot on! You nailed the distinction completely. Great job working through that, and let me know if you want to tackle another one!"
+    }
+  ]
+}
+
+
+{
+  "problem": "Two numbers are in the ratio of 3:5. If their sum is 80, what is the value of the smaller number?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I'm really lost on this ratio problem. I know the sum is 80, but I don't know how to split it using 3 and 5."
+    },
+    {
+      "turn": 2,
+      "speaker": "reasoning": "The student understands the total sum is 80 and recognizes the ratio numbers, but lacks a starting method. A Diagnosis state is needed to see how they usually think about splitting quantities.",
+      "state": "Diagnosis",
+      "response": "That's okay, ratios can feel tricky at first. How have you tried dealing with ratio parts in other problems before?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "I usually just try to divide 80 by 3 and then by 5, but the numbers don't work out nicely."
+    },
+    {
+      "turn": 4,
+      "speaker": "reasoning": "The student made a conceptual mistake by treating ratio parts as direct individual divisors of the total, rather than parts of a whole. I need to guide them toward combining the parts first.",
+      "state": "Support",
+      "response": "Ah, dividing straight away doesn't quite work because 3 and 5 aren't the actual quantities. If the ratio is 3:5, how many total parts make up the entire 80?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Oh! Do I just add 3 and 5 together to get 8 parts?"
+    },
+    {
+      "turn": 6,
+      "speaker": "reasoning": "The student correctly grasped the total number of parts. Now I need to check if they know what to do with that total before moving forward.",
+      "state": "Diagnosis",
+      "response": "Spot on, there are 8 total parts. Knowing that 8 parts equal 80 in total, what do you think we should do with those numbers next?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "I guess I multiply 80 by 8 to find the value of each part?"
+    },
+    {
+      "turn": 8,
+      "speaker": "reasoning": "The student made a second conceptual mistake by multiplying the total by the number of parts instead of dividing. A Support hint will help them correct this operation.",
+      "state": "Support",
+      "response": "Careful with multiplying. If 8 parts altogether equal 80, what operation helps us find the value of just 1 single part?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "Division! 80 divided by 8 means 1 part is worth 10. And since the smaller number is 3 parts, I multiply 3 by 10 to get 30."
+    },
+    {
+      "turn": 10,
+      "speaker": "reasoning": "The student has successfully arrived at the correct answer through self-correction. To solidify learning, I need them to explain the underlying rule in their own words via Synthesis.",
+      "state": "Synthesis",
+      "response": "That's right, the smaller number is 30. In your own words, how do you use a given ratio and a total sum to find an unknown quantity?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "You add the ratio numbers to get the total parts, divide the total sum by those parts to find the value of one part, and then multiply that value by the specific part you want."
+    },
+    {
+      "turn": 12,
+      "speaker": "reasoning": "The student accurately explained the entire ratio-sharing concept in their own words, fulfilling the requirement to close.",
+      "state": "Closing",
+      "response": "Brilliant explanation! You nailed it completely. Let me know if you want to tackle another one."
+    }
+  ]
+}
+
+
+{
+  "problem": "In a group of 30 students, 18 play soccer and 15 play basketball. If 5 students play neither sport, how many students play both soccer and basketball?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I'm looking at this Venn diagram problem, and honestly I'm pretty lost. I tried adding 18 and 15 together, but I got 33 which is already more than the total of 30 students, so I don't know what to do with the 5 who play neither."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student attempted to add the sets directly and noticed a contradiction with the total, but doesn't understand why the sum exceeds 30 or how to account for the outside group. I need to explain the concept of the overlapping region before asking them to evaluate the active group size.",
+      "state": "Diagnosis",
+      "response": "When you add soccer and basketball players together, anyone who plays both sports gets counted twice. First, let's figure out how many students are actually participating in sports if 5 play neither out of the 30 total. How many students is that?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Oh, if 5 play neither, then 35 students must play sports because 30 plus 5 is 35."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student made a conceptual mistake by adding the 'neither' group to the total instead of subtracting them from the total. I need to correct this misconception directly since the student level is beginner and socratic level is low.",
+      "state": "Diagnosis",
+      "response": "Careful with that addition — if there are 30 students in total, you can't have more than 30 participating. The 5 who play neither need to be subtracted from the total group. So how many students actually play at least one sport?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Right, okay. So 30 minus 5 is 25 students who play sports. That makes more sense."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student has correctly found the number of students playing at least one sport. Now I need to guide them to compare this with the sum of the individual sports to find the overlap.",
+      "state": "Support",
+      "response": "Exactly, 25 students play at least one sport. Now, if you add the 18 soccer players and 15 basketball players, you get 33 total mentions. What does the difference between 33 and our actual active group of 25 tell us?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Wait, the difference is 33 minus 25, which is 8. Does that mean 8 people play both?"
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student correctly calculated the overlap. I will now prompt them to explain the underlying logic of why subtracting the total active students from the sum of the individual sets reveals the intersection.",
+      "state": "Synthesis",
+      "response": "Spot on, 8 students play both. In your own words, why did adding the individual sport counts together give us a number higher than the actual number of players, and why did subtracting give us the overlap?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "It happens because the people playing both sports get counted twice when you just add soccer and basketball players together. So subtracting the real total of 25 active players from that double-counted sum isolates the exact number of people who were counted twice, which is the intersection in the middle."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "The student has successfully articulated the core principle of inclusion-exclusion and the overlapping region in a Venn diagram. Wrapping up the session warmly.",
+      "state": "Closing",
+      "response": "Nice, that's exactly it! You nailed the reasoning. Want to try another one?"
+    }
+  ]
+}
+
+
+{
+  "problem": "Imagine you are researching the American Revolutionary War. You find two items: a diary written by an ordinary soldier who fought at the Battle of Valley Forge in 1778, and a chapter from a modern history textbook published in 2023 that describes the conditions at Valley Forge. How would you categorize each of these two items, and what makes them different in terms of how historians use them?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I think the diary is a secondary source because it was written down a long time ago, and the textbook is a primary source because it was made by historians who know a lot of facts."
+    },
+    {
+      "turn": 2,
+      "speaker": "reasoning": "The student has inverted both categories and relied on a surface-level assumption about age versus expertise, showing a fundamental conceptual misunderstanding that requires immediate diagnostic exploration.",
+      "state": "Diagnosis",
+      "response": "What makes you think that something written a long time ago would make it a secondary source rather than a primary one?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Well, usually old things are old history, so people studying them are making secondary things out of them, right? And textbooks are the main original books you read in school, so that feels primary."
+    },
+    {
+      "turn": 4,
+      "speaker": "reasoning": "The student is confusing the importance of a textbook in a classroom with its historical classification. I need to guide them toward considering who actually created the item and their direct relationship to the event.",
+      "state": "Support",
+      "response": "That makes sense why textbooks feel primary since they are your main reading material, but let's think about who actually created each item. Who was experiencing the events at Valley Forge, the soldier writing in his diary right then, or the textbook author living today?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "The soldier was definitely there experiencing it firsthand when it happened, while the textbook author is just writing about it hundreds of years later."
+    },
+    {
+      "turn": 6,
+      "speaker": "reasoning": "The student has correctly identified the timeline and direct experience of the soldier versus the modern author, providing a great opening to anchor the definition of a primary source.",
+      "state": "Support",
+      "response": "Spot on. If the soldier was right there living through it and writing about it as it happened, how might that direct connection influence what kind of historical source we call that diary?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "I guess because he was there, the diary would be a secondary source since he's just telling a secondary story of his day?"
+    },
+    {
+      "turn": 8,
+      "speaker": "reasoning": "The student regressed and applied 'secondary' to the firsthand account despite correctly identifying the direct experience. This is a clear definitional mix-up that needs targeted support without giving the answer away.",
+      "state": "Support",
+      "response": "Careful—remember we just said he was there firsthand experiencing it. If someone has a first-row seat to history and writes it down right then, would we call that first-hand account a primary source or a secondary source?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "Oh, right! A firsthand account from someone who was actually there is a primary source. And that means the textbook written today by someone who wasn't there would be the secondary source."
+    },
+    {
+      "turn": 10,
+      "speaker": "reasoning": "The student has successfully corrected their understanding and arrived at the correct definitions. Now I need to prompt them to articulate the core concept in their own words to ensure full internalization.",
+      "state": "Synthesis",
+      "response": "You've got it! Now, in your own words, how would you explain the difference between a primary and a secondary source to someone else?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "A primary source is created by someone who was actually there experiencing the event firsthand, like the soldier's diary. A secondary source is made later by someone analyzing those primary sources, like the textbook author writing about it today."
+    },
+    {
+      "turn": 12,
+      "speaker": "reasoning": "The student has accurately and clearly explained the concept in their own words. The conversation is complete, so I will provide a warm, brief closing.",
+      "state": "Closing",
+      "response": "Nailed it! That is a fantastic way to look at it. Great job working through that, and let me know if you want to tackle another one!"
+    }
+  ]
+}
+
+
+{
+  "problem": "A sealed rigid 2.0 L steel tank contains 1.0 mole of carbon dioxide ($CO_2$) at an initial temperature of -80°C and a pressure of 0.5 atm, placing it firmly in the solid phase (dry ice). The tank is slowly heated until the internal temperature reaches +40°C. Assuming $CO_2$ undergoes sublimation at 1 atm and that you are consulting the standard phase diagram for carbon dioxide, what exact phase or phases of $CO_2$ will physically exist inside this rigid 2.0 L tank at the final state of +40°C, and what role does the volume constraint play in preventing a standard liquid phase transition?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "Since we're starting at -80°C and heating up to +40°C, the dry ice will sublimate directly into carbon dioxide gas. Once it's all gas at 40°C, the rigid tank will just contain superheated carbon dioxide vapor at a really high pressure."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student correctly identifies sublimation during the initial heating phase, but immediately jumps to an assumption about the final state without checking the triple point or calculating the final pressure inside the rigid volume.",
+      "state": "Diagnosis",
+      "response": "You've got the initial sublimation right, but let's look closer at that final state. If it's a completely rigid 2.0 L container holding 1.0 mole of $CO_2$ at +40°C, what would the calculated pressure be using the ideal gas law, and how does that pressure compare to the triple point of $CO_2$?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Using PV = nRT, 1 mole at 40°C (313.15 K) in 2 liters gives a pressure around 12.8 atmospheres. Since 12.8 atm is way above the 5.1 atm triple point pressure of carbon dioxide, the gas will just liquefy first before becoming a vapor."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student calculated the pressure correctly, but asserted an incorrect phase transition outcome based on the triple point, showing a slight misconception about how high-density confinement forces phase behavior past the critical point.",
+      "state": "Support",
+      "response": "That 12.8 atm pressure calculation is spot on! But take another look at the phase diagram and the critical temperature of carbon dioxide, which is about 31°C. What happens to the distinction between liquid and gas when you heat past that critical temperature, regardless of the pressure?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Oh right, the critical temperature of $CO_2$ is 31°C, and we are heating to 40°C, which is past that point. So at 40°C, the substance must be a liquid because the high pressure compresses it past the vaporization curve."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student is still confusing the supercritical fluid region with a compressed liquid state due to the high pressure, repeating a subtle boundary condition error.",
+      "state": "Support",
+      "response": "Remember what happens to the meniscus between a liquid and a gas when you exceed both the critical temperature and critical pressure. Can distinct liquid and gas phases exist above the critical point, or does the phase change character shift?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Wait, past the critical temperature and pressure, the phase boundary disappears entirely. So it wouldn't be a liquid or a gas—it becomes a supercritical fluid filling the 2.0 L volume."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student has self-corrected and successfully identified the supercritical fluid state. Now I need them to connect this back to the volume constraint and why a standard liquid phase can't be stably maintained at that specific final temperature."
+    },
+    {
+      "state": "Support",
+      "response": "Exactly, it enters the supercritical fluid region. Given that the volume is strictly fixed at 2.0 L and you've passed 31°C, how does that constant volume constraint ensure it stays a homogeneous fluid rather than separating into a boiling liquid-vapor equilibrium?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "Because the tank is rigid and closed, the overall density is fixed at 0.5 moles per liter right from the start. As it heats up, it can't expand or change its average density, so it smoothly transitions through the dense fluid region without ever crossing a phase boundary to form a discrete boiling liquid."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "The student has integrated the density and volume constraints with the thermodynamic state change. I will now ask them to synthesize the entire concept in their own words.",
+      "state": "Synthesis",
+      "response": "That's a complete picture. In your own words, how do the temperature, pressure, and fixed volume interact here to dictate that final supercritical state instead of a standard liquid-gas coexistence?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "When you heat a substance in a rigid container past its critical temperature, the fixed density and rising pressure force it past the liquid-gas boundary into a supercritical fluid, where the physical distinction between liquid and gas vanishes entirely."
+    },
+    {
+      "turn": 12,
+      "speaker": "tutor",
+      "reasoning": "The student accurately and concisely explained the underlying thermodynamic principles. The session is complete.",
+      "state": "Closing",
+      "response": "Spot on! You nailed the interplay between critical points and volume constraints. Great work today—let me know if you want to tackle another phase diagram problem!"
+    }
+  ]
+}

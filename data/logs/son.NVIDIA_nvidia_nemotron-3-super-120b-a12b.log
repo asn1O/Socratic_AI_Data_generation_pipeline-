@@ -190,3 +190,39 @@
   expired: False
   failure_categories:
   speaker_alternation_broken: 2
+2026-09-18 17:38:55,268 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-18 17:41:04,962 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=13955 turns=12 path=data\NVIDIA_nvidia_nemotron-3-super-120b-a12b\son-set[4].json
+2026-09-18 17:42:04,961 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-18 17:50:59,866 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=23115 turns=14 path=data\NVIDIA_nvidia_nemotron-3-super-120b-a12b\son-set[4].json
+2026-09-18 17:51:59,865 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-18 17:54:09,229 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=15568 turns=16 path=data\NVIDIA_nvidia_nemotron-3-super-120b-a12b\son-set[4].json
+2026-09-18 17:55:09,227 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-18 18:03:35,331 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=17447 turns=12 path=data\NVIDIA_nvidia_nemotron-3-super-120b-a12b\son-set[4].json
+2026-09-18 18:04:35,332 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-18 18:06:17,852 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=9326 turns=16 path=data\NVIDIA_nvidia_nemotron-3-super-120b-a12b\son-set[4].json
+2026-09-18 18:07:17,851 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-18 18:10:01,582 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=13959 turns=12 path=data\NVIDIA_nvidia_nemotron-3-super-120b-a12b\son-set[4].json
+2026-09-18 18:11:01,581 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-18 18:15:48,970 INFO REJECTED_RESPONSE_SAVED provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b path=data\rejected_responses\son-NVIDIA_nvidia_nemotron-3-super-120b-a12b.txt
+2026-09-18 18:15:48,971 ERROR JSON_INVALID provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b reason=speaker alternation broken at turn 2
+2026-09-18 18:16:48,970 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-18 18:21:23,207 INFO SUCCESS provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b total_tokens=26161 turns=16 path=data\NVIDIA_nvidia_nemotron-3-super-120b-a12b\son-set[4].json
+2026-09-18 18:22:23,206 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-18 18:22:24,593 ERROR MODEL_FAILURE provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b error_code=API_CONNECTION_ERROR reason=model call failed or returned no response
+2026-09-18 18:23:24,592 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-18 18:23:25,925 ERROR MODEL_FAILURE provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b error_code=API_CONNECTION_ERROR reason=model call failed or returned no response
+2026-09-18 18:24:25,925 INFO MODEL_START provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b
+2026-09-18 18:24:27,356 ERROR MODEL_FAILURE provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b error_code=API_CONNECTION_ERROR reason=model call failed or returned no response
+2026-09-18 18:24:27,356 ERROR MODEL_EXPIRED provider=NVIDIA model=nvidia/nemotron-3-super-120b-a12b reason=three consecutive API failures
+2026-09-18 18:25:27,356 INFO MODEL_SUMMARY
+  provider_model: NVIDIA / nvidia/nemotron-3-super-120b-a12b
+  attempts: 11
+  saved: 7
+  failed: 4
+  accept_rate: 63.64%
+  average_tokens: 17075.86
+  turn_range: 12-16
+  expired: True
+  failure_categories:
+  empty_response: 3
+  speaker_alternation_broken: 1

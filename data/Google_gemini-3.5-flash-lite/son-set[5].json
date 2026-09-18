@@ -1,0 +1,437 @@
+[
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Analogies and vocabulary in context",
+    "problem": "Determine the best word to complete the analogy: 'Luminous is to glowing as translucent is to ___', keeping in mind how light passes through different materials.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think translucent means it's totally dark, so maybe shadow?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has asserted a misconception about the meaning of translucent, equating it with blocking light entirely. I need to probe their understanding of how light interacts with materials without giving away the definition.",
+        "state": "Diagnosis",
+        "response": "What does a material like frosted glass do when light hits it?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Frosted glass lets you see shapes behind it, so light passes through it a little bit."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly notes that frosted glass lets some light through. I should now help them connect this property to the first half of the analogy.",
+        "state": "Support",
+        "response": "If glowing is to luminous, how does light moving partly through frosted glass connect to a single word?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Does it mean transparent?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student confused translucent with transparent as a second mistake. I need to guide them to see the difference between letting all light through versus partial light transmission.",
+        "state": "Diagnosis",
+        "response": "What is the difference between completely clear window glass and frosted shower glass?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Clear glass lets you see everything sharply, but frosted glass blurs things."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student recognizes the blurring effect of partial light passage. I will prompt them to find a descriptive word for that specific state, similar to how luminous pairs with glowing.",
+        "state": "Support",
+        "response": "If glowing describes something luminous, what word describes something that transmits light partially or diffusely like frosted glass?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, like cloudy or clear in a hazy way... hazy!"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has arrived at the correct descriptor through guided reasoning. I now need them to articulate the underlying relationship for the analogy.",
+        "state": "Synthesis",
+        "response": "In your own words, how does the relationship between translucent and hazy match luminous and glowing?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Both pairs match a main descriptive word with a word that explains how it handles light."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student successfully explained the concept and solved the analogy. The conversation is complete.",
+        "state": "Closing",
+        "response": "Spot on! You nailed it. Ready to tackle another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Sentence structure and clauses",
+    "problem": "Identify the clause type and function of the underlined dependent clause in the following sentence: 'The committee will approve the budget _provided that all departments submit their reports on time_.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "That underlined part is a noun clause acting as the direct object of the verb."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student incorrectly identified a conditional clause as a noun clause, so I need to diagnose what subordinating word led them to that conclusion.",
+        "state": "Diagnosis",
+        "response": "Noun clauses usually answer what or whom. Does 'provided that' fit that role here, or is it setting a condition?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, it's answering what the committee will approve, so it's a noun clause."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student repeated their misconception about noun clauses, so I will directly explain that conditional subordinators like 'provided that' function as adverbial clauses.",
+        "state": "Support",
+        "response": "Actually, 'provided that' introduces a condition under which the main action happens, making it an adverbial clause rather than a noun."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, so since it's adverbial, it must be an adjective clause modifying budget."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student switched from noun to adjective, showing a persisting confusion about clause types. I'll correct the category directly and ask about modification.",
+        "state": "Diagnosis",
+        "response": "Adjective clauses modify nouns like 'budget', but adverb clauses modify verbs. Which part of the sentence does this clause modify?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "It modifies the verb 'approve' by telling us the condition for approval."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified that it modifies the verb and shows a condition. Now I need them to synthesize this into a formal rule.",
+        "state": "Synthesis",
+        "response": "Spot on. In your own words, how do you distinguish an adverbial clause of condition from other dependent clauses?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "An adverbial clause of condition modifies the verb by stating a rule that must happen first."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the concept and its grammatical function. Ready for closing.",
+        "state": "Synthesis",
+        "response": "Exactly right. It modifies the verb by providing the circumstance for the main action."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "An adverbial conditional clause modifies the main verb by giving the requirement for the action to occur."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the concept, so I am wrapping up the session warmly.",
+        "state": "Closing",
+        "response": "Spot on! You've really nailed how conditional clauses work. Ready for another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "history_and_social_studies",
+    "topic": "Comparing political systems",
+    "problem": "Compare how leadership is chosen and how power is exercised in a constitutional monarchy versus an absolute monarchy.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think both absolute and constitutional monarchies are pretty much the same because they both have a king or queen who rules over the country by themselves."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has asserted a misconception that both forms of monarchy are identical regarding leadership. I need to elicit their thinking about where a king gets their position or rules from to start unpacking that.",
+        "state": "Diagnosis",
+        "response": "What makes you say they rule by themselves in the exact same way, and have you noticed any differences in how someone actually becomes a king or queen in different countries?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, in both types, leadership is chosen just by the royal family bloodline, so the oldest child always inherits the absolute power automatically."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identifies inheritance for the crown, but mistakenly claims absolute power is automatically attached to both types. I need to probe how laws or other groups might limit that power in one of the systems.",
+        "state": "Diagnosis",
+        "response": "You are spot on about how the family line passes down the crown, but what happens once they are in power—do you think a king in a constitutional monarchy can make any law they want without anyone else's approval?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I'm lost on that part because if they are a monarch, wouldn't everyone have to listen to whatever they say no matter what?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is genuinely confused about how laws limit a constitutional monarch. Since socratic_level is high, I will use a question rather than a direct explanation to guide them toward thinking about who else might hold governing power in a constitution-based system.",
+        "state": "Support",
+        "response": "If you think about countries like the United Kingdom today, do you know if the king or a group like Parliament makes the actual laws and runs the government?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, Parliament makes the laws, but I thought the king could just ignore Parliament and do whatever he wants whenever he feels like it."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student still holds a lingering misconception about the absolute supremacy of a constitutional monarch's personal will. I need to prompt them to consider what a 'constitution' actually does to a ruler's power.",
+        "state": "Diagnosis",
+        "response": "If a country has a constitution that limits what the monarch can do, how do you think that changes the way power is exercised compared to a ruler who answers to no one?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Right, a constitution must mean the ruler has to follow written laws and share power with elected leaders, whereas an absolute monarch has total control over everything without any laws stopping them."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully grasped the distinction. Now I need them to articulate this core difference in their own words to cement their understanding before closing.",
+        "state": "Synthesis",
+        "response": "That's a really clear distinction you've found! Could you put that all together in your own words—how do leadership and the exercise of power differ between a constitutional monarchy and an absolute monarchy?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Sure! In both systems leadership is inherited through the royal family, but in a constitutional monarchy, power is limited by a constitution and shared with a parliament, while an absolute monarch holds total, unchecked power over the whole government."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the concept and principles in their own words. The session is complete.",
+        "state": "Closing",
+        "response": "Spot on! You nailed the contrast between those two political systems. Great job working through that today!"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "physics",
+    "topic": "Projectile motion basics",
+    "problem": "A projectile is launched from the ground at an angle of 30 degrees above the horizontal with an initial speed of 20 m/s. It lands on a platform that is 2 meters above the launch height. Find the total time the projectile is in the air.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I started by breaking the velocity into parts, so v_0y is 20 times the sine of 30, which gives me 10 m/s. But I'm kind of stuck on how to handle the 2-meter platform height when I plug it into the kinematics equation."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student correctly found the initial vertical velocity component but is uncertain about incorporating the height offset. I'll use Diagnosis to see how they're trying to set up the position equation.",
+        "state": "Diagnosis",
+        "response": "You correctly found the initial vertical velocity. How are you currently setting up your vertical kinematics equation to include that 2-meter platform height?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I tried writing y = y_0 + v_0y*t - 4.9t^2, but I put 0 for y_0 and 2 for y, so I got 2 = 10t - 4.9t^2. Wait, is that right?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student set up the kinematic equation correctly with the right initial and final positions. Since socratic_level is low, I will directly confirm their setup and then guide them on solving the quadratic equation.",
+        "state": "Support",
+        "response": "Yes, that setup is completely correct! When you rearrange that quadratic equation into standard form, what does it look like?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "If I move everything to one side, I get 4.9t^2 - 10t + 2 = 0. But I think I can just ignore the gravity term if I'm doing a quick estimate, so I'll just do 10t = 2 and get t equals 0.2 seconds."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made a procedural error by dropping the squared term to simplify the math, which is our first clear mistake. I need to address this misconception directly.",
+        "state": "Diagnosis",
+        "response": "Dropping the squared term changes the math entirely because gravity accelerates the object over time. Since it's a quadratic equation with a t-squared term, what method should we use to solve 4.9t^2 - 10t + 2 = 0?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Ah right, I need to use the quadratic formula. So that's t = (-(-10) plus or minus the square root of ((-10)^2 - 4(4.9)(2))) all over 2(4.9)."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified and applied the quadratic formula. I will provide direct support on calculating the discriminant to keep things moving.",
+        "state": "Support",
+        "response": "Spot on with the formula. Let's crunch the numbers inside that square root: 100 minus whatever 4 times 4.9 times 2 is. What do you get for the discriminant?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "4 times 4.9 is 19.6, times 2 is 39.2. So 100 minus 39.2 is 60.8. Then the square root of 60.8 is about 7.8, so t = (10 + 7.8) / 9.8. That gives me like 1.8 seconds."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student calculated one valid time, but a quadratic equation yields two possible mathematical answers. I will state this fact directly to prompt a final check.",
+        "state": "Support",
+        "response": "1.8 seconds is one valid time when the projectile hits the platform on the way down. Remember that the quadratic formula gives two answers because of the plus-or-minus sign—what would the other solution represent here?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The other answer would use minus instead of plus, giving us the earlier time on the way up when it crosses that 2-meter height before reaching the peak. So 1.8 seconds is our final answer for when it lands."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the physical meaning of the two quadratic roots and identified the correct flight time. Wrapping up the session.",
+        "state": "Closing",
+        "response": "Brilliant work! You navigated the quadratic setup and understood the physical meaning of both roots. Great job today!"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Map reading and distance estimation",
+    "problem": "You are planning a backpacking route across a mountainous national park. The topographic map has a scale of 1:24,000, and the contour lines represent an elevation interval of 40 feet. You need to hike from a trailhead at an elevation of 1,200 feet up to a ridge pass at 3,200 feet, following a trail that measures 6.5 inches on the map. However, you also need to factor in Naismith's Rule for hiking speed: 1 hour for every 3 miles of forward distance, plus an additional 10 minutes for every 1,000 feet of total ascent. Calculate the total estimated hiking time for this ascent, taking both horizontal map distance and vertical elevation change into account.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Okay, so I started by taking the 6.5 inches on the map and multiplying it by 24,000 to get the ground distance in inches, then converting that straight into miles. Since 1:24,000 means one inch is 24,000 inches, that's 156,000 inches total. Divided by 63,360, that gives me about 2.46 miles. For the vertical part, the pass is at 3,200 feet and the trailhead is at 1,200 feet, so that's a 2,000-foot total ascent. To apply Naismith's Rule, I'll take my 2.46 miles and divide by 3 to get about 0.82 hours for the distance, and then add 20 minutes for the 2,000 feet of climbing. That comes out to roughly 49 minutes for the walking plus 20 minutes for the climbing, so about 1 hour and 9 minutes total. Wait, is that all correct?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly calculated the horizontal distance and the elevation change, but their time conversion for the distance portion of Naismith's Rule contains a arithmetic mistake regarding hours versus minutes, and I want to see how they process that breakdown.",
+        "state": "Diagnosis",
+        "response": "You've done a really thorough job converting that map measurement into actual ground distance and figuring out your total elevation gain. Let's look closely at how you translated that distance into hours, though. When you divided your mileage by 3, what unit of time did that decimal represent, and how did you convert it into the minutes you used for your final addition?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Ah, let me check that part. I got 0.82 hours, and I think I just treated that 0.82 directly as minutes or something weird in my head because I was rushing through the arithmetic. Wait, 0.82 of an hour isn't 49 minutes, right? One hour is 60 minutes, so 0.82 multiplied by 60 would be... let's see, 8 times 6 is 48, so about 49.2 minutes. Oh wait, my math actually was 49 minutes! So 0.82 hours really is about 49 minutes. Wait, is that where my error was, or did I mess up the contour interval part since the problem mentioned 40-foot contour lines?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly caught that 0.82 hours is indeed about 49 minutes, but they are now second-guessing themselves and bringing up the contour lines as a potential distraction. I need to guide them to realize whether those contour lines are actually needed for the calculation they've already performed.",
+        "state": "Support",
+        "response": "Your conversion of 0.82 hours to roughly 49 minutes was actually spot on. As for those 40-foot contour lines mentioned in the problem description, take a look at the elevations you were already given for the trailhead and the pass. Do you actually need to count the individual contour lines to find your total ascent?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh! The problem already explicitly gives us the trailhead at 1,200 feet and the ridge pass at 3,200 feet, so subtracting them gives us the 2,000-foot ascent directly. Those 40-foot contour lines are just extra background information on the map legend that we don't even need to use for the math since the start and end elevations are already provided right there in the text."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly dismissed the unnecessary contour lines, but since they had an earlier arithmetic/conceptual slip about how Naismith's Rule handles fractions of an hour versus total time, I want them to re-verify their final time sum to ensure everything aligns properly.",
+        "state": "Diagnosis",
+        "response": "You are completely right that the given elevations make counting individual contour lines unnecessary here. Now that we're confident in both the horizontal distance and the vertical ascent, let's look at your final time calculation once more. If your walking time is about 49 minutes and your climbing time is 20 minutes, what does that give you when you add them together, and does that total make sense for a 2.46-mile hike with 2,000 feet of climbing?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Adding 49 minutes and 20 minutes gives me 69 minutes, which is 1 hour and 9 minutes. But wait, I just realized something about Naismith's Rule that I might have messed up. The rule says 1 hour for every 3 miles, but does it apply linearly like that for fractions of a mile, or is there a standard way people usually format or round those time segments before combining horizontal and vertical?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is questioning the linearity of Naismith's rule, which is a minor overgeneralization/distraction since rates scale linearly with distance. I should prompt them to check if mathematical scaling holds true for proportional parts of an hour.",
+        "state": "Support",
+        "response": "Think about how speed and distance work in general: if a rule assigns a fixed amount of time per mile, what happens to the required time if your distance is only a fraction of a mile?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Right, if it's 1 hour per 3 miles, then walking 2.46 miles should proportionally take 2.46 divided by 3 hours, which is indeed 0.82 hours, or 49 minutes. The linear scaling works fine for the fraction. So my calculation of 49 minutes for the distance and 20 minutes for the 2,000 feet of ascent (at 10 minutes per 1,000 feet) is totally sound, making the total hiking time 1 hour and 9 minutes."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully worked through all the components and verified their logic. Now it's time for them to synthesize the entire procedure in their own words.",
+        "state": "Synthesis",
+        "response": "You've worked through all the pieces of this problem. In your own words, how would you explain the complete step-by-step process of using a map scale and Naismith's Rule to find the total hiking time for this kind of route?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "To find the total hiking time, first you measure the map distance and use the scale ratio to convert it into real-world ground distance in miles. Then you find the total elevation change by subtracting the starting elevation from the ending elevation. Next, you apply Naismith's Rule by dividing your ground distance in miles by 3 to get your horizontal travel hours—which you can convert to minutes—and add 10 minutes for every 1,000 feet of vertical ascent. Finally, you sum up the horizontal and vertical time components to get your total estimated duration."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has accurately and clearly explained the entire rule and methodology in their own words. The session is successfully completed.",
+        "state": "Closing",
+        "response": "Spot on! You nailed the explanation of how to combine distance scaling with Naismith's vertical adjustments. Great work working through that!"
+      }
+    ]
+  }
+]

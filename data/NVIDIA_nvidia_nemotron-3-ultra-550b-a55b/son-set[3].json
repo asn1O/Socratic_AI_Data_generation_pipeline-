@@ -1063,5 +1063,389 @@
         "response": "Excellent! You've nailed the process and explained it perfectly. Ready to try another conversion or move on to a new topic?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Speed, time and distance",
+    "problem": "A man walks to the train station at 5 km/h and misses the train by 7 minutes. If he walks at 6 km/h, he reaches the station 5 minutes before the train departs. What is the distance from his home to the station?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think I need to set up equations for time, but I'm not sure how to handle the minutes difference."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student recognizes need for equations but is unsure about handling the time offsets. This calls for diagnosis to understand their current mental model.",
+        "state": "Diagnosis",
+        "response": "What do you know about the relationship between speed, time, and distance in this scenario?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Distance equals speed times time. The distance is same both cases. But the times differ by 12 minutes total? Actually missing by 7 minutes vs early by 5 minutes, so difference is 12 minutes."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identifies distance constant and total time difference. Need to guide them to express times algebraically.",
+        "state": "Support",
+        "response": "How would you express the time taken at each speed in terms of the distance?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Time = distance/speed. So at 5 km/h, time = d/5 hours. At 6 km/h, time = d/6 hours."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student has expressions for walking times. Now need to connect them to the fixed train departure time.",
+        "state": "Support",
+        "response": "The train departure time is fixed. How do the two walking times relate to that fixed departure time?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "If he misses by 7 minutes at 5 km/h, his walking time is 7 minutes more than the time from start to train departure. At 6 km/h, he arrives 5 minutes early, so his walking time is 5 minutes less than that same reference time."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student correctly describes relationship with a reference time. Now prompt to formalize into equations.",
+        "state": "Diagnosis",
+        "response": "Can you write an equation that captures that relationship using the same reference time?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Let T be the time from start to train departure. Then d/5 = T + 7/60 hours, and d/6 = T - 5/60 hours."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has set up correct system of equations. Now guide to eliminate T.",
+        "state": "Support",
+        "response": "Good. Now you have two equations with two unknowns. How can you eliminate T to find d?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Subtract the second from the first: d/5 - d/6 = (7/60 + 5/60) = 12/60 = 1/5 hour. So d*(1/5 - 1/6) = 1/5 => d*(1/30) = 1/5 => d = 6 km."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student solved correctly. Now ask for synthesis to internalize the principle.",
+        "state": "Synthesis",
+        "response": "Can you explain in your own words the key principle you used to solve this?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The distance is constant, so the difference in travel times at two speeds equals the total time difference relative to a fixed event. By setting up equations with a common reference time, I could eliminate it and solve for distance."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has articulated the core concept correctly. Conversation ready to close.",
+        "state": "Closing",
+        "response": "Great job! You've got it. Ready for another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "physics",
+    "topic": "Series vs parallel circuits",
+    "problem": "A circuit contains three resistors: R1 = 4 Ω and R2 = 6 Ω are in parallel, and this combination is in series with R3 = 5 Ω. The circuit is connected to a 12 V battery. Find the total resistance, the current through each resistor, and the voltage across each resistor.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think series resistors add, but parallel ones subtract? Not sure."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student shows confusion about parallel combination; need to elicit current thinking.",
+        "state": "Diagnosis",
+        "response": "How did you decide parallel resistors subtract?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I'm not sure how to combine them when the circuit has both series and parallel parts."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student acknowledges mixed circuit; hint to identify series/parallel sections.",
+        "state": "Support",
+        "response": "Try spotting which resistors share the same two nodes."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "So I just add all the resistances together for the total?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student thinks simple addition works; hint about parallel formula.",
+        "state": "Support",
+        "response": "For resistors sharing both nodes, use the reciprocal sum formula."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Okay, 1/R = 1/R1 + 1/R2 for parallel, then add series ones?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student attempts combination; check understanding of current/voltage in parallel.",
+        "state": "Diagnosis",
+        "response": "What happens to current in the parallel branch?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The current is the same through each resistor in parallel."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student misstates current in parallel; hint about voltage equality.",
+        "state": "Support",
+        "response": "In parallel, voltage across each resistor is the same."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Oh, so voltage same, current splits based on resistance."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student now has correct concept; ask to articulate rules.",
+        "state": "Synthesis",
+        "response": "Can you summarize the rules for series and parallel in your own words?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "In series, current is same and resistances add; in parallel, voltage is same and you add reciprocals for total resistance."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student explained concept correctly; wrap up.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Ratio and proportion",
+    "problem": "A mixture contains alcohol and water in the ratio 5:3. If 8 liters of water is added, the ratio becomes 5:4. Find the original quantity of the mixture.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think I should let the alcohol be 5x and water be 3x, but I'm not sure how to handle the 8 liters added."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student set up variables correctly but is unsure how the addition affects the ratio. Need to diagnose their understanding of which quantity changes.",
+        "state": "Diagnosis",
+        "response": "Good start with the variables. What happens to each quantity when 8 liters of water is added?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "The alcohol becomes 5x+8 and water stays 3x, so the new ratio is (5x+8)/3x = 5/4."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly added the 8 liters to alcohol instead of water. Need to clarify that only water changes.",
+        "state": "Support",
+        "response": "Actually, only water is added. The alcohol amount stays 5x. So the new water amount is 3x+8. The ratio becomes 5x/(3x+8) = 5/4."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Okay, so 5x/(3x+8) = 5/4. Cross-multiplying: 20x = 15x + 8."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student made an arithmetic error in cross-multiplication, forgetting to multiply 5 by 8.",
+        "state": "Support",
+        "response": "Check the cross-multiplication: 5 times (3x+8) gives 15x+40, not 15x+8."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Right, 20x = 15x+40, so 5x=40, x=8. Original mixture is 8x = 64 liters."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student solved correctly. Reinforce the key principle that only the component being added to changes.",
+        "state": "Support",
+        "response": "Remember, the key is that only the component being added to changes. The other stays the same."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "We keep the alcohol constant because only water is added, so the ratio of alcohol to new water equals the new ratio."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student articulated the key idea. Now prompt for a general rule summary.",
+        "state": "Synthesis",
+        "response": "In your own words, what's the general approach for these ratio problems when one part changes?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "When a quantity is added to one component, only that component's amount changes. We express original amounts with a variable, update the changed component, set up the new ratio, and solve for the variable."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student correctly explained the concept in their own words. Conversation is ready to close.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Analogies and vocabulary in context",
+    "problem": "Complete the analogy: pen is to write as knife is to ______.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think knife goes with sharpen because you sharpen a knife."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student offered a guess but didn't explain the relationship; need to elicit their reasoning about the first pair.",
+        "state": "Diagnosis",
+        "response": "Can you explain how pen relates to write?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Pen is used to write, so knife is used to sharpen."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student mapped function incorrectly; give direct explanation of knife's primary use and a hint to focus on action.",
+        "state": "Support",
+        "response": "A knife's main use is cutting. Think about the primary action you do with a knife."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, maybe knife is to kitchen?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student still off; provide direct explanation of knife's function and a hint to consider the action.",
+        "state": "Support",
+        "response": "A knife is used to cut. What do you do with a knife?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Knife is to blade?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student confusing part with function; need to diagnose understanding of the analogy structure.",
+        "state": "Diagnosis",
+        "response": "What relationship does the first pair show?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Tool to action? So knife to cut?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student identified correct answer; confirm with direct explanation and a hint to reinforce the pattern.",
+        "state": "Support",
+        "response": "Exactly, pen:write :: knife:cut. Think about the primary action."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "So the answer is cut."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has the correct answer; now ask them to articulate the general rule.",
+        "state": "Synthesis",
+        "response": "In your own words, what rule does this analogy follow?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The first word is a tool, the second is the main action you do with that tool."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student explained the concept correctly; wrap up warmly.",
+        "state": "Closing",
+        "response": "Great job! Ready for another analogy?"
+      }
+    ]
   }
 ]
