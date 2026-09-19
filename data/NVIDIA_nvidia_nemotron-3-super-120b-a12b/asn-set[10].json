@@ -1,0 +1,374 @@
+[
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "physics",
+    "topic": "Series vs parallel circuits",
+    "problem": "Three resistors each of resistance 10 Ω are connected as follows: resistors A and B are in parallel, and that combination is in series with resistor C. What is the equivalent resistance between the ends of the network?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think I just add all the resistances together because they’re all in the circuit, so 10+10+10 = 30 Ω."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student added all three resistances, showing a tendency to treat the whole network as series; need to uncover the reasoning behind this approach.",
+        "state": "Diagnosis",
+        "response": "Can you explain why you decided to add all three resistances together instead of looking at the parallel and series parts?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, I saw the diagram and thought everything was end‑to‑end, so I added them. Also, I remembered that for two resistors side‑by‑side you multiply them, so I did 10*10 = 100 Ω for the parallel part and then added the third."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student claimed that parallel resistances multiply, indicating a misuse of the parallel formula; need to prompt recall of the correct reciprocal method without giving it away.",
+        "state": "Support",
+        "response": "I see you thought you multiply the resistances for the parallel part; what’s the standard way to combine two resistors in parallel?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "You add the reciprocals: 1/10 + 1/10 = 2/10 = 1/5, then flip to get 5 Ω. Now I have 5 Ω and 10 Ω; I think I need to combine them like parallel again, so (5*10)/(5+10) = 3.33 Ω."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "After correctly finding the parallel equivalent, the student incorrectly applied the parallel formula again to the series step, revealing confusion about when to add versus use the reciprocal rule.",
+        "state": "Support",
+        "response": "When you have a 5 Ω and a 10 Ω resistor connected in series, how do you combine their resistances to get the total?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, for series you just add them directly, so 5 Ω plus 10 Ω equals 15 Ω total."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student arrived at the correct numeric answer (15 Ω) but has not yet articulated the underlying procedure; asking them to explain will promote synthesis.",
+        "state": "Synthesis",
+        "response": "You got 15 Ω as the answer; can you walk me through the steps you used in your own words?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I added the two parallel resistors to get 20 Ω, then added the series resistor to get 30 Ω."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student reverted to adding parallel resistances directly, showing the earlier misconception resurfacing; a hint about the proper parallel method is needed.",
+        "state": "Support",
+        "response": "What’s the correct formula you should use to find the equivalent resistance of two resistors connected in parallel?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "You use the reciprocal formula: 1/Req = 1/R1 + 1/R2, so for two 10 Ω it’s 5 Ω."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student now correctly computed the parallel part as 5 Ω and recognizes the series addition; prompting them to describe the general process will help internalize the concept.",
+        "state": "Synthesis",
+        "response": "Now that you know the parallel branch equals 5 Ω and you add the series resistor, how would you describe the overall procedure for this type of circuit?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "First, you find the equivalent resistance of any parallel group by adding the reciprocals of each resistance and then inverting the sum. Then you add that equivalent to any series resistors."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the equivalent‑resistance procedure in their own words, indicating mastery of the concept; the conversation can wrap up.",
+        "state": "Closing",
+        "response": "Great job on explaining that! Would you like to try another similar problem to practice?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Opportunity cost",
+    "problem": "You have 5 hours free on Saturday. You can either: 1) Work at a tutoring center earning $12 per hour. 2) Do freelance coding work earning $18 per hour, but you must first spend 1 hour (unpaid) reviewing documentation. 3) Attend a career fair that costs $15 to enter and lasts 2 hours; after the fair you expect to receive a job offer worth $100. Assuming you want to maximize your net earnings from Saturday, what is the opportunity cost of each option, and which option should you choose?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think opportunity cost is just the money you spend on what you choose."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student expressed a misconception that opportunity cost equals explicit cost; need to elicit their thinking.",
+        "state": "Diagnosis",
+        "response": "Opportunity cost is about what you give up, not just what you pay. How does that apply to the tutoring job?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "If I work tutoring, I don’t give up anything because I’m earning money."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student claims no sacrifice when earning; need to guide them to consider alternatives.",
+        "state": "Support",
+        "response": "Think about what else you could do with those 5 hours."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "For the career fair, the opportunity cost is just the $15 entry fee."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student focuses only on fee, ignoring forgone earnings; need to hint about time trade‑off.",
+        "state": "Support",
+        "response": "Remember, you also lose the hours you could have spent working. What could you earn in those hours?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "You lose 2 hours that could earn $12 each, so $24."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student identified time loss but hasn’t linked it to the next best alternative; need to ask for that alternative.",
+        "state": "Diagnosis",
+        "response": "What is the next best alternative to attending the fair?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The next best alternative is tutoring job, which pays $12/hour, so I’d also add the $15 fee, making opportunity cost $24 + $15 = $39."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student mixes explicit fee with opportunity cost; need to clarify that opportunity cost excludes monetary fees.",
+        "state": "Support",
+        "response": "Opportunity cost only counts the foregone earnings, not the fee you pay."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "So the opportunity cost of the fair is just the $24 I could have earned tutoring."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student now has correct view of opportunity cost for the fair; need to have them articulate the general rule.",
+        "state": "Synthesis",
+        "response": "In your own words, what is opportunity cost?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Opportunity cost is the value of what you give up by choosing one option, like the earnings you could have made doing the next best thing."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept; conversation can wrap up.",
+        "state": "Closing",
+        "response": "Nice, you’ve got it! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Sampling bias",
+    "problem": "A city council wants to estimate the proportion of residents who support a new public transit initiative. They decide to conduct a survey by placing QR codes on flyers handed out only at downtown coffee shops during weekday mornings. Identify the main type of sampling bias present and explain how it could affect the estimate of support.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "They only asked people at coffee shops, so the sample isn't random."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student noted non-random sample but hasn't explained effect; we need to see if they can articulate bias direction.",
+        "state": "Diagnosis",
+        "response": "Can you tell me more about how that might affect the estimate of support?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think it will underestimate support because coffee shop patrons probably don't care about transit."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student claimed underestimate; we hint to consider coffee shop patrons' likelihood to value transit.",
+        "state": "Support",
+        "response": "Consider who tends to frequent coffee shops during weekday mornings—are they more or less likely to value convenient transit?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, actually they might be more likely to support because they value convenience."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student corrected direction; we elicit type of bias and improvement ideas.",
+        "state": "Diagnosis",
+        "response": "What type of sampling bias is this, and how could you reduce it?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "It's convenience sampling, a type of selection bias. To reduce it, I'd just survey more people."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student claimed increasing sample size fixes bias; we hint about representation.",
+        "state": "Support",
+        "response": "Think about whether adding more responses from the same coffee shop locations changes who is represented."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I see, I need to reach people outside coffee shops, like using random dialing or mailing to all households."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has correct improvement suggestion; we ask them to articulate rule in own words.",
+        "state": "Synthesis",
+        "response": "Can you explain in your own words why this method biases results and how to improve it?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "It over-represents transit‑friendly coffee shop users, raising the support estimate. A random city sample would avoid that."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained concept; wrap up conversation.",
+        "state": "Closing",
+        "response": "Nice work! You've got it. Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Logical sequences",
+    "problem": "Find the next number in the sequence: 2, 5, 10, 17, 26, __",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I noticed the differences: 5-2=3, 10-5=5, 17-10=7, 26-17=9. They are 3,5,7,9 - odd numbers increasing by 2 each step. I'm not sure if the pattern continues, but I think the next difference might be 13 instead of 11, making the next term 26+13=39."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has identified the odd-number differences but proposed an incorrect next gap, indicating a possible misunderstanding of how the pattern advances.",
+        "state": "Diagnosis",
+        "response": "I see you've calculated the differences and noticed they're odd numbers; you're thinking the next gap might be 13. Can you walk me through how you decided on that number?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I figured the differences go 3,5,7,9, and I thought the pattern of adding 2 each time would continue, so after 9 I added another 2 and got 11, but then I second-guessed myself and thought maybe the sequence of odd numbers restarts or something, landing on 13. I know that doesn't look right, but I'm not sure where I went wrong."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is trying to reconcile their expectation of the gap with the observed pattern, showing they are ready for a hint about how the differences change.",
+        "state": "Support",
+        "response": "Let's look at how each difference changes from one to the next: 3 to 5 is +2, 5 to 7 is +2, 7 to 9 is +2. What would you expect the change to be from 9 to the next difference?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Okay, seeing that each gap grows by exactly 2, the change from 9 to the next gap should also be +2, making it 11. Adding that to the last term, 26, gives 26 + 11 = 37. So I think the next number in the sequence is 37."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly found the next term by extending the difference pattern, showing readiness to articulate the underlying rule.",
+        "state": "Support",
+        "response": "You've found that the next term is 37 by adding successive odd numbers. That's a nice observation. Consider what you add to get from one term to the next and how that relates to the term's position. How would you express this pattern as a rule that works for any position in the sequence, like the first, second, or third term?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I think the rule is: take the term number, square it, and then add one. But I'm not sure if we start counting from zero or one. If we start at zero, the first term would be 0^2 + 1 = 1, which isn't right, so maybe we start at one? Actually I'm leaning toward starting at zero because the differences seem to line up that way. Let's go with n starting at 0, so the formula is n^2 + 1."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has proposed a formula but with an uncertain starting index, showing a need to test the formula against the first term.",
+        "state": "Support",
+        "response": "Let's test your formula with the first term to see if it matches. If we plug in n = 0, we get 1, but the sequence starts with 2. What does that tell you about where the counting should begin?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "You're right - if I use n = 0 I get 1, which doesn't match the first term. So I need to start counting at 1. With n = 1, the formula gives 1^2 + 1 = 2, which is correct; n = 2 gives 2^2 + 1 = 5, and so on. For the sixth term, n = 6 gives 6^2 + 1 = 37, matching what we found earlier."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has now articulated the correct rule with proper indexing, showing they are ready to explain it in their own words.",
+        "state": "Synthesis",
+        "response": "You've got the correct rule now. In your own words, how would you describe how each term is generated from its position in the sequence?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "We start with the term's position number, square that number, and then add one. So for position 1 we do 1^2 + 1 = 2, for position 2 we do 2^2 + 1 = 5, and so on. This gives the sequence 2, 5, 10, 17, 26, 37, ..."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the rule in their own words, indicating mastery of the concept.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! Want to try another one?"
+      }
+    ]
+  }
+]

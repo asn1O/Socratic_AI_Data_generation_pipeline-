@@ -1126,5 +1126,278 @@
         "response": "Nice, that's exactly it! You nailed the logic. Want to try another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Opportunity cost",
+    "problem": "Sarah has $20 and two hours of free time on a Saturday afternoon. She can either spend that time and money on a movie ticket and popcorn (which costs exactly $20) or she can spend it on a new book and a coffee (which also costs $20). If she chooses to go to the movie, what is the opportunity cost?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this problem about Sarah choosing between a movie and a book. I think the cost is the $20 she spends on the movie ticket, but I'm not sure if that's what 'opportunity cost' means. Is it just the money part of it?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is confusing accounting cost (money spent) with opportunity cost. I need to diagnose if they understand the concept of trade-offs.",
+        "state": "Diagnosis",
+        "response": "That's a very common way to think about cost, but in economics, we look at it a bit differently. Instead of just looking at the money leaving her pocket, think about what else she could have done with those resources. If she spends her time and money on the movie, what is she giving up?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I'm not really sure what you mean by 'giving up.' She gets to see the movie, so she's getting something. I don't really get how that's a cost if she's enjoying the movie."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is stuck on the literal meaning of 'cost.' I'll use a pure question to prompt them to think about the mutual exclusivity of the choices.",
+        "state": "Diagnosis",
+        "response": "Since she only has a very limited amount of time and money for her Saturday afternoon, if she chooses to spend them at the cinema, what happens to the possibility of her spending that exact same time and money on the book and coffee instead of the movie?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, I see. She can't do both because she doesn't have enough time or money. So if she goes to the movie, she can't get the book and coffee. Does that mean the book and coffee are the cost?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has the right idea but is still slightly hesitant. I will use a pure question to help them isolate the opportunity cost from the monetary cost.",
+        "state": "Support",
+        "response": "If we consider the book and the coffee as the only other viable alternative for her afternoon, does the money she spent on the movie ticket count as a separate cost, or is it just part of the trade-off she made to get the movie experience?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I guess the money is just how she pays for the activity. So if she picks the movie, she loses the chance to have the book and the coffee. The opportunity cost is the book and the coffee!"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student reached the correct answer. Now I need to diagnose if they understand the 'why' before moving to synthesis.",
+        "state": "Diagnosis",
+        "response": "Why do we call the book and coffee the 'cost' in this situation, even though Sarah didn't actually pay for them with money, and what is the actual thing that she is losing by deciding to go to the movie instead of the book?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Because she had to make a choice. She couldn't have both things at the same time, so by picking the movie, she had to give up the other option. The cost is basically the value of the thing she didn't get to do."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has a solid grasp of the reasoning. I will now move to synthesis to ensure they can articulate the general rule.",
+        "state": "Synthesis",
+        "response": "You've got the logic down perfectly for this example. To make sure this concept really sticks for any problem you see in the future, could you try to explain the general rule of opportunity cost in your own words? How would you describe it to someone who has never heard of it before?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Opportunity cost is the value of the next best alternative that you give up when you make a choice. It's not just about spending money, it's about the other option you lose because you can't do everything at once."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly synthesized the rule in their own words. The conversation is complete.",
+        "state": "Closing",
+        "response": "That is a perfect definition! You've really grasped the core of the concept. Great job working through this—want to try another one or move on to something else?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Argument structure: premises and conclusions",
+    "problem": "Identify the premises and the conclusion in the following argument: 'All humans are mortal. Socrates is a human. Therefore, Socrates is mortal.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think it's an argument because it's trying to prove something, but I'm not really sure which part is which."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student recognizes the purpose of the argument but cannot identify its components, necessitating an open-ended question to see how they perceive the structure.",
+        "state": "Diagnosis",
+        "response": "You're right that it's trying to prove something. To start, how would you describe the relationship between the three sentences?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I don't really get what you mean by relationship. They just look like three different facts."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is confused by the abstract question, so I will provide a concrete analogy to guide them toward identifying the conclusion.",
+        "state": "Support",
+        "response": "Think of it like a building; some parts are the foundation and one part is the roof. Which sentence feels like the final result or the 'roof' here?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Maybe the first sentence is the conclusion because it's the biggest general rule?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made a conceptual error by confusing a general premise with a conclusion. I'll explain what a conclusion is and guide them back to the specific subject.",
+        "state": "Support",
+        "response": "Actually, the conclusion is usually what the other sentences are leading toward. If we know humans are mortal and Socrates is human, what are we actually trying to prove about Socrates?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, I see. So 'Socrates is mortal' is the conclusion."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the conclusion. Now I need to see if they can identify the supporting statements using the correct terminology.",
+        "state": "Support",
+        "response": "What do we call the other statements that provide the evidence to support that conclusion?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Are those called the premises?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified both components. Now I must ensure they can articulate the general principle themselves.",
+        "state": "Synthesis",
+        "response": "Exactly. To make sure we've got this down, how would you explain the difference between a premise and a conclusion in your own words?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "A premise is like a piece of evidence or a reason, and the conclusion is the final point that the premises are trying to prove."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the concept in their own words, so the session can be wrapped up.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Ratio and proportion",
+    "problem": "Divide 40 candies between Alice and Bob in the ratio 3:2. How many candies does Alice get?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think I need to use the 3 and 2, but I'm not sure how."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is unsure of the starting point, so I need to elicit their initial thought process.",
+        "state": "Diagnosis",
+        "response": "How would you start splitting the 40 candies?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Should I just subtract 3 and 2 from 40?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is incorrectly using subtraction; I need to guide them toward the concept of total parts.",
+        "state": "Support",
+        "response": "If Alice has 3 parts and Bob has 2, how many parts are there in total?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Um, 5. So I divide 40 by 3 since Alice is first?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly found the total parts but is dividing by a single part instead of the total.",
+        "state": "Support",
+        "response": "Would dividing by 3 give us the value of one equal part of the whole?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, I divide 40 by 5. That's 8 per part."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student found the unit value; now they need to apply it to Alice's share.",
+        "state": "Support",
+        "response": "Now that we know one part is 8, how many does Alice get?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "She gets 3 parts, so... is it 8 minus 3?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student is reverting to subtraction again, showing a procedural struggle with combining the unit value.",
+        "state": "Support",
+        "response": "If Alice gets 8 candies three separate times, what operation should we use?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Right, multiply! 8 times 3 is 24."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student reached the correct answer; I now need them to articulate the general process.",
+        "state": "Synthesis",
+        "response": "Could you explain the general steps for solving a ratio problem like this?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Add the ratio parts, divide the total by that, then multiply by the specific part."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully synthesized the rule, so the conversation can wrap up.",
+        "state": "Closing",
+        "response": "Perfectly put! Ready for another one?"
+      }
+    ]
   }
 ]

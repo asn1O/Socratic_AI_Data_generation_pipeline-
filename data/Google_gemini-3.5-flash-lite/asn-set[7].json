@@ -1,0 +1,524 @@
+[
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Sampling bias",
+    "problem": "A university wants to estimate the average daily study time of its students. Researchers set up a table outside the main cafeteria during the peak lunch hour from 12:00 PM to 1:00 PM on a Tuesday, and ask passing students to voluntarily fill out a survey about their study habits. The resulting sample yields an average of 4.5 hours per day. What specific type of bias is most likely present in this sampling method, and how might it systematically distort the estimated average compared to the true population parameter?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the average they got is probably way too high because people who are eating lunch might just be taking a break from studying all day in the library. But I'm not really sure what the actual statistical term for this kind of problem is, or how to explain the exact mechanics of it."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly intuited a directional skew regarding who is sampled, but cannot name the concept or systematically analyze the flaws. I need to probe their understanding of the recruitment process to diagnose their grasp of the specific sampling mechanism.",
+        "state": "Diagnosis",
+        "response": "You're noticing something interesting about where and when they collected that data. Before we put a formal label on it, how do you think the specific location outside the main cafeteria during lunchtime might exclude certain groups of students from ever being surveyed in the first place?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, anyone who doesn't eat at the main cafeteria won't be included. Like, commuters who pack their own lunch or students who have classes on the other side of campus during that exact hour won't walk by there. Plus, it's totally voluntary, so only people who feel like stopping will do it."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identifies non-response and exclusion issues, so I should guide them to look closer at the voluntary nature and timing to see how it creates a systematic error rather than random noise.",
+        "state": "Diagnosis",
+        "response": "That is a really thorough breakdown of who gets left out. Let's look closer at that voluntary aspect you mentioned. If a student is rushing off to a lab or working a part-time job right after lunch, how might that busy schedule affect whether they choose to stop and participate?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, I see what you mean. Busy students with packed schedules will just say they don't have time to take a survey, so the sample will only capture people who have a lot of free time on their hands during the middle of the day."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is following the logic well, but let's see if they can tie these mechanics together into the overarching category of bias. I'll prompt them to connect these flaws to the sample's representativeness.",
+        "state": "Diagnosis",
+        "response": "Building on that idea of capturing mostly people with free time, how does that selective participation connect back to the fundamental goal of wanting a representative sample of the entire university population?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "It means the sample isn't random at all, because every student doesn't have an equal chance of being selected. Actually, since they chose the cafeteria themselves, I'm pretty sure this is called convenience sampling bias, where they just picked the easiest people to reach."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student made a minor conceptual slip by conflating the sampling technique ('convenience sampling') with the resulting systematic error ('sampling bias' or 'selection bias'). I need to help them distinguish the method from the resulting bias without giving away the term.",
+        "state": "Support",
+        "response": "Convenience sampling describes the practical way they went about gathering the data, which certainly set the stage for a problem. But thinking about how those excluded groups or rushed students systematically skew the final average, what do we call the overarching error in the estimate itself?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Ah, okay, convenience sampling is how they collected it, but the actual error in the results is called selection bias, or specifically undercoverage and self-selection bias because certain people are systematically left out or opt out."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully corrected their terminology and identified selection bias and undercoverage. Now I need them to synthesize this knowledge by explaining the entire causal chain in their own words.",
+        "state": "Synthesis",
+        "response": "You've got it. To pull all these pieces together, could you explain in your own words how selection bias operates here and why it prevents the 4.5-hour average from reflecting the true population?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Selection bias happens when the sample isn't truly representative of the whole population because of how people are chosen or how they opt in. In this case, surveying only at the cafeteria during lunch excludes commuters, busy students, and those with tight schedules, while self-selection means only people with extra free time participate. Because the people left out likely have less time to study or different schedules, the sample average gets distorted upward and doesn't match the true university average."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has provided a clear, accurate, and comprehensive explanation of the concept in their own words, fulfilling all pedagogical requirements for the closing phase.",
+        "state": "Closing",
+        "response": "Spot on! You nailed both the mechanics and the terminology. Great work working through that, and let me know if you want to tackle another one!"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Scaling a recipe",
+    "problem": "You have a pancake recipe that serves 4 people and calls for 1 and a half cups of flour. You want to make pancakes for 6 people instead. How much flour should you use?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I really don't get how to scale recipes when the number of people isn't just double. Like, going from 4 to 6 people isn't just multiplying everything by two, but I'm completely lost on how to figure out what number to use instead."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is completely stuck and expressing confusion about the scaling multiplier. I need to establish a baseline of their thinking with an open question.",
+        "state": "Diagnosis",
+        "response": "That is a completely normal place to get stuck when the multiplier isn't a whole, clean number like two. Before we jump into the math, how do you usually think about the relationship between the original number of servings and the new servings we want to make?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I know we want 6 servings and we currently have enough for 4, but I'm not sure how those two numbers relate to each other mathematically."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student recognizes the two key numbers but hasn't connected them yet. I will explain that we can look at the ratio of new servings to old servings as a fraction.",
+        "state": "Support",
+        "response": "When scaling a recipe, a very helpful first step is to write the new target servings over your original servings as a fraction. If we want 6 servings and the recipe makes 4, what fraction would that look like?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I guess that would be 6 over 4? Can we simplify that fraction to make it easier to work with?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the fraction and intuitively suggested simplifying it. I will affirm this direct insight and ask them to reduce it.",
+        "state": "Diagnosis",
+        "response": "Spot on, 6 over 4 is the exact ratio of where we want to go versus where we started. Since you mentioned simplifying, what does 6 over 4 reduce down to when you divide the top and bottom by their greatest common factor?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "If I divide both by 2, I get 3 over 2, or one and a half."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student successfully simplified the fraction and converted it. Now I need to connect this scaling factor back to the original amount of flour.",
+        "state": "Support",
+        "response": "That's exactly right, our scaling factor is 3 over 2, or 1.5. Now that we know every ingredient needs to be multiplied by 1.5, let's look at the flour. The recipe calls for 1 and a half cups of flour. How would you set up the multiplication for that?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Well, 1 and a half is the same as 3 over 2. So we need to multiply 3 over 2 by 3 over 2, which gives us 9 over 4 cups of flour."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully calculated the correct amount of flour. I will prompt them to synthesize the overall rule or method in their own words before closing.",
+        "state": "Synthesis",
+        "response": "You nailed the math. To wrap everything up, can you explain in your own words the general rule or steps you followed to scale this recipe from 4 people to 6?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "First you find the scaling factor by putting the new number of servings over the old servings as a fraction and simplifying it. Then, you multiply each original ingredient amount by that scaling factor to get your new amounts."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly and clearly explained the underlying concept of recipe scaling. The conversation is complete.",
+        "state": "Closing",
+        "response": "Brilliant, you explained that perfectly! You've got recipe scaling totally figured out. Great job today, and let me know whenever you're ready to try another one!"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "biology",
+    "topic": "Human circulatory system",
+    "problem": "Trace the path of a drop of blood through the human heart, starting as deoxygenated blood arriving from the body and ending as oxygenated blood leaving through the aorta, identifying the four main chambers and the valves involved.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know blood comes into the heart from the body, but I get really confused about the order of the chambers and valves. I think it just goes straight to the lungs from the left side?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has a misconception about which side of the heart sends blood to the lungs, calling for a direct clarification combined with a prompt to examine the entry point.",
+        "state": "Support",
+        "response": "Deoxygenated blood from the body actually enters the right side of the heart first, not the left. When blood first arrives from the body, which specific upper chamber does it flow into?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh right, it's the right side. So it goes into the right atrium?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the right atrium. I will validate this directly and provide a hint for the next chamber and the valve connecting them.",
+        "state": "Support",
+        "response": "Spot on, it enters the right atrium. Blood then passes through a valve into the lower chamber on that same side. Think about the valve name that sounds like it has three parts."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Is that the tricuspid valve? And then it goes to the right ventricle?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student successfully named the tricuspid valve and the right ventricle. I will confirm this and provide a direct statement about where the right ventricle pumps next before asking about the next valve.",
+        "state": "Support",
+        "response": "That's correct, the tricuspid valve leads into the right ventricle. From there, the right ventricle pumps the deoxygenated blood toward the lungs through a specific valve. Which valve guards the exit to the pulmonary artery?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I'm not totally sure about the valve name leaving the ventricle. Is it the pulmonary valve?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is hesitant but correct. I will affirm their guess and provide direct context on the blood returning from the lungs to help them transition to the left side.",
+        "state": "Support",
+        "response": "Yes, it's the pulmonary valve! After picking up oxygen in the lungs, that blood returns to the left side of the heart. Which upper chamber does it arrive in?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "It goes into the left atrium, and then through the bicuspid or mitral valve into the left ventricle."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully navigated both sides of the heart up to the left ventricle. I will offer a direct hint about the final major exit valve to set them up for the synthesis step.",
+        "state": "Support",
+        "response": "Exactly right. The left ventricle is the final pumping chamber, and it sends oxygenated blood out through the biggest artery, the aorta, guarded by the aortic valve."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "So basically, deoxygenated blood comes into the right atrium, goes through the tricuspid valve to the right ventricle, out the pulmonary valve to the lungs, then back through the left atrium, through the mitral valve to the left ventricle, and finally out the aortic valve into the aorta to the body."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has accurately explained the entire circulatory path through the heart in their own words. The session is complete.",
+        "state": "Closing",
+        "response": "Wonderful explanation, you've got the whole pathway down! Ready to try another topic?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "history_and_social_studies",
+    "topic": "Timeline reasoning",
+    "problem": "Order these four historical events chronologically from earliest to latest: The Declaration of Independence, the Boston Tea Party, the signing of the U.S. Constitution, and the French Revolution starting.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the Boston Tea Party happened first, then the Declaration of Independence, then the French Revolution, and lastly the U.S. Constitution."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student placed the Constitution after the French Revolution, which is a common chronological mix-up to address next.",
+        "state": "Diagnosis",
+        "response": "What makes you put the French Revolution before the signing of the Constitution?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, America adopted the Constitution right after winning independence in 1783, and the French overthrew their king in 1789."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student assumes the Constitution was adopted immediately in 1783, ignoring the Articles of Confederation period. I need to guide them on that gap.",
+        "state": "Support",
+        "response": "Did the U.S. adopt this Constitution right away in 1783, or was there another governing document first?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh right, they had the Articles of Confederation first! So the Constitution came later, in 1787."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student corrected the Constitution date to 1787. Now I need to check their ordering of the first two events.",
+        "state": "Diagnosis",
+        "response": "How does 1787 compare to 1789 for the French Revolution?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "That means the Constitution was in 1787, and the French Revolution started in 1789, so the Constitution comes first."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has the latter two correct. Let's briefly check their grasp of the earlier colonial events to ensure full alignment.",
+        "state": "Support",
+        "response": "How do the Boston Tea Party and the Declaration of Independence line up relative to each other?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The Boston Tea Party was in 1773 to protest taxes, and the Declaration was in 1776 after things escalated."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly reasoned through all four dates and relationships. Time for them to synthesize.",
+        "state": "Synthesis",
+        "response": "Could you walk me through the full, correct timeline from earliest to latest in your own words?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Sure! First is the Boston Tea Party in 1773, then the Declaration of Independence in 1776, next the U.S. Constitution in 1787, and finally the French Revolution in 1789."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the correct chronological sequence and internal reasoning.",
+        "state": "Closing",
+        "response": "Spot on! You nailed the sequence. Ready for another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "computer_science_light",
+    "topic": "Big-O intuition via analogies",
+    "problem": "Imagine you have a big messy bookshelf of books. If you are looking for one specific book, what is the difference in time it takes if you have to check every single book one by one versus if the books are already sorted alphabetically and you can keep splitting the search in half?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Checking every book takes longer because there are more books overall."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student focuses purely on quantity rather than how the search scales, so I need to prompt them to think about how the steps grow relative to the data size.",
+        "state": "Diagnosis",
+        "response": "How does the number of steps change if you double the total number of books on that shelf?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "If you double the books, checking one by one takes twice as many steps."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly sees linear scaling for the first method. Now I'll introduce the second method using a hint about halving.",
+        "state": "Support",
+        "response": "Spot on. Now, what happens to your number of steps in the sorted split-in-half method if you double the total books?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "It doubles too because the shelf is twice as big."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student asserted a common misconception that splitting in half also scales linearly. I must gently challenge this wrong claim.",
+        "state": "Support",
+        "response": "Does cutting the search space in half at each step mean adding twice as many total steps, or just one extra step?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh wait, doubling the books just adds one extra step to the splitting method, right?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student corrected their intuition about the splitting method. Now I need them to connect this behavior to standard Big-O terminology.",
+        "state": "Support",
+        "response": "Exactly! If doubling the data adds just a constant number of steps instead of doubling the work, what kind of growth curve is that compared to linear?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "It grows much slower, like logarithmic time."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has reached the correct concepts. I will now prompt them for a synthesis to solidify their understanding.",
+        "state": "Synthesis",
+        "response": "In your own words, why does checking one-by-one scale differently with data size compared to repeatedly splitting in half?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "One-by-one has to look at every single item so time grows directly with size, but splitting in half throws away half the remaining items instantly so it grows way slower."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student correctly and clearly explained the underlying principle, so the session is complete.",
+        "state": "Closing",
+        "response": "That is a brilliant way to explain it! Great job working through that. Ready for another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "physics",
+    "topic": "Series vs parallel circuits",
+    "problem": "Imagine a complex circuit with a 12-volt battery connected to a main junction that splits into two parallel branches. The first branch contains two identical resistors connected in series with each other. The second branch contains a single resistor of equal resistance to the others. If a total current of 3 amperes leaves the battery, determine the equivalent resistance of the entire circuit and explain how the current distributes between the two branches.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this circuit with the series part and the parallel part together, and honestly, I'm completely lost on how to even start combining them."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student expresses total confusion about combining mixed circuit components, which is expected for a hard problem at a beginner level. I need to break the circuit down into smaller, manageable pieces rather than solving it.",
+        "state": "Diagnosis",
+        "response": "That's a very normal place to start since mixed circuits look intimidating. When you look at the layout, can you spot which parts are connected directly in a single line versus which parts split apart?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, I see the two resistors in the first branch are one right after another, so I guess that's the series part. But the way it splits from the battery confuses me."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the series pair in the first branch. Since they understand that part, I will directly state how to simplify that specific section before moving on.",
+        "state": "Support",
+        "response": "You nailed it with that first branch. For resistors in series, you just add their resistances together. If we treat each resistor as having some value R, what would the total resistance of that first branch be?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "If they are in series, I think I just add them, so R plus R gives me 2R for that branch."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly calculated the series branch resistance as 2R. Now I need to help them relate this simplified branch to the rest of the parallel structure.",
+        "state": "Diagnosis",
+        "response": "Spot on, that branch is 2R. Now, looking at the whole circuit layout again, how does that entire first branch relate to the single resistor in the second branch?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Since they are on separate paths splitting from the battery, they must be in parallel with each other."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the parallel relationship. I will state the rule for combining parallel branches and ask them to apply it to our specific values of 2R and R.",
+        "state": "Support",
+        "response": "Exactly, they are in parallel. For parallel resistors, the combined resistance uses the reciprocal formula, 1 over R total equals 1 over R1 plus 1 over R2. Can you set that up using our 2R branch and our single R resistor?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I think it's 1 over 2R plus 1 over R. Finding a common denominator makes that 1 over 2R plus 2 over 2R, which equals 3 over 2R. Then I have to flip it, so the equivalent resistance is 2R over 3."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student successfully calculated the equivalent resistance of the network. To move toward synthesis, I want them to articulate the overall relationship between the circuit structure and how we combined those parts.",
+        "state": "Synthesis",
+        "response": "That math is completely correct. To wrap up the conceptual side, in your own words, how did breaking the circuit down into smaller series and parallel chunks help you find the total resistance?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Basically, I had to solve the inner series part first to treat that whole branch as a single equivalent resistor, and then I combined that new value with the other parallel branch using the parallel formula."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has accurately explained the core principle of reducing mixed circuits step-by-step. The conversation is complete.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! You broke down a complex problem into manageable layers. Want to try another one?"
+      }
+    ]
+  }
+]

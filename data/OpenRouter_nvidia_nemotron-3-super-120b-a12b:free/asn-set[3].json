@@ -1063,5 +1063,377 @@
         "response": "Nice work! You've got the concept down. Would you like to try another similar problem to reinforce it, or move on to a different topic?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Argument structure: premises and conclusions",
+    "problem": "Identify the premise(s) and conclusion in the following argument: \"Since it is raining, the ground is wet. Therefore, we should take an umbrella.\"",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the conclusion is the part with 'since' because it explains why."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student asserts an incorrect claim about the conclusion; need to elicit their reasoning.",
+        "state": "Diagnosis",
+        "response": "Why do you think the 'since' clause is the conclusion?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Also, I believe premises always come before any indicator words."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student offers another overgeneralization; probe its basis.",
+        "state": "Diagnosis",
+        "response": "What makes you say premises always precede indicator words?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I think the word 'therefore' signals a premise."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student misidentifies the role of 'therefore'; need a minimal hint.",
+        "state": "Support",
+        "response": "What does the word 'therefore' usually indicate in an argument?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, maybe it's the conclusion because it follows 'therefore'."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student begins to correct; check understanding of the 'since' clause.",
+        "state": "Support",
+        "response": "What about the 'since' clause—what role does it play?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The 'since' clause gives a reason, so it's a premise."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identifies a premise; test if location bias remains.",
+        "state": "Support",
+        "response": "Does the location of a premise matter for identifying it?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I think premises are usually at the start, but they can be elsewhere too."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student shows partial resurfacing of earlier overgeneralization; prompt synthesis.",
+        "state": "Synthesis",
+        "response": "In your own words, how do you identify premises and conclusions?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Premises are reasons or evidence, often signaled by words like 'since', 'because', 'for'; conclusions are the main claim, often signaled by 'therefore', 'so', 'thus'. Location doesn't matter; it's the role that matters."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept; conversation concludes.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Percentages",
+    "problem": "A store increases the price of a jacket by 20% and then offers a discount of 10% on the increased price. What is the net percentage change in the price?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think increasing by 20% then decreasing by 10% gives a 10% increase."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student claimed net change is difference of percentages, showing additive thinking. Need to uncover their method.",
+        "state": "Diagnosis",
+        "response": "How did you combine the percentages?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I just subtracted because one is up and one is down."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student says they subtracted; they may not consider sequential application. Prompt for intermediate value.",
+        "state": "Support",
+        "response": "After the increase, the price goes up; what is the new price as a percentage of original?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "It becomes 120% of the original."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student correctly found intermediate price; now check if they apply discount to correct base.",
+        "state": "Support",
+        "response": "Now apply the 10% discount to that increased price. What do you get?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I think 10% of the original price is 10, so 120 minus 10 equals 110, which is a 10% increase."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly applied discount to original price. Need to clarify base for discount.",
+        "state": "Support",
+        "response": "Does the discount apply to the original price or the new price after the increase?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "It applies to the new price, so 10% of 120 is 12, subtract gives 108."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has correct intermediate and final values; ready to articulate the rule for combining percentages.",
+        "state": "Synthesis",
+        "response": "We got 120 after increase and 108 after discount; can you describe how we combine percentage changes?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I think you multiply the percentages somehow, but I'm not sure how to explain it."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student uncertain about explaining the rule; ask them to connect the numbers to the overall change.",
+        "state": "Support",
+        "response": "We saw the final price is 108% of the original; can you explain how we arrived at that number?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Increase by 20% means multiply by 1.20, decrease 10% means multiply by 0.90; 1.20×0.90=1.08, an 8% increase."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the rule in their own words.",
+        "state": "Closing",
+        "response": "Nice, you've got it! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Unit conversions",
+    "problem": "Convert 2.5 miles to inches.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think you just multiply the miles by 12 to get inches, because there are 12 inches in a foot."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student asserted a conversion method missing the feet-to-mile step, indicating a gap in understanding of intermediate units.",
+        "state": "Diagnosis",
+        "response": "How did you decide to convert miles to inches?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think 1 mile equals 12 inches, so you can go straight from miles to inches."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student expressed an incorrect direct equivalence between miles and inches, showing misunderstanding of the unit hierarchy.",
+        "state": "Diagnosis",
+        "response": "What do you know about the relationship between miles, feet, and inches?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Okay, I remember there are 5280 feet in a mile, so I multiply 2.5 by 5280 to get 13,200 feet. Then I multiply by 12 to get inches, which gives 15,840 inches."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified the feet-per-mile factor but made an arithmetic error in the final multiplication, suggesting a slip in calculation.",
+        "state": "Support",
+        "response": "I recall that 1 mile equals 5280 feet. How would you use that to start the conversion?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "So I do 2.5 times 5280 equals 13,200 feet. Then 13,200 times 12 equals 158,400 inches."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student now gave the correct process and result, showing they understand the steps.",
+        "state": "Diagnosis",
+        "response": "Why did you multiply by 12 after converting to feet?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Because there are 12 inches in a foot, you multiply the number of feet by 12 to get inches. Also, since we already used the 12 for the foot, I think we need to multiply by 12 again for the mile to be safe."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student re-introduced an unnecessary extra multiplication, indicating a lingering misconception about the conversion factor.",
+        "state": "Synthesis",
+        "response": "You've done the conversion; can you explain the steps you used in your own words?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "To change miles to inches, first convert miles to feet by multiplying by 5280, then convert feet to inches by multiplying by 12. Or you can multiply miles directly by 63360 to get inches in one step."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly articulated the conversion rule, indicating mastery of the concept.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Scaling a recipe",
+    "problem": "A recipe for 4 servings calls for 3 cups of flour. How much flour is needed for 10 servings?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think you just add 3 cups for each extra serving, so for 10 servings you need 3 + (10-4) = 9 cups."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student gave an additive approach, indicating they are thinking linearly but missing proportional reasoning. Need to elicit their thinking.",
+        "state": "Diagnosis",
+        "response": "Can you walk me through how you figured out how much flour is needed for 10 servings based on the original 4‑serving recipe?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, the recipe uses 3 cups for 4 servings, so each extra serving seems to need about 1 cup, so I added 6 cups for the six extra servings."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student defended additive method, showing persistence with incorrect additive reasoning. Need to guide them to consider per‑serving amount with a minimal hint.",
+        "state": "Support",
+        "response": "I see you tried adding cups per extra serving. What would be the amount of flour needed for just one serving based on the recipe?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "One serving would need 4/3 cups because you divide the 4 servings by the 3 cups."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly inverted the fraction, showing confusion about the direction of division. Need to prompt them to check consistency with the original recipe.",
+        "state": "Support",
+        "response": "If one serving needed 4/3 cups, how much flour would the original 4 servings require?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Four servings would need 4 * 4/3 = 16/3 ≈ 5.33 cups, which is more than the 3 cups we started with, so that's wrong."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student recognized the inconsistency after checking, showing readiness to correct the per‑serving calculation. Need to hint at the correct operation (divide total flour by servings) to lead them to the right per‑serving amount.",
+        "state": "Support",
+        "response": "When we inverted the fraction, we got a per‑serving amount that didn't match the original. What do you get when you divide 3 cups by 4 servings?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "When I divide 3 cups by 4 servings, I get 0.75 cups per serving."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student correctly computed per‑serving flour (0.75 cups) and is ready to generalize the scaling rule. Need to ask them to articulate the rule in their own words.",
+        "state": "Synthesis",
+        "response": "Now, how would you use that per‑serving amount to find the flour needed for 10 servings?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "You multiply the per‑serving amount by the desired number of servings. So 0.75 cups times 10 equals 7.5 cups. In general, you scale each ingredient by the factor new servings divided by old servings."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has successfully explained the scaling rule in their own words, indicating mastery of the concept. Conversation can wrap up.",
+        "state": "Closing",
+        "response": "Nice, you've got it! Want to try another one?"
+      }
+    ]
   }
 ]

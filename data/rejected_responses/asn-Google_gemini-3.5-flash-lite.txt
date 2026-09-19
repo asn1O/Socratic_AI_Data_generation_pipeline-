@@ -975,3 +975,271 @@
     }
   ]
 }
+
+
+{
+  "problem": "Consider the following premises: 1. All glims are blims. 2. Some blims are clims. Does it logically follow that some glims are clims? Explain your reasoning.",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I think since all glims are blims and some blims are clims, then yeah, some glims must be clims. It seems like they overlap."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student has jumped to a conclusion based on intuition rather than checking the strict overlap of categories. I need to probe their thinking about the specific sets involved.",
+      "state": "Diagnosis",
+      "response": "It definitely feels intuitive that they'd overlap, but let's look closer. How are the sets of glims and clims actually connected to blims here?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Well, glims are entirely inside blims. And clims just share some space with blims, but I'm not sure if that shared space hits the glims part."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student recognizes the uncertainty about where the clims overlap. I should provide a helpful comparison or partial mechanism to guide them toward visualizing set relationships.",
+      "state": "Support",
+      "response": "Spot on. Think of blims as a big box containing all glims. If you throw another box of clims that only hits part of the blims box, does it guarantee it lands on the glims inside?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Not necessarily. The clims could just overlap the empty part of the blims box where there aren't any glims at all."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student successfully grasped the counterexample possibility. Now I'll reinforce this direct explanation and ask them to apply it back to the formal validity.",
+      "state": "Support",
+      "response": "Exactly right. Because the premises don't tell us where those clims are located inside the blims category, we can't be certain they touch the glims. Knowing that, is the argument valid or invalid?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Ah, so it's invalid. Even though it sounds like it could happen, it's not guaranteed."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student reached the correct conclusion. I need to transition to synthesis so they can articulate the underlying rule in their own words.",
+      "state": "Synthesis",
+      "response": "You've got it. To wrap this up, can you explain in your own words why an existential premise about categories intersecting doesn't automatically link a subset to that intersection?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "Yeah, just because a larger category overlaps with something else doesn't mean a smaller sub-category inside it is part of that overlap. You need proof that the specific sub-category is touched, otherwise it's just an assumption."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "The student has accurately explained the core logical principle in their own words. The session is complete, so I will now issue the Closing turn.",
+      "state": "Closing",
+      "response": "Nice, that's spot on! Excellent reasoning today. Want to try another puzzle?"
+    }
+  ]
+}
+
+
+{
+  "problem": "In a club of 30 students, 18 play soccer, 12 play chess, and 5 play both. How many students play neither soccer nor chess?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I'm looking at this Venn diagram problem, and I'm a bit stuck. I know there are 30 kids total, but when I add 18 and 12 together I get 30 already, which doesn't leave room for the ones who play both."
+    },
+    {
+      "turn": 2,
+      "speaker": "reasoning",
+      "text": "The student noticed a sum that exceeds the total if not adjusted, but is confused about why 18 + 12 equals 30 immediately. I need to understand how they are visualizing the overlapping part of the two circles.",
+      "state": "Diagnosis",
+      "response": "It's great that you noticed the total from adding those two numbers. When you put 18 soccer players and 12 chess players into circles that overlap, what happens to those 5 students who play both?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Hmm, well, do they get counted twice if I just add 18 and 12 together?"
+    },
+    {
+      "turn": 4,
+      "speaker": "reasoning",
+      "text": "The student is catching onto double-counting with a good intuition. I should encourage them to explore that idea further using the Venn diagram structure.",
+      "state": "Support",
+      "response": "That's an interesting thought. If they're in that middle overlapping section, which groups are they currently being counted in?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "They would be counted in both the soccer circle and the chess circle, right?"
+    },
+    {
+      "turn": 6,
+      "speaker": "reasoning",
+      "text": "The student successfully identified that the intersection is counted twice. Now I need them to figure out how to fix that within the total for soccer and chess players combined.",
+      "state": "Support",
+      "response": "Exactly. So if they're counted in both, how can you adjust your addition of 18 and 12 so that those 5 students are only counted once in the total?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Oh! I should subtract 5 from the total of 18 plus 12, because otherwise they're counted in both."
+    },
+    {
+      "turn": 8,
+      "speaker": "reasoning",
+      "text": "The student has correctly resolved how to find the total number of students playing at least one of the games. Now I need to guide them toward the final goal: finding who plays neither.",
+      "state": "Support",
+      "response": "That makes sense. What number do you get when you do that, and what does that new number represent in terms of the whole club?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "18 plus 12 is 30, minus 5 is 25. So 25 kids play at least one of those games. Since there are 30 kids in the whole club, I just need to subtract 25 from 30 to find the ones who play neither, which gives me 5."
+    },
+    {
+      "turn": 10,
+      "speaker": "reasoning",
+      "text": "The student has arrived at the correct answer and process. To ensure deep understanding, I need them to articulate the general rule in their own words.",
+      "state": "Synthesis",
+      "response": "Nice work getting there. In your own words, can you explain why we have to subtract that overlap when finding how many people are in either category?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "Sure! When you add two groups that overlap, the people in the middle get counted in both groups, so you end up double-counting them. You have to subtract the overlap once to get the true total of people involved, and then whatever is left over from the whole group didn't pick either."
+    },
+    {
+      "turn": 12,
+      "speaker": "reasoning",
+      "text": "The student has correctly and clearly explained the underlying concept of handling overlaps in Venn diagrams. The exercise is complete.",
+      "state": "Closing",
+      "response": "Spot on! You explained that really clearly. Great job working through that Venn diagram, and let me know whenever you're ready for another one!"
+    }
+  ]
+}
+
+
+{
+  "problem": "Determine whether a textbook chapter written in 2020 about the American Civil War is a primary or secondary source, and explain why.",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I think a history textbook from 2020 is a primary source because it's an actual book you can hold."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student conflated physical existence with historical classification. I need to probe their understanding of how sources are created relative to the event.",
+      "state": "Diagnosis",
+      "response": "What is the relationship between when the Civil War happened and when that textbook was written?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Well, the Civil War was in the 1860s, so the textbook was written way later by someone who wasn't there."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student recognizes the time gap and lack of firsthand witness. I will ask them to consider what that means for source categorization.",
+      "state": "Diagnosis",
+      "response": "How does being written long after the event by someone who wasn't there affect what kind of source it is?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "It means the author is analyzing things that already happened, so it's a secondary source."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student has correctly identified the source type. Now I need them to synthesize the rule in their own words to lock in the concept.",
+      "state": "Synthesis",
+      "response": "In your own words, what is the main difference between how a primary source and a secondary source are created?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "A primary source is made right when the event happens by someone who was there, while a secondary source is made later by someone studying those primary sources."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student has accurately articulated the distinction. The task is complete, so I will now transition to the closing turn.",
+      "state": "Closing",
+      "response": "Spot on! You've got it. Ready to try another one?"
+    }
+  ]
+}
+
+
+{
+  "problem": "A standard six-sided die is rolled once. What is the probability of rolling a number greater than 4?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I think the answer is 2 over 6 because there are two numbers bigger than 4 on a die, which are 5 and 6."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student correctly identified the favorable outcomes (5 and 6) and the total possible outcomes (6), but we need to check if they realize the fraction can be simplified.",
+      "state": "Diagnosis",
+      "response": "You've got the right numbers for the numerator and denominator! How would you write that fraction in simplest form?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Oh, 2 over 6 simplifies to 1 over 3. So the probability is just 1/3."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student simplified correctly and stated the final answer, but since high mistake frequency is required, let's introduce a twist or probe a deeper conceptual misunderstanding about what probability represents.",
+      "state": "Diagnosis",
+      "response": "Does rolling a 1/3 probability mean if you roll the die 3 times, you are guaranteed to get a number greater than 4?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Yes, exactly! If you roll it three times, one of those times has to be a 5 or a 6 because the probability is 1/3."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student asserted a common misconception about experimental versus theoretical probability (the gambler's fallacy / certainty in small trials). I need to guide them away from this incorrect claim without directly telling them the answer.",
+      "state": "Support",
+      "response": "What if you roll the die three times and get a 1, a 2, and a 3? Did the math stop working, or does probability mean something else for individual trials?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Wait, you could totally roll three small numbers in a row. So maybe probability doesn't mean it's guaranteed in three rolls... it just means that over a really large number of rolls, about one-third of them will be greater than 4?"
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student is correcting themselves and moving toward long-term relative frequency. Let's have them synthesize this insight to lock it in.",
+      "state": "Synthesis",
+      "response": "Spot on. How would you summarize what a probability like 1/3 tells us about a random event over many trials, rather than just a single try?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "Well, probability isn't a guarantee for a small batch of tries; instead, it tells us the expected long-run proportion or likelihood of an event happening across many repeated trials."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "The student has successfully explained the core concept in their own words after correcting their earlier misconception. We are ready to close.",
+      "state": "Closing",
+      "response": "That's a fantastic way to put it! You've really nailed how probability works in practice. Ready to try another one?"
+    }
+  ]
+}

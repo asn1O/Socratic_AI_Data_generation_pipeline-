@@ -1,0 +1,857 @@
+[
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Percentages",
+    "problem": "A company's budget was increased by 20% in year 1, and then decreased by 15% in year 2. In year 3, it was decreased by another 10%. If the final budget was $183,600, what was the original budget?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the overall change is -5%, so the original budget was $183,600 divided by 0.95?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has made the common mistake of adding percentages directly. I need to guide them to realize why this doesn't work.",
+        "state": "Diagnosis",
+        "response": "If a price of $100 goes up 10% then down 10%, is it back to $100?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, 10% of 110 is 11, so it's 99. So I can't just add them."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student successfully corrected their initial misconception. Now I must support them in building the correct sequential multiplier.",
+        "state": "Support",
+        "response": "Exactly! How would you write the multiplier for a 20% increase followed by a 15% decrease?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "For 20% increase it's 1.20, and for 15% decrease it's 0.85. We multiply those together?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has the correct setup. I want them to calculate the product of the first two multipliers.",
+        "state": "Diagnosis",
+        "response": "Yes, that's correct. What do you get when you multiply 1.2 by 0.85?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "1.2 times 0.85... is that 1.10?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student made a calculation error. I will offer a small hint to help them break down the mental math.",
+        "state": "Support",
+        "response": "Could we break it down? What is 1.2 times 0.8, and then half of 1.2?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Ah, 1.2 times 0.8 is 0.96. Half of 1.2 is 0.06. So it's 1.02!"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student successfully corrected their calculation. Now I need to prompt them to apply the third year's change.",
+        "state": "Support",
+        "response": "Perfect! Now, how do we apply the final 10% decrease to that 1.02?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "We multiply 1.02 by 0.9, which gives 0.918. So the final budget is 0.918 of original."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student got the correct compound multiplier. Now they need to perform the final step to find the original budget.",
+        "state": "Diagnosis",
+        "response": "Spot on. How do we use that 0.918 to find the original budget of $183,600?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "We divide $183,600 by 0.918, which is $200,000. It works out perfectly!"
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The problem is solved. Before finishing, I must ensure the student synthesizes the underlying mathematical concept.",
+        "state": "Synthesis",
+        "response": "Wonderful! In your own words, why can't we just add or subtract successive percentage changes?"
+      },
+      {
+        "turn": 15,
+        "speaker": "student",
+        "text": "Because each percentage change applies to the new, updated value, not the original starting amount."
+      },
+      {
+        "turn": 16,
+        "speaker": "tutor",
+        "reasoning": "The student has provided an excellent, accurate synthesis. I can now close the conversation warmly.",
+        "state": "Closing",
+        "response": "Exactly right! You did an amazing job working through those steps. Ready to try another?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Unit conversions",
+    "problem": "A cylindrical rain barrel with a diameter of 2 feet and a height of 4 feet is being filled by rainwater harvesting at a rate of 0.5 fluid ounces per second. However, there is a small leak at the bottom losing water at a rate of 120 milliliters per minute. How many hours will it take to fill the barrel if it starts empty? (Use: 1 cubic foot = 7.48 gallons, 1 gallon = 128 fluid ounces, 1 fluid ounce = 29.57 milliliters. Round intermediate steps to two decimal places.)",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this rain barrel problem, and there are just so many different units moving around at once. I see we have feet for the dimensions, gallons and cubic feet, fluid ounces for the rain, milliliters for the leak, and we need the final answer in hours. I know I need to find the volume of the barrel first and somehow reconcile the inflow and outflow rates, but I'm a bit overwhelmed with where to start matching all these different units up."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is overwhelmed by the multiple units. I will guide them to break down the problem step-by-step, starting with the static volume of the barrel before we deal with the dynamic rates.",
+        "state": "Diagnosis",
+        "response": "It definitely looks like a lot of moving parts, but we can easily tame this by taking it one piece at a time! Since we need to know how much total water the barrel can hold before we can figure out how long it takes to fill, where do you think we should start with the physical dimensions of the barrel, and how can we convert that space into a volume we can work with?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Right, let's find the volume first. The diameter is 2 feet, so the radius is 1 foot. Using the cylinder volume formula, V = pi * r^2 * h, that gives V = pi * 1^2 * 4, which is about 12.57 cubic feet. Since 1 cubic foot is 7.48 gallons, I can multiply 12.57 by 7.48 to get about 94.02 gallons. But now I have gallons, while the rates are in ounces and milliliters. What's the best way to align these?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly calculated the volume in gallons. Now they are stuck on reconciling the two rates. I will offer a hint to convert both rates to a single common unit, suggesting fluid ounces per minute as a convenient target.",
+        "state": "Support",
+        "response": "Excellent work on getting that volume in gallons! To tackle those rates, does it make sense to bring them both into the same language so we can compare them directly? Since our rain inflow is in fluid ounces per second and we eventually need to find the total time in hours, what if we tried converting both the inflow and the leak into fluid ounces per minute?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "That makes sense. For the inflow, 0.5 fluid ounces per second times 60 seconds gives us 30 fluid ounces per minute. For the leak, we have 120 milliliters per minute. Since 1 fluid ounce is 29.57 milliliters, I can multiply 120 by 29.57, which gives me 3,548.4 fluid ounces per minute. Wait, that seems way too high compared to the inflow, but is that the right way to apply the conversion factor?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made their one allowed mistake (multiplying instead of dividing to convert mL to fl oz) and noticed the result was suspiciously large. I will use a high Socratic hint to help them self-correct by checking the unit cancellation.",
+        "state": "Support",
+        "response": "You have a great instinct there—that number does seem massive for a small leak, doesn't it? If one single fluid ounce is made up of about thirty milliliters, should a volume of one hundred twenty milliliters turn out to be a much larger or a much smaller number when we express it in fluid ounces? How can we set up the units fractionally so that milliliters cancel out?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Ah, of course! To cancel out milliliters, I need to divide. So, 120 milliliters divided by 29.57 milliliters per fluid ounce gives about 4.06 fluid ounces per minute. That makes way more sense! Now we have an inflow of 30 fluid ounces per minute and a leak of 4.06 fluid ounces per minute, which means the net filling rate is 30 minus 4.06, or 25.94 fluid ounces per minute."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student successfully corrected their mistake and calculated the net rate in fl oz/min. I need to guide them to connect this net rate back to the total volume they found earlier.",
+        "state": "Diagnosis",
+        "response": "Spot on! That net filling rate of 25.94 fluid ounces per minute is exactly what we need. Now that we know how fast the barrel is actually filling up in ounces per minute, how can we connect this rate back to the total capacity of 94.02 gallons we calculated earlier so we can start finding the time?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "We need the capacity in fluid ounces to match the rate. Since 1 gallon is 128 fluid ounces, I'll multiply 94.02 gallons by 128, which is 12,034.56 fluid ounces. Then, dividing that total volume by our net rate of 25.94 fluid ounces per minute gives us about 463.94 minutes. Finally, dividing 463.94 by 60 minutes per hour gives about 7.73 hours to fill the barrel!"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student successfully solved the problem step-by-step. Now I want them to synthesize the concept by explaining the overall strategy in their own words to solidify their understanding.",
+        "state": "Synthesis",
+        "response": "Fantastic job! You nailed the final calculation. Looking back at this whole journey from dimensions to hours, how would you describe your overall strategy for managing a complex problem with so many conflicting units? What are the key rules you'd share with someone else tackling a multi-step conversion like this?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I'd say the key is to break it into two distinct tracks: first, find the static capacity and convert it to a standard volume unit, and second, find the net rate by converting all flow rates into that same unit. The most important rule is to always write out or visualize the units as fractions to ensure they actually cancel out correctly—like dividing instead of multiplying when converting smaller units to larger ones—so you don't get unrealistic numbers."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has fully articulated the strategy and successfully solved the problem. I will wrap up the conversation warmly.",
+        "state": "Closing",
+        "response": "That is an incredibly clear and robust strategy! Double-checking unit cancellation is a lifesaver for tricky problems like this. You did an amazing job working through those steps. Ready to try another one, or do you want to wrap up here?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "biology",
+    "topic": "Photosynthesis",
+    "problem": "If a plant is placed in complete darkness, what will eventually happen to the Calvin cycle, and why?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know the Calvin cycle doesn't need light, so does it just keep running in the dark?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has a common misconception that 'light-independent' means completely self-sustaining in the dark. I need to diagnose what they think the cycle's inputs are.",
+        "state": "Diagnosis",
+        "response": "While it doesn't use light directly, it does need specific inputs. What does it require to run?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think it needs carbon dioxide, but I'm not sure what else it uses."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified carbon dioxide but is missing the energy source. I need to prompt them to think about how the cycle is powered.",
+        "state": "Diagnosis",
+        "response": "How does the cycle get the energy needed to process that carbon dioxide?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I think it gets energy by absorbing heat from the surrounding environment."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made their first clear mistake, claiming heat powers the cycle. I need to support them by correcting this and pointing to the previous stage's chemical products.",
+        "state": "Support",
+        "response": "It actually uses chemical energy carriers from the first stage. What are those carriers?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, is ATP one of them? I don't really know the other one."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified ATP but is unsure of the electron carrier. I will ask an open question to see if they can recall it.",
+        "state": "Diagnosis",
+        "response": "Yes, ATP is correct! Can you name the other main energy carrier involved?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I think the other carrier is NADH, right?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student made their second mistake by confusing NADH (respiration) with NADPH (photosynthesis). I need to correct this and connect it back to the light.",
+        "state": "Support",
+        "response": "NADH is used in respiration, but photosynthesis uses NADPH. How are both NADPH and ATP produced?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "They are made during the light-dependent reactions, which need light."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student successfully connected ATP/NADPH to the light reactions. Now I want them to synthesize this to answer the original problem.",
+        "state": "Synthesis",
+        "response": "Exactly. So, what happens to the Calvin cycle if there is no light?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Without light, the plant can't make ATP and NADPH, so the Calvin cycle stops because it lacks energy."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully synthesized the concept and answered the problem. I will wrap up the session warmly.",
+        "state": "Closing",
+        "response": "Perfect! You nailed it. Ready to try another question?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Elasticity of demand",
+    "problem": "A gym offers two membership tiers: Standard ($40/month, 800 members) and Premium ($80/month, 300 members). The own-price elasticity of demand for the Standard tier is -1.2. The cross-price elasticity of Premium demand with respect to the Standard price is +0.6. If the gym raises the Standard price by 10%, and the Premium price remains unchanged, what is the net change in the gym's total monthly revenue? Assume linear demand relations for both.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Since the Standard tier has an elastic demand of -1.2, raising its price must decrease the gym's total revenue. I'm just not sure how to factor in the Premium tier's cross-price elasticity."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has made an explicit wrong claim (overgeneralizing that total revenue must decrease because one tier is elastic). I need to diagnose their ability to break down the problem by first calculating the Standard tier's revenue change.",
+        "state": "Diagnosis",
+        "response": "That is a very common intuition! To see if it holds here, why don't we calculate the revenue change for the Standard tier first? How does the 10% price increase affect its quantity and revenue?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "For the Standard tier, a 10% price increase makes it $44. With an elasticity of -1.2, the quantity demanded drops by 12%, going from 800 to 704 members. So, Standard revenue drops from $32,000 to $30,976, which is a loss of $1,024."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student calculated the Standard tier perfectly. Now I need to guide them to apply the same logical steps to the Premium tier using the cross-price elasticity.",
+        "state": "Diagnosis",
+        "response": "Spot on with those calculations. Now, since the two tiers are related, how does that 10% price increase on the Standard tier impact the Premium tier's demand?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "The cross-price elasticity is +0.6. Since the Standard price went up by 10%, the demand for Premium should increase by 6%. That means Premium membership goes from 300 to 318 members."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly calculated the new Premium quantity. I will now ask them to find the new Premium revenue and synthesize the two parts to find the net change.",
+        "state": "Diagnosis",
+        "response": "Precisely. What is the new revenue for the Premium tier, and what does the combined total revenue for both tiers look like now?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Premium revenue goes from $24,000 to $25,440, which is an increase of $1,440. Adding them together, the new total revenue is $56,416 compared to the original $56,000. Wow, total revenue actually increased by $416!"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student successfully calculated the correct final answer, disproving their initial assumption. Now I want them to synthesize and explain the underlying economic concept in their own words.",
+        "state": "Synthesis",
+        "response": "Exactly! You've got the numbers. In your own words, how did raising the price of an elastic service end up increasing the gym's overall monthly revenue?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Even though we lost revenue on the Standard tier because it's elastic, the price increase drove some of those users to the Premium tier. Because Premium is twice as expensive, the high margin of the new Premium members easily made up for the lost Standard revenue."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student explained the revenue trade-off perfectly. I will ask one final synthesis question about the nature of the relationship between the products to solidify the concept of cross-price elasticity.",
+        "state": "Synthesis",
+        "response": "Beautifully explained. Looking at the big picture, how does the positive sign of the cross-price elasticity reflect this specific relationship between the two tiers?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "A positive cross-price elasticity means the two goods are substitutes. When the Standard tier gets more expensive, consumers substitute toward Premium. If they were complements, a price hike would have hurt both tiers."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully solved the problem, corrected their initial misconception, and explained the core concepts of elasticity and substitute goods. The exchange is complete.",
+        "state": "Closing",
+        "response": "Exactly! You've mastered both the mathematical calculations and the economic intuition behind this multi-product pricing strategy. Fantastic work! Would you like to try another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Probability",
+    "problem": "A bag contains 3 red balls and 5 blue balls. If two balls are drawn at random one after another without replacement, what is the probability that both are red?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "We have 3 red and 5 blue balls. To get two red, is the answer just 3/8?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student identified the correct initial count but only calculated for one draw. I need to prompt them to think about the sequential nature.",
+        "state": "Diagnosis",
+        "response": "That is the chance for the first draw. What happens to the bag after you take that first ball?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, it doesn't change, so there are still 3 red and 8 total balls?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student made an explicit error about dependent events. I will remind them of the 'without replacement' condition to guide correction.",
+        "state": "Support",
+        "response": "We don't put the first ball back. If you already took one red, what is left in the bag?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Ah, I see! So there are only 2 red balls left and 7 total balls."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student corrected their understanding of the bag's state. Now I need to elicit the probability for the second draw.",
+        "state": "Diagnosis",
+        "response": "Exactly! Now, what is the probability of drawing a red ball from this remaining group?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "That would be 2/7."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student successfully calculated both individual probabilities. I need to diagnose how they plan to combine these sequential steps.",
+        "state": "Diagnosis",
+        "response": "Perfect. We have 3/8 for the first draw and 2/7 for the second. How should we combine them?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Do we add them together? Like, 3/8 plus 2/7?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student made a common error of adding probabilities instead of multiplying. I will offer a hint about 'and' versus 'or' rules.",
+        "state": "Support",
+        "response": "We add when we want either event to happen. When we need both to happen, what operation do we use?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Ah, 'and' means we multiply them! So we multiply 3/8 by 2/7?"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully navigated all steps. I want them to articulate the rule for dependent probabilities to reinforce learning.",
+        "state": "Synthesis",
+        "response": "Yes! That gives 3/28. In your own words, how do we find the probability of two dependent events?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "We multiply the first event's probability by the updated probability of the second event after the first happened."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student explained the rule accurately in their own words. The session is complete.",
+        "state": "Closing",
+        "response": "Spot on! You did a fantastic job working through that. Ready for another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Analogies and vocabulary in context",
+    "problem": "Complete the analogy: MENDICANT : IMPECUNIOUS :: BENEFACTOR : [____]. Options: A) Altruistic, B) Penurious, C) Malevolent, D) Covetous.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know mendicant means beggar, but I'm not sure how it connects to impecunious or benefactor."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student understands 'mendicant' but lacks the definition of 'impecunious'. I will diagnose if they can infer it.",
+        "state": "Diagnosis",
+        "response": "If a mendicant is a beggar, what state of wealth would you expect them to be in?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "A beggar would have no money, so impecunious probably means extremely poor."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student successfully defined both words. Now I want them to articulate the precise relationship between them.",
+        "state": "Diagnosis",
+        "response": "Exactly! So, how would you state the relationship between a mendicant and being impecunious?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "A mendicant is naturally impecunious. For benefactor, is the answer penurious since they deal with money?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made a mistake about 'penurious' and 'benefactor'. I will offer a minimal hint defining benefactor to guide them.",
+        "state": "Support",
+        "response": "If a benefactor is someone who generously gives money to others, does penurious fit them?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, no. Penurious means stingy or poor, which is the opposite of a generous giver."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student corrected their vocabulary mistake. Now I will prompt them to find the correct matching option.",
+        "state": "Diagnosis",
+        "response": "Correct. Which of the remaining choices best describes someone who is a generous giver?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "That would be altruistic, because a benefactor is naturally selfless and altruistic."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has found the correct answer. Now I want them to synthesize the general rule of this analogy.",
+        "state": "Synthesis",
+        "response": "Spot on! In your own words, how did you determine the correct relationship here?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The first word's defining characteristic is the second word, just like a benefactor is defined by being altruistic."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully synthesized the concept. I will wrap up the session warmly.",
+        "state": "Closing",
+        "response": "That is absolutely correct! You did an amazing job working through those definitions. Ready for another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Logical sequences",
+    "problem": "What are the next two numbers in this logical sequence: 2, 3, 5, 9, 8, 27, 11, 81, ...?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the next number is 17. The differences are +1, +2, +4, so next is +8."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has jumped to a common wrong pattern and ignored the number 8. I need to diagnose if they noticed the 8 or just bypassed it.",
+        "state": "Diagnosis",
+        "response": "How does the 8 in the sequence fit into that pattern?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I'm lost on that part. Is the 8 just a typo?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The beginner student is stuck and suspects a typo. I will offer a low-level hint to guide them toward looking at alternating sequences.",
+        "state": "Support",
+        "response": "It's correct. What if we have two different patterns mixed together here?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, alternating? So 2, 5, 8, 11 are multiplying by 2.5?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the alternating terms but made a multiplication error. I will help them self-correct this step.",
+        "state": "Support",
+        "response": "That works for 2 to 5, but what is 5 times 2.5?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Ah, it's +3. For 3, 9, 27, 81, do we triple the added difference?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student found the first rule (+3) but reverted to their initial misconception of tracking complex differences for the second sequence. I will guide them to a simpler rule.",
+        "state": "Support",
+        "response": "Is there a simpler, single operation that gets us from 3 to 9 to 27?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, just multiplying by 3! That is much simpler."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully decoded both patterns. I will now ask them to synthesize the rules and give the final answers.",
+        "state": "Synthesis",
+        "response": "Spot on. Can you find the next two numbers and explain the overall rule?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Sure! We alternate: one adds 3, the other multiplies by 3. Next numbers are 14 and 243."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the entire concept and solved the problem. The session can now close.",
+        "state": "Closing",
+        "response": "Perfect! You nailed this tricky sequence. Ready for another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "history_and_social_studies",
+    "topic": "Comparing political systems",
+    "problem": "Explain why a Prime Minister in a parliamentary system can typically be removed from office much more quickly than a President in a presidential system.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this question about why a Prime Minister can be removed from office much faster than a President, but I don't really get how their jobs are different."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is expressing basic confusion about the two roles. I will start with a Diagnosis state to see if they know how a Prime Minister is chosen, using a pure question to establish a baseline.",
+        "state": "Diagnosis",
+        "response": "Since we are comparing systems, let's start with elections. Who do you think actually chooses the Prime Minister in a parliamentary system?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I'm not really sure. Do the citizens vote for them directly in a separate national election, like we do for the president?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The beginner student does not know how a PM is elected. I will move to Support and offer a hint about legislative elections to guide them.",
+        "state": "Support",
+        "response": "Actually, citizens only vote for members of Parliament. Since Parliament is the legislative body, how do you think the Prime Minister is selected from those members?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, so the parliament members vote, but does that mean the Prime Minister is completely independent of parliament once they are chosen, just like a President?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made their first explicit mistake, asserting that the PM is independent of parliament. I must stay in Support to guide them to correct this misconception.",
+        "state": "Support",
+        "response": "Not quite. The Prime Minister actually needs the ongoing support of the parliament to stay in power. What do you think happens if parliament loses confidence in the Prime Minister?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I guess if they lose support, parliament can vote them out. Is that what a vote of no confidence is?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student successfully self-corrected and identified the vote of no confidence. I will transition to Diagnosis to check their understanding of how a President is removed.",
+        "state": "Diagnosis",
+        "response": "That's correct! To compare the two, how is a President typically removed from office before their term ends?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Well, since a President is also part of the legislature, Congress can just vote them out with a simple majority vote whenever they disagree on policies."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student made their second mistake, claiming the President is part of the legislature and can be removed by a simple majority over policy. I will use Support with a hint about separation of powers.",
+        "state": "Support",
+        "response": "Remember, presidential systems have a strict separation of powers, meaning the President is not part of Congress. Since they are independent, removing them requires impeachment. Does impeachment require just a simple disagreement, or something more?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Oh, right, they have to commit a crime or do something illegal, not just have a policy disagreement. And it's a much harder process than just a regular vote."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully corrected the second mistake and understands both mechanisms. I will transition to Synthesis to have them put the full comparison together.",
+        "state": "Synthesis",
+        "response": "Spot on! You've got both pieces of the puzzle now. In your own words, can you summarize why it is generally much faster to replace a Prime Minister than a President?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "A Prime Minister is chosen by Parliament and needs their constant support, so they can be replaced quickly through a simple vote of no confidence if Parliament loses faith. A President is elected independently from Congress, so they have a fixed term and can only be removed through impeachment for serious wrongdoing, which is a much harder and longer legal process."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has provided an excellent, accurate synthesis of the concept. The conversation is complete, so I will transition to the Closing state.",
+        "state": "Closing",
+        "response": "That is a perfect summary! You did an amazing job working through those differences. Would you like to try another comparison, or wrap up for today?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Probability",
+    "problem": "A bag contains 4 red balls and 6 blue balls. If two balls are drawn at random one after the other without replacement, what is the probability that both balls are of different colors?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "We have 4 red and 6 blue balls. If we want different colors, we need one red and one blue. Is the chance of getting a red 4/10 and blue 6/10?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has identified individual probabilities but has not yet considered how drawing two balls in sequence changes the math. I need to prompt them to think about combining these events.",
+        "state": "Diagnosis",
+        "response": "That is correct for a single draw, but since we are drawing two balls in a row, how do we combine those two separate events?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, so we just multiply them together? If we do that, is the probability of getting different colors 4/10 times 6/10, which equals 24/100?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student made their first mistake by assuming replacement. I need to guide them to adjust the total count for the second draw since the first ball is not replaced.",
+        "state": "Support",
+        "response": "If we do not put the first ball back into the bag, how many total balls are remaining when we go to make our second draw?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Ah! There would only be 9 balls left. So the second fraction should be out of 9. Does that make it 4/10 times 6/9, which is 24/90?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student corrected the denominator but is only considering the Red-then-Blue sequence. I will check if they realize order matters.",
+        "state": "Diagnosis",
+        "response": "You've got the correct math for drawing a red ball first and then a blue one. But is that the only way we can get two different colors?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I'm not really sure what you mean. We got one red and one blue, so aren't we done?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is experiencing a beginner block regarding sequence order. I will nudge them to think about starting with the other color.",
+        "state": "Support",
+        "response": "What if the very first ball we pulled out of the bag was blue instead of red? How would that change our sequence?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, I see! We could get a blue ball first, then a red one. So that would be 6/10 for the blue, and then 4/10 for the red ball?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student successfully identified the second order but repeated their previous mistake of ignoring the non-replacement rule. I must prompt them to correct this resurfaced misconception.",
+        "state": "Support",
+        "response": "Since we still aren't putting that first blue ball back, how many balls are actually left in the bag when we draw the red one?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Right, it's 9 again, so 6/10 times 4/9, which is 24/90. So now we have 24/90 for the first way and 24/90 for the second way. Do we multiply these two together?"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has both correct scenario probabilities but made a third mistake by wanting to multiply them. I will guide them to realize these are mutually exclusive paths.",
+        "state": "Support",
+        "response": "If those are two alternative ways to get what we want, should we multiply their chances or combine them some other way?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "They are separate possibilities, so we add them! 24/90 plus 24/90 is 48/90, which is 8/15. So, to find the probability of different colors without replacement, we calculate the probability of each order while reducing the denominator, then add the final probabilities of those different paths."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully resolved all misconceptions and explained the complete process accurately. I will now close the session warmly.",
+        "state": "Closing",
+        "response": "Spot on! You explained that beautifully and solved it perfectly. Ready to try another probability challenge?"
+      }
+    ]
+  }
+]

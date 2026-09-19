@@ -1,0 +1,77 @@
+{
+  "problem": "An energy-efficient light bulb consumes 11 watts. If electricity costs $0.15 per kilowatt-hour (kWh), how much does it cost to run this bulb continuously for an entire 30-day month? Round your answer to the nearest cent.",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I need to find the monthly cost of running an 11-watt bulb. I know 30 days is 720 hours, so I multiplied 11 watts by 720 hours to get 7920 watt-hours. But now I'm stuck on how to connect this to the cost in kilowatt-hours."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reason": "The student has correctly calculated total watt-hours but is unsure how to scale to kilowatt-hours. I need to diagnose their understanding of the prefix relationship.",
+      "state": "Diagnosis",
+      "response": "You've got the total watt-hours down perfectly. How do you think we can bridge the gap between those watt-hours and the kilowatt-hours used for the pricing?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Oh, kilo means thousand, so I should divide by 100 to get kilowatts? Wait, no, is it 11 watts equals 0.11 kilowatts? So 7920 watt-hours would be 79.2 kilowatt-hours."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reason": "The student made a minor decimal slip by dividing by 100 instead of 1000. I will provide a minimal hint about the prefix to support self-correction.",
+      "state": "Support",
+      "response": "You're spot on that 'kilo' means thousand. If 'kilo' represents one thousand, how many watts are actually in a single kilowatt?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Ah, of course! A kilowatt is 1,000 watts. So to convert watt-hours to kilowatt-hours, I need to divide by 1,000, not 100. That makes it 7.92 kilowatt-hours instead of 79.2."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reason": "The student successfully corrected their conversion error. Now I need to diagnose if they can execute the final pricing step.",
+      "state": "Diagnosis",
+      "response": "Exactly, 7.92 kilowatt-hours is correct. Now that we have the total energy in kilowatt-hours, what is our next step to find the total cost?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Since it costs $0.15 per kilowatt-hour, I just multiply 7.92 by 0.15. That gives me 1.188. Since it's money, I should round that to the nearest cent, which is $1.19."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reason": "The student reached the correct final answer. I will transition to synthesis to help them articulate the metric unit conversion concept in their own words.",
+      "state": "Synthesis",
+      "response": "That is absolutely correct! Looking back at the whole process, what is the key relationship you used to switch between different metric prefixes like watts and kilowatts?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "Well, you have to look at the prefix like 'kilo' which tells you the scale factor, in this case 1,000, and divide when going from a smaller unit to a larger one."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reason": "The student explained the specific conversion well. I want them to generalize this rule to any unit size conversion to complete the synthesis.",
+      "state": "Synthesis",
+      "response": "Beautifully explained. How would you summarize a general rule for deciding whether to multiply or divide when converting between any smaller and larger units?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "When converting from a smaller unit to a larger unit, you divide by the conversion factor because you need fewer of the larger units to represent the same amount. When going larger to smaller, you multiply."
+    },
+    {
+      "turn": 12,
+      "speaker": "tutor",
+      "reason": "The student has fully synthesized and generalized the conversion rules correctly. I will now close the session warmly.",
+      "state": "Closing",
+      "response": "Spot on! That rule will serve you well across all kinds of unit conversions. Terrific job working through that, and feel free to let me know when you're ready for the next problem!"
+    }
+  ]
+}

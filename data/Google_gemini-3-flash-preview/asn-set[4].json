@@ -1063,5 +1063,389 @@
         "response": "Exactly right! You've mastered the process of manual tracing. Want to try another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "chemistry",
+    "topic": "Balancing chemical equations",
+    "problem": "Balance the following chemical equation for the formation of water: H₂ + O₂ -> H₂O",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at H2 + O2 -> H2O and I see there are two hydrogens and two oxygens on the left, but the right side only has one oxygen. I know they have to be even, so do I just change the H2O to H2O2 so the oxygens match? Or is there something else I'm supposed to do with the numbers?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student's first instinct is to change the chemical formula (subscripts), which indicates a misunderstanding of chemical identity. I need to use Diagnosis to see if they understand why formulas are fixed.",
+        "state": "Diagnosis",
+        "response": "Before we try changing those small numbers at the bottom, what do you think would happen to the actual substance if we turned H2O, which is water, into H2O2, which is hydrogen peroxide? Is it possible to balance an equation by changing what the chemicals actually are, or do we need to keep the identities of the reactants and products exactly the same as they were originally written?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I don't really get what you mean by that... doesn't H2O2 also just have hydrogen and oxygen in it? Why does it really matter which version I use if my only goal is to make sure I have two of everything on both sides of the arrow? I thought as long as the letters and numbers matched, the equation was okay."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is confused about the relationship between formulas and identities. I'll provide Support via a recipe analogy to help them realize that changing subscripts changes the substance itself.",
+        "state": "Support",
+        "response": "What if we thought about this like a recipe for a specific sandwich where H2O is the required list of ingredients? If a recipe for a cheese sandwich calls for one slice of cheese, but you decide to use two, wouldn't you be making a different sandwich entirely? In chemistry, if we change those little subscripts, wouldn't we be creating a completely different substance rather than just adjusting the amount of water we produced?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, so you're saying H2O and H2O2 are actually different things, like a sandwich with extra stuff on it? I guess I have to keep it as water then. But if I can't change the H2O part, how am I supposed to get another oxygen atom over there to match the O2 on the left side?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student understands subscripts are fixed but doesn't know how to balance. I'll use Support to introduce the concept of coefficients as multipliers for the whole molecule.",
+        "state": "Support",
+        "response": "If we must keep the identity of water exactly as it is, what would happen if we considered using more than one entire unit of water? If one molecule of water doesn't provide enough oxygen to match our starting materials, could we perhaps use a 'multiplier' in front of the whole molecule to show we have two complete water molecules, and how might that change the total number of oxygen atoms we have on that side?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Okay, so maybe I just add another O on the end of the equation? Like H2O + O? That way I have two oxygens on the right to match the two on the left, and I still have my water molecule. Does that work, or am I breaking another rule about the 'recipe'?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student made a second mistake by adding a raw atom. I will stay in Support to guide them back to using whole molecules (coefficients) instead of changing the reaction components.",
+        "state": "Support",
+        "response": "If we just add a loose oxygen atom by itself, would that still match the original problem that says our only product is water? Where would a random, extra oxygen atom come from if it isn't part of a water molecule? Could we try applying that idea of a 'multiplier' to the whole H2O molecule instead, so we are actually accounting for the atoms within the substances we are allowed to have?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "So I have to use the whole water molecule as a unit. If I put a 2 in front, I have two waters, which gives me 2 oxygens. That finally matches the left side! But wait, now I have 2 times 2, so 4 hydrogens on the right, and I only have 2 on the left. Did I just make a new problem?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully balanced oxygen but now faces a hydrogen imbalance. I'll provide Support to help them see that the same logic applies to the reactant side.",
+        "state": "Support",
+        "response": "Since we have two water molecules providing the two oxygens we needed, can you see what happened to the total number of hydrogen atoms on that side? If we now have four hydrogens on the right but only two on the left, what could we do to the hydrogen molecule on the reactant side to make sure both sides end up with the same count?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I think I see it now! If I put a 2 in front of the H2 on the left side, that would give me 4 hydrogens there. So the final thing would be 2H2 + O2 -> 2H2O. Does that count as balanced since there are 4 hydrogens and 2 oxygens on both sides now?"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly balanced the full equation. I'll move to Synthesis to have them articulate the underlying rules of conservation and identity.",
+        "state": "Synthesis",
+        "response": "Don't you see how perfectly those numbers now balance out on both sides? To make sure you really feel confident with this, could you explain in your own words why we only change those big numbers in front and never the little ones at the bottom? What is the main rule we are trying to follow regarding the atoms when we balance these chemical equations?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The rule is that you have to have the same number of each atom on both sides because matter can't be created or destroyed. You can only change the big numbers in front, the coefficients, because changing the little subscripts changes what the substance actually is. So you just multiply the whole molecules until the atom counts match on both sides."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully balanced the equation and provided a comprehensive explanation of the underlying chemical principles, so the session is complete.",
+        "state": "Closing",
+        "response": "That was a perfect explanation! You've really captured the essence of why we balance equations the way we do. Would you like to try another one to see if you can apply these rules to a different reaction?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Inflation basics",
+    "problem": "Consider an economy operating at its long-run potential output (full employment). The central bank decides to increase the money supply by exactly 12% to encourage more economic activity. Using the concepts of the Quantity Theory of Money and the long-run neutrality of money, describe what happens to the price level and real GDP in the long run. Assume the velocity of money remains constant.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this scenario and thinking about how businesses react. If the money supply goes up by 12%, that represents more available capital for everyone in the system, so productivity should rise accordingly. I think both the price level and real output will increase by about 6% each because the economy is getting a significant boost from the extra cash circulating."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is conflating nominal money with real productive capacity. I need to diagnose whether they understand the constraint of 'full employment' and how printing money differs from creating physical resources.",
+        "state": "Diagnosis",
+        "response": "That's an interesting starting point! When we think about the economy being at full employment already, what exactly does that imply about the available labor and machinery? If the central bank prints more bills, how does that physical act change the actual number of workers or factories available to produce goods in the long run?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Right, full employment means we're using all our resources efficiently. But if people have more money in their pockets, they will naturally demand more goods. To meet that demand, firms will just hire more people and build more factories to expand. That's why real output has to go up eventually; the 12% increase in money just fuels that physical expansion."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is still insisting that demand can drive supply beyond the long-run potential. I will provide a hint regarding the labor market to help them see the cost-push effect of trying to expand beyond capacity.",
+        "state": "Support",
+        "response": "If every willing worker already has a job and every factory is running at its sustainable capacity, where exactly would those extra workers and machines come from in this scenario? If firms try to 'hire more' when there's no one left to hire, what happens to the wages they have to offer to lure people from other jobs?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, I see your point. Wages would start to go up because firms are essentially competing for the same pool of workers. So, if wages go up, the cost of production goes up as well. Maybe the price level increases by 12% to match the money supply, but the real output actually stays the same because we physically cannot produce more."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has reached the correct numerical conclusion, but I want to ensure they aren't just guessing. I'll probe their understanding of the Equation of Exchange (MV=PY) to see if they understand the mechanics.",
+        "state": "Diagnosis",
+        "response": "You've hit on a crucial adjustment mechanism regarding costs! Now, considering your conclusion that prices rise by exactly 12%, what are we assuming about how quickly people spend that new money? If the 'velocity' or the frequency of transactions stays constant, how does the Equation of Exchange support your theory about the price level?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Wait, if the price level goes up that much, people might actually spend less because things are getting more expensive. So maybe the price level only goes up by 10%, and the other 2% is absorbed by a slight increase in real output because the extra money makes the market more efficient and reduces friction."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is making a mistake by suggesting that higher prices reduce aggregate spending despite the higher money supply. I'll offer a hint about real purchasing power to help them see why prices must rise fully.",
+        "state": "Support",
+        "response": "If the total money supply increased by 12% but prices only went up by 10%, wouldn't that mean people's 'real' purchasing power has actually increased compared to where they started? In a long-run equilibrium where we started at full capacity, what would happen if everyone suddenly had extra real wealth to spend on a fixed amount of goods?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "If they have extra wealth but the supply of goods is fixed, they'd just bid the prices up even further until that extra wealth is gone. I guess that means the price level must rise by the full 12%. But I still feel like more money should help investment. Wouldn't the interest rates drop, leading to more long-term real growth eventually?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student is resurfacing the misconception that money can drive real growth in the long run, this time via interest rates. I'll provide a hint about the difference between nominal and real interest rates.",
+        "state": "Support",
+        "response": "That's a sophisticated thought regarding interest rates! However, if prices and wages have both scaled up by 12%, what happens to the 'real' value of the money being lent and borrowed? If the real supply of and demand for loanable funds haven't changed their fundamental underlying resource constraints, can the 'real' interest rate stay lower forever?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I see the pattern now. In the long run, money is 'neutral.' If you increase the supply of money by 12%, you're just changing the units we use to measure value. Since we're already at full employment, we can't produce more physical stuff. The extra money just creates more demand for the same goods and labor, which eventually bids up all prices and wages proportionally. So, real output stays at the full-employment level, and the price level absorbs the entire 12% increase."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified the long-run outcome. I will now ask them to synthesize the concept to ensure they can articulate the core principle of the neutrality of money in their own words.",
+        "state": "Synthesis",
+        "response": "You've successfully navigated the complexities of how nominal changes reconcile with real constraints! Since you've seen how the variables balance out, how would you state the general rule regarding the relationship between the money supply and the price level when the economy is at its full potential? In your own words, why does the real output remain unaffected?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The general rule is the Neutrality of Money. In the long run, changes in the money supply only affect nominal variables, like the price level and nominal wages, but they don't change real variables like GDP or employment. This is because long-run output is determined by physical factors like labor, capital, and technology. Adding more money just means more dollars chasing the same amount of goods, leading to proportional inflation."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has provided a clear and correct synthesis of the neutrality of money and the quantity theory. The conversation is complete.",
+        "state": "Closing",
+        "response": "Excellent explanation! You've got a solid handle on how monetary policy interacts with long-run equilibrium and the distinction between nominal and real variables. Ready to try another scenario, perhaps involving a change in the velocity of money?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "history_and_social_studies",
+    "topic": "Comparing political systems",
+    "problem": "Compare how the executive branch's legitimacy is maintained in a Parliamentary system versus a Presidential system during a period of legislative deadlock. What specific mechanisms govern the executive's survival in each?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know Presidents have fixed terms, but I'm confused how Parliamentary leaders survive if they can't pass legislation."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student understands the basic difference in terms but lacks clarity on the mandate. I need to establish where the PM's authority originates.",
+        "state": "Diagnosis",
+        "response": "How does the source of a Prime Minister's authority differ from that of a President's?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "The PM is chosen by the legislature, whereas the President is usually elected by the people directly."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the source of power. Now I need to explore the mechanism for removal in a parliamentary system.",
+        "state": "Diagnosis",
+        "response": "If the legislature stops supporting a PM's agenda, what formal mechanism can they use to remove them?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "They use a vote of no confidence. If it passes, the government has to resign or call elections."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student identified the mechanism. I'll provide a hint to check if they understand the threshold for such a vote.",
+        "state": "Support",
+        "response": "Does every legislative defeat count as 'no confidence,' or is there a specific threshold for resignation?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I think any major bill failing, like a transport bill, would automatically mean the government has lost confidence."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student made a minor error by overgeneralizing. I'll use a hint to guide them toward the distinction between policy and confidence.",
+        "state": "Support",
+        "response": "Would a minor policy failure really topple a government, or must the vote specifically concern 'supply' or 'confidence'?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Right, it's specific. Only losing a budget vote or an actual 'no confidence' motion forces them out."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student corrected the error. Now I will prompt them to compare this to the presidential mechanism.",
+        "state": "Support",
+        "response": "How does this compare to a President facing a hostile legislature that blocks every single bill?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "A President stays because their term is fixed by the constitution, regardless of whether they can pass laws."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student understands both mechanisms. Now I'll ask them to synthesize the conceptual difference.",
+        "state": "Synthesis",
+        "response": "What does this tell us about the relationship between executive and legislative powers in each system?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Parliamentary systems have a 'fusion of powers' where executive survival requires legislative support, while Presidential systems use 'separation' to ensure independence."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the underlying principle of fusion vs. separation of powers.",
+        "state": "Closing",
+        "response": "Spot on! That distinction is the heart of the matter. Want to try another comparison?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Blood relations",
+    "problem": "Pointing to a photograph, a man says, 'I have no brothers or sisters, but that man's father is my father's son.' Who is in the photograph?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this riddle. If he has no siblings, does 'my father's son' mean himself?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the core constraint. I need to confirm this understanding before moving to the next logical step.",
+        "state": "Diagnosis",
+        "response": "If you are an only child, who is the only person your father would call 'son'?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "That would just be me. So the phrase 'my father's son' is actually just the speaker."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has resolved the first part. Now they need to substitute that identity back into the original sentence.",
+        "state": "Diagnosis",
+        "response": "If you replace that phrase with 'me', how does the rest of the statement read?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "It reads 'that man's father is me.' So the photo must be of his son?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student reached the correct conclusion but phrased it as a question. I'll ask for their reasoning to ensure certainty.",
+        "state": "Diagnosis",
+        "response": "What logic are you using to connect 'me' being the father to the identity of 'that man'?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Actually, I might have flipped it. Since he's talking about his father's son, it's his own father."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student made a common slip by reversing the relationship. I'll provide a minimal hint to help them self-correct.",
+        "state": "Support",
+        "response": "If 'you' are the father of the person in the photo, what is that person to you?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "They would be my son. I see now, the man in the photo is the speaker's son."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly solved the puzzle and corrected their mistake. Now they should articulate the general rule used.",
+        "state": "Synthesis",
+        "response": "In your own words, what is the best technique for resolving these 'father's son' type phrases?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I find the identity of the possessive phrase first, then substitute that person back into the full sentence."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the logic of substitution and simplification. The session is complete.",
+        "state": "Closing",
+        "response": "That is a perfect strategy for solving these! Ready to try a slightly more complex one?"
+      }
+    ]
   }
 ]

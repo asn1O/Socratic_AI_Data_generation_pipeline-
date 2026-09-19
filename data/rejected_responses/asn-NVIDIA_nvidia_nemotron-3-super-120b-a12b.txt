@@ -1045,3 +1045,71 @@ print x, y",
     }
   ]
 }
+
+
+{
+  "problem": "Balance the following chemical equation: Fe2(SO4)3 + NaOH → Fe(OH)3 + Na2SO4",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I started by matching iron: 2 Fe on the left, so I put 2 Fe(OH)3 on the right. I saw 3 sulfate groups on the left, so I used 3 Na2SO4 on the right. But the O and H counts seem off."
+    },
+    {
+      "reasoning": "The student shows an initial attempt focusing on Fe and sulfate but seems unsure about O and H balance; we need to understand their reasoning.",
+      "state": "Diagnosis",
+      "response": "I saw you started by making sure the iron atoms matched and then you kept the sulfate group together; can you tell me what led you to treat the sulfate as a single unit from the beginning?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "I kept SO4 together because it’s a polyatomic ion, so I left it as is. Then I balanced Na by putting 3 Na2SO4, which gave 6 Na on the right, so I put 6 NaOH on the left."
+    },
+    {
+      "reasoning": "The student described keeping sulfate together and balancing Na, but we need to see if they noticed any mismatch in O/H counts after those steps.",
+      "state": "Diagnosis",
+      "response": "You mentioned balancing sodium with six NaOH; after doing that, what did you notice about the oxygen and hydrogen counts on each side, and did anything seem off?"
+    },
+    {
+      "turn": 5,
+      "student": {
+        "text": "I counted O: left side 12 from sulfate plus 6 from NaOH equals 18 O. Right side: 2 Fe(OH)3 gives 6 O, 3 Na2SO4 gives 12 O, total 18 O. Hydrogen: left 6 H from NaOH, right 6 H from hydroxide. They match, so it's balanced."
+      }
+    },
+    {
+      "reasoning": "The student confirmed correct counts but expressed uncertainty; a minimal hint about checking sulfate oxygen will reinforce their verification.",
+      "state": "Support",
+      "response": "Remember that each sulfate group contains four oxygen atoms; did you count them all on both sides, and did you include the oxygen from hydroxide?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Yes, I counted the sulfate oxygens: 3 groups × 4 O = 12 O on each side. I also added the O from NaOH and hydroxide, and everything added up to 18 O total."
+    },
+    {
+      "reasoning": "The student verified the counts correctly; now we probe their understanding of why treating sulfate as a unit helped.",
+      "state": "Diagnosis",
+      "response": "Why do you think treating the sulfate as a single unit, rather than breaking it into separate atoms, made the balancing process easier for you?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "Because sulfate stays intact in this reaction, counting it as one piece prevents messing up its internal oxygen and sulfur counts, so I only had to adjust the whole group."
+    },
+    {
+      "reasoning": "The student articulated the reasoning behind keeping polyatomic ions intact; we now ask them to generalize the strategy.",
+      "state": "Synthesis",
+      "response": "In your own words, what is the general strategy for balancing equations that contain polyatomic ions like sulfate, and why is this approach helpful?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "You treat each polyatomic ion that appears unchanged on both sides as a single unit, balance the other atoms first, then adjust the ion groups as needed, and finally check that all atoms and charge are balanced."
+    },
+    {
+      "reasoning": "The student has correctly explained the rule in their own words, indicating mastery; we wrap up the conversation.",
+      "state": "Closing",
+      "response": "Great job explaining the rule! You’ve clearly grasped how to balance polyatomic ions, and you can apply this method to many other reactions. Feel free to try another whenever you’re ready."
+    }
+  ]
+}

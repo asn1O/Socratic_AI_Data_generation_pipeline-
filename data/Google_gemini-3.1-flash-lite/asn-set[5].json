@@ -1129,5 +1129,179 @@
         "response": "Perfect, you nailed it! Ready to try another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Simple vs compound interest",
+    "problem": "If you invest $1,000 at a 5% annual interest rate, how much total interest will you have earned after 2 years if the interest is simple versus if it is compounded annually?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "For simple interest, I'd just take 5% of $1,000, which is $50, and multiply by 2 years to get $100. For compound, I assume it's the same because 5% of $1,000 is always $50, so the total interest would also be $100."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student correctly calculated the simple interest but incorrectly assumed the principal remains static for compound interest. I need to guide them to consider what happens to the balance after the first year.",
+        "state": "Diagnosis",
+        "response": "You've got the simple interest part exactly right! However, let's think about that compound interest claim. If you earn $50 in interest after the first year, does that money just sit separately, or does it become part of your account balance for the second year?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, right, the interest gets added to the account. So after year one, I have $1,050. But for the second year, shouldn't I still just calculate 5% of the original $1,000 to keep it consistent?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student understands the account grows but still holds the misconception that interest only applies to the original principal. I need to support them by focusing on the definition of 'compounding'.",
+        "state": "Support",
+        "response": "If the bank calculates 'interest on interest' during the second year, would you still be earning 5% just on that initial $1,000, or would the $50 you gained in the first year also start earning its own interest?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Wait, I see. If the interest from the first year is now in the account, then for the second year, the bank is paying 5% on the full $1,050, right? So that would be 5% of $1,050, which is $52.50."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully corrected the mistake. I will now ask them to synthesize the total interest earned to ensure they understand the cumulative difference.",
+        "state": "Diagnosis",
+        "response": "That sounds much more accurate. Based on that calculation for the second year, what is the total interest you would have earned over the full two-year period with compounding?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "So, I have $50 from the first year and $52.50 from the second year. That adds up to $102.50 in total interest. That's actually more than the $100 I got with simple interest."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly calculated the values. Now, I will prompt them to compare the two methods to see if they can identify the underlying rule for why they differ.",
+        "state": "Support",
+        "response": "Exactly! Why does that $2.50 difference exist? What specifically happened in the second year of the compound interest scenario that didn't happen with the simple interest scenario?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "It's because in simple interest, you only ever earn money on the starting principal. In compound interest, you're earning interest on the original $1,000 plus the interest you already made from the first year."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has a solid grasp of the mechanism. I want them to formalize this into a general principle to solidify the concept.",
+        "state": "Synthesis",
+        "response": "You've hit the nail on the head. If you were explaining this to someone else, how would you describe the fundamental difference between how simple and compound interest treat the growth of an investment over time?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I'd say simple interest is calculated only on the initial principal every time, so it stays flat. Compound interest is better because you're essentially reinvesting your interest; you earn money on your money, so your balance grows faster every period because the principal gets larger."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has provided a clear, accurate summary of the concepts. The session is complete.",
+        "state": "Closing",
+        "response": "Spot on, that's a perfect explanation! You've really mastered the difference. Great job—ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "computer_science_light",
+    "topic": "Binary number conversion",
+    "problem": "Convert the decimal number 13 into a 4-bit binary representation.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think 13 in binary is 1101, because I just added 8, 4, and 1."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has the correct answer but arrived at it by adding bits rather than converting. I'll use Diagnosis to check if they understand the powers of two positions.",
+        "state": "Diagnosis",
+        "response": "That's correct, but how do the positions of those digits relate to powers of two?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, the rightmost is 2^0, the next is 2^1, then 2^2, and 2^3."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student identifies powers of two correctly. Now let's test their knowledge by asking about a slightly different number, like 9.",
+        "state": "Diagnosis",
+        "response": "Exactly. So if you were converting 9, which place values would you turn on?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "For 9, I'd turn on the 8s place and the 2s place."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made a mistake: 8+2 is 10, not 9. I need to point them toward the 1s place.",
+        "state": "Support",
+        "response": "That adds up to 10. How can you reach 9 using those same powers of two?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, right, it should be the 8s place and the 4s place."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student made a second mistake, claiming 8+4 is 9. I need to gently correct this calculation error.",
+        "state": "Support",
+        "response": "Check that sum again. What is 8 plus 4, and do we have a smaller power of two available?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Wait, 8 plus 1 is 9! So it's 1001."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student now understands the bit-position logic. I will ask for a Synthesis turn to confirm.",
+        "state": "Synthesis",
+        "response": "Perfect. Can you explain in your own words how you determine the binary digits for any number?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "You find the largest power of two that fits, mark it as 1, and subtract it, then repeat."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student articulated the algorithm clearly. Closing the conversation.",
+        "state": "Closing",
+        "response": "That's exactly right! You've got it. Ready for another one?"
+      }
+    ]
   }
 ]
