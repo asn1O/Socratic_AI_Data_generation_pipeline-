@@ -1003,5 +1003,389 @@
         "response": "Fantastic explanation, you nailed it! Ready to try another chemistry problem?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Sentence structure and clauses",
+    "problem": "Analyze the structure of this sentence by identifying the type and function of each subordinate clause: 'Whichever team wins the semi-final, although they might celebrate tonight, will need to focus immediately on the championship match, which takes place on Sunday.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "'Whichever team wins the semi-final' is an adverbial clause, and 'will need to focus' is the main verb."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student misidentified the subject noun clause as an adverbial clause. I need to probe what they think serves as the grammatical subject.",
+        "state": "Diagnosis",
+        "response": "If that's an adverbial clause, what would be the subject of 'will need'?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "'They' in the middle is the subject of 'will need', making 'although they celebrate' the main clause."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student misattributed 'they' to the main verb, ignoring 'although'. I'll hint at removing the subordinate clause to reveal the main predicate.",
+        "state": "Support",
+        "response": "Notice 'although' pairs with 'they celebrate'. What happens if you temporarily remove that embedded clause?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "'Whichever team wins... will need to focus.' Ah, 'Whichever team wins' acts as the subject!"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly found the subject function. Now I need them to analyze the final clause.",
+        "state": "Support",
+        "response": "What role does 'which takes place on Sunday' play at the end?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "That's an adverbial clause of time telling us when they need to focus."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student mislabeled an adjective clause as an adverbial modifier. I will provide a brief contrast hint.",
+        "state": "Support",
+        "response": "Adjective clauses modify nouns, while adverbial clauses modify verbs. Which noun does 'which' describe here?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "It modifies 'championship match', so it's an adjective clause. But isn't 'whichever team wins' an adverbial clause?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student resurfaced their initial confusion about 'whichever'. I need to prompt them on clause types that act as subjects.",
+        "state": "Support",
+        "response": "What kind of clause functions directly as the subject of a verb?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "A noun clause! So 'whichever team wins' is a noun clause serving as the subject."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully corrected all errors. Now I want them to synthesize the complete analysis.",
+        "state": "Synthesis",
+        "response": "You've got them all. How would you summarize the role of each clause in your own words?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "'Whichever team' is a noun clause subject, 'although...' is an adverbial clause, and 'which...' is an adjective clause."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student accurately summarized all three clauses and their functions. The exercise is complete.",
+        "state": "Closing",
+        "response": "Fantastic analysis! You worked through those tricky clause types perfectly. Ready for another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "chemistry",
+    "topic": "Acids and bases",
+    "problem": "Calculate the pH of a solution prepared by mixing 100.0 mL of 0.150 M NH3 (Kb = 1.8 x 10^-5) with 50.0 mL of 0.200 M HCl, and then adding 10.0 mL of 0.100 M NaOH to this mixture.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Okay, so I started by trying to figure out the final concentration of everything. Since we're adding 0.150 M NH3 and 0.200 M HCl, I thought I could just subtract the concentrations to see how much acid is left over, so 0.200 - 0.150 = 0.050 M HCl. Then adding NaOH would just neutralize some more of that acid. But I'm feeling like my numbers are off because the volumes are all different. How should I properly combine these initial steps?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is attempting to subtract molarities directly without converting to moles or considering stoichiometry. I need to ask a diagnostic question to reorient them toward mole calculations when mixing varying volumes.",
+        "state": "Diagnosis",
+        "response": "What happens to the actual number of molecules—or moles—of each reactant when you mix solutions with different volumes together, rather than just looking at their initial molarities? If you calculate the total moles of NH3 and HCl present before any reaction occurs, how do those two amounts compare to one another?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Ah, right, volume changes! Let me convert to moles first. Moles of NH3 = 0.100 L * 0.150 M = 0.015 mol. Moles of HCl = 0.050 L * 0.200 M = 0.010 mol. Since they react 1:1, all HCl is used up, leaving 0.005 mol NH3 and creating 0.010 mol NH4+. Now for the NaOH: 10.0 mL of 0.100 M gives 0.001 mol OH-. Since NaOH and NH3 are both bases, the added OH- will react directly with the remaining 0.005 mol NH3 to make more hydroxide ions."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student successfully calculated the initial stoichiometric amounts but explicitly claimed that the added OH- reacts with NH3 (a base reacting with a base). I need to offer support asking them to consider acid-base reactivity.",
+        "state": "Support",
+        "response": "When a strong base like hydroxide is added to a mixture containing both a weak base (NH3) and its conjugate weak acid (NH4+), which of those two species is chemical logic going to drive the hydroxide to react with? What kind of species must a strong base interact with in a neutralization reaction?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, of course! A base reacts with an acid, not another base. So OH- reacts with NH4+, not NH3. Reaction: NH4+ + OH- -> NH3 + H2O. Starting with 0.010 mol NH4+ and 0.005 mol NH3, adding 0.001 mol OH- converts 0.001 mol of NH4+ into NH3. So we end up with 0.009 mol NH4+ and 0.006 mol NH3. Now we can use Henderson-Hasselbalch: pH = pKb + log([NH3]/[NH4+]). Since Kb = 1.8 x 10^-5, pKb = 4.74. So pH = 4.74 + log(0.006 / 0.009) = 4.74 - 0.18 = 4.56."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly updated the moles after the second reaction, but asserted that pH equals pKb plus the log ratio. I need to support them in identifying that Henderson-Hasselbalch for pH uses pKa.",
+        "state": "Support",
+        "response": "If the Henderson-Hasselbalch equation directly yields the pH of a buffer solution, what equilibrium constant—pKa or pKb—belongs in that formula for the conjugate pair? How can you convert the given Kb of ammonia into the pKa of its conjugate acid, ammonium?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Right, Henderson-Hasselbalch uses pKa, not pKb! To get pKa, I first find Ka = Kw / Kb = 1.0 x 10^-14 / 1.8 x 10^-5 = 5.56 x 10^-10, so pKa = -log(5.56 x 10^-10) = 9.25. So plugging into the formula: pH = pKa + log(acid/base) = 9.25 + log(0.009 / 0.006) = 9.25 + 0.18 = 9.43. That gives pH = 9.43."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly converted Kb to pKa = 9.25, but flipped the logarithmic ratio to acid/base, resurfacing confusion about the buffer ratio components. I need to guide them back to base over acid.",
+        "state": "Support",
+        "response": "In the standard Henderson-Hasselbalch expression pH = pKa + log(ratio), which component goes in the numerator and which in the denominator? If you have more conjugate acid (NH4+) than conjugate base (NH3) in solution, should the resulting pH be higher or lower than the pKa of 9.25?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Ah, it's log(base/acid), so log([NH3]/[NH4+])! Since we have more acid than base, the pH must be lower than pKa = 9.25. So pH = 9.25 + log(0.006 / 0.009) = 9.25 + log(0.667) = 9.25 - 0.18 = 9.07. So the final pH of the solution is 9.07!"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student successfully calculated the correct final pH. I will now transition to Synthesis so they can state the full procedure and core principles in their own words.",
+        "state": "Synthesis",
+        "response": "Excellent work reaching pH = 9.07! To make sure you've fully mastered this concept, could you summarize in your own words the step-by-step process for calculating the pH when strong acids or bases are added sequentially to a weak acid or base system?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Sure! First, when mixing solutions of changing volumes, you must convert to moles instead of using concentrations directly. Second, run the initial neutralization reaction between the weak base and strong acid to determine the remaining moles and conjugate acid produced. Third, any added strong base reacts with the weak conjugate acid present. Lastly, find pKa from Kb, and plug the final mole amounts of weak base and conjugate acid into the Henderson-Hasselbalch equation, pH = pKa + log([base]/[acid])."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student provided a complete, clear synthesis of all the principles and procedural steps in their own words. The session is complete, so I will close warmly.",
+        "state": "Closing",
+        "response": "That is a spot-on summary of the entire multi-step process! You handled those tricky neutralization steps and equilibrium conversions really well. Would you like to tackle another problem like this?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Correlation vs causation",
+    "problem": "A study found that adults who drink 3+ cups of coffee a day have a lower risk of heart disease. A news headline claims 'Drinking Coffee Prevents Heart Attacks!' Should we recommend coffee to protect heart health, and what else might explain this link?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "If the study shows coffee drinkers have lower heart risk, shouldn't everyone drink coffee?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student assumes a direct causal link from an observational correlation. I need to elicit their baseline understanding of correlation versus causation.",
+        "state": "Diagnosis",
+        "response": "Does showing two things happen together automatically mean one caused the other?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I don't really get the difference. Doesn't the data prove coffee helps?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student expresses non-understanding. I will offer a clear real-world comparison as a hint to separate correlation from causation.",
+        "state": "Support",
+        "response": "If ice cream sales and sunburns increase together, does ice cream cause sunburns?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "The sun causes both! So correlation means one thing causes the other?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made a conceptual mistake about what correlation implies. I need to guide them to see third variables.",
+        "state": "Support",
+        "response": "In that example, was ice cream causing sunburns, or was a third factor involved?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "The sun caused both. So coffee drinkers might just have another healthy habit?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified confounding variables. Now I will prompt them to consider another possibility, like reverse causation.",
+        "state": "Support",
+        "response": "What if people who already have heart issues actively avoid caffeine?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "That would make coffee drinkers look healthier, even if coffee didn't help!"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student now understands both confounding factors and reverse causation. I will ask them to evaluate the headline based on this.",
+        "state": "Diagnosis",
+        "response": "Why was the headline's claim that coffee prevents heart attacks misleading?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Because it assumed coffee caused the health benefit, ignoring other explanations."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student correctly analyzed the flaw. Now I will ask them to state the core statistical concept in their own words.",
+        "state": "Synthesis",
+        "response": "How would you explain the difference between correlation and causation to a friend?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Correlation means two things happen together, but causation means one actually produces the other."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student accurately explained the core concept in their own words, so we can wrap up the session.",
+        "state": "Closing",
+        "response": "Spot on! Excellent job breaking that down. Ready for the next problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Simple vs compound interest",
+    "problem": "You deposit $1,000 into a savings account that pays 5% annual interest. How much total interest will you earn after 2 years under simple interest versus compound interest?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "For simple interest, I think you earn $50 each year so $100 total. But for compound interest, doesn't interest double every year? So $50 in year 1 and $100 in year 2, giving $150 total interest?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student calculated simple interest correctly but holds a misconception that compound interest doubles the interest rate or payout each year. I need to guide them toward understanding how compound interest affects the balance.",
+        "state": "Support",
+        "response": "You got simple interest exactly right! With compound interest, interest doesn't double automatically—instead, you earn interest on your new account balance. What is your total balance at the end of Year 1?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "At the end of Year 1, you started with $1,000 and earned $50 interest, so your total account balance is $1,050. I see that part."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly determined the Year 1 ending balance. Now I will prompt them to apply the 5% interest rate to this updated balance for Year 2.",
+        "state": "Support",
+        "response": "Spot on. Now, compound interest means applying that 5% rate to your new balance of $1,050 for Year 2. How much interest do you earn in Year 2 when you multiply $1,050 by 5%?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, so for Year 2, you take 5% of just the $50 interest from Year 1, which gives $2.50, making the total interest earned just $2.50."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made a procedural error by taking 5% of only the accumulated interest rather than the whole balance. I need to clarify that the percentage applies to the entire new balance.",
+        "state": "Support",
+        "response": "You're close to seeing where the extra money comes from, but compound interest applies to the entire balance, not just the interest. If you calculate 5% of the whole $1,050 balance, what do you get for Year 2 interest?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Ah, 5% of $1,050 is $52.50. So in Year 2 you earn $52.50 interest. Adding Year 1's $50, total compound interest is $102.50!"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly calculated the compound interest. To test their grasp and solidify the contrast, I will ask them about simple interest over a longer timeframe.",
+        "state": "Support",
+        "response": "Exactly right! $102.50 total. Notice how compound interest gave $2.50 more than simple interest. What would happen to simple interest in Year 3 if we kept the money in the account?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "For simple interest in Year 3, wouldn't it also earn 5% on the $100 accumulated interest from the first two years, giving us $105?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student's initial confusion resurfaced in a related form, applying compounding logic to simple interest. I will remind them of the core rule for simple interest.",
+        "state": "Support",
+        "response": "Remember that simple interest only pays interest on your original principal, never on accumulated interest. Since the principal stays $1,000, how much simple interest do you earn in Year 3?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Oh right, simple interest stays fixed! So in Year 3 you just earn $50 again on the original $1,000 principal, making it $150 total after three years."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has corrected their misunderstanding and demonstrated full procedural accuracy. Now it's time to have them articulate the general rule in their own words.",
+        "state": "Synthesis",
+        "response": "You nailed it. To wrap this concept up, how would you explain the key difference between simple interest and compound interest in your own words?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Simple interest only earns interest on the starting principal amount every year, so the yearly interest stays constant. Compound interest earns interest on both the principal and the interest you've already accumulated, so your earnings grow bigger each year."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student provided a complete, clear, and accurate explanation of the concept in their own words. The session is ready to close.",
+        "state": "Closing",
+        "response": "That is a perfect explanation! You've got a great handle on how simple and compound interest work now. Would you like to try another problem?"
+      }
+    ]
   }
 ]

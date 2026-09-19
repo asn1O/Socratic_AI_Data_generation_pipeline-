@@ -150,3 +150,54 @@
   failure_categories:
   empty_response: 1
   invalid_json_syntax: 1
+2026-09-19 18:34:46,126 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-19 18:37:02,676 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=5383 turns=14 path=data\OpenRouter_nvidia_nemotron-3-ultra-550b-a55b_free\son-set[5].json
+2026-09-19 18:38:02,677 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-19 18:42:07,222 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=11610 turns=14 path=data\OpenRouter_nvidia_nemotron-3-ultra-550b-a55b_free\son-set[5].json
+2026-09-19 18:43:07,223 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-19 18:49:51,000 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=11066 turns=14 path=data\OpenRouter_nvidia_nemotron-3-ultra-550b-a55b_free\son-set[5].json
+2026-09-19 18:50:51,001 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-19 18:56:44,344 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=7237 turns=14 path=data\OpenRouter_nvidia_nemotron-3-ultra-550b-a55b_free\son-set[5].json
+2026-09-19 18:57:44,345 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-19 19:04:20,849 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=10330 turns=14 path=data\OpenRouter_nvidia_nemotron-3-ultra-550b-a55b_free\son-set[5].json
+2026-09-19 19:05:20,850 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-19 19:08:07,338 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=5045 turns=14 path=data\OpenRouter_nvidia_nemotron-3-ultra-550b-a55b_free\son-set[5].json
+2026-09-19 19:09:07,339 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-19 19:10:42,733 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=4636 turns=14 path=data\OpenRouter_nvidia_nemotron-3-ultra-550b-a55b_free\son-set[5].json
+2026-09-19 19:11:42,733 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-19 19:16:05,027 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=9169 turns=14 path=data\OpenRouter_nvidia_nemotron-3-ultra-550b-a55b_free\son-set[5].json
+2026-09-19 19:17:05,028 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-19 19:21:05,985 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=10506 turns=14 path=data\OpenRouter_nvidia_nemotron-3-ultra-550b-a55b_free\son-set[5].json
+2026-09-19 19:22:05,986 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-19 19:22:06,798 ERROR MODEL_FAILURE provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free error_code=UNEXPECTED_ERROR reason=model call failed or returned no response
+2026-09-19 19:23:06,799 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-19 19:28:44,750 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=7942 turns=14 path=data\OpenRouter_nvidia_nemotron-3-ultra-550b-a55b_free\son-set[5].json
+2026-09-19 19:29:44,751 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-19 19:33:55,895 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=7107 turns=14 path=data\OpenRouter_nvidia_nemotron-3-ultra-550b-a55b_free\son-set[5].json
+2026-09-19 19:34:55,896 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-19 19:34:56,634 ERROR MODEL_FAILURE provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free error_code=UNEXPECTED_ERROR reason=model call failed or returned no response
+2026-09-19 19:35:56,635 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-19 19:38:48,496 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=4927 turns=14 path=data\OpenRouter_nvidia_nemotron-3-ultra-550b-a55b_free\son-set[5].json
+2026-09-19 19:39:48,497 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-19 19:45:32,338 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=8750 turns=14 path=data\OpenRouter_nvidia_nemotron-3-ultra-550b-a55b_free\son-set[5].json
+2026-09-19 19:46:32,339 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-19 19:48:18,504 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=5147 turns=14 path=data\OpenRouter_nvidia_nemotron-3-ultra-550b-a55b_free\son-set[5].json
+2026-09-19 19:49:18,505 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-19 19:49:19,278 ERROR MODEL_FAILURE provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free error_code=UNEXPECTED_ERROR reason=model call failed or returned no response
+2026-09-19 19:50:19,278 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-19 19:51:44,910 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=4611 turns=12 path=data\OpenRouter_nvidia_nemotron-3-ultra-550b-a55b_free\son-set[6].json
+2026-09-19 19:52:44,911 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-19 19:57:18,547 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=7077 turns=14 path=data\OpenRouter_nvidia_nemotron-3-ultra-550b-a55b_free\son-set[6].json
+2026-09-19 19:58:18,549 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free
+2026-09-19 20:04:30,610 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-ultra-550b-a55b:free total_tokens=11065 turns=14 path=data\OpenRouter_nvidia_nemotron-3-ultra-550b-a55b_free\son-set[6].json
+2026-09-19 20:05:30,611 INFO MODEL_SUMMARY
+  provider_model: OpenRouter / nvidia/nemotron-3-ultra-550b-a55b:free
+  attempts: 20
+  saved: 17
+  failed: 3
+  accept_rate: 85.00%
+  average_tokens: 7741.65
+  turn_range: 12-14
+  expired: False
+  failure_categories:
+  empty_response: 3

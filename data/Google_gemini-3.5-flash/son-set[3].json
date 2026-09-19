@@ -1213,5 +1213,179 @@
         "response": "Exactly, that's it! Ready to try another scenario?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Number series",
+    "problem": "Find the next term in the series: 2, 9, 30, 121, 604, ...",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this series: 2, 9, 30, 121, 604. I see that the terms are growing really fast, almost like they are being multiplied. $2 \\times 4.5 = 9$, and $9 \\times 3.33 = 30$, but the multipliers aren't integers. I'm a bit stuck on how to link them."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student recognized the multiplicative growth but is trying to find a single exact multiplier. I need to guide them to see the combination of a multiplying factor and an additive constant.",
+        "state": "Diagnosis",
+        "response": "You've correctly noticed the rapid growth. In tricky series, we often multiply by an increasing integer and then add or subtract a constant. Try using consecutive integers like 2, 3, and 4 as multipliers for the first few terms."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, I see! If I do $2 \\times 2$, that's 4, so I need to add 5 to get 9. Then $9 \\times 3 = 27$, so I add 3 to get 30. And $30 \\times 4 = 120$, so I add 1 to get 121. The multipliers are indeed increasing integers!"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student successfully identified the first three steps. Now they need to recognize the pattern in the added constants (5, 3, 1) and apply it to find the next term.",
+        "state": "Support",
+        "response": "That's perfect. The multipliers are 2, 3, 4, and the added numbers are 5, 3, 1. Notice how these additions are changing. Apply this same pattern to the next term, 121, to see if it gives us 604."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "The additions of 5, 3, 1 are decreasing by 2 each time. So the next adjustment should be $-1$. Let's test it: $121 \\times 5 = 605$, and $605 - 1 = 604$. That matches! But for the next term, since the adjustment sequence is $5, 3, 1, -1$, it must be symmetric, so the next offset should loop back to $+1$."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made an incorrect assumption about the symmetry of the offset. I must directly correct this edge-case assumption and explain that the linear arithmetic progression of the offsets continues downward.",
+        "state": "Support",
+        "response": "While symmetry is common, number series usually maintain a consistent mathematical progression. The offsets $5, 3, 1, -1$ form a strict linear arithmetic progression where you always subtract 2. Keep subtracting 2 to find the next offset."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Ah, of course, a linear progression makes more sense. So subtracting 2 from $-1$ gives $-3$. The multiplier should be 6. That means the next term is $604 \\times 6 - 3$. Let me calculate... $3624 - 3 = 3621$."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student found the correct next term (3621). Now I want them to begin synthesizing the rule. I will directly confirm their answer and ask them to formulate the general rule.",
+        "state": "Synthesis",
+        "response": "Spot on! 3621 is indeed the correct next term. To make sure you've locked this concept down, how would you describe the general rule for finding any term in this series to someone else?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "To find any term, you multiply the previous term by its position's multiplier, which starts at 2 and increases by 1 each time. Then, you add an offset. The offset starts at 5 and decreases by 2 for each subsequent term."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has described the rule well, but I want to prompt them to express the algebraic relationship of the multiplier and the offset relative to the term index $n$ to really show advanced mastery.",
+        "state": "Synthesis",
+        "response": "That is a very clear explanation. If we define the first term as $T_1 = 2$, the multiplier for $T_n$ is $n$. Can you write down the algebraic formula for the offset of the $n$-th term based on your explanation?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Since $T_2$ has an offset of 5, $T_3$ has 3, and $T_4$ has 1, the offset decreases by 2 each time. The formula for the offset of $T_n$ would be $5 - 2(n-2)$, which simplifies to $9 - 2n$. So, $T_n = T_{n-1} \\times n + (9 - 2n)$."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has perfectly synthesized and formulated the rule algebraically. I can now close the conversation warmly.",
+        "state": "Closing",
+        "response": "That is absolutely correct! You mapped out that tricky algebraic relationship perfectly. Excellent job working through this tough sequence. Ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Argument structure: premises and conclusions",
+    "problem": "Identify the conclusion in the following argument: 'Since regular exercise improves cardiovascular health, and a healthy heart extends your lifespan, you should exercise regularly.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think 'regular exercise improves cardiovascular health' is the conclusion because it's the main point."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has identified a premise as the conclusion. I need to diagnose their reasoning to see why they think this is the main point.",
+        "state": "Diagnosis",
+        "response": "How did you decide that this specific statement is the main claim being supported?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, it's a scientific fact, so the rest of the sentence must be trying to prove it."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student mistakenly equates 'scientific fact' with 'conclusion'. I will support them by redirecting their attention to the structural indicator 'since'.",
+        "state": "Support",
+        "response": "An argument's structure isn't based on scientific fact. What does the word 'since' usually introduce in an argument?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "It introduces a reason. So that's a premise. That means 'a healthy heart extends your lifespan' is the conclusion!"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly classified the first statement but made a new mistake, misidentifying the second premise as the conclusion. I need to support them to see how these statements link.",
+        "state": "Support",
+        "response": "Those two statements are joined by 'and'. If both are reasons, what ultimate action are they trying to justify?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "They want us to exercise. So 'you should exercise regularly' is the actual conclusion of the argument."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has arrived at the correct answer. I will use a brief diagnosis question to ensure they understand why this is correct before synthesis.",
+        "state": "Diagnosis",
+        "response": "Spot on. How do you know that part is the claim and not another premise?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Because the other points provide the 'why' for why we should actually do the exercising."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student understands the relationship between premises and conclusions. I will now ask them to synthesize and define the rule in their own words.",
+        "state": "Synthesis",
+        "response": "Exactly! In your own words, how would you define the difference between a premise and a conclusion?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Premises are the supporting reasons or evidence, while the conclusion is the main claim those reasons try to prove."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student successfully formulated a clear and accurate definition of premises and conclusions. The conversation is complete.",
+        "state": "Closing",
+        "response": "Perfect explanation! You've got this down. Ready for the next one?"
+      }
+    ]
   }
 ]

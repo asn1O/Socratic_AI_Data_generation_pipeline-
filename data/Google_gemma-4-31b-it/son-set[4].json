@@ -826,5 +826,686 @@
         "response": "Spot on! Great job. Ready for another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Inflation basics",
+    "problem": "You hold a bond with a fixed nominal return of 5%. Current inflation is 2%, but it's projected to rise to 6% next year. What will be your real rate of return next year, and how does this change your purchasing power compared to this year?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'll use the Fisher equation. 5% minus 2% is 3% for now."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is calculating for the current year, but the problem asks for next year's return.",
+        "state": "Diagnosis",
+        "response": "Does the question ask about the current year or next year?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Next year. So I should use the 6% inflation rate."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has identified the correct variable; now I need to see if they apply it correctly.",
+        "state": "Diagnosis",
+        "response": "How does that change the calculation for the real rate?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "5% minus 2% is still 3% since the nominal rate is fixed."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made a mistake by reverting to the current inflation rate despite recognizing the projected rate.",
+        "state": "Support",
+        "response": "Which inflation rate applies to the return you'll earn next year?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Right, the 6%. So 5% minus 6% is -1%."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student calculated the real rate correctly; now moving to the purchasing power aspect.",
+        "state": "Diagnosis",
+        "response": "What does a negative real rate imply for your purchasing power?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "It means my purchasing power increases because the nominal rate is still positive."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student is confusing nominal gains with real purchasing power.",
+        "state": "Support",
+        "response": "If prices rise faster than your money grows, can you buy more or less?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Less. So purchasing power decreases."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has solved the problem; now I need them to internalize the general rule.",
+        "state": "Synthesis",
+        "response": "How would you describe the general relationship between inflation and real returns?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Real return is nominal return minus inflation; higher inflation erodes real value."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student correctly explained the principle, so the session can conclude.",
+        "state": "Closing",
+        "response": "Exactly right! Great job today. Ready for another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "history_and_social_studies",
+    "topic": "Comparing political systems",
+    "problem": "Compare and contrast a Constitutional Monarchy and a Parliamentary Republic, focusing specifically on the relationship between the Head of State and the Head of Government.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm trying to wrap my head around the difference between a constitutional monarchy and a parliamentary republic. From what I can tell, both usually have a Prime Minister who runs the country, so I'm not really seeing where the actual functional difference lies in how the government operates day-to-day."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student recognizes the shared role of the Prime Minister but doesn't see the distinction. I need to elicit their current understanding of the Head of State's role in both systems.",
+        "state": "Diagnosis",
+        "response": "That's a great starting point. You've correctly identified that the executive functions are often very similar in practice. To dig a bit deeper, let's look at the figures at the top. In your own words, how does the process of becoming the Head of State differ between a monarchy and a republic?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, in a monarchy, it's hereditary, so the King or Queen just inherits the position. In a republic, there isn't a monarch, so they have a President instead. I think the President is elected, but I'm not sure if that automatically means they have more power than a monarch does."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identifies the selection process but is unsure about the power dynamics. I will provide a brief clarification on republics and then guide them toward the ceremonial nature of the role.",
+        "state": "Support",
+        "response": "You've hit on a key point. In a republic, the Head of State is indeed typically elected or appointed rather than inheriting the role. However, not all presidents are the same. If we are looking specifically at a parliamentary republic, how do you think the President's actual daily responsibilities compare to those of a constitutional monarch?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, I see. If it's a parliamentary republic, the President might just be a figurehead, similar to how the British monarch works. So, even though the President is elected, they might not actually be the one making the laws or running the ministries. They're more of a symbol of the state."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified the ceremonial nature of the Head of State. Now I want them to connect this back to where the actual executive power resides.",
+        "state": "Support",
+        "response": "Exactly. Now, if both the constitutional monarch and the parliamentary president are primarily ceremonial symbols, we have to wonder where the real authority to govern resides. If the Head of State isn't the one directing policy, who is actually wielding the executive power in these systems?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "That would be the Prime Minister. In both systems, the PM is the one who leads the cabinet and handles the actual administration of the government. So it seems like the daily operation is almost identical regardless of whether the person at the very top is a King or a President."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is correct about the PM's role. I now want to probe their understanding of how the PM attains power to see if they understand the 'Parliamentary' aspect of both systems.",
+        "state": "Diagnosis",
+        "response": "You've got the functional part down. Now let's look at the source of that power. While the Prime Minister holds the executive authority, they don't just appear out of nowhere. How does the Prime Minister actually come into power in these two different systems? Is the process the same?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I think the process is basically the same. The Head of State, whether it's the King or the President, just appoints the Prime Minister. Since the Head of State is the formal authority, they just pick the person to lead, and that's how the government is formed in both cases."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has made a minor mistake by oversimplifying the appointment as a personal choice of the Head of State. I need to guide them toward the requirement of legislative support.",
+        "state": "Support",
+        "response": "It's a common misconception that the appointment is a simple choice by the Head of State. In reality, the Head of State usually must appoint someone who can command a majority in the legislature. Given that, does the Prime Minister's power come more from the person who appoints them, or from the parliament itself?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Right, I forgot about the legislative side. The Prime Minister is only the leader because they have the support of the majority in parliament. So the Head of State is just performing a formality. The real power flows from the elected representatives up to the Prime Minister, not down from the monarch or president."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student now understands the distinction between ceremonial and executive power and the source of the PM's legitimacy. I will now ask them to synthesize the entire comparison.",
+        "state": "Synthesis",
+        "response": "You've connected all the dots. To make sure we've fully crystallized this, could you explain the fundamental difference between a constitutional monarchy and a parliamentary republic, and why it might seem like they function the same way on the surface?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The main difference is the legitimacy and selection of the Head of State—one is hereditary while the other is elected or appointed. They seem the same because in both systems, the Head of State is mostly ceremonial, while the real executive power is held by a Prime Minister who derives their authority from the legislature rather than the Head of State."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly synthesized the conceptual difference and the functional similarities. The goal has been achieved.",
+        "state": "Closing",
+        "response": "Spot on! You've clearly distinguished between the ceremonial role and the executive role, and you nailed the difference in how those roles are filled. Great job working through that. Ready for the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Basic probability distributions",
+    "problem": "A fair six-sided die is rolled. What is the probability of rolling a number greater than 4?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this problem about rolling a die and finding the probability of getting a number greater than 4. I think I know how to do it, but I'm a bit confused about which numbers to count and how to set up the fraction. Is it just counting the numbers?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is unsure of the initial step and needs guidance on how to identify the target outcomes. I will use a diagnosis state to see how they interpret the phrase 'greater than 4'.",
+        "state": "Diagnosis",
+        "response": "It's a good start to think about counting! To get us moving, could you explain how you're planning to identify which numbers on the die actually fit the criteria of being 'greater than 4'? What does that phrase mean to you in this specific case?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Okay, so if it's greater than 4, then I should count 4, 5, and 6. That makes three numbers in total. So I think the probability would be 3 divided by 6, which simplifies to 1/2. Does that seem right to me?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has made a procedural error by including 4 in the count. I will use a support state to prompt them to rethink the meaning of 'greater than' without giving the answer.",
+        "state": "Support",
+        "response": "Let's look closely at that list of numbers again. If you have exactly 4 dollars in your pocket, would you say you have more than 4 dollars, or exactly 4? How does that specific logic apply to the numbers you're choosing from the die's faces?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, I see. 4 isn't greater than 4, it's just equal. So I only count 5 and 6. That's two numbers. So the probability is 2 divided by 5? I think it's 5 because I'm not counting the 4 anymore."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student corrected the numerator but now incorrectly adjusted the denominator based on the same mistake. I need to guide them back to the total possible outcomes.",
+        "state": "Support",
+        "response": "I see where your head is at with the numerator, but let's think about the bottom part of the fraction. When you roll the die, how many possible outcomes are there in total, regardless of whether they fit our 'greater than 4' rule or not?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Right, there are still 6 sides on the die. I keep forgetting that. Wait, if the numbers that aren't greater than 4 are 1, 2, 3, and 4, then maybe the probability is actually 4 out of 6? I think I should be counting the ones that don't fit."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is now confusing the target event with its complement. I will use a support state to redirect their focus back to the goal of the problem.",
+        "state": "Support",
+        "response": "That's an interesting pivot! But if we are specifically looking for the probability of rolling a number that is greater than 4, should we be focusing our count on the outcomes that satisfy that specific condition, or the ones that fail to meet it?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I should focus on the ones that satisfy the condition. So, going back to my list, that would be just 5 and 6. That's 2 outcomes out of 6 total possible outcomes. So the probability is 2/6. I think that's the right answer this time."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has reached the correct probability. I will now check if they can simplify the fraction to ensure complete understanding.",
+        "state": "Support",
+        "response": "You've landed on 2/6, which is logically sound based on our discussion! Before we wrap up, is there a way to express that fraction in its simplest form, or are you confident that 2/6 is the most concise way to state it?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I can divide both the top and the bottom by 2 to make it smaller. So 2 divided by 2 is 1, and 6 divided by 2 is 3. That means the final simplified answer is 1/3. I'm pretty sure about that now!"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has found the correct final answer. Now I move to the synthesis state to have them articulate the general principle of probability.",
+        "state": "Synthesis",
+        "response": "You nailed the calculation! To make sure this sticks for future problems, could you explain in your own words what the general rule is for finding the probability of a single event like this? How do you decide what goes on top and what goes on the bottom?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The general rule is that you take the number of successful outcomes—the ones that match what you're looking for—and put that on top as the numerator. Then you put the total number of all possible outcomes on the bottom as the denominator. Then you just simplify the fraction if you can."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the concept, so the conversation can now be closed.",
+        "state": "Closing",
+        "response": "That is a perfect explanation! You've really mastered the logic here. Great job working through those tricky spots—ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Trip budget planning",
+    "problem": "Sarah has a total budget of $500 for a 3-day trip. The hotel costs $100 per night, and she budgets $40 per day for food. There is also a one-time $50 parking fee for the duration of the trip. How much money does she have left for activities?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think I'll just do 100 times 3 for the hotel and 40 times 3 for food, then subtract that from 500. Is that it?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student missed the parking fee and assumed 3 nights for a 3-day trip. I need to check if they noticed all the constraints.",
+        "state": "Diagnosis",
+        "response": "That's a strong start! Beside the hotel and food, is there any other expense Sarah needs to account for in her budget?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, the parking! So I should just add the 50 to the 500 budget?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is making a conceptual error by adding an expense to the budget. I will use a question to guide them toward subtraction.",
+        "state": "Support",
+        "response": "If Sarah has to pay the parking fee out of her own pocket, will that make her remaining money go up or down?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I don't really get what you mean. Isn't it just part of the total?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is confused about the nature of expenses. An analogy will help them realize that spending money reduces the total.",
+        "state": "Support",
+        "response": "Think of it like this: if you have a $20 bill and buy a $5 drink, do you have more or less money left for a movie?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, less. So I subtract it. So 500 minus 300 for hotel and 120 for food and 50 for parking... that's 130 left!"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is still using 3 nights for a 3-day trip. I need to guide them to rethink the hotel stay length.",
+        "state": "Support",
+        "response": "Let's double-check the stay. If she is visiting for 3 days, does she usually need a hotel room for all 3 nights, or just 2?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Wait, if I subtract 50 from the budget first, it's 450. Then I take away 300 for hotel... wait, am I adding the parking back in now? I'm confused again."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student is struggling with the order of operations and the recurring confusion about the fee. I'll suggest summing all costs first.",
+        "state": "Support",
+        "response": "Let's try listing all the costs first. If we have $200 for hotel, $120 for food, and $50 for parking, what is the total cost of the trip?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "200 plus 120 plus 50 is 370. Then 500 minus 370 is... 130! Wait, I got 130 before, but now it's correct because I used 2 nights for the hotel!"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has reached the correct answer. Now I need them to articulate the general principle of budgeting.",
+        "state": "Synthesis",
+        "response": "You got it! In your own words, how do you figure out how much 'extra' money is left when you have a total budget and several different expenses?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "You add up all the individual costs first to find the total spent, and then you subtract that whole amount from the starting budget to see what's left over."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the process. The conversation is now complete.",
+        "state": "Closing",
+        "response": "Perfectly explained! You've mastered budget planning. Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "computer_science_light",
+    "topic": "Binary number conversion",
+    "problem": "Convert the decimal number 45 to binary.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I need to convert 45 to binary. I know 32 is the biggest power of 2 that fits, but I'm not sure where to go from there."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has identified the first step but doesn't know how to proceed; I need to elicit their plan for the remaining value.",
+        "state": "Diagnosis",
+        "response": "That's a great starting point. Once you've identified that 32 fits into 45, what do you think the next step should be to find the remaining bits?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I guess I subtract 32 from 45, which leaves me with 13. Then I look for the next biggest power of 2 that fits into 13?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the subtraction method; I will guide them to find the next power without giving the number.",
+        "state": "Support",
+        "response": "Which power of 2 is the largest one that can fit inside 13, and how does that affect your binary string?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "That would be 8. So 13 minus 8 is 5. I think the binary starts with 101... but I'm a bit confused about the zero in the middle."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is unsure about the zero; I need to diagnose if they understand the relationship between place values and the binary digits.",
+        "state": "Diagnosis",
+        "response": "Why did you put a zero there, and what power of 2 does that specific position represent?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "The second position from the left is the 16s place. Since 16 didn't fit into 13, I put a 0. Does that sound right?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has a correct understanding of the place value; I'll now guide them to resolve the final remaining value of 5.",
+        "state": "Support",
+        "response": "That's correct. Now that you've handled those positions, how do you determine the values for the remaining slots?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I have 5 left. 4 fits into 5, so that's a 1. Then I have 1 left. Does 2 fit into 1? No, so that's a 0. And then the last 1 is a 1."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has logically worked through the remaining bits; I want them to assemble the final string to verify the result.",
+        "state": "Diagnosis",
+        "response": "What is the final binary sequence you've come up with for the number 45?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "It should be 101101. I think I've got the hang of it now."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student reached the correct answer; now I need them to articulate the general principle to ensure internalization.",
+        "state": "Synthesis",
+        "response": "It looks like you've nailed it. Could you explain the general rule you used to decide when to put a 1 or a 0?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Basically, you find the largest power of 2 that fits in the current number, mark it as 1, subtract it, and then move to the next smaller power of 2."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the process, so the session can now be closed.",
+        "state": "Closing",
+        "response": "Spot on! You've mastered the subtraction method for binary conversion. Ready to try another one, or are you all set for today?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "biology",
+    "topic": "Cell structure",
+    "problem": "A cell is unable to secrete proteins to the outside of the cell. Trace the pathway these proteins take and identify which organelle dysfunction could cause this failure.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm not sure where to start. Is it the nucleus?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is guessing without a plan. I need to find out if they know where protein synthesis begins.",
+        "state": "Diagnosis",
+        "response": "Let's look at the proteins. Where are they actually built in the cell?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I don't really get what that means."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student is confused. I will provide a hint about ribosomes to guide them toward the ER.",
+        "state": "Support",
+        "response": "Think of factories. Does the Rough ER have ribosomes on it?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, yeah. So proteins are made in the Rough ER?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student is correct. Now I need to guide them to the next step in the transport chain.",
+        "state": "Support",
+        "response": "Exactly. After the ER, where do those proteins go for packaging?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Do they go straight to the cell membrane?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student made a conceptual mistake by skipping a step. I'll use a metaphor to prompt the Golgi.",
+        "state": "Support",
+        "response": "Not quite. There is a 'post office' organelle in between. Any ideas?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Is it the Golgi apparatus?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Correct. Now they just need to identify the final transport mechanism to complete the path.",
+        "state": "Support",
+        "response": "Right. Now, how do they physically move from the Golgi to the outside?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "They use vesicles. So it's Rough ER, then Golgi, then vesicles to secrete them."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully articulated the entire sequence and logic of the pathway.",
+        "state": "Closing",
+        "response": "Perfect explanation! You've got it. Ready for another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "biology",
+    "topic": "Human circulatory system",
+    "problem": "A patient is diagnosed with an Atrial Septal Defect (ASD), which is a hole in the wall separating the two upper chambers of the heart. Explain the direction of blood flow through this hole, how it affects the workload of the right side of the heart, and the ultimate impact on the systemic circulation.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this ASD problem. I know that blood mixes because of the hole, but I'm not really sure why it flows in one specific direction or how that actually changes things for the rest of the body."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student understands the basic premise but doesn't know the driving force. I need to diagnose their understanding of pressure gradients.",
+        "state": "Diagnosis",
+        "response": "In the heart, blood always flows from areas of high pressure to low pressure. To figure out the direction of the shunt, think about which atrium typically maintains higher pressure."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think the left atrium has higher pressure because it has to deal with blood coming back from the whole body, but I'm not 100% sure."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is correct about the pressure. Now I will guide them to the resulting flow and the next anatomical step.",
+        "state": "Support",
+        "response": "You're correct; the left side is higher pressure. This means blood will shunt from left to right. Now, where does that oxygenated blood go after it enters the right atrium?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "It would flow into the right ventricle and then get pumped back into the lungs. That seems redundant since that blood was already oxygenated."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student sees the redundancy. I'll explain the term for this and guide them toward the pulmonary impact.",
+        "state": "Support",
+        "response": "Exactly, this is called a left-to-right shunt. This significantly increases the volume of blood the right ventricle must handle. What do you think happens to the lungs with all this extra blood?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I guess the lungs would get way more blood than they usually do, which probably puts a lot of stress on the pulmonary vessels."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the pulmonary stress. Now I will guide them to consider the systemic side of the circuit.",
+        "state": "Support",
+        "response": "That's right; it can lead to pulmonary hypertension over time. Now let's look at the systemic side. If blood is leaking left-to-right, how does that affect the overall efficiency of the heart?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I'm not sure. Since the blood leaking is already oxygenated, does the body actually lose out on oxygen, or is it just the heart working harder?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student is uncertain about the systemic effect. I'll clarify that the primary issue is efficiency and volume loss to the body.",
+        "state": "Support",
+        "response": "The blood leaving the left ventricle is still oxygenated, but the systemic circulation receives less volume because some was diverted. This makes the heart work harder to maintain the same oxygen delivery."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Okay, so it's not that the blood becomes deoxygenated, but that the system is wasting energy and overloading the right side while the body gets less efficient flow."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has all the pieces of the puzzle. Now I need them to synthesize the entire process into a coherent explanation.",
+        "state": "Synthesis",
+        "response": "We've covered pressure, volume, and efficiency. In your own words, can you summarize how an atrial septal defect changes the normal blood flow and why that is problematic?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Basically, because the left atrium has higher pressure, oxygenated blood leaks into the right atrium. This forces the right ventricle and the lungs to handle an excessive volume of blood, which stresses the heart and reduces the efficiency of oxygen delivery to the body."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has perfectly synthesized the mechanical and physiological consequences of the ASD.",
+        "state": "Closing",
+        "response": "Perfectly explained! You've got a great handle on this concept. Ready to try another one?"
+      }
+    ]
   }
 ]

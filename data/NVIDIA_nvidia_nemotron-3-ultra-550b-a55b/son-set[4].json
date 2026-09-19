@@ -1162,5 +1162,314 @@
         "response": "Nice work! You've nailed the concept. Ready to try another problem?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Supply and demand",
+    "problem": "The price of coffee increases. Does the demand curve for coffee shift, or does the quantity demanded change along the same curve? Explain your reasoning.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think when price rises, demand falls, but I'm not sure if the curve shifts or we just move along it."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student confuses shift vs movement; need to diagnose understanding of determinants.",
+        "state": "Diagnosis",
+        "response": "What factors cause the demand curve to shift versus a movement along it?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "If income or tastes change, the curve shifts. Price changes cause movement along the curve."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student identified non-price determinants but hasn't applied to price change; hint to apply.",
+        "state": "Support",
+        "response": "Since only the price of coffee changed, which case applies here?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "So it's a movement along the curve, quantity demanded decreases."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student gave correct application but hasn't explained why price change doesn't shift curve; prompt for reasoning.",
+        "state": "Support",
+        "response": "Why does a change in the good's own price not shift the demand curve?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Because the demand curve already shows how quantity demanded responds to price, holding other things constant."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student explained reasoning; now ask to articulate general rule.",
+        "state": "Synthesis",
+        "response": "In your own words, what's the rule for distinguishing a shift from a movement along the demand curve?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "A shift occurs when a non-price determinant like income changes. A movement along the curve occurs when the good's own price changes."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student stated rule; ask for example to reinforce.",
+        "state": "Support",
+        "response": "Can you give an example of a non-price determinant that would shift the demand curve for coffee?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "If consumer income rises, demand for coffee might increase, shifting the curve right."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student gave example; ask to summarize difference between change in demand and quantity demanded.",
+        "state": "Synthesis",
+        "response": "How would you summarize the difference between a change in demand and a change in quantity demanded?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Change in demand is a shift of the curve due to non-price factors. Change in quantity demanded is movement along the curve due to price change."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student summarized well; confirm understanding with a leading question.",
+        "state": "Support",
+        "response": "Does that mean a price increase leads to a decrease in quantity demanded, not a decrease in demand?"
+      },
+      {
+        "turn": 15,
+        "speaker": "student",
+        "text": "Yes, a price increase reduces quantity demanded, not demand."
+      },
+      {
+        "turn": 16,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained concept; wrap up.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "physics",
+    "topic": "Series vs parallel circuits",
+    "problem": "A circuit has two resistors, R1=4Ω and R2=6Ω, connected to a 12V battery. Find the total resistance and current for both series and parallel connections.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Series: 4+6=10Ω, I=1.2A. Parallel: also 10Ω? I=1.2A."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly added resistances in parallel, so I provide the correct formula to guide.",
+        "state": "Support",
+        "response": "Parallel resistances don't add directly. Use 1/R_total = 1/R1 + 1/R2, giving less than each."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "So 1/R = 1/4+1/6 = 5/12, R=2.4Ω, I_total=5A. But current same through each? 2.5A each?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student thought current same in parallel, so I clarify voltage same, currents differ.",
+        "state": "Support",
+        "response": "Parallel voltage same (12V). Currents differ: I1=3A, I2=2A. Total current sums to 5A."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Series current same 1.2A. Voltage splits equally? 6V each? But resistances differ."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student assumed equal voltage split, so I show proportional division.",
+        "state": "Support",
+        "response": "Series voltage divides proportionally: V1=1.2*4=4.8V, V2=1.2*6=7.2V."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Okay. But parallel total resistance still 10Ω if I add them?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student resurfaced addition misconception, so I reiterate parallel formula.",
+        "state": "Support",
+        "response": "No, parallel total always less than smallest. 1/R = 1/4+1/6 gives 2.4Ω."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Right, 2.4Ω. Series adds, parallel reciprocal sum. Series current same, voltage splits; parallel voltage same, current splits."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has correct calculations, now ready to articulate concept.",
+        "state": "Synthesis",
+        "response": "Can you state the rule for total resistance in series vs parallel in your own words?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Series adds resistances. Parallel uses reciprocal sum. Not sure about voltage and current rules."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student's partial explanation missing voltage/current rules, so I provide concise summary.",
+        "state": "Support",
+        "response": "In series, current constant, voltage divides. In parallel, voltage constant, current divides. Total R: series add, parallel reciprocal sum."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Series: total R = sum, current constant, voltage splits proportionally. Parallel: total R = reciprocal of reciprocal sum, voltage constant, current splits inversely with resistance."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student correctly explained concepts, wrapping up.",
+        "state": "Closing",
+        "response": "Great job! You've got it. Ready for another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Scaling a recipe",
+    "problem": "A pancake recipe for 8 pancakes uses 1.5 cups of flour, 2 eggs, and 0.5 cups of milk. How much of each ingredient is needed to make 12 pancakes?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm not sure how to adjust the ingredients for more pancakes."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student is unsure how to start; need to diagnose their initial approach.",
+        "state": "Diagnosis",
+        "response": "What do you think is the first step to scale the recipe?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think you just add four more pancakes worth of ingredients."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly thinks to add ingredients; provide hint about scaling factor to guide.",
+        "state": "Support",
+        "response": "The factor for this recipe is 12 divided by 8. Can you compute that?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "12 divided by 8 is 1.5."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student computed factor correctly; now guide to apply factor to flour.",
+        "state": "Support",
+        "response": "Now multiply each ingredient by 1.5. What is 1.5 cups times 1.5?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "1.5 times 1.5 is 2.25 cups."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student got flour; now guide to compute eggs.",
+        "state": "Support",
+        "response": "For eggs, 2 times 1.5 equals 3. Does that make sense?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Yes, 3 eggs."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student got eggs; now guide to compute milk and final amounts.",
+        "state": "Support",
+        "response": "For milk, 0.5 times 1.5 equals 0.75. Can you list all final amounts?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Flour 2.25 cups, eggs 3, milk 0.75 cups."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has all amounts; ask them to articulate the general rule.",
+        "state": "Synthesis",
+        "response": "In your own words, how do you scale any recipe?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "You divide desired by original to get factor, then multiply each ingredient by that factor."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student explained the rule correctly; conversation complete.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for another?"
+      }
+    ]
   }
 ]

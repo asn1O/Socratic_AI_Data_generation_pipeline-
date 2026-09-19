@@ -475,3 +475,227 @@
     }
   ]
 }
+
+
+{
+  "problem": "Below is a sentence with potential punctuation errors. Identify any errors and rewrite the sentence correctly. Sentence: The researcher who found the species a rare butterfly shared her data after she spoke at the conference.",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I think we need a comma after 'species' and after 'butterfly', and maybe a semicolon before 'after'."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "Student offered initial punctuation ideas with a semicolon suggestion; need to uncover their thought process.",
+      "state": "Diagnosis",
+      "response": "Can you walk me through how you decided where to put commas or other punctuation?"
+    },
+    {
+      "turn": 3,
+      "speaker": "tutor",
+      "reasoning": "Student expressed confusion about restrictive clause; need to hint about clause type.",
+      "state": "Support",
+      "response": "Remember, restrictive relative clauses don't get commas because they specify which noun. Does 'who found the species' restrict which researcher?"
+    },
+    {
+      "turn": 4,
+      "speaker": "student",
+      "text": "I think the clause 'who found the species' is non-restrictive, so it needs commas."
+    },
+    {
+      "turn": 5,
+      "speaker": "tutor",
+      "reasoning": "Student still unsure about the appositive; need to hint about its nature.",
+      "state": "Support",
+      "response": "What kind of information does 'a rare butterfly' give about the species—essential definition or extra detail?"
+    },
+    {
+      "turn": 6,
+      "speaker": "student",
+      "text": "So 'who found the species' gets no commas, but I think we need a comma before 'after'."
+    },
+    {
+      "turn": 7,
+      "speaker": "tutor",
+      "reasoning": "Student identified appositive as extra info but questioned comma before 'after'; need to clarify appositive punctuation.",
+      "state": "Support",
+      "response": "An appositive that adds extra information needs commas on both sides. Where would those commas go in the sentence?"
+    },
+    {
+      "turn": 8,
+      "speaker": "student",
+      "text": "The appositive needs commas, so after 'species' and after 'butterfly'."
+    },
+    {
+      "turn": 9,
+      "speaker": "tutor",
+      "reasoning": "Student produced the correct sentence; now need to have them articulate the rule.",
+      "state": "Synthesis",
+      "response": "Nice, you've got the right sentence. In your own words, why did we place commas where we did?"
+    },
+    {
+      "turn": 10,
+      "speaker": "student",
+      "text": "Restrictive clauses get no commas; appositives need commas; no comma before a following 'after' clause."
+    },
+    {
+      "turn": 11,
+      "speaker": "tutor",
+      "reasoning": "Student explained the rule correctly; conversation wraps up.",
+      "state": "Closing",
+      "response": "Great job! You've mastered clause punctuation. Ready for another challenge?"
+    }
+  ]
+}
+
+
+{
+  "problem": "What was one major effect of the widespread adoption of the steam engine in the 19th century on where factories were built and how cities grew?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I know the steam engine made trains go faster, and I think that probably changed how goods were moved, but I'm not really sure how it affected where people lived or how factories were set up. I guess it might have helped trade, but the bigger social effects are fuzzy for me."
+    },
+    {
+      "speaker": "tutor",
+      "reasoning": "Student expressed uncertainty about broader societal effects; need to elicit their thinking.",
+      "state": "Diagnosis",
+      "response": "When you picture goods moving more quickly by train, what kinds of changes do you imagine might ripple through society—for example, in how businesses decide where to locate, how fast people can travel for work, or how ideas spread between towns? Please walk me through your thinking."
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "I suppose faster trains could let factories ship their products to distant markets without waiting for slow wagons, so maybe they could sell more and earn more profit. As for where people live, I'm not sure if they'd move closer to the railway stations or stay where they are, because I don't know if the rail lines actually caused towns to grow or just changed how goods traveled."
+    },
+    {
+      "speaker": "tutor",
+      "reasoning": "Student suggested faster trains could increase profit but unsure about social impacts; hint about pre-steam factory constraints to guide them.",
+      "state": "Support",
+      "response": "Before steam engines became common, most factories relied on water wheels that needed steady rivers, which forced them to stay near flowing water. If a factory wasn't limited by water, what new factors do you think owners would consider when picking a spot for their plant?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Owners would probably look for places with cheap coal to power the steam engines and a ready supply of workers, so they might set up factories near coal mines or in towns where many people lived looking for jobs. That could draw even more workers to those areas, making the towns busier."
+    },
+    {
+      "speaker": "tutor",
+      "reasoning": "Student linked factories to coal and worker availability; hint about effect on towns to deepen causal chain.",
+      "state": "Support",
+      "response": "Exactly—steam engines let factories locate near coal and labor rather than being tied to rivers. When factories clustered in those areas, what effect do you think that had on the surrounding towns and the people living there, both in terms of jobs and daily life?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "With factories moving to coal-rich towns, lots of new jobs appeared, so workers and their families moved in to take those jobs. That influx of people caused the towns to expand quickly, turning small settlements into bigger urban centers. At the same time, steam-powered trains moved raw materials and finished goods faster, which helped factories stay productive and kept the towns supplied."
+    },
+    {
+      "speaker": "tutor",
+      "reasoning": "Student described factory relocation and job growth but hasn't explicitly linked steam engine to both factories and trains; ask them to articulate step-by-step chain to elicit reasoning.",
+      "state": "Diagnosis",
+      "response": "Can you describe, step by step, how the invention of the steam engine caused factories to relocate, which then led to rapid urban growth and changes in where people lived and worked? Think about the cause-effect chain from the engine to the city."
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "I think the steam engine let factories run without needing rivers, so they could be built near coal mines. That meant more factories popped up in those areas, which created many jobs. People moved to those towns for work, making the towns grow into cities. Also, the trains moved stuff faster, which kept the factories supplied."
+    },
+    {
+      "speaker": "tutor",
+      "reasoning": "Student outlined pieces but missed the dual role of steam engine in powering both factories and trains; provide hint about this connection to prompt complete explanation.",
+      "state": "Support",
+      "response": "You've got the engine letting factories leave rivers and the trains moving goods faster. One piece that ties it together is how the steam engine also powered those trains - so the same invention improved both factory location and transportation. How does that double effect help explain why cities grew so quickly?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "The steam engine was a new power source that didn't rely on rivers, so factories could be built wherever there was coal and workers, and it also drove locomotives that moved raw materials and goods quickly. Because factories sprang up near coal mines, many jobs appeared, drawing workers and their families into those towns, which caused the settlements to expand rapidly into cities, while the fast trains kept the industries supplied and the urban areas growing."
+    },
+    {
+      "speaker": "tutor",
+      "reasoning": "Student has correctly explained the cause-effect rule; conversation wraps up.",
+      "state": "Closing",
+      "response": "Great job! You've clearly explained how the steam engine's ability to power factories and trains led to industrial growth and urbanization. That's a solid grasp of cause-and-effect in history. Want to try another example or move on to a different topic? Let me know what you'd like to explore next, and we can keep building on this idea."
+    }
+  ]
+}
+
+
+{
+  "problem": "You need to borrow $5,000 for 2 years. Bank X offers a loan at 5% simple interest per year. Bank Y offers a loan at 4.9% compound interest, compounded annually. Which loan will cost less in total interest after 2 years?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I think Bank Y is better because 4.9% is less than 5%, so you pay less interest."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "Student compared only nominal rates without considering compounding.",
+      "state": "Diagnosis",
+      "response": "You're focusing on the interest rates alone; let's see if you've accounted for how interest builds each year."
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "I'm not sure how to calculate the interest for Bank X exactly."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "Student expresses uncertainty about simple interest calculation; need to give formula.",
+      "state": "Support",
+      "response": "For simple interest, multiply principal by rate and time: I = P * r * t."
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "I'll just use simple interest for both loans; it's easier and should be fine."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "Student incorrectly applies simple interest to compound loan; need to hint about compounding.",
+      "state": "Support",
+      "response": "With compound interest, you calculate interest on the updated balance each year, not just the principal."
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "After year one: 5000*1.049 = $5245. After year two: 5245*1.049 ≈ $5502. Interest ≈ $502."
+    },
+    {
+      "turn": 8,
+      "speaker": "student",
+      "text": "Bank X interest is $500, so Bank X ends up cheaper."
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "Does a longer term make the difference bigger?"
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "Student has correctly computed both and reflected; now need them to articulate the rule.",
+      "state": "Synthesis",
+      "response": "In your own words, describe the steps to compare loans with different interest types."
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "For simple: total = P*(1+rt). For compound: total = P*(1+r)^t. Then compare."
+    },
+    {
+      "turn": 12,
+      "speaker": "tutor",
+      "reasoning": "Student has explained the rule correctly; conversation wraps up.",
+      "state": "Closing",
+      "response": "Nice, that's exactly it! Want to try another one?"
+    }
+  ]
+}

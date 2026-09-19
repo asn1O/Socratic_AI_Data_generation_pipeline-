@@ -1042,5 +1042,266 @@
         "response": "That is perfectly stated. You clearly have a strong grasp of how these variables interact! Ready to try another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Unit conversions",
+    "problem": "A recipe calls for 2.5 liters of water. If you only have a measuring cup that displays volume in milliliters (mL), and you know there are 1,000 milliliters in a liter, how many milliliters do you need to measure out, and how would you calculate that if you didn't know the conversion factor by heart?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm trying to figure out how many milliliters are in 2.5 liters for this recipe. I think I just need to divide 2.5 by 1,000, but that gives me a really tiny number, which doesn't seem right for measuring water."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is attempting to use the conversion factor but has applied the operation incorrectly, leading to a result that conflicts with their intuition. I need to guide them to reconsider the relationship between the two units.",
+        "state": "Support",
+        "response": "That is a great observation to check if your answer makes sense! If a liter is a larger unit than a milliliter, should your final number of milliliters be larger or smaller than the number of liters you started with?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, that makes sense. A milliliter must be much smaller, so I guess the number of them should be a lot higher. Does that mean I should have multiplied instead of divided?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly intuited the direction of the change. I want to solidify this by asking them to apply this logic to the specific values provided.",
+        "state": "Diagnosis",
+        "response": "Exactly! If you know that 1 liter is equivalent to 1,000 milliliters, how would you use that relationship to find out how many milliliters are in 2.5 liters?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Well, if 1 liter is 1,000, then 2 liters would be 2,000, and 0.5 liters would be half of 1,000, which is 500. So, I guess that would be 2,500 milliliters?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has calculated the correct value through a logical additive approach. Now I need to challenge them to formalize this into a general conversion method.",
+        "state": "Diagnosis",
+        "response": "That is perfectly correct! You broke it down step-by-step. Now, imagine you had 4.2 liters instead. Could you describe a consistent method or rule you could follow to turn any amount of liters into milliliters without having to add them up individually?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I suppose I could just take the number of liters and always multiply it by 1,000. Is it really that simple? It feels like there should be a more complicated trick to it."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is doubting the simplicity of the rule. I need to support their confidence by asking them to verify if this rule holds up against the conversion factors of other units they might know.",
+        "state": "Support",
+        "response": "It often feels like there should be more to it, doesn't it? Think about other units you know, like how there are 100 centimeters in a meter. If you wanted to convert meters to centimeters, would that same logic of multiplying by the conversion factor work there too?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I guess so! If I have 3 meters, and each meter has 100 centimeters, that would be 300 centimeters. So, yes, multiplying works there as well. It seems like you just multiply the bigger unit by how many smaller units fit inside it."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully generalized the principle across different domains. I will now ask them to synthesize this into a final rule.",
+        "state": "Synthesis",
+        "response": "You've got it! Now, could you summarize in your own words the rule you'd use to convert any larger unit into a smaller one when you know how many of the smaller units make up one of the larger ones?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Sure. To convert from a larger unit to a smaller unit, you identify the conversion factor—which is the number of smaller units in one larger unit—and then multiply the number of larger units by that factor. It works because you are essentially splitting the larger amount into all those smaller parts."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has clearly and correctly articulated the underlying principle, demonstrating mastery of the concept.",
+        "state": "Closing",
+        "response": "That is exactly right, and you explained it very clearly. You’ve really mastered that concept! Ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "biology",
+    "topic": "Food chains and ecosystems",
+    "problem": "In an ecosystem, if a disease wipes out all the primary consumers in a food chain, explain what happens to the populations of the producers and the tertiary consumers, and why.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think if the primary consumers disappear, the producers will just die off because they don't have anyone to help them grow, and the tertiary consumers will be fine because they have other things to eat."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has fundamental misconceptions about the roles of organisms in a food chain. I need to diagnose their understanding of energy flow before addressing the incorrect assumptions.",
+        "state": "Diagnosis",
+        "response": "That's an interesting theory! Can you walk me through what you think the role of a producer is in a food chain compared to a consumer?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, producers are just there to provide food, so they need the consumers to keep the ecosystem moving. If the consumers are gone, the producers have no purpose."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student believes producers have a 'purpose' dependent on consumers. I'll provide a support hint to help them realize producers get energy from non-living sources.",
+        "state": "Support",
+        "response": "Producers are certainly important for food, but do they rely on animals for their own energy, or do they get it somewhere else, like from the sun?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, they use sunlight, right? I forgot about that. So maybe they don't die, but then they would just grow forever and take over everything?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student corrected the energy source but is now making a logical leap about population growth. I need to keep them focused on the chain reaction.",
+        "state": "Diagnosis",
+        "response": "That's a fair point to consider! If there are no primary consumers there to eat the producers, what do you think actually happens to the population size of the producers?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I guess they would increase because nobody is eating them. But if they increase, doesn't that mean there is more food for the tertiary consumers?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is still missing the middle link of the food chain. I need to remind them about the specific sequence of energy transfer.",
+        "state": "Support",
+        "response": "Remember, a food chain is a sequence: Producer -> Primary Consumer -> Secondary Consumer -> Tertiary Consumer. If the primary consumer is missing, can the tertiary consumer reach the producers?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "No, they usually only eat the smaller animals in the chain. So if the primary ones are gone, the secondary and tertiary ones would starve, even if there's tons of grass around!"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified the dependencies. I need to ask them to synthesize the whole process to ensure they grasp the system logic.",
+        "state": "Synthesis",
+        "response": "Exactly! Now, could you summarize in your own words why both the population boom of producers and the starvation of top predators happens when that middle link vanishes?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Sure. Since primary consumers aren't there to eat the producers, the producer population grows unchecked. But because the energy flow is broken, the tertiary consumers lose their food source—the lower-level animals—and their population declines, even though the plants are flourishing."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student successfully synthesized the concept of energy flow and trophic cascades. The learning objective is met.",
+        "state": "Closing",
+        "response": "That is a perfect explanation! You really nailed how interconnected those levels are. Great work—ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Scaling a recipe",
+    "problem": "A recipe for 4 people calls for 2 cups of flour and 1.5 teaspoons of salt. You want to cook for 10 people. How much flour and salt do you need?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I need to feed 10 people, so I'll just add 6 more cups of flour to the original 2."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student added the difference in people to the flour count instead of scaling proportionally. I need to diagnose how they view the relationship between the recipe size and the ingredients.",
+        "state": "Diagnosis",
+        "response": "Why did you decide to add 6 cups of flour?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, 10 minus 4 is 6, so I need 6 more servings of ingredients."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is stuck on additive logic. I'll provide a hint to compare the ratio of 4 to 10 to guide them toward multiplication.",
+        "state": "Support",
+        "response": "If you doubled the recipe, would you add 2 cups or multiply by something?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I guess I would multiply by 2. So if I want 10 servings, should I multiply 2 cups by 10?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student moved to multiplication but is multiplying by the total count rather than the scale factor. I need to support them in identifying the multiplier.",
+        "state": "Support",
+        "response": "Multiplying by 10 would make 10 times the original recipe. How many people does the original recipe serve again?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "It serves 4. So I divide 10 by 4 to get the multiplier?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student found the correct scale factor. I want to see them apply it to the flour now.",
+        "state": "Support",
+        "response": "Exactly. What is 10 divided by 4, and what do you do with that number?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "It's 2.5. So 2.5 times 2 cups of flour is 5 cups. What about the salt? Is it 1.5 plus 2.5?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student correctly calculated the flour but reverted to addition for the salt. I must steer them back to the scaling factor they just used.",
+        "state": "Support",
+        "response": "Think about the flour; we multiplied by 2.5. Should the salt be treated differently?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "No, I see. I need to multiply everything by 2.5 because that's the ratio of the new group to the original. So 1.5 times 2.5 is 3.75 teaspoons of salt."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student successfully explained the scaling principle and correctly applied it. Closing the conversation.",
+        "state": "Closing",
+        "response": "Spot on! That's exactly how scaling works. Ready for another one?"
+      }
+    ]
   }
 ]

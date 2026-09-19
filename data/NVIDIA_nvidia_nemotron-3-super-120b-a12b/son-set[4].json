@@ -790,5 +790,686 @@
         "response": "Nice work! You’ve got the elasticity‑revenue relationship down. Want to try another problem?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Unit conversions",
+    "problem": "A snail moves at 2 furlongs per fortnight. What is its speed in millimeters per second?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I converted 2 furlongs to millimeters: 2 × 201,168 = 402,336 mm."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student gave distance conversion but ignored time.",
+        "state": "Diagnosis",
+        "response": "How did you handle the fortnight to seconds conversion?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think 1 fortnight equals 14 × 24 = 336 seconds."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student gave an incorrect time conversion (missing minutes and seconds).",
+        "state": "Support",
+        "response": "Remember there are 60 minutes in an hour and 60 seconds in a minute."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "So 1 fortnight is 14 days × 24 hr/day × 60 min/hr × 60 s/min = 1,209,600 seconds."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student has correct time conversion; need to guide them to combine distance and time to get speed.",
+        "state": "Support",
+        "response": "Speed equals distance divided by time."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "So I multiply 402,336 mm by 1,209,600 s to get speed."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student used multiplication instead of division for speed.",
+        "state": "Support",
+        "response": "Think about units: mm per second means mm divided by seconds."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "So speed = 402,336 mm ÷ 1,209,600 s ≈ 0.3328 mm/s."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student obtained correct numeric answer; now prompt them to explain the conversion rule.",
+        "state": "Synthesis",
+        "response": "Explain the rule you used for unit conversion in your own words."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I changed furlongs to mm and fortnights to seconds, then divided."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student explanation is brief; need them to detail how they obtained conversion factors.",
+        "state": "Support",
+        "response": "Mention how you got the conversion factors for each unit."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "I turned furlongs into mm (×201,168), fortnight into s (×14×24×60×60), then divided."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the unit‑conversion rule for speed.",
+        "state": "Closing",
+        "response": "Nice work! Ready for another conversion challenge?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "computer_science_light",
+    "topic": "Binary number conversion",
+    "problem": "Convert the decimal number 46.375 to binary.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I divided 46 by 2: remainder 0, quotient 23. Then 23/2: remainder 1, quotient 11. Remainders in order: 0,1,..."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student shows division steps but may misunderstand how remainders form the binary number.",
+        "state": "Diagnosis",
+        "response": "What does the remainder 0 from dividing 46 by 2 represent?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I'm not sure if that's the right bit."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student expresses uncertainty; need to guide them to consider reversing the remainder order.",
+        "state": "Support",
+        "response": "You wrote the remainders as you got them. What would happen if you wrote them in the opposite order?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Reversing gives 1,0,1,1,0,1."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student has correct integer remainder sequence; now need to elicit their understanding of fractional conversion.",
+        "state": "Diagnosis",
+        "response": "How do you convert the fractional part .375 to binary?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I multiply .375 by 2 and keep the fractional part as the next bit."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student made an error about fractional conversion; provide a hint to redirect thinking.",
+        "state": "Support",
+        "response": "The integer part of each product is the next binary digit. What do you get when you multiply .375 by 2?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "0.75, integer part 0, so first bit is 0."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student obtained first fractional bit correctly; guide them to continue the process.",
+        "state": "Support",
+        "response": "You obtained the first fractional bit as 0. What do you do next with the remaining fractional part .75?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": ".75*2 = 1.5, integer part 1, next bit 1, new fractional .5."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student got second fractional bit; ask for next step to keep them progressing.",
+        "state": "Support",
+        "response": "What's the result and integer part when you multiply .5 by 2?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": ".5*2 = 1.0, integer part 1, next bit 1, fractional part 0. Done."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has both integer and fractional parts; prompt them to combine into final binary.",
+        "state": "Support",
+        "response": "How do you combine the integer bits and fractional bits?"
+      },
+      {
+        "turn": 15,
+        "speaker": "student",
+        "text": "101110.011"
+      },
+      {
+        "turn": 16,
+        "speaker": "tutor",
+        "reasoning": "Student provided the correct binary answer; now ask them to articulate the rule in their own words.",
+        "state": "Synthesis",
+        "response": "The process involves dividing the integer and multiplying the fraction. Can you explain it in your own words?"
+      },
+      {
+        "turn": 17,
+        "speaker": "student",
+        "text": "Divide integer by 2, collect remainders reverse. Multiply fraction by 2, record integer parts."
+      },
+      {
+        "turn": 18,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the conversion rule; conversation is wrapping up.",
+        "state": "Closing",
+        "response": "Nice, you've got it! Ready for another?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Sampling bias",
+    "problem": "A city health department wants to estimate the average daily steps taken by its residents. They decide to collect data by asking people who visit the local fitness center to wear a pedometer for a week. Identify the type of sampling bias present and explain why it leads to bias.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the data will be off because gym-goers probably walk more than average, so the average steps we measure will be too high."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student shows partial direction of bias but hasn't named the bias type or explained the mechanism; need to elicit their reasoning.",
+        "state": "Diagnosis",
+        "response": "Can you walk me through how you decided the sample might be off?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "The bias is due to non-response bias because some people refused to wear the pedometer."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student asserted an incorrect claim about non-response bias; need a hint that redirects attention to how the sample was selected.",
+        "state": "Support",
+        "response": "What distinguishes non-response bias from the way the sample was chosen in this scenario?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Increasing the number of gym-goers surveyed will fix the bias."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student made a second incorrect claim about sample size fixing bias; need a hint to consider representativeness even with a larger sample from the same source.",
+        "state": "Support",
+        "response": "If you surveyed every person who goes to the gym, would the average steps still represent the whole city?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I see, even if we ask all gym-goers, they'd still be more active than non-gym-goers, so the estimate would still be high."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student is converging on the correct idea but hasn't named the bias; ask for the specific bias type to solidify understanding.",
+        "state": "Diagnosis",
+        "response": "What kind of bias results when the sampling method systematically includes certain types of individuals?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "It's selection bias because the sample is not random; it's based on who goes to the gym."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has identified the correct bias; now prompt them to articulate the reasoning in their own words to internalize the concept.",
+        "state": "Synthesis",
+        "response": "In your own words, why does this sampling method lead to biased estimates of the average steps?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Because the fitness center attracts people who are more physically active, the sample over‑represents high‑activity individuals, so the average steps we measure will be higher than the true city average."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the concept of selection bias in their own words; the discussion is complete.",
+        "state": "Closing",
+        "response": "Nice, you've got it! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Comparing loan/interest offers",
+    "problem": "You are considering two personal loan offers for $8,000 to be repaid in equal monthly payments over 2 years. Offer 1: 5.5% annual interest, compounded monthly, with a $100 origination fee added to the loan principal. Offer 2: 5.3% annual interest, compounded quarterly, with a $150 fee paid upfront (not added to principal). Which offer results in a lower total amount paid over the life of the loan?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think Offer 2 is better because its interest rate is lower at 5.3% compared to 5.5% for Offer 1, and the fee difference doesn't seem big enough to change that."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student focused only on nominal rates, ignoring compounding and fees; need to elicit their reasoning.",
+        "state": "Diagnosis",
+        "response": "Can you walk me through how you decided that the lower nominal rate makes Offer 2 better?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I just looked at the percentages; I know fees matter but I wasn't sure how to include them with the different compounding."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student acknowledges uncertainty about fees and compounding; need to guide them to consider effective cost.",
+        "state": "Support",
+        "response": "It's useful to think about the total amount you'll actually pay. What would happen if you turned each offer into an effective annual rate that includes both interest and fees?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I could try to compute the effective rate, but I'm not sure how to handle the monthly vs quarterly compounding and the fees."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student stuck on computing effective rate; ask a question to prompt them to think about payment amount.",
+        "state": "Support",
+        "response": "If you knew the monthly payment for each loan, how could you use that to compare total cost?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I guess I'd multiply the monthly payment by the number of months and then add any upfront fees. But I'm not confident I can calculate the payment with the different compounding."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student unsure about payment formula; give a minimal hint about amortization formula.",
+        "state": "Support",
+        "response": "The monthly payment can be found with the amortization formula: payment = P * r / (1 - (1 + r)^-n), where r is the periodic interest rate. Want to try plugging in the numbers for Offer 1?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "For Offer 1, I add the $100 fee to the $8,000 principal, making $8,100. The monthly rate is 5.5%/12 ≈0.00458. Using the payment formula for 24 months gives a payment of about $357, so total paid is roughly $357×24=$8,568."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has computed payment for Offer 1 and seems to have a plausible total; need to have them articulate the rule/principle.",
+        "state": "Synthesis",
+        "response": "Can you explain the steps you used to figure out which loan is cheaper?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I added upfront fees to the amount I'm borrowing, calculated the monthly payment using the loan's periodic rate and term, multiplied by the number of payments to get total paid, then compared the totals. The loan with the lower total paid is the better deal."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the rule; wrap up.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Basic probability distributions",
+    "problem": "A fair coin is flipped four times. Let X be the number of heads observed. Write down the probability distribution of X.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think that when you flip a fair coin four times, the number of heads you get could be 0,1,2,3, or 4, and since each of those outcomes seems just as likely as the others, I’d assign each a probability of one fifth, or 0.2."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student assumes each possible number of heads is equally likely, showing they may be overlooking that different totals arise from different numbers of equally likely sequences. This calls for a Diagnosis turn to uncover their reasoning.",
+        "state": "Diagnosis",
+        "response": "When you said each possible number of heads seems equally likely, I'm curious about the thinking behind that—what led you to believe that 0,1,2,3, and 4 heads each have the same chance, and how does that relate to the idea that each individual sequence of four flips is equally likely?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I’m not entirely sure now; I know each individual sequence of four flips is equally likely, but when I look at the totals of heads, I’m wondering if some totals can happen in more ways than others, and I’m not sure how to count those ways."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student expresses uncertainty about how totals map to sequences, indicating they are ready to consider counting sequences for each total. This suggests a Support turn to prompt them to think about counting without giving the method directly.",
+        "state": "Support",
+        "response": "How do you think the number of ways to obtain a specific total of heads depends on the positions of the heads within the four flips, and what strategy would you use to count those ways without having to write out every single sequence or drawing a tree diagram?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I think there might be a few ways to get exactly two heads, but I’m not confident in the exact number; I know it involves choosing which flips are heads, but I’m fuzzy on the count, and I recall that combinations are used when order doesn’t matter, though I’m not certain how to apply that here, so I might just list them out to be safe."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is unsure about the exact count and mentions combinations but lacks confidence; they are close to grasping the combinatorial approach. This is a good moment for Support to guide them to verify their count by considering the selection of positions.",
+        "state": "Support",
+        "response": "Could you try to think about how you would count the number of ways to get exactly two heads by considering which two of the four positions—labelled first, second, third, and fourth—are heads, and see if that leads you to a specific number without having to list every single possibility?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I realized that to get exactly two heads, I need to pick two of the four positions to be heads, and the number of ways to choose two positions from four is given by the combination 4 choose 2, which equals six, so there are six sequences."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly derived the count for two heads using combinations, showing they grasp the method. Now we need to prompt them to extend the reasoning to other totals, which fits a Support turn to encourage them to apply the same logic to other cases without giving the answer.",
+        "state": "Support",
+        "response": "How do you think each case corresponds to choosing a certain number of positions for heads, and how could the symmetry of the situation help you see the counts for zero, one, three, and four heads without starting from scratch each time, perhaps by considering the equivalence of choosing heads versus tails?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "For zero heads, there’s only one way—all tails; for four heads, only one way—all heads; for one head, there are four ways to choose which flip is heads; for three heads, it’s the same as one head because choosing three heads is equivalent to choosing one tail, so also four ways."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly computed counts for all totals, showing they understand the combinatorial reasoning. Now we need to move to Synthesis to have them articulate the general rule in their own words.",
+        "state": "Synthesis",
+        "response": "In your own words, could you describe the general rule or method you used to turn those counts into probabilities for each possible number of heads, perhaps explaining how you think about equally likely outcomes and the role of counting in determining those chances for this scenario?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I took the number of favorable sequences for each number of heads, divided by the total number of equally likely sequences (which is 2^4 = 16), giving probabilities like 1/16 for 0 heads, 4/16 for 1 head, 6/16 for 2 heads, 4/16 for 3 heads, and 1/16 for 4 heads."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the rule in their own words, indicating mastery of the concept; we can now wrap up.",
+        "state": "Closing",
+        "response": "Nice work! You've clearly explained how to build the probability distribution for the number of heads in four coin flips. Want to try another similar problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Time and work",
+    "problem": "Worker X can complete a task in 10 days, worker Y in 15 days, and worker Z in 20 days. They start working together. After 2 days, X leaves. After another 3 days, Y leaves, and Z continues alone. How many more days will Z need to finish the task?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think X, Y, Z together finish 1/5 of the job each day."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student asserted an incorrect combined rate; need to uncover their fraction addition process.",
+        "state": "Diagnosis",
+        "response": "How did you add those fractions?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Actually, 1/10+1/15+1/20 equals 13/60 per day."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student gave correct combined rate; now we guide them to compute work done in the first 2 days.",
+        "state": "Support",
+        "response": "Let's find the work done in the first 2 days. What is 2 times 13/60?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "After X leaves, Y and Z work for 2 days."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly stated the duration of Y and Z working together; need to elicit the correct timeline.",
+        "state": "Diagnosis",
+        "response": "How many days actually pass between X leaving and Y leaving?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "X leaves after 2 days; Y leaves 3 days later, so Y and Z work together for 3 days."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student gave correct timeline; now we prompt them to find Y+Z's daily rate.",
+        "state": "Support",
+        "response": "Now, what is the combined daily rate of Y and Z?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Y+Z do 1/15+1/20=1/6 per day, so in 3 days they do 3/6=1/2."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student gave an incorrect rate for Y+Z; need to diagnose their fraction addition mistake.",
+        "state": "Diagnosis",
+        "response": "How did you get 1/6 as Y+Z's rate?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Y+Z actually do 4/60+3/60=7/60 per day, so in 3 days they do 21/60=7/20."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student computed Y+Z's work correctly; now we guide them to find remaining work.",
+        "state": "Support",
+        "response": "So what fraction of the job is left after those 5 days?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "We sum work from each period: 2 days all three, 3 days Y+Z, then Z alone finishes the rest."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the overall method, so we close.",
+        "state": "Closing",
+        "response": "Nice, you've got it! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Logical fallacies",
+    "problem": "Consider the following argument: 'If we allow students to use calculators in math class, they will become dependent on them for even simple calculations, which will cause them to forget how to do basic arithmetic, and ultimately they will be unable to solve real‑world problems without technology. Therefore, we should ban calculators in math classrooms.' Identify the logical fallacy or fallacies present in this argument, explain why it is fallacious, and note any hidden assumptions.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "When I read the argument, I thought it was just warning us about a possible downside of calculators, so I didn't see any flaw in the reasoning. It seems reasonable that if students rely on calculators for simple sums they might lose practice, and that could make them weaker at mental math. I didn't think it committed any fallacy because the worry feels plausible."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student claims the argument is not fallacious and shows no recognition of flawed reasoning, indicating a need to uncover their criteria for judging fallacies.",
+        "state": "Diagnosis",
+        "response": "Could you walk me through exactly how you decided whether this passage contains a fallacy or not? I'm interested in what specific parts you looked at, what criteria you used to judge the reasoning, and how you weighed the apparent plausibility of the claim against the logical structure. Think about whether the arguer shows a necessary causal link between the premises and the conclusion."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think the argument is trying to scare us into banning calculators by painting a dire picture of students forgetting math, so it looks like an appeal to fear. Even if it's emotional, the premises seem true—students do use calculators a lot, and relying on them could erode skills—so I don't see a logical mistake; it's just a strong warning."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student identifies an emotional appeal but misses the core logical issue; need to guide them to examine the causal chain and evidential support.",
+        "state": "Support",
+        "response": "You're right that the argument raises an emotional worry, but let's focus on how the conclusion is supposed to follow from the premises—does the arguer show a necessary causal chain, or just assume that one step leads inevitably to the next? Think of the classic pattern: if we let X happen, then Y will happen, then Z will happen. What would be needed to prove each link?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Okay, I see the chain: allowing calculators leads to dependence, which leads to forgetting basic math, which leads to being unable to solve real‑world problems. I'd call that a slippery slope, but I still think the argument works because each step seems pretty likely—students really do rely on calculators, and if they stop practicing mental math they'd lose ability."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student acknowledges the slippery slope pattern but still believes the argument is sound due to perceived likelihood, indicating a need to probe their evidential standards.",
+        "state": "Diagnosis",
+        "response": "You mentioned that each step seems likely. What kind of evidence would convince you that allowing calculators in class actually causes students to forget basic arithmetic, rather than just correlating with other factors? Consider what would count as a reliable sign that each step truly follows from the previous one. Could you describe what kind of study or data you'd look for to support each link in the chain, and why the absence of such evidence matters for judging the argument?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I guess the arguer doesn't actually cite any studies; they just assume that if calculators are allowed, students will automatically stop practicing mental math. Without evidence that the causal chain holds, I'm starting to think the argument might be weak, though I'm not sure if that makes it a fallacy or just a poorly supported claim."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student recognizes missing evidence but still hesitates to label it a fallacy; need to reinforce the definition of slippery slope and prompt them to articulate the missing piece.",
+        "state": "Support",
+        "response": "You're noticing the missing evidence, which is key. A slippery slope fallacy occurs exactly when someone asserts a chain of events without showing that each step is actually probable or necessary. What would you need to see to demonstrate that each link in this chain is more than just a possibility?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I think the problem is that the arguer treats a possible outcome as certain, which makes the reasoning flawed. Because there's no proof that each step will happen, the conclusion doesn't logically follow, so I'd say it's a fallacy—specifically a hasty generalization—since the arguer is drawing a broad conclusion from insufficient evidence about the causal chain."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has identified a flaw but mislabels the fallacy; need to prompt them to articulate the correct concept in their own words without giving it away.",
+        "state": "Diagnosis",
+        "response": "In your own words, explain why the absence of evidence for each step in the chain makes this argument a slippery slope fallacy rather than merely a weak or unsupported claim. What specific aspect of the reasoning is defective when the arguer simply assumes that each step will happen without showing any support?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "A slippery slope fallacy happens when someone says that if we allow a small thing, it will inevitably lead to a big bad outcome, without showing that each step in between actually happens. If the chain isn't backed by evidence, the argument is fallacious because the conclusion doesn't follow logically. I think the arguer must prove each step is certain for the conclusion to hold, otherwise it's just speculation."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student is close but incorrectly insists on certainty rather than likelihood; need to clarify that the fallacy concerns insufficient probability, not lack of absolute proof, and guide them to the correct explanation.",
+        "state": "Support",
+        "response": "You're close; the fallacy isn't about proving each step with absolute certainty, but about showing that each step is sufficiently probable or that there's a reasonable mechanism linking them. What would count as enough support to break the slippery slope?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "A slippery slope fallacy happens when someone claims that a relatively small first step will inevitably lead to a chain of related events ending in a significant effect, without providing adequate evidence that each step in the chain is actually likely or necessary. Because the argument just assumes each step will happen without showing any proof, it's fallacious."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the slippery slope fallacy in their own words, indicating mastery of the concept; conversation can wrap up warmly.",
+        "state": "Closing",
+        "response": "Nice work! You've clearly identified the slippery slope fallacy, explained why the missing evidence makes the reasoning defective, and articulated the concept in your own words. That's exactly the kind of critical thinking we aim for. Want to try another example to sharpen your skills?"
+      }
+    ]
   }
 ]

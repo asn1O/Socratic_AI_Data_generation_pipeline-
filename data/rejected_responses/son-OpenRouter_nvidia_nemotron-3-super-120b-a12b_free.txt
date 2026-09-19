@@ -290,3 +290,80 @@
     }
   ]
 }
+
+
+{
+  "problem": "When 5.0 g of calcium carbonate (CaCO3) decomposes into CaO and CO2, how many grams of CO2 are produced?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I need to find moles of CaCO3, then use the reaction to get moles of CO2, then convert to grams."
+    },
+    {
+      "reasoning": "Student described overall method but didn't compute first step; need to check if they know how to find moles.",
+      "state": "Diagnosis",
+      "response": "What’s the first step to find moles of CaCO3?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "I divide 5 g by 100 g/mol to get 0.05 mol."
+    },
+    {
+      "reasoning": "Student correctly calculated moles; need to verify understanding of mole ratio from balanced equation.",
+      "state": "Support",
+      "response": "What does the balanced equation tell you about the mole ratio between CaCO3 and CO2?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "The ratio is 1:1, so moles of CO2 equals moles of CaCO3."
+    },
+    {
+      "reasoning": "Student knows mole ratio; need to guide them to convert moles to mass.",
+      "state": "Support",
+      "response": "To get grams, multiply the moles of CO2 by its molar mass."
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "The molar mass of CO2 is 12 g/mol, so 0.05 times 12 equals 0.6 g."
+    },
+    {
+      "reasoning": "Student used wrong molar mass for CO2; need to remind them of its composition.",
+      "state": "Support",
+      "response": "CO2 has one carbon atom and two oxygen atoms."
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "So molar mass is 12 + 2*16 = 44 g/mol. Then 0.05 × 44 × 2 = 4.4 g."
+    },
+    {
+      "reasoning": "Student incorrectly applied factor of 2; need to clarify stoichiometry from equation.",
+      "state": "Support",
+      "response": "The balanced equation shows only one CO2 molecule produced per CaCO3."
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "Wait, is the molar mass of CO2 actually 12 again? So 0.05 times 12 equals 0.6 g."
+    },
+    {
+      "reasoning": "Student resurfaced earlier molar mass error; need to restate correct calculation.",
+      "state": "Support",
+      "response": "Carbon is 12, oxygen is 16 each, so CO2 is 12 + 2*16 = 44 g/mol."
+    },
+    {
+      "turn": 13,
+      "speaker": "student",
+      "text": "I divide mass by molar mass to get moles, use the 1:1 ratio, then multiply by CO2's molar mass."
+    },
+    {
+      "reasoning": "Student has correctly explained the concept; conversation can end.",
+      "state": "Closing",
+      "response": "Nice work! Want to try another problem?"
+    }
+  ]
+}
