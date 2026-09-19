@@ -1261,5 +1261,191 @@
         "response": "Great, you've got it! Ready for the next one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Logical fallacies",
+    "problem": "Analyze the following argument and identify all logical fallacies present, explaining how each fallacy undermines the argument's validity: 'We must either ban all social media or accept the complete erosion of privacy. Experts say social media destroys mental health, so banning it is the only way to protect our children. Anyone who disagrees is just addicted to their screens and doesn't care about kids.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I see a false dilemma: either ban all social media or lose all privacy. Also maybe an ad hominem attacking those who disagree. But I think the core fallacy is begging the question because it assumes social media is harmful without proof."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student identified false dilemma and ad hominem but incorrectly labeled the core as begging the question, showing confusion about which fallacy is central. Need to explore their understanding of each fallacy.",
+        "state": "Diagnosis",
+        "response": "What makes you think the argument assumes its conclusion rather than just using weak premises?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, the argument says experts claim social media destroys mental health, so banning it is the only way to protect kids. That seems like it's assuming the conclusion that banning is necessary, which is begging the question."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student conflates appeal to authority with circular reasoning; need to hint at the distinction without giving answer.",
+        "state": "Support",
+        "response": "Good observation about the expert claim. Does the argument use the conclusion as a premise, or does it rely on an authority to support a premise?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Right, so the appeal to authority is fine because experts are reliable sources on mental health. The real problem is the false dilemma."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly thinks appeal to authority is valid here; need to guide them to see why it's fallacious in this context.",
+        "state": "Support",
+        "response": "Does citing experts alone prove the policy conclusion? What's missing between the harm claim and the ban conclusion?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "The steps from harm to ban seem logical: if something harms kids, we should eliminate it. That's not a slippery slope; it's a direct causal chain."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student misses the slippery slope and straw man, and treats the causal chain as valid; need to probe their view of the argument's extremes.",
+        "state": "Diagnosis",
+        "response": "The argument jumps from 'some harm' to 'total ban' and presents only two extremes. Could there be a middle ground? Also, how does it characterize opponents?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "It says anyone who disagrees is addicted and doesn't care about kids. That's a straw man, but it's basically true that opponents are addicted. The slippery slope isn't a fallacy because each step follows. Also, the experts are still credible, so the appeal to authority isn't really a fallacy."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student partially recognizes straw man but endorses it, and still denies slippery slope while resurging the appeal to authority misconception; need to hint at why both are fallacious.",
+        "state": "Support",
+        "response": "Does calling all opponents 'addicted' misrepresent their views? Does the argument provide evidence for each step in the slippery slope?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Okay, the straw man is a fallacy because it exaggerates the opponent's view. The slippery slope is a fallacy because it assumes banning is inevitable without proving each link. The appeal to authority is fallacious because it uses experts to jump to a policy without justification. The false dilemma and ad hominem are also present."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly identified all fallacies and explained why each is fallacious; now prompt them to articulate the overarching principle.",
+        "state": "Synthesis",
+        "response": "Great, you've identified each fallacy. In your own words, what common feature makes these reasoning errors problematic in an argument?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Each fallacy replaces solid reasoning with a rhetorical shortcut: false dilemma limits options, ad hominem attacks the person, straw man distorts the opposing view, slippery slope assumes unproven consequences, and appeal to authority substitutes expertise for logical support. They all bypass genuine evidence and critical evaluation."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has explained the unifying principle that fallacies are rhetorical shortcuts that evade evidence; conversation can wrap up.",
+        "state": "Closing",
+        "response": "Exactly — you've captured the core idea. Nice work! Ready to tackle another argument?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Correlation vs causation",
+    "problem": "A study finds that ice cream sales and drowning incidents both increase during summer months. Some people conclude that eating ice cream causes drowning. Is this conclusion valid? Explain.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think if two things go up together, one causes the other. So ice cream sales cause drowning because both rise in summer."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student assumes correlation implies causation; need to diagnose their understanding of correlation before addressing misconception.",
+        "state": "Diagnosis",
+        "response": "I see you think correlation implies causation. What does correlation mean to you?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I'm not really sure. I just know they both increase at the same time."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student unsure about correlation; provide minimal guidance to consider alternative explanations without giving answer.",
+        "state": "Support",
+        "response": "What else might be happening in summer that could affect both ice cream sales and drowning?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Maybe the heat causes both, but I still think ice cream causes drowning because people swim after eating."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student still attributes causation to ice cream despite acknowledging heat; guide to evaluate whether heat is the common cause.",
+        "state": "Support",
+        "response": "If heat drives both, does ice cream directly lead to drowning, or is heat the common cause?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, so the heat is a confounding variable? That means correlation doesn't mean causation."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student identified confounding variable; check if they can articulate why correlation isn't causation.",
+        "state": "Diagnosis",
+        "response": "How would you explain the reason that correlation alone isn't sufficient to prove causation in this example?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Because a third factor, like heat, can make two things look related even if they don't affect each other."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has correct concept; prompt them to state the general rule in their own words.",
+        "state": "Synthesis",
+        "response": "So what's the rule? In your own words, why doesn't correlation prove causation?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Correlation just shows a relationship, but causation requires evidence that one directly influences the other, not just a shared cause."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the principle; conversation can wrap up.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for another example?"
+      }
+    ]
   }
 ]

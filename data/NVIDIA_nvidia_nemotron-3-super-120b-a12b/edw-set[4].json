@@ -1273,5 +1273,203 @@
         "response": "Nice work! Want to try another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Scaling a recipe",
+    "problem": "A recipe for 4 servings requires 2 cups of flour, 1 cup of sugar, and 0.5 cup of butter. How much of each ingredient do you need to make 10 servings?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think you just add the difference in servings to each ingredient. So since we need 6 more servings (10-4), I add 6 cups to the flour, 6 cups to the sugar, and 3 cups to the butter. That gives 8 cups flour, 7 cups sugar, 3.5 cups butter. I figured that each extra serving needs the same amount as one serving, so I just added the extra servings times the original per‑serving amount."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student used an additive method, indicating they misunderstand scaling as addition rather than multiplication. This calls for a Diagnostic question to elicit their reasoning process.",
+        "state": "Diagnosis",
+        "response": "Before we jump to the answer, it helps to articulate the thinking behind scaling so we can see where the approach might need adjusting. One way to think about scaling is to find how many times bigger the new batch is compared to the original. Can you walk me through how you arrived at those numbers?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I thought that because the recipe is for 4 servings, scaling up to 10 servings just means multiplying everything by 10. I figured you multiply each ingredient by the number of servings you want, so 2 cups flour times 10 equals 20 cups flour, 1 cup sugar times 10 equals 10 cups sugar, and 0.5 cup butter times 10 equals 5 cups butter."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student incorrectly multiplied ingredients by the target servings, revealing a misunderstanding of the scaling factor. A supportive hint about ratios can help them self‑correct.",
+        "state": "Support",
+        "response": "This ratio tells us the factor by which each ingredient should be multiplied to keep the proportions correct. It can be useful to look at the relationship between the desired servings and the original servings as a ratio. What do you get when you divide the number of servings you want by the number the recipe originally makes?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I divided 10 by 4 and got 2.5, so I multiplied the flour and sugar by 2.5: flour 2*2.5=5 cups, sugar 1*2.5=2.5 cups. I left the butter at 0.5 cup because it seemed like a small amount that shouldn't change much. I thought the butter quantity was negligible, so I kept it unchanged."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student applied the correct factor to flour and sugar but left the butter unchanged, indicating a lapse in applying the rule uniformly. A diagnostic question about butter will draw attention to this inconsistency.",
+        "state": "Diagnosis",
+        "response": "Think about keeping the proportion of butter to the other ingredients the same as in the original recipe. Let's focus on the butter for a moment. If we're making 2.5 times as much food, it makes sense that each ingredient, including butter, should increase by that same factor. What would 0.5 cups of butter multiplied by 2.5 give you?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, right, I need to multiply the butter too. 0.5 times 2.5 equals 1.25 cups. So now I have 5 cups flour, 2.5 cups sugar, and 1.25 cups butter. I see now that every ingredient must be scaled by the same factor to keep the recipe proportions correct."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student initially corrected the butter but then reverted to keeping it unchanged, showing the additive misconception has resurfaced. A diagnostic question about per‑serving butter will help them see the inconsistency.",
+        "state": "Diagnosis",
+        "response": "To see if the flour amount makes sense, let's check the amount per serving in the scaled recipe and compare it to the original. If we have 5 cups flour for 10 servings, how many cups of flour does that correspond to per serving?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "For the flour, 5 cups divided by 10 servings is 0.5 cup per serving, which matches the original 2 cups per 4 servings (0.5 per serving). For butter, I think it should stay at 0.5 cup because the recipe only needs a little butter, so I'll keep it at 0.5 cup."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student persists in thinking the butter should stay the same, revealing a stubborn additive misconception. Another diagnostic question about butter per serving will encourage them to reconcile the amounts.",
+        "state": "Diagnosis",
+        "response": "This will help us see whether the butter amount is scaled correctly. Let's apply the same per‑serving check to the butter. If we kept the butter at 0.5 cup for 10 servings, how much butter would each serving contain, and does that match the butter per serving in the original recipe?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "0.5 cup divided by 10 servings is 0.05 cup per serving, but the original recipe had 0.5 cup for 4 servings, which is 0.125 cup per serving. So I see the butter per serving would be too low. I need to multiply the butter by 2.5 as well, giving 1.25 cups butter, which is 0.125 cup per serving, matching the original."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly scaled all ingredients and verified the per‑serving amounts match the original, indicating they have grasped the concept. A synthesis question asking them to explain the rule in their own words will help internalize it.",
+        "state": "Synthesis",
+        "response": "Think about what operation you performed on the ingredients and why that operation preserves the proportions of the recipe. Now that we have the correct amounts for flour, sugar, and butter, can you describe in your own words the general rule for scaling a recipe from one number of servings to another?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "You find the factor by dividing the desired number of servings by the original number of servings, then multiply every ingredient by that factor. So for this recipe, 10 divided by 4 equals 2.5, and you multiply each ingredient by 2.5 to get the scaled amounts."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully articulated the scaling rule, showing they have internalized the concept. A brief, positive closing wraps up the exchange.",
+        "state": "Closing",
+        "response": "Nice, you've got it! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Mean, median, mode",
+    "problem": "Find the mean, median, and mode of the following data set: 12, 15, 9, 20, 15, 7, 14.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the mean is the number in the middle when you line them up, so I sorted them and got 7,9,12,14,15,15,20 and the middle is 14, so I think the mean is 14. For the median I just added them all up and divided by 7, which gave me about 13.14, and I'm not really sure what the mode is--maybe it's the biggest number, like 20?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student conflated mean and median, gave wrong mode definition. Need to uncover their thinking.",
+        "state": "Diagnosis",
+        "response": "The mean is found by adding all the numbers together and dividing by how many numbers there are. Can you tell me, in your own words, how you would go about finding the mean, median, and mode for this set? I'm interested in the process you have in mind, not just the answer."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Okay, for the mean I add all the numbers together and then divide by how many numbers there are, so I did 12+15+9+20+15+7+14 = 92, divided by 7 equals about 13.14. The median I think is the number that shows up most often, so I looked for repeats and saw 15 appears twice, so I said the median is 15. The mode I think is the middle number after sorting, so I sorted them and picked the fourth number, which is 14."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student swapped median and mode definitions; need a hint to differentiate.",
+        "state": "Support",
+        "response": "When you look for the middle of a sorted list, you're focusing on position; when you look for the most frequent, you're focusing on repetition. Please describe how you would decide which number is the median and which is the mode for this data. Take a moment to think about what each term means to you."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I think the middle after sorting is the number that shows up the most, so that's 15, because I associate the most frequent value with the center of the data. Conversely, the most frequent number is the one in the middle of the sorted list, which is 14, since I think the middle position tends to capture the value that repeats. I'm still mixing them up but I believe the median is 15 and the mode is 14."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student continues to confuse median and mode, mixing definitions; need to see if they understand sorting and frequency concepts.",
+        "state": "Diagnosis",
+        "response": "We want to clarify what you mean by the middle of a data set and what you mean by the most common value. Could you explain how you would identify each of those in a list of numbers? Please walk me through your thinking step by step."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "To find the median I sort the numbers from lowest to highest and pick the one in the center; with seven numbers that's the fourth, which is 14. The mode is the value that occurs most often, which is 15 because it appears twice. The mean is the average, so I add them up and divide by seven, giving about 13.14."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student has produced the correct numeric answers; now we want them to articulate the general procedure for mean, median, mode in their own words to internalize the concept.",
+        "state": "Synthesis",
+        "response": "The mean, median, and mode each describe a different aspect of a data set. Please explain, in your own words, the steps you would take to find each of these measures for any group of numbers. Think about what you would do first, then next, and finally."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "For the mean you add all the numbers and divide by how many there are, because that gives the average value. For the median you sort the numbers and pick the one in the middle; if there's an even number of values you pick the larger of the two middle numbers, since I think the median should be the higher middle value. The mode is the number that appears most often; if no number repeats, there is no mode, because there's no value that stands out as common."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student made an error about picking the larger middle number for even-sized data; need to hint at averaging without giving the answer.",
+        "state": "Support",
+        "response": "When there are two middle numbers, the median should reflect the center of those two values. What operation do you typically use to find a number that lies exactly between two given numbers? Think about what you do with two numbers to get a middle value."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "For the mean you add all the numbers and divide by how many there are, because the average represents the typical value. For the median you sort the numbers and pick the one in the middle; if there's an even number of values you take the average of the two middle numbers, since that gives a central value between them. The mode is the number that appears most often; if no number repeats, there is no mode, because there's no value that occurs more than others."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has now given a correct explanation of the procedures; we want them to consolidate by stating the rule in their own words one more time to ensure internalization.",
+        "state": "Synthesis",
+        "response": "These three measures - mean, median, and mode - each summarize data in distinct ways, giving us different insights about the center and frequency of values. Could you summarize, in your own sentences, how to compute the mean, median, and mode for any data set? Please walk me through each step as if you were teaching a classmate."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "To find the mean, I add up all the numbers in the set and divide the total by how many numbers there are, because the mean summarizes the data as a single average value. To find the median, I first arrange the numbers from smallest to largest; if the count is odd, the median is the middle number; if the count is even, the median is the average of the two middle numbers, since this gives a central point that splits the data into two halves. The mode is the value that occurs most frequently; a set can have one mode, more than one mode, or no mode at all if every value appears only once, which tells us about the most common observation or lack thereof."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept in their own words, indicating mastery; conversation concludes.",
+        "state": "Closing",
+        "response": "Nice work! You've clearly explained how to find the mean, median, and mode by describing each step in your own words. That shows a solid grasp of the concepts. Feel free to let me know if you'd like to try another problem or explore something else."
+      }
+    ]
   }
 ]

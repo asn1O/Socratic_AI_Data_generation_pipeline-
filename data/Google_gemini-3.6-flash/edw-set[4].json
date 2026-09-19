@@ -445,5 +445,179 @@
         "response": "That is an outstanding summary! You connected organelle structure, ATP localization, and plant tissue needs perfectly. Excellent job working through those tricky edge cases today—ready to move on to our next cell biology topic?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Trip budget planning",
+    "problem": "You have a $500 budget for a 4-day trip. A hotel costs $75 per night for 3 nights. What is your daily available budget for other expenses?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I calculated $75 times 4 days, so the hotel costs $300 out of my $500 budget."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student made a minor edge-case mistake by multiplying by days instead of nights. I will explicitly remind them about night charges.",
+        "state": "Support",
+        "response": "Remember, hotel stays are charged per night. A four-day trip only requires three nights at the hotel."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, right! So 3 nights at $75 makes the hotel total $225."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student corrected the hotel calculation. I'll explicitly tell them the next step to find total remaining funds.",
+        "state": "Support",
+        "response": "Exactly. Now subtract that $225 lodging cost from your total $500 budget to find what remains."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Subtracting $225 from $500 leaves $275 total for remaining expenses."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The remaining budget math is correct. I will ask how they will distribute this across the trip.",
+        "state": "Diagnosis",
+        "response": "That math is correct. How would you figure out the daily budget from that remaining amount?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I'd divide $275 by the 4 trip days, which gives $68.75 per day."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student reached the correct numerical solution. Now I'll guide them to synthesize the general rule.",
+        "state": "Synthesis",
+        "response": "Spot on. Can you explain the general steps you used to solve this budget problem?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I start by subtracting total fixed costs like hotel from the overall budget."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student explained the first step. I will prompt them to complete the rule for finding daily spending.",
+        "state": "Synthesis",
+        "response": "Exactly. So overall, what is the complete rule for finding daily spending money?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Subtract total fixed costs from total budget, then divide that remainder by trip days."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student correctly articulated the concept in their own words. Wrapping up the session now.",
+        "state": "Closing",
+        "response": "Perfect! You explained that clearly and got it right. Ready for the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "chemistry",
+    "topic": "Balancing chemical equations",
+    "problem": "Balance the chemical equation for the complete combustion of butane: C4H10 + O2 -> CO2 + H2O",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this butane combustion reaction: C4H10 + O2 -> CO2 + H2O. I know I should balance carbon and hydrogen first before moving on to oxygen. Since there are 4 carbons on the left, I put a 4 in front of CO2. For hydrogen, there are 10 on the left, so I put a 5 in front of H2O. That gives me 4 CO2 and 5 H2O, but now I'm stuck trying to figure out how to handle the oxygen count on the reactant side."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly balanced carbon and hydrogen, resulting in 4 CO2 and 5 H2O. I need to elicit their thinking regarding the current count of oxygen atoms on the product side to diagnose how they plan to match it.",
+        "state": "Diagnosis",
+        "response": "You've made a great start by balancing carbon and hydrogen first! Looking at your products—four carbon dioxide molecules and five water molecules—how many total oxygen atoms do you count on the right side of the equation, and how are you thinking about matching that count on the left?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "On the product side, 4 CO2 gives 8 oxygens and 5 H2O gives 5 oxygens, which totals 13 oxygen atoms. Since 13 is an odd number and O2 comes in pairs, I can just change the subscript of oxygen on the left side from O2 to O13 so that both sides have exactly 13 oxygen atoms."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student made an explicit edge-case error by proposing to change a subscript (O2 to O13). I need to provide a non-explicit hint reminding them of the fundamental rule separating subscripts from coefficients.",
+        "state": "Support",
+        "response": "Remember that changing a subscript actually alters the chemical identity of the substance itself—O13 isn't elemental oxygen gas anymore. When balancing equations, we can only modify the stoichiometric coefficients in front of formulas, not the subscripts within them. If you keep O2 as the reactant, what coefficient could you temporarily place in front of O2 to equal 13 oxygen atoms?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Ah, right, changing subscripts changes the actual molecule! To get 13 oxygen atoms from diatomic oxygen O2, I would need 6.5 molecules of O2, or a coefficient of 13/2. So that gives me C4H10 + 13/2 O2 -> 4 CO2 + 5 H2O. But chemical equations usually require whole number coefficients."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student corrected their subscript error and correctly determined the fractional coefficient 13/2. I now need to guide them toward clearing the fraction to obtain integer coefficients.",
+        "state": "Support",
+        "response": "Spot on! Using 13/2 correctly balances the oxygen atoms mathematically, but as you noted, standard chemical equations require whole-number coefficients. What mathematical operation could you apply to the entire chemical equation to convert that fraction into a whole number while keeping all element counts balanced?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "To get rid of the fraction 13/2, I should multiply the fraction by 2 to get 13. So if we double everything to clear the fraction, the final balanced equation coefficients are 1 for C4H10, 13 for O2, 8 for CO2, and 10 for H2O."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student asserted a second explicit mistake: they multiplied O2, CO2, and H2O by 2, but forgot to double C4H10 (leaving it as 1 instead of 2). I need to offer a hint about distributing the factor of 2 across every term.",
+        "state": "Support",
+        "response": "You correctly doubled the coefficients for oxygen, carbon dioxide, and water! However, when we multiply an entire chemical equation by 2 to clear a fraction, every single reactant and product coefficient must be multiplied by that factor. What happens to the coefficient in front of butane, C4H10, when you apply that factor of 2?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, I missed doubling butane! Since butane originally had an implicit coefficient of 1, multiplying it by 2 gives 2 C4H10. So the complete equation becomes 2 C4H10 + 13 O2 -> 8 CO2 + 10 H2O. Checking the atoms: 8 carbons, 20 hydrogens, and 26 oxygens on both sides. Everything is balanced!"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student corrected their mistake and arrived at the fully balanced chemical equation with verified atom counts. Now I should move to Synthesis so the student articulates the core principles in their own words.",
+        "state": "Synthesis",
+        "response": "That's spot on! Now, in your own words, can you explain the complete step-by-step strategy for balancing hydrocarbon combustion equations when you end up with an odd number of oxygen atoms, and why altering subscripts is never permitted during the balancing process?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "First, you balance carbon and hydrogen using coefficients because altering subscripts would change the actual chemical compounds. When an odd number of oxygen atoms on the product side creates a fraction like 13/2 for O2, you temporarily use that fractional coefficient. Finally, to keep whole numbers, you multiply every single coefficient in the entire equation by 2 so all atom ratios stay equal."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has clearly explained the rule and underlying chemistry principles in their own words. The pedagogical goal is complete, so it is time to wrap up.",
+        "state": "Closing",
+        "response": "That is a perfect summary! You articulated the strategy and the rationale behind whole-number coefficients clearly. Outstanding job working through those tricky edge cases today! Would you like to try another equation, or are you feeling confident?"
+      }
+    ]
   }
 ]

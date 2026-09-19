@@ -422,3 +422,87 @@ Config parameter balance
     easy                          45
     hard                          41
     medium                        39
+2026-09-20 00:33:07,012 INFO 
+=== Run Statistics Summary ===
+Overall totals
+  Attempts: 180
+  Saved: 130
+  Failed: 50
+  Accept rate: 72.22%
+  Duration (h:m:s): 02:44:17
+
+Per-model results
+  Provider / Model                         Attempts  Saved  Accept %  Avg tokens  Turns  Total convos
+  ----------------------------------------  --------  -----  --------  -----------  -----  Total convos
+  NVIDIA / nvidia/nemotron-3-super-120b-a12b       18     15    83.33%     11308.80  12-16             88
+  NVIDIA / nvidia/nemotron-3-ultra-550b-a55b       18     14    77.78%      8334.21  12-14             87
+  NVIDIA / moonshotai/kimi-k3                     3      0     0.00%         0.00      -             23
+  NVIDIA / deepseek-ai/deepseek-v4-flash-0731        3      0     0.00%         0.00      -              0
+  OpenRouter / nvidia/nemotron-3-super-120b-a12b:free       13      8    61.54%     15202.50  12-14             76
+  OpenRouter / nvidia/nemotron-3-ultra-550b-a55b:free       18     15    83.33%      9043.40  12-14             94
+  Google / gemini-3.6-flash                       7      2    28.57%      8353.50  12-12             67
+  Google / gemini-3.5-flash                      13      8    61.54%      6920.38  12-14             70
+  Google / gemini-3-flash-preview                18     18   100.00%     10136.56  12-18            103
+  Google / gemini-3.5-flash-lite                 18     15    83.33%      3516.60  12-12             82
+  Google / gemini-3.1-flash-lite                 18     18   100.00%      3372.94  12-12            105
+  Google / gemma-4-31b-it                        18     14    77.78%      6519.86  12-18             85
+  Google / gemini-2.5-flash-lite                  3      0     0.00%         0.00      -              0
+  Google / gemini-3.8-flash                       6      2    33.33%      6092.50  12-12              7
+  Google / gemini-3.7-flash                       6      1    16.67%      7935.00  12-12              1
+
+Failure reasons
+  Category                         Count
+  ------------------------------  -----
+  dead_model_404                      0
+  empty_response                     45
+  invalid_json_syntax                 0
+  turn_count_out_of_range             3
+  speaker_alternation_broken          1
+  malformed_tutor_tags                0
+  missing_problem_field               0
+  final_turn_not_closing              0
+  unexpected_exception                0
+  other                               1
+
+Turn-count distribution
+  min=12, max=18, avg=12.91
+
+Domain coverage
+  biology                            8
+  chemistry                         17
+  computer_science_light            11
+  economics_and_finance             16
+  ethics_and_critical_thinking       6
+  everyday_reasoning                15
+  history_and_social_studies         5
+  language_and_grammar               8
+  logic_and_puzzles                 12
+  physics                           12
+  quantitative_aptitude              9
+  statistics_and_data               11
+
+Config parameter balance
+  socratic_level
+    high                          34
+    low                           51
+    medium                        45
+  student_level
+    advanced                      41
+    beginner                      46
+    intermediate                  43
+  hint_frequency
+    high                          43
+    low                           45
+    medium                        42
+  mistake_frequency
+    high                          45
+    low                           45
+    medium                        40
+  verbosity
+    high                          48
+    low                           44
+    medium                        38
+  difficulty
+    easy                          52
+    hard                          40
+    medium                        38

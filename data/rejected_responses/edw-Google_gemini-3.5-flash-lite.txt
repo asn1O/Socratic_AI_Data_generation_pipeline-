@@ -1358,3 +1358,198 @@
     }
   ]
 }
+
+
+{
+  "problem": "Analyze the following sentence: 'Although she missed the morning train, Elena arrived at the interview on time, and she still managed to impress the hiring manager.' Identify the dependent clause and state its specific grammatical function within the sentence.",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I think the dependent clause is 'she still managed to impress the hiring manager', and it acts as an independent clause because it has a subject and a verb."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student misidentified an independent clause as dependent and claimed it acts as independent, revealing a misconception about clause markers. I'll use Diagnosis to prompt them to re-examine the beginning of the sentence.",
+      "state": "Diagnosis",
+      "response": "What role do you think the word 'Although' plays at the very start of the sentence?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Oh, right, 'Although she missed the morning train' is the dependent clause because it starts with 'Although'. And since it's at the front, it must function as a noun clause acting as the subject of the sentence."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student correctly identified the dependent clause but asserted another wrong claim about its function (noun clause/subject). I'll use Support with a high hint frequency to guide them toward adverbial modification without giving it away.",
+      "state": "Support",
+      "response": "Look closely at what 'Although she missed the morning train' tells us about the main action—does it name a thing, or does it explain under what condition Elena arrived?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Ah, it tells us the condition under which she arrived, so it's acting as a relative clause modifying 'Elena'."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student is circling closer but misclassified it as a relative clause instead of adverbial. I'll drop back to Diagnosis to help them check what kind of word 'although' introduces.",
+      "state": "Diagnosis",
+      "response": "Does 'Although' introduce information about a specific noun like a relative pronoun does, or does it show a contrast affecting the whole main clause's timing and circumstance?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Right, it shows a contrast affecting the whole main clause. Wait, if it modifies the verb phrase 'arrived', doesn't that make it an adverbial clause of concession?"
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student has successfully navigated past the misconceptions and arrived at the correct analysis. It's time for Synthesis to have them articulate the rule.",
+      "state": "Synthesis",
+      "response": "That's it! In your own words, how does a subordinating conjunction like 'although' turn a clause into an adverbial modifier, and what makes this whole structure work?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "A subordinating conjunction turns a subject-verb unit into a dependent clause, which in this case acts like an adverb because it modifies the main verb by showing a contrast or concession to the action."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "The student has correctly and clearly explained the concept in their own words. The exchange is successfully complete, so I will close warmly.",
+      "state": "Closing",
+      "response": "Spot on! You nailed how subordination and adverbial modification interact there. Great work, and let me know if you want to tackle another one!"
+    }
+  ]
+}
+
+
+{
+  "problem": "Place the following four historical events in chronological order: A) The signing of the Magna Carta, B) The start of the French Revolution, C) The American Declaration of Independence, and D) The Fall of the Berlin Wall. Explain how you determined the sequence of the first three events.",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I'm looking at these four events. I think the American Declaration of Independence happened first, around 1776, then the French Revolution in 1789, the Magna Carta must be somewhere in the 1800s, and the Berlin Wall is definitely the most recent in 1989."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student correctly identified the Berlin Wall and the relative order of the American and French revolutions, but placed the Magna Carta much too late. I will use a direct statement to correct the Magna Carta's timeframe and a diagnostic question to re-evaluate its actual century.",
+      "state": "Diagnosis",
+      "response": "You've got the Berlin Wall and the two revolutions placed quite well. However, the Magna Carta is actually much older than the 1800s. What century do you think medieval documents like that usually belong to?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Oh wait, medieval would be way earlier, right? Maybe the 1200s? So if the Magna Carta is 1215, that would make it the oldest of the bunch before the American and French revolutions."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student successfully corrected the placement of the Magna Carta after a brief nudge. I need to support them in finalizing the exact order of the remaining three events without giving away the sequence directly.",
+      "state": "Support",
+      "response": "That's right, 1215 puts it right at the start. Now let's look at the dates you had for the American and French revolutions—1776 and 1789. Which of those two comes first?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Well, 1776 is before 1789, so the Declaration of Independence has to come before the French Revolution. That means the order so far is Magna Carta, then America, then France, then the Berlin Wall."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student has successfully ordered all four events correctly. Now I need to transition to Synthesis so they can articulate the core rule or strategy they used for timeline reasoning.",
+      "state": "Synthesis",
+      "response": "Spot on. Now that you've sorted them out, can you explain the general rule or method you used to figure out the correct chronological sequence when dealing with centuries and years?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "To put historical events in order, you look at the dates by converting centuries into years, and then you just line them up from the smallest year number to the largest year number, making sure to separate medieval history from modern history."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student has clearly and accurately explained the rule for chronological sequencing in their own words. The conversation is complete, so I will now use the Closing state for a warm wrap-up.",
+      "state": "Closing",
+      "response": "That's a fantastic summary. You nailed it! Ready to try another timeline problem?"
+    }
+  ]
+}
+
+
+{
+  "problem": "If pipe A can fill a tank in 12 hours and pipe B can fill it in 15 hours, how long will it take for both pipes working together to fill the complete tank?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "Since pipe A takes 12 hours and pipe B takes 15 hours, I can just add them together to get 27 hours for both of them."
+    },
+    {
+      "turn": 2,
+      "speaker": "reasoning",
+      "state": "Diagnosis",
+      "response": "How does working together change the total time compared to working alone?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Wait, if they work together, it should take less time than either pipe alone. So adding them gives 27, which is too long, so maybe we should divide 12 by 2 and 15 by 2?"
+    },
+    {
+      "turn": 4,
+      "speaker": "reasoning",
+      "state": "Support",
+      "response": "Dividing the hours directly assumes they share the work equally in half, but they work at different speeds. What fraction of the tank does pipe A fill in one hour?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Pipe A fills 1/12 of the tank in an hour, and pipe B fills 1/15 of the tank in an hour."
+    },
+    {
+      "turn": 6,
+      "speaker": "reasoning",
+      "state": "Diagnosis",
+      "response": "That's right. Knowing what each pipe does in one hour, how would you figure out what they do together in that same hour?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "I can add 1/12 and 1/15 to find their combined rate per hour, which is 9/60 or 3/20."
+    },
+    {
+      "turn": 8,
+      "speaker": "reasoning",
+      "state": "Diagnosis",
+      "response": "Nice calculation on the sum. If they fill 3/20 of the tank in one hour, how does that help you find the total hours needed for the whole tank?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "If 3/20 is done in one hour, then to get the whole tank I just multiply 3/20 by 20 to get 60, so it takes 60 hours."
+    },
+    {
+      "turn": 10,
+      "speaker": "reasoning",
+      "state": "Support",
+      "response": "Careful—if 3/20 of the tank is filled in one hour, multiplying by 20 gives you 3 tanks. What operation reverses a rate to find the total time?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "Ah, right! I need the reciprocal of the combined hourly rate. Since the combined rate is 3/20 of the tank per hour, flipping that gives 20/3 hours, which is 6 and 2/3 hours to fill the tank."
+    },
+    {
+      "turn": 12,
+      "speaker": "reasoning",
+      "state": "Closing",
+      "response": "Spot on! You've got it completely down. Ready to try another one?"
+    }
+  ]
+}

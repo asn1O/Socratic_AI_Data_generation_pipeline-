@@ -607,5 +607,701 @@
         "response": "Spot on! You nailed the whole process from balancing to mole ratios. Great job working through that!"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "physics",
+    "topic": "Heat transfer",
+    "problem": "A metal spoon is placed in a hot cup of tea. Explain how heat is transferred along the spoon.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the spoon gets hot because the heat moves up the metal, but I'm not sure how."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has identified that heat moves through the metal but lacks the specific mechanism. I will start with Diagnosis to check their understanding of particle contact.",
+        "state": "Diagnosis",
+        "response": "Heat does move up the spoon. What do you think is happening at the microscopic level between the particles in the metal?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "The particles near the hot tea must start vibrating faster, maybe bumping into the next ones?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student's intuition about vibration is spot on. I will use Support to confirm this directly and nudge them toward the specific term for this transfer method.",
+        "state": "Support",
+        "response": "That's right, fast-vibrating particles collide with neighboring ones and pass that energy along. This direct contact method of heat transfer has a specific name."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Is it called convection? No wait, convection is for liquids and gases, right?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly ruled out convection. I will use Support to reinforce their correct rejection and point them toward solids.",
+        "state": "Support",
+        "response": "Exactly, convection involves moving fluids. Since a metal spoon is a solid, think about what we call heat transfer through direct touch in solids."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, it must be conduction!"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully named conduction. I will use Diagnosis to prompt them to connect the name back to the physical process.",
+        "state": "Diagnosis",
+        "response": "Conduction is correct. How would you describe how conduction works in that metal spoon overall?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Heat transfers directly through solid contact."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has the right idea. I will use Synthesis to prompt them to explain the full process in their own words before closing.",
+        "state": "Synthesis",
+        "response": "In your own words, summarize how thermal energy travels from the hot tea to the cooler handle of the spoon."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The hot tea makes the metal atoms vibrate, and they pass that energy directly to neighboring atoms down the spoon through conduction."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the concept. I am wrapping up the conversation warmly.",
+        "state": "Closing",
+        "response": "Spot on! You nailed it. Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Logical sequences",
+    "problem": "Consider the following five-item logical sequence of letter clusters: Z2X, W4U, T8R, Q16P, ?. What cluster replaces the question mark, and what is the underlying rule governing both the letter shifts and the number changes?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I looked at the letters and numbers. For the letters, it seems like we go backward by three each time, like Z to W to T to Q. So the next one should be N. And for numbers, they double: 2, 4, 8, 16, so the number is 32. My guess is N32O."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the number pattern doubling and the backward letter shift, but made a procedural error in their final letter sequence by jumping incorrectly from Q.",
+        "state": "Support",
+        "response": "You nailed the number pattern doubling and the general backward direction for the letters. But let's check that final letter step from Q. If you count backward three steps from Q, what letter do you actually land on instead of N?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Wait, let me recount the alphabet: Q, P, O, N. Ah, three steps back from Q is N, but wait — Q is the 17th letter, so minus three is 14, which is N. Wait, no, Q minus one is P, minus two is O, minus three is N. Wait, why did I say N32O earlier? The last letter in Q16P was P, so maybe the letters go Z to X (skip Y), W to U (skip V). Ah, the gap between the first and third letter in each cluster is always two steps!"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is getting confused about the internal relationship within the clusters, asserting a new incorrect relationship between the first and third letters while still avoiding the simple sequential shift.",
+        "state": "Diagnosis",
+        "response": "That's an interesting observation about the clusters, but how did you get from the starting letter of one cluster to the starting letter of the next cluster?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh right, the first letters are Z, W, T, Q. That's minus three each time: Z (-3) = W, W (-3) = T, T (-3) = Q, so Q (-3) = N. That part was right. But then inside the cluster, Z2X has X as the third letter, which is two steps backward from Z. W4U has U, two steps back from W. So after Q, two steps back is O. So the answer is N32O."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student successfully maintained the correct -3 shift for the first letter and correctly analyzed the internal letter relationship, but made a persistent arithmetic error on the number sequence calculation.",
+        "state": "Support",
+        "response": "You've got the letter logic completely figured out with the -3 shift and the internal -2 pattern. But let's re-verify that number multiplication. If the previous number was 16 and it doubles, what does 16 times 2 give you?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh! 16 times 2 is 36. Wait, no, 16 plus 16 is 32. Right, it's 32, not 32... wait, I said 32 before too. Oh, 16 times 2 is 32, so N32O."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has resolved the arithmetic and the letter components, but let's prompt them to test their internal cluster pattern one more time to make sure N32O actually fits the established rule for the third letter.",
+        "state": "Support",
+        "response": "Right, 16 times 2 is 32. Now let's double-check the third letter of your proposed cluster. If the first letter is N and the rule for the third letter is two steps backward from the first, what should the final letter be?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Let's check: Z to X is two steps back. W to U is two. T to R is two. Q to P is... wait! Q to P is only one step back! Let me look closer: Q16P. Oh, Q is 17 and P is 16. That's minus one, not minus two! Ah, let me re-evaluate the third letter pattern: Z to X (-2), W to U (-2), T to R (-2), Q to P (-1). Wait, is it changing?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student noticed an anomaly in the third letter and is questioning the pattern. Let's guide them to look at the alphabet positions of all three letters within each cluster to see the consistent relationship.",
+        "state": "Support",
+        "response": "Take a close look at the alphabetical positions within each cluster: Z(26) and X(24), W(23) and U(21), T(20) and R(18), Q(17) and P(16)... wait, let's re-examine Q and P. Is P the third letter, or is there another letter between Q and P?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Ah, wait! The clusters are three characters: letter, number, letter. Z to X is minus two. W to U is minus two. T to R is minus two. Q to... wait, Q is 17, so minus two is O, not P! The prompt had a typo or I misread — wait, Q16P has P, but if the rule is minus two for the last letter, it should be N32M because N minus two is L? No, let's trace it properly: First letters go Z, W, T, Q, N (-3 each). Numbers double: 2, 4, 8, 16, 32. Third letters go X, U, R, P... wait, X is 24, U is 21, R is 18, so the third letter also decreases by 3 each time! 24 to 21 is -3, 21 to 18 is -3, 18 to 15 (O) is -3. So the rule is that the first letter decreases by 3, the number doubles, and the third letter also decreases by 3. Therefore, the answer is N32O!"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully broken down all three components of the sequence, explained the rules clearly in their own words, and arrived at the correct answer.",
+        "state": "Closing",
+        "response": "Spot on! You worked through the multi-step pattern, caught your own miscalculations, and explained every rule clearly. Excellent persistence on a tricky problem. Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "computer_science_light",
+    "topic": "Tracing a simple algorithm by hand",
+    "problem": "Consider this Python snippet:\n\nx = 2\nfor i in range(3):\n    x += i\nprint(x)\n\nWhat is the final value of x printed at the end?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think range(3) goes 1, 2, 3, so x keeps adding those up."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student assumes range starts at 1 and ends at 3. I need to check how they view range initialization.",
+        "state": "Diagnosis",
+        "response": "What numbers does Python's range(3) actually start and stop at?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh right, it starts at 0, so 0, 1, and 2."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student corrected the range values. Now I'll prompt them to trace the first iteration.",
+        "state": "Support",
+        "response": "With 0, 1, and 2, what happens to x when i is 0?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "x starts at 2, plus 0 is still 2."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student successfully tracked the first step. Let's guide them to the next loop value.",
+        "state": "Support",
+        "response": "Spot on. What's the next value of i, and what does x become then?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Next is i equals 1, so x becomes 2 plus 1, which is 3."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student is on track. Let's have them finish the final iteration.",
+        "state": "Support",
+        "response": "And for the last value in range(3), what does x end up as?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "i is 2, so 3 plus 2 gives 5."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has the correct final number. Now prompting for synthesis of the loop process.",
+        "state": "Synthesis",
+        "response": "How would you describe in your own words how the loop updates x step by step?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The loop takes each number from range(3), which are 0, 1, and 2, and adds each one successively to the running total of x."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student gave a clear, accurate explanation of the loop's execution. Wrapping up.",
+        "state": "Closing",
+        "response": "Precisely right! Great job tracing that through. Ready for another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "computer_science_light",
+    "topic": "Big-O intuition via analogies",
+    "problem": "Imagine you have a phone book of 1,000,000 names, and you're searching for a specific name. If you use a method like checking every single name from top to bottom, what would that look like in Big-O notation, and how does it compare to checking the middle and halving the remaining pages each time?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Checking every name sounds like O(n) because it scales linearly, but halving pages feels like it should just be O(n/2) since you throw half away."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified O(n) for linear search but showed a common overgeneralization about halving being n/2. I need to probe their intuition on how that halving scales.",
+        "state": "Diagnosis",
+        "response": "What happens to the number of remaining pages if you double the total size of the phone book when you're halving it each step?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, if you double it, you just add one more halving step to reach the target, right?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student grasped the key doubling property. Now I'll offer a hint to connect that constant number of extra steps per doubling to a mathematical function.",
+        "state": "Support",
+        "response": "If adding one step handles a doubling of input size, what mathematical operation grows by one every time the input doubles?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "That would be multiplication, like multiplying by two each time."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student drifted slightly toward growth instead of the inverse operation counting steps. I'll drop back to diagnosis to clarify what counts those splitting steps.",
+        "state": "Diagnosis",
+        "response": "Think about how many times you can cut a number in half before you get down to one. What function calculates that?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Right, logarithms! It's base two because we're halving."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student successfully recovered the logarithm concept. Now prompt them to combine this with Big-O notation for the final piece.",
+        "state": "Support",
+        "response": "How would you write that logarithmic relationship as a formal Big-O complexity class?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "That would make it O(log n) instead of O(n)."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has the right answer now. I need them to articulate the core principle in their own words before closing.",
+        "state": "Synthesis",
+        "response": "In your own words, why does halving the search space lead to a logarithmic time complexity rather than a linear one?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Because each step chops the problem in half, so the number of steps grows by just one every time the total input size doubles, which is what logarithms measure."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student gave a clear, accurate explanation of the concept. The session is complete.",
+        "state": "Closing",
+        "response": "Spot on! You nailed the core intuition. Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Parts of speech",
+    "problem": "Identify the part of speech of the underlined word in the sentence: 'She quickly ran to the corner store.' The underlined word is 'quickly'.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm really lost on this one. I know what nouns and verbs are, but 'quickly' doesn't really seem like a person, place, thing, or an action itself."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student understands basic nouns and verbs but is stuck on 'quickly', so I need to diagnose how they view descriptive words.",
+        "state": "Diagnosis",
+        "response": "That's a totally normal place to start since 'quickly' is a bit different from a standard action verb. How would you describe what 'quickly' is doing in that sentence?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "It's describing how she ran. Like, it tells us more about the running part."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly notes it modifies a verb, which opens an opportunity to provide a direct hint about the term for words modifying verbs.",
+        "state": "Support",
+        "response": "You nailed it—it tells us *how* the action was done. Words that modify or describe verbs, adjectives, or other adverbs usually belong to a specific group called adverbs."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh! Is it because it ends in 'ly'? A lot of them seem to do that."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student noticed a common pattern (-ly), so I will confirm that direct observation while reinforcing the grammatical function.",
+        "state": "Support",
+        "response": "That's a fantastic observation, because many adverbs do end in '-ly' to show manner. Let's look closely at 'ran' and 'quickly' together. What part of speech is 'ran'?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "'Ran' is the verb because it's the action she is doing."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the verb. I will now guide them to synthesize how the adverb connects to that verb.",
+        "state": "Support",
+        "response": "Exactly. Since 'ran' is the verb, and 'quickly' tells us more about that verb, that gives us its exact category. Let's see if you can put it all together."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "So since it describes the verb 'ran', it must be an adverb."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has the right answer, so I need them to articulate the rule in their own words to check their internal understanding.",
+        "state": "Synthesis",
+        "response": "Spot on. In your own words, how would you explain what an adverb does and why 'quickly' fits that definition here?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "An adverb is a word that modifies a verb, adjective, or another adverb. In this case, 'quickly' is an adverb because it's modifying the verb 'ran' by telling us the manner in which she ran."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the concept and rule in their own words. The session is complete.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! You explained that clearly. Great job working through that part of speech!"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "biology",
+    "topic": "Punnett squares / genetics",
+    "problem": "In pea plants, tall stem length (T) is dominant over dwarf (t), and yellow seed color (Y) is dominant over green (y). If you cross a true-breeding tall, yellow plant with a true-breeding dwarf, green plant, and then self-cross the F1 generation, what proportion of the F2 offspring will exhibit the recessive phenotype for both traits (dwarf and green)?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Since we're crossing two traits, I set up a big 4x4 Punnett square for the F1 cross. The parents of the F1 are TTYY and ttyy, so all the F1 offspring are TtYy. For the F2, I crossed TtYy with TtYy, and since both recessive traits together need ttyy, I just counted that out of 16 boxes, which gave me 1 out of 16, or 6.25%."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified the F1 genotype and the overall setup, but I need to understand how they mapped out the gametes before evaluating their grid results.",
+        "state": "Diagnosis",
+        "response": "You've correctly found the F1 genotype and the target phenotype. How did you determine which allele combinations go on the top and side axes of your F2 Punnett square?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "For the axes, I just put all four alleles from the parent in order, so I wrote TTYY across the top and ttyy down the side."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has explicitly asserted an incorrect rule by putting full diploid genotypes on the axes instead of haploid gametes. This is a clear procedural error requiring correction.",
+        "state": "Support",
+        "response": "Wait, remember what gametes actually carry during meiosis. If a parent has the genotype TtYy, how many alleles for each gene does a single sperm or egg receive?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Ah, right, gametes are haploid, so they only get one allele for each gene. That means the possible combinations for TtYy would be TY, Ty, tY, and ty."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student successfully corrected their gamete formation error. Now I need to check how they use those new gametes to fill out the grid.",
+        "state": "Diagnosis",
+        "response": "Exactly. With those correct gametes on your axes, how does that change the way you'd fill in the interior boxes of your Punnett square?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "If I put TY, Ty, tY, and ty on both the top and the left side, I'll get a standard 16-box dihybrid cross grid. Each box will combine one gamete from the row and one from the column."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student understands the grid structure now. Let's see if they can locate the specific double recessive cells without me doing the counting for them.",
+        "state": "Support",
+        "response": "What specific combination of gametes needs to meet in a box to produce an offspring that is both dwarf and green?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Both gametes intersecting in that box would both need to carry 'ty'. Looking at my grid, that only happens in the bottom-right corner where a 'ty' sperm meets a 'ty' egg, which is still just 1 box out of 16."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has arrived at the correct answer through proper reasoning. To ensure complete understanding, I will ask them to synthesize the general rule.",
+        "state": "Synthesis",
+        "response": "In your own words, why does independent assortment in a dihybrid cross consistently result in that 9:3:3:1 phenotypic ratio, and how does the double recessive proportion fit into that?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Independent assortment means the genes segregate into gametes without depending on each other, creating four equally likely gamete types. When you combine two heterozygous parents, the probabilities multiply out across the 16 squares, leading to 9 dominant-dominant, 3 dominant-recessive, 3 recessive-dominant, and 1 double recessive like our ttyy plant."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student correctly explained the concept, so the session is complete.",
+        "state": "Closing",
+        "response": "Spot on! You nailed both the mechanism and the math. Ready to try one involving linked genes next?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Map reading and distance estimation",
+    "problem": "You are planning a backpacking trip using a topographic map with a scale of 1:24,000. Your route starts at a valley trailhead (elevation 1,200 feet), climbs steadily along a winding ridge trail to a scenic viewpoint (elevation 3,800 feet) over a map-measured distance of 4.5 inches, and then drops down a steep switchback descent on the other side to a backcountry campsite (elevation 2,400 feet) over 2.5 inches on the map. Additionally, Naismith's Rule dictates allowing 1 hour for every 2,000 feet of ascent. Considering that trail distance on a winding path is typically 15% longer than the straight-line map distance, and accounting for both the horizontal travel time (assuming an average flat pace of 2.5 miles per hour) and the vertical elevation gain, what is the total estimated time required to complete this hike, rounded to the nearest tenth of an hour?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "So I started by adding up the map distances, which gives me 7 inches total. Since the scale is 1:24,000, that means 1 inch is 24,000 inches, so 7 inches is 168,000 inches. I converted that straight into miles by dividing by 5,280, which gives about 31.8 miles for the whole trip. Then I just calculated the walking time for those miles at 2.5 miles per hour, added the vertical ascent time using Naismith's rule, and figured out the 15% winding adjustment at the very end by adding it to the final hour total."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has attempted a complete calculation but made a major arithmetic error in their distance conversion and applied the winding trail adjustment at the wrong stage of the process. I need to use Diagnosis to gently unpack how they handled the inch-to-mile conversion.",
+        "state": "Diagnosis",
+        "response": "You've laid out a clear overall roadmap for tackling the problem, but let's take a closer look at that initial distance conversion. When you multiplied 7 inches by 24,000 to get total inches, how did you convert that total number of inches into feet before moving to miles?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, wait! I didn't divide by 12 to get feet first. I divided the total inches directly by 5,280, which completely messed up the unit conversion because 5,280 is feet in a mile, not inches in a mile. So 168,000 inches divided by 12 is 14,000 feet, and then dividing 14,000 by 5,280 gives about 2.65 miles of flat map distance."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student successfully caught their unit conversion error and recalculated the map distance correctly. Now I need to check how they plan to apply the 15% winding trail factor, keeping in mind their previous misplaced application of it.",
+        "state": "Diagnosis",
+        "response": "That correction fixes the baseline map distance nicely. Now that we have roughly 2.65 miles of straight-line map distance, how does the 15% winding trail adjustment factor fit into this part of the calculation?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Right, since the trail is winding and we know it's typically 15% longer than the straight-line map distance, I can just take the final total travel time in hours at the end of the problem and multiply that final number by 1.15 to account for the extra distance."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is repeating their earlier error of applying the winding multiplier at the very end of all calculations rather than scaling the distance itself first. I need to use Support to guide them toward adjusting the distance before calculating time.",
+        "state": "Support",
+        "response": "What units is that 15% factor actually modifying, and if you multiply the final time by it, what does that imply about how vertical climbing speed is affected by horizontal trail length?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Ah, I see what you mean. The 15% factor describes the physical distance of the trail being longer than the map, not the time itself. So I should apply that 1.15 multiplier directly to the 2.65 miles of map distance first, which gives us our actual trail distance before we figure out walking speeds."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully corrected the application of the winding factor to the distance metric. Next, I need to check their understanding of the elevation changes, specifically the difference between total elevation change and net elevation change for Naismith's Rule.",
+        "state": "Diagnosis",
+        "response": "Applying that to the distance gives us the correct actual trail length. Now, looking at the elevation profile from 1,200 feet up to 3,800 feet and then down to 2,400 feet, how are you calculating the total vertical ascent that Naismith's Rule requires?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "For the elevation, the start is 1,200 feet and we go up to 3,800 feet, which is an ascent of 2,600 feet. Then we drop down to 2,400 feet. Since Naismith's rule only penalizes going uphill, I just take that 2,600 feet of climbing, divide it by 2,000 feet per hour, and get 1.3 hours for the ascent."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified that the descent doesn't count for Naismith's Rule ascent time and calculated the 2,600-foot climb correctly. They are now ready to synthesize the whole process.",
+        "state": "Synthesis",
+        "response": "That's spot on regarding the ascent versus descent. Now, in your own words, can you walk me through the complete, step-by-step logic we used to arrive at the final total time, summarizing how distance, terrain adjustments, and elevation all combine?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "We first converted the map inches to feet and then to miles, scaled that distance up by 15% to account for the winding trail, and divided by 2.5 miles per hour to get our horizontal walking time. Then we calculated the vertical ascent from the elevation changes, applied Naismith's Rule of 1 hour per 2,000 feet of climbing, and finally added the horizontal and vertical times together for the grand total."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the entire multi-step process accurately. The tutoring session is complete.",
+        "state": "Closing",
+        "response": "Fantastic explanation! You worked through the unit conversions, terrain adjustments, and elevation rules brilliantly. Ready to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Comparing loan/interest offers",
+    "problem": "You want to borrow $10,000 for a car. Offer A is a 3-year loan with a 5% fixed annual interest rate and a $200 origination fee. Offer B is a 4-year loan with a 4.5% fixed annual interest rate and no origination fee. Which loan actually costs you less overall when you factor in both the monthly payments and any upfront costs over the full life of the loan?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Honestly, I'm pretty lost on this one. I just figured Offer B is cheaper because the interest rate is lower at 4.5 percent compared to 5 percent on Offer A, plus Offer A has that extra 200 dollar fee tacked on."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is comparing interest rates and fees on the surface, but hasn't yet considered how the length of the loan changes the total amount of interest paid over time. I need to probe their thinking about duration.",
+        "state": "Diagnosis",
+        "response": "It is definitely tempting to just look at the lower percentage and the extra fee right away! But before we decide, how do you think the different lengths of time—three years versus four years—might affect the total amount of interest you end up paying?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Wait, longer means you pay less each month, right? So stretching it out over four years with Offer B gives you more time, meaning you pay less total interest because the monthly chunk is smaller."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has made a classic conceptual mistake, asserting that a longer loan term means paying less total interest because monthly payments are smaller. I need to challenge this misconception using a supportive question without giving away the answer.",
+        "state": "Support",
+        "response": "That is a really common way to look at the monthly budget, but let us test that idea. If you are paying interest every single month for an extra twelve months on a balance, what happens to the total number of times interest gets added to what you owe?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh... I guess you are paying interest for more months, so even if the monthly bill is smaller, you are paying it for a whole extra year. Does that mean the extra time actually makes it cost more overall?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is starting to re-evaluate loan duration, but needs to check how that interacts with the principal and monthly payment calculations. I will guide them to look closer at what makes up a monthly payment.",
+        "state": "Support",
+        "response": "You are getting right to the core of it! If time adds more total interest cycles, how might we figure out the actual dollar amount you are paying each month for each offer before multiplying it out?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Um, I'm not entirely sure how to calculate the exact monthly payment with the interest rate formulas. Do I just divide the total loan amount by the number of months?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is struggling with the mechanics of amortization and wants to divide simply by months, forgetting the interest is compounding or applied to the remaining balance. I need to redirect their attention to how the interest applies to the starting balance.",
+        "state": "Diagnosis",
+        "response": "If you just divided the ten thousand dollars by the months, what would happen to the percentage rate we talked about earlier? Where does that five percent or four-and-a-half percent fit into that simple division?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Right, the interest percentage applies to the money you still owe each month, so you have to factor that rate into the cost along with the term length and any upfront fees."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student is now pulling the pieces together. I should prompt them to synthesize the overall rule for comparing loan offers in their own words to cement the concept.",
+        "state": "Synthesis",
+        "response": "You have got all the moving parts now. In your own words, what is the best way to determine which loan is truly cheaper when you have different terms, rates, and upfront fees?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "To really know which loan is cheaper, you can't just look at the lowest interest rate or monthly payment. You have to calculate the total cost by multiplying the monthly payment by all the months in the term, and then add in any upfront fees like origination charges to see the true bottom line."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully explained the core concept and reasoning. I am closing the conversation warmly.",
+        "state": "Closing",
+        "response": "Spot on! That is exactly how to break it down. Great work working through that puzzle, and let me know whenever you are ready for another challenge!"
+      }
+    ]
   }
 ]

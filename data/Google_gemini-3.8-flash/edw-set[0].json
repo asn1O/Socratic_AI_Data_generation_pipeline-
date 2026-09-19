@@ -469,5 +469,179 @@
         "response": "Spot on! You distinguished trigger from structure clearly. Ready to move on to the next problem?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Map reading and distance estimation",
+    "problem": "On a trail map, the scale is 1 inch = 2 miles. The trail from Camp Pine to Bear Lake is 3.5 inches, and from Bear Lake to Eagle Peak is 2.5 inches. There is also a 1.5-inch detour along the trail due to trail maintenance. If a hiker walks at an average speed of 3 miles per hour, how many hours will the total hike take?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I added the trail parts, 3.5 plus 2.5, which is 6 inches. Since the scale is 1 inch to 2 miles, I divided by 2 to get 3 miles total for the hike."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student incorrectly divided map inches by the scale factor and ignored the detour entirely. I should elicit their thinking about what a map scale ratio actually represents before addressing the other steps.",
+        "state": "Diagnosis",
+        "response": "Let's look closely at that scale for a moment. If one single inch on paper represents two real miles, how many miles would a two-inch line represent?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I'm honestly lost on this part. I don't really get whether the real world is supposed to be bigger or smaller than the drawing on the map."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student expresses genuine non-understanding regarding map scale. I will provide a brief grounding explanation that real terrain is larger, then prompt them to reconsider their calculation.",
+        "state": "Support",
+        "response": "Maps shrink huge landscapes so they fit on paper, meaning real-world distances are always much larger than the map. If each inch stands for two whole miles, what does that mean for our 6 inches?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, so you multiply! That means 6 inches is 12 miles. And since the hiker travels 3 miles per hour, we multiply 12 miles by 3 to get 36 hours."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student corrected the scale multiplication but made an explicit conceptual mistake by multiplying distance by speed instead of dividing. I need to guide them toward how rate breaks down distance.",
+        "state": "Support",
+        "response": "Think about pacing: if you cover 3 miles in each hour, would walking 12 miles take more than an entire day? How does speed split a total distance into hours?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Right, 12 divided by 3 is 4 hours. But wait, there was also that 1.5-inch detour between the lake and the peak, which would be 0.75 miles extra."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly noticed the missing detour and fixed the time calculation, but resurfaced the earlier misconception by dividing map inches by 2 instead of multiplying. I will remind them of the scale principle.",
+        "state": "Support",
+        "response": "Remember our scale rule from earlier: each map inch contains two real miles, making the actual hike longer. How many real miles does that 1.5-inch detour add?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Right, I divided by mistake again! 1.5 times 2 is 3 miles. So the 12 miles plus 3 miles is 15 miles total. Then 15 divided by 3 mph gives 5 hours total."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully solved every dependent piece and reached the correct answer of 5 hours. Now I want them to synthesize the complete method in their own words.",
+        "state": "Synthesis",
+        "response": "Exactly right! To make sure this sticks, can you summarize the overall steps you need to follow when finding travel time from a scaled map?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "First, you add up every map segment, including detours. Next, you multiply the total inches by the scale factor to get real miles, because reality is bigger. Finally, you divide that total distance by your walking speed to find the hours."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student clearly and accurately articulated the full multi-step procedure. The objective is met, so I can wrap up with an encouraging closing turn.",
+        "state": "Closing",
+        "response": "Spot on! You broke down the entire process clearly and logically. You did fantastic work working through that—ready to tackle the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Sentence structure and clauses",
+    "problem": "Identify the sentence type and analyze the clauses in: 'The chef tasted the soup, which smelled delicious, and he added more salt.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "There's an 'and' connecting them, so I think this is just a compound sentence."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student anchored onto the coordinating conjunction but overlooked the relative clause. I need to draw their attention to that middle clause.",
+        "state": "Diagnosis",
+        "response": "You noticed the conjunction 'and'. How does 'which smelled delicious' fit into that?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "That clause can't stand alone, so it must be a dependent clause."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the dependent clause. Now I need to guide them to recount the remaining independent clauses.",
+        "state": "Support",
+        "response": "Right, relative clauses are dependent. How many independent clauses do you see now?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "There are two: 'The chef tasted the soup' and 'he added more salt'."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student successfully isolated both independent clauses. I will validate their breakdown with a direct confirming statement.",
+        "state": "Support",
+        "response": "Both have a subject and verb, so each can stand alone."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "So we have two independent clauses and one dependent clause."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has the full clause inventory. A brief direct hint about sentence classifications will help them name the structure.",
+        "state": "Support",
+        "response": "Compound sentences have multiple independent clauses, while complex sentences contain dependent ones."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Since it has both kinds, does that make it compound-complex?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student reached the correct answer. Now they should synthesize the underlying rule in their own words.",
+        "state": "Synthesis",
+        "response": "Exactly. In your own words, how do you define a compound-complex sentence?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "It has two or more independent clauses and at least one dependent clause."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student clearly articulated the rule. The exchange is complete, so wrap up warmly.",
+        "state": "Closing",
+        "response": "Spot on! That's exactly how it works. Ready to try another one?"
+      }
+    ]
   }
 ]

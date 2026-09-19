@@ -197,3 +197,29 @@
   expired: True
   failure_categories:
   empty_response: 3
+2026-09-19 21:48:49,838 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-19 21:49:17,895 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=6162 turns=12 path=data/Google_gemini-3.6-flash/edw-set[4].json
+2026-09-19 21:50:17,897 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-19 21:50:48,503 ERROR MODEL_FAILURE provider=Google model=gemini-3.6-flash error_code=HTTP_503 reason=model call failed or returned no response
+2026-09-19 21:51:48,505 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-19 21:52:12,877 ERROR MODEL_FAILURE provider=Google model=gemini-3.6-flash error_code=HTTP_503 reason=model call failed or returned no response
+2026-09-19 21:53:12,876 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-19 21:53:58,297 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=10545 turns=12 path=data/Google_gemini-3.6-flash/edw-set[4].json
+2026-09-19 21:54:58,300 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-19 21:55:24,363 ERROR MODEL_FAILURE provider=Google model=gemini-3.6-flash error_code=HTTP_503 reason=model call failed or returned no response
+2026-09-19 21:56:24,370 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-19 21:57:03,047 ERROR MODEL_FAILURE provider=Google model=gemini-3.6-flash error_code=HTTP_503 reason=model call failed or returned no response
+2026-09-19 21:58:03,054 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-19 21:58:56,153 ERROR MODEL_FAILURE provider=Google model=gemini-3.6-flash error_code=HTTP_503 reason=model call failed or returned no response
+2026-09-19 21:58:56,154 ERROR MODEL_EXPIRED provider=Google model=gemini-3.6-flash reason=three consecutive API failures
+2026-09-19 21:59:56,161 INFO MODEL_SUMMARY
+  provider_model: Google / gemini-3.6-flash
+  attempts: 7
+  saved: 2
+  failed: 5
+  accept_rate: 28.57%
+  average_tokens: 8353.50
+  turn_range: 12-12
+  expired: True
+  failure_categories:
+  empty_response: 5

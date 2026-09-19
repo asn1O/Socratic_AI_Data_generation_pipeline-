@@ -964,5 +964,464 @@
         "response": "Great job! You've mastered that path. Want to try another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "chemistry",
+    "topic": "Periodic table trends",
+    "problem": "Compare the atomic radius of Sodium (Na) and Chlorine (Cl) and determine which atom is larger.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I need to find which is bigger, Sodium or Chlorine, but I'm totally lost on how."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is a beginner and doesn't know where to start. I'll define the term and elicit the location.",
+        "state": "Diagnosis",
+        "response": "Atomic radius is just the size of the atom. How do you find these elements on your table?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I can look them up by symbols. Sodium is on the left and Chlorine is on the right."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student located them in the same row. I will explain shells and probe their understanding of protons.",
+        "state": "Diagnosis",
+        "response": "They are in the same row. What does that tell you about their number of protons?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I think the number of protons stays the same since they are in the same row."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made their first mistake. I'll provide a direct correction of the fact per low socratic level.",
+        "state": "Support",
+        "response": "Actually, the atomic number increases as you move right, so Chlorine has more protons than Sodium."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, okay. I don't really get what that means for the size of the atom though."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student expressed non-understanding of the mechanism. I'll provide a hint using an analogy to guide them.",
+        "state": "Support",
+        "response": "Protons are positive and pull negative electrons inward. Think of a stronger magnet pulling things closer."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "If Chlorine has more protons and a stronger pull, it must be the larger atom."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student made a second mistake. I'll directly explain how pull relates to size to ensure understanding.",
+        "state": "Support",
+        "response": "A stronger pull draws the electrons in tighter, which actually makes the atom's radius smaller."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Oh! So Chlorine pulls its electrons closer, making it smaller. That means Sodium is the larger one."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student reached the correct answer. I'll explain the charge effect directly then ask for a summary.",
+        "state": "Synthesis",
+        "response": "Exactly. More protons increase the positive pull of the nucleus. How would you explain this general rule?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Moving right, atoms get smaller because more protons pull the electrons in tighter toward the nucleus."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student successfully synthesized the rule in their own words, completing the learning objective.",
+        "state": "Closing",
+        "response": "Spot on, you've got it! Want to try another periodic trend?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "history_and_social_studies",
+    "topic": "Timeline reasoning",
+    "problem": "Historical records indicate that a specific ancient trade decree was enacted in 45 BCE. The Western Roman Empire is recorded to have officially ended in 476 CE. Determine the total number of years that elapsed between the enactment of the decree and the fall of the empire.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this timeline problem involving 45 BCE and 476 CE. I know I probably need to combine the two numbers somehow because they are on opposite sides of the era change, but the math feels a bit confusing. Where should I start?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student acknowledges the two different eras but is unsure of the mathematical relationship. I need to gauge their current strategy for handling the transition between BCE and CE.",
+        "state": "Diagnosis",
+        "response": "That is a tricky transition to visualize. How do you usually approach calculating the total amount of time when a timeline crosses from the BCE era over into the CE era?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, I thought about treating BCE like negative numbers and CE like positive numbers. But I remember hearing that history doesn't work exactly like a number line in a math class. Is it just as simple as adding the two numbers together?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is correctly questioning the 'number line' analogy. I want to point them toward the specific anomaly in the historical timeline—the absence of year zero—without telling them directly.",
+        "state": "Diagnosis",
+        "response": "If we focus specifically on the transition from the end of 1 BCE to the beginning of 1 CE, how many years have actually passed in that specific gap?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "It goes straight from the end of 1 BCE to the start of 1 CE, so that is only one year of time. But on a math number line, the jump from -1 to 1 would be two units because you pass through zero. Is that the difference?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has identified the lack of a year zero. I need to see if they can now figure out how that specific gap affects the calculation for the whole span.",
+        "state": "Diagnosis",
+        "response": "Since the historical timeline skips the 'zero' value used in mathematics, how might that absence affect the way we sum the total distance between these two different eras?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I think I see! Since there is no zero to worry about, we can just jump directly across the middle. If I add 45 and 476, I get 521. So the total time elapsed must be exactly 521 years, right?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student made the common mistake of adding the numbers without adjusting for the missing year zero, resulting in an answer that is off by one. I will provide a hint to help them self-correct.",
+        "state": "Support",
+        "response": "If the math of adding 1 and 1 suggests a two-year gap, but we previously agreed the actual historical transition is only one year, how should we adjust our total of 521?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, right! If the math addition assumes a zero exists, it's counting an extra year that isn't actually there. So I need to take that extra year away. 521 minus 1 is 520 years. Is that the correct length?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has reached the correct answer. Now I need them to articulate the general principle to ensure they can apply this logic to future timeline problems.",
+        "state": "Synthesis",
+        "response": "Now that you have found the correct total, how would you summarize the general rule for calculating the time elapsed between BCE and CE dates for someone else?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The rule is that you add the two years together just like absolute values, but then you have to subtract one from the sum. This accounts for the fact that the timeline skips from 1 BCE to 1 CE without a year zero."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the concept and the reasoning behind the calculation. The session is complete.",
+        "state": "Closing",
+        "response": "Perfectly explained! That 'no year zero' rule trips up a lot of people, but you handled the logic beautifully. Ready to try another timeline challenge?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "biology",
+    "topic": "Food chains and ecosystems",
+    "problem": "In a simple meadow ecosystem, grass is the primary food for rabbits. If a drought kills all the grass in the field, what will happen to the rabbit population?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "If the grass is gone, maybe the rabbits will just start eating the foxes instead?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has a misconception about animal diets. I need to clarify their role as herbivores to see if they understand food dependency.",
+        "state": "Diagnosis",
+        "response": "Rabbits are herbivores and only eat plants. What happens to an animal when its only food source disappears?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I don't really get what that means. Do they just go to sleep?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is confused about the biological necessity of food. I'll explain the role of energy directly.",
+        "state": "Support",
+        "response": "Food provides energy for staying alive. Without any grass, rabbits have no way to get energy."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, so they just wait for the grass to grow back from the dirt?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is ignoring the immediate threat of starvation. I will explain the time factor and survival directly.",
+        "state": "Support",
+        "response": "Grass takes a long time to grow. Without food today, animals will starve or must leave."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "So if there is no grass at all, the rabbits can't live there anymore?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is starting to connect habitat survival to food. I'll introduce the terms for these roles.",
+        "state": "Support",
+        "response": "That's correct. Consumers like rabbits depend entirely on producers like grass to survive."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I'm lost on how they survive if they can't find anything else."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student is struggling with the concept of energy entry. I'll explain the plant's role as the start.",
+        "state": "Support",
+        "response": "Plants are the only source of energy for this ecosystem. No plants means no energy for anyone."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I see now. The rabbits would die or move away because their only energy source is gone."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student reached the correct conclusion. Now I need them to explain the general principle of dependency.",
+        "state": "Synthesis",
+        "response": "Spot on. In your own words, why does the food chain fail without the plants?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Producers like plants make the energy, and consumers need them because they can't make their own food."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully synthesized the concept of producers and consumers. The session is complete.",
+        "state": "Closing",
+        "response": "Exactly, that is a perfect explanation! Ready to try another food chain problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Supply and demand",
+    "problem": "Suppose a city implements a strict price ceiling on all rental apartments to keep housing affordable. At the same time, the city council introduces a new \"property maintenance tax\" that landlords must pay for every unit they rent out. Using the principles of supply and demand, explain what happens to the total number of apartments actually rented out in the long run.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this problem and I'm a bit stuck. I know a price ceiling is supposed to keep rent low, which sounds like it should help people find homes, but I'm confused about the tax part. If the price is legally capped, does the tax even matter to the renters, or do the landlords just have to pay it while the renters get a good deal?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student understands the basic intent of a price ceiling but hasn't connected how costs (the tax) affect supply. I need to diagnose if they understand the general relationship between production costs and supply.",
+        "state": "Diagnosis",
+        "response": "That is a great starting point for our analysis. To help us build the full picture, how do you think a new, mandatory tax generally affects a business owner's willingness to supply a service, regardless of any price laws? In a normal situation, does an increase in operating costs usually make them want to offer more or less of that service to the public?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, usually if costs go up, like for a coffee shop or something, they would probably raise their prices to make up for it so they don't lose money. But since they can't raise prices here, maybe they'd just sell less? I guess for apartments, they might not want to rent out as many if it's too expensive to run them."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified that businesses usually raise prices to cover costs and realizes that the ceiling prevents this. I'll provide support to help them think about what 'selling less' looks like in a rental market.",
+        "state": "Support",
+        "response": "You've hit on a really important tension! In a normal market, businesses do try to pass costs to customers by raising prices, but a price ceiling is a legal maximum that they cannot cross. Since the rent is already stuck at that legal limit, the landlord is forced to pay that tax themselves. How do you think that extra financial burden changes the math for them in the long run?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "It seems like they'd be making a lot less profit, or maybe none at all. I'm just not sure if they can actually change anything, though. I mean, the building is already there, right? So wouldn't they just keep renting it out anyway because making some money is still better than making no money at all?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is struggling with the concept of long-run supply and thinks the quantity is fixed. I need to diagnose if they can see alternative uses for a property when it becomes unprofitable.",
+        "state": "Diagnosis",
+        "response": "That's a very logical question to ask because buildings don't just disappear. However, we have to look at the 'long run' specifically. If an apartment building is no longer making a profit due to the combination of the tax and the price cap, what other options might a property owner have for that building besides renting it out to tenants?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I guess they don't have many options. Since people always need a place to live, the government would probably force them to keep the units as rentals, so the supply of apartments would stay exactly the same even if the landlords are unhappy and losing money on the maintenance taxes."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has made an explicit mistake by assuming supply is perfectly inelastic or fixed by the government. I need to support them by hinting at how supply can shift as owners exit an unprofitable market.",
+        "state": "Support",
+        "response": "That's an interesting thought, but in most market economies, property owners still have choices. If a rental unit is losing money because of the tax and the price cap, a landlord might decide to convert the building into luxury condos for sale or even office space where the price ceiling doesn't apply. If landlords start doing that over time, what happens to the total number of apartments available for rent?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, I see now. They would take the apartments off the rental market and use them for something else that makes more money. So the supply of rentals actually goes down. It's like the price ceiling makes people want to rent more, but the tax and the cap together make landlords want to provide way less than before."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully connected the tax and price ceiling to a decrease in supply. Now I need to move to synthesis to ensure they can explain the interaction of the two policies on the final quantity.",
+        "state": "Synthesis",
+        "response": "Exactly! You've realized that the supply isn't just a fixed number; it responds to costs and legal limits. When the price is forced low, more people want to rent, but the tax makes landlords want to provide even less than they did before. Can you summarize for me how these two policies work together to affect the final quantity of apartments actually available for rent?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Basically, the price ceiling creates a shortage because more people want cheap apartments than there are units available at that price. Then, when you add a maintenance tax on top of that, it makes it even more expensive for landlords to operate. Since they can't raise the rent to cover the tax, they stop renting out units and use the buildings for other things. So in the end, the total number of apartments for rent drops even further, making the housing shortage even worse than it was with just the ceiling."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has provided a clear, accurate explanation of the interaction between the two policies and their effect on supply and the resulting shortage. The learning goal is achieved.",
+        "state": "Closing",
+        "response": "Spot on, you've got a great handle on how those market forces interact! It's a tricky balance for policymakers to strike, as you've clearly seen how these individual shifts compound to create a much larger effect on the market. Want to try another scenario with a different kind of market shift?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Scaling a recipe",
+    "problem": "You are preparing a gourmet sauce for a large gathering. The original recipe serves 4 people and requires 2.5 cups of heavy cream and 3/4 teaspoon of salt. You need to scale this recipe to serve exactly 14 people. However, your kitchen is limited: you only have a 1/3 cup measuring scoop, a 1/4 teaspoon, and a 1/2 teaspoon. How do you accurately scale the recipe, and how many of each specific measuring tool will you use for the cream and the salt to be as precise as possible?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm trying to scale this sauce recipe from 4 servings to 14. Since 14 is pretty close to 12, I think I should just triple all the ingredients to keep the math simple? That would mean for the cream, I'd take 2.5 cups and multiply by 3, which gives me 7.5 cups total. I'm just not sure how to measure that out with a 1/3 cup scoop."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is using an incorrect multiplier by rounding the target servings. I need to diagnose their understanding of ratios to guide them toward the exact scaling factor of 3.5.",
+        "state": "Diagnosis",
+        "response": "Could you walk me through your reasoning for choosing to triple the recipe ingredients when our goal is to feed exactly fourteen people? If we prepared enough for only twelve guests as you suggested, how might that affect the portion sizes for everyone, and what calculation would give us the exact ratio between four and fourteen?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, I see your point. If I only make enough for 12, the 14 guests will get smaller portions. 14 divided by 4 is actually 3.5, so that should be my multiplier. For the cream, 2.5 times 3.5 is 8.75 cups. To find the scoops, I guess I divide 8.75 by 1/3, which comes out to 26.25 scoops. But how do I measure a quarter of a scoop?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student found the correct multiplier and total volume but is struggling with the fractional scoop. I'll support them by suggesting they break the total volume into more manageable parts.",
+        "state": "Support",
+        "response": "How would you envision measuring out exactly zero point two five of a one-third cup scoop in a real kitchen setting? Since eight point seven five cups is the same as eight and three-quarters cups, might it be easier to determine how many whole thirds are in the eight cups first and then address the remaining fraction separately?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "That makes sense. Since there are 3 thirds in every cup, 8 cups would be 24 of the 1/3 cup scoops. Then I just have 3/4 of a cup left over. I think 3/4 of a cup is equal to 2 and a quarter of those 1/3 cup scoops? It still leaves me with that weird quarter of a scoop at the end, which feels hard to get right."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is still struggling with the remainder. I will provide support by nudging them to think about the remaining 3/4 cup in terms of a common denominator or a different measurement approach.",
+        "state": "Support",
+        "response": "Since measuring a quarter of a scoop is imprecise, what if we looked at that remaining three-quarters of a cup differently? If one-third of a cup is about zero point three three and three-quarters is zero point seven five, how many full one-third scoops can you fit into that remainder, and is there any other tool you might use for the final tiny bit?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Okay, 0.75 is two full thirds plus a little more, so 26 scoops total gets me to 8.66 cups. I'll just leave it at that. For the salt, the original is 3/4 tsp. Multiplying 0.75 by 3.5 gives me 2.625 teaspoons. I'll probably just use five of the 1/2 tsp measures because 2.5 tsp is close enough to 2.625, right?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student made a second mistake by rounding the salt measurement down. I need to support them in finding a more precise way to measure the 0.125 remainder using the 1/4 tsp tool.",
+        "state": "Support",
+        "response": "If you use five half-teaspoon measures to reach two point five, how much of the original two point six two five teaspoons remains unmeasured? Since we have a one-quarter teaspoon tool available, how does that leftover zero point one two five teaspoons relate to a quarter-teaspoon, and how might you use that tool to be more precise?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Wait, 2.625 minus 2.5 is 0.125. I just realized that 0.125 is exactly half of 0.25! That means the leftover bit is exactly half of a 1/4 teaspoon. So, I would use five of the 1/2 tsp measures to get to 2.5, and then I'd just fill the 1/4 tsp measure halfway to get the final 0.125. That gets me the exact total!"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully solved the scaling and measurement problem. Now I want them to synthesize the general rule for scaling recipes and handling tool constraints.",
+        "state": "Synthesis",
+        "response": "You've navigated those complex fractional conversions beautifully! Now that you have worked through the cream and the salt using these specific tools, how would you describe the general steps someone should follow to scale any recipe accurately when they are limited by the measuring tools they have on hand?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "First, you find the scaling factor by dividing the servings you want by the servings the recipe makes. Then, you multiply every ingredient by that factor. To measure it out with specific tools, you divide the total amount by the tool size to get the number of scoops, and if there's a remainder, you look for a smaller tool or a way to divide a scoop to stay as precise as possible."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the concept and the process, so I am wrapping up the conversation.",
+        "state": "Closing",
+        "response": "That is a perfect summary of the process! You handled those tricky fractional measurements like a pro, and your strategy for breaking down the remainders was very impressive. Ready to try another scaling problem, perhaps with some metric units next time?"
+      }
+    ]
   }
 ]

@@ -1003,5 +1003,353 @@
         "response": "Spot on! Your systematic approach made a complex path very manageable. Ready for another challenge?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "chemistry",
+    "topic": "Balancing chemical equations",
+    "problem": "Balance the following chemical equation for the combustion of propane: C3H8 + O2 -> CO2 + H2O",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Okay, I'll start with the carbons. There are 3 on the left, so I'll put a 3 in front of CO2. That gives me 3 carbons on each side. Now for the hydrogens, I have 8 on the left, so I'll put a 4 in front of H2O to make 8. I think I'm almost there."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly balanced C and H but hasn't addressed O. I need to see how they plan to handle the oxygen atoms without giving away the method.",
+        "state": "Diagnosis",
+        "response": "You've handled the carbon and hydrogen atoms quite efficiently! Now that you've set those coefficients for the products, how are you planning to approach the oxygen atoms? Walk me through how you're counting them on the product side right now."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "So on the right, I have 3 * 2 = 6 oxygens in CO2 and 4 in H2O, which is 10 total. Since I have O2 on the left, I'll just change it to O10 so it matches perfectly. That makes the equation C3H8 + O10 -> 3CO2 + 4H2O."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student made a classic 'advanced' slip by changing a subscript to balance the equation. I need to remind them that molecular identities are fixed.",
+        "state": "Support",
+        "response": "Remember that in a chemical equation, we have to keep the identity of the molecules exactly as they are given in the problem. If we change O2 to O10, we're essentially changing the substance itself into something that doesn't exist as a stable molecule. What's the alternative way to increase the number of atoms without altering the molecule's formula?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Right, I can't change the formula, I have to use coefficients. So I have 6 oxygens in the CO2 and 4 in the water, totaling 10. If I put a 10 in front of the O2, that gives me 20 atoms, which is too many. I'll just put a 4 in front of O2, which is 8, and then I'll just add two more oxygens to the O2 to make it O4."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is repeating the mistake of changing the subscript despite the previous correction. I will use a more direct mathematical prompt to steer them back to coefficients.",
+        "state": "Support",
+        "response": "It looks like we're sliding back into changing the molecular formula again! Let's stick strictly to the coefficients. If you need exactly 10 oxygen atoms on the left side, and you can only use the molecule O2, what number multiplied by 2 gives you exactly 10?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Oh, I see what I was doing. That's just a 5. So it's C3H8 + 5O2 -> 3CO2 + 4H2O. Now let me re-verify everything one last time. Carbon is 3 on both sides. Oxygen is 10 on both sides. Hydrogen... wait, I have 8 on the left, but I just realized I wrote a 3 in front of the H2O in my notes, so that's only 6. I'll just change the C3H8 to C3H6 to make it match."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is attempting to balance the equation by changing the reactant formula, another common edge-case error for students who are rushing. I need to emphasize that reactants are fixed.",
+        "state": "Support",
+        "response": "Be careful there; we can't change the propane (C3H8) into propene (C3H6) just to make the numbers work for a specific coefficient. The reactants are fixed parts of the chemical identity. Since you have 8 hydrogens on the left, what coefficient should actually be in front of the H2O to keep the count balanced?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I keep trying to cheat the formulas! I need a 4 in front of the water. So the final equation is C3H8 + 5O2 -> 3CO2 + 4H2O. Let's check again: C is 3 vs 3. H is 8 vs 4 * 2 = 8. O is 5 * 2 = 10 vs (3 * 2) + 4 = 10. Everything finally matches up!"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully balanced the equation. Now I need to move to synthesis to ensure they understand the underlying principle.",
+        "state": "Synthesis",
+        "response": "Perfect, you've nailed the coefficients and verified the counts. Now, to make sure this is locked in, can you explain the fundamental chemical principle that requires us to balance these equations in the first place? Why is it logically impossible to have different atom counts on each side?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "It's based on the Law of Conservation of Mass. Basically, matter cannot be created or destroyed during a chemical reaction. So, whatever atoms you start with in the reactants have to be exactly the same atoms that end up in the products, they just get rearranged into new molecular structures."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly articulated the Law of Conservation of Mass, completing the pedagogical goal.",
+        "state": "Closing",
+        "response": "Spot on! You've got a great handle on both the process and the theory now. Ready to try another one, or are you all set for today?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "computer_science_light",
+    "topic": "Tracing a simple algorithm by hand",
+    "problem": "Trace the following algorithm by hand using the list [3, 7, 2, 9, 5]:\n\nmax_val = list[0]\nfor i from 1 to len(list) - 1:\n    if list[i] > max_val:\n        max_val = list[i]\nreturn max_val",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Okay, I'm starting the trace. I see that max_val is initialized to the first element, which is 3. Then the loop starts at index 1, which is the value 7. Since 7 is definitely bigger than 3, max_val becomes 7. I think the next step is to check index 2, but I'm slightly confused if the loop condition means it stops before the last element or includes it?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is uncertain about the loop boundary condition. I need to elicit their understanding of the comparison operator to resolve this.",
+        "state": "Diagnosis",
+        "response": "To clear up that confusion, could you explain how you typically interpret the 'less than' operator in a loop boundary? If the length of the list is 5, and the condition is i < 5, what are the specific values that i can take before the condition becomes false?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Right, if i < 5, it goes 1, 2, 3, and 4. So it stops just before 5. Okay, so after 7, it checks index 2, which is the value 2. Since 2 isn't greater than 7, max_val stays 7. Then it hits index 3, which is 9. Since 9 is greater than 7, max_val becomes 3 because that's the current index."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student mistakenly assigned the index (3) to max_val instead of the value at that index (9). I will guide them back to the assignment line.",
+        "state": "Support",
+        "response": "Could you look closely at the assignment line 'max_val = list[i]' and tell me what exactly is being assigned to the max_val variable when the condition is met? Is it the position of the element or the value stored at that position?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, my bad! I completely swapped them. It should be the value, so max_val becomes 9. Now we're at the last element, index 4, which is the value 5. Wait, is 5 greater than 9? No, but since it's the last element of the list, I should probably update max_val to 5 anyway just to ensure the end of the list is captured."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is attempting to force an update on the final element despite the condition being false. I need to redirect them to the logic of the if-statement.",
+        "state": "Support",
+        "response": "If we look at the if statement 'if list[i] > max_val', does the code provide any special instructions or exceptions for the final element of the list? What happens if the condition is simply not met, regardless of where we are in the array?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "You're right, the code doesn't care if it's the last element; it only cares if the value is actually larger. So 5 is not larger than 9, so max_val stays 9. But wait, I just realized—if the list was [3, 7, 2, 9, 10], the loop would end at index 4, and since i < 5, it would actually miss the 10 because the loop only goes up to 4?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is experiencing a recurring confusion with 0-indexing and boundaries, thinking the last index is excluded from the loop. I'll ask them to map the indices to the elements.",
+        "state": "Support",
+        "response": "If the list is [3, 7, 2, 9, 10] and the length is 5, and the loop runs for i = 1, 2, 3, and 4, which elements are being checked? Does index 4 correspond to the fourth element or the fifth element in a zero-indexed list?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Right, index 0 is the first, so index 4 is actually the fifth element. So it would check the 10. My mistake, I keep thinking the last index is length - 1 but then doubting if it includes that last one. Okay, so for the original list [3, 7, 2, 9, 5], the final answer is definitely 9."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully reached the correct answer and resolved their boundary confusion. Now I want them to internalize the general algorithm pattern.",
+        "state": "Synthesis",
+        "response": "It looks like you've nailed the trace! To make sure this clicks for other problems, how would you describe the general strategy this algorithm uses to find the maximum value? If you had to explain the logic to a classmate without using the code, what would you say?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I'd say it's like a competition. You start by assuming the first person is the winner. Then you go through the rest of the line one by one; if you find someone taller than the current winner, that new person becomes the winner. By the time you reach the end of the line, the person you're holding as the winner must be the tallest overall."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has provided a clear and accurate conceptual explanation of the algorithm. The session is complete.",
+        "state": "Closing",
+        "response": "That is a perfect analogy! You've got the logic and the tracing down perfectly. Ready to move on to something a bit more complex?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Sampling bias",
+    "problem": "A researcher wants to find the average income of residents in a city. They survey people leaving a luxury shopping mall on a Tuesday afternoon. Is this sample representative?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think it's biased, but I'm not sure why. They are in the city, right?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student senses a problem but lacks a concrete reason. I need to elicit their thinking about the location.",
+        "state": "Diagnosis",
+        "response": "Why does the location make you think it might be biased?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Actually, it's probably fine because the mall is open to everyone in the city."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is making an incorrect claim about accessibility. I'll guide them to consider the specific timing and venue.",
+        "state": "Support",
+        "response": "True, but does everyone visit a luxury mall on a Tuesday afternoon?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "No, probably just people who don't work or have a lot of money."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the skewed demographic. Now I need to see if they can connect this to the resulting data.",
+        "state": "Diagnosis",
+        "response": "Exactly. How does that change the income data you'd collect?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "It'll be higher, but if they survey 1,000 people there, it'll average out."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student incorrectly believes sample size corrects for selection bias. I need them to consider the population gaps.",
+        "state": "Support",
+        "response": "Would adding more people from the same mall include those who never shop there?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "No, it wouldn't. It would just give more high-income responses."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student now understands the flaw. I will ask them to generalize this into a definition.",
+        "state": "Synthesis",
+        "response": "You've spotted the issue. How would you describe this kind of sampling error?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "It's sampling bias, where the group chosen doesn't represent the whole population fairly."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly defined the concept in their own words.",
+        "state": "Closing",
+        "response": "Spot on! You've got it. Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Elasticity of demand",
+    "problem": "A company sells 100 units of a product at $10. They raise the price to $12, and demand falls to 70 units. Calculate the price elasticity of demand and explain if it is elastic or inelastic.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think I just divide 70 by 100 for the change?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is calculating a ratio instead of a percentage change, showing a fundamental gap in the first step.",
+        "state": "Diagnosis",
+        "response": "You need the percentage change. That is the change divided by the original value."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "So 70 divided by 100 is 70%?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is using the final quantity instead of the difference; needs direct correction.",
+        "state": "Support",
+        "response": "No, subtract first. 70 minus 100 is -30, so it's a 30% drop."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I don't really get what that means."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student is stuck on the concept of percent change; requires a direct explanatory statement.",
+        "state": "Support",
+        "response": "Percent change is just the difference over the starting amount. Now find the price's percent change."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Price went from 10 to 12, so that's 12%?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is confusing the price value with the percentage; needs explicit guidance.",
+        "state": "Support",
+        "response": "It increased by 2. 2 divided by 10 is 20%. Now divide the quantity change by the price change."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "-30 divided by 20 is -1.5. Since it's negative, is it inelastic?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student is misinterpreting the negative sign as inelasticity, a common conceptual mistake.",
+        "state": "Support",
+        "response": "We use the absolute value. 1.5 is greater than 1, which means it's elastic."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "So it's 1.5. It's elastic because the quantity changed more than the price did."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly calculated the value and explained the reasoning behind the elasticity.",
+        "state": "Closing",
+        "response": "Exactly right! You've got it. Ready for the next one?"
+      }
+    ]
   }
 ]
