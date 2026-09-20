@@ -1,0 +1,178 @@
+{
+  "problem": "A historian finds a letter dated 1848 in which the writer says, 'I was born twenty years before the War of 1812 began.' The War of 1812 began in 1812. In what year was the letter writer born, and how old were they when the letter was written?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "Okay so... the letter is from 1848, and the war started in 1812. I think I need to figure out when they were born, but I'm not sure how the 'twenty years before' part works. Do I subtract from 1848 or from 1812?"
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student is unsure which date anchors the 'twenty years before' clause, so I need to hear how they're reading the sentence before offering any direction.",
+      "state": "Diagnosis",
+      "response": "Good question to start with. Let's slow down and look at the sentence itself: 'I was born twenty years before the War of 1812 began.' When you read that, what event is the person's birth being compared to — the letter, or the war?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Hmm, reading it again... it says 'before the War of 1812 began,' so the birth is being compared to the war, not the letter. So I think I subtract from 1812?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Wait, I already said that. So twenty years before 1812 would be... 1792? Is that the birth year?"
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student has correctly anchored to the war and computed 1792. I want them to check this against the timeline themselves rather than just confirming it, building the verification habit.",
+      "state": "Support",
+      "response": "You've got a candidate — 1792. Before we lock it in, let's sanity-check it. If someone was born in 1792 and the war started in 1812, does 'twenty years before' actually hold up? How would you check that gap?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "1812 minus 1792 is 20, so yeah, exactly twenty years before the war. That checks out. So they were born in 1792. But the problem also asks how old they were in 1848, and I'm not totally sure if I just subtract again or if there's a trick."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student verified the birth year correctly and now hesitates on the age calculation. No real trick exists; I should prompt them to think about what 'age' means as a relationship between two dates.",
+      "state": "Diagnosis",
+      "response": "No trick hiding here — but tell me, when we say someone's age at a certain moment, what are we really measuring? What two points in time does an age connect?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "I guess age is just the time between when you were born and the date you're talking about. So here it'd be the gap between 1792 and 1848."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student has articulated the right relationship. Now I just nudge them to actually carry out the computation they described.",
+      "state": "Support",
+      "response": "Exactly — age is the distance between birth year and the year you're asking about. So go ahead: what's 1848 minus 1792?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "1848 minus 1792... that's 56. So they were 56 years old when they wrote the letter. That feels like a lot for the time period but mathematically it works."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "The student has both answers correct: born 1792, age 56. Time to have them pull the whole timeline together in their own words so the reasoning consolidates.",
+      "state": "Synthesis",
+      "response": "That's right — 56 years old. Now let's put the whole picture together. Can you walk me through the full timeline, from birth to war to letter, and explain how each date relates to the others?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "Sure. The person was born in 1792, which is twenty years before the war started in 1812. Then the letter came way later, in 1848. So on a timeline it's birth first, then the war twenty years later, then the letter thirty-six years after that. And their age when writing is just 1848 minus 1792, which is 56."
+    },
+    {
+      "turn": 12,
+      "speaker": "tutor",
+      "reasoning": "The student laid out the full timeline correctly. Now I want them to state the general principle — the rule they used — rather than just this specific case.",
+      "state": "Synthesis",
+      "response": "Beautifully laid out. One step further: if you had to give someone a general rule for solving any 'how many years before or after' timeline problem like this, what would you tell them to do?"
+    },
+    {
+      "turn": 13,
+      "speaker": "student",
+      "text": "I'd say first figure out which event the clue is anchored to — like here the birth was tied to the war, not the letter. Then you just subtract or add to move backward or forward from that anchor date. And age is always just the later date minus the birth date. Basically, put everything on a number line and count the gaps."
+    },
+    {
+      "turn": 14,
+      "speaker": "tutor",
+      "reasoning": "The student has clearly articulated the general rule in their own words — anchoring, then counting gaps on a timeline. The concept is fully internalized, so it's time to close warmly.",
+      "state": "Closing",
+      "response": "That's exactly it — anchor to the right event, then count the gaps. You worked through that really nicely. Ready to try another timeline puzzle?"
+    }
+  ]
+}
+
+
+{
+  "problem": "Maya won a pair of concert tickets in a radio contest — she paid nothing for them. She could sell them online for $120. If she goes to the concert instead, she'll spend $30 on parking and gas, and going to the concert means missing a 4-hour babysitting gig that pays $15 per hour. What is the true opportunity cost of Maya attending the concert, and why?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "Okay so... the tickets were free, so I feel like the concert basically costs her nothing? Like, maybe just the $30 for parking and gas? But that seems too simple, so I'm guessing I'm missing something."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student has latched onto the money actually leaving Maya's pocket (the $30) and ignored everything she gives up by attending. I need to first understand how she's thinking about 'cost' before steering her, so I'll diagnose her current approach.",
+      "state": "Diagnosis",
+      "response": "Good instinct that it's more than $30 — you're right to be suspicious of the simple answer. Let me ask you something first: when we say 'cost' in economics, are we only talking about money that leaves your wallet? Think about what Maya gives up by choosing the concert. Walk me through everything she's sacrificing, not just what she pays for."
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Hmm, well, she's giving up the babysitting money, I guess. Four hours at $15, so that's $60 she doesn't earn. But the tickets were free, so I don't think they count as a cost of anything?"
+    },
+    {
+      "turn": 3,
+      "speaker": "tutor",
+      "state": "Support"
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student correctly identified the forgone babysitting income ($60) but is stuck on the 'free ticket' intuition — a classic trap. I'll give a direct reframe (low socratic level) with a hint that points at resale value without computing anything for her.",
+      "state": "Support",
+      "response": "You're exactly right about the $60 — earning nothing that night is a real cost. Now, about those 'free' tickets: free to get doesn't mean free to keep. Here's the key — by using the ticket, Maya is giving up whatever the ticket could have gotten her. What's the alternative if she doesn't go to the concert? What could she actually do with that ticket?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Ohh, she could sell it for $120. So going to the concert means giving up that $120 too? Even though she never paid for it in the first place?"
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student just had the key insight — the resale value counts even though the tickets were free — but she's still tentative. I'll confirm it directly and push her to now assemble the full picture herself.",
+      "state": "Support",
+      "response": "Exactly — that $120 is money in her pocket that she chooses to walk away from. You either sell the ticket or you watch the concert; you can't do both. So tell me now: if you put everything together, what are all the things Maya gives up by attending, and what's the total? Lay it out piece by piece."
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Okay, so: $120 from not selling the ticket, $60 from not babysitting, and $30 for parking and gas. So... $210 total? I think that's it, but I'm not totally sure whether all three really belong in there or if some of them overlap."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student reached $210 with all three components, but she voices reasonable uncertainty about whether items overlap or all count. I'll validate the answer and then test her understanding with a quick boundary case so it's robust, not memorized.",
+      "state": "Support",
+      "response": "$210 is correct, and all three belong — none of them overlap, because each is a separate thing she sacrifices: one is spending, one is foregone earnings, one is a foregone resale. Here's a quick check to make sure the idea sticks: what if the tickets were completely worthless — she couldn't sell them to anyone, not even for a dollar? What would the opportunity cost be then?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "Then it would just be the $60 babysitting money plus the $30 parking — so $90. Because a ticket you can't sell isn't worth anything, so giving it up costs you nothing."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "The student handled the variation perfectly, showing she really grasps that opportunity cost depends on the value of what's given up, not what was paid. She's ready to articulate the general principle in her own words.",
+      "state": "Synthesis",
+      "response": "Perfect — that's exactly right, and it shows you're not just pattern-matching numbers. So now, stepping back from Maya: how would you describe opportunity cost in general, in your own words? What's the actual rule for figuring it out in any situation?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "It's basically the value of everything you give up when you choose something — not just the money you spend, but also what you could've earned or gotten by doing the next best thing instead. What you paid to get something originally doesn't matter; what matters is what it's worth to you right now and what alternatives you're sacrificing."
+    },
+    {
+      "turn": 12,
+      "speaker": "tutor",
+      "reasoning": "The student explained the concept fully and correctly in her own words, capturing both forgone spending and the irrelevance of sunk acquisition price. The learning goal is met, so it's time to wrap up warmly.",
+      "state": "Closing",
+      "response": "Nicely said — that's opportunity cost exactly. You worked through the tricky 'free ticket' part all on your own. Want to try another one, maybe with a business decision this time?"
+    }
+  ]
+}
