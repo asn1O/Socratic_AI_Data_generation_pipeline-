@@ -351,3 +351,59 @@
   expired: False
   failure_categories:
   turn_count_out_of_range: 2
+2026-09-20 07:11:49,341 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-20 07:11:54,600 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3192 turns=12 path=data/Google_gemini-3.5-flash-lite/asn-set[7].json
+2026-09-20 07:12:54,601 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-20 07:13:00,858 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3709 turns=12 path=data/Google_gemini-3.5-flash-lite/asn-set[7].json
+2026-09-20 07:14:00,858 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-20 07:14:05,451 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3233 turns=12 path=data/Google_gemini-3.5-flash-lite/asn-set[7].json
+2026-09-20 07:15:05,452 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-20 07:15:12,832 INFO REJECTED_RESPONSE_SAVED provider=Google model=gemini-3.5-flash-lite path=data/rejected_responses/asn-Google_gemini-3.5-flash-lite.txt
+2026-09-20 07:15:12,832 ERROR JSON_INVALID provider=Google model=gemini-3.5-flash-lite reason=invalid JSON: Expecting ',' delimiter
+2026-09-20 07:16:12,833 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-20 07:16:18,777 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3534 turns=12 path=data/Google_gemini-3.5-flash-lite/asn-set[7].json
+2026-09-20 07:17:18,777 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-20 07:17:23,494 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3412 turns=12 path=data/Google_gemini-3.5-flash-lite/asn-set[7].json
+2026-09-20 07:18:23,495 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-20 07:18:29,107 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3635 turns=12 path=data/Google_gemini-3.5-flash-lite/asn-set[7].json
+2026-09-20 07:19:29,108 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-20 07:19:35,081 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3713 turns=12 path=data/Google_gemini-3.5-flash-lite/asn-set[7].json
+2026-09-20 07:20:35,081 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-20 07:20:38,787 INFO REJECTED_RESPONSE_SAVED provider=Google model=gemini-3.5-flash-lite path=data/rejected_responses/asn-Google_gemini-3.5-flash-lite.txt
+2026-09-20 07:20:38,788 ERROR JSON_INVALID provider=Google model=gemini-3.5-flash-lite reason=turn count 10 outside [12, 18]
+2026-09-20 07:21:38,788 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-20 07:21:42,240 INFO REJECTED_RESPONSE_SAVED provider=Google model=gemini-3.5-flash-lite path=data/rejected_responses/asn-Google_gemini-3.5-flash-lite.txt
+2026-09-20 07:21:42,240 ERROR JSON_INVALID provider=Google model=gemini-3.5-flash-lite reason=turn count 10 outside [12, 18]
+2026-09-20 07:22:42,240 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-20 07:22:49,639 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3758 turns=12 path=data/Google_gemini-3.5-flash-lite/asn-set[7].json
+2026-09-20 07:23:49,640 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-20 07:23:53,372 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3135 turns=12 path=data/Google_gemini-3.5-flash-lite/asn-set[7].json
+2026-09-20 07:24:53,373 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-20 07:24:56,922 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3060 turns=12 path=data/Google_gemini-3.5-flash-lite/asn-set[8].json
+2026-09-20 07:25:56,922 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-20 07:26:02,357 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3364 turns=12 path=data/Google_gemini-3.5-flash-lite/asn-set[8].json
+2026-09-20 07:27:02,358 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-20 07:27:06,764 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3178 turns=12 path=data/Google_gemini-3.5-flash-lite/asn-set[8].json
+2026-09-20 07:28:06,765 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-20 07:28:11,482 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3276 turns=12 path=data/Google_gemini-3.5-flash-lite/asn-set[8].json
+2026-09-20 07:29:11,482 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-20 07:29:21,816 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3397 turns=12 path=data/Google_gemini-3.5-flash-lite/asn-set[8].json
+2026-09-20 07:30:21,816 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-20 07:30:25,669 INFO REJECTED_RESPONSE_SAVED provider=Google model=gemini-3.5-flash-lite path=data/rejected_responses/asn-Google_gemini-3.5-flash-lite.txt
+2026-09-20 07:30:25,669 ERROR JSON_INVALID provider=Google model=gemini-3.5-flash-lite reason=turn count 10 outside [12, 18]
+2026-09-20 07:31:25,670 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-20 07:31:32,185 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3724 turns=12 path=data/Google_gemini-3.5-flash-lite/asn-set[8].json
+2026-09-20 07:32:32,185 INFO MODEL_START provider=Google model=gemini-3.5-flash-lite
+2026-09-20 07:32:36,595 INFO SUCCESS provider=Google model=gemini-3.5-flash-lite total_tokens=3288 turns=12 path=data/Google_gemini-3.5-flash-lite/asn-set[8].json
+2026-09-20 07:33:36,595 INFO MODEL_SUMMARY
+  provider_model: Google / gemini-3.5-flash-lite
+  attempts: 20
+  saved: 16
+  failed: 4
+  accept_rate: 80.00%
+  average_tokens: 3413.00
+  turn_range: 12-12
+  expired: False
+  failure_categories:
+  invalid_json_syntax: 1
+  turn_count_out_of_range: 3

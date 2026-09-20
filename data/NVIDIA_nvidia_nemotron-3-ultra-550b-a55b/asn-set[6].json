@@ -1051,5 +1051,401 @@
         "response": "Perfect! You've got it. Ready for another?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "chemistry",
+    "topic": "Acids and bases",
+    "problem": "A 0.10 M solution of a weak acid HA has pH = 3.00. (a) Calculate the acid dissociation constant Ka. (b) If 0.050 mol of the conjugate base A⁻ is added to 1.0 L of this solution, what is the new pH? Assume volume change is negligible.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know pH = -log[H+], but I'm not sure how to find Ka."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student shows partial knowledge of pH but unsure about Ka; need to diagnose their understanding of Ka expression.",
+        "state": "Diagnosis",
+        "response": "What do you know about the relationship between pH, [H+], and Ka for a weak acid?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think Ka = [H+] / C."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student gave incorrect Ka expression; provide minimal hint to recall correct equilibrium expression.",
+        "state": "Support",
+        "response": "Remember Ka expression includes equilibrium concentrations of both products."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, so Ka = [H+][A-]/[HA]."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student now knows correct Ka expression; need to guide them to calculate [H+] and equilibrium concentrations.",
+        "state": "Diagnosis",
+        "response": "Given pH = 3.00, what is [H+]? And what is [A-] at equilibrium?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "H+ = 1.0e-3 M, A- = 1.0e-3 M, HA ≈ 0.099 M, Ka ≈ 1.0e-5."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student computed Ka correctly; now guide them to determine new concentrations after addition of conjugate base.",
+        "state": "Support",
+        "response": "Now, if we add 0.050 mol of A- to 1.0 L, what are the new concentrations of HA and A-?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Adding conjugate base doesn't change pH because it's a buffer."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly claims buffer pH unchanged; need to probe understanding of Henderson-Hasselbalch.",
+        "state": "Diagnosis",
+        "response": "What does the Henderson-Hasselbalch equation tell you about pH when the ratio of base to acid changes?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "pH = pKa + log([A-]/[HA]), so pH will increase."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student correctly predicts pH increase; ask them to articulate the concept in their own words.",
+        "state": "Synthesis",
+        "response": "Can you explain in your own words how adding conjugate base affects the pH of a weak acid solution?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Adding conjugate base shifts equilibrium, increasing pH according to Henderson-Hasselbalch."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has explained the principle; wrap up warmly.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "biology",
+    "topic": "Cell structure",
+    "problem": "Explain the pathway a secretory protein takes from its synthesis on the rough endoplasmic reticulum to its release from the cell, including the roles of the ER, Golgi apparatus, and vesicles.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know that proteins are synthesized by ribosomes attached to the rough endoplasmic reticulum, but I'm not clear on the details of how they travel from the ER to the Golgi apparatus and eventually get secreted out of the cell; I also wonder what happens to the protein once it reaches the Golgi and how it gets packaged for release."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identifies ribosomes on rough ER as synthesis site but is uncertain about vesicular transport and Golgi processing.",
+        "state": "Diagnosis",
+        "response": "That's a solid starting point. Proteins entering the ER lumen are packaged into COPII-coated transport vesicles that bud off and carry them to the cis face of the Golgi apparatus. Once there, the vesicles fuse and the proteins move through the Golgi cisternae where they undergo modifications such as glycosylation. Can you describe what you think happens after the proteins leave the trans face of the Golgi?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think the vesicles fuse with the Golgi membrane and release the proteins into the lumen, where they get modified like adding sugar chains, and then they're packaged into new vesicles that travel to the cell membrane for secretion. I'm not entirely sure about the exact steps of vesicle budding and fusion, but that's my general idea."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student correctly describes vesicle fusion, modification, and packaging but is unsure about vesicle budding details.",
+        "state": "Support",
+        "response": "You're right about the fusion and modification steps. After modification in the Golgi, proteins are sorted at the trans-Golgi network into secretory vesicles that bud off and move along microtubules toward the plasma membrane. These vesicles then dock and fuse, releasing their contents by exocytosis. What do you think ensures that the vesicles go to the correct destination?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I think the vesicles have specific proteins on their surface, like SNAREs, that match with complementary proteins on the target membrane so they only fuse with the correct compartment, ensuring precise delivery. I'm not completely confident about the details, but that's the general mechanism I've heard."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identifies SNARE-mediated targeting but expresses uncertainty.",
+        "state": "Support",
+        "response": "Exactly, SNARE proteins on vesicles and target membranes provide specificity for fusion. Additionally, Rab GTPases help direct vesicle trafficking along cytoskeletal tracks. The combined action of these proteins ensures that secretory vesicles reach the plasma membrane. Can you now summarize the entire secretory pathway from synthesis to release in your own words?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "So the protein is synthesized on the rough ER, enters the ER lumen, is packaged into transport vesicles that go to the Golgi where it gets modified, then it's sorted into secretory vesicles that travel along microtubules to the plasma membrane and fuse to release the protein outside the cell."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student has summarized the pathway accurately, showing readiness for synthesis.",
+        "state": "Support",
+        "response": "That's a clear and accurate summary of the secretory pathway. You've captured the key steps: synthesis on the rough ER, vesicular transport to the Golgi for modification, sorting into secretory vesicles, and exocytosis at the plasma membrane. In your own words, what is the overarching principle that governs this directional flow of proteins through the endomembrane system?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The overarching principle is that proteins move through a series of membrane-bound compartments via vesicles that bud and fuse in a highly regulated manner, ensuring they're processed and delivered to the right destination at each step. This vesicle-mediated transport maintains the directionality and specificity of protein trafficking throughout the cell."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student articulated the core principle of vesicle-mediated directional transport, demonstrating conceptual mastery.",
+        "state": "Support",
+        "response": "Great job! You've identified that vesicular transport driven by specific protein interactions provides the directionality and specificity needed for protein secretion, and this principle underlies all intracellular trafficking in the endomembrane system. Understanding this will help you tackle more complex trafficking pathways in the future."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I feel like I have a good grasp of the individual steps now, but I'm still a bit fuzzy on how to phrase the main principle that ties all these steps together into a single concept. It would help if I could hear how you would describe it."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student acknowledges understanding of steps but needs help articulating the unifying principle.",
+        "state": "Synthesis",
+        "response": "That's a common challenge. The unifying principle is that the endomembrane system uses vesicle budding and fusion, guided by specific protein coats and SNAREs, to move proteins directionally from the ER through the Golgi to the cell surface. In your own words, how would you state this principle?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The principle is that proteins travel through the endomembrane system in vesicles that bud from one compartment and fuse with the next, with specific coat proteins and SNAREs ensuring they go to the right place, so the flow is directional and regulated at every step."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly articulated the core principle of vesicle-mediated directional transport, demonstrating mastery.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Elasticity of demand",
+    "problem": "Consider a linear demand curve for Good X: Qx = 100 - 2Px. (a) At what price is demand for Good X unit elastic? (b) If the price of Good X increases slightly from that point, what happens to total revenue? (c) Good Y has a cross-price elasticity of demand with respect to Px of -0.5 and an income elasticity of 1.2. If Px increases by 10% and income rises by 5% simultaneously, what is the approximate net percentage change in the quantity demanded of Good Y?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Okay, so for part (a), the demand curve is Q = 100 - 2P. I remember that for a linear demand curve, unit elasticity occurs at the midpoint of the curve. The intercepts are P=50 when Q=0, and Q=100 when P=0. So the midpoint would be P=25, Q=50. But I'm not 100% sure if that's the exact point or if I need to plug into the elasticity formula directly. Let me check: elasticity is (dQ/dP)*(P/Q) = -2*(P/Q). At P=25, Q=50, that's -2*(0.5) = -1. So yes, unit elastic at P=25. But wait, is that the only point? I think so."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified midpoint and verified with formula, but expressed uncertainty about whether midpoint always corresponds to unit elasticity. Need to probe their understanding of why that holds.",
+        "state": "Diagnosis",
+        "response": "You've correctly computed the elasticity at the midpoint and found it equals -1. What makes the midpoint of a linear demand curve special in terms of elasticity? Can you explain why the elasticity formula yields -1 exactly at that point, and whether that would hold for any linear demand curve?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Right, the elasticity formula is E = (dQ/dP)*(P/Q). For a linear demand Q = a - bP, dQ/dP = -b. At the midpoint, P = a/(2b) and Q = a/2. So P/Q = (a/(2b)) / (a/2) = 1/b. Then E = -b * (1/b) = -1. So it's always unit elastic at the midpoint regardless of a and b. That makes sense now. So for our curve, a=100, b=2, midpoint P=25, Q=50, confirmed."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student has solid grasp of part (a). Now move to part (b) about revenue change. Provide a hint via question.",
+        "state": "Support",
+        "response": "Great, you've nailed the reasoning for part (a). Now for part (b): at the unit elastic point, total revenue is maximized. If price increases slightly from P=25, what happens to total revenue? Think about the relationship between elasticity and marginal revenue, or consider a small discrete price increase to, say, P=26 and compute the new revenue."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Okay, for part (b), at the unit elastic point total revenue is maximized. That means if we increase price from P=25, total revenue should increase because the higher price per unit more than offsets the drop in quantity. Since elasticity is -1, the percentage changes are equal, so revenue stays constant for tiny changes, but for a discrete increase we're moving to a point where demand becomes elastic? Wait, I'm confusing myself. Let me just commit: I think total revenue increases when price rises from the unit elastic point."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly thinks revenue increases from unit elastic point. Need to guide them to realize revenue decreases because demand becomes elastic.",
+        "state": "Support",
+        "response": "Let's test that with concrete numbers. At P=25, Q=50, revenue is 1250. If price rises to P=26, what is the new quantity from the demand equation? Then compute the new revenue and compare. What do you find?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "At P=26, Q = 100 - 2*26 = 48. Revenue = 26*48 = 1248. That's less than 1250. So revenue actually decreases. I see, because at P=26, elasticity is -2*(26/48) = -1.083, so demand is elastic, meaning %ΔQ > %ΔP, so revenue falls. My earlier claim was wrong; revenue decreases."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student corrected part (b). Now move to part (c) with cross-price and income elasticity. Need to diagnose their approach.",
+        "state": "Diagnosis",
+        "response": "Good catch on the revenue change. Now part (c): Good Y has cross-price elasticity with respect to Px of -0.5 and income elasticity of 1.2. Px increases 10%, income rises 5%. How would you approach finding the net percentage change in Qy? Walk me through your thinking."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Cross-price elasticity is -0.5, so a 10% increase in Px leads to a -5% change in Qy. Income elasticity is 1.2, so a 5% increase in income leads to a +6% change in Qy. Now, to get the net effect, I think we subtract the cross-price effect from the income effect because they work in opposite directions? Or maybe we add them? Let's see: the cross-price effect is negative, income effect positive. If they oppose, the net change is -5% - 6% = -11%. That seems like a large drop. But wait, both are percentage changes in Qy, so they should just add algebraically: -5% + 6% = +1%. Hmm, I'm not sure. I'll go with -11% because the cross-price elasticity is negative, meaning they're complements, so the price increase of X reduces demand for Y, and the income increase boosts Y, but the negative effect might dominate? Actually, I think the net is -11%."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly combined the percentage changes by subtracting instead of adding. Need to hint that percentage changes in quantity demanded from different factors are additive.",
+        "state": "Support",
+        "response": "Let's think carefully: both the cross-price effect and the income effect are expressing percentage changes in the quantity demanded of Good Y. When multiple factors change simultaneously, how do we typically combine their percentage impacts on a variable? If one factor causes a -5% change and another causes a +6% change, what's the total percentage change?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Oh, right! Percentage changes add up when they're both affecting the same variable. So it's -5% + 6% = +1% net change. The cross-price effect reduces Qy by 5%, the income effect increases Qy by 6%, so overall Qy increases by about 1%. My subtraction was a mistake."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly computed all parts and corrected mistakes. Now ask them to synthesize the key principles.",
+        "state": "Synthesis",
+        "response": "Exactly. Now, in your own words, can you summarize the relationship between elasticity and total revenue along a linear demand curve, and how we combine multiple elasticity effects to find a net percentage change in quantity demanded?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "For a linear demand curve, elasticity varies from 0 at the quantity intercept to -∞ at the price intercept. Unit elasticity occurs at the midpoint where revenue is maximized. At prices below the midpoint, demand is inelastic (|E|<1), so price increases raise revenue. At prices above the midpoint, demand is elastic (|E|>1), so price increases lower revenue. For multiple elasticities, each elasticity gives the percentage change in quantity due to a percentage change in its respective factor. Since they all affect the same quantity, the net percentage change is the sum of the individual percentage changes. So cross-price elasticity of -0.5 times 10% gives -5%, income elasticity of 1.2 times 5% gives +6%, net +1%."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has fully explained the concepts correctly. Conversation can close.",
+        "state": "Closing",
+        "response": "Perfect summary! You've got a solid handle on elasticity concepts. Ready to tackle another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "computer_science_light",
+    "topic": "Boolean logic",
+    "problem": "Simplify the Boolean expression: (A + B')(A' + C)(B + C') + A B' C'.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this expression (A + B')(A' + C)(B + C') + A B' C'. I know I should probably use distribution, but I'm not sure where to start."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student recognizes distribution but unsure of first step; need to elicit their plan.",
+        "state": "Diagnosis",
+        "response": "What do you think is the first logical step when simplifying a product of sums like this?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Maybe I should multiply the first two parentheses together? Like (A + B')(A' + C)?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student identified multiplying first two parentheses; guide them to execute distribution.",
+        "state": "Support",
+        "response": "That's a good start. What do you get when you distribute (A + B') over (A' + C)?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Let's see... A*A' + A*C + B'*A' + B'*C. That's 0 + AC + A'B' + B'C. So AC + A'B' + B'C."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student correctly expanded first product; now need to multiply by third factor.",
+        "state": "Diagnosis",
+        "response": "Great. Now you have (AC + A'B' + B'C) multiplied by (B + C'). How would you approach that?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I'll distribute each term: AC*(B+C') + A'B'*(B+C') + B'C*(B+C')."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student set up distribution over three terms; prompt them to simplify each product.",
+        "state": "Support",
+        "response": "Can you simplify each of those three products?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "AC*B = ABC, AC*C' = 0. A'B'*B = 0, A'B'*C' = A'B'C'. B'C*B = 0, B'C*C' = 0. So I get ABC + A'B'C'."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student simplified product to ABC + A'B'C'; now must incorporate the remaining term.",
+        "state": "Diagnosis",
+        "response": "What does the expression look like now with the last term included?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "So it's ABC + A'B'C' + A B' C'. I see A'B'C' and A B' C' both have B'C'. Can I combine them? A'B'C' + A B'C' = B'C'(A' + A) = B'C'."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student combined terms using complement law; ask them to articulate the rule.",
+        "state": "Synthesis",
+        "response": "Exactly. In your own words, what Boolean algebra rule allowed you to combine A'B'C' and A B'C' into B'C'?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "That's the distributive law in reverse, or factoring: B'C'(A' + A) = B'C' * 1 = B'C'. It's like the complement rule: A' + A = 1, and then identity."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student explained the complement and identity laws correctly; conversation complete.",
+        "state": "Closing",
+        "response": "Nice work! You've simplified it to ABC + B'C'. Ready for another one?"
+      }
+    ]
   }
 ]

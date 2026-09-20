@@ -263,3 +263,54 @@
   expired: True
   failure_categories:
   empty_response: 3
+2026-09-20 07:11:49,339 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-20 07:12:15,801 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=6365 turns=12 path=data/Google_gemini-3.6-flash/asn-set[5].json
+2026-09-20 07:13:15,801 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-20 07:13:51,972 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=7027 turns=16 path=data/Google_gemini-3.6-flash/asn-set[5].json
+2026-09-20 07:14:51,972 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-20 07:15:26,922 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=8309 turns=14 path=data/Google_gemini-3.6-flash/asn-set[5].json
+2026-09-20 07:16:26,922 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-20 07:16:54,548 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=6567 turns=14 path=data/Google_gemini-3.6-flash/asn-set[5].json
+2026-09-20 07:17:54,549 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-20 07:18:21,465 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=6337 turns=12 path=data/Google_gemini-3.6-flash/asn-set[5].json
+2026-09-20 07:19:21,465 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-20 07:19:45,011 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=6564 turns=14 path=data/Google_gemini-3.6-flash/asn-set[5].json
+2026-09-20 07:20:45,012 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-20 07:21:16,715 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=7868 turns=12 path=data/Google_gemini-3.6-flash/asn-set[5].json
+2026-09-20 07:22:16,716 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-20 07:22:48,356 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=7198 turns=12 path=data/Google_gemini-3.6-flash/asn-set[5].json
+2026-09-20 07:23:48,356 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-20 07:24:18,991 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=7473 turns=12 path=data/Google_gemini-3.6-flash/asn-set[5].json
+2026-09-20 07:25:18,992 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-20 07:26:48,990 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=8943 turns=12 path=data/Google_gemini-3.6-flash/asn-set[5].json
+2026-09-20 07:27:48,990 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-20 07:28:29,959 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=9019 turns=12 path=data/Google_gemini-3.6-flash/asn-set[5].json
+2026-09-20 07:29:29,959 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-20 07:29:54,294 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=6737 turns=12 path=data/Google_gemini-3.6-flash/asn-set[5].json
+2026-09-20 07:30:54,294 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-20 07:31:25,327 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=7115 turns=14 path=data/Google_gemini-3.6-flash/asn-set[5].json
+2026-09-20 07:32:25,327 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-20 07:32:56,630 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=7931 turns=12 path=data/Google_gemini-3.6-flash/asn-set[5].json
+2026-09-20 07:33:56,630 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-20 07:34:28,919 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=8202 turns=14 path=data/Google_gemini-3.6-flash/asn-set[6].json
+2026-09-20 07:35:28,919 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-20 07:36:07,001 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=8413 turns=12 path=data/Google_gemini-3.6-flash/asn-set[6].json
+2026-09-20 07:37:07,001 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-20 07:37:49,697 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=10075 turns=12 path=data/Google_gemini-3.6-flash/asn-set[6].json
+2026-09-20 07:38:49,698 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-20 07:39:18,182 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=7503 turns=12 path=data/Google_gemini-3.6-flash/asn-set[6].json
+2026-09-20 07:40:18,182 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-20 07:40:50,024 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=7610 turns=12 path=data/Google_gemini-3.6-flash/asn-set[6].json
+2026-09-20 07:41:50,025 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-09-20 07:41:53,136 ERROR MODEL_FAILURE provider=Google model=gemini-3.6-flash error_code=HTTP_429 reason=model call failed or returned no response
+2026-09-20 07:42:53,137 INFO MODEL_SUMMARY
+  provider_model: Google / gemini-3.6-flash
+  attempts: 20
+  saved: 19
+  failed: 1
+  accept_rate: 95.00%
+  average_tokens: 7645.05
+  turn_range: 12-16
+  expired: True
+  failure_categories:
+  empty_response: 1

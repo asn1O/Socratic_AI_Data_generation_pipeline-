@@ -1243,3 +1243,277 @@
     }
   ]
 }
+
+
+{
+  "problem": "Consider a skewed distribution represented by a box plot and a cumulative frequency ogive for a dataset of household incomes. The median income shown in the box plot is $52,000, while the 50th percentile (median) read from the ogive curve is marked at $58,000. Additionally, the lower quartile is $35,000 and the upper quartile is $85,000. Why might these two graphical representations yield different median values for the exact same underlying dataset, and how does the presence of extreme upper-income outliers specifically distort the cumulative frequency ogive's interpolation versus the box plot's structural definition?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I'm looking at this graph problem, and honestly, it's a bit confusing. Since both graphs represent the exact same household income data, shouldn't the median be identical on both? If the box plot says the median is $52,000, maybe the ogive curve's $58,000 value is just a plotting error, or perhaps the ogive is calculating the mean instead of the median since it uses cumulative frequencies."
+    },
+    {
+      "turn": 2,
+      "speaker": "reasoning": "The student has made an incorrect claim about the ogive calculating the mean, and is attributing the discrepancy to a plotting error rather than structural differences in data handling. I need to use Diagnosis to probe their understanding of how medians are defined and extracted from both visual tools.",
+      "state": "Diagnosis",
+      "response": "That's a very natural place for our intuition to go when we see conflicting numbers from the same dataset. Before we jump to a plotting error or a mix-up with the mean, let's think about how each graph is constructed from the raw data. How does a box plot actually locate its median compared to how an ogive curve accumulates frequencies across class intervals?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Well, the box plot just sorts every single data point in order and picks the exact middle number, whereas the cumulative frequency ogive groups the incomes into bins or class intervals first, and then uses linear interpolation between the boundaries of the bin that contains the 50th percentile."
+    },
+    {
+      "turn": 4,
+      "speaker": "reasoning": "The student correctly identified that the ogive uses grouped data and linear interpolation while the box plot uses individual sorted points. Now I will use Support with a hint to help them connect this grouping mechanism to how it might shift the estimated median when the distribution is skewed.",
+      "state": "Support",
+      "response": "You've hit on the core structural difference with the binning and interpolation! Now, if you have a wide class interval where the cumulative frequency crosses that 50 percent mark, what assumption does linear interpolation make about how the data points are distributed *inside* that specific bin?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "It assumes the data points are spread out completely evenly, like a straight diagonal line across that interval. So if the bin goes from, say, $50,000 to $70,000, the ogive assumes there's an equal number of households at every single dollar amount inside that range."
+    },
+    {
+      "turn": 6,
+      "speaker": "reasoning": "The student understands the linearity assumption of the ogive's interpolation. To deepen their thinking toward the impact of skewness and outliers, I'll use Diagnosis to ask how that assumption clashes with the reality of a skewed income distribution.",
+    "state": "Diagnosis",
+    "response": "That linearity assumption is spot on for the ogive. If real-world household income data is heavily skewed to the right—meaning we have a long tail of very wealthy families—how does that uniform spreading assumption inside the median's bin affect where the 50th percentile lands on that interpolated line?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Since the data is heavily skewed right, the actual incomes within that middle bin are probably clustered way down at the lower end of the interval, closer to $50,000. But because the ogive draws a straight line straight across the whole bin, it forces a more gradual slope, which drags our reading of the 50th percentile further up toward $58,000."
+    },
+    {
+      "turn": 8,
+      "speaker": "reasoning": "The student is reasoning very well about the slope and clustering. Let's introduce a slight check regarding the box plot's resistance to extreme values to ensure they see both sides of the comparison clearly before synthesizing.",
+    "state": "Support",
+    "response": "That is a brilliant insight regarding the slope and the internal clustering. How does the box plot manage those extreme upper-income outliers compared to the ogive's cumulative tallies, keeping in mind how the five-number summary is calculated?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "The box plot is based purely on positional ranks of the raw, unbinned data points, so extreme outliers way out in the right tail don't change the position of the exact middle value at all—they just get marked as individual dots if they pass the 1.5 IQR fence. The ogive, however, has to lump those extreme values into broader open or closed upper bins, which alters the total cumulative count and distorts the scaling of the vertical axis used for interpolation."
+    },
+    {
+      "turn": 10,
+      "speaker": "reasoning": "The student has thoroughly broken down both mechanisms and their interaction with skewness and grouping. I will now move to Synthesis so they can summarize the core rule in their own words.",
+    "state": "Synthesis",
+    "response": "You've mapped out the mechanics of both graphs completely. In your own words, how would you summarize why grouped cumulative frequency graphs like ogives can give a different median than exact-value plots when dealing with skewed data containing outliers?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "Essentially, exact-value plots like box plots find the true middle by looking at every individual sorted data point, making them immune to the exact placement of outliers. In contrast, cumulative frequency ogives group data into intervals and assume a uniform distribution inside them; when data is skewed or has heavy tails, that forced linearity assumption pulls the interpolated median away from the true positional median."
+    },
+    {
+      "turn": 12,
+      "speaker": "reasoning": "The student has accurately and clearly explained the concept in their own words. The conversation is complete, so I will provide a warm, concise closing.",
+    "state": "Closing",
+    "response": "Spot on! You nailed how binning assumptions and skewness interact in graphical representations. Great work today—ready for another challenge whenever you are!"
+    }
+  ]
+}
+
+
+{
+  "problem": "In pea plants, tall stem height (T) is dominant over short stem height (t). If you cross a heterozygous tall plant (Tt) with a homozygous short plant (tt), what percentage of the offspring are expected to be short?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I set up the Punnett square with Tt on top and tt on the side, but I'm a bit stuck on how to figure out the final percentages for height."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student has set up the cross correctly and understands the setup, so I will directly explain how to read the grid squares before asking them to interpret the genotypes.",
+      "state": "Diagnosis",
+      "response": "Setting up the cross like that is spot on. Each box inside the grid represents one quarter, or 25 percent, of the possible offspring. Looking at the four boxes you filled in, what combinations of alleles did you get?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "I got two boxes with Tt and two boxes with tt."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student correctly identified the genotypes, but since socratic_level is low, I will directly state which allele is dominant to help them connect genotype to phenotype.",
+      "state": "Support",
+      "response": "Right, so we have two Tt and two tt. Remember that the capital T is dominant for tall stems, so any combination with a T will show the tall trait. Knowing that, how many of those four boxes will actually result in short plants?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Ah, okay, so the Tt ones are tall, which means only the two tt boxes are short."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student has correctly identified the short genotype count, so I will now prompt them to calculate the final percentage based on those two boxes.",
+      "state": "Support",
+      "response": "Exactly right. Since each box represents 25 percent, what is the total expected percentage for the short offspring?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Since two out of four boxes are tt, that would be 50 percent."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student has reached the correct answer, so I need to transition to synthesis by asking them to explain the underlying concept in their own words.",
+      "state": "Synthesis",
+      "response": "Spot on. Before we wrap up, can you explain in your own words how the combination of alleles in a Punnett square determines the phenotype percentages?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "Sure! Each box in the square is a 25 percent chance. You look at the letters in each box to see the genotype, and if it matches the recessive trait like tt, you add up those probabilities to get the final percentage."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "The student has successfully explained the core concept, so I am concluding the session with a warm closing turn.",
+      "state": "Closing",
+      "response": "That's a fantastic explanation! You nailed it. Great job working through that today!"
+    }
+  ]
+}
+
+
+{
+  "problem": "Determine the output of the Boolean expression: (True AND False) OR True",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I'm lost on this part. Boolean logic is pretty confusing to me."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "Student is expressing general confusion, so I need to diagnose their baseline understanding of the parts.",
+      "state": "Diagnosis",
+      "response": "That's completely fine. How do you usually approach combining True and False values?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "I'm not really sure, I just know they deal with true and false."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "Student lacks a foothold, so I'll directly explain the parentheses rule first and offer a hint for the AND part.",
+      "state": "Support",
+      "response": "We always solve inside parentheses first, just like in math. Think of AND as needing both sides to be true."
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "So True and False together makes False?"
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "Student got the AND part right, so I will validate it directly and point them to the OR part.",
+      "state": "Support",
+      "response": "Spot on. Now we have False OR True left. Remember that OR only needs one true side to pass."
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Okay, so one side is true, so the whole thing is true?"
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "Student has arrived at the correct final value, so I need them to articulate the rule to ensure they understand.",
+      "state": "Synthesis",
+      "response": "Exactly right. Can you explain in your own words how the OR operator works here?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "Yeah, because OR only needs at least one True to make the whole expression True, it evaluates to True."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "Student has correctly explained the concept, so I can now wrap up the session warmly.",
+      "state": "Closing",
+      "response": "Nice, that's exactly it! Want to try another one?"
+    }
+  ]
+}
+
+
+{
+  "problem": "Imagine a library where you need to find a specific book. If you have to check every single book on the shelves one by one from start to finish, how would you describe the growth rate of your time as the total number of books increases? And what does that correspond to in Big-O notation?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "Checking every book means time grows with the number of books, so it's probably $O(n^2)$ because you're looking a lot."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student overestimates the growth rate as quadratic when it's linear, so I need to check their intuition about how time scales with a single pass.",
+      "state": "Diagnosis",
+      "response": "How many books do you look at if the library doubles in size?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "If it doubles, I guess I'd look at twice as many books, right?"
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student correctly notes a 1:1 scaling ratio, so I will guide them to connect this proportional growth to standard Big-O categories.",
+      "state": "Support",
+      "response": "Right. So if doubling the input doubles the work directly, what Big-O category fits that straight-line growth?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "That sounds like linear growth, so maybe $O(n)$?"
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student has identified linear growth correctly. I will now probe deeper to ensure they understand why nested operations aren't happening here.",
+      "state": "Diagnosis",
+      "response": "Why isn't it $O(n^2)$ like you guessed earlier?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Because I'm only going through the shelves once, not restarting a full search for every single book."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student's reasoning about single-pass versus nested passes is spot on. I'll prompt them to summarize the underlying principle now.",
+      "state": "Synthesis",
+      "response": "Exactly. Can you put that rule about single-pass scaling into your own words?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "Sure. When the time it takes grows directly in proportion to the number of items you look at, it's linear time, or $O(n)$."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "The student successfully explained the concept and reached the correct conclusion. I am wrapping up.",
+      "state": "Closing",
+      "response": "Spot on! You've got it down. Ready to try another one?"
+    }
+  ]
+}

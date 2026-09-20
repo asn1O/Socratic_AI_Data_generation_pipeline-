@@ -748,3 +748,154 @@ Config parameter balance
     easy                          19
     hard                          33
     medium                        46
+2026-09-20 08:30:10,613 INFO 
+=== Run Statistics Summary ===
+Overall totals
+  Attempts: 123
+  Saved: 99
+  Failed: 24
+  Accept rate: 80.49%
+  Duration (h:m:s): 01:08:03
+
+Per-model results
+  Provider / Model                         Attempts  Saved  Accept %  Avg tokens  Turns  Total convos
+  ----------------------------------------  --------  -----  --------  -----------  -----  Total convos
+  Google / gemini-3.6-flash                      20     19    95.00%      7645.05  12-16             95
+  Google / gemini-3.5-flash                      15      9    60.00%      6969.11  12-14            123
+  Google / gemini-3-flash-preview                20     20   100.00%     10202.05  12-18            131
+  Google / gemini-3.5-flash-lite                 20     16    80.00%      3413.00  12-12            127
+  Google / gemini-3.1-flash-lite                 20     20   100.00%      3411.70  12-12            147
+  Google / gemma-4-31b-it                        14     11    78.57%      6282.09  12-16             99
+  Google / gemini-2.5-flash-lite                  3      0     0.00%         0.00      -             62
+  Google / gemini-3.8-flash                       3      0     0.00%         0.00      -             10
+  Google / gemini-3.7-flash                       8      4    50.00%      5535.00  12-14              6
+
+Failure reasons
+  Category                         Count
+  ------------------------------  -----
+  dead_model_404                      0
+  empty_response                     20
+  invalid_json_syntax                 1
+  turn_count_out_of_range             3
+  speaker_alternation_broken          0
+  malformed_tutor_tags                0
+  missing_problem_field               0
+  final_turn_not_closing              0
+  unexpected_exception                0
+  other                               0
+
+Turn-count distribution
+  min=12, max=18, avg=12.69
+
+Domain coverage
+  biology                            7
+  chemistry                          9
+  computer_science_light             4
+  economics_and_finance             11
+  ethics_and_critical_thinking      13
+  everyday_reasoning                 7
+  history_and_social_studies        13
+  language_and_grammar               7
+  logic_and_puzzles                  8
+  physics                            8
+  quantitative_aptitude              5
+  statistics_and_data                7
+
+Config parameter balance
+  socratic_level
+    high                          33
+    low                           35
+    medium                        31
+  student_level
+    advanced                      32
+    beginner                      33
+    intermediate                  34
+  hint_frequency
+    high                          29
+    low                           39
+    medium                        31
+  mistake_frequency
+    high                          31
+    low                           34
+    medium                        34
+  verbosity
+    high                          36
+    low                           30
+    medium                        33
+  difficulty
+    easy                          39
+    hard                          33
+    medium                        27
+2026-09-20 09:54:43,563 INFO 
+=== Run Statistics Summary ===
+Overall totals
+  Attempts: 80
+  Saved: 73
+  Failed: 7
+  Accept rate: 91.25%
+  Duration (h:m:s): 01:20:52
+
+Per-model results
+  Provider / Model                         Attempts  Saved  Accept %  Avg tokens  Turns  Total convos
+  ----------------------------------------  --------  -----  --------  -----------  -----  Total convos
+  NVIDIA / nvidia/nemotron-3-super-120b-a12b       20     17    85.00%     11572.94  12-18            171
+  NVIDIA / nvidia/nemotron-3-ultra-550b-a55b       20     20   100.00%      9487.90  14-14            121
+  OpenRouter / nvidia/nemotron-3-super-120b-a12b:free       20     17    85.00%     16536.06  12-14             89
+  OpenRouter / nvidia/nemotron-3-ultra-550b-a55b:free       20     19    95.00%      8592.26  12-16            106
+
+Failure reasons
+  Category                         Count
+  ------------------------------  -----
+  dead_model_404                      0
+  empty_response                      5
+  invalid_json_syntax                 0
+  turn_count_out_of_range             0
+  speaker_alternation_broken          2
+  malformed_tutor_tags                0
+  missing_problem_field               0
+  final_turn_not_closing              0
+  unexpected_exception                0
+  other                               0
+
+Turn-count distribution
+  min=12, max=18, avg=13.62
+
+Domain coverage
+  biology                            2
+  chemistry                          9
+  computer_science_light            10
+  economics_and_finance              8
+  ethics_and_critical_thinking       6
+  everyday_reasoning                 3
+  history_and_social_studies         8
+  language_and_grammar               4
+  logic_and_puzzles                  2
+  physics                            7
+  quantitative_aptitude              7
+  statistics_and_data                7
+
+Config parameter balance
+  socratic_level
+    high                          29
+    low                           27
+    medium                        17
+  student_level
+    advanced                      25
+    beginner                      27
+    intermediate                  21
+  hint_frequency
+    high                          22
+    low                           28
+    medium                        23
+  mistake_frequency
+    high                          21
+    low                           28
+    medium                        24
+  verbosity
+    high                          25
+    low                           22
+    medium                        26
+  difficulty
+    easy                          25
+    hard                          20
+    medium                        28

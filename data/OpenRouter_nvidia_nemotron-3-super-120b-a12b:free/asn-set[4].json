@@ -1126,5 +1126,290 @@
         "response": "Want to try another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "computer_science_light",
+    "topic": "Boolean logic",
+    "problem": "Simplify the Boolean expression F = (A + B)·(A' + C) + B·C' using Boolean algebra. Show steps and give the final simplified form.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think (A+B)(A'+C) simplifies to just B·C because A·A' is zero and the other terms disappear, so I get B·C. Then plus B·C' gives B·C + B·C' = B(C + C') = B. So the whole thing equals B."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student claims the first factor reduces to B·C, missing terms; need to elicit their distribution process to see the gap.",
+        "state": "Diagnosis",
+        "response": "When you distribute (A+B)(A'+C), you should get four terms: A·A', A·C, B·A', and B·C. Can you show me how you distributed?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I distributed: (A+B)(A'+C) = A·A' + A·C + B·A' + B·C. Since A·A' = 0, I have A·C + B·A' + B·C. Then I added the B·C' term from the original expression, giving A·C + B·A' + B·C + B·C'."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly expanded the first part and kept the B·C' term; now they need to notice that B·C + B·C' simplifies to B.",
+        "state": "Support",
+        "response": "Look at the terms B·C and B·C' together."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "B·C + B·C' simplifies to B because B·C + B·C' = B(C + C') = B·1 = B. So now I have A·C + B·A' + B."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student has combined B·C and B·C' correctly; now they have A·C + B·A' + B and need to simplify B·A' + B.",
+        "state": "Diagnosis",
+        "response": "Recall that B + B·A' can be simplified using absorption. What does that become?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "B + B·A' simplifies to B (absorption), so the expression becomes A·C + B."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student now has A·C + B and is about to combine them; need to see their reasoning for this step to catch any error.",
+        "state": "Diagnosis",
+        "response": "When you have an OR of a term and a product, you can't just drop the product unless certain conditions hold. How did you combine A·C + B?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I think A·C + B simplifies to A·C because B is redundant when ORed with anything; so the final answer is A·C."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly claims A·C + B = A·C, missing the case when B is true. Need to guide them to consider truth values.",
+        "state": "Diagnosis",
+        "response": "Let's think about the truth values: if B is false, the expression depends on A·C; if B is true, the expression is true regardless of A·C. What expression captures both cases?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The expression simplifies to B + A·C because when B is true the output is true, and when B is false the output equals A·C, which matches the original function."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the simplification in their own words, so we can wrap up.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "computer_science_light",
+    "topic": "Tracing a simple algorithm by hand",
+    "problem": "Consider the following pseudocode that takes an integer n and returns a count. Trace the algorithm by hand for n = 6 and state the final value returned.\n\nfunction mystery(n):\n    count = 0\n    for i from 1 to n:\n        for j from i to n:\n            if (i + j) mod 2 == 0:\n                count = count + 1\n    return count",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the outer loop runs six times, from i=1 to 6. For each i, I believe the inner loop runs 6 minus i times. I counted the increments when i+j is even and got a total of 10."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student gave a specific mistaken assumption about loop length and an incorrect total; asking them to detail a concrete case will reveal their counting method.",
+        "state": "Diagnosis",
+        "response": "Can you walk me through how you counted the increments for a specific value of i, say i=2?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "For i=2, I thought j goes from 2 to 5, so four steps: j=2,3,4,5. Then i+j is 4,5,6,7; the evens are 4 and 6, so I added two to count."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student missed the upper bound of the inner loop for i=2; a minimal hint to include j=6 will help them see the missing increment without giving the answer.",
+        "state": "Support",
+        "response": "What would happen if you included j=6 in that inner loop for i=2?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Including j=6 gives i+j=8, which is even, so now I have three increments for i=2. I redid the sums: i=1 gives 3, i=2 gives 3, i=3 gives 2, i=4 gives 2, i=5 gives 1, i=6 gives 1, totaling 11."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student's per‑i counts look right but the summed total is off; asking about a specific i value focuses their attention on a possible addition error.",
+        "state": "Support",
+        "response": "What did you get for i=3?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "For i=3, j goes 3,4,5,6; i+j is 6,7,8,9; evens are 6 and 8, so two increments. I see now my addition was off: 3+3+2+2+1+1 actually equals 12, not 11."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student now has the correct numeric answer but hasn't articulated the underlying principle; prompting them to explain why the condition works elicits the rule in their own words.",
+        "state": "Synthesis",
+        "response": "In your own words, can you explain why the algorithm increments count only when i and j have the same parity?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "It counts when i and j are both even or both odd, because only then their sum is even."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student’s rule explanation omitted the effect of the loop bounds; a hint about how the loops restrict pairs guides them to incorporate the i ≤ j condition without stating it outright.",
+        "state": "Support",
+        "response": "Can you explain how the loop limits ensure we don't count both (i,j) and (j,i), given the starting values?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Because i starts at 1 and j runs from i to n, we only look at pairs where i ≤ j, so each unordered pair with matching parity is counted exactly once."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has refined their explanation to include both parity and ordering; asking them to state the algorithm’s computation in their own words solidifies their understanding.",
+        "state": "Synthesis",
+        "response": "In your own words, can you describe what the algorithm is computing in terms of i, j, and n, and why that matches the observed count?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "It returns the number of pairs (i,j) with 1 ≤ i ≤ j ≤ n such that i and j are both even or both odd."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly explained the concept, so the conversation can end with a brief, positive wrap-up.",
+        "state": "Closing",
+        "response": "Great job! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Seating arrangement",
+    "problem": "Six friends — Alex, Brooke, Casey, Dylan, Evan, and Finley — are to be seated in a row of six chairs numbered 1 through 6 from left to right. The following conditions apply:\n\n1. Alex sits immediately to the left of Brooke.\n2. Casey does not sit at either end.\n3. Dylan sits somewhere to the left of Finley.\n4. Evan sits in chair 3.\n5. Brooke and Casey are not adjacent.\n6. Casey sits immediately to the left of Dylan.\n\nQuestion: Which person sits in chair 5?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Alex left of Brooke, maybe not adjacent. Evan chair3. Casey not at ends, so not chair2 or chair5. Dylan immediately left of Finley, so Dylan4 Finley5. Brooke and Casey not adjacent, so Brooke stays chair2."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student shows multiple misconceptions about immediate left, ends, and somewhere left; need to elicit their thinking to diagnose gaps.",
+        "state": "Diagnosis",
+        "response": "Can you explain what each condition means to you, step by step?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think 'immediately left' just means somewhere left, so Alex could be chair1 and Brooke chair3. 'Not at an end' I thought means not chair2 or chair5. 'Somewhere to the left' I took as right next to, so Dylan-Finley are adjacent."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student still misinterprets \"immediately left\" and confuses ends and somewhere left; provide a hint about the meaning of immediate left.",
+        "state": "Support",
+        "response": "Remember, 'immediately left' means there is no chair between them. Does that change how you placed Alex and Brooke?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Okay, Alex must be right next to Brooke on her left, so Alex chair1, Brooke chair2. Evan chair3, fine. I still think Casey can’t be in chair2 or chair5. Dylan-Finley I still think they sit side-by-side with Dylan left."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student still mistaken about which chairs are the ends; give a hint about ends.",
+        "state": "Support",
+        "response": "The ends of the row are chair1 and chair6. How does that affect where Casey could sit?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Got it, Casey can’t be chair1 or chair6, so she could be chair2, chair3, chair4, chair5. I still think Dylan-Finley must be adjacent with Dylan left."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student still thinks Dylan-Finley must be adjacent; hint about the meaning of \"somewhere to the left\".",
+        "state": "Support",
+        "response": "If Dylan is somewhere to the left of Finley, what does that tell you about their chair numbers?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "So Dylan just needs a lower number than Finley, e.g., Dylan chair1 Finley chair4 or Dylan chair2 Finley chair5. For Casey and Dylan, I think 'immediately left' might just mean Casey is somewhere left of Dylan, not necessarily adjacent."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student still misinterprets \"immediately left\" for the Casey-Dylan pair; give another hint about adjacency via a question.",
+        "state": "Support",
+        "response": "Again, what does 'immediately left' mean for the Casey‑Dylan pair?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Evan in chair3 Casey-Dylan adjacent with Casey left, they are in 4-5 or 5-6. Dylan left of Finley; if they were 5-6, Dylan would be 6 and Finley would have no spot, impossible. They are 4-5, placing Dylan in chair5."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has arrived at the correct solution; now prompt them to articulate the underlying principle in their own words.",
+        "state": "Synthesis",
+        "response": "You've worked through the cases; can you summarize how the constraints forced the final arrangement?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Evan in chair3 Casey-Dylan adjacent with Casey left, they are in 4-5 or 5-6. Dylan left of Finley; if they were 5-6, Dylan would be 6 and Finley would have no spot, impossible. They are 4-5, placing Dylan in chair5."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the concept, indicating mastery; wrap up warmly.",
+        "state": "Closing",
+        "response": "Great job! You've got it. Want to try another seating puzzle?"
+      }
+    ]
   }
 ]

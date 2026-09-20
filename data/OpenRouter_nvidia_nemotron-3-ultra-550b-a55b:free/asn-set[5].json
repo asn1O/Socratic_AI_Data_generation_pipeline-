@@ -1150,5 +1150,302 @@
         "response": "Great job! You've got a solid handle on cost-benefit reasoning. Ready to try another scenario?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "chemistry",
+    "topic": "Basic stoichiometry",
+    "problem": "Calculate the mass of water produced when 4.0 grams of hydrogen gas reacts with excess oxygen gas according to the balanced equation 2 H2 + O2 -> 2 H2O.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I have a problem where I'm given 4 grams of hydrogen gas and I need to find out how many grams of water are produced. The balanced equation is 2 H2 plus O2 yields 2 H2O, but I'm really not sure what the first step should be or how to use the equation."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student identifies the given mass and the balanced equation but is unsure how to begin the stoichiometry calculation, indicating a need to elicit the first conversion step.",
+        "state": "Diagnosis",
+        "response": "The very first thing we do in any stoichiometry problem is convert the given mass into moles using the molar mass of the substance. For hydrogen gas, H2, the molar mass is about 2.0 grams per mole. So, can you try dividing 4.0 grams by 2.0 grams per mole to see how many moles of H2 you have?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Okay, so the molar mass of H2 is 2 grams per mole, and if I divide 4 grams by 2 grams per mole I get 2 moles of H2. That seems straightforward, but I'm still a bit uncertain if I'm doing it right. I think it's correct but I want to be sure."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student correctly calculated moles of H2 but expresses hesitation, so I'll confirm the value and guide them to the mole ratio step with a hint.",
+        "state": "Support",
+        "response": "Yes, that's exactly right: 4.0 grams divided by 2.0 grams per mole gives you 2.0 moles of H2. Now, looking at the balanced equation, the coefficients for H2 and H2O are both 2, which means the mole ratio between them is 1 to 1. So, how many moles of water will be produced from those 2.0 moles of H2?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Since the ratio is 1 to 1, does that mean I'll get 2 moles of H2O? Wait, I thought because the equation shows 2 H2 and 1 O2, the ratio of H2 to H2O might be 2 to 1 instead of 1 to 1? I'm confused about how the coefficients work."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student made an incorrect claim about the mole ratio, so I need to correct that misconception and move to the next conversion step.",
+        "state": "Support",
+        "response": "Actually, the coefficients for H2 and H2O are both 2, so the ratio is 2 to 2, which simplifies to 1 to 1. Therefore, 2.0 moles of H2 will produce 2.0 moles of H2O. The next step is to convert moles of water to grams using the molar mass of water. Do you know what the molar mass of H2O is?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Water is H2O, so its molar mass is 18 grams per mole (16 for oxygen plus 2 times 1 for hydrogen). Multiplying 2 moles by 18 grams per mole gives 36 grams of water. I think that's the answer, but I'm not completely confident. I hope it's right."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student correctly computed the final mass but remains unsure, so I'll confirm the answer and ask them to articulate the overall procedure.",
+        "state": "Support",
+        "response": "That's correct: 2.0 moles times 18.0 grams per mole equals 36 grams of water. Let's review the whole sequence: we started with grams of H2, converted to moles of H2, used the mole ratio from the balanced equation to get moles of H2O, and finally converted those moles to grams of H2O. Can you explain why the mole ratio from the balanced equation is essential in this process?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "We use the mole ratio because the balanced equation tells us the exact proportions of reactants and products in terms of moles, kind of like a recipe that tells you how many moles of each substance are involved. Without that ratio, we wouldn't know how much product forms from a given amount of reactant."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student gave a decent explanation but could deepen understanding; I'll probe with a limiting reactant scenario to see if they can extend the concept.",
+        "state": "Diagnosis",
+        "response": "Good analogy. The coefficients give the mole proportions, which is why we multiply by that ratio. Now, imagine if we didn't have excess oxygen but instead a limited amount, say 32 grams of O2. What would be the first thing you'd need to do differently to find the amount of water produced?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "If oxygen is limited, we'd have to find the limiting reactant first by converting both reactants to moles and comparing the mole ratio, then base the product amount on the limiting reactant. I'm not totally sure how to do that calculation, though. It seems like an extra step before the mole ratio."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student recognizes the limiting reactant concept but is unsure of the execution, indicating readiness to synthesize the core stoichiometry rule for the original problem.",
+        "state": "Synthesis",
+        "response": "Exactly, limiting reactant problems add an extra comparison step, but the fundamental stoichiometry process stays the same: convert given masses to moles, use the balanced equation's mole ratios to find moles of the desired substance, then convert those moles to the requested units. In your own words, what is the fundamental rule for solving a basic stoichiometry problem like the one we just worked through?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The fundamental rule is: start with the given mass, convert it to moles using the molar mass, use the balanced equation's mole ratio to find the moles of the substance you're asked about, and finally convert those moles to grams using its molar mass. That's the basic stoichiometry pathway."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly articulated the stoichiometry procedure in their own words, demonstrating mastery of the concept.",
+        "state": "Closing",
+        "response": "Great job! You've got the stoichiometry steps down perfectly. Ready to try another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Map reading and distance estimation",
+    "problem": "A map has a scale of 1 cm = 2 km. A road on the map measures 3.5 cm between two towns. The straight-line distance across a lake between the same towns measures 5 cm on the map. A car travels the road at 60 km/h. A boat crosses the lake at 10 km/h. Which mode of transport gets you there faster, and by how much time?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Scale: 1 cm = 2 km. Road 3.5 cm, lake 5 cm. I'll convert: road 3.5 / 2 = 1.75 km, lake 5 / 2 = 2.5 km. Times: road 1.75/60 = 0.029 h, lake 2.5/10 = 0.25 h. Road faster by 0.22 h. Not sure about conversion."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student divided map distances by the scale factor instead of multiplying, revealing a misunderstanding of how map scales convert to real distances. I need to elicit their reasoning and clarify the scale direction.",
+        "state": "Diagnosis",
+        "response": "The scale 1 cm = 2 km means each map centimeter represents 2 real kilometers, so you multiply map distance by 2. Why did you choose to divide?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, right! Multiply: road 3.5 * 2 = 7 km, lake 5 * 2 = 10 km. Road time 7/60 = 0.117 h, lake time 10/10 = 1 h. Road faster by 0.883 h. That seems better."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student corrected the scale conversion and computed times in hours. Now they need to convert to minutes for a clearer comparison; I'll hint at that step.",
+        "state": "Support",
+        "response": "Good. Now, to compare easily, convert both times to minutes. Remember, 1 hour = 60 minutes. What do you get for each?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Car: 0.117 h * 60 = 7 minutes. Boat: 1 h = 10 minutes? Wait, 10 km/h means 10 km per hour, so 10 km takes 1 hour = 60 minutes. I'm mixing up. Let me just say boat takes 10 minutes."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly converted the boat's travel time to 10 minutes instead of 60 minutes. I'll correct the conversion and prompt them to recalculate the difference.",
+        "state": "Support",
+        "response": "The boat speed is 10 km/h, so 10 km takes 1 hour, which is 60 minutes, not 10. Check: 10 km / 10 km/h = 1 h = 60 min. Recalculate the difference."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Right, boat is 60 minutes. Car is 7 minutes. Difference = 53 minutes. Car is faster by 53 minutes."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student has the correct numeric answer. I'll ask them to articulate the solution steps to reinforce the process.",
+        "state": "Support",
+        "response": "Exactly. Now, can you walk me through the steps you used, from map measurement to final comparison?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "First, multiply map distances by scale to get real distances. Then divide each distance by its speed to get hours. Convert hours to minutes. Subtract to find time difference."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student listed the steps but hasn't stated the underlying scaling principle. I'll highlight the principle and ask why multiplication works.",
+        "state": "Support",
+        "response": "Those are the steps. The key principle is that map scale gives a conversion factor: real distance = map distance × scale factor. Why does multiplication work here?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Because the scale tells you how many real units each map unit represents. So 1 cm stands for 2 km, so 3.5 cm stands for 3.5 times 2 km. Multiplication scales it up."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student explained the scaling principle. Now I'll ask them to summarize the entire problem-solving rule in their own words.",
+        "state": "Synthesis",
+        "response": "Great. In your own words, what's the general rule for solving problems like this, from map to travel time comparison?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "To compare travel options on a map: measure each route on the map, multiply by the scale to get real distances, divide each distance by its speed to get travel times, convert to same units, then compare times. The option with the smallest time is fastest."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained the general rule, demonstrating mastery. The conversation can wrap up.",
+        "state": "Closing",
+        "response": "Nice work! You've got the process down. Ready for another map challenge?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "easy"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Argument structure: premises and conclusions",
+    "problem": "Consider the argument: 'All humans are mortal. Socrates is a human. Therefore, Socrates is mortal.' Identify the premises and the conclusion.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I see the argument but I'm not sure which parts are premises and which is the conclusion. They all look like statements to me, and I don't really get what makes one a premise and another the conclusion. Could you help me sort this out?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student shows confusion about distinguishing premises and conclusion; need to elicit their current understanding.",
+        "state": "Diagnosis",
+        "response": "In an argument, premises are the reasons given to support the conclusion, and the conclusion is the claim that the premises are trying to prove. So, looking at your example, can you point out which statement seems like the final claim the author wants you to accept?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think the last sentence 'Therefore, Socrates is mortal' might be the conclusion, but I'm not sure why the first two are premises. They just seem like facts to me, not really reasons that support something else. I'm having trouble seeing how they function as support rather than just statements."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified conclusion but unsure about premises; guide them to see premises as supporting statements.",
+        "state": "Support",
+        "response": "Exactly, the word 'therefore' often signals the conclusion. The statements before it are the premises because they provide the evidence for that conclusion. Let's look at each premise: 'All humans are mortal' and 'Socrates is a human.' Do you see how they work together to support the claim about Socrates?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I get that they work together, but I don't really get what makes something a premise versus just a fact. Like, 'All humans are mortal' is a general truth, so why is it a premise here instead of just background knowledge? I'm confused about the role it plays in this specific argument."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student asks what makes a premise vs a fact; clarify definition of premise as any statement offered as support.",
+        "state": "Support",
+        "response": "A premise is any statement offered as support for the conclusion, regardless of whether it's a known fact or a general truth. In this argument, both statements are presented as reasons to believe the conclusion, so both count as premises. Does that clarify the distinction between a premise and a mere fact?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Okay, so premises are the reasons given, and the conclusion is what they're trying to prove. But what if there's no 'therefore' word? How do I figure it out then? I've seen arguments where the conclusion comes first or there are no indicator words at all sometimes."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student asks about arguments without indicator words; explain strategy of identifying the claim being supported.",
+        "state": "Support",
+        "response": "Good question. Even without indicator words, you can ask yourself: what is the author trying to convince me of? That claim is the conclusion. The other statements are the premises offered in support. Let's test with a new short argument: 'Since it's raining, the ground is wet.' What do you think the conclusion is here?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I'm lost on this part. Is 'the ground is wet' the conclusion because it follows 'since'? I thought 'since' might indicate a premise, but I'm not sure how that works. Could you explain how 'since' functions in this sentence? I'm really unsure about the direction of the inference here."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identified conclusion in new example; now ready to articulate the general rule.",
+        "state": "Synthesis",
+        "response": "Yes, 'since' introduces a premise, so 'the ground is wet' is the conclusion. You've identified the structure correctly. Now, can you explain in your own words how you would pick out premises and conclusions in any argument you encounter? Think about the relationship between the statements and the role each plays."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I think you look for the claim that the rest of the statements are supporting, and the supporting statements are premises. Indicator words like 'therefore' or 'since' help, but the key is the relationship between the claims. So basically, the conclusion is what the argument is trying to prove, and premises are the reasons given for it."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student gave a good summary; prompt them to state the rule explicitly for internalization.",
+        "state": "Synthesis",
+        "response": "That's a solid summary. Could you state the rule you would use to identify premises and conclusions in any argument, just to make sure it's clear in your mind? Try to phrase it as a simple step-by-step method. It would help me see if you've fully internalized the concept."
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Sure. First, find the statement that the argument is trying to prove; that's the conclusion. Then, identify all the other statements that are given as reasons for that conclusion; those are the premises. Indicator words can signal them, but the logical role is what matters always."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has explained the rule in their own words; conversation can close warmly.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! You've got a clear grasp of premises and conclusions. Ready to try another one?"
+      }
+    ]
   }
 ]
