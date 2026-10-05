@@ -18,24 +18,64 @@ tutor replies:
   non-explicit hints, without revealing the answer.
   Example: "What happens if you divide both sides by 2?"
 
-- **Synthesis** — goal is to make the student articulate and internalize the concept by
-  explaining the rule or reasoning in their own words.
-  Example: "In your own words, what's the rule being applied here?"
+- **Synthesis** — used when the tutor judges that the student now has a complete
+  understanding of the problem (they have reached the correct answer AND their reasoning
+  has been sound). The tutor asks the student to explain the underlying concept or rule in
+  GENERAL terms, not just for this specific problem. The question must push the student to
+  generalize beyond the given numbers/context.
+  Example (math): "If I gave you a different equation of this kind, what would you do
+  first, and why does that work?"
+  Example (science): "Forget this particular example — in general, what determines how X
+  behaves?"
+  The tutor must NOT state the rule or concept before the student does.
 
 - **Closing** — reserved exclusively for the final turn of the conversation. Not a
-  pedagogical strategy — a short, warm wrap-up after the student has explained the concept
-  (e.g. "Nice, that's exactly it! Want to try another one?"). Introduces no new teaching
-  content and asks no new question about the problem.
+  pedagogical strategy — a short, warm wrap-up after the student has given a satisfactory
+  general explanation (e.g. "Nice, that's exactly it! Want to try another one?").
+  Introduces no new teaching content and asks no new question about the problem.
+
+---
+
+## STATE TRANSITION RULES
 
 State transitions among Diagnosis / Support / Synthesis should feel realistic, not
 mechanical. Do not march through them in a fixed pattern every turn. A tutor may:
 
 - stay in Support across several turns if the student keeps struggling
 - drop back to Diagnosis if the student says something confused or off-track
-- move to Synthesis only once the student has actually reached the correct answer
+- move to Synthesis only once the student has actually reached the correct answer with
+  sound reasoning and the tutor believes they could now articulate the general idea
 
-`Closing` only ever appears once, on the last turn, immediately after a Synthesis exchange
-where the student has already explained the concept.
+### The Synthesis loop
+
+Synthesis is a checkpoint, not a one-way door. After every Synthesis turn, the tutor
+evaluates the student's reply:
+
+- **Satisfactory** — the explanation is correct, stated in the student's own words, and
+  general (it applies beyond this specific problem, not just a restatement of the steps
+  taken with these particular numbers). → The next tutor turn is **Closing**, and the
+  conversation ends.
+- **Not satisfactory** — the explanation is vague, incorrect, incomplete, or only
+  describes what was done in this specific problem without the underlying general idea.
+  → The conversation continues. The tutor's reasoning field must say what was missing,
+  and the next tutor turn is Support or Diagnosis (to repair the gap) or another
+  Synthesis turn with a narrower or reframed prompt. Once the gap is addressed, the
+  tutor returns to Synthesis and asks again. The tutor still never states the rule
+  itself, even after a failed attempt.
+
+Synthesis may therefore appear more than once in a conversation. A failed Synthesis
+attempt is more likely when student_level is low or mistake_frequency is medium/high, but
+it is optional — not required.
+
+### Hard ordering constraints
+
+- The LAST tutor turn is ALWAYS **Closing**.
+- The SECOND-TO-LAST tutor turn is ALWAYS **Synthesis**, and the student reply right
+  after it (the second-to-last turn overall) must be the satisfactory general
+  explanation.
+- **Closing** appears exactly once, only on the final turn.
+- Any earlier Synthesis turns must be followed by an unsatisfactory student answer
+  (otherwise the conversation would have ended there).
 
 ---
 
@@ -84,20 +124,26 @@ student up front.
    output, count the turns in your "conversation" array. If it has fewer than 12, or is an
    odd number, continue or adjust the dialogue until it's valid.
 2. Flow: start with confusion or partial understanding, progress toward correct reasoning,
-   have the student explain the concept in their own words, then close warmly.
+   reach the correct answer, have the tutor check for general understanding via Synthesis,
+   (repair and re-ask if the explanation falls short), then close warmly.
 3. The student's FIRST turn must show only partial or incomplete reasoning — it must never
    already contain the correct final answer or a fully worked solution. The struggle has to
    be real, not just a formality before the student immediately gets it right.
 4. Tutor never gives the full solution outright — guides via Diagnosis/Support/Synthesis.
 5. Student behavior reflects student_level and mistake_frequency: realistic errors, partial
    reasoning, occasional uncertainty — not scripted-sounding.
-6. The second-to-last turn must be the student explaining the rule/principle in their own
-   words — never the tutor stating it first. Immediately after that, the FINAL turn must be
-   the tutor's Closing turn: brief, generic, and warm — praise plus something like an
-   invitation to continue (e.g. "Great, you've got it! Ready for the next one?"). It must
-   not introduce new teaching content or ask a new question about the problem itself. The
-   conversation ends there — do not add any further student turn after it.
-7. Write turns as natural, short spoken exchanges — the way a real tutor and student talk
+6. Synthesis must only be triggered after the student has reached the correct answer. The
+   Synthesis question must ask for the general concept/rule (applicable to similar
+   problems), not a recap of this problem's steps. The tutor must never state the rule
+   first.
+7. The second-to-last turn must be the student's satisfactory, general, own-words
+   explanation of the rule/principle, responding directly to the final Synthesis turn.
+   Immediately after that, the FINAL turn must be the tutor's Closing turn: brief,
+   generic, and warm — praise plus something like an invitation to continue (e.g. "Great,
+   you've got it! Ready for the next one?"). It must not introduce new teaching content or
+   ask a new question about the problem itself. The conversation ends there — do not add
+   any further student turn after it.
+8. Write turns as natural, short spoken exchanges — the way a real tutor and student talk
    out loud — not as polished paragraphs or essay-style writing. Match turn length to the
    verbosity parameter, but even at high verbosity, turns should read like speech, not prose.
 
@@ -109,9 +155,10 @@ Every tutor turn must be a JSON object with three separate string fields — do 
 them into one field or embed tags inside a single string:
 
 - `"reasoning"` — 1-2 sentences: what the student just demonstrated, what gap or readiness
-  this reveals, and why that calls for this particular state next. For the Closing turn,
-  this is simply why the exchange is wrapping up (e.g. the student has correctly explained
-  the concept).
+  this reveals, and why that calls for this particular state next. For a Synthesis turn,
+  state why the tutor believes the student is ready to generalize. For the turn right
+  after a failed Synthesis, state what was missing from the student's explanation. For the
+  Closing turn, state that the student gave a satisfactory general explanation.
 - `"state"` — exactly one of: `Diagnosis`, `Support`, `Synthesis`, `Closing`.
 - `"response"` — the actual message shown to the student.
 
@@ -130,28 +177,35 @@ what you actually generated: the problem and the conversation.
   "problem": "<problem statement>",
   "conversation": [
     {
-      "turn": 1, 
-      "speaker": "student", 
+      "turn": 1,
+      "speaker": "student",
       "text": "<student message, no tags>"
     },
     {
-      "turn": 2, 
-      "speaker": "tutor", 
-      "reasoning": "<why this state>", 
-      "state": "Diagnosis", 
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "<why this state>",
+      "state": "Diagnosis",
       "response": "<message shown to student>"
     },
     ...,
     {
-      "turn": 11, 
-      "speaker": "student", 
-      "text": "<student's own explanation of the rule>"
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "<why the student is ready to generalize>",
+      "state": "Synthesis",
+      "response": "<asks student to explain the concept/rule in general>"
     },
     {
-      "turn": 12, 
-      "speaker": "tutor", 
-      "reasoning": "<why wrapping up now>", 
-      "state": "Closing", 
+      "turn": 11,
+      "speaker": "student",
+      "text": "<student's satisfactory, general explanation in their own words>"
+    },
+    {
+      "turn": 12,
+      "speaker": "tutor",
+      "reasoning": "<student gave a satisfactory general explanation, so wrapping up>",
+      "state": "Closing",
       "response": "<short warm wrap-up>"
     }
   ]
@@ -174,7 +228,14 @@ with } — nothing before, nothing after.
   wrong claim, not just hedged
 - The student's first turn does not already contain the correct answer
 - Tutor never states the rule before the student does
-- The second-to-last turn is the student's own explanation of the rule
+- Every Synthesis turn comes only after the student has reached the correct answer, and
+  asks for a GENERAL explanation, not a recap of this problem's steps
+- If an earlier Synthesis turn exists, the student's reply to it was unsatisfactory, and
+  the following tutor turn's reasoning names what was missing and is Support, Diagnosis,
+  or a reframed Synthesis (never Closing)
+- The second-to-last tutor turn is Synthesis
+- The second-to-last turn overall is the student's satisfactory, general, own-words
+  explanation, replying directly to that Synthesis turn
 - The FINAL turn is the tutor's Closing turn: short, warm, no new teaching content, no new
   question about the problem — and no turn follows it
 - "Closing" is used exactly once, only on the final turn, never elsewhere
