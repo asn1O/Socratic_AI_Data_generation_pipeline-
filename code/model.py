@@ -138,7 +138,7 @@ class Model:
 
     @property
     def _response_file_stem(self) -> str:
-        return f"{self.provider}_{self.model_name}".replace("/", "_")
+        return f"{self.provider}_{self.model_name}".replace("/", "_").replace(":", "_")
 
     @property
     def dest_write_path(self) -> str:
