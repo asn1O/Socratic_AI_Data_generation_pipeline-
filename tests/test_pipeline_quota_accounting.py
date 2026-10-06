@@ -1,17 +1,20 @@
 import json
 import os
 import tempfile
+import threading
 import unittest
 from pathlib import Path
-from unittest.mock import patch
+from unittest.mock import MagicMock, patch
 
 from code.pipeline import (
     _count_model_conversations,
     _configure_model_logging,
     _format_duration,
+    _new_stats,
     _run_model_worker,
     load_models,
     normalize_iterations,
+    run_pipeline,
     save_models,
 )
 
@@ -151,6 +154,97 @@ class PipelineQuotaAccountingTests(unittest.TestCase):
         self.assertTrue(model.expired)
         self.assertEqual(model.consecutive_failures, 3)
         self.assertEqual(log_text.count("error_code=HTTP_500"), 3)
+
+    def test_worker_updates_passed_in_stats_in_place(self):
+        model = FakeModel()
+        custom_stats = _new_stats()
+        with tempfile.TemporaryDirectory() as directory:
+            with patch.dict(os.environ, {"DATASET_GENERATOR_ID": "worker_01"}), \
+                    patch("code.pipeline.time.sleep"):
+                model_logger = _configure_model_logging(model, directory)
+                result_stats = _run_model_worker(
+                    model, 2, model_logger, stats=custom_stats
+                )
+
+        self.assertIs(result_stats, custom_stats)
+        self.assertEqual(custom_stats["attempts"], 2)
+        self.assertEqual(custom_stats["failed"], 2)
+
+    def test_worker_respects_stop_event_before_starting(self):
+        model = FakeModel()
+        stop_event = threading.Event()
+        stop_event.set()
+        with tempfile.TemporaryDirectory() as directory:
+            with patch.dict(os.environ, {"DATASET_GENERATOR_ID": "worker_01"}):
+                model_logger = _configure_model_logging(model, directory)
+                worker_stats = _run_model_worker(
+                    model, 10, model_logger, stop_event=stop_event
+                )
+
+        self.assertEqual(worker_stats["attempts"], 0)
+
+    def test_worker_wakes_and_exits_when_stop_event_signaled_during_sleep(self):
+        stop_event = threading.Event()
+
+        class SignalingModel(FakeModel):
+            def call_model(self, prompt):
+                stop_event.set()
+                return False, None, 0, "HTTP_500"
+
+        model = SignalingModel()
+        with tempfile.TemporaryDirectory() as directory:
+            with patch.dict(os.environ, {"DATASET_GENERATOR_ID": "worker_01"}):
+                model_logger = _configure_model_logging(model, directory)
+                worker_stats = _run_model_worker(
+                    model, 10, model_logger, stop_event=stop_event
+                )
+
+        self.assertEqual(worker_stats["attempts"], 1)
+
+    def test_run_pipeline_handles_keyboard_interrupt_and_persists_stats(self):
+        model_data = [{
+            "provider": "P1",
+            "api_key": "TEST_API_KEY",
+            "model_name": "m1",
+            "url": "https://example.com/v1",
+            "rpd": 1,
+            "rpd_left": 1,
+            "tpd": None,
+            "tpd_left": None,
+            "last_use": None,
+        }]
+        with tempfile.NamedTemporaryFile("w", suffix=".json") as file:
+            json.dump(model_data, file)
+            file.flush()
+
+            with patch.dict(os.environ, {"TEST_API_KEY": "resolved-secret"}), \
+                    patch("code.pipeline.save_models") as mock_save_models, \
+                    patch("code.pipeline._count_model_conversations", return_value=0), \
+                    patch("code.pipeline.ThreadPoolExecutor") as mock_executor_cls:
+
+                mock_executor = MagicMock()
+                mock_executor_cls.return_value = mock_executor
+
+                def mock_submit(fn, model, iters, logger, ws, stop_event):
+                    ws["attempts"] = 5
+                    ws["saved"] = 3
+                    ws["failed"] = 2
+                    mock_future = MagicMock()
+                    mock_future.result.side_effect = KeyboardInterrupt()
+                    return mock_future
+
+                mock_executor.submit.side_effect = mock_submit
+
+                with tempfile.TemporaryDirectory() as temp_dir:
+                    saved = run_pipeline(
+                        iterations=10,
+                        models_path=file.name,
+                        data_dir=temp_dir,
+                    )
+
+                self.assertEqual(saved, 3)
+                mock_save_models.assert_called_once()
+                mock_executor.shutdown.assert_called_with(wait=False, cancel_futures=True)
 
 
 if __name__ == "__main__":
