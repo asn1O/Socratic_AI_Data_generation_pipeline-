@@ -7,6 +7,7 @@ import json
 import logging
 import os
 import re
+import threading
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -531,18 +532,31 @@ def _format_model_summary(model: Model, stats: Dict[str, Any]) -> str:
     ])
 
 
+def _sleep_or_stop(seconds: float, stop_event: Optional[threading.Event]) -> bool:
+    """Sleep for the specified seconds, or return True immediately if stop_event is set."""
+    if stop_event is not None:
+        return stop_event.wait(timeout=seconds)
+    time.sleep(seconds)
+    return False
+
+
 def _run_model_worker(
     model: Model,
     iterations: int,
     model_logger: Optional[logging.Logger] = None,
+    stats: Optional[Dict[str, Any]] = None,
+    stop_event: Optional[threading.Event] = None,
 ) -> Dict[str, Any]:
     """Run one model and return statistics owned entirely by this worker."""
     model_key = f"{model.provider} / {model.model_name}"
-    stats = _new_stats()
+    if stats is None:
+        stats = _new_stats()
     stats["models"][model_key]["model"] = model
     model_logger = model_logger or logger
 
     for _ in range(iterations):
+        if stop_event is not None and stop_event.is_set():
+            break
         stats["attempts"] += 1
         stats["models"][model_key]["attempts"] += 1
         model_logger.info(
@@ -580,7 +594,8 @@ def _run_model_worker(
             if model.consecutive_failures >= 3:
                 model.expired = True
                 model_logger.error("MODEL_EXPIRED provider=%s model=%s reason=three consecutive API failures", model.provider, model.model_name)
-            time.sleep(MODEL_WAIT_SECONDS)
+            if _sleep_or_stop(MODEL_WAIT_SECONDS, stop_event):
+                break
             if model.expired:
                 break
             continue
@@ -599,9 +614,10 @@ def _run_model_worker(
             if model.consecutive_failures >= 3:
                 model.expired = True
                 model_logger.error("MODEL_EXPIRED provider=%s model=%s reason=three consecutive API failures", model.provider, model.model_name)
-                time.sleep(MODEL_WAIT_SECONDS)
+                _sleep_or_stop(MODEL_WAIT_SECONDS, stop_event)
                 break
-            time.sleep(MODEL_WAIT_SECONDS)
+            if _sleep_or_stop(MODEL_WAIT_SECONDS, stop_event):
+                break
             continue
 
         model.consecutive_failures = 0
@@ -635,7 +651,8 @@ def _run_model_worker(
                 model.model_name,
                 str(exc),
             )
-            time.sleep(MODEL_WAIT_SECONDS)
+            if _sleep_or_stop(MODEL_WAIT_SECONDS, stop_event):
+                break
             continue
 
         try:
@@ -649,7 +666,8 @@ def _run_model_worker(
                 model.model_name,
                 f"unable to write payload: {exc}",
             )
-            time.sleep(MODEL_WAIT_SECONDS)
+            if _sleep_or_stop(MODEL_WAIT_SECONDS, stop_event):
+                break
             continue
 
         print(f"Valid payload for provider={model.provider} model={model.model_name} saved to {dataset_path}")
@@ -672,7 +690,8 @@ def _run_model_worker(
             turn_count,
             dataset_path,
         )
-        time.sleep(MODEL_WAIT_SECONDS)
+        if _sleep_or_stop(MODEL_WAIT_SECONDS, stop_event):
+            break
 
     model_logger.info(_format_model_summary(model, stats))
     return stats
@@ -710,33 +729,48 @@ def run_pipeline(
         print(summary)
         logger.info(summary)
 
-    try:
-        with ThreadPoolExecutor(max_workers=len(models)) as executor:
-            futures = [
-                executor.submit(
-                    _run_model_worker,
-                    model,
-                    iterations_per_model,
-                    _configure_model_logging(model, data_dir),
-                )
-                for model in models
-            ]
-            worker_stats = [future.result() for future in futures]
+    stop_event = threading.Event()
+    worker_stats_list = [_new_stats() for _ in models]
+    for model, ws in zip(models, worker_stats_list):
+        model_key = f"{model.provider} / {model.model_name}"
+        ws["models"][model_key]["model"] = model
 
-        for model_stats in worker_stats:
-            _merge_stats(stats, model_stats)
-        save_models(models_path, models)
-        saved_count = stats["saved"]
+    interrupted = False
+    executor = ThreadPoolExecutor(max_workers=len(models))
+    try:
+        futures = [
+            executor.submit(
+                _run_model_worker,
+                model,
+                iterations_per_model,
+                _configure_model_logging(model, data_dir),
+                ws,
+                stop_event,
+            )
+            for model, ws in zip(models, worker_stats_list)
+        ]
+        for future in futures:
+            future.result()
 
     except KeyboardInterrupt:
-        logger.warning(
-            "Interrupted by user after %s successful write(s). Exiting cleanly.",
-            saved_count,
-        )
+        interrupted = True
+        logger.warning("Interrupted by user. Signalling workers to stop...")
+        stop_event.set()
+        executor.shutdown(wait=False, cancel_futures=True)
+    finally:
+        stop_event.set()
+        executor.shutdown(wait=False, cancel_futures=True)
+        for ws in worker_stats_list:
+            _merge_stats(stats, ws)
+        save_models(models_path, models)
+        saved_count = stats["saved"]
+        if interrupted:
+            logger.warning(
+                "Interrupted by user after %s successful write(s). Exiting cleanly.",
+                saved_count,
+            )
         print_summary()
-        return saved_count
 
-    print_summary()
     return saved_count
 
 
