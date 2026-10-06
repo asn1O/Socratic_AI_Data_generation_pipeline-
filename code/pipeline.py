@@ -7,6 +7,7 @@ import json
 import logging
 import os
 import re
+import sys
 import threading
 import time
 from datetime import datetime, timezone
@@ -803,3 +804,6 @@ if __name__ == "__main__":
         data_dir=args.data_dir,
     )
     print(f"Saved {count} validated conversation(s).")
+    sys.stdout.flush()
+    sys.stderr.flush()
+    os._exit(0)
