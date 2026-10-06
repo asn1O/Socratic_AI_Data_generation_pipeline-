@@ -1,0 +1,101 @@
+[
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "history_and_social_studies",
+    "topic": "Comparing political systems",
+    "problem": "Compare the federal system of the United States with the unitary system of France. Identify two key differences in how power is distributed between national and regional governments, and explain how each difference affects policy implementation in the two countries.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the main difference is that the US gives states more independence, while France keeps power strongly in the national government. I'm not sure how that actually changes the way laws are put into practice day to day, though. Could you help me figure out what other differences might matter for policy implementation? Maybe there are also differences in how courts interpret the constitution or how local taxes are raised?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student shows partial understanding, naming one difference but uncertain about others and policy effects; need to elicit their reasoning process to see what they know.",
+        "state": "Diagnosis",
+        "response": "I see you have identified the balance of power as a starting point, which is a good observation. To dig deeper, can you walk me through how you think authority is actually divided in each system? For example, what does the constitution say about state powers in the US versus the legal status of regions in France?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "In the US, I think states have powers that the federal government cannot just take away, like education and policing, but I'm fuzzy on the details. In France, I believe regions handle things like transportation, but only because the national government lets them, and it could take that back anytime."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student correctly notes protected vs delegated authority but vague on constitutional basis; need to hint at constitutional vs statutory distinction.",
+        "state": "Support",
+        "response": "You are right that US states enjoy protected authority while French regions depend on national permission. Think about where that protection comes from: is it written in a foundational document that is hard to change, or does it rely on ordinary laws that can be revised? That distinction often explains why policies vary more in one system than the other."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "So the US Constitution gives states reserved powers that need an amendment to change, while in France the national parliament can alter regional laws by regular legislation. I guess that means states can try different policies, like with marijuana laws, whereas France would apply the same rule everywhere."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student now correctly describes constitutional vs statutory basis; needs to connect to policy implementation effects.",
+        "state": "Support",
+        "response": "You are exactly right that the amendment process makes state powers durable, while ordinary legislation makes French regional authority flexible. This durability means states can resist federal mandates and experiment, whereas flexibility lets the national government quickly impose uniform rules. Considering a nationwide policy like healthcare reform, what differences would you expect in how it is implemented in the US versus France, and why does that stem from the constitutional versus statutory distinction?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "In the US, states could opt out or adapt the healthcare law, leading to different coverage rules and maybe some states expanding Medicaid while others do not, because their powers are protected. In France, the national government could roll out the same healthcare scheme everywhere, and regions would have to follow it, since they only have delegated authority that can be changed."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student gave correct answer about policy implementation; need to confirm they have both differences and ask them to summarize.",
+        "state": "Support",
+        "response": "You have nailed the policy implementation contrast: protected state authority leads to variability, while delegated regional authority yields uniformity. To make sure we have covered the core differences, could you state the two key distinctions between the US federal and French unitary systems in your own words, focusing on where authority originates and how it can be altered?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "First, in the US the Constitution gives states powers that can only be changed by a constitutional amendment, so their authority is protected. Second, in France the national parliament can create or abolish regional powers by ordinary law, meaning regions only have delegated authority that the central government can modify or take away."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly articulated both structural differences and linked them to policy outcomes; now ready to generalize the underlying principle.",
+        "state": "Support",
+        "response": "Great, you have identified the constitutional versus statutory source of authority and explained how that shapes policy variation. Now, think beyond these two countries: what general rule determines whether a political system will produce diverse policies across its regions or uniform policies nationwide? Consider what aspect of authority’s origin makes the difference."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The US federal system protects regional power through a constitution that is hard to change, leading to policy differences among states, while France's unitary system gives regions only delegated authority that the national government can alter easily, resulting in more uniform policies. This contrast shows how the source of authority shapes policy outcomes."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly explained both structural differences and their policy implications; now ready to articulate the general principle.",
+        "state": "Synthesis",
+        "response": "You have clearly shown how the US and France differ in where authority comes from and how easily it can be changed. Setting those specifics aside, can you describe, in your own words, the general principle that determines whether a political system yields varied or uniform policies across its territories?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "In general, a political system that constitutionally protects regional power—requiring a difficult process like a constitutional amendment to change it—allows regions to adopt different policies, leading to variation across the country. Conversely, when regional authority comes from ordinary legislation that the central government can modify or revoke easily, the national government can impose uniform policies everywhere."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student gave a satisfactory general explanation, so wrapping up.",
+        "state": "Closing",
+        "response": "Excellent work! You have grasped the core idea of how constitutional versus statutory authority shapes policy uniformity, seeing why federal systems often allow state experimentation while unitary ones tend toward national consistency. Would you like to try another comparison, perhaps looking at a confederation or a devolved system?"
+      }
+    ]
+  }
+]

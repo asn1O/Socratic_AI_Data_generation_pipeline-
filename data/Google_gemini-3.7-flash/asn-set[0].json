@@ -568,5 +568,104 @@
         "response": "Spot on! That is precise thermodynamic reasoning. Ready to move on to the next problem?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "history_and_social_studies",
+    "topic": "Cause-and-effect in historical events",
+    "problem": "A city opened a new harbor in 1850, and its maritime trade doubled by 1852. Does the harbor opening alone prove it caused the trade increase?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "The harbor opened first, so that definitely caused the trade to double right after."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student confuses chronological sequence with proof of causation, so I need to probe their underlying logic.",
+        "state": "Diagnosis",
+        "response": "What makes you certain that the timing alone proves causation?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Whenever one event happens right before another, the first event is always the direct cause."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student asserts a second incorrect claim equating sequence to causation, requiring a prompt to consider alternative explanations.",
+        "state": "Support",
+        "response": "Could other factors have influenced trade during those two years?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Maybe, but if two events happen together, we assume the first caused it until proven otherwise."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student resurfaces the misconception as a default assumption, so I will prompt them to think about required evidence.",
+        "state": "Support",
+        "response": "What evidence would we actually need to connect the new harbor directly to the trade growth?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "We would need to check if the new trade actually used the harbor or came from elsewhere."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is identifying the need for evidence; I should ask how that evidence establishes a causal relationship.",
+        "state": "Diagnosis",
+        "response": "How does checking that help us determine the true cause?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "It shows a direct mechanism linking the harbor to the increased goods, not just a coincidence in timing."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student understands the mechanism; I will confirm their final conclusion on the original question.",
+        "state": "Diagnosis",
+        "response": "So did the harbor opening alone prove it was the cause?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "No, timing alone doesn't prove cause without direct evidence showing how one led to the other."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly answered and explained the specific scenario, so they are ready to generalize the principle of historical causation.",
+        "state": "Synthesis",
+        "response": "In general, how do historians determine whether one event actually caused another, rather than just happening beforehand?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Historians look for direct evidence showing a clear mechanism connecting the events while ruling out other contributing factors."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student provided a complete, generalized explanation of establishing historical cause and effect.",
+        "state": "Closing",
+        "response": "Spot on! That is exactly how historical causation works. Ready to tackle another one?"
+      }
+    ]
   }
 ]

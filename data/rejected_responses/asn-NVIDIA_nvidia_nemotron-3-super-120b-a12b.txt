@@ -1305,3 +1305,178 @@ print x, y",
     }
   ]
 }
+
+
+{
+  "problem": "A 30 g sample of ice at -10°C is heated until it becomes liquid water at 50°C. Calculate the total heat energy required. (c_ice = 2.09 J/g°C, c_water = 4.18 J/g°C, Lf = 334 J/g).",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I’ll start by heating the ice from -10°C to 0°C using Q = m*c*ΔT."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "Student identified only the initial heating step; need to elicit awareness of subsequent phase change and heating.",
+      "state": "Diagnosis",
+      "response": "What happens after the ice reaches 0°C?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "After melting, I’ll heat water to 50°C using ice’s specific heat, 2.09 J/g°C."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "Student incorrectly applied ice’s specific heat to water; need to prompt reflection on whether specific heat stays constant across phases.",
+      "state": "Support",
+      "response": "Okay, does the specific heat stay the same when a substance changes phase?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "No, water has a different specific heat, 4.18 J/g°C."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "Student knows water’s specific heat but hasn’t considered ice heating; prompting them to calculate Q1 may reveal misuse of specific heat.",
+      "state": "Diagnosis",
+      "response": "How would you calculate the heat needed to warm the ice from -10°C to 0°C?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "I’ll heat the ice using water’s specific heat, 4.18 J/g°C, assuming it’s the same."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "Student used water’s specific heat for ice and claims specific heat doesn’t change; need to understand their reasoning.",
+      "state": "Diagnosis",
+      "response": "Why did you choose that specific heat value for heating the ice?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "I assumed the specific heat doesn’t change when a substance melts."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "Student believes specific heat is invariant; asking which substance needs more energy to raise temperature highlights the difference.",
+      "state": "Support",
+      "response": "Which requires more energy to raise temperature by 1°C: ice or water?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "Ice needs less energy, so its specific heat is lower, about 2.09 J/g°C."
+    },
+    {
+      "turn": 12,
+      "speaker": "tutor",
+      "reasoning": "Student now acknowledges different specific heats; need to verify they include mass in the latent heat calculation.",
+      "state": "Diagnosis",
+      "response": "How does the amount of ice affect the energy needed to melt it?"
+    },
+    {
+      "turn": 13,
+      "speaker": "student",
+      "text": "Melting requires mass × latent heat: 30 g × 334 J/g = 10020 J."
+    },
+    {
+      "turn": 14,
+      "speaker": "tutor",
+      "reasoning": "Student correctly calculated latent heat; now guiding them to compute Q1 ensures they apply proper specific heat for ice.",
+      "state": "Support",
+      "response": "Alright, for heating the ice from -10°C to 0°C, how would you calculate Q1?"
+    },
+    {
+      "turn": 15,
+      "speaker": "student",
+      "text": "Q1 = m*c_ice*ΔT = 30 g × 2.09 J/g°C × 10°C = 627 J."
+    },
+    {
+      "turn": 16,
+      "speaker": "tutor",
+      "reasoning": "Student has Q1 correct; prompting for Q3 checks they use water’s specific heat correctly.",
+      "state": "Support",
+      "response": "Okay, for the water heating step, how would you compute Q3?"
+    },
+    {
+      "turn": 17,
+      "speaker": "student",
+      "text": "Q3 = m*c_water*ΔT = 30 g × 4.18 J/g°C × 50°C = 6270 J."
+    },
+    {
+      "turn": 18,
+      "speaker": "tutor",
+      "reasoning": "Student has Q1 and Q3; asking for total ensures they combine all contributions including latent heat.",
+      "state": "Support",
+      "response": "Alright, let’s sum them up—what is the total heat required?"
+    },
+    {
+      "turn": 19,
+      "speaker": "student",
+      "text": "Total Q = 627 J + 10020 J + 6270 J = 16917 J."
+    },
+    {
+      "turn": 20,
+      "speaker": "tutor",
+      "reasoning": "Student arrived at correct total; probing whether they’d simplify by using a common specific heat tests for lingering misconception.",
+      "state": "Support",
+      "response": "Could you use the same specific heat for both ice and water to simplify the calculation?"
+    },
+    {
+      "turn": 21,
+      "speaker": "student",
+      "text": "I think I could just use an average specific heat to make it easier."
+    },
+    {
+      "turn": 22,
+      "speaker": "tutor",
+      "reasoning": "Student suggested using an average specific heat; reminding them of distinct values for ice and water addresses the resurgence.",
+      "state": "Support",
+      "response": "What specific heat values should you use for ice and for water?"
+    },
+    {
+      "turn": 23,
+      "speaker": "student",
+      "text": "I need to use 2.09 for ice and 4.18 for water separately."
+    },
+    {
+      "turn": 24,
+      "speaker": "tutor",
+      "reasoning": "Student reconfirmed correct specific heats; verifying the total ensures they haven’t introduced new errors.",
+      "state": "Support",
+      "response": "Okay, using those values, what is the total heat again?"
+    },
+    {
+      "turn": 25,
+      "speaker": "student",
+      "text": "It’s still 16917 J."
+    },
+    {
+      "turn": 26,
+      "speaker": "tutor",
+      "reasoning": "Student consistently applied correct formulas and values; they are prepared to articulate the general principle behind heat calculations.",
+      "state": "Synthesis",
+      "response": "Okay, think about the overall process: what determines the total heat needed to change a substance’s temperature and phase?"
+    },
+    {
+      "turn": 27,
+      "speaker": "student",
+      "text": "Add mass×c×ΔT for each temperature step and mass×L for each phase change, using correct values."
+    },
+    {
+      "turn": 28,
+      "speaker": "tutor",
+      "reasoning": "Student provided a clear, general explanation of the heat addition process, indicating mastery.",
+      "state": "Closing",
+      "response": "Nice, you’ve got it! Want to try another one?"
+    }
+  ]
+}

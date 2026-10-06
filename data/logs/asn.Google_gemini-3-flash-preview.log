@@ -368,3 +368,31 @@
   expired: False
   failure_categories:
   none
+2026-10-06 17:26:09,587 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-10-06 17:27:50,680 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=9257 turns=14 path=data/Google_gemini-3-flash-preview/asn-set[8].json
+2026-10-06 17:28:50,681 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-10-06 17:29:02,491 ERROR MODEL_FAILURE provider=Google model=gemini-3-flash-preview error_code=HTTP_503 reason=model call failed or returned no response
+2026-10-06 17:30:02,491 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-10-06 17:30:13,441 ERROR MODEL_FAILURE provider=Google model=gemini-3-flash-preview error_code=HTTP_503 reason=model call failed or returned no response
+2026-10-06 17:31:13,442 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-10-06 17:32:28,610 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=13053 turns=14 path=data/Google_gemini-3-flash-preview/asn-set[8].json
+2026-10-06 17:33:28,610 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-10-06 17:34:30,754 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=12269 turns=16 path=data/Google_gemini-3-flash-preview/asn-set[8].json
+2026-10-06 17:35:30,755 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-10-06 17:35:40,065 ERROR MODEL_FAILURE provider=Google model=gemini-3-flash-preview error_code=HTTP_503 reason=model call failed or returned no response
+2026-10-06 17:36:40,066 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-10-06 17:37:54,309 ERROR MODEL_FAILURE provider=Google model=gemini-3-flash-preview error_code=HTTP_503 reason=model call failed or returned no response
+2026-10-06 17:38:54,310 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-10-06 17:39:01,242 ERROR MODEL_FAILURE provider=Google model=gemini-3-flash-preview error_code=HTTP_429 reason=model call failed or returned no response
+2026-10-06 17:39:01,243 ERROR MODEL_EXPIRED provider=Google model=gemini-3-flash-preview reason=three consecutive API failures
+2026-10-06 17:40:01,243 INFO MODEL_SUMMARY
+  provider_model: Google / gemini-3-flash-preview
+  attempts: 8
+  saved: 3
+  failed: 5
+  accept_rate: 37.50%
+  average_tokens: 11526.33
+  turn_range: 14-16
+  expired: True
+  failure_categories:
+  empty_response: 5
