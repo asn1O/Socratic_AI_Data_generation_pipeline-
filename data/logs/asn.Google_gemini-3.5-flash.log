@@ -421,3 +421,55 @@
   expired: True
   failure_categories:
   empty_response: 1
+2026-10-07 12:59:49,424 INFO MODEL_START provider=Google model=gemini-3.5-flash
+2026-10-07 13:00:00,837 ERROR MODEL_FAILURE provider=Google model=gemini-3.5-flash error_code=HTTP_503 reason=model call failed or returned no response
+2026-10-07 13:01:00,837 INFO MODEL_START provider=Google model=gemini-3.5-flash
+2026-10-07 13:01:44,487 INFO SUCCESS provider=Google model=gemini-3.5-flash total_tokens=6327 turns=12 path=data/Google_gemini-3.5-flash/asn-set[9].json
+2026-10-07 13:02:44,488 INFO MODEL_START provider=Google model=gemini-3.5-flash
+2026-10-07 13:02:56,038 ERROR MODEL_FAILURE provider=Google model=gemini-3.5-flash error_code=HTTP_503 reason=model call failed or returned no response
+2026-10-07 13:03:56,038 INFO MODEL_START provider=Google model=gemini-3.5-flash
+2026-10-07 13:04:52,350 INFO SUCCESS provider=Google model=gemini-3.5-flash total_tokens=9370 turns=14 path=data/Google_gemini-3.5-flash/asn-set[9].json
+2026-10-07 13:05:52,351 INFO MODEL_START provider=Google model=gemini-3.5-flash
+2026-10-07 13:06:03,837 ERROR MODEL_FAILURE provider=Google model=gemini-3.5-flash error_code=HTTP_503 reason=model call failed or returned no response
+2026-10-07 13:07:03,837 INFO MODEL_START provider=Google model=gemini-3.5-flash
+2026-10-07 13:07:58,127 ERROR MODEL_FAILURE provider=Google model=gemini-3.5-flash error_code=HTTP_503 reason=model call failed or returned no response
+2026-10-07 13:08:58,128 INFO MODEL_START provider=Google model=gemini-3.5-flash
+2026-10-07 13:09:42,361 INFO SUCCESS provider=Google model=gemini-3.5-flash total_tokens=6690 turns=14 path=data/Google_gemini-3.5-flash/asn-set[9].json
+2026-10-07 13:10:42,361 INFO MODEL_START provider=Google model=gemini-3.5-flash
+2026-10-07 13:10:58,694 ERROR MODEL_FAILURE provider=Google model=gemini-3.5-flash error_code=HTTP_503 reason=model call failed or returned no response
+2026-10-07 13:11:58,694 INFO MODEL_START provider=Google model=gemini-3.5-flash
+2026-10-07 13:12:01,800 ERROR MODEL_FAILURE provider=Google model=gemini-3.5-flash error_code=HTTP_429 reason=model call failed or returned no response
+2026-10-07 13:13:01,800 INFO MODEL_START provider=Google model=gemini-3.5-flash
+2026-10-07 13:13:04,712 ERROR MODEL_FAILURE provider=Google model=gemini-3.5-flash error_code=HTTP_429 reason=model call failed or returned no response
+2026-10-07 13:13:04,713 ERROR MODEL_EXPIRED provider=Google model=gemini-3.5-flash reason=three consecutive API failures
+2026-10-07 13:14:04,714 INFO MODEL_SUMMARY
+  provider_model: Google / gemini-3.5-flash
+  attempts: 10
+  saved: 3
+  failed: 7
+  accept_rate: 30.00%
+  average_tokens: 7462.33
+  turn_range: 12-14
+  expired: True
+  failure_categories:
+  empty_response: 7
+2026-10-07 13:35:19,392 INFO MODEL_START provider=Google model=gemini-3.5-flash
+2026-10-07 13:35:43,295 INFO SUCCESS provider=Google model=gemini-3.5-flash total_tokens=7232 turns=14 path=data/Google_gemini-3.5-flash/asn-set[9].json
+2026-10-07 13:36:43,295 INFO MODEL_START provider=Google model=gemini-3.5-flash
+2026-10-07 13:36:59,782 ERROR MODEL_FAILURE provider=Google model=gemini-3.5-flash error_code=HTTP_503 reason=model call failed or returned no response
+2026-10-07 13:37:59,783 INFO MODEL_START provider=Google model=gemini-3.5-flash
+2026-10-07 13:38:48,431 ERROR MODEL_FAILURE provider=Google model=gemini-3.5-flash error_code=HTTP_503 reason=model call failed or returned no response
+2026-10-07 13:39:48,432 INFO MODEL_START provider=Google model=gemini-3.5-flash
+2026-10-07 13:39:56,220 ERROR MODEL_FAILURE provider=Google model=gemini-3.5-flash error_code=HTTP_503 reason=model call failed or returned no response
+2026-10-07 13:39:56,220 ERROR MODEL_EXPIRED provider=Google model=gemini-3.5-flash reason=three consecutive API failures
+2026-10-07 13:40:56,221 INFO MODEL_SUMMARY
+  provider_model: Google / gemini-3.5-flash
+  attempts: 4
+  saved: 1
+  failed: 3
+  accept_rate: 25.00%
+  average_tokens: 7232.00
+  turn_range: 14-14
+  expired: True
+  failure_categories:
+  empty_response: 3

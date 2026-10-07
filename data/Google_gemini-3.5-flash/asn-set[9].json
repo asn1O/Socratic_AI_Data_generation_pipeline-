@@ -691,5 +691,389 @@
         "response": "Perfect, that's exactly it! Want to try another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Speed, time and distance",
+    "problem": "A car travels at 60 km/h for 2 hours, and then at 90 km/h for 1 hour. What is its average speed for the entire journey?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "To find the average speed, is it just the average of the two speeds, which is 75 km/h?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is incorrectly trying to average the speeds directly. I need to diagnose if they know the fundamental formula for average speed.",
+        "state": "Diagnosis",
+        "response": "Average speed concerns the entire trip. How is average speed defined conceptually?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "It is the total distance traveled divided by the total time taken."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly defined average speed. I will now guide them to apply this definition by finding the components.",
+        "state": "Support",
+        "response": "Exactly. How can we find the total distance and total time for this trip?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "The total time is 3 hours. But I don't have the total distance."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student found the total time but is stuck on distance. I'll provide a formulaic hint to help them calculate the distances.",
+        "state": "Support",
+        "response": "Distance is speed multiplied by time. What are the distances for each leg?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "That's 120 km for the first leg and 90 km for the second."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully calculated the individual distances. Now they need to sum them and compute the final average speed.",
+        "state": "Support",
+        "response": "Perfect. What is the total distance, and what average speed does that give?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The total distance is 210 km. So the average speed is 70 km/h."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student correctly calculated the average speed of 70 km/h. They are ready to synthesize the general rule regarding average speed.",
+        "state": "Synthesis",
+        "response": "Spot on! In general, why can't we just average the speed numbers directly?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Because average speed must weight the speeds by the time spent traveling at each speed."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student gave a perfect general explanation of weighted averages in speed. I will now close the session.",
+        "state": "Closing",
+        "response": "That's exactly it! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Logical sequences",
+    "problem": "What is the next number in the sequence: 1, 2, 6, 15, 31, ...?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I see the sequence is 1, 2, 6, 15, 31. The numbers are growing faster each time."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student noticed the accelerating growth rate. I will directly validate this observation and prompt them to calculate the exact differences to find the pattern.",
+        "state": "Diagnosis",
+        "response": "You're right about the growth. Let's look at the exact differences between each consecutive pair of numbers."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "The differences are 1, 4, and then... wait, 15 minus 6 is 9. And 31 minus 15 is 16."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly found the difference sequence (1, 4, 9, 16). I will state these numbers and encourage them to find their common property.",
+        "state": "Support",
+        "response": "Those differences are 1, 4, 9, and 16. These numbers all share a very specific mathematical property."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, they are all even numbers except for 1, so the next difference must be 20."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made their first mistake by mischaracterizing the pattern (overlooking that 9 is odd). I must directly correct this and provide a minimal hint about multiplication.",
+        "state": "Support",
+        "response": "Actually, 9 is also odd, so that rule doesn't fit. Think about multiplying numbers by themselves."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Ah! They are perfect squares: 1, 4, 9, 16. That makes sense."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student corrected their first mistake. Now I will directly confirm this and ask them to identify the next square in the pattern.",
+        "state": "Support",
+        "response": "Yes, they are perfect squares. Now, which square comes next in this sequence?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The last difference was 4 squared. Since 31 is the fifth term, the next difference is 6 squared, or 36."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student made their second mistake, an index/counting error (skipping 5 squared). I will directly point out the progression of bases to correct them.",
+        "state": "Support",
+        "response": "We are squaring consecutive integers: 1, 2, 3, 4. The next base must be 5, not 6."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Right, 5 squared is 25. Adding 25 to 31 gives us 56 as the next number."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully solved the problem with the correct final answer of 56. I will now ask a general question to see if they can conceptualize the overall strategy.",
+        "state": "Synthesis",
+        "response": "Exactly, 56 is correct. If you encounter any new number sequence, what general steps should you take to analyze it?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "I should find the differences between terms first, then look for a familiar mathematical pattern within those differences."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student provided a perfect, generalizable explanation of the method. I will now warmly close the session.",
+        "state": "Closing",
+        "response": "Spot on! That is the perfect approach. Would you like to try another sequence puzzle now?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "statistics_and_data",
+    "topic": "Correlation vs causation",
+    "problem": "A study finds that cities with more public libraries have higher rates of physical fitness. The study concludes that building libraries causes citizens to become more physically fit. Identify the logical flaw and explain what third variable might be causing both.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think building libraries makes people fit because people walk to them instead of driving."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student suggests a direct causal mechanism. I need to diagnose if they have considered alternative explanations like a third variable.",
+        "state": "Diagnosis",
+        "response": "Walking is healthy, but could another factor be increasing both library numbers and fitness facilities?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Maybe healthier cities just happen to like books and running more."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student points to general preferences. I will explain that development requires structural resources and guide them to identify that resource.",
+        "state": "Support",
+        "response": "Cities need money to build libraries. What resource allows a city to build libraries and fund public parks?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, it's just the physical size of the city. Bigger cities have more space for both."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made their first mistake, confusing physical space with the funding resource. I will directly explain why space isn't enough to guide them back.",
+        "state": "Support",
+        "response": "Large empty deserts have space but no libraries. A city's budget or tax revenue is what actually funds these."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Right, higher tax revenue means a city can afford both libraries and fitness programs."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student corrected their mistake and identified the confounder. Now I will explain how this affects the causal claim to check their understanding.",
+        "state": "Support",
+        "response": "Exactly. Tax revenue drives both. So, does building a library directly cause people to get fit?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "No, but fitness rates definitely cause cities to build more libraries to match the active lifestyle."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student made a second mistake by suggesting reverse causality. I will explain that both are independent effects of the budget confounder.",
+        "state": "Support",
+        "response": "Both libraries and fitness rates are separate effects of high budget. Neither actually causes the other."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I see. They are both caused by city wealth, making their direct connection spurious, not causal."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully solved the specific problem. Now, I will ask them to generalize this concept of correlation vs causation.",
+        "state": "Synthesis",
+        "response": "In general, if two variables are correlated, why can't we immediately assume one causes the other?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Because a third, hidden factor might be causing both, creating a correlation without any direct causal link."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student gave a highly satisfactory general explanation of confounding variables, so I will wrap up the session.",
+        "state": "Closing",
+        "response": "Spot on! That is exactly how confounding variables work. Ready for the next problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "history_and_social_studies",
+    "topic": "Comparing political systems",
+    "problem": "In Country A, the executive leader is chosen by the legislature and can be removed by a simple majority vote of no confidence. In Country B, the executive is elected separately and can only be removed for high crimes. If both legislatures are highly fractured with five different parties, which country is more likely to experience frequent changes in executive leadership, and why?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm not sure where to start. Both countries have five parties, so they both seem pretty messy."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is overwhelmed by the complexity. I need to guide them to isolate the main structural difference first.",
+        "state": "Diagnosis",
+        "response": "Where do we see the biggest difference in how these two leaders can lose their jobs?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Country A uses a simple vote of no confidence, but Country B requires high crimes."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student identified the removal mechanisms. Now we need to explore what a fractured legislature means for decision-making.",
+        "state": "Diagnosis",
+        "response": "If a legislature has five different parties, what does that mean for getting them to agree?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "It would be really hard for them to agree on anything since they all want different things."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student understands that agreement is difficult. I want them to connect this to the leader's survival in Country A.",
+        "state": "Support",
+        "response": "How does that difficulty in agreeing affect a leader who needs their constant majority support?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "If they can't agree, they probably won't be able to vote to kick the leader out."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student made an incorrect claim, thinking disagreement prevents action rather than causing coalition collapse. I'll offer a minimal hint about coalitions.",
+        "state": "Support",
+        "response": "If a small party gets angry and leaves the ruling alliance, what happens to that majority?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, the majority disappears! So the leader would lose a vote of no confidence easily."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student now understands why Country A is unstable. Now we contrast this with Country B to finalize the answer.",
+        "state": "Support",
+        "response": "Exactly. Why wouldn't that same political disagreement remove the leader in Country B?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Because Country B's leader doesn't need their vote to stay in power, only to avoid crimes."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student solved the specific problem correctly. I will now ask them to generalize the rule about executive-legislative relations.",
+        "state": "Synthesis",
+        "response": "In general, how does linking an executive's survival directly to the legislature affect government stability?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "When the executive's job depends on the legislature, disagreement makes governments unstable. Separating them keeps them more stable."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student provided a satisfactory, general explanation of fusion vs. separation of powers, so I am wrapping up.",
+        "state": "Closing",
+        "response": "Spot on! That's a perfect summary of the concept. Ready to try another one?"
+      }
+    ]
   }
 ]

@@ -964,5 +964,92 @@
         "response": "Spot on! You mastered both the phase diagram geometry and the underlying thermodynamics. Ready to move on to the next problem?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Active vs passive voice",
+    "problem": "Identify whether the following sentence is in active or passive voice: 'The antique clock was carefully repaired by the watchmaker.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm analyzing 'The antique clock was carefully repaired by the watchmaker.' Someone is clearly acting here."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student notes an action taking place; eliciting their reasoning on how they connect that to sentence voice.",
+        "state": "Diagnosis",
+        "response": "An action is definitely occurring. How does that connect to grammatical voice?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Since the watchmaker actively performed the repair, the sentence is in active voice."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student conflated the semantic actor with active voice; guiding them directly toward identifying grammatical subject position.",
+        "state": "Support",
+        "response": "Grammatical voice focuses on the subject, not real-world actors. What is the subject here?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Ah, 'the antique clock' is the grammatical subject, and it's receiving the action. It's passive."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student corrected the error and identified the voice correctly; affirming their deduction directly.",
+        "state": "Support",
+        "response": "Exactly. The clock receives the action rather than performing it."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Got it. So passive voice always requires a 'by' phrase to name the actor."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student made an overgeneralization about passive syntax; correcting that rule directly and steering toward verb form.",
+        "state": "Support",
+        "response": "Agent phrases with 'by' are optional in passive sentences. Notice what verb forms are used."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Right, like 'was repaired'—an auxiliary 'be' verb combined with a past participle."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly resolved both issues and understands the mechanics; ready to elicit a general rule.",
+        "state": "Synthesis",
+        "response": "Step back from this sentence. In general, what defines passive voice in English grammar?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Passive voice occurs when the grammatical subject receives the action instead of doing it."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student provided a correct and general explanation in their own words; closing warmly.",
+        "state": "Closing",
+        "response": "Spot on! That's the complete definition. Ready to try another one?"
+      }
+    ]
   }
 ]

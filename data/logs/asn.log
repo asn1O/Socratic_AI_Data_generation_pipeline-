@@ -1045,3 +1045,150 @@ Config parameter balance
     easy                          17
     hard                          16
     medium                        15
+2026-10-07 13:34:32,429 INFO 
+=== Run Statistics Summary ===
+Overall totals
+  Attempts: 52
+  Saved: 32
+  Failed: 20
+  Accept rate: 61.54%
+  Duration (h:m:s): 00:34:43
+
+Per-model results
+  Provider / Model                         Attempts  Saved  Accept %  Avg tokens  Turns  Total convos
+  ----------------------------------------  --------  -----  --------  -----------  -----  Total convos
+  Google / gemini-3.6-flash                      13      8    61.54%      9098.12  12-16            231
+  Google / gemini-3.5-flash                      10      3    30.00%      7462.33  12-14            293
+  Google / gemini-3-flash-preview                20     20   100.00%     10953.45  12-18            340
+  Google / gemini-3.8-flash                       6      1    16.67%      7103.00  12-12             18
+  Google / gemini-3.7-flash                       3      0     0.00%         0.00      -              9
+
+Failure reasons
+  Category                         Count
+  ------------------------------  -----
+  dead_model_404                      0
+  empty_response                     20
+  invalid_json_syntax                 0
+  turn_count_out_of_range             0
+  speaker_alternation_broken          0
+  malformed_tutor_tags                0
+  missing_problem_field               0
+  final_turn_not_closing              0
+  unexpected_exception                0
+  other                               0
+
+Turn-count distribution
+  min=12, max=18, avg=14.69
+
+Domain coverage
+  biology                            6
+  chemistry                          3
+  economics_and_finance              1
+  ethics_and_critical_thinking       2
+  everyday_reasoning                 1
+  history_and_social_studies         6
+  language_and_grammar               2
+  logic_and_puzzles                  2
+  physics                            4
+  quantitative_aptitude              2
+  statistics_and_data                3
+
+Config parameter balance
+  socratic_level
+    high                           8
+    low                           10
+    medium                        14
+  student_level
+    advanced                      16
+    beginner                       5
+    intermediate                  11
+  hint_frequency
+    high                          15
+    low                           13
+    medium                         4
+  mistake_frequency
+    high                          12
+    low                            8
+    medium                        12
+  verbosity
+    high                          12
+    low                           15
+    medium                         5
+  difficulty
+    easy                           7
+    hard                          14
+    medium                        11
+2026-10-07 14:19:31,890 WARNING Interrupted by user after 27 successful write(s). Exiting cleanly.
+2026-10-07 14:19:31,891 INFO 
+=== Run Statistics Summary ===
+Overall totals
+  Attempts: 43
+  Saved: 27
+  Failed: 16
+  Accept rate: 62.79%
+  Duration (h:m:s): 00:44:12
+
+Per-model results
+  Provider / Model                         Attempts  Saved  Accept %  Avg tokens  Turns  Total convos
+  ----------------------------------------  --------  -----  --------  -----------  -----  Total convos
+  Google / gemini-3.6-flash                      13      8    61.54%      9727.88  12-16            239
+  Google / gemini-3.5-flash                       4      1    25.00%      7232.00  14-14            294
+  Google / gemini-3-flash-preview                20     18    90.00%      9312.28  12-18            358
+  Google / gemini-3.8-flash                       3      0     0.00%         0.00      -             18
+  Google / gemini-3.7-flash                       3      0     0.00%         0.00      -              9
+
+Failure reasons
+  Category                         Count
+  ------------------------------  -----
+  dead_model_404                      0
+  empty_response                     15
+  invalid_json_syntax                 0
+  turn_count_out_of_range             0
+  speaker_alternation_broken          1
+  malformed_tutor_tags                0
+  missing_problem_field               0
+  final_turn_not_closing              0
+  unexpected_exception                0
+  other                               0
+
+Turn-count distribution
+  min=12, max=18, avg=14.44
+
+Domain coverage
+  biology                            3
+  chemistry                          3
+  computer_science_light             1
+  economics_and_finance              3
+  ethics_and_critical_thinking       5
+  everyday_reasoning                 1
+  history_and_social_studies         2
+  language_and_grammar               1
+  logic_and_puzzles                  1
+  physics                            3
+  quantitative_aptitude              4
+
+Config parameter balance
+  socratic_level
+    high                          12
+    low                            7
+    medium                         8
+  student_level
+    advanced                       6
+    beginner                      13
+    intermediate                   8
+  hint_frequency
+    high                           3
+    low                           14
+    medium                        10
+  mistake_frequency
+    high                           9
+    low                           12
+    medium                         6
+  verbosity
+    high                          10
+    low                            8
+    medium                         9
+  difficulty
+    easy                          10
+    hard                           8
+    medium                         9

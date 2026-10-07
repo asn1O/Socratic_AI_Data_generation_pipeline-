@@ -1408,5 +1408,116 @@
         "response": "Exactly right! You've got a great handle on how alleles interact to determine the physical traits we see. Excellent work navigating those tricky distinctions between carriers and phenotypes today. Would you like to try another genetics problem, perhaps one involving two different traits at the same time?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Active vs passive voice",
+    "problem": "Identify all instances of passive voice in the following sentence and rewrite it entirely in the active voice while maintaining all original details: 'The complex machinery, having been carefully inspected by the veteran engineers for several hours, was finally declared operational after the safety protocols were fully updated.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think I see a few passives here. 'Was finally declared' stands out because of the 'was' helper verb. I also think 'was operational' might be passive, but I'm not totally sure because 'operational' feels like a description. Is the whole sentence passive, or just those parts?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified one passive construction but is confused about a linking verb. I need to explain the difference and prompt them to find the remaining passive structures.",
+        "state": "Diagnosis",
+        "response": "You've correctly spotted 'was declared' as passive! However, 'was operational' is actually a linking verb followed by an adjective describing the machinery's state, not a passive action. In this sentence, there are actually three distinct actions being performed on different objects. Aside from 'was declared,' take a look at the phrases 'having been inspected' and 'were updated.' Who is performing those specific actions, and who is receiving them?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Well, for 'having been inspected,' the veteran engineers are the ones doing the work. Since the people doing the action are right there in the phrase, wouldn't that make it active? It feels like they are the ones in control of the inspecting part of the sentence."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student made their first mistake by assuming the presence of the 'doer' makes it active. I need to explain that the grammatical subject is what determines the voice.",
+        "state": "Support",
+        "response": "Actually, 'having been inspected' is still passive because the 'machinery' is the grammatical subject of that phrase, and it isn't doing the inspecting—it is receiving it. Even if the 'doer' is mentioned after the word 'by,' the structure remains passive if the receiver comes first. A good tip is that passive voice often uses a form of 'to be' plus a past participle. Does that help you re-evaluate 'were updated' at the end?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, I see. But 'were updated' is at the very end of the sentence, so I thought that made it active. Usually, active sentences end with the object, right? Since 'updated' is the last main action, I figured the sentence had switched back to active voice by the time it finished."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made a second mistake based on sentence position. I need to clarify that position doesn't determine voice and provide a hint on how to start the active rewrite.",
+        "state": "Support",
+        "response": "I can see why the placement might be confusing, but sentence position doesn't determine voice. 'Were updated' is passive because the protocols aren't updating themselves; someone else had to perform that action. To make a sentence active, you must rearrange it so the 'doer' is the subject performing the verb. If we assume the engineers are the ones who updated the protocols, how would you rewrite the whole sentence so every action is active?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Okay, let me try. 'The veteran engineers inspected the complex machinery for several hours and finally declared it operational after the protocols were updated.' Is that right? I moved the engineers to the front so they are doing the inspecting and the declaring."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student successfully converted two parts but missed the third (Mistake 3). I need to point out the remaining passive clause and guide them to fix it.",
+        "state": "Support",
+        "response": "You are so close! You turned the first two parts into active voice beautifully by making the engineers the subject. However, 'after the protocols were updated' is still passive because 'protocols' is the subject but isn't performing the update. To make it fully active, you should state that the engineers updated the protocols. Try one more time to rewrite that final clause to match the active style of the rest."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Got it! 'After the veteran engineers carefully inspected the complex machinery for several hours, they finally declared it operational once they had fully updated the safety protocols.' That should be active for every single part now."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has reached the correct answer with sound reasoning. Now I need to push them to generalize the rule.",
+        "state": "Synthesis",
+        "response": "That's exactly right! By making the engineers the subject for every verb, the sentence becomes much more direct and clear. Now that you've successfully navigated a tricky sentence with multiple clauses, can you explain the general rule for telling the difference between active and passive voice, regardless of how many words or 'by' phrases are in the sentence?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I think passive voice is basically just when the sentence is longer and uses more helper verbs like 'was' or 'been.' If I see the word 'by' followed by a person, that's usually a dead giveaway that I'm looking at a passive sentence that needs to be flipped."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student's explanation was unsatisfactory as it focused on surface features (length, helper verbs, 'by' phrases) rather than the grammatical relationship. I need to redirect them.",
+        "state": "Support",
+        "response": "That's a helpful starting point, but remember that many passive sentences don't include a 'by' phrase at all, like 'the car was stolen.' Also, active sentences can sometimes be quite long. Think about the relationship between the grammatical subject and the action itself. In terms of 'who does what,' what is the subject actually doing in an active sentence versus a passive one?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "I guess I was relying too much on the 'by' phrase. I think the real rule is that if the object of the action comes before the verb, it's passive. But you really need that word 'by' to know for sure who did it, otherwise it's just an incomplete active sentence where we don't know the subject."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student is still struggling with the concept of a 'doer' versus a 'grammatical subject.' I will provide a final clarification and ask for a generalized rule again.",
+        "state": "Synthesis",
+        "response": "It's all about who is 'acting' versus who is being 'acted upon.' Even without a 'by' phrase, it's passive if the subject is the one receiving the action. If you were explaining this to a friend who was stuck on a totally different sentence, how would you describe the fundamental difference between the two voices and the basic steps to switch a sentence from passive to active?"
+      },
+      {
+        "turn": 15,
+        "speaker": "student",
+        "text": "The fundamental difference is whether the subject of the sentence is the 'doer' or the 'receiver.' In active voice, the subject performs the action. In passive voice, the subject has the action done to it. To switch from passive to active, you find the person or thing actually performing the action and make them the subject, then change the verb so it's a direct action instead of using 'to be' helper verbs."
+      },
+      {
+        "turn": 16,
+        "speaker": "tutor",
+        "reasoning": "The student gave a satisfactory general explanation, so wrapping up.",
+        "state": "Closing",
+        "response": "Spot on! You've mastered both the identification and the mechanics of the flip. Great job working through those tricky clauses—want to try another one?"
+      }
+    ]
   }
 ]
