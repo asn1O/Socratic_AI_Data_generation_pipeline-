@@ -188,3 +188,28 @@
   failure_categories:
   empty_response: 5
   speaker_alternation_broken: 1
+2026-10-06 16:32:18,206 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-10-06 16:33:26,614 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=9933 turns=14 path=data\OpenRouter_nvidia_nemotron-3-super-120b-a12b_free\son-set[4].json
+2026-10-06 16:34:26,627 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-10-06 16:37:41,288 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=24549 turns=16 path=data\OpenRouter_nvidia_nemotron-3-super-120b-a12b_free\son-set[4].json
+2026-10-06 16:38:41,288 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-10-06 16:39:38,426 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=9611 turns=12 path=data\OpenRouter_nvidia_nemotron-3-super-120b-a12b_free\son-set[4].json
+2026-10-06 16:40:38,427 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-10-06 16:42:19,971 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=14788 turns=14 path=data\OpenRouter_nvidia_nemotron-3-super-120b-a12b_free\son-set[4].json
+2026-10-06 16:43:19,973 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-10-06 16:43:46,109 ERROR MODEL_FAILURE provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free error_code=API_CONNECTION_ERROR reason=model call failed or returned no response
+2026-10-06 16:44:46,108 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-10-06 16:45:47,609 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=10140 turns=12 path=data\OpenRouter_nvidia_nemotron-3-super-120b-a12b_free\son-set[4].json
+2026-10-06 16:46:47,613 INFO MODEL_START provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free
+2026-10-06 16:47:58,221 INFO SUCCESS provider=OpenRouter model=nvidia/nemotron-3-super-120b-a12b:free total_tokens=10618 turns=14 path=data\OpenRouter_nvidia_nemotron-3-super-120b-a12b_free\son-set[4].json
+2026-10-06 16:48:58,217 INFO MODEL_SUMMARY
+  provider_model: OpenRouter / nvidia/nemotron-3-super-120b-a12b:free
+  attempts: 7
+  saved: 6
+  failed: 1
+  accept_rate: 85.71%
+  average_tokens: 13273.17
+  turn_range: 12-16
+  expired: True
+  failure_categories:
+  empty_response: 1

@@ -274,3 +274,28 @@
   expired: False
   failure_categories:
   none
+2026-10-06 16:32:18,208 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-10-06 16:33:15,718 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=7784 turns=16 path=data\Google_gemini-3-flash-preview\son-set[5].json
+2026-10-06 16:34:15,721 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-10-06 16:35:24,332 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=14432 turns=16 path=data\Google_gemini-3-flash-preview\son-set[5].json
+2026-10-06 16:36:24,329 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-10-06 16:37:11,830 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=9175 turns=14 path=data\Google_gemini-3-flash-preview\son-set[5].json
+2026-10-06 16:38:11,825 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-10-06 16:39:10,924 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=12626 turns=16 path=data\Google_gemini-3-flash-preview\son-set[5].json
+2026-10-06 16:40:10,932 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-10-06 16:40:58,108 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=10961 turns=12 path=data\Google_gemini-3-flash-preview\son-set[5].json
+2026-10-06 16:41:58,117 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-10-06 16:42:43,000 INFO SUCCESS provider=Google model=gemini-3-flash-preview total_tokens=10206 turns=16 path=data\Google_gemini-3-flash-preview\son-set[5].json
+2026-10-06 16:43:43,005 INFO MODEL_START provider=Google model=gemini-3-flash-preview
+2026-10-06 16:43:44,881 ERROR MODEL_FAILURE provider=Google model=gemini-3-flash-preview error_code=API_CONNECTION_ERROR reason=model call failed or returned no response
+2026-10-06 16:44:44,894 INFO MODEL_SUMMARY
+  provider_model: Google / gemini-3-flash-preview
+  attempts: 7
+  saved: 6
+  failed: 1
+  accept_rate: 85.71%
+  average_tokens: 10864.00
+  turn_range: 12-16
+  expired: True
+  failure_categories:
+  empty_response: 1

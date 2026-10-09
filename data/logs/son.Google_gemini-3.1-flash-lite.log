@@ -292,3 +292,28 @@
   expired: False
   failure_categories:
   none
+2026-10-06 16:32:18,209 INFO MODEL_START provider=Google model=gemini-3.1-flash-lite
+2026-10-06 16:32:30,529 INFO SUCCESS provider=Google model=gemini-3.1-flash-lite total_tokens=4215 turns=12 path=data\Google_gemini-3.1-flash-lite\son-set[7].json
+2026-10-06 16:33:30,519 INFO MODEL_START provider=Google model=gemini-3.1-flash-lite
+2026-10-06 16:33:37,497 INFO SUCCESS provider=Google model=gemini-3.1-flash-lite total_tokens=4228 turns=12 path=data\Google_gemini-3.1-flash-lite\son-set[7].json
+2026-10-06 16:34:37,498 INFO MODEL_START provider=Google model=gemini-3.1-flash-lite
+2026-10-06 16:34:45,849 INFO SUCCESS provider=Google model=gemini-3.1-flash-lite total_tokens=4197 turns=12 path=data\Google_gemini-3.1-flash-lite\son-set[7].json
+2026-10-06 16:35:45,847 INFO MODEL_START provider=Google model=gemini-3.1-flash-lite
+2026-10-06 16:35:50,216 INFO SUCCESS provider=Google model=gemini-3.1-flash-lite total_tokens=4044 turns=12 path=data\Google_gemini-3.1-flash-lite\son-set[7].json
+2026-10-06 16:36:50,217 INFO MODEL_START provider=Google model=gemini-3.1-flash-lite
+2026-10-06 16:36:55,364 INFO SUCCESS provider=Google model=gemini-3.1-flash-lite total_tokens=4183 turns=12 path=data\Google_gemini-3.1-flash-lite\son-set[7].json
+2026-10-06 16:37:55,369 INFO MODEL_START provider=Google model=gemini-3.1-flash-lite
+2026-10-06 16:38:00,948 INFO SUCCESS provider=Google model=gemini-3.1-flash-lite total_tokens=4269 turns=12 path=data\Google_gemini-3.1-flash-lite\son-set[7].json
+2026-10-06 16:39:00,953 INFO MODEL_START provider=Google model=gemini-3.1-flash-lite
+2026-10-06 16:39:07,523 INFO SUCCESS provider=Google model=gemini-3.1-flash-lite total_tokens=4251 turns=12 path=data\Google_gemini-3.1-flash-lite\son-set[7].json
+2026-10-06 16:40:07,534 INFO MODEL_SUMMARY
+  provider_model: Google / gemini-3.1-flash-lite
+  attempts: 7
+  saved: 7
+  failed: 0
+  accept_rate: 100.00%
+  average_tokens: 4198.14
+  turn_range: 12-12
+  expired: False
+  failure_categories:
+  none

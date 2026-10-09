@@ -577,3 +577,88 @@ Config parameter balance
     easy                          47
     hard                          65
     medium                        49
+2026-10-06 17:05:57,116 INFO 
+=== Run Statistics Summary ===
+Overall totals
+  Attempts: 84
+  Saved: 49
+  Failed: 35
+  Accept rate: 58.33%
+  Duration (h:m:s): 00:33:39
+
+Per-model results
+  Provider / Model                         Attempts  Saved  Accept %  Avg tokens  Turns  Total convos
+  ----------------------------------------  --------  -----  --------  -----------  -----  Total convos
+  NVIDIA / nvidia/nemotron-3-super-120b-a12b        7      5    71.43%     14075.80  12-18            349
+  NVIDIA / nvidia/nemotron-3-ultra-550b-a55b        7      3    42.86%      7260.67  14-14            299
+  NVIDIA / moonshotai/kimi-k3                     3      0     0.00%         0.00      -             54
+  NVIDIA / deepseek-ai/deepseek-v4-pro-0813        3      0     0.00%         0.00      -              1
+  NVIDIA / deepseek-ai/deepseek-v4-flash-0731        3      0     0.00%         0.00      -              1
+  OpenRouter / nvidia/nemotron-3-super-120b-a12b:free        7      6    85.71%     13273.17  12-16            238
+  OpenRouter / nvidia/nemotron-3-ultra-550b-a55b:free        3      0     0.00%         0.00      -            293
+  Google / gemini-3.6-flash                       7      5    71.43%      9364.40  14-14            228
+  Google / gemini-3.5-flash                       7      7   100.00%     10428.00  12-14            278
+  Google / gemini-3-flash-preview                 7      6    85.71%     10864.00  12-16            323
+  Google / gemini-3.5-flash-lite                  7      5    71.43%      4201.00  12-12            311
+  Google / gemini-3.1-flash-lite                  7      7   100.00%      4198.14  12-12            366
+  Google / gemma-4-31b-it                         7      5    71.43%      7076.40  12-18            272
+  Google / gemini-2.5-flash-lite                  3      0     0.00%         0.00      -             62
+  Google / gemini-3.8-flash                       3      0     0.00%         0.00      -             17
+  Google / gemini-3.7-flash                       3      0     0.00%         0.00      -              8
+
+Failure reasons
+  Category                         Count
+  ------------------------------  -----
+  dead_model_404                      0
+  empty_response                     31
+  invalid_json_syntax                 1
+  turn_count_out_of_range             3
+  speaker_alternation_broken          0
+  malformed_tutor_tags                0
+  missing_problem_field               0
+  final_turn_not_closing              0
+  unexpected_exception                0
+  other                               0
+
+Turn-count distribution
+  min=12, max=18, avg=13.55
+
+Domain coverage
+  biology                            5
+  chemistry                          4
+  computer_science_light             7
+  economics_and_finance              4
+  ethics_and_critical_thinking       4
+  everyday_reasoning                 1
+  history_and_social_studies         5
+  language_and_grammar               4
+  logic_and_puzzles                  5
+  physics                            3
+  quantitative_aptitude              3
+  statistics_and_data                4
+
+Config parameter balance
+  socratic_level
+    high                          28
+    low                            9
+    medium                        12
+  student_level
+    advanced                      15
+    beginner                      22
+    intermediate                  12
+  hint_frequency
+    high                          19
+    low                           14
+    medium                        16
+  mistake_frequency
+    high                          17
+    low                           13
+    medium                        19
+  verbosity
+    high                          16
+    low                           15
+    medium                        18
+  difficulty
+    easy                          20
+    hard                          15
+    medium                        14
