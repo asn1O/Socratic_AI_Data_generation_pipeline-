@@ -217,3 +217,28 @@
   expired: True
   failure_categories:
   empty_response: 3
+2026-10-06 16:32:18,207 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-10-06 16:33:10,433 ERROR MODEL_FAILURE provider=Google model=gemini-3.6-flash error_code=HTTP_503 reason=model call failed or returned no response
+2026-10-06 16:34:10,432 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-10-06 16:34:46,235 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=10918 turns=14 path=data\Google_gemini-3.6-flash\son-set[4].json
+2026-10-06 16:35:46,243 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-10-06 16:36:50,851 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=10470 turns=14 path=data\Google_gemini-3.6-flash\son-set[4].json
+2026-10-06 16:37:50,870 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-10-06 16:38:13,699 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=7922 turns=14 path=data\Google_gemini-3.6-flash\son-set[4].json
+2026-10-06 16:39:13,701 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-10-06 16:39:32,434 ERROR MODEL_FAILURE provider=Google model=gemini-3.6-flash error_code=HTTP_503 reason=model call failed or returned no response
+2026-10-06 16:40:32,441 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-10-06 16:41:14,192 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=9773 turns=14 path=data\Google_gemini-3.6-flash\son-set[4].json
+2026-10-06 16:42:14,198 INFO MODEL_START provider=Google model=gemini-3.6-flash
+2026-10-06 16:42:36,295 INFO SUCCESS provider=Google model=gemini-3.6-flash total_tokens=7739 turns=14 path=data\Google_gemini-3.6-flash\son-set[4].json
+2026-10-06 16:43:36,296 INFO MODEL_SUMMARY
+  provider_model: Google / gemini-3.6-flash
+  attempts: 7
+  saved: 5
+  failed: 2
+  accept_rate: 71.43%
+  average_tokens: 9364.40
+  turn_range: 14-14
+  expired: True
+  failure_categories:
+  empty_response: 2

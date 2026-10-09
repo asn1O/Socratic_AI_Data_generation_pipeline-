@@ -280,3 +280,28 @@
   expired: False
   failure_categories:
   empty_response: 5
+2026-10-06 16:32:18,209 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-10-06 16:32:25,838 ERROR MODEL_FAILURE provider=Google model=gemma-4-31b-it error_code=HTTP_500 reason=model call failed or returned no response
+2026-10-06 16:33:25,846 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-10-06 16:35:43,183 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=5618 turns=12 path=data\Google_gemma-4-31b-it\son-set[5].json
+2026-10-06 16:36:43,191 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-10-06 16:39:31,243 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=7972 turns=14 path=data\Google_gemma-4-31b-it\son-set[5].json
+2026-10-06 16:40:31,246 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-10-06 16:46:13,143 ERROR MODEL_FAILURE provider=Google model=gemma-4-31b-it error_code=API_CONNECTION_ERROR reason=model call failed or returned no response
+2026-10-06 16:47:13,147 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-10-06 16:49:50,995 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=7467 turns=16 path=data\Google_gemma-4-31b-it\son-set[5].json
+2026-10-06 16:50:50,993 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-10-06 16:52:47,290 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=6254 turns=14 path=data\Google_gemma-4-31b-it\son-set[5].json
+2026-10-06 16:53:47,293 INFO MODEL_START provider=Google model=gemma-4-31b-it
+2026-10-06 16:56:33,657 INFO SUCCESS provider=Google model=gemma-4-31b-it total_tokens=8071 turns=18 path=data\Google_gemma-4-31b-it\son-set[5].json
+2026-10-06 16:57:33,654 INFO MODEL_SUMMARY
+  provider_model: Google / gemma-4-31b-it
+  attempts: 7
+  saved: 5
+  failed: 2
+  accept_rate: 71.43%
+  average_tokens: 7076.40
+  turn_range: 12-18
+  expired: True
+  failure_categories:
+  empty_response: 2
