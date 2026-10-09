@@ -75,3 +75,94 @@
     }
   ]
 }
+
+
+{
+  "problem": "A merchant marks up his goods by $x\%$ above the cost price. He then gives a discount of 25%. Later, he increases that discounted price by 20%. If his final profit is 8%, find $x$. Also, if he had instead given a single discount of 10% on the original marked price, what would be his profit percentage?",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "If I set the cost price as 100 and mark it up by $x$, then the discount and the increase basically work against each other. Since 25 minus 20 is 5, I assume the final price is $(100+x) \times 0.95 = 108$?"
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reasoning": "The student is incorrectly using additive logic for sequential percentage changes. I need to explain why this is incorrect before guiding them toward using multipliers.",
+      "state": "Diagnosis",
+      "response": "Percentages don't work that way because the base changes each time. Instead of subtracting the numbers, we need to look at what the value becomes after each step. How would you write the price after a 25% discount using a multiplier?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "Oh, I see. So it's $0.75 \times (100+x)$ for the discount. Then for the 20% part, I just add that on? So the equation would be $0.75 \times (100+x) + 20 = 108$?"
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reasoning": "The student correctly identifies the first multiplier but treats the second percentage as a flat addition rather than a percentage of the new base. I will provide a direct correction and a hint.",
+      "state": "Support",
+      "response": "You need to increase the current price by 20%, which means multiplying the whole expression by 1.2, not just adding a flat amount. Try multiplying your discounted expression by 1.2 and setting that equal to the final price of 108."
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Okay, $1.2 \times 0.75 \times (100+x) = 108$. Simplifying gives $0.9 \times (100+x) = 108$, so $100+x = 120$, making $x=20$. For the second part, a 20% markup minus a 10% discount should just be a 10% profit."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reasoning": "The student successfully calculated x but repeated the additive logic error for the second part of the problem. I need to point out the base error again.",
+      "state": "Diagnosis",
+      "response": "You found $x=20$ correctly, but your second calculation is actually incorrect because the 10% discount is applied to the marked price, not the original cost. Does a 10% discount on a 120-dollar item really leave 110?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Let's check... 10% of 120 is 12, so $120 - 12 = 108$. That means the profit is actually 8% again. I wasn't expecting it to be the same as the first scenario, but the math seems right."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reasoning": "The student reached the correct answer. I will confirm it and explain why the additive logic failed here to prepare them for generalizing the concept.",
+      "state": "Support",
+      "response": "Exactly. The 10% discount on 120 reduced the price by more than 10 dollars would have, which is why the profit isn't 10%. Now that you've finished, why can't we just add or subtract these percentages?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "It's because each percentage is being calculated on a different starting amount. The markup is based on the cost, but the discount is based on the marked price, so they don't cancel out evenly."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reasoning": "The student understands the specific error in this problem. I now want to push them to state a general rule for any sequence of percentage changes.",
+      "state": "Synthesis",
+      "response": "You've solved the math correctly. In general terms, if you have a series of percentage increases and decreases, what is the most reliable way to calculate the final result without getting confused by the changing bases?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "I usually just calculate the specific multiplier for each percentage change and multiply the starting value by all of them one after another to get the final total for any sequence."
+    },
+    {
+      "turn": 12,
+      "speaker": "tutor",
+      "reasoning": "The student described a procedure (multipliers) rather than the underlying conceptual rule about bases. I need to prompt for a more general conceptual explanation.",
+      "state": "Synthesis",
+      "response": "That's a solid method for calculation. Beyond just the steps, what is the underlying principle about the relationship between a percentage and its 'base' that we must always keep in mind when dealing with multi-step changes?"
+    },
+    {
+      "turn": 13,
+      "speaker": "student",
+      "text": "The core principle is that a percentage is never an independent value; it is always relative to a specific base. In multi-step problems, the base shifts with every step, so we must treat them as compounding factors."
+    },
+    {
+      "turn": 14,
+      "speaker": "tutor",
+      "reasoning": "The student gave a satisfactory general explanation of base dependency and compounding. I can now close the session.",
+      "state": "Closing",
+      "response": "Perfectly stated! That fundamental understanding will keep you from falling for these traps in more complex problems. You did a great job today—ready to move on to the next topic?"
+    }
+  ]
+}

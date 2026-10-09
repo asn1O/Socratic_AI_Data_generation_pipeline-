@@ -715,5 +715,881 @@
         "response": "Perfectly stated! You've got the core concept down. Ready to try another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "biology",
+    "topic": "Punnett squares / genetics",
+    "problem": "In a certain type of plant, red flowers (R) are dominant and white flowers (r) are recessive. If you cross two plants that are both heterozygous (Rr), what is the probability that an offspring will have white flowers?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm looking at this plant problem about red and white flowers. If both parents have one red gene and one white gene, how do I find the chance of white offspring?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student understands the scenario but needs to translate the description into genetic notation to begin the process.",
+        "state": "Diagnosis",
+        "response": "To start off, if we know each parent has one red gene and one white gene, how would we write that out using letters, and what name do we give that combination?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think that means one parent is RR and the other is rr, since they both have two different types of genes?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student has a misconception that 'both genes' means one parent is pure dominant and one is pure recessive. I need to guide them toward the heterozygous notation.",
+        "state": "Support",
+        "response": "If 'RR' represents two red genes and 'rr' represents two white genes, what specific pair of letters would we use for a single plant that holds one of each inside itself?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, it would be Rr then. I'm not sure what to do with that in the box thing I saw in my book, though."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student corrected the notation but is unfamiliar with setting up the Punnett square. I'll provide a hint on how to organize the letters.",
+        "state": "Support",
+        "response": "If we want to see all possible combinations, and we put one parent's genes on the top and the other on the side of a grid, how would you label it?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I guess it's R and r on top, and R and r on the side? But when they meet in the middle, does that make them all RR?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is confused about how to combine the alleles within the squares. I'll prompt them to think about taking one letter from each axis.",
+        "state": "Support",
+        "response": "When you look at a box where a 'top' letter and a 'side' letter meet, how do you determine which two genes that specific offspring ends up with?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Okay, I see RR, Rr, Rr, and rr. So that's two reds and two whites, right? Since the middle ones both have the little r?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student correctly filled the square but misinterprets the phenotype of the heterozygotes. This is a resurfacing of the recessive/dominant confusion.",
+        "state": "Support",
+        "response": "Given that red (R) is dominant and white (r) is recessive, what actually happens to the visible flower color whenever a plant has at least one capital 'R' in its pair?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Oh! So Rr is actually red because the capital R is the strong one. That means only rr is white. Since that's just one out of the four boxes, is the chance 25%?"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has reached the correct answer and understands the logic of the Punnett square. It is time to see if they can generalize the principle.",
+        "state": "Synthesis",
+        "response": "Now that you've solved this one, how would you describe the general rule for when a hidden, recessive trait is actually able to show up in an offspring?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "For a recessive trait to show up, the baby has to get the recessive gene from both parents, because if there's even one dominant gene, it covers up the hidden one."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student provided a clear, generalized explanation of recessive trait inheritance, demonstrating they understand the principle beyond the specific flower example.",
+        "state": "Closing",
+        "response": "That's exactly it! You've mastered how those traits are passed down and expressed. Ready to try a more complex cross next time?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "language_and_grammar",
+    "topic": "Analogies and vocabulary in context",
+    "problem": "Complete the following analogy: Glove : Hand :: Sock : _____",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I see the words 'Glove' and 'Hand', but I'm not sure how they are supposed to fit together with 'Sock'. I don't really know what the colons in the middle mean."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is unfamiliar with analogy notation. I need to explain the structure and provide a starting hint to help them identify the first relationship.",
+        "state": "Diagnosis",
+        "response": "An analogy compares two pairs of words. The colons mean 'is to' and 'as'. We're looking for a link, like how a glove is something you wear on your hand. How would you describe that relationship?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, okay. Well, you put a glove on your hand to keep it warm or protect it. It covers the hand."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the link. I'll confirm this and provide a hint to help them apply that same logic to the second word, 'Sock'.",
+        "state": "Support",
+        "response": "That's exactly right. A glove is a piece of clothing that covers a specific part of your body. Since a glove covers a hand, what part of the body does a sock usually cover?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I think a sock covers your foot. So would the missing word be 'Foot'?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student identified the correct answer. I will now explain the underlying relationship type to ensure they see the 'clothing to body part' pattern clearly.",
+        "state": "Diagnosis",
+        "response": "You're right, it is 'Foot'. In these analogies, we are looking for a specific relationship pattern. Here, the glove is a piece of clothing worn on the hand. Why do you think 'Foot' fits?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I'm not really sure why 'Foot' is better than 'Shoe'. Don't socks go inside shoes?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is making a conceptual mistake by suggesting 'Shoe'. I'll explain the specific 'clothing-to-body-part' link to help them see why 'Foot' is the only logical choice.",
+        "state": "Support",
+        "response": "A glove is worn on the hand, which is a body part. While socks go in shoes, the first pair is 'clothing to body part.' To keep the pattern identical, we need the body part for a sock. Does that help?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I think I get it now. Since a glove is for a hand, a sock is for a foot. They are both things you wear on your body."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student now understands the relationship. I will explain why the order of the words is important and provide an example to illustrate the concept of directionality.",
+        "state": "Diagnosis",
+        "response": "You've got it. The order matters too. If we said 'Hand : Glove', we'd have to say 'Foot : Sock'. Why do you think keeping the same order is so important for the pattern to make sense?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Because if you switched them, the first one is the body part and the second is the clothes. You have to keep the same pattern for both sides so it makes sense."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has identified the importance of order. I want them to clearly state the finalized relationship for this specific pair before we move to a general rule.",
+        "state": "Diagnosis",
+        "response": "Exactly. That's a key part of these puzzles. Now that we've found the answer is 'Foot', how would you describe the final relationship for both pairs to show they match?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Both pairs show one thing being a piece of clothing and the other being the body part it covers. They both follow that same clothing-to-body-part rule in that specific order."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has successfully solved the analogy and understands the importance of relationship type and order. They are ready to generalize the process for any analogy.",
+        "state": "Synthesis",
+        "response": "You've mastered this example! If you were explaining how to solve any word analogy to a friend who has never seen one, what general steps would you tell them to follow regardless of the words used?"
+      },
+      {
+        "turn": 15,
+        "speaker": "student",
+        "text": "I'd tell them to first figure out the relationship between the first two words, like if it's 'item to body part'. Then, find a word for the second pair that fits that exact same relationship and keep the words in the same order."
+      },
+      {
+        "turn": 16,
+        "speaker": "tutor",
+        "reasoning": "The student provided a complete and accurate general rule for solving analogies, including relationship identification and directionality. The learning objective is met.",
+        "state": "Closing",
+        "response": "That is a perfect explanation! You've really grasped how these word patterns work. Great job today—would you like to try another analogy?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "physics",
+    "topic": "Buoyancy and density",
+    "problem": "A hollow steel sphere (density $\\rho_s = 7800 \\text{ kg/m}^3$) is designed to be neutrally buoyant when fully submerged in water (density $\\rho_w = 1000 \\text{ kg/m}^3$). What is the required ratio of the inner radius ($r_i$) to the outer radius ($r_o$)? Assume the internal air has negligible mass.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm analyzing a hollow steel sphere in water. For buoyancy, do I use the inner or outer volume?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is unsure about the volume relevant to Archimedes' principle. I will ask about displacement to clarify.",
+        "state": "Diagnosis",
+        "response": "What determines the amount of water pushed aside when the sphere is completely underwater?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "The total space the object occupies, so it should be based on the outer radius."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the volume for buoyancy; now I will prompt them for the shell's mass expression.",
+        "state": "Diagnosis",
+        "response": "How would you express the actual mass of the steel shell itself?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "It's the steel's density times the difference between the outer and inner volumes."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student has both force components defined. I need to see if they can link them for equilibrium.",
+        "state": "Diagnosis",
+        "response": "For neutral buoyancy, how must the shell's mass relate to the mass of the displaced water?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "They must be equal. I have the equation, but I'm not sure how to isolate the ratio."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student is stuck on the algebraic transition. I'll provide a minimal hint about the geometric relationship.",
+        "state": "Support",
+        "response": "If volume depends on the cube of the radius, how could you simplify the expression for that ratio?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "It simplifies to $(r_i/r_o)^3 = 1 - \\rho_{water}/\\rho_{steel}$. I'll take the cube root now."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student successfully derived the ratio formula. Now I'll have them calculate it to ensure physical intuition.",
+        "state": "Diagnosis",
+        "response": "If you plug in the densities, what does the resulting ratio tell you about the sphere's construction?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "It's about 0.955, so the shell must be very thin to stay neutrally buoyant."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student solved the problem and interpreted the result correctly. I am now prompting for the general principle.",
+        "state": "Synthesis",
+        "response": "Generally speaking, what is the fundamental density requirement for any object to be neutrally buoyant?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The object's total mass divided by its total displaced volume must match the density of the surrounding fluid."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student gave a satisfactory general explanation of the density matching principle, so I'm wrapping up.",
+        "state": "Closing",
+        "response": "That's exactly it! You've navigated that multi-step problem perfectly. Ready for the next challenge?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Unit conversions",
+    "problem": "A pipe leaks 2 fluid ounces every 5 minutes. How many gallons of water are lost in exactly one week? (Note: 128 fluid ounces = 1 gallon)",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know there are 7 days in a week, but the leak is in minutes. I'm stuck on how to connect them."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student identifies the unit mismatch but doesn't have a strategy to bridge them, so I will elicit their thoughts on a conversion path.",
+        "state": "Diagnosis",
+        "response": "How would you suggest we relate the 'one week' timeframe to the '5 minutes' leak rate?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I'm not sure. Should I find out how many total minutes are in a week?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student proposed a valid first step. I will now guide them to break down the time conversion into manageable pieces.",
+        "state": "Support",
+        "response": "If we start with 7 days, how might we calculate the total number of hours in that time?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "7 days times 24 hours is 168 hours. Then I multiply by 60 to get 10,080 minutes, right?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student successfully calculated the total minutes. Now I need to guide them toward using the leak's specific rate.",
+        "state": "Support",
+        "response": "If the leak happens every 5 minutes, how many of those 5-minute intervals are in 10,080 minutes?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "10,080 divided by 5 is 2,016. I'm not sure if that is the ounces or just a count?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student found the number of intervals but is uncertain how the 2-ounce rate applies. I'll hint at the relationship.",
+        "state": "Support",
+        "response": "If each of those 2,016 intervals loses 2 ounces, what calculation would give the total volume leaked?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, I'd multiply by 2 to get 4,032 ounces. But I'm stuck on how to reach gallons from here."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has the total volume in ounces. I will guide them to the final unit using the provided conversion factor.",
+        "state": "Support",
+        "response": "If 128 ounces make a gallon, what operation groups those 4,032 ounces into gallons?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "4,032 divided by 128 is 31.5 gallons. I think that is the final answer!"
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student reached the correct final answer through a logical sequence. I will now push for a general explanation of the concept.",
+        "state": "Synthesis",
+        "response": "You got it! In general, what is the rule for deciding how to use conversion factors to change units?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "You set up a ratio between the units so that the one you don't want cancels out, leaving the new unit."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student gave a satisfactory general explanation of dimensional analysis, so I am wrapping up the session.",
+        "state": "Closing",
+        "response": "Perfectly stated! You have a great grasp of the logic behind conversions now. Ready to try another challenge?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "history_and_social_studies",
+    "topic": "Cause-and-effect in historical events",
+    "problem": "Analyze the decline of the Western Roman Empire. Was it primarily an external conquest by migrating tribes, or did internal Roman policies play a more decisive role in the eventual collapse?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think Rome fell because the barbarians simply invaded and the Roman army couldn't stop them."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has a basic understanding of external pressure but ignores internal factors. I need to probe why the military failed.",
+        "state": "Diagnosis",
+        "response": "What made the Roman military, once the world's strongest, suddenly unable to resist these migrating groups?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Maybe they were just outnumbered because the empire was so huge and hard to guard."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student identifies a manpower issue. I'll ask how Rome tried to solve this to lead toward the mercenary policy.",
+        "state": "Diagnosis",
+        "response": "How did the late Roman government try to fill those gaps in their military ranks?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "They built a continuous stone wall across all European borders to block the tribes from entering."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student made a factual error about defensive strategy. I need to guide them toward the recruitment of tribes.",
+        "state": "Support",
+        "response": "Instead of walls, what if they actually invited some of those tribes to join the army instead?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Right, the foederati. They hired them as mercenaries to defend the borders against other tribes."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student identified the mercenary policy. Now I need to explore the risks of this internal decision.",
+        "state": "Diagnosis",
+        "response": "If you pay your 'enemies' to be your 'guards,' what does your security eventually depend on?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "The mercenaries were automatically granted Roman citizenship to ensure they remained loyal to the Emperor."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student made a second mistake regarding citizenship. I will hint at the role of financial incentives instead.",
+        "state": "Support",
+        "response": "What would happen to their loyalty if they weren't citizens and the state ran out of money?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The guards would probably realize they have the weapons and Rome has no real power over them."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student understands the shift in power. I'll now ask them to connect it back to the original question.",
+        "state": "Diagnosis",
+        "response": "How did this internal military choice interact with the external pressure to cause the final collapse?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The external pressure forced a desperate internal policy that backfired once the empire's economy could no longer sustain it."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has reached the correct multi-step conclusion. I will now ask for a general principle.",
+        "state": "Synthesis",
+        "response": "In historical terms, how does the way a system handles external pressure define its ultimate survival?"
+      },
+      {
+        "turn": 15,
+        "speaker": "student",
+        "text": "It depends on whether they have enough money to keep paying foreign tribes to stay away."
+      },
+      {
+        "turn": 16,
+        "speaker": "tutor",
+        "reasoning": "The student's explanation was too specific to the Roman example. I need a more abstract, general rule.",
+        "state": "Synthesis",
+        "response": "Beyond just money and tribes, what is the general risk of using an external threat to solve an internal weakness?"
+      },
+      {
+        "turn": 17,
+        "speaker": "student",
+        "text": "A society fails when its solutions to a threat create a new dependency that it eventually cannot control."
+      },
+      {
+        "turn": 18,
+        "speaker": "tutor",
+        "reasoning": "The student gave a satisfactory general explanation, so wrapping up.",
+        "state": "Closing",
+        "response": "Exactly! You've captured that principle perfectly. Ready to try another historical case?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Map reading and distance estimation",
+    "problem": "A map has a scale where 2 cm represents 5 km. Point A and Point B are 12 cm apart on the map. A river crossing adds 20% more distance to the route. If your car gets 15 km per liter, how much fuel is required for the trip?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I see 12 cm on the map, but I don't know how to turn that into real kilometers."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student identifies the map distance but is stuck on the conversion. I'll use Diagnosis to see how they interpret the scale.",
+        "state": "Diagnosis",
+        "response": "Maps use ratios to show real distances. How do we apply this 2 cm to 5 km scale?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Since it is a map, I guess 12 cm just means the trip is 12 km in real life."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student made a mistake assuming a 1:1 ratio. I'll provide a Support hint to guide them toward the scale ratio.",
+        "state": "Support",
+        "response": "The scale is 2 cm to 5 km. How many 5 km units are in that 12 cm map distance?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "There are six sets of 2 cm, so 6 times 5 is 30 km. I get that part now."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student successfully calculated the straight-line distance. Now I need to introduce the detour factor.",
+        "state": "Support",
+        "response": "That's 30 km. Now, the river adds 20% extra travel distance. Any ideas for how to include that?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I'm lost on how to add a percentage of distance to the 30 km we just found."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student expresses non-understanding of percentages. I'll provide a high-frequency hint to help them calculate the portion.",
+        "state": "Support",
+        "response": "I'm referring to finding 20% of the 30 km. How would you start that calculation?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Okay, so 30 km plus 20 means the total travel distance is 50 km."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student treated the percentage as an absolute number (30+20). I need to correct this conceptual error.",
+        "state": "Support",
+        "response": "A percentage is a portion of the distance, not a flat addition. What is 20% of 30?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Oh, 20% of 30 is 6. So the total distance to drive is 36 km."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has the correct total distance. Now I'll check if they know how to find the fuel usage.",
+        "state": "Diagnosis",
+        "response": "Correct. Since you get 15 km per liter, how do you find the final fuel amount?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "I take 36 km divided by 15, which means I need 2.4 liters of fuel."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student has reached the correct answer with sound reasoning. Now I'll ask for a general rule.",
+        "state": "Synthesis",
+        "response": "You nailed it. In general, what steps would you use for any similar map problem?"
+      },
+      {
+        "turn": 15,
+        "speaker": "student",
+        "text": "I multiplied 12 by 2.5 to get 30, then added the 6 km for the detour."
+      },
+      {
+        "turn": 16,
+        "speaker": "tutor",
+        "reasoning": "The student's explanation was tied to the specific numbers of this problem. I need a general rule.",
+        "state": "Synthesis",
+        "response": "Focus on the logic rather than these numbers. What's the general process for scale and detours?"
+      },
+      {
+        "turn": 17,
+        "speaker": "student",
+        "text": "Convert map distance to real distance, increase that by any detour percentage, then divide by fuel efficiency."
+      },
+      {
+        "turn": 18,
+        "speaker": "tutor",
+        "reasoning": "The student gave a satisfactory general explanation, so I am wrapping up the session.",
+        "state": "Closing",
+        "response": "Perfectly stated! You have a great handle on this logic now. Ready for another challenge?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "intermediate",
+      "hint_frequency": "medium",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "quantitative_aptitude",
+    "topic": "Permutations and combinations",
+    "problem": "In how many different ways can the letters of the word 'FROG' be arranged?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm trying to arrange the letters in 'FROG'. I know there are four letters, but I'm not sure how to combine them."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student has a partial understanding but is stuck on the operation. I'll diagnose their thinking about the first position.",
+        "state": "Diagnosis",
+        "response": "You're looking for arrangements. For the first letter of the word, how many choices do you have?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "There are 4 letters, so 4 options for each of the 4 spots. Is the answer 16?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student is incorrectly assuming replacement for each slot. Providing a direct explanation and a hint to guide them toward the correct logic.",
+        "state": "Support",
+        "response": "Since you used one letter already, you can't use it again. You actually have 3 letters left for the second spot."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, that makes sense. So the choices go down each time: 4, then 3, then 2, then 1."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the sequence of choices. I'll state the operation needed to reach the total.",
+        "state": "Support",
+        "response": "Exactly. To find the total ways, we multiply those choices together. What is 4 times 3 times 2 times 1?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Let's see... 4 times 3 is 12, and 12 times 2 is 22... so is it 22?"
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student made a calculation error. I'll correct it directly to keep the focus on the permutation concept.",
+        "state": "Support",
+        "response": "Close, but 12 times 2 is actually 24. Try finishing that last step by multiplying by the final choice."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Right, 24 times 1 is still 24. So there are 24 total ways to arrange the letters."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student reached the correct answer. Now I will push for a general rule to check for conceptual understanding.",
+        "state": "Synthesis",
+        "response": "Correct. If I gave you any number of unique items, what's the general way to find total arrangements?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I would just multiply the count of items by every number smaller than it down to one."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student provided a procedural description rather than a general rule name or formal concept. I'll provide a hint regarding the name.",
+        "state": "Support",
+        "response": "That's the process. We multiply because each choice creates new paths. What's the mathematical name for this sequence?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "I think it's called a factorial, and we write it with an exclamation point!"
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student now has the name and the mechanism. I'll ask one last time for the formal general rule.",
+        "state": "Synthesis",
+        "response": "That's it. So, how would you state the general rule for arranging 'n' distinct items?"
+      },
+      {
+        "turn": 15,
+        "speaker": "student",
+        "text": "To arrange 'n' different items, the total number of ways is simply 'n factorial' or n!."
+      },
+      {
+        "turn": 16,
+        "speaker": "tutor",
+        "reasoning": "The student gave a satisfactory general explanation, so wrapping up the session.",
+        "state": "Closing",
+        "response": "Exactly, you've got it! Want to try a slightly more complex one next?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "hard"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Coding-decoding",
+    "problem": "If CAT is coded as 5-26-22 and DOG is coded as 6-12-9, how is SHIRT coded in the same system?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "In CAT, C is 3 and T is 20. I don't see how they become 5 and 22."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student is looking at raw positions. I will point out a potential shift to see if they can find the consonant pattern.",
+        "state": "Diagnosis",
+        "response": "How do the numbers 3 and 20 relate to the code's 5 and 22?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Oh, 3+2 is 5 and 20+2 is 22. But A is 1, and the code says 26."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student identified the +2 shift for consonants but is confused by A. I'll explain the reverse vowel rule directly.",
+        "state": "Support",
+        "response": "Vowels like A use reverse positions (A=26), while consonants add 2 to their position."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "So for DOG, D is 6 and G is 9. Is O just 15?"
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student correctly shifted the consonants but incorrectly applied a neutral rule to the vowel O. I'll redirect them.",
+        "state": "Support",
+        "response": "O is a vowel, so it needs the reverse rule instead of adding 2."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I don't really get how to calculate the reverse position quickly."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student expressed a beginner-level difficulty with the math. I will provide a simple formula to help them.",
+        "state": "Support",
+        "response": "Subtracting the normal position from 27 gives you the reverse alphabet position."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Okay, SHIRT. S=21, H=10, I=11, R=20, T=22. Right?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student used the consonant rule for the vowel 'I'. This is a resurfacing of their previous misconception.",
+        "state": "Support",
+        "response": "Remember that 'I' is a vowel, so it should follow the reverse rule."
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I forgot! I is a vowel. So 27 minus 9 is 18. The code is 21-10-18-20-22."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student reached the correct answer. I need to verify they understand the reverse-position math before generalizing.",
+        "state": "Diagnosis",
+        "response": "How did you find the reverse position for the letter 'I' so quickly?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "I used the 27 subtraction rule we talked about earlier."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student solved the problem and correctly explained the specific steps. Now they are ready to generalize the concept.",
+        "state": "Synthesis",
+        "response": "In general, what's a good strategy when letters in a code follow different patterns?"
+      },
+      {
+        "turn": 15,
+        "speaker": "student",
+        "text": "You should group the letters into categories like vowels to see if each group has its own rule."
+      },
+      {
+        "turn": 16,
+        "speaker": "tutor",
+        "reasoning": "The student successfully explained the general principle of categorizing letters. The session is complete.",
+        "state": "Closing",
+        "response": "Exactly right! Categorizing is key for these puzzles. Want to try another one?"
+      }
+    ]
   }
 ]

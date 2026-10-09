@@ -1480,3 +1480,70 @@ print x, y",
     }
   ]
 }
+
+
+{
+  "problem": "A person has a resting heart rate of 70 beats per minute and a stroke volume of 70 mL. During exercise, their heart rate increases to 150 bpm and stroke volume increases to 110 mL. Cardiac output (CO) equals heart rate multiplied by stroke volume. Mean arterial pressure (MAP) can be approximated as CO multiplied by total peripheral resistance (TPR). If TPR decreases by 20% during exercise, calculate the percent increase in CO from rest to exercise and the approximate percent change in MAP.",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I know CO is HR times SV, but I’m not sure how to handle the units or the percent changes."
+    },
+    {
+      "reasoning": "Student states they know the formula but are unsure about units and percent steps, indicating a need to elicit their current approach.",
+      "state": "Diagnosis",
+      "response": "Can you walk me through how you would calculate the resting cardiac output using the numbers given?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "I multiply 70 by 70 and get 4900, so the resting CO is 4900 liters per minute."
+    },
+    {
+      "reasoning": "Student incorrectly reported resting CO in liters instead of milliliters, showing a unit conversion misunderstanding; a minimal hint is needed to guide them toward the correct conversion without giving the answer.",
+      "state": "Support",
+      "response": "Remember that 1000 mL makes 1 L—how would you change 4900 mL into liters?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "Okay, so resting CO is 4.9 L/min. For exercise, I multiply 150 by 110 and get 16500 mL, which is 1650 L/min."
+    },
+    {
+      "reasoning": "Student again made the same conversion error for exercise CO, indicating the hint wasn't fully absorbed; another brief hint can help them notice the factor of 1000.",
+      "state": "Support",
+      "response": "Think about it: if you have 16500 mL, how many liters is that? (Hint: divide by 1000.)"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "So exercise CO is 16.5 L/min. The percent increase in CO is (16.5 minus 4.9) divided by 4.9 times 100, which is about 237%."
+    },
+    {
+      "reasoning": "Student correctly computed the percent increase in CO; now we need to see if they grasp the MAP relationship and can apply the percent changes.",
+      "state": "Diagnosis",
+      "response": "How does mean arterial pressure relate to cardiac output and total peripheral resistance, and what would you do next to find the percent change in MAP?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "MAP is roughly CO times TPR. At rest, MAP_rest ∝ 4.9 × 1. During exercise, CO is 16.5 and TPR is 80% of resting, so MAP_ex ∝ 16.5 × 0.8 = 13.2. The ratio MAP_ex/MAP_rest is 13.2/4.9 ≈ 2.69, which is a 169% increase."
+    },
+    {
+      "reasoning": "Student has correctly computed both the CO percent increase and the MAP percent change, showing sound reasoning; they are ready to articulate the general rule for percent changes in a product.",
+      "state": "Synthesis",
+      "response": "In general, when you have a quantity that is the product of two factors and each factor changes by a certain percent, how would you determine the overall percent change in the product?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "You multiply the factors as (1 + p1/100)*(1 + p2/100) – 1, then convert to percent. For small changes you can roughly add the percentages, but exactly you use the product."
+    },
+    {
+      "reasoning": "Student gave a satisfactory general explanation of the rule for percent changes in a product, meeting the Synthesis criterion.",
+      "state": "Closing",
+      "response": "Nice work! You've got the concept down. Want to try another problem?"
+    }
+  ]
+}

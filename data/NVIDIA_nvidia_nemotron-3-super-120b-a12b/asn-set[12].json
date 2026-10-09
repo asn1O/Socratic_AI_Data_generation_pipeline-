@@ -778,5 +778,722 @@
         "response": "Nice, that's exactly it! Want to try another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "medium"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Comparing loan/interest offers",
+    "problem": "You are considering two loan offers for a $10,000 loan over three years. Offer A charges a 5% annual percentage rate compounded monthly. Offer B charges a 5.2% annual percentage rate with simple interest (no compounding). Which offer results in a lower total amount owed after three years, and by how much?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think Offer A is better because its yearly rate is lower at 5% compared to 5.2% for Offer B, so you’d pay less interest overall."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student concluded Offer A is better based solely on nominal rates, ignoring compounding effects. Need to uncover what factors they considered.",
+        "state": "Diagnosis",
+        "response": "Can you explain the steps you took to decide which loan offer is better, and what factors you considered?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I just looked at the yearly rates and didn’t think about how often the interest is added, so I missed the compounding effect."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student recognized they didn't consider how interest is added. To guide them toward considering compounding, ask what happens after one month.",
+        "state": "Support",
+        "response": "What would happen to the loan balance after one month if the 5% rate were applied monthly?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "If the 5% rate is applied monthly, each month you’d add one‑twelfth of that rate, so the balance multiplies by 1 plus 0.05/12."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student correctly described the monthly growth factor; need to see if they can generalize to multiple months.",
+        "state": "Diagnosis",
+        "response": "How could you use that monthly factor to find the amount after three years?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "To get the amount after three years, you’d multiply that monthly factor by itself for each month, which is (1+0.05/12) raised to the 36th power."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student stated the correct expression for total factor; asking for an approximate value will reveal if they grasp the effect of compounding.",
+        "state": "Support",
+        "response": "If you calculate (1+0.05/12)^36, what do you get approximately?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I think (1+0.05/12)^36 is about 1.15, which would mean the loan grows by roughly 15% over three years, making Offer A seem cheaper than Offer B."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student underestimated the compound factor, indicating they missed interest-on-interest. Prompting them to consider this concept helps correct the error.",
+        "state": "Support",
+        "response": "What does compounding mean for interest earned on interest?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Oh, I see now that each month you earn interest on the new balance, so the total will be a bit more than 15%, maybe around 16%."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student gave a better estimate but still uncertain; asking for the exact calculation will confirm the correct factor.",
+        "state": "Support",
+        "response": "What does (1+0.0041667)^36 evaluate to?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "When I calculate (1+0.05/12)^36 I get about 1.1615, which means the loan increases by roughly 16.15% after three years, so Offer A’s total interest is about 16.15%."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has both accurate percentage increases; asking them to compare will elicit the correct choice.",
+        "state": "Support",
+        "response": "Based on those percentages, which loan would cost you less in interest?"
+      },
+      {
+        "turn": 15,
+        "speaker": "student",
+        "text": "Offer B ends up cheaper because its simple interest of 5.2% per year gives 15.6% total over three years, which is less than the 16.15% from Offer A."
+      },
+      {
+        "turn": 16,
+        "speaker": "tutor",
+        "reasoning": "Student reached the correct answer with sound reasoning; now ready to articulate the general principle for comparing loans.",
+        "state": "Synthesis",
+        "response": "In general, when comparing loan offers, what determines which one is cheaper, regardless of the specific numbers?"
+      },
+      {
+        "turn": 17,
+        "speaker": "student",
+        "text": "To compare loans, you need to look at the effective interest rate over the same period, taking into account how interest is compounded, not just the quoted annual rate."
+      },
+      {
+        "turn": 18,
+        "speaker": "tutor",
+        "reasoning": "Student provided a satisfactory general explanation of the comparison principle, so the conversation can close.",
+        "state": "Closing",
+        "response": "Nice work! You've got the general idea down. Want to try another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "computer_science_light",
+    "topic": "Big-O intuition via analogies",
+    "problem": "You have a list of n numbers and want to detect duplicates. Approach A: compare every pair using a double loop (O(n^2)). Approach B: sort the list first (O(n log n)) then scan adjacent elements for equality (O(n)). Which approach scales better for large n, and why?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think Approach A is faster because you just loop through pairs; for n=100 that's 10k steps, while sorting seems like it would take more work."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student gave a premature claim about efficiency without analyzing growth rates; need to elicit their reasoning about asymptotic behavior.",
+        "state": "Diagnosis",
+        "response": "How would you compare the growth of n^2 and n log n as n gets large?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I believe sorting takes O(n^2) time because you have to compare many elements repeatedly."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student asserted an incorrect O(n^2) bound for sorting; need to hint at true complexity of efficient sorts.",
+        "state": "Support",
+        "response": "What do you know about the time complexity of algorithms like mergesort or quicksort?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Mergesort and quicksort run in O(n log n) time, so sorting is O(n log n) and scanning adds O(n), making the total O(n log n)."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student now correctly identified the complexity of Approach B; need to check if they can conclude which approach scales better.",
+        "state": "Diagnosis",
+        "response": "Based on that, which approach do you think scales better and why?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "They’re about the same because constant factors matter more than the asymptotic terms for realistic input sizes."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student overemphasized constants, missing that asymptotic growth dominates for large n; need to hint that constants are ignored in Big-O.",
+        "state": "Support",
+        "response": "If constants and lower‑order terms don’t affect the growth rate, what does that tell you about the two approaches?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Approach B is better because n log n grows slower than n^2, so for sufficiently large n it will be faster."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student gave the correct comparative judgment; need to ask them to articulate why the n log n term eventually becomes smaller than n^2 to solidify reasoning.",
+        "state": "Diagnosis",
+        "response": "Can you explain why the n log n term eventually becomes smaller than n^2 as n increases?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Sure. When you plot n^2 versus n log n, the ratio (n^2)/(n log n) = n / log n, which grows without bound as n increases, meaning n^2 eventually dwarfs n log n. Therefore Approach B’s time grows more slowly and will beat Approach A for large enough n."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student arrived at the correct answer with sound asymptotic reasoning; now ready to generalize the principle behind comparing algorithms with Big‑O.",
+        "state": "Synthesis",
+        "response": "In general, when you compare two algorithms using Big‑O notation, what determines which one is faster for large inputs?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The algorithm with the smaller asymptotic growth rate (the lower order term in the Big‑O) will eventually be faster, because we ignore constants and lower‑order terms and focus on how the runtime scales with input size."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student gave a satisfactory general explanation of the Big‑O comparison principle, so the session can end.",
+        "state": "Closing",
+        "response": "Great job! Want to try another problem?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "advanced",
+      "hint_frequency": "low",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "everyday_reasoning",
+    "topic": "Unit conversions",
+    "problem": "A cylindrical water tank has a diameter of 6 feet and a height of 10 feet. How many liters of water will it hold when full? (Use π ≈ 3.14).",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know I need to find the volume of the cylinder first, but I'm not sure where to start with the diameter and height."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student indicates they know they need volume but are unsure where to start; this shows a gap in recalling the cylinder volume formula, so I ask an open‑ended question to elicit their prior knowledge.",
+        "state": "Diagnosis",
+        "response": "Okay, let's think about this: when you look at a cylindrical tank and you need to determine how much liquid it can hold, what do you recall about the formula for the volume of a cylinder, and can you walk me through what you know so far?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think it’s V equals pi times r squared times h, but I’m not sure how to get the radius from the diameter."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student knows the formula but is uncertain how to get radius from diameter; this reveals a specific missing step, so I ask a question that directs them to think about the relationship without giving it away.",
+        "state": "Diagnosis",
+        "response": "You mentioned the formula V equals pi r squared h; that’s helpful. Now, thinking about a circle, how is the radius related to the diameter, and how would you compute the radius if you only know the diameter is six feet, and why does that relationship work?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "The radius is half the diameter, so for a 6‑foot diameter the radius would be 3 feet."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student now has the radius; the next logical step is to compute the base area, but they may not recall the exact operation, so I give a minimal hint via a question about what to do with the radius.",
+        "state": "Support",
+        "response": "You’ve got the radius as three feet; nice. To move forward, what do you do with that radius to get the area of the base of the cylinder, why does squaring the radius and multiplying by pi give you that area, and what units does the resulting area have?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I square the radius and multiply by pi, so 3 squared is 9, times 3.14 gives 28.26 square feet for the base area."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student has computed the base area; they need to know how to incorporate the height to find volume, so I ask an open‑ended question prompting them to apply the formula.",
+        "state": "Diagnosis",
+        "response": "You’ve calculated the base area as about 28.26 square feet. Excellent. Now, how do you incorporate the height of the cylinder to go from an area to a volume, and what operation does the formula V = π r² h suggest you perform?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I multiply the area by the height, so 28.26 times 10 equals 282.6 cubic feet."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has volume in cubic feet; they must convert to liters, so I ask what they know about the conversion to see if they recall the factor.",
+        "state": "Diagnosis",
+        "response": "You now have the volume in cubic feet, which is 282.6. To express the tank’s capacity in liters, what do you know about converting cubic feet to liters, can you recall the approximate conversion factor, and why is it necessary to use a conversion factor when changing from cubic feet to liters?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I remember that one cubic foot is about 28.3 liters."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student recalls the conversion factor; I need to know how they plan to use it, so I ask how they would apply it to the volume.",
+        "state": "Diagnosis",
+        "response": "You recall that one cubic foot is roughly 28.3 liters. Perfect. If you have a certain number of cubic feet, how would you use that factor to find the total number of liters, what mathematical operation does that correspond to, and what units will the final answer have?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "I multiply the volume in cubic feet by 28.3 liters per cubic foot. So 282.6 times 28.3 equals about 7,997.6 liters, which rounds to roughly 8,000 liters."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student has correctly computed the volume and converted to liters, showing sound reasoning; they are now ready to articulate the general procedure, so I pose a Synthesis question asking for the overall method.",
+        "state": "Synthesis",
+        "response": "You’ve successfully converted the volume to about 8,000 liters, and your reasoning looks solid. Now, stepping back from these specific numbers, in general, when you’re given the diameter and height of a cylindrical tank in feet and need to find its capacity in liters, what is the overall procedure you would follow, and why does each step work?"
+      },
+      {
+        "turn": 15,
+        "speaker": "student",
+        "text": "First, find the radius by halving the diameter, then calculate the base area using π r², multiply that area by the height to get the volume in cubic feet, and finally multiply the volume by the conversion factor from cubic feet to liters (about 28.3) to obtain the capacity in liters."
+      },
+      {
+        "turn": 16,
+        "speaker": "tutor",
+        "reasoning": "Student provided a satisfactory general explanation in their own words, indicating mastery; I close the conversation warmly.",
+        "state": "Closing",
+        "response": "Nice work! You've got the method down. Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "logic_and_puzzles",
+    "topic": "Logical sequences",
+    "problem": "Find the next number in the sequence: 5, 10, 20, 40, ?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think the pattern is adding 5 each time, so after 40 it would be 45."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student gave an answer but didn't explain their reasoning; need to uncover their thought process.",
+        "state": "Diagnosis",
+        "response": "Can you walk me through your thinking and show me how you decided that adding 5 each time was the right pattern?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I looked at 5 to 10 (+5) and 10 to 20 (+10), but I thought maybe it's multiplying by 3 each time, so 40 times 3 equals 120."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student proposed multiplying by 3; we test consistency by guiding them to compute ratios.",
+        "state": "Support",
+        "response": "Let's check the ratio between terms; what do you get when you divide each number by the one before it?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Dividing gives 10/5=2, 20/10=2, 40/20=2, so each step multiplies by 2. Therefore the next number is 40*2=80."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student has the correct answer; we verify the pattern holds for all steps to ensure sound reasoning.",
+        "state": "Support",
+        "response": "Can you verify that multiplying by 2 works for the first three steps as well, and explain what you find?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Actually, I'm not sure—maybe it's adding 10 each time after the first step, so 40 plus 10 would be 50."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student reverted to an additive idea; we diagnose by checking if it fits the early terms.",
+        "state": "Diagnosis",
+        "response": "If we tried adding 10 each time starting from the first term, what would the second term be according to that rule?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Five plus ten is fifteen, but the second term is ten, so adding ten doesn't fit the start."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student recognized the additive pattern fails; we prompt them to think about the first step in finding a rule.",
+        "state": "Support",
+        "response": "What would you do first if you saw a new sequence like this in order to figure out its underlying rule?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "I would check how each term relates to the previous one, like dividing to see if the ratio stays the same."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student can identify the constant ratio approach; we ask them to articulate the general principle.",
+        "state": "Synthesis",
+        "response": "In general, how would you describe the rule for a sequence where each step changes by the same factor, and why does that work?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "You look for a constant multiplier (or difference) between consecutive terms; if the ratio is constant, that means each term is the previous term multiplied by that fixed number."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student provided a clear general explanation, so we wrap up.",
+        "state": "Closing",
+        "response": "Great job explaining the general rule! I'm glad you see how to find patterns like this. Would you like to try another similar sequence?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "low",
+      "mistake_frequency": "medium",
+      "verbosity": "low",
+      "difficulty": "easy"
+    },
+    "domain": "physics",
+    "topic": "Projectile motion basics",
+    "problem": "A ball is thrown horizontally from the top of a 20 m high cliff with a speed of 15 m/s. How far from the base of the cliff does the ball land? (Use g = 9.8 m/s^2.)",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I need to find the time, but I'm not sure how to start."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student expresses uncertainty about where to start; need to elicit their current thinking about motion components.",
+        "state": "Diagnosis",
+        "response": "Let's split the motion into vertical and horizontal parts. What do you know about each?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "Vertically, the acceleration is half of g, and horizontally the speed stays the same."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student claimed vertical acceleration is half of g, indicating a misconception; need to hint at correct value without giving it away.",
+        "state": "Support",
+        "response": "Think about how velocity changes when an object falls. What is the acceleration due to gravity?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "It's g, 9.8 m/s^2 downward."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student now knows acceleration correctly but hasn't linked height to time; need to prompt recall of kinematic relation.",
+        "state": "Diagnosis",
+        "response": "Let's recall the kinematic equation for displacement under constant acceleration. How does h relate to t and g?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "t = h / g."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student gave incorrect formula t = h/g; need to guide them to isolate t^2 from the correct relation.",
+        "state": "Support",
+        "response": "Remember that displacement depends on acceleration and time squared. How would you isolate t^2?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "t^2 = 2h / g, so t = sqrt(2h/g)."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has correct time; need to prompt them to compute horizontal distance using constant horizontal speed.",
+        "state": "Support",
+        "response": "Horizontal motion has constant speed. How would you find horizontal distance?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "distance = speed × time. t ≈ 2 s, distance ≈ 15 × 2 = 30 m."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student reached correct answer with sound reasoning; ready to generalize the approach to projectile motion.",
+        "state": "Synthesis",
+        "response": "You've solved this problem correctly. In general, how would you approach any projectile motion problem?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Separate vertical and horizontal motions; time from vertical drop and gravity, distance = horizontal speed × time."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student gave a satisfactory general explanation of the principle, so the conversation can conclude.",
+        "state": "Closing",
+        "response": "Nice work! Want to try another one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "hard"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Ethical dilemmas (trolley-problem style)",
+    "problem": "A runaway trolley is heading down a track toward five workers who will be killed if it continues. You are standing on a bridge above the track, next to a large man. If you do nothing, the trolley will kill the five. You have two options: (1) Pull a lever to divert the trolley onto a side track where there is one worker; diverting will kill that one worker but save the five. (2) Push the large man off the bridge onto the track; his body will stop the trolley, saving the five but killing him. Which action is morally permissible according to the doctrine of double effect? Explain your reasoning.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I’m torn: pulling the lever kills one but saves five, and pushing the man also kills one to save five. I can’t tell which is morally better."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student expressed uncertainty and is weighing outcomes but hasn’t articulated any moral principle; we need to elicit their reasoning process.",
+        "state": "Diagnosis",
+        "response": "Can you describe what factors you’reconsidering when comparing pulling the lever versus pushing the man?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I guess I’m just looking at the numbers—either way one person dies and five live. I haven’t thought about anything else like rights or intentions."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student focused on equal trade‑off of lives; we need to hint that the manner of causing harm matters, introducing the idea of intention vs side effect.",
+        "state": "Support",
+        "response": "Think about whether you’re using a person as a means to stop the trolley versus the harm being a side effect of diverting the train. Does that distinction feel relevant?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "I think both options are okay because they both result in the same outcome—five saved, one lost. So pushing the man seems just as acceptable as pulling the lever."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student has claimed both actions are permissible, showing they haven’t grasped the double‑effect distinction; we test whether they can articulate the general principle despite this confusion.",
+        "state": "Synthesis",
+        "response": "Setting aside this specific case, can you explain in general what makes an action morally permissible when it causes harm as a side effect versus when the harm is used as a means?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I’m not sure how to tell the difference; both seem to involve harming someone to save others, so I’m stuck."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student’s answer merely expressed uncertainty without explaining the general principle; they missed the core idea that the harmful effect must be foreseen but not intended. We need to clarify this point.",
+        "state": "Support",
+        "response": "Let’s focus on intention: in double effect, the harmful effect must be foreseen but not intended. How might that apply to the lever versus the push?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "I see—when I pull the lever, I don’t intend to hit the worker; I just intend to divert the train, and the worker’s death is a side effect. When I push the man, I intend to use his body to stop the train, so the harm is intended."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student now distinguishes intention correctly but hasn’t yet linked it to permissibility; we prompt them to apply the doctrine to decide which action is allowed.",
+        "state": "Support",
+        "response": "Given that the harm is a side effect in the lever case but intended in the push, which action would the doctrine of double effect say is permissible, and why?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "The doctrine would say pulling the lever is permissible because the death of the side‑track worker is merely foreseen, not intended, while pushing the man is not permissible because you intend to use his body as a means to stop the trolley."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has arrived at the correct answer with sound reasoning; we now check whether they can state the underlying principle in general terms.",
+        "state": "Synthesis",
+        "response": "In general, what does the doctrine of double effect tell us about when causing harm can be morally acceptable, regardless of the specific numbers or context?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "The doctrine says an action with both good and bad effects can be okay if the action itself is good or neutral, the good effect is intended, the bad effect is merely foreseen and not intended, the good outweighs the bad, and the bad effect isn’t used as a means to achieve the good."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student gave a satisfactory general explanation of the doctrine, meeting the synthesis check.",
+        "state": "Closing",
+        "response": "Nice work! You’ve clearly grasped the principle. Want to try another dilemma?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "high",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "biology",
+    "topic": "Punnett squares / genetics",
+    "problem": "In pea plants, tall (T) is dominant to short (t). A heterozygous tall plant (Tt) is crossed with a short plant (tt). What is the probability of obtaining a short offspring?",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I don't really get how to start the Punnett square for this cross. I know tall is dominant but I'm confused about the genotypes"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student expresses uncertainty about starting the Punnett square, indicating they need to recall what alleles each parent carries.",
+        "state": "Diagnosis",
+        "response": "What do you know about the alleles each parent carries for the height trait, and how that influences the gametes they can produce?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "The tall parent must be TT because it shows the tall trait, and the short parent is tt; I think dominance means the tall one has two dominant alleles."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student incorrectly assumes the tall parent is homozygous dominant, overlooking that it was specified as heterozygous.",
+        "state": "Support",
+        "response": "Remember, the problem said the tall plant is heterozygous, so its genotype is Tt, not TT; this means it can produce both T and t gametes."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Since the tall parent is Tt and the short is tt, I think all the offspring will be tall because the dominant allele masks the recessive."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student believes all offspring will be tall, missing the chance to actually compute the genotypes from the gametes.",
+        "state": "Support",
+        "response": "Let's write down the gametes each parent can make and fill in the Punnett square to see the actual genotypes."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "The tall parent gives T or t, the short parent gives only t, so the squares are Tt and tt. I think none will be short because Tt is tall."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student correctly identified the gamete combinations but incorrectly concluded that no short offspring are possible, needing to check the tt squares.",
+        "state": "Diagnosis",
+        "response": "What fraction of the squares in your Punnett square are tt? Remember, each square is equally likely, so the fraction tells you the probability."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Two out of four squares are tt, so that's 2/4 which reduces to 1/2, meaning a 50% chance of short offspring."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly computed the probability of short offspring, showing sound reasoning for this specific problem.",
+        "state": "Synthesis",
+        "response": "In general, when you cross a heterozygote with a homozygous recessive parent, what phenotypic ratio do you expect and why does that ratio occur?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "You expect a 1:1 phenotypic ratio because the heterozygote contributes either allele equally, while the recessive parent always contributes a recessive allele, giving half dominant and half recessive offspring."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student gave a satisfactory general explanation of the 1:1 ratio, demonstrating understanding of the underlying principle.",
+        "state": "Closing",
+        "response": "Great job! You've grasped the core idea of this cross. Let me know if you'd like to practice more similar problems."
+      }
+    ]
   }
 ]

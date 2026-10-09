@@ -1051,5 +1051,104 @@
         "response": "Spot on! That's the complete definition. Ready to try another one?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "low",
+      "student_level": "beginner",
+      "hint_frequency": "medium",
+      "mistake_frequency": "high",
+      "verbosity": "low",
+      "difficulty": "medium"
+    },
+    "domain": "ethics_and_critical_thinking",
+    "topic": "Logical fallacies",
+    "problem": "Identify the logical fallacy in this argument and explain why the reasoning is flawed: 'Dr. Taylor argues that regular exercise reduces heart disease. But Dr. Taylor sells gym memberships, so her claim about exercise must be false.'",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "Dr. Taylor is biased, so the argument is completely valid and true."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "The student confuses speaker bias with logical validity. I will point out directly that bias alone does not invalidate a claim.",
+        "state": "Support",
+        "response": "Bias doesn't make a claim false. Notice the speaker attacks Dr. Taylor instead of testing the exercise claim."
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I don't really get what that means. Why doesn't bias matter?"
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "The student expresses direct confusion about how bias relates to truth. I will directly explain the distinction to support their understanding.",
+        "state": "Support",
+        "response": "A biased person can still state facts. Look at whether the speaker evaluates exercise or her personal motives."
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Then it must be a straw man fallacy, since they twisted her real position."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "The student misclassifies the fallacy as a straw man. I will explain the distinction between distorting an argument and targeting the person.",
+        "state": "Support",
+        "response": "A straw man distorts an argument. Here, her claim wasn't twisted; her character and motives were attacked instead."
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "I'm totally lost on which fallacy targets someone's background instead."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "The student expresses non-understanding regarding the specific fallacy name. I will provide a direct clue pointing to Latin terminology.",
+        "state": "Support",
+        "response": "Think of the Latin phrase meaning 'to the person.' It attacks the speaker's motives rather than the logic."
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Wait, so pointing out someone's hidden motive still automatically disproves their factual claim, right?"
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "The student's initial misconception resurfaces, equating motive with falsehood. I need to directly refute this and guide them back to the fallacy term.",
+        "state": "Support",
+        "response": "No, motives never disprove evidence. What fallacy dismisses a claim purely by targeting the claimant?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "That's ad hominem! It rejects her claim just because of who she is, not the evidence."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "The student has correctly identified the fallacy and articulated why it applies here. They are ready to synthesize the general rule.",
+        "state": "Synthesis",
+        "response": "Forget this example. In general, why is attacking someone's personal circumstances an error in logical reasoning?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Because an argument's truth depends on facts and evidence, not on the character or motives of who says it."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "The student provided a sound, general explanation of the underlying principle. The session is successfully concluded.",
+        "state": "Closing",
+        "response": "Spot on! You mastered that distinction. Ready to tackle another one?"
+      }
+    ]
   }
 ]

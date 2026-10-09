@@ -1162,5 +1162,290 @@
         "response": "Great! You've got it. Want to try another?"
       }
     ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "high",
+      "difficulty": "medium"
+    },
+    "domain": "economics_and_finance",
+    "topic": "Elasticity of demand",
+    "problem": "Suppose the demand for a product is given by Q = 100 - 2P. At a price of $20, the quantity demanded is 60. If the price increases to $25, quantity demanded falls to 50. Calculate the price elasticity of demand using the midpoint method and interpret whether demand is elastic, inelastic, or unit elastic at that price range.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I know elasticity has something to do with how much quantity changes when price changes, but I'm not sure how to actually calculate it, especially with this midpoint formula they mentioned. I've seen the formula but I get confused about which numbers go where."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student knows the basic idea of elasticity but is unsure about the calculation steps and the midpoint method. Need to elicit their current understanding to tailor guidance.",
+        "state": "Diagnosis",
+        "response": "That's a good starting point. Can you walk me through what you think the steps are for calculating price elasticity of demand using the midpoint method? What pieces of information do you have from the problem that you'd need to plug in?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I think I need to find the percentage change in quantity and the percentage change in price, then divide the quantity change by the price change. But I'm fuzzy on the midpoint part — do I just use the initial values as the base, or do I average the initial and final values? The textbook mentioned something about using averages but I didn't quite catch it."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student correctly identifies the ratio of percentage changes but is uncertain about the midpoint base. Provide a hint about averaging initial and final values for both quantity and price.",
+        "state": "Support",
+        "response": "You're right about the ratio. The midpoint method uses the average of the initial and final values for both quantity and price as the base for percentage changes. So for quantity, the base would be (60 + 50) divided by 2. What would that average be, and how would you compute the percentage change in quantity using that base?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Okay, the average quantity is 55. The change is -10, so the percentage change is -10 divided by 55, which is about -0.1818 or -18.18%. For price, the average is (20 + 25) divided by 2 = 22.5, the change is 5, so the percentage change is 5 divided by 22.5, which is about 0.2222 or 22.22%."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student correctly computed both percentage changes using the midpoint method. Now guide them to divide the changes to get elasticity and interpret the magnitude.",
+        "state": "Support",
+        "response": "Great job on the percentages. Now divide the percentage change in quantity by the percentage change in price to get the elasticity coefficient. What do you get, and what does the absolute value of that number tell you about whether demand is elastic, inelastic, or unit elastic?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "Dividing -0.1818 by 0.2222 gives about -0.818. The absolute value is 0.818, which is less than 1, so demand is inelastic in this price range."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student correctly calculated elasticity and identified it as inelastic. Now check if they can explain the economic meaning of inelastic demand in this specific context.",
+        "state": "Support",
+        "response": "Exactly. Can you explain in your own words what it means for demand to be inelastic in this specific situation? What does it say about consumer responsiveness?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "It means that when the price went up by about 22%, the quantity demanded only fell by about 18%, so consumers aren't very responsive to the price change for this product. The quantity change is proportionally smaller than the price change."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student explained inelasticity well in context. Now probe whether they can abstract the general concept beyond this numerical example.",
+        "state": "Diagnosis",
+        "response": "That's a clear explanation for this case. Now, stepping back from the numbers, what does price elasticity of demand measure in general, and how do you decide whether demand is elastic, inelastic, or unit elastic based on the elasticity value?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Uh, it measures how much quantity demanded changes when price changes. If the elasticity number is bigger than 1, it's elastic; smaller than 1, inelastic; equal to 1, unit elastic. But I'm just repeating what I did here, not really giving a general definition."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student recited thresholds but tied them to the calculation. Need a genuine general explanation of the concept without referencing this problem.",
+        "state": "Synthesis",
+        "response": "You've stated the thresholds correctly. But can you describe the underlying idea without referring to this particular calculation? In general, what does price elasticity of demand capture, and why do those thresholds matter for describing consumer behavior?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "Price elasticity of demand measures how responsive quantity demanded is to a change in price. If the absolute value is greater than 1, quantity changes proportionally more than price, so demand is elastic. If it's less than 1, quantity changes less than price, so demand is inelastic. If it's exactly 1, the percentage changes are equal, which is unit elastic."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student gave a satisfactory general explanation in their own words, covering the concept and thresholds without referencing the specific problem. Conversation can now close.",
+        "state": "Closing",
+        "response": "Perfect! You've got the core idea down. Ready to try another problem or move on to a related topic?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "high",
+      "student_level": "beginner",
+      "hint_frequency": "high",
+      "mistake_frequency": "low",
+      "verbosity": "medium",
+      "difficulty": "hard"
+    },
+    "domain": "physics",
+    "topic": "Levers and pulleys",
+    "problem": "A uniform beam 4 m long with mass 10 kg is pivoted at its left end. A pulley system with mechanical advantage 2 is attached to the beam 3 m from the pivot. The pulley system lifts a 60 kg load. A vertical upward force is applied at the right end of the beam (4 m from pivot) to keep the beam horizontal. Find the magnitude of this force. Use g = 10 m/s².",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I'm not sure how to combine the pulley with the lever. Do I just use the load's weight as the force on the beam?"
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student is unsure about the interaction between pulley and lever; need to elicit their current thinking about forces on the beam.",
+        "state": "Diagnosis",
+        "response": "What forces do you think act on the beam, and where do they act?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "The beam's weight acts at its center, 2 m from pivot. The load pulls down on the beam at 3 m with 600 N. The applied force pushes up at 4 m."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student identified forces but incorrectly assumes the full load weight acts on the beam; need to hint about the pulley's mechanical advantage.",
+        "state": "Support",
+        "response": "How does the pulley's mechanical advantage of 2 affect the force the beam feels at the attachment point?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, the tension in the rope is half the load weight, so 300 N. So the beam feels 300 N downward at 3 m."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student corrected the pulley force; now need to ensure they include the beam's own weight and its torque.",
+        "state": "Support",
+        "response": "Good. Now what about the beam's own weight? Where does it act and what torque does it produce?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "The beam's weight is 100 N at 2 m, giving a clockwise torque of 200 N·m. The pulley force gives 300 N at 3 m = 900 N·m clockwise. The applied force gives counterclockwise torque."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student has the torques; guide them to set up the equilibrium equation.",
+        "state": "Support",
+        "response": "Can you write the torque equilibrium equation for the beam about the pivot?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "F * 4 = 100*2 + 300*3 = 200 + 900 = 1100, so F = 275 N."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student has the correct answer with sound reasoning; ready to generalize the principle of combining simple machines.",
+        "state": "Synthesis",
+        "response": "If you encountered a different lever-pulley system, what general steps would you take to find the required force, and why does that approach work?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "First, find the tension in the rope using the pulley's mechanical advantage. That tension is the force the lever feels at the attachment point. Then, calculate all torques on the lever about the pivot, including the lever's own weight. Set net torque to zero and solve for the unknown force. This works because the lever is in rotational equilibrium, and the pulley just changes the magnitude of the force transmitted to the lever."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student gave a satisfactory general explanation, so wrapping up.",
+        "state": "Closing",
+        "response": "Great, you've got it! Ready for the next one?"
+      }
+    ]
+  },
+  {
+    "config": {
+      "socratic_level": "medium",
+      "student_level": "advanced",
+      "hint_frequency": "high",
+      "mistake_frequency": "medium",
+      "verbosity": "medium",
+      "difficulty": "easy"
+    },
+    "domain": "chemistry",
+    "topic": "Periodic table trends",
+    "problem": "Which element has a larger atomic radius: sodium (Na) or potassium (K)? Explain your reasoning.",
+    "conversation": [
+      {
+        "turn": 1,
+        "speaker": "student",
+        "text": "I think sodium has a larger atomic radius because it's in period 3 and potassium is in period 4, so sodium is higher up and therefore larger."
+      },
+      {
+        "turn": 2,
+        "speaker": "tutor",
+        "reasoning": "Student asserts Na larger due to higher period, confusing period and group trends. Need to diagnose their mental model.",
+        "state": "Diagnosis",
+        "response": "What makes you think being in a higher period means a larger radius? How does the number of electron shells change down a group?"
+      },
+      {
+        "turn": 3,
+        "speaker": "student",
+        "text": "I thought higher up means fewer shells, so the atom is smaller? Wait, that would make sodium smaller. I'm mixing up the trends."
+      },
+      {
+        "turn": 4,
+        "speaker": "tutor",
+        "reasoning": "Student recognizes contradiction but hasn't corrected the trend. Provide a hint about group trend to guide correction.",
+        "state": "Support",
+        "response": "Good catch. Down a group, each element adds an electron shell. How does adding a shell affect the atomic radius?"
+      },
+      {
+        "turn": 5,
+        "speaker": "student",
+        "text": "Oh, right! Down a group, you add a shell, so radius increases. So potassium, being below sodium, has a larger radius."
+      },
+      {
+        "turn": 6,
+        "speaker": "tutor",
+        "reasoning": "Student now has correct trend but hasn't explained the underlying reason. Probe for the mechanism.",
+        "state": "Diagnosis",
+        "response": "You've got the trend right. What's the primary reason the radius increases despite potassium having more protons?"
+      },
+      {
+        "turn": 7,
+        "speaker": "student",
+        "text": "So potassium is larger because it has more protons, and the extra protons repel the electrons, expanding the electron cloud."
+      },
+      {
+        "turn": 8,
+        "speaker": "tutor",
+        "reasoning": "Student incorrectly claims protons repel electrons. Need to correct this misconception with a hint about electrostatic attraction.",
+        "state": "Support",
+        "response": "Actually, protons attract electrons. How does the increased nuclear charge in potassium affect the outer electrons, and why doesn't it shrink the atom?"
+      },
+      {
+        "turn": 9,
+        "speaker": "student",
+        "text": "Oh, protons attract electrons, not repel. So the extra shell is the main reason, while the increased nuclear charge partially offsets but doesn't overcome the shell addition."
+      },
+      {
+        "turn": 10,
+        "speaker": "tutor",
+        "reasoning": "Student now correctly explains both trend and mechanism. Check if they can articulate it clearly before moving to generalization.",
+        "state": "Diagnosis",
+        "response": "Can you summarize why potassium is larger than sodium in your own words, focusing on the competing factors?"
+      },
+      {
+        "turn": 11,
+        "speaker": "student",
+        "text": "Yes, down a group, atomic radius increases because each step adds a new electron shell, which outweighs the increase in nuclear charge."
+      },
+      {
+        "turn": 12,
+        "speaker": "tutor",
+        "reasoning": "Student has demonstrated correct reasoning for this specific problem. Ready to generalize the concept to other groups and periods.",
+        "state": "Synthesis",
+        "response": "Great. Now, forgetting Na and K, what general rule determines how atomic radius changes down a group and across a period?"
+      },
+      {
+        "turn": 13,
+        "speaker": "student",
+        "text": "In general, atomic radius increases down a group because each successive element adds a new principal energy level, increasing the distance of the outermost electrons from the nucleus. Across a period, radius decreases because increasing nuclear charge pulls electrons closer without adding new shells."
+      },
+      {
+        "turn": 14,
+        "speaker": "tutor",
+        "reasoning": "Student gave a satisfactory general explanation covering both group and period trends in their own words. Conversation can close.",
+        "state": "Closing",
+        "response": "Nice, that's exactly it! Ready for the next one?"
+      }
+    ]
   }
 ]
