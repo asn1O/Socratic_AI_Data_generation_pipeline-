@@ -75,3 +75,94 @@
     }
   ]
 }
+
+
+{
+  "problem": "Compare presidential and parliamentary systems of government, focusing on how the executive is chosen and held accountable.",
+  "conversation": [
+    {
+      "turn": 1,
+      "speaker": "student",
+      "text": "I know presidential and parliamentary systems are different, but I'm confused about how their leaders are chosen."
+    },
+    {
+      "turn": 2,
+      "speaker": "tutor",
+      "reason": "The student is confused about leader selection. I will start with a diagnostic question about the parliamentary system to check their foundational knowledge.",
+      "state": "Diagnosis",
+      "response": "That's a great starting point. How does the legislature select the leader in a parliamentary system?"
+    },
+    {
+      "turn": 3,
+      "speaker": "student",
+      "text": "The parliament votes to elect the Prime Minister from among its members."
+    },
+    {
+      "turn": 4,
+      "speaker": "tutor",
+      "reason": "The student correctly identified parliamentary selection. Now I will diagnose their understanding of presidential selection to compare.",
+      "state": "Diagnosis",
+      "response": "Exactly. Now, how is a president chosen in a presidential system?"
+    },
+    {
+      "turn": 5,
+      "speaker": "student",
+      "text": "The president is elected by the people, and they can dissolve Congress if they disagree."
+    },
+    {
+      "turn": 6,
+      "speaker": "tutor",
+      "reason": "The student made a mistake about executive power in presidential systems. I need to guide them to realize the independence of the branches.",
+      "state": "Support",
+      "response": "In a presidential system, the branches are co-equal. Does the president actually have power over Congress's existence?"
+    },
+    {
+      "turn": 7,
+      "speaker": "student",
+      "text": "Ah, no, they can't. They are completely separate and independent branches."
+    },
+    {
+      "turn": 8,
+      "speaker": "tutor",
+      "reason": "The student corrected their mistake. I will now ask about accountability and removal to address the second part of the comparison.",
+      "state": "Diagnosis",
+      "response": "How do these systems differ when it comes to removing the executive from office?"
+    },
+    {
+      "turn": 9,
+      "speaker": "student",
+      "text": "A president is impeached, but the Prime Minister can't be removed because they are the head of state."
+    },
+    {
+      "turn": 10,
+      "speaker": "tutor",
+      "reason": "The student mistakenly thinks the PM is the head of state and cannot be removed. I will correct the role definition and prompt them on removal.",
+      "state": "Support",
+      "response": "Actually, the PM is the head of government, not state. What can parliament do if they lose trust?"
+    },
+    {
+      "turn": 11,
+      "speaker": "student",
+      "text": "Oh, right. Parliament can remove the Prime Minister through a vote of no confidence."
+    },
+    {
+      "turn": 12,
+      "speaker": "tutor",
+      "reason": "The student has successfully answered all specific parts of the comparison. I will now prompt them to generalize the underlying structural concept.",
+      "state": "Synthesis",
+      "response": "If you look past these specific examples, what core principle defines how executive and legislative branches interact?"
+    },
+    {
+      "turn": 13,
+      "speaker": "student",
+      "text": "It's about whether the executive's power is fused with or strictly separated from the legislature's power."
+    },
+    {
+      "turn": 14,
+      "speaker": "tutor",
+      "reason": "The student successfully explained the general concept of fusion vs separation of powers. I will now close the session.",
+      "state": "Closing",
+      "response": "Spot on! That is the fundamental distinction. Ready to try another concept?"
+    }
+  ]
+}
