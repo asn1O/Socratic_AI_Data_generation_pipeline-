@@ -94,8 +94,8 @@ provider or providers you want to run:
 | `code/openRouter.json` | OpenRouter               | `OPENROUTER_API_KEY`       |
 | `code/model.json`      | All configured providers | Provider-specific variable |
 
-Each model entry includes quota counters and runtime fields such as
-`rpd_left`, `tpd_left`, `last_use`, `expired`, and `consecutive_failures`.
+Each model entry includes configuration and runtime fields such as
+`wait_1_min`, `last_use`, `expired`, and `consecutive_failures`.
 Models are loaded directly into an array and one thread owns each model for the
 duration of a run. Do not run two processes against the same configuration file
 at the same time. After all model threads finish, the main process writes the

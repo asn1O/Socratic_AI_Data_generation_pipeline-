@@ -615,7 +615,6 @@ def _run_model_worker(
             if model.consecutive_failures >= 3:
                 model.expired = True
                 model_logger.error("MODEL_EXPIRED provider=%s model=%s reason=three consecutive API failures", model.provider, model.model_name)
-                _sleep_or_stop(MODEL_WAIT_SECONDS, stop_event)
                 break
             if _sleep_or_stop(MODEL_WAIT_SECONDS, stop_event):
                 break
@@ -652,8 +651,9 @@ def _run_model_worker(
                 model.model_name,
                 str(exc),
             )
-            if _sleep_or_stop(MODEL_WAIT_SECONDS, stop_event):
-                break
+            if model.wait_1_min:
+                if _sleep_or_stop(MODEL_WAIT_SECONDS, stop_event):
+                    break
             continue
 
         try:
@@ -667,8 +667,9 @@ def _run_model_worker(
                 model.model_name,
                 f"unable to write payload: {exc}",
             )
-            if _sleep_or_stop(MODEL_WAIT_SECONDS, stop_event):
-                break
+            if model.wait_1_min:
+                if _sleep_or_stop(MODEL_WAIT_SECONDS, stop_event):
+                    break
             continue
 
         print(f"Valid payload for provider={model.provider} model={model.model_name} saved to {dataset_path}")
@@ -691,8 +692,9 @@ def _run_model_worker(
             turn_count,
             dataset_path,
         )
-        if _sleep_or_stop(MODEL_WAIT_SECONDS, stop_event):
-            break
+        if model.wait_1_min:
+            if _sleep_or_stop(MODEL_WAIT_SECONDS, stop_event):
+                break
 
     model_logger.info(_format_model_summary(model, stats))
     return stats
