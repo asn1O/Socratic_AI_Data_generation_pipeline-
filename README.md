@@ -9,23 +9,32 @@ model response, and saves accepted records as JSON.
 
 ```text
 Data_generation_pipeline/
-├── src/
-│   ├── model.json          # Combined model list and runtime state
-│   ├── count_convos.py     # Script to count conversations generated
-│   ├── pipeline.py         # Threaded pipeline entry point
-│   └── prompt_generator.py # Prompt sampling and template population
+├── src/                        # Core Python pipeline package
+│   ├── __init__.py
+│   ├── model.py                # Model API communication & retry handling
+│   ├── pipeline.py             # Multi-threaded pipeline entry point
+│   └── prompt_generator.py     # Prompt sampling & template population
+├── models/
+│   └── models.json             # Model configurations & worker runtime state
+├── scripts/                    # Utility and dataset analysis scripts
+│   ├── count_convos.py         # Count conversation totals per folder
+│   ├── data_distribution.py    # Compute dataset distribution statistics
+│   └── generate_distribution_graphs.py # Generate publication figures
+├── reports/                    # Reports and generated figure assets
+│   ├── DATASET_DISTRIBUTION_REPORT.md
+│   └── figures/
 ├── dataset_generation_prompt.md # Conversation-generation prompt template
-├── data/                   # Generated conversations and logs
-├── tests/                  # Unit tests
-├── requirements.txt        # Python package dependencies
-├── .env.example            # Environment-variable template
-└── .env                    # Local API keys; do not commit this file
+├── data/                       # Generated conversations and logs
+├── tests/                      # Automated unit test suite
+├── requirements.txt            # Python package dependencies
+├── .env.example                # Environment-variable template
+└── .env                        # Local API keys; do not commit this file
 ```
 
 ## Requirements
 
 - Python 3.9 or newer
-- API access to at least one model configured in `src/model.json`
+- API access to at least one model configured in `models/models.json`
 
 The code currently needs these third-party Python packages (listed in `requirements.txt`):
 
@@ -36,7 +45,7 @@ The code currently needs these third-party Python packages (listed in `requireme
 ## Installation
 
 Run every command below from the repository root, the directory containing
-`README.md`, `src/`, and `data/`.
+`README.md`, `src/`, `models/`, and `data/`.
 
 ```bash
 cd "/path/to/Data_generation_pipeline"
@@ -72,18 +81,18 @@ DATASET_GENERATOR_ID=your_worker_name
 `DATASET_GENERATOR_ID` identifies the worker that writes dataset files. It may
 contain only letters, numbers, `_`, and `-`, for example `worker_01`.
 
-The current `src/model.json` entries reference the three provider variables
+The current `models/models.json` entries reference the three provider variables
 above. `GROQ_API_KEY` is included in `.env.example` for compatibility but is
 not currently used by the configured models. You may leave it empty unless you
-add a Groq model entry to `src/model.json`.
+add a Groq model entry to `models/models.json`.
 
-Never replace the `api_key` values in `src/model.json` with secret strings.
+Never replace the `api_key` values in `models/models.json` with secret strings.
 They are environment-variable names, such as `NVIDIA_API_KEY`, and the
 program resolves them from `.env` at runtime. Keep `.env` private.
 
 ## Model configuration
 
-The pipeline accepts a JSON configuration file containing a list of model entries. The primary configuration is `src/model.json`:
+The pipeline accepts a JSON configuration file containing a list of model entries. The primary configuration is `models/models.json`:
 
 Each model entry includes configuration and runtime fields such as
 `wait_1_min`, `last_use`, `expired`, and `consecutive_failures`.
@@ -100,7 +109,7 @@ Generated data and logs use the `data/` directory by default. Pass the model
 configuration path and desired number of attempts explicitly:
 
 ```bash
-python -m src.pipeline src/model.json 50
+python -m src.pipeline models/models.json 50
 ```
 
 The requested iteration count is the total number of attempts. If it is not
@@ -131,13 +140,13 @@ not conflict during dataset merging.
 For a short connectivity or setup check, use one attempt:
 
 ```bash
-python -m src.pipeline src/model.json 1
+python -m src.pipeline models/models.json 1
 ```
 
 For example, to write a small test run to a separate directory:
 
 ```bash
-python -m src.pipeline src/model.json 5 --data-dir data/test_run
+python -m src.pipeline models/models.json 5 --data-dir data/test_run
 ```
 
 Do not run `cd src` before starting the pipeline. Doing so changes the
@@ -164,11 +173,11 @@ data/
 
 The command prints a combined run summary containing attempts, accepted
 records, failure categories, token counts, turn counts, domain coverage, and
-model usage. The pipeline also updates quota and usage counters in the input
+model usage. The pipeline also updates failure and usage counters in the input
 models file after all workers finish, so review that file before resetting or
 copying it.
 
-## Dataset format
+## Dataset format and validation rules
 
 The prompt generator randomly selects a domain, topic, and conversation
 parameters for each attempt from `dataset_generation_prompt.md`. A valid record
@@ -179,9 +188,35 @@ contains:
 - `domain`, `topic`, and `problem`
 - `conversation`: 12-18 alternating student and tutor turns
 
-Tutor turns contain separate `reasoning`, `state`, and `response` fields. The
-final tutor state is always `Closing`; malformed or structurally invalid model
-responses are rejected and saved under `data/rejected_responses/`.
+### Strict Acceptance Checks
+Every generated payload is validated against strict structural rules before saving:
+1. **Turn Count**: Total turns must be an even number between 12 and 18.
+2. **Turn Alternation**: Speaker must strictly alternate between `student` and `tutor` starting with `student`.
+3. **Turn Numbering**: Turn numbers must sequentially match the turn index `1 .. N` with no skips or duplicates.
+4. **Tutor Tags**: Every tutor turn must contain non-empty `reasoning`, a valid `state` (`Diagnosis`, `Support`, `Synthesis`, `Closing`), and `response`.
+5. **Pedagogical Ending Sequence**:
+   - The tutor turn before the final student explanation (`conversation[-3]`) must be in the `Synthesis` state.
+   - The final student turn (`conversation[-2]`) must provide their synthesis explanation.
+   - The final tutor turn (`conversation[-1]`) must be in the `Closing` state.
+
+Malformed or non-conforming responses are rejected, categorized in logs, and saved under `data/rejected_responses/`.
+
+## Utility Scripts
+
+The `scripts/` directory includes helper tools for dataset auditing and analysis:
+
+- **Count conversations**:
+  ```bash
+  python scripts/count_convos.py
+  ```
+- **Compute parameter and domain distribution**:
+  ```bash
+  python scripts/data_distribution.py
+  ```
+- **Generate publication figures**:
+  ```bash
+  python scripts/generate_distribution_graphs.py
+  ```
 
 ## Run tests
 
@@ -198,9 +233,9 @@ The tests use mocks and local temporary files; they do not call an API.
 ## Troubleshooting
 
 - `models file not found`: confirm the shell is in the repository root and
-  that `src/model.json` exists.
+  that `models/models.json` exists.
 - `Authentication error (401)`: check the relevant key in `.env` and confirm
-  that the matching `api_key` name in `src/model.json` is spelled correctly.
+  that the matching `api_key` name in `models/models.json` is spelled correctly.
 - `DATASET_GENERATOR_ID must contain only letters...`: use only letters,
   numbers, `_`, or `-`.
 - `No models found`: confirm the selected JSON file contains a non-empty array.
@@ -208,4 +243,4 @@ The tests use mocks and local temporary files; they do not call an API.
   response, that model is marked expired and its worker stops. Check the
   model-specific log and runtime fields in the input JSON file.
 - `Not found (404)`: verify that the model name is still supported by the
-  provider and that its URL in `src/model.json` is correct.
+  provider and that its URL in `models/models.json` is correct.

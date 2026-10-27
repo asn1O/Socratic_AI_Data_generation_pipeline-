@@ -814,7 +814,7 @@ def _parse_args() -> argparse.Namespace:
     parser.add_argument(
         "models_path",
         type=str,
-        help="Path to the JSON file that lists the models.",
+        help="Path to the JSON file that lists the models (e.g. models/models.json).",
     )
     parser.add_argument(
         "iterations",
