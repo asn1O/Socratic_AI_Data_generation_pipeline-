@@ -5,6 +5,8 @@ OpenAI-compatible language-model APIs. The pipeline randomly selects a
 domain, topic, and conversation configuration for each attempt, validates the
 model response, and saves accepted records as JSON.
 
+> **Note**: The generated multi-turn dataset and distribution reports are located on the `socratic_dataset` branch. This branch (`pipeline`) provides a clean, ready-to-run execution environment.
+
 ## Project layout
 
 ```text
@@ -20,9 +22,6 @@ Data_generation_pipeline/
 │   ├── count_convos.py         # Count conversation totals per folder
 │   ├── data_distribution.py    # Compute dataset distribution statistics
 │   └── generate_distribution_graphs.py # Generate publication figures
-├── reports/                    # Reports and generated figure assets
-│   ├── DATASET_DISTRIBUTION_REPORT.md
-│   └── figures/
 ├── dataset_generation_prompt.md # Conversation-generation prompt template
 ├── data/                       # Generated conversations and logs
 ├── tests/                      # Automated unit test suite
@@ -155,6 +154,8 @@ cause files to be created in the wrong location or the models file not to be
 found.
 
 ## Generated files
+
+*(Note: The generated dataset of 3,000+ validated conversations is available on the `socratic_dataset` branch).*
 
 Accepted conversations are written beneath `data/`, grouped by provider and
 model. Each worker file contains at most 15 records before a new set file is
