@@ -47,10 +47,10 @@ def parse_log_file(log_path: Path):
     text = log_path.read_text(encoding="utf-8")
 
     # 1. Total summary
-    total_convs = 3449
     m_tot = re.search(r"Total Conversations Analyzed:\s*(\d+)", text)
-    if m_tot:
-        total_convs = int(m_tot.group(1))
+    if not m_tot:
+        raise ValueError("Could not parse 'Total Conversations Analyzed' from log file.")
+    total_convs = int(m_tot.group(1))
 
     # Split Sections to avoid leakage
     sec1, sec2 = text.split("# SECTION 2: DOMAIN DISTRIBUTION")
@@ -153,7 +153,7 @@ def clean_domain_label(raw: str) -> str:
 def plot_fig1_config_parameters(total_convs, params_data, out_path: Path):
     """Plot 2x3 grid of config parameter distributions showing balanced 3-way split."""
     fig, axes = plt.subplots(2, 3, figsize=(15, 9), dpi=300)
-    fig.suptitle("Dataset Uniformity Across 6 Socratic Configuration Parameters (N = 3,449)", 
+    fig.suptitle(f"Dataset Uniformity Across 6 Socratic Configuration Parameters (N = {total_convs:,})", 
                  fontsize=16, fontweight="bold", y=0.98)
 
     param_meta = [
@@ -229,7 +229,7 @@ def plot_fig2_domain_distribution(total_convs, overall_domains, out_path: Path):
     ax.invert_yaxis()
     ax.set_xlabel("Number of Conversations", labelpad=8)
     ax.set_xlim(0, 370)
-    ax.set_title("Domain Distribution Across 12 Knowledge Disciplines (N = 3,449)\n"
+    ax.set_title(f"Domain Distribution Across 12 Knowledge Disciplines (N = {total_convs:,})\n"
                  "Demonstrating Highly Balanced Multi-Discipline Synthetic Coverage",
                  pad=15, fontsize=13)
     ax.grid(axis="x", linestyle=":", alpha=0.6, zorder=1)
@@ -267,15 +267,27 @@ def plot_fig3_model_generator_distribution(total_convs, folders_summary, out_pat
     ax.invert_yaxis()
     ax.set_xlabel("Total Conversations Generated", labelpad=8)
     ax.set_xlim(0, 500)
-    ax.set_title("Conversation Volume by Generator Model & Platform (N = 3,449)\n"
+    ax.set_title(f"Conversation Volume by Generator Model & Platform (N = {total_convs:,})\n"
                  "Multi-LLM Synthetic Socratic Dialog Generation", pad=15, fontsize=13)
     ax.grid(axis="x", linestyle=":", alpha=0.6, zorder=1)
 
     from matplotlib.patches import Patch
+    provider_counts = {}
+    for item in folders_summary.values():
+        p = item["provider"]
+        provider_counts[p] = provider_counts.get(p, 0) + item["total"]
+
+    provider_labels_map = {
+        "Google": "Google Gemini / Gemma",
+        "NVIDIA": "NVIDIA NIM API",
+        "OpenRouter": "OpenRouter API",
+    }
     legend_elements = [
-        Patch(facecolor=PROVIDER_COLORS["Google"], label="Google Gemini / Gemma (2,110 convs, 61.2%)"),
-        Patch(facecolor=PROVIDER_COLORS["NVIDIA"], label="NVIDIA NIM API (763 convs, 22.1%)"),
-        Patch(facecolor=PROVIDER_COLORS["OpenRouter"], label="OpenRouter API (576 convs, 16.7%)"),
+        Patch(
+            facecolor=PROVIDER_COLORS[p],
+            label=f"{provider_labels_map.get(p, p)} ({provider_counts.get(p, 0):,} convs, {provider_counts.get(p, 0) / total_convs * 100:.1f}%)"
+        )
+        for p in ["Google", "NVIDIA", "OpenRouter"] if p in provider_counts
     ]
     ax.legend(handles=legend_elements, loc="lower right", frameon=True, fontsize=10, facecolor="white")
 
