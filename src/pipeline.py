@@ -36,7 +36,8 @@ VALID_STATES = {"Diagnosis", "Support", "Synthesis", "Closing"}
 FAILURE_CATEGORIES = (
     "dead_model_404", "empty_response", "invalid_json_syntax",
     "turn_count_out_of_range", "speaker_alternation_broken",
-    "malformed_tutor_tags", "missing_problem_field", "final_turn_not_closing",
+    "turn_numbering_broken", "malformed_tutor_tags", "missing_problem_field",
+    "second_last_not_synthesis", "final_turn_not_closing",
     "unexpected_exception", "other",
 )
 CONFIG_PARAMETERS = (
@@ -224,6 +225,12 @@ def _is_valid_conversation_payload(payload: Any) -> bool:
         if not {"turn", "speaker"}.issubset(item):
             logger.debug("Rejected payload: turn %s missing required keys", i)
             return False
+        if item.get("turn") != i:
+            logger.debug(
+                "Rejected payload: turn numbering broken at turn %s (expected %s, got %s)",
+                i, i, item.get("turn"),
+            )
+            return False
 
         speaker = item.get("speaker")
         if speaker != expected_speaker:
@@ -260,11 +267,23 @@ def _is_valid_conversation_payload(payload: Any) -> bool:
 
         expected_speaker = "tutor" if expected_speaker == "student" else "student"
 
-    # Conversation must end with: student explaining the rule (second-to-last),
-    # then tutor's Closing turn (final).
+    # Conversation must end with:
+    # 1. Tutor's second-to-last turn in Synthesis state (conversation[-3])
+    # 2. Student's final explanation responding to Synthesis (conversation[-2])
+    # 3. Tutor's final Closing turn (conversation[-1])
+    second_last_tutor = conversation[-3]
     student_explanation = conversation[-2]
     final_tutor = conversation[-1]
-    
+
+    if second_last_tutor.get("speaker") != "tutor":
+        logger.debug("Rejected payload: turn before student explanation is not the tutor")
+        return False
+    if second_last_tutor.get("state") != "Synthesis":
+        logger.debug(
+            "Rejected payload: second-to-last tutor turn is not Synthesis (got %s)",
+            second_last_tutor.get("state"),
+        )
+        return False
     if student_explanation.get("speaker") != "student":
         logger.debug("Rejected payload: second-to-last turn is not the student")
         return False
@@ -312,6 +331,10 @@ def _structural_failure_reason(payload: Any) -> str:
     for turn_number, item in enumerate(conversation, start=1):
         if not isinstance(item, dict):
             return f"turn {turn_number} is not an object"
+        if not {"turn", "speaker"}.issubset(item):
+            return f"turn {turn_number} missing required keys"
+        if item.get("turn") != turn_number:
+            return f"turn numbering broken at turn {turn_number} (expected {turn_number}, got {item.get('turn')})"
         if item.get("speaker") != expected_speaker:
             return f"speaker alternation broken at turn {turn_number}"
         
@@ -336,8 +359,13 @@ def _structural_failure_reason(payload: Any) -> str:
         
         expected_speaker = "tutor" if expected_speaker == "student" else "student"
 
+    second_last_tutor = conversation[-3]
     student_explanation = conversation[-2]
     final_tutor = conversation[-1]
+    if second_last_tutor.get("speaker") != "tutor":
+        return "turn before student explanation is not the tutor"
+    if second_last_tutor.get("state") != "Synthesis":
+        return f"second-to-last tutor turn is not Synthesis (got {second_last_tutor.get('state')})"
     if student_explanation.get("speaker") != "student":
         return "second-to-last turn is not the student"
     if final_tutor.get("speaker") != "tutor":
@@ -356,6 +384,10 @@ def _classify_failure_reason(reason: str) -> str:
         return "empty_response"
     if "invalid json" in normalized or "jsondecodeerror" in normalized or "expecting " in normalized:
         return "invalid_json_syntax"
+    if "turn numbering" in normalized or "numbering broken" in normalized:
+        return "turn_numbering_broken"
+    if "second-to-last tutor turn is not synthesis" in normalized or ("synthesis" in normalized and ("second" in normalized or "tutor" in normalized)):
+        return "second_last_not_synthesis"
     if "turn count" in normalized:
         return "turn_count_out_of_range"
     if "speaker alternation" in normalized:

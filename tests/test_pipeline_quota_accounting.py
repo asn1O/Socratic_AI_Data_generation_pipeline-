@@ -6,12 +6,16 @@ import unittest
 from pathlib import Path
 from unittest.mock import MagicMock, patch
 
-from code.pipeline import (
-    _count_model_conversations,
+from src.pipeline import (
+    _classify_failure_reason,
     _configure_model_logging,
+    _count_model_conversations,
     _format_duration,
+    _is_valid_conversation_payload,
     _new_stats,
+    _parse_valid_json,
     _run_model_worker,
+    _structural_failure_reason,
     load_models,
     normalize_iterations,
     run_pipeline,
@@ -24,6 +28,7 @@ class FakeModel:
     model_name = "model"
     consecutive_failures = 0
     expired = False
+    wait_1_min = True
 
     def call_model(self, prompt):
         return True, "not valid conversation JSON", 123, None
@@ -56,11 +61,7 @@ class PipelineQuotaAccountingTests(unittest.TestCase):
             "api_key": "TEST_API_KEY",
             "model_name": "m1",
             "url": "https://example.com/v1",
-            "rpd": 1,
-            "rpd_left": 1,
-            "tpd": None,
-            "tpd_left": None,
-            "last_use": None,
+            "wait_1_min": True,
         }]
         with tempfile.NamedTemporaryFile("w", suffix=".json") as file:
             json.dump(model_data, file)
@@ -71,6 +72,7 @@ class PipelineQuotaAccountingTests(unittest.TestCase):
         self.assertEqual(len(models), 1)
         self.assertEqual(models[0].model_name, "m1")
         self.assertEqual(models[0].api_key, "resolved-secret")
+        self.assertTrue(models[0].wait_1_min)
 
     def test_save_models_persists_worker_state(self):
         model_data = [{
@@ -78,11 +80,7 @@ class PipelineQuotaAccountingTests(unittest.TestCase):
             "api_key": "TEST_API_KEY",
             "model_name": "m1",
             "url": "https://example.com/v1",
-            "rpd": 1,
-            "rpd_left": 1,
-            "tpd": None,
-            "tpd_left": None,
-            "last_use": None,
+            "wait_1_min": False,
         }]
         with tempfile.NamedTemporaryFile("w", suffix=".json") as file:
             json.dump(model_data, file)
@@ -94,6 +92,7 @@ class PipelineQuotaAccountingTests(unittest.TestCase):
             persisted = json.loads(Path(file.name).read_text(encoding="utf-8"))
 
         self.assertTrue(persisted[0]["expired"])
+        self.assertFalse(persisted[0]["wait_1_min"])
 
     def test_format_duration_as_hours_minutes_and_seconds(self):
         self.assertEqual(_format_duration(3661.9), "01:01:01")
@@ -116,9 +115,10 @@ class PipelineQuotaAccountingTests(unittest.TestCase):
 
     def test_worker_runs_requested_attempts_without_model_selection(self):
         model = FakeModel()
+        model.wait_1_min = True
         with tempfile.TemporaryDirectory() as directory:
             with patch.dict(os.environ, {"DATASET_GENERATOR_ID": "worker_01"}), \
-                    patch("code.pipeline.time.sleep") as sleep:
+                    patch("src.pipeline.time.sleep") as sleep:
                 model_logger = _configure_model_logging(model, directory)
                 worker_stats = _run_model_worker(model, 3, model_logger)
             log_text = (
@@ -134,6 +134,20 @@ class PipelineQuotaAccountingTests(unittest.TestCase):
         self.assertIn("attempts: 3", log_text)
         self.assertIn("failed: 3", log_text)
 
+    def test_worker_skips_sleep_when_wait_1_min_is_false(self):
+        model = FakeModel()
+        model.wait_1_min = False
+        with tempfile.TemporaryDirectory() as directory:
+            with patch.dict(os.environ, {"DATASET_GENERATOR_ID": "worker_01"}), \
+                    patch("src.pipeline.time.sleep") as sleep:
+                model_logger = _configure_model_logging(model, directory)
+                worker_stats = _run_model_worker(model, 3, model_logger)
+
+        self.assertEqual(worker_stats["saved"], 0)
+        self.assertEqual(worker_stats["attempts"], 3)
+        self.assertEqual(worker_stats["failed"], 3)
+        self.assertEqual(sleep.call_count, 0)
+
     def test_worker_expires_model_after_three_api_failures(self):
         class FailingModel(FakeModel):
             def call_model(self, prompt):
@@ -142,7 +156,7 @@ class PipelineQuotaAccountingTests(unittest.TestCase):
         model = FailingModel()
         with tempfile.TemporaryDirectory() as directory:
             with patch.dict(os.environ, {"DATASET_GENERATOR_ID": "worker_01"}), \
-                    patch("code.pipeline.time.sleep"):
+                    patch("src.pipeline.time.sleep"):
                 model_logger = _configure_model_logging(model, directory)
                 worker_stats = _run_model_worker(model, 10, model_logger)
             log_text = (
@@ -160,7 +174,7 @@ class PipelineQuotaAccountingTests(unittest.TestCase):
         custom_stats = _new_stats()
         with tempfile.TemporaryDirectory() as directory:
             with patch.dict(os.environ, {"DATASET_GENERATOR_ID": "worker_01"}), \
-                    patch("code.pipeline.time.sleep"):
+                    patch("src.pipeline.time.sleep"):
                 model_logger = _configure_model_logging(model, directory)
                 result_stats = _run_model_worker(
                     model, 2, model_logger, stats=custom_stats
@@ -207,20 +221,16 @@ class PipelineQuotaAccountingTests(unittest.TestCase):
             "api_key": "TEST_API_KEY",
             "model_name": "m1",
             "url": "https://example.com/v1",
-            "rpd": 1,
-            "rpd_left": 1,
-            "tpd": None,
-            "tpd_left": None,
-            "last_use": None,
+            "wait_1_min": True,
         }]
         with tempfile.NamedTemporaryFile("w", suffix=".json") as file:
             json.dump(model_data, file)
             file.flush()
 
             with patch.dict(os.environ, {"TEST_API_KEY": "resolved-secret"}), \
-                    patch("code.pipeline.save_models") as mock_save_models, \
-                    patch("code.pipeline._count_model_conversations", return_value=0), \
-                    patch("code.pipeline.ThreadPoolExecutor") as mock_executor_cls:
+                    patch("src.pipeline.save_models") as mock_save_models, \
+                    patch("src.pipeline._count_model_conversations", return_value=0), \
+                    patch("src.pipeline.ThreadPoolExecutor") as mock_executor_cls:
 
                 mock_executor = MagicMock()
                 mock_executor_cls.return_value = mock_executor
@@ -245,6 +255,73 @@ class PipelineQuotaAccountingTests(unittest.TestCase):
                 self.assertEqual(saved, 3)
                 mock_save_models.assert_called_once()
                 mock_executor.shutdown.assert_called_with(wait=False, cancel_futures=True)
+
+
+class ConversationValidationTests(unittest.TestCase):
+    def _create_valid_payload(self):
+        turns = []
+        for i in range(1, 13):
+            if i % 2 == 1:
+                turns.append({"turn": i, "speaker": "student", "text": f"Student turn {i}"})
+            else:
+                if i == 10:
+                    state = "Synthesis"
+                elif i == 12:
+                    state = "Closing"
+                else:
+                    state = "Diagnosis"
+                turns.append({
+                    "turn": i,
+                    "speaker": "tutor",
+                    "reasoning": f"Reasoning for turn {i}",
+                    "state": state,
+                    "response": f"Tutor response {i}",
+                })
+        return {
+            "problem": "Solve for x: 2x + 4 = 10",
+            "conversation": turns,
+        }
+
+    def test_valid_payload_passes_validation(self):
+        payload = self._create_valid_payload()
+        self.assertTrue(_is_valid_conversation_payload(payload))
+        parsed = _parse_valid_json(json.dumps(payload))
+        self.assertEqual(parsed["problem"], payload["problem"])
+
+    def test_broken_turn_numbering_rejected(self):
+        payload = self._create_valid_payload()
+        # Duplicate turn 2 (turn 3 skipped)
+        payload["conversation"][2]["turn"] = 2
+        self.assertFalse(_is_valid_conversation_payload(payload))
+        reason = _structural_failure_reason(payload)
+        self.assertIn("turn numbering broken", reason)
+        self.assertEqual(_classify_failure_reason(reason), "turn_numbering_broken")
+
+        with self.assertRaises(ValueError) as ctx:
+            _parse_valid_json(json.dumps(payload))
+        self.assertIn("turn numbering broken", str(ctx.exception))
+
+    def test_second_last_tutor_not_synthesis_rejected(self):
+        payload = self._create_valid_payload()
+        # Change second-to-last tutor turn (conversation[-3]) from Synthesis to Support
+        payload["conversation"][-3]["state"] = "Support"
+        self.assertFalse(_is_valid_conversation_payload(payload))
+        reason = _structural_failure_reason(payload)
+        self.assertIn("second-to-last tutor turn is not Synthesis", reason)
+        self.assertEqual(_classify_failure_reason(reason), "second_last_not_synthesis")
+
+        with self.assertRaises(ValueError) as ctx:
+            _parse_valid_json(json.dumps(payload))
+        self.assertIn("second-to-last tutor turn is not Synthesis", str(ctx.exception))
+
+    def test_final_tutor_not_closing_rejected(self):
+        payload = self._create_valid_payload()
+        # Change final tutor turn (conversation[-1]) from Closing to Synthesis
+        payload["conversation"][-1]["state"] = "Synthesis"
+        self.assertFalse(_is_valid_conversation_payload(payload))
+        reason = _structural_failure_reason(payload)
+        self.assertIn("final tutor turn is not Closing", reason)
+        self.assertEqual(_classify_failure_reason(reason), "final_turn_not_closing")
 
 
 if __name__ == "__main__":
