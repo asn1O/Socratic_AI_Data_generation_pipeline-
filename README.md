@@ -155,6 +155,8 @@ found.
 
 ## Generated files
 
+*(Note: The generated dataset of 3,000+ validated conversations is available on the `socratic_dataset` branch).*
+
 Accepted conversations are written beneath `data/`, grouped by provider and
 model. Each worker file contains at most 15 records before a new set file is
 created:
