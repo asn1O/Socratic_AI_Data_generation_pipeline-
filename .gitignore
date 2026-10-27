@@ -1,6 +1,7 @@
-req.txt
-code/pseudo/*
-apis&limits
 .env
-code/__pycache__
-__init__.py
+__pycache__/
+*.pyc
+.pytest_cache/
+*.log
+data/*
+!data/.gitkeep

@@ -2,13 +2,13 @@ import json
 import unittest
 from unittest.mock import patch
 
-from code.prompt_generator import DatasetPromptGenerator
+from src.prompt_generator import DatasetPromptGenerator
 
 
 class DatasetPromptGeneratorTests(unittest.TestCase):
     def test_prompt_and_json_share_selected_metadata(self):
         with patch(
-            "code.prompt_generator.random.choice",
+            "src.prompt_generator.random.choice",
             side_effect=lambda options: options[0],
         ):
             prompt, record_json = DatasetPromptGenerator().generate_prompt()
