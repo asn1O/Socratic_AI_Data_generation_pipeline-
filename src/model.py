@@ -39,9 +39,6 @@ class Model:
     api_key_env: Optional[str] = None
     consecutive_failures: int = 0
 
-    def __post_init__(self) -> None:
-        Path(self.dest_write_path).mkdir(parents=True, exist_ok=True)
-
     def mark_expired(self, now: Optional[datetime] = None) -> None:
         """Mark the model as unusable."""
         self.expired = True
@@ -114,6 +111,7 @@ class Model:
     def write_response(self, response: dict) -> Path:
         """Append a response to the model's JSON set containing at most 15 items."""
         response_dir = Path(self.dest_write_path)
+        response_dir.mkdir(parents=True, exist_ok=True)
         contributor_id = os.getenv("DATASET_GENERATOR_ID", "").strip()
         if not contributor_id or not re.fullmatch(r"[A-Za-z0-9_-]+", contributor_id):
             raise ValueError(

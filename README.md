@@ -20,9 +20,6 @@ Data_generation_pipeline/
 │   ├── count_convos.py         # Count conversation totals per folder
 │   ├── data_distribution.py    # Compute dataset distribution statistics
 │   └── generate_distribution_graphs.py # Generate publication figures
-├── reports/                    # Reports and generated figure assets
-│   ├── DATASET_DISTRIBUTION_REPORT.md
-│   └── figures/
 ├── dataset_generation_prompt.md # Conversation-generation prompt template
 ├── data/                       # Generated conversations and logs
 ├── tests/                      # Automated unit test suite

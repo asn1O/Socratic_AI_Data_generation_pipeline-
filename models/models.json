@@ -65,10 +65,10 @@
     "model_name": "nvidia/nemotron-3-super-120b-a12b:free",
     "url": "https://openrouter.ai/api/v1",
     "wait_1_min": false,
-    "last_use": "2026-09-03T06:45:06.369953+00:00",
+    "last_use": null,
     "expired": false,
-    "no_of_replies": 5,
-    "avg_tokens_used": 9408.6,
+    "no_of_replies": 0,
+    "avg_tokens_used": 0.0,
     "consecutive_failures": 0
   },
   {
@@ -77,10 +77,10 @@
     "model_name": "nvidia/nemotron-3-ultra-550b-a55b:free",
     "url": "https://openrouter.ai/api/v1",
     "wait_1_min": false,
-    "last_use": "2026-09-03T06:46:23.378518+00:00",
+    "last_use": null,
     "expired": false,
-    "no_of_replies": 5,
-    "avg_tokens_used": 6307.8,
+    "no_of_replies": 0,
+    "avg_tokens_used": 0.0,
     "consecutive_failures": 0
   },
   {
@@ -89,7 +89,7 @@
     "model_name": "gemini-3.6-flash",
     "url": "https://generativelanguage.googleapis.com/v1beta/openai/",
     "wait_1_min": true,
-    "last_use": "2026-09-03T06:46:27.575523+00:00",
+    "last_use": null,
     "expired": false,
     "no_of_replies": 0,
     "avg_tokens_used": 0.0,
@@ -101,10 +101,10 @@
     "model_name": "gemini-3.5-flash",
     "url": "https://generativelanguage.googleapis.com/v1beta/openai/",
     "wait_1_min": true,
-    "last_use": "2026-09-03T06:46:46.551380+00:00",
+    "last_use": null,
     "expired": false,
-    "no_of_replies": 3,
-    "avg_tokens_used": 5073.0,
+    "no_of_replies": 0,
+    "avg_tokens_used": 0.0,
     "consecutive_failures": 0
   },
   {
@@ -113,10 +113,10 @@
     "model_name": "gemini-3-flash-preview",
     "url": "https://generativelanguage.googleapis.com/v1beta/openai/",
     "wait_1_min": true,
-    "last_use": "2026-09-03T06:47:19.157433+00:00",
+    "last_use": null,
     "expired": false,
-    "no_of_replies": 5,
-    "avg_tokens_used": 8365.6,
+    "no_of_replies": 0,
+    "avg_tokens_used": 0.0,
     "consecutive_failures": 0
   },
   {
@@ -125,10 +125,10 @@
     "model_name": "gemini-3.5-flash-lite",
     "url": "https://generativelanguage.googleapis.com/v1beta/openai/",
     "wait_1_min": true,
-    "last_use": "2026-09-03T06:42:42.930677+00:00",
+    "last_use": null,
     "expired": false,
-    "no_of_replies": 4,
-    "avg_tokens_used": 2720.0,
+    "no_of_replies": 0,
+    "avg_tokens_used": 0.0,
     "consecutive_failures": 0
   },
   {
@@ -137,10 +137,10 @@
     "model_name": "gemini-3.1-flash-lite",
     "url": "https://generativelanguage.googleapis.com/v1beta/openai/",
     "wait_1_min": true,
-    "last_use": "2026-09-03T06:42:49.644284+00:00",
+    "last_use": null,
     "expired": false,
-    "no_of_replies": 4,
-    "avg_tokens_used": 2487.25,
+    "no_of_replies": 0,
+    "avg_tokens_used": 0.0,
     "consecutive_failures": 0
   },
   {
@@ -149,10 +149,10 @@
     "model_name": "gemma-4-31b-it",
     "url": "https://generativelanguage.googleapis.com/v1beta/openai/",
     "wait_1_min": true,
-    "last_use": "2026-09-03T06:44:17.041414+00:00",
+    "last_use": null,
     "expired": false,
-    "no_of_replies": 4,
-    "avg_tokens_used": 5340.0,
+    "no_of_replies": 0,
+    "avg_tokens_used": 0.0,
     "consecutive_failures": 0
   },
   {
@@ -161,10 +161,10 @@
     "model_name": "gemini-2.5-flash-lite",
     "url": "https://generativelanguage.googleapis.com/v1beta/openai/",
     "wait_1_min": true,
-    "last_use": "2026-09-03T06:44:17.446941+00:00",
+    "last_use": null,
     "expired": false,
-    "no_of_replies": 4,
-    "avg_tokens_used": 2962.5,
+    "no_of_replies": 0,
+    "avg_tokens_used": 0.0,
     "consecutive_failures": 0
   },
   {
@@ -173,7 +173,7 @@
     "model_name": "gemini-3.8-flash",
     "url": "https://generativelanguage.googleapis.com/v1beta/openai/",
     "wait_1_min": true,
-    "last_use": "2026-09-03T06:44:17.446941+00:00",
+    "last_use": null,
     "expired": false,
     "no_of_replies": 0,
     "avg_tokens_used": 0.0,
@@ -185,7 +185,7 @@
     "model_name": "gemini-3.7-flash",
     "url": "https://generativelanguage.googleapis.com/v1beta/openai/",
     "wait_1_min": true,
-    "last_use": "2026-09-03T06:44:17.446941+00:00",
+    "last_use": null,
     "expired": false,
     "no_of_replies": 0,
     "avg_tokens_used": 0.0,
