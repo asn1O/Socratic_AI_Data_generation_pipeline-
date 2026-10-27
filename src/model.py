@@ -2,9 +2,25 @@ from dataclasses import dataclass, asdict
 from datetime import datetime, timezone
 import json
 import os
-import re
 from pathlib import Path
+import re
 from typing import Optional
+from urllib.parse import urlparse
+
+from openai import (
+    OpenAI,
+    APIError,
+    APIConnectionError,
+    APITimeoutError,
+    RateLimitError,
+    AuthenticationError,
+    APIStatusError,
+)
+
+try:
+    from .prompt_generator import DatasetPromptGenerator
+except ImportError:
+    from prompt_generator import DatasetPromptGenerator
 
 REQUEST_TIMEOUT_SECONDS = 20 * 60
 
@@ -205,12 +221,7 @@ class Model:
 
     def test_socratic(self):
         """Generate a Socratic dataset prompt and send it to the model."""
-        try:
-            from .prompt_generator import DatasetPromptGenerator
-        except ImportError:
-            from prompt_generator import DatasetPromptGenerator
-
-        prompt , metadata = DatasetPromptGenerator().generate_prompt()
+        prompt, metadata = DatasetPromptGenerator().generate_prompt()
         return self.call_model(prompt)
 
     def call_model(self, prompt: str):
@@ -222,33 +233,10 @@ class Model:
 
         # Get provider hostname
         try:
-            from urllib.parse import urlparse
-
             parsed = urlparse(self.url or "")
             provider = parsed.netloc or self.url
-
         except Exception:
             provider = self.url
-
-        # Import OpenAI SDK
-        try:
-            from openai import (
-                OpenAI,
-                APIError,
-                APIConnectionError,
-                APITimeoutError,
-                RateLimitError,
-                AuthenticationError,
-                APIStatusError,
-            )
-
-        except Exception:
-            print(
-                f"[provider={provider} model={self.model_name}] "
-                "OpenAI SDK is not available. "
-                "Install it with 'pip install openai'."
-            )
-            return False, None, 0, "SDK_UNAVAILABLE"
 
         try:
             # Create client

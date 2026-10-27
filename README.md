@@ -9,16 +9,15 @@ model response, and saves accepted records as JSON.
 
 ```text
 Data_generation_pipeline/
-├── code/
+├── src/
 │   ├── model.json          # Combined model list and runtime state
-│   ├── nvidia.json         # NVIDIA model configuration
-│   ├── google.json         # Google model configuration
-│   ├── openRouter.json     # OpenRouter model configuration
+│   ├── count_convos.py     # Script to count conversations generated
 │   ├── pipeline.py         # Threaded pipeline entry point
 │   └── prompt_generator.py # Prompt sampling and template population
 ├── dataset_generation_prompt.md # Conversation-generation prompt template
 ├── data/                   # Generated conversations and logs
 ├── tests/                  # Unit tests
+├── requirements.txt        # Python package dependencies
 ├── .env.example            # Environment-variable template
 └── .env                    # Local API keys; do not commit this file
 ```
@@ -26,24 +25,25 @@ Data_generation_pipeline/
 ## Requirements
 
 - Python 3.9 or newer
-- API access to at least one model configured in `code/model.json`
+- API access to at least one model configured in `src/model.json`
 
-The code currently needs these third-party Python packages:
+The code currently needs these third-party Python packages (listed in `requirements.txt`):
 
 - `openai`
 - `python-dotenv`
+- `pytest`
 
 ## Installation
 
 Run every command below from the repository root, the directory containing
-`README.md`, `code/`, and `data/`.
+`README.md`, `src/`, and `data/`.
 
 ```bash
 cd "/path/to/Data_generation_pipeline"
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
-python -m pip install openai python-dotenv
+python -m pip install -r requirements.txt
 ```
 
 On Windows PowerShell, activate the environment with:
@@ -72,27 +72,18 @@ DATASET_GENERATOR_ID=your_worker_name
 `DATASET_GENERATOR_ID` identifies the worker that writes dataset files. It may
 contain only letters, numbers, `_`, and `-`, for example `worker_01`.
 
-The current `code/model.json` entries reference the three provider variables
+The current `src/model.json` entries reference the three provider variables
 above. `GROQ_API_KEY` is included in `.env.example` for compatibility but is
 not currently used by the configured models. You may leave it empty unless you
-add a Groq model entry to `code/model.json`.
+add a Groq model entry to `src/model.json`.
 
-Never replace the `api_key` values in `code/model.json` with secret strings.
+Never replace the `api_key` values in `src/model.json` with secret strings.
 They are environment-variable names, such as `NVIDIA_API_KEY`, and the
 program resolves them from `.env` at runtime. Keep `.env` private.
 
-## Model configuration files
+## Model configuration
 
-The pipeline accepts one JSON file containing a list of model entries with the
-same shape as the supplied configuration files. Use the file that matches the
-provider or providers you want to run:
-
-| File                   | Provider                 | Environment variable       |
-| ---------------------- | ------------------------ | -------------------------- |
-| `code/nvidia.json`     | NVIDIA                   | `NVIDIA_API_KEY`           |
-| `code/google.json`     | Google                   | `GOOGLE_API_KEY`           |
-| `code/openRouter.json` | OpenRouter               | `OPENROUTER_API_KEY`       |
-| `code/model.json`      | All configured providers | Provider-specific variable |
+The pipeline accepts a JSON configuration file containing a list of model entries. The primary configuration is `src/model.json`:
 
 Each model entry includes configuration and runtime fields such as
 `wait_1_min`, `last_use`, `expired`, and `consecutive_failures`.
@@ -104,12 +95,12 @@ updated model state back to the input file.
 ## Run the pipeline
 
 The working directory matters. Start the command from
-`Data_generation_pipeline/`, not from `Data_generation_pipeline/code/`.
+`Data_generation_pipeline/`, not from `Data_generation_pipeline/src/`.
 Generated data and logs use the `data/` directory by default. Pass the model
 configuration path and desired number of attempts explicitly:
 
 ```bash
-python -m code.pipeline code/nvidia.json 50
+python -m src.pipeline src/model.json 50
 ```
 
 The requested iteration count is the total number of attempts. If it is not
@@ -117,10 +108,10 @@ divisible by the number of models, it is rounded up to the next divisible
 number and split evenly. For example, 50 attempts across 3 models becomes 51
 attempts, or 17 per model.
 
-One thread runs per model. After each API request completes, that model waits
-60 seconds before making its next request. A model is expired and its worker
-stops after three consecutive API-call failures that return no response. The
-configured limits are treated as model-specific.
+One thread runs per model. Models with `"wait_1_min": true` (e.g. Google models)
+wait 60 seconds after each request to avoid RPM/TPM rate limits; models with
+`"wait_1_min": false` proceed immediately. A model is expired and its worker
+stops after three consecutive API-call failures.
 
 Logs are written beneath `data/logs/`. The overall log is named after the
 generator ID, for example `data/logs/worker_01.log`. Individual model logs
@@ -140,16 +131,16 @@ not conflict during dataset merging.
 For a short connectivity or setup check, use one attempt:
 
 ```bash
-python -m code.pipeline code/nvidia.json 1
+python -m src.pipeline src/model.json 1
 ```
 
 For example, to write a small test run to a separate directory:
 
 ```bash
-python -m code.pipeline code/nvidia.json 5 --data-dir data/test_run
+python -m src.pipeline src/model.json 5 --data-dir data/test_run
 ```
 
-Do not run `cd code` before starting the pipeline. Doing so changes the
+Do not run `cd src` before starting the pipeline. Doing so changes the
 meaning of the config path, `data/`, and the prompt-template path, and can
 cause files to be created in the wrong location or the models file not to be
 found.
@@ -197,6 +188,8 @@ responses are rejected and saved under `data/rejected_responses/`.
 From the repository root, with the virtual environment activated:
 
 ```bash
+pytest
+# or using unittest
 python -m unittest discover -s tests -p 'test_*.py' -v
 ```
 
@@ -205,9 +198,9 @@ The tests use mocks and local temporary files; they do not call an API.
 ## Troubleshooting
 
 - `models file not found`: confirm the shell is in the repository root and
-  that `code/model.json` exists.
+  that `src/model.json` exists.
 - `Authentication error (401)`: check the relevant key in `.env` and confirm
-  that the matching `api_key` name in `code/model.json` is spelled correctly.
+  that the matching `api_key` name in `src/model.json` is spelled correctly.
 - `DATASET_GENERATOR_ID must contain only letters...`: use only letters,
   numbers, `_`, or `-`.
 - `No models found`: confirm the selected JSON file contains a non-empty array.
@@ -215,4 +208,4 @@ The tests use mocks and local temporary files; they do not call an API.
   response, that model is marked expired and its worker stops. Check the
   model-specific log and runtime fields in the input JSON file.
 - `Not found (404)`: verify that the model name is still supported by the
-  provider and that its URL in `code/model.json` is correct.
+  provider and that its URL in `src/model.json` is correct.
