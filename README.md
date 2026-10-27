@@ -5,6 +5,8 @@ OpenAI-compatible language-model APIs. The pipeline randomly selects a
 domain, topic, and conversation configuration for each attempt, validates the
 model response, and saves accepted records as JSON.
 
+> **Note**: The generated multi-turn dataset and distribution reports are located on the `socratic_dataset` branch. This branch (`pipeline`) provides a clean, ready-to-run execution environment.
+
 ## Project layout
 
 ```text
