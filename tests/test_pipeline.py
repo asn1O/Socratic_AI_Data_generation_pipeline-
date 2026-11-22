@@ -8,6 +8,7 @@ from unittest.mock import MagicMock, patch
 
 from src.pipeline import (
     _classify_failure_reason,
+    _configure_logging,
     _configure_model_logging,
     _count_model_conversations,
     _format_duration,
@@ -50,6 +51,29 @@ class PipelineQuotaAccountingTests(unittest.TestCase):
             for handler in model_logger.handlers:
                 model_logger.removeHandler(handler)
                 handler.close()
+
+    def test_model_log_filename_contains_generator_and_models_file_and_model(self):
+        model = FakeModel()
+        with tempfile.TemporaryDirectory() as directory:
+            with patch.dict(os.environ, {"DATASET_GENERATOR_ID": "worker_01"}):
+                model_logger = _configure_model_logging(
+                    model, directory, models_path="models/models.json"
+                )
+
+            log_path = Path(directory) / "logs" / "worker_01.models.json.test_model.log"
+            self.assertTrue(log_path.exists())
+            self.assertEqual(len(model_logger.handlers), 1)
+            for handler in model_logger.handlers:
+                model_logger.removeHandler(handler)
+                handler.close()
+
+    def test_run_log_filename_contains_generator_and_models_file(self):
+        with tempfile.TemporaryDirectory() as directory:
+            with patch.dict(os.environ, {"DATASET_GENERATOR_ID": "worker_01"}):
+                _configure_logging("models/models.json", directory)
+
+            log_path = Path(directory) / "logs" / "worker_01.models.json.log"
+            self.assertTrue(log_path.exists())
 
     def test_normalize_iterations_rounds_total_up_to_model_count(self):
         self.assertEqual(normalize_iterations(50, 3), (51, 17))
