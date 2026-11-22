@@ -12,8 +12,11 @@ Data_generation_pipeline/
 ├── src/                        # Core Python pipeline package
 │   ├── __init__.py
 │   ├── model.py                # Model API communication & retry handling
-│   ├── pipeline.py             # Multi-threaded pipeline entry point
-│   └── prompt_generator.py     # Prompt sampling & template population
+│   ├── pipeline.py             # Multi-threaded pipeline coordinator & CLI entry point
+│   ├── prompt_generator.py     # Prompt sampling & template population
+│   ├── telemetry.py            # Quota telemetry, logging, and summary reports
+│   ├── validator.py            # Sanitization, JSON raw_decode, invariants & leakage checks
+│   └── worker.py               # Worker loop, pacing & circuit breaking
 ├── models/
 │   └── models.json             # Model configurations & worker runtime state
 ├── scripts/                    # Utility and dataset analysis scripts
@@ -119,11 +122,14 @@ wait 60 seconds after each request to avoid RPM/TPM rate limits; models with
 `"wait_1_min": false` proceed immediately. A model is expired and its worker
 stops after three consecutive API-call failures.
 
-Logs are written beneath `data/logs/`. The overall log is named after the
-generator ID, for example `data/logs/worker_01.log`. Individual model logs
-include both the generator ID and model name, for example
-`data/logs/worker_01.NVIDIA_nvidia_nemotron-3-super-120b-a12b.log`. Each model
-log ends with a `MODEL_SUMMARY` containing that model's attempts, saved and
+Logs are written beneath `data/logs/`. Every log filename incorporates both the
+generator ID (`DATASET_GENERATOR_ID`) and the model JSON configuration filename supplied
+in the CLI input. The overall run log is named:
+`data/logs/<generator_id>.<models_file>.log` (e.g. `data/logs/worker_01.models.json.log`).
+Individual model logs include the generator ID, model JSON filename, and the model name:
+`data/logs/<generator_id>.<models_file>.<provider_model>.log`
+(e.g. `data/logs/worker_01.models.json.NVIDIA_nvidia_nemotron-3-super-120b-a12b.log`).
+Each model log ends with a `MODEL_SUMMARY` containing that model's attempts, saved and
 failed counts, acceptance rate, average tokens, turn range, expiry state, and
 failure categories.
 
@@ -160,8 +166,8 @@ created:
 ```text
 data/
 ├── logs/
-│   ├── worker_01.log
-│   └── worker_01.NVIDIA_nvidia_nemotron-3-super-120b-a12b.log
+│   ├── worker_01.models.json.log
+│   └── worker_01.models.json.NVIDIA_nvidia_nemotron-3-super-120b-a12b.log
 ├── NVIDIA_nvidia_nemotron-3-super-120b-a12b/
 │   └── worker_01-set[0].json
 └── rejected_responses/
@@ -191,17 +197,26 @@ Every generated payload is validated against strict structural rules before savi
 2. **Turn Alternation**: Speaker must strictly alternate between `student` and `tutor` starting with `student`.
 3. **Turn Numbering**: Turn numbers must sequentially match the turn index `1 .. N` with no skips or duplicates.
 4. **Tutor Tags**: Every tutor turn must contain non-empty `reasoning`, a valid `state` (`Diagnosis`, `Support`, `Synthesis`, `Closing`), and `response`.
-5. **Pedagogical Ending Sequence**:
+5. **Config & Parameter Leakage**: Dialogue turns and tutor reasoning traces are strictly scanned for accidental leakage of system prompt hyperparameters (e.g. `socratic_level`, `hint_frequency`, `student_level`), persona directives (e.g. `beginner student`), or difficulty constraints (`maintain the easy difficulty`).
+6. **Pedagogical Ending Sequence**:
    - The tutor turn before the final student explanation (`conversation[-3]`) must be in the `Synthesis` state.
    - The final student turn (`conversation[-2]`) must provide their synthesis explanation.
    - The final tutor turn (`conversation[-1]`) must be in the `Closing` state.
 
 Malformed or non-conforming responses are rejected, categorized in logs, and saved under `data/rejected_responses/`.
 
-## Utility Scripts
+## Utility Scripts & Tools
 
-The `scripts/` directory includes helper tools for dataset auditing and analysis:
+The pipeline includes built-in tools and helper scripts for dataset auditing, cleanup, and analysis:
 
+- **Validate & sanitize existing dataset files (offline audit/clean)**:
+  ```bash
+  # Dry-run audit (reports invalid or leaked conversations):
+  python -m src.validator --data-dir data
+
+  # Permanently remove invalid or leaked records from disk:
+  python -m src.validator --data-dir data --delete-invalid
+  ```
 - **Count conversations**:
   ```bash
   python scripts/count_convos.py
